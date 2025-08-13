@@ -6,6 +6,13 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 中文效果
 
+爱因斯坦著名的质能方程是 $E=mc^2$。
+
+求解一元二次方程 $ax^2 + bx + c = 0$ 的求根公式是：
+$$
+x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+$$
+
 > 方块
 
 
