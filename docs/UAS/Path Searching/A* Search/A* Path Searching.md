@@ -114,7 +114,7 @@ $$
 - **组合控制输入集**：
 
   $$
-  \mathcal{U}_D = \left\{ (\dot{\chi}, \dot{\gamma}) \ \big\vert \ \dot{\chi} \in \dot{\chi}_D, \ \dot{\gamma} \in \dot{\gamma}_D \right\}
+  \mathcal{U}_D = { (\dot{\chi}, \dot{\gamma}) \ \big\vert \ \dot{\chi} \in \dot{\chi}_D, \ \dot{\gamma} \in \dot{\gamma}_D }
   $$
 
 
