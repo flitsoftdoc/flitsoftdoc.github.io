@@ -3,7 +3,7 @@ site_name: FlitSoft Doc Hub
 site_url: https://flitsoftdoc.github.io/
 site_author: flitsoftdoc
 site_description: >-
- FlitSoft Documents
+  FlitSoft Documents
 
 # 仓库信息
 repo_url: https://github.com/flitsoftdoc/flitsoftdoc.github.io
@@ -16,20 +16,13 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   logo: /assets/logo/logo.png
-  favicon: /assets/logo/HB logo.png
-  font: false            # 禁用从 Google 自动加载
-
-extra_css:
-  - stylesheets/extra.css
-
-  # 自定义配色和功能 (可选)
+  favicon: "/assets/logo/HB logo.png"    # 含空格，建议加引号（或把文件重命名去掉空格）
+#  font: false
   palette:
-    # Light mode
     - scheme: default
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-    # Dark mode
     - scheme: slate
       toggle:
         icon: material/weather-night
@@ -45,15 +38,18 @@ extra_css:
     - content.tabs.link
     - content.code.annotate
     - content.code.copy
-    # - content.action.edit    # 显示“编辑此页”
-    - content.action.view    # 显示“查看源码”（仅 GitHub 支持）
+    # - content.action.edit
+    - content.action.view
+
+# 额外样式
+extra_css:
+  - stylesheets/extra.css
 
 # 插件
 plugins:
   - search
 
-
-# 新增部分：加载 MathJax 的 JavaScript 库
+# 额外脚本（MathJax）
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
