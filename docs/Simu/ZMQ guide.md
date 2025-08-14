@@ -1,9 +1,6 @@
 
 
-
-## ZMQ简介
-
-ØMQ - The Guide
+**ØMQ - The Guide**
 
 ### ZMQ作为一个通信协议的核心优势
 

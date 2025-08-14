@@ -1,4 +1,6 @@
 
+# Americas AI Action Plan
+
 ## 美国AI行动计划
 
 <img src="https://cdn.mathpix.com/cropped/2025_07_25_e1436b7c49225ea1fdb7g-01.jpg?height=578&width=579&top_left_y=394&top_left_x=773" width=150/>

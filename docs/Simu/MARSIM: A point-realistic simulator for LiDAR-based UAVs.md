@@ -1,5 +1,5 @@
 
-## MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
+# MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
 
 <audio controls>
   <source src="/media/RAL_simulator.wav" type="audio/wav" />

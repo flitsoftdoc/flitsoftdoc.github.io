@@ -1,7 +1,6 @@
 
-# AEP-84 Volume  I
+# 北约工程出版物 AEP-84 Volume  I
 
-**北约工程出版物AEP-84**
 
 ## AEP-84 和 STANAG 4586 之间的关系
 

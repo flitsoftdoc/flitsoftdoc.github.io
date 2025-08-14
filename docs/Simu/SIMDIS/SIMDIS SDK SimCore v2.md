@@ -1,6 +1,6 @@
 
 
-# SIMDIS SDK SimCore代码库功能分析
+# SIMDIS SDK SimCore代码库分析
 
 ## 一、概述
 
