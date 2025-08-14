@@ -1,8 +1,8 @@
 
 # 决策优势与主动权
 
-Decision Advantage and Initiative Completing Joint All-Domain Command and Control
-
+**Decision Advantage and Initiative Completing Joint All-Domain Command and Control
+**
 Brian R. Price
 
 
