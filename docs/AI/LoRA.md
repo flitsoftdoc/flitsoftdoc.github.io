@@ -283,10 +283,10 @@ DeBERTa XXL（约 1.5B 参数）也是较大规模可用模型。论文在 GLUE 
    的对比，发现 **$\Delta W$ 与 $W$ 之间存在明显相关性**，即 $\lVert U_{\Delta}^\top\,W\,V_{\Delta} \rVert_F$ 远大于对随机矩阵情形，说明 $\Delta W$ 更倾向于放大 $W$ 中尚未充分强调但对下游任务重要的特征模式。举例：在 GPT-3 第 48 层 $W_q$ 上，当 $r=4$ 时，有
 
    $$
-   \frac{\|\Delta W_q\|_F}{\|U_{\Delta}^\top\,W_q\,V_{\Delta}\|_F} \approx 21.5,
+   \frac{\Vert\Delta W_q\Vert_F}{\Vert U_{\Delta}^\top\,W_q\,V_{\Delta}\Vert_F} \approx 21.5,
    \quad
-   \lVert W_q\rVert_F \approx 61.95,\;\lVert \Delta W_q\rVert_F \approx 6.91,\;\lVert U^\top W_q V\rVert_F \approx 0.32,
-   $$
+   \Vert W_q\Vert_F \approx 61.95,\;\Vert \Delta W_q\Vert_F \approx 6.91,\;\Vert U^\top W_q V\Vert_F \approx 0.32,
+$$
 
    而随机矩阵投影仅约 0.02，可见 $\Delta W$ 在特征放大方面的力度远超随机噪声。
 
