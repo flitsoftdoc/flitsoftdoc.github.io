@@ -9,29 +9,29 @@
 ### 代码组成
 
 1. **数学与插值工具**
-   - 数学常量和基本运算（Math, Angle）
-   - 3D向量和矩阵运算（Vec3, SquareMatrix, Dcm）
-   - **Interpolation**：提供最近邻、线性、多点、向量及角度插值，并处理周期跳变与时间驱动插值。
-   - **NumericalAnalysis**：实现二分法（Bisection）、割线法（Secant）、二阶 Newton 插值及反向插值算法。
-   - **SquareMatrix**：方阵的构造、单位化、置零、转置、缩放、加法及矩阵乘法，支持元素访问和近似比较。
+  - 数学常量和基本运算（Math, Angle）
+  - 3D向量和矩阵运算（Vec3, SquareMatrix, Dcm）
+  - **Interpolation**：提供最近邻、线性、多点、向量及角度插值，并处理周期跳变与时间驱动插值。
+  - **NumericalAnalysis**：实现二分法（Bisection）、割线法（Secant）、二阶 Newton 插值及反向插值算法。
+  - **SquareMatrix**：方阵的构造、单位化、置零、转置、缩放、加法及矩阵乘法，支持元素访问和近似比较。
 2. **坐标系统**
-   - 坐标定义和转换（Coordinate, CoordinateConverter）
-   - 特殊坐标系统（GARS）
-   - **MultiFrameCoordinate**：在 LLA（经纬高）与 ECEF（地心地固）等多坐标系间双向转换，支持缓存与懒更新。
-   - **Mgrs**：MGRS ↔ UTM/UPS ↔ 地理坐标的全流程双向转换，含特殊区域（Svalbard/Norway）兼容。
-   - **MagneticVariance**：基于 NOAA 世界磁场模型（WMM）计算地磁偏角，并提供真/磁航向互转。
-   - **VerticalDatum**：枚举不同垂直基准（WGS-84、MSL、用户自定义）。
+  - 坐标定义和转换（Coordinate, CoordinateConverter）
+  - 特殊坐标系统（GARS）
+  - **MultiFrameCoordinate**：在 LLA（经纬高）与 ECEF（地心地固）等多坐标系间双向转换，支持缓存与懒更新。
+  - **Mgrs**：MGRS ↔ UTM/UPS ↔ 地理坐标的全流程双向转换，含特殊区域（Svalbard/Norway）兼容。
+  - **MagneticVariance**：基于 NOAA 世界磁场模型（WMM）计算地磁偏角，并提供真/磁航向互转。
+  - **VerticalDatum**：枚举不同垂直基准（WGS-84、MSL、用户自定义）。
 3. **随机数与数值环境**
-   - **Random**：生成均匀、正态（实/复）、指数、Poisson、几何、二项及离散均匀分布样本，支持全局与手动种子。
-   - **Units**：定义各种物理量单位及其相互转换，提供注册表和查询接口。
-   - **UnitContext**：管理当前应用的单位和显示格式（时间、坐标、角度、距离、速度、磁偏、高程等），可动态修改精度与格式。
+  - **Random**：生成均匀、正态（实/复）、指数、Poisson、几何、二项及离散均匀分布样本，支持全局与手动种子。
+  - **Units**：定义各种物理量单位及其相互转换，提供注册表和查询接口。
+  - **UnitContext**：管理当前应用的单位和显示格式（时间、坐标、角度、距离、速度、磁偏、高程等），可动态修改精度与格式。
 4. **几何计算**
-   - 基础几何体和相交测试（Geometry）
-   - 地理围栏（GeoFence）
+  - 基础几何体和相交测试（Geometry）
+  - 地理围栏（GeoFence）
 5. **应用层**
-   - 距离、角度、高度等计算（Calculations）
-   - 磁偏角和垂直基准面转换（DatumConvert）
-   - 多边形转换为地理围栏（GogToGeoFence）
+  - 距离、角度、高度等计算（Calculations）
+  - 磁偏角和垂直基准面转换（DatumConvert）
+  - 多边形转换为地理围栏（GogToGeoFence）
 
 
 
