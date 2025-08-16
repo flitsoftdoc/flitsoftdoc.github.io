@@ -274,28 +274,6 @@ DQN算法的完整描述如算法1所示。公式 (13) 的状态空间、表1的
 ![](https://cdn.mathpix.com/snip/images/1OCIXydKc5pYFMsH5gOy37PyOUNmX-FYOhL29966p0I.original.fullsize.png){ width="500" } 
 
 
-
-
-/// tab | Python
-    select: true
-
-```python
-print("hello")
-```
-/// 
-/// tab | C++
-
-```cpp
-#include <iostream>
-int main(){ std::cout << "hello\n"; }
-```
-///
-
-
-
-
-
-
 /// details |算法1 解析
     type: info
 
@@ -328,7 +306,7 @@ DQN算法的总体思路可以用“**利用深度学习的感知能力，并通
 ### **总结**
 
 **DQN的总体思路就是，将强化学习的Q学习框架与深度神经网络相结合，并创造性地引入了“经验回放”和“目标网络”这两个关键机制，有效解决了直接结合所带来的训练不稳定问题，最终实现了一个能够在高维度状态空间（如视觉输入）中成功学习复杂策略的强大算法。**
-///
+
 /// details |算法流程详解
     type: info
 
