@@ -21,29 +21,30 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 
 ```pseudocode
 \begin{algorithm}
-\caption*{算法 1: 深度Q网络 (DQN) 算法}
+\caption{Deep Q Network (DQN) Algorithm}
 \begin{algorithmic}[1]
-    \STATE 初始化容量为 $N$ 的回放内存 $\mathcal{D}$
-    \STATE 使用随机权重 $\theta$ 初始化动作价值函数 $Q$
-    \STATE 使用权重 $\theta^{-} \leftarrow \theta$ 初始化目标动作价值函数 $Q^{-}$
-    \STATE 随机初始化状态 $s_0$
-    \FOR{$t=1$ \TO $T$}
-        \IF{以概率 $\varepsilon$ 进行随机选择}
-            \STATE 随机选择一个动作 $a_t$
-        \ELSE
-            \STATE 选择动作 $a_t \leftarrow \arg\max_{a} Q(s_t, a; \theta)$
-        \ENDIF
-        \STATE 执行动作 $a_t$ 并观察奖励 $r_t$ 和新状态 $s_{t+1}$
-        \STATE 在 $\mathcal{D}$ 中存储转换 $(s_t, a_t, r_t, s_{t+1})$
-        \STATE 从 $\mathcal{D}$ 中随机采样小批量数据 $\{(s_j, a_j, r_j, s_{j+1})\}$
-        \IF{$s_{j+1}$ 是终止状态}
-            \STATE $y_j \leftarrow r_j$
-        \ELSE
-            \STATE $y_j \leftarrow r_j + \gamma \max_{a'} Q^{-}(s_{j+1}, a'; \theta^{-})$
-        \ENDIF
-        \STATE 对 $(y_j - Q(s_j, a_j; \theta))^2$ 就参数 $\theta$ 执行梯度下降
-        \STATE 周期性更新目标网络权重: $\theta^{-} \leftarrow \tau\theta + (1-\tau)\theta^{-}$
-    \ENDFOR
+\State Initialize replay memory $D$ to capacity $N$
+\State Initialize action-value function $Q$ with random weights $\theta$
+\State Initialize target action-value function $Q^-$ with weights $\theta^- = \theta$
+\State Initialize state $s_0$ randomly
+\For{$t = 1, T$}
+    \If{$\text{random}(0,1) < \epsilon$}
+        \State $i = 1 \leq i \leq n | i \in \mathbb{Z}$
+        \State $a_t = A[\text{random}(i)]$
+    \Else
+        \State $a_t = \arg\max_a Q(s_t, a, \theta)$
+    \EndIf
+    \State Advance environment one step $s_{t+1}, r_t = \text{env}(a_t)$
+    \State Store transition $(s_t, a_t, r_t, s_{t+1})$ in $D$
+    \State Sample random minibatch of transitions $(s_j, a_j, r_j, s_{j+1})$ from $D$
+    \If{$s_{j+1}$ is terminal}
+        \State Set $y_j = r_j$
+    \Else
+        \State Set $y_j = r_j + \gamma \max_a Q^-(s_{j+1}, a; \theta^-)$
+    \EndIf
+    \State Perform a gradient descent step on $(y_j - Q(s_j, a_j; \theta))^2$ with respect to $\theta$
+    \State Periodically update weights of target networks: $\theta^- = \tau\theta + (1-\tau)\theta^-$
+\EndFor
 \end{algorithmic}
 \end{algorithm}
 ```
