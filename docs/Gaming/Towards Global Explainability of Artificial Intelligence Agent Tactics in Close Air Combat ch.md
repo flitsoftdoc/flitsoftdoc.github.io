@@ -19,36 +19,6 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 
 近年来，人工智能（AI）驱动的自主系统（Autonomous Systems, ASs）在现实场景中的应用迅速增长，展现出了高度复杂和新颖的行为。这一扩展涵盖了不同领域，包括大型空战飞行器 [1] 和较小的自主远程驾驶航空系统（Remotely Piloted Aircraft Systems, RPASs）[2]，它们利用AI提升操作自主性与效能。然而，这些进展突显了自主系统中对可解释性的关键需求 [3]。可解释性的重要性不仅在于帮助用户理解，还在于建立用户、开发者与政策制定者之间的信任。此外，在安全关键应用（如自主空战智能体）中，可解释性的作用更为重要。如文献 [4,5] 所示，可解释性与验证、认证和适应性一道，是AI驱动自主系统可信性的支柱之一，尤其是在高风险安全关键环境下。可解释性的作用在于向用户呈现AI行为背后的理由，使其能够建立更高质量的心理模型。形式上，心理模型是“人们基于其现实世界经验所构建的内部表征” [6]。通过提供对AI行为动机的洞察，可解释性使用户能够构建更高质量的心理模型，从而促进更高效的人机协作。尽管可解释性AI方法在医疗、司法和金融等领域取得了显著进展 [7]，但其在AI驱动的空战智能体中的应用仍相对未被深入探索。在空战环境中，飞行员需要在高度动态且充满挑战的环境下进行高频率的连续决策。可解释性能够通过辅助发现和优化新战术来提升AI在空战中的整合程度，同时也能增强对AI应用的整体信任。
 
-```pseudocode
-\begin{algorithm}
-\caption{Deep Q Network (DQN) Algorithm}
-\begin{algorithmic}
-\PROCEDURE{DQN}{$N, \varepsilon, \gamma, \tau, T$}
-    \STATE Initialize replay memory $D$ to capacity $N$
-    \STATE Initialize action--value function $Q$ with random weights $\theta$
-    \STATE Initialize target action--value function $Q^{-}$ with weights $\theta^{-} \gets \theta$
-    \STATE Initialize state $s_0$ randomly
-    \FOR{$t = 1$ \TO $T$}
-        \IF{$\mathrm{random}(0,1) < \varepsilon$}
-            \STATE $a_t \gets$ \CALL{RandomChoice}{$A$}
-        \ELSE
-            \STATE $a_t \gets \arg\max_{a} Q(s_t, a; \theta)$
-        \ENDIF
-        \STATE $(s_{t+1}, r_t) \gets$ \CALL{EnvStep}{$a_t$}
-        \STATE \CALL{Store}{$D, (s_t, a_t, r_t, s_{t+1})$}
-        \STATE Sample minibatch $\{(s_j, a_j, r_j, s_{j+1})\}$ from $D$
-        \IF{$s_{j+1}$ is terminal}
-            \STATE $y_j \gets r_j$
-        \ELSE
-            \STATE $y_j \gets r_j + \gamma \max_{a} Q^{-}(s_{j+1}, a; \theta^{-})$
-        \ENDIF
-        \STATE Update $\theta$ by a gradient step on $(y_j - Q(s_j, a_j; \theta))^2$
-        \STATE $\theta^{-} \gets \tau \theta + (1-\tau)\theta^{-}$ \COMMENT{periodic/soft target update}
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
-```
 
 
 ```pseudocode
