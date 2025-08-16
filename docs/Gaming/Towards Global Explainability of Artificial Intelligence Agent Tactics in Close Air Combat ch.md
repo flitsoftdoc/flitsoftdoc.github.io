@@ -273,6 +273,26 @@ DQN算法的完整描述如算法1所示。公式 (13) 的状态空间、表1的
 
 ![](https://cdn.mathpix.com/snip/images/1OCIXydKc5pYFMsH5gOy37PyOUNmX-FYOhL29966p0I.original.fullsize.png){ width="500" } 
 
+
+/// details | 接口示例
+    open: true      # 进入时默认展开（可选）
+
+
+/// tab | Python
+    select: true    # 默认选中
+```python
+print("hello")
+```
+/// 
+/// tab | C++
+```cpp
+#include <iostream>
+int main(){ std::cout << "hello\n"; }
+```
+///
+///
+
+
 /// details |算法1 解析
 
 /// tab | 深度Q网络（DQN）算法思路
