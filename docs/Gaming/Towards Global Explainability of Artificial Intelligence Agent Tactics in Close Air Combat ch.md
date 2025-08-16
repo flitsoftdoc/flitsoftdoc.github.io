@@ -490,38 +490,7 @@ $$
 
 
 
-```
-Algorithm 2 Double Deep Q-Network (DQN) Algorithm with Reward Decomposition
-    Get number of reward component $c \in C$
-    Initialize replay memory $D$ to capacity $N$
-    for Each reward component $c$ do
-        Initialize action-value function $Q_{c}$ with random weights $\theta_{c}$
-        Initialize target action-value function $Q_{c}^{-}$with weights $\theta_{c}^{-}=\theta_{c}$
-    end for
-    Initialize state $s_{0}$ randomly
-    for $t=1, T$ do
-        if random $(0,1)<\epsilon$ then
-            $i=\{1 \leq i \leq n \mid i \in \mathbb{Z}\}$
-            $a_{t}=A[\operatorname{random}(i)]$
-        else
-            $a_{t}=\arg \max _{a} \sum_{c} Q_{c}\left(s_{t}, a, \theta_{c}\right)$
-        end if
-        Advance environment one step $s_{t+1}, r_{t}=\operatorname{env}\left(a_{t}\right)$
-        Store transition $\left(s_{t}, a_{t}, r_{c}, s_{t+1}\right)$ in $D$
-        Sample random minibatch of transitions ( $s_{j}, a_{j}, r_{c, j}, s_{j+1}$ ) from $D$
-        for Each reward component $c$ do
-            if $s_{j+1}$ is terminal then
-                Set $y_{j}=r_{c, j}$
-            else
-                Set $y_{j}=r_{c, j}+\gamma Q_{c}^{-}\left(s_{j+1}, \arg \max _{a} \sum_{c} Q_{c}\left(s^{\prime}, a, \theta_{c}\right) ; \theta_{c}^{-}\right)$
-            end if
-            Perform a gradient descent step on $\left(y_{j}-Q_{c}\left(s_{j}, a_{j} ; \theta_{c}\right)\right)^{2}$ with respect to $\theta$
-        end for
-        for Each reward component $c$ do
-            Periodically update weights of target networks: $\theta_{c}^{-}=\tau \theta_{c}+(1-\tau) \theta_{c}^{-}$
-        end for
-    end for
-```
+![](https://cdn.mathpix.com/snip/images/m6b-VH99ZVDhBeCGMXRlVJBDtMdqQz6nbdM3ebCpy8M.original.fullsize.png){width="500"}
 
 除了表2中模型参数所规定的约束外，我们还随机初始化了相对距离，其范围为 -1000 到 1000 米。训练过程中的回合回报以及Q值分量如图6所示。RL智能体使用 [48] 的DQN实现进行训练，并针对奖励分解进行了必要的修改。
 
