@@ -33,10 +33,8 @@ int main(){ std::cout << "hello\n"; }
 ///
 
 /// tab | Tab 1
-
 内容1
 ///
 /// tab | Tab 2
-
 内容2
 ///
