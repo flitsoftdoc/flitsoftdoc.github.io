@@ -275,8 +275,6 @@ DQN算法的完整描述如算法1所示。公式 (13) 的状态空间、表1的
 
 
 
-/// details | 接口示例
-    open: true
 
 /// tab | Python
     select: true
@@ -292,7 +290,7 @@ print("hello")
 int main(){ std::cout << "hello\n"; }
 ```
 ///
-///
+
 
 
 
