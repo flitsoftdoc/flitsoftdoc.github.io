@@ -35,6 +35,33 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 ```
 ///
 
+```pseudocode
+% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
+\begin{algorithm}
+\caption{Quicksort}
+\begin{algorithmic}
+\PROCEDURE{Quicksort}{$A, p, r$}
+    \IF{$p < r$} 
+        \STATE $q = $ \CALL{Partition}{$A, p, r$}
+        \STATE \CALL{Quicksort}{$A, p, q - 1$}
+        \STATE \CALL{Quicksort}{$A, q + 1, r$}
+    \ENDIF
+\ENDPROCEDURE
+\PROCEDURE{Partition}{$A, p, r$}
+    \STATE $x = A[r]$
+    \STATE $i = p - 1$
+    \FOR{$j = p$ \TO $r - 1$}
+        \IF{$A[j] < x$}
+            \STATE $i = i + 1$
+            \STATE exchange $A[i]$ with $A[j]$
+        \ENDIF
+    \ENDFOR
+    \STATE exchange $A[i]$ with $A[r]$
+\ENDPROCEDURE
+\end{algorithmic}
+\end{algorithm}
+```
+
 本研究的主要目标是回应AI驱动自主系统（ASs）在可解释性上的关键需求，特别是在空战等高风险安全关键环境中。本研究的立足点在于，尽管AI已显著提升了各领域的操作能力，但其在空战等复杂场景中的应用仍因缺乏决策透明性与可解释性而受到制约。总体目标是通过开发能够使AI行为可理解和可靠的方法，来提升信任度与人机协作效率。通过聚焦于这一方面，本研究旨在为可信AI这一更广泛的研究领域做出贡献，而可信AI正是当前自主技术快速发展的时代中的核心关注点。
 
 
