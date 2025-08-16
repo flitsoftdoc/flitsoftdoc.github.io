@@ -1,25 +1,13 @@
 test
 
 
-//// details | 接口示例
-    open: true
-
-/// tab | Python
-    select: true
-
-```python
-print("helloo")
-```
-/// 
-/// tab | C++
-
-```cpp
-#include <iostream>
-int main(){ std::cout << "hello\n"; }
-```
+/// tab | Tab 1 title
+Tab 1 content
 ///
-////
 
+/// tab | Tab 2 title
+Tab 2 content
+///
 
 /// note | 标题
 
