@@ -1,16 +1,13 @@
 # 面向近距离空战中人工智能智能体战术的全局可解释性
 
-Emre Saldiran *(1), Mehmet Hasanzade (D), Gokhan Inalhan *(D) 和 Antonios Tsourdos (D)<br>英国克兰菲尔德大学航空、交通与制造学院，Bedford MK43 0AL；a.tsourdos@cranfield.ac.uk (A.T.)<br>* 通讯作者: emre.saldiran@cranfield.ac.uk (E.S.); inalhan@cranfield.ac.uk (G.I.)
+Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (D)
+
+英国克兰菲尔德大学航空、交通与制造学院，Bedford MK43 0AL；a.tsourdos@cranfield.ac.uk (A.T.)
 
 
-
-学术编辑: Sergey Leonov  
-收到日期: 2024年3月27日  
-修订日期: 2024年5月4日  
-接受日期: 2024年5月15日  
 发表日期: 2024年5月21日  
 
-版权: © 2024 作者。许可方为 MDPI, Basel, Switzerland。本文章为开放获取文章，遵循 [Creative Commons Attribution (CC BY) license](https://creativecommons.org/licenses/by/4.0/) 条款。
+
 
 #### 摘要
 
@@ -722,6 +719,7 @@ $$
 
 引用: Saldiran, E.; Hasanzade, M.; Inalhan, G.; Tsourdos, A. 面向近距离空战中人工智能智能体战术的全局可解释性. *Aerospace* 2024, 11, 415. https://doi.org/10.3390/aerospace11060415
 
+版权: © 2024 作者。许可方为 MDPI, Basel, Switzerland。本文章为开放获取文章，遵循 [Creative Commons Attribution (CC BY) license](https://creativecommons.org/licenses/by/4.0/) 条款。
 
 Author Contributions: Conceptualization, E.S., M.H. and G.I.; methodology, E.S., M.H. and G.I.; software, E.S.; validation, E.S.; formal analysis, E.S.; investigation, E.S., M.H. and G.I.; resources, G.I.; data curation, E.S.; writing-original draft preparation, E.S.; writing-review and editing, E.S., M.H., G.I. and A.T.; visualization, E.S.; supervision, G.I. and A.T.; project administration, G.I.; funding acquisition, G.I. All authors have read and agreed to the published version of the manuscript.
 
