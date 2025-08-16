@@ -468,6 +468,8 @@ $$
 
 奖励分解的双DQN算法的完整描述如算法2所示。带奖励分解的双DQN算法在训练时使用了与前文DQN部分所描述的相同状态空间、动作空间和奖励函数。
 
+![](https://cdn.mathpix.com/snip/images/m6b-VH99ZVDhBeCGMXRlVJBDtMdqQz6nbdM3ebCpy8M.original.fullsize.png){width="500"}
+
 ### 2.5. 训练细节
 
 在本节中，我们全面提供实际的训练细节，以帮助结果的可复现性。微调后的超参数以及训练回合的初始化策略被完整给出。一个智能体需要探索广泛的情境以提升其能力。我们在每个训练回合开始时随机设置两架飞机的相对朝向、速度和距离。这确保了智能体在训练过程中能够探索整个状态空间。空战环境中使用的飞机参数如表2所示。
@@ -485,7 +487,7 @@ $$
 
 
 
-![](https://cdn.mathpix.com/snip/images/m6b-VH99ZVDhBeCGMXRlVJBDtMdqQz6nbdM3ebCpy8M.original.fullsize.png){width="500"}
+
 
 除了表2中模型参数所规定的约束外，我们还随机初始化了相对距离，其范围为 -1000 到 1000 米。训练过程中的回合回报以及Q值分量如图6所示。RL智能体使用 [48] 的DQN实现进行训练，并针对奖励分解进行了必要的修改。
 
