@@ -23,27 +23,27 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 \begin{algorithm}
 \caption{Deep Q Network (DQN) Algorithm}
 \begin{algorithmic}[1]
-\State Initialize replay memory $D$ to capacity $N$
-\State Initialize action-value function $Q$ with random weights $\theta$
-\State Initialize target action-value function $Q^-$ with weights $\theta^- = \theta$
-\State Initialize state $s_0$ randomly
-\For{$t = 1, T$}
-    \If{$\text{random}(0,1) < \epsilon$}
-        \State $i = 1 \leq i \leq n | i \in \mathbb{Z}$
-        \State $a_t = A[\text{random}(i)]$
+\State Initialize replay memory D to capacity N
+\State Initialize action-value function Q with random weights θ
+\State Initialize target action-value function Q⁻ with weights θ⁻ = θ
+\State Initialize state s₀ randomly
+\For{t = 1 to T}
+    \If{random(0,1) < ε}
+        \State i = random integer from 1 to n
+        \State aₜ = A[i]
     \Else
-        \State $a_t = \arg\max_a Q(s_t, a, \theta)$
+        \State aₜ = argmax_a Q(sₜ, a, θ)
     \EndIf
-    \State Advance environment one step $s_{t+1}, r_t = \text{env}(a_t)$
-    \State Store transition $(s_t, a_t, r_t, s_{t+1})$ in $D$
-    \State Sample random minibatch of transitions $(s_j, a_j, r_j, s_{j+1})$ from $D$
-    \If{$s_{j+1}$ is terminal}
-        \State Set $y_j = r_j$
+    \State Advance environment: sₜ₊₁, rₜ = env(aₜ)
+    \State Store transition (sₜ, aₜ, rₜ, sₜ₊₁) in D
+    \State Sample random minibatch of transitions (sⱼ, aⱼ, rⱼ, sⱼ₊₁) from D
+    \If{sⱼ₊₁ is terminal}
+        \State yⱼ = rⱼ
     \Else
-        \State Set $y_j = r_j + \gamma \max_a Q^-(s_{j+1}, a; \theta^-)$
+        \State yⱼ = rⱼ + γ max_a Q⁻(sⱼ₊₁, a; θ⁻)
     \EndIf
-    \State Perform a gradient descent step on $(y_j - Q(s_j, a_j; \theta))^2$ with respect to $\theta$
-    \State Periodically update weights of target networks: $\theta^- = \tau\theta + (1-\tau)\theta^-$
+    \State Perform gradient descent on (yⱼ - Q(sⱼ, aⱼ; θ))² w.r.t. θ
+    \State Periodically update target network: θ⁻ = τθ + (1-τ)θ⁻
 \EndFor
 \end{algorithmic}
 \end{algorithm}
