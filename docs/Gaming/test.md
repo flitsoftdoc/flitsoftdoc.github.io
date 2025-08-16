@@ -32,9 +32,14 @@ int main(){ std::cout << "hello\n"; }
 可折叠内容
 ///
 
-/// tab | Tab 1
-内容1
+/// tab | Python select: true
+```python
+print("hello")
+```
 ///
-/// tab | Tab 2
-内容2
+/// tab | C++
+```cpp
+#include <iostream>
+int main(){ std::cout << "hello\n"; }
+```
 ///
