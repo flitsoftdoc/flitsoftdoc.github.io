@@ -271,12 +271,11 @@ DQN算法的完整描述如算法1所示。公式 (13) 的状态空间、表1的
 
 在传统的强化学习方法中，奖励信号通常表示为一个标量值，如公式 (18) 所示。这种表示方式缺乏区分不同奖励类型贡献的细粒度，从而忽略了从各奖励类型中生成的显式可解释性。奖励分解通过为每种奖励类型采用独立的深度Q网络（DQN）来解决这一限制。这一方法能够精确评估各奖励类型对智能体决策过程的贡献。借助奖励分解，我们可以通过比较不同状态下各奖励类型的Q值来展示一种奖励类型相对于另一种奖励类型的重要性。动作的选择首先通过对与不同奖励类型相关的各DQN的Q值求和，然后选择具有最高累计Q值的动作。这一方法有效避免了 [46] 中指出的“公地悲剧”问题。
 
+![](https://cdn.mathpix.com/snip/images/1OCIXydKc5pYFMsH5gOy37PyOUNmX-FYOhL29966p0I.original.fullsize.png){ width="500" } 
+
 /// admonition |算法1 深度Q网络（DQN）算法
 ![](https://cdn.mathpix.com/snip/images/1OCIXydKc5pYFMsH5gOy37PyOUNmX-FYOhL29966p0I.original.fullsize.png){ width="500" } 
 ///
-
-
-
 
 描述最优分解Q值的贝尔曼方程写作即时奖励与下一状态-动作对折扣Q值之和：
 
