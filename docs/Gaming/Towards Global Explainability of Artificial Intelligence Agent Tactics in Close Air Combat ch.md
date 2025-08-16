@@ -47,36 +47,7 @@ Initialize state $s_0$ randomly\;
 \end{algorithm}
 ```
 
-/// admonition |算法1 深度Q网络（DQN）算法
-```pseudocode
-\begin{algorithm}[t]
-\caption{Algorithm 1: Deep Q Network (DQN) Algorithm}
-\DontPrintSemicolon
-Initialize replay memory $\mathcal{D}$ to capacity $N$\;
-Initialize action--value function $Q$ with random weights $\theta$\;
-Initialize target action--value function $Q^{-}$ with weights $\theta^{-}\leftarrow\theta$\;
-Initialize state $s_0$ randomly\;
-\For{$t=1$ \KwTo $T$}{
-  \eIf{$\mathrm{random}(0,1)<\varepsilon$}{
-    $i \leftarrow \mathrm{random}\{1,\dots,n\}$\;
-    $a_t \leftarrow A[i]$\;
-  }{
-    $a_t \leftarrow \arg\max_{a} Q(s_t,a;\theta)$\;
-  }
-  $(s_{t+1}, r_t) \leftarrow \mathrm{env}(a_t)$\;
-  Store transition $(s_t,a_t,r_t,s_{t+1})$ in $\mathcal{D}$\;
-  Sample random minibatch $\{(s_j,a_j,r_j,s_{j+1})\}$ from $\mathcal{D}$\;
-  \eIf{$s_{j+1}$ is terminal}{
-    $y_j \leftarrow r_j$\;
-  }{
-    $y_j \leftarrow r_j + \gamma \max_{a} Q^{-}(s_{j+1},a;\theta^{-})$\;
-  }
-  Perform a gradient descent step on $\big(y_j - Q(s_j,a_j;\theta)\big)^2$ w.r.t.\ $\theta$\;
-  Periodically update target network: $\theta^{-} \leftarrow \tau\theta + (1-\tau)\theta^{-}$\;
-}
-\end{algorithm}
-```
-///
+
 
 ```pseudocode
 % This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
