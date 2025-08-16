@@ -24,27 +24,26 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 \caption{Deep Q Network (DQN) Algorithm}
 \begin{algorithmic}
 \PROCEDURE{DQN}{$N, \varepsilon, \gamma, \tau, T$}
-    \STATE Initialize replay memory $\mathcal{D}$ to capacity $N$
+    \STATE Initialize replay memory $D$ to capacity $N$
     \STATE Initialize action--value function $Q$ with random weights $\theta$
     \STATE Initialize target action--value function $Q^{-}$ with weights $\theta^{-} \gets \theta$
     \STATE Initialize state $s_0$ randomly
     \FOR{$t = 1$ \TO $T$}
         \IF{$\mathrm{random}(0,1) < \varepsilon$}
-            \STATE $i \gets \mathrm{random}\{1,\ldots,n\}$
-            \STATE $a_t \gets A[i]$
+            \STATE $a_t \gets$ \CALL{RandomChoice}{$A$}
         \ELSE
             \STATE $a_t \gets \arg\max_{a} Q(s_t, a; \theta)$
         \ENDIF
         \STATE $(s_{t+1}, r_t) \gets$ \CALL{EnvStep}{$a_t$}
-        \STATE \CALL{Store}{$\mathcal{D}, (s_t, a_t, r_t, s_{t+1})$}
-        \STATE Sample random minibatch $\{(s_j, a_j, r_j, s_{j+1})\}$ from $\mathcal{D}$
+        \STATE \CALL{Store}{$D, (s_t, a_t, r_t, s_{t+1})$}
+        \STATE Sample minibatch $\{(s_j, a_j, r_j, s_{j+1})\}$ from $D$
         \IF{$s_{j+1}$ is terminal}
             \STATE $y_j \gets r_j$
         \ELSE
             \STATE $y_j \gets r_j + \gamma \max_{a} Q^{-}(s_{j+1}, a; \theta^{-})$
         \ENDIF
-        \STATE Perform a gradient descent step on $(y_j - Q(s_j, a_j; \theta))^2$ w.r.t.\ $\theta$
-        \STATE Periodically update target network: $\theta^{-} \gets \tau\theta + (1-\tau)\theta^{-}$
+        \STATE Update $\theta$ by a gradient step on $(y_j - Q(s_j, a_j; \theta))^2$
+        \STATE $\theta^{-} \gets \tau \theta + (1-\tau)\theta^{-}$ \COMMENT{periodic/soft target update}
     \ENDFOR
 \ENDPROCEDURE
 \end{algorithmic}
