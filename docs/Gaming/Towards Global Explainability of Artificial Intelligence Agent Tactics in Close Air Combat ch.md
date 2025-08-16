@@ -39,7 +39,7 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
         \STATE Advance environment one step: $s_{t+1}, r_t = \mathrm{env}(a_t)$
         \STATE Store transition $(s_t, a_t, r_t, s_{t+1})$ in $\mathcal{D}$
         \STATE Sample random minibatch of transitions $\{(s_j, a_j, r_j, s_{j+1})\}$ from $\mathcal{D}$
-        \IF $s_{j+1}$ is terminal
+        \IF { $s_{j+1}$ is terminal}
             \STATE Set $y_j = r_j$
         \ELSE
             \STATE Set $y_j = r_j + \gamma \max_{a} Q^{-}(s_{j+1}, a; \theta^{-})$
