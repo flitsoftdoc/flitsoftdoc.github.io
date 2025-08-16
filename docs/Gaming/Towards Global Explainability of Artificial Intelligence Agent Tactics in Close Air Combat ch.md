@@ -275,11 +275,14 @@ DQN算法的完整描述如算法1所示。公式 (13) 的状态空间、表1的
 
 
 
+/// details | 接口示例
+    open: true
+
 /// tab | Python
-    select: true    # 默认选中
+    select: true
 
 ```python
-print("helloooooo")
+print("hello")
 ```
 /// 
 /// tab | C++
@@ -289,12 +292,15 @@ print("helloooooo")
 int main(){ std::cout << "hello\n"; }
 ```
 ///
+///
+
 
 
 
 /// details |算法1 解析
 
 /// tab | 深度Q网络（DQN）算法思路
+
 DQN算法的总体思路可以用“**利用深度学习的感知能力，并通过两大创新机制解决强化学习中的训练稳定性问题**”来概括。
 
 具体来说，其思路分为以下三个核心层面：
