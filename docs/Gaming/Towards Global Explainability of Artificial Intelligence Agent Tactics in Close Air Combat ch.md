@@ -21,7 +21,7 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 
 ```pseudocode
 \begin{algorithm}
-\caption{Deep Q Network (DQN) Algorithm}
+\caption*{算法1：Deep Q Network (DQN) Algorithm}
 Initialize replay memory $\mathcal{D}$ to capacity $N$\;
 Initialize action--value function $Q$ with random weights $\theta$\;
 Initialize target action--value function $Q^{-}$ with weights $\theta^{-}\leftarrow\theta$\;
