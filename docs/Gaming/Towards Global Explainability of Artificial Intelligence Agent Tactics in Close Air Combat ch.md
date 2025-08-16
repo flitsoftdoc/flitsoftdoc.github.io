@@ -21,95 +21,6 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 
 
 
-```pseudocode
-\begin{algorithm}
-\caption{Algorithm 1 Deep Q Network (DQN) Algorithm}
-\begin{algorithmic}[1]
-    \STATE Initialize replay memory $\mathcal{D}$ to capacity $N$
-    \STATE Initialize action-value function $Q$ with random weights $\theta$
-    \STATE Initialize target action-value function $Q^{-}$ with weights $\theta^{-} = \theta$
-    \STATE Initialize state $s_0$ randomly
-    \FOR{$t=1$ \TO $T$}
-        \IF{random(0,1) $<\varepsilon$}
-            \STATE Select a random integer $i$ where $1 \le i \le n$
-            \STATE $a_t = A[\text{random}(i)]$
-        \ELSE
-            \STATE $a_t = \arg\max_{a} Q(s_t, a, \theta)$
-        \ENDIF
-        \STATE Advance environment one step: $s_{t+1}, r_t = \mathrm{env}(a_t)$
-        \STATE Store transition $(s_t, a_t, r_t, s_{t+1})$ in $\mathcal{D}$
-        \STATE Sample random minibatch of transitions $\{(s_j, a_j, r_j, s_{j+1})\}$ from $\mathcal{D}$
-        \IF { $s_{j+1}$ is terminal}
-            \STATE Set $y_j = r_j$
-        \ELSE
-            \STATE Set $y_j = r_j + \gamma \max_{a} Q^{-}(s_{j+1}, a; \theta^{-})$
-        \ENDIF
-        \STATE Perform a gradient descent step on $(y_j - Q(s_j, a_j; \theta))^2$ with respect to $\theta$
-        \STATE Periodically update weights of target networks: $\theta^{-} = \tau\theta + (1 - \tau)\theta^{-}$
-    \ENDFOR
-\end{algorithmic}
-\end{algorithm}
-```
-
-```pseudocode
-\begin{algorithm}
-\caption{Deep Q Network (DQN) Algorithm}
-\begin{algorithmic}[1]
-\State Initialize replay memory D to capacity N
-\State Initialize action-value function Q with random weights θ
-\State Initialize target action-value function Q⁻ with weights θ⁻ = θ
-\State Initialize state s₀ randomly
-\For{t = 1 to T}
-    \If{random(0,1) < ε}
-        \State i = random integer from 1 to n
-        \State aₜ = A[i]
-    \Else
-        \State aₜ = argmax_a Q(sₜ, a, θ)
-    \EndIf
-    \State Advance environment: sₜ₊₁, rₜ = env(aₜ)
-    \State Store transition (sₜ, aₜ, rₜ, sₜ₊₁) in D
-    \State Sample random minibatch of transitions (sⱼ, aⱼ, rⱼ, sⱼ₊₁) from D
-    \If{sⱼ₊₁ is terminal}
-        \State yⱼ = rⱼ
-    \Else
-        \State yⱼ = rⱼ + γ max_a Q⁻(sⱼ₊₁, a; θ⁻)
-    \EndIf
-    \State Perform gradient descent on (yⱼ - Q(sⱼ, aⱼ; θ))² w.r.t. θ
-    \State Periodically update target network: θ⁻ = τθ + (1-τ)θ⁻
-\EndFor
-\end{algorithmic}
-\end{algorithm}
-```
-
-```pseudocode
-% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$A, p, r$}
-    \IF{$p < r$} 
-        \STATE $q = $ \CALL{Partition}{$A, p, r$}
-        \STATE \CALL{Quicksort}{$A, p, q - 1$}
-        \STATE \CALL{Quicksort}{$A, q + 1, r$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$A, p, r$}
-    \STATE $x = A[r]$
-    \STATE $i = p - 1$
-    \FOR{$j = p$ \TO $r - 1$}
-        \IF{$A[j] < x$}
-            \STATE $i = i + 1$
-            \STATE exchange $A[i]$ with $A[j]$
-        \ENDIF
-    \ENDFOR
-    \STATE exchange $A[i]$ with $A[r]$
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
-```
-
-
-
 本研究的主要目标是回应AI驱动自主系统（ASs）在可解释性上的关键需求，特别是在空战等高风险安全关键环境中。本研究的立足点在于，尽管AI已显著提升了各领域的操作能力，但其在空战等复杂场景中的应用仍因缺乏决策透明性与可解释性而受到制约。总体目标是通过开发能够使AI行为可理解和可靠的方法，来提升信任度与人机协作效率。通过聚焦于这一方面，本研究旨在为可信AI这一更广泛的研究领域做出贡献，而可信AI正是当前自主技术快速发展的时代中的核心关注点。
 
 
@@ -361,77 +272,10 @@ DQN算法的完整描述如算法1所示。公式 (13) 的状态空间、表1的
 在传统的强化学习方法中，奖励信号通常表示为一个标量值，如公式 (18) 所示。这种表示方式缺乏区分不同奖励类型贡献的细粒度，从而忽略了从各奖励类型中生成的显式可解释性。奖励分解通过为每种奖励类型采用独立的深度Q网络（DQN）来解决这一限制。这一方法能够精确评估各奖励类型对智能体决策过程的贡献。借助奖励分解，我们可以通过比较不同状态下各奖励类型的Q值来展示一种奖励类型相对于另一种奖励类型的重要性。动作的选择首先通过对与不同奖励类型相关的各DQN的Q值求和，然后选择具有最高累计Q值的动作。这一方法有效避免了 [46] 中指出的“公地悲剧”问题。
 
 /// admonition |算法1 深度Q网络（DQN）算法
-初始化回放记忆 $D$，容量为 $N$
-
-随机初始化动作-价值函数 $Q$ 的权重 $\theta$
-
-初始化目标动作-价值函数 $Q^{-}$，权重 $\theta^{-}=\theta$
-
-随机初始化状态 $s_{0}$
-
-    for $\mathrm{t}=1, T$ do
-
-        if random $(0,1)<\epsilon$ then
-
-            $i=1 \leq i \leq n \mid i \in \mathbb{Z}$
-
-            $a_{t}=A[\operatorname{random}(i)]$
-
-        else
-
-            $a_{t}=\arg \max _{a} Q\left(s_{t}, a, \theta\right)$
-
-        end if
-
-     环境前进一步 $s_{t+1}, r_{t}=\operatorname{env}\left(a_{t}\right)$
-
-     存储转移 $\left(s_{t}, a_{t}, r_{t}, s_{t+1}\right)$ 至 $D$
-
-     从 $D$ 中随机采样小批量转移 $(s_{j}, a_{j}, r_{j}, s_{j+1})$
-
-     if $s_{j+1}$ 是终止状态 then
-
-        设 $y_{j}=r_{j}$
-
-     else
-
-        设 $y_{j}=r_{j}+\gamma \max {a} Q^{-}\left(s{j+1}, a ; \theta^{-}\right)$
-
-     end if
-
-     对 $\left(y_{j}-Q\left(s_{j}, a_{j} ; \theta\right)\right)^{2}$ 关于 $\theta$ 执行梯度下
-     降更新
-
-     周期性更新目标网络权重: $\theta^{-}=\tau \theta+(1-\tau) \theta^{-}$
-
-     end for
+![](https://cdn.mathpix.com/snip/images/1OCIXydKc5pYFMsH5gOy37PyOUNmX-FYOhL29966p0I.original.fullsize.png){ width="500" } 
 ///
 
-```
-Algorithm 1 Deep Q Network (DQN) Algorithm
-    Initialize replay memory $D$ to capacity $N$
-    Initialize action-value function $Q$ with random weights $\theta$
-    Initialize target action-value function $Q^{-}$with weights $\theta^{-}=\theta$
-    Initialize state $s_{0}$ randomly
-    for $\mathrm{t}=1, T$ do
-        if random $(0,1)<\epsilon$ then
-            $i=1 \leq i \leq n \mid i \in \mathbb{Z}$
-            $a_{t}=A[\operatorname{random}(i)]$
-        else
-            $a_{t}=\arg \max _{a} Q\left(s_{t}, a, \theta\right)$
-        end if
-        Advance environment one step $s_{t+1}, r_{t}=\operatorname{env}\left(a_{t}\right)$
-        Store transition $\left(s_{t}, a_{t}, r_{t}, s_{t+1}\right)$ in $D$
-        Sample random minibatch of transitions ( $s_{j}, a_{j}, r_{j}, s_{j+1}$ ) from $D$
-        if $s_{j+1}$ is terminal then
-            Set $y_{j}=r_{j}$
-        else
-            Set $y_{j}=r_{j}+\gamma \max _{a} Q^{-}\left(s_{j+1}, a ; \theta^{-}\right)$
-        end if
-        Perform a gradient descent step on $\left(y_{j}-Q\left(s_{j}, a_{j} ; \theta\right)\right)^{2}$ with respect to $\theta$
-        Periodically update weights of target networks: $\theta^{-}=\tau \theta+(1-\tau) \theta^{-}$
-    end for
-```
+
 
 
 描述最优分解Q值的贝尔曼方程写作即时奖励与下一状态-动作对折扣Q值之和：
