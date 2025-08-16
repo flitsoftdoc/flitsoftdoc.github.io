@@ -18,19 +18,34 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 ## 1. 引言
 
 近年来，人工智能（AI）驱动的自主系统（Autonomous Systems, ASs）在现实场景中的应用迅速增长，展现出了高度复杂和新颖的行为。这一扩展涵盖了不同领域，包括大型空战飞行器 [1] 和较小的自主远程驾驶航空系统（Remotely Piloted Aircraft Systems, RPASs）[2]，它们利用AI提升操作自主性与效能。然而，这些进展突显了自主系统中对可解释性的关键需求 [3]。可解释性的重要性不仅在于帮助用户理解，还在于建立用户、开发者与政策制定者之间的信任。此外，在安全关键应用（如自主空战智能体）中，可解释性的作用更为重要。如文献 [4,5] 所示，可解释性与验证、认证和适应性一道，是AI驱动自主系统可信性的支柱之一，尤其是在高风险安全关键环境下。可解释性的作用在于向用户呈现AI行为背后的理由，使其能够建立更高质量的心理模型。形式上，心理模型是“人们基于其现实世界经验所构建的内部表征” [6]。通过提供对AI行为动机的洞察，可解释性使用户能够构建更高质量的心理模型，从而促进更高效的人机协作。尽管可解释性AI方法在医疗、司法和金融等领域取得了显著进展 [7]，但其在AI驱动的空战智能体中的应用仍相对未被深入探索。在空战环境中，飞行员需要在高度动态且充满挑战的环境下进行高频率的连续决策。可解释性能够通过辅助发现和优化新战术来提升AI在空战中的整合程度，同时也能增强对AI应用的整体信任。
+
 /// admonition |算法1 深度Q网络（DQN）算法
 ```pseudocode
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$A, p, r$}
-    \IF{$p < r$} 
-        \STATE $q = $ \CALL{Partition}{$A, p, r$}
-        \STATE \CALL{Quicksort}{$A, p, q - 1$}
-        \STATE \CALL{Quicksort}{$A, q + 1, r$}
-    \ENDIF
-\ENDPROCEDURE
-\end{algorithmic}
+\begin{algorithm}[t]
+\caption{Algorithm 1: Deep Q Network (DQN) Algorithm}
+\DontPrintSemicolon
+Initialize replay memory $\mathcal{D}$ to capacity $N$\;
+Initialize action--value function $Q$ with random weights $\theta$\;
+Initialize target action--value function $Q^{-}$ with weights $\theta^{-}\leftarrow\theta$\;
+Initialize state $s_0$ randomly\;
+\For{$t=1$ \KwTo $T$}{
+  \eIf{$\mathrm{random}(0,1)<\varepsilon$}{
+    $i \leftarrow \mathrm{random}\{1,\dots,n\}$\;
+    $a_t \leftarrow A[i]$\;
+  }{
+    $a_t \leftarrow \arg\max_{a} Q(s_t,a;\theta)$\;
+  }
+  $(s_{t+1}, r_t) \leftarrow \mathrm{env}(a_t)$\;
+  Store transition $(s_t,a_t,r_t,s_{t+1})$ in $\mathcal{D}$\;
+  Sample random minibatch $\{(s_j,a_j,r_j,s_{j+1})\}$ from $\mathcal{D}$\;
+  \eIf{$s_{j+1}$ is terminal}{
+    $y_j \leftarrow r_j$\;
+  }{
+    $y_j \leftarrow r_j + \gamma \max_{a} Q^{-}(s_{j+1},a;\theta^{-})$\;
+  }
+  Perform a gradient descent step on $\big(y_j - Q(s_j,a_j;\theta)\big)^2$ w.r.t.\ $\theta$\;
+  Periodically update target network: $\theta^{-} \leftarrow \tau\theta + (1-\tau)\theta^{-}$\;
+}
 \end{algorithm}
 ```
 ///
@@ -61,6 +76,34 @@ Emre Saldiran , Mehmet Hasanzade (D), Gokhan Inalhan (D) 和 Antonios Tsourdos (
 \end{algorithmic}
 \end{algorithm}
 ```
+
+
+```pseudocode
+Algorithm 1 Deep Q Network (DQN) Algorithm
+    Initialize replay memory $D$ to capacity $N$
+    Initialize action-value function $Q$ with random weights $\theta$
+    Initialize target action-value function $Q^{-}$with weights $\theta^{-}=\theta$
+    Initialize state $s_0$ randomly
+    for $\mathrm{t}=1, \mathrm{~T}$ do
+        if random $(0,1)<\epsilon$ then
+            $i=1 \leq i \leq n \mid i \in \mathbb{Z}$
+            $a_t=A[\operatorname{random}(i)]$
+        else
+            $a_t=\arg \max _a Q\left(s_t, a, \theta\right)$
+        end if
+        Advance environment one step $s_{t+1}, r_t=\operatorname{env}\left(a_t\right)$
+        Store transition ( $s_t, a_t, r_t, s_{t+1}$ ) in $D$
+        Sample random minibatch of transitions ( $s_j, a_j, r_j, s_{j+1}$ ) from $D$
+        if $s_{j+1}$ is terminal then
+            Set $y_j=r_j$
+        else
+            Set $y_j=r_j+\gamma \max _a Q^{-}\left(s_{j+1}, a ; \theta^{-}\right)$
+        end if
+        Perform a gradient descent step on $\left(y_j-Q\left(s_j, a_j ; \theta\right)\right)^2$ with respect to $\theta$
+        Periodically update weights of target networks: $\theta^{-}=\tau \theta+(1-\tau) \theta^{-}$
+    end for
+```
+
 
 本研究的主要目标是回应AI驱动自主系统（ASs）在可解释性上的关键需求，特别是在空战等高风险安全关键环境中。本研究的立足点在于，尽管AI已显著提升了各领域的操作能力，但其在空战等复杂场景中的应用仍因缺乏决策透明性与可解释性而受到制约。总体目标是通过开发能够使AI行为可理解和可靠的方法，来提升信任度与人机协作效率。通过聚焦于这一方面，本研究旨在为可信AI这一更广泛的研究领域做出贡献，而可信AI正是当前自主技术快速发展的时代中的核心关注点。
 
