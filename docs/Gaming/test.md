@@ -8,6 +8,19 @@ Tab 1 content
 Tab 2 content
 ///
 
+
+=== "Latest"
+
+    ``` sh
+    pip install mkdocs-material
+    ```
+
+=== "9.x"
+
+    ``` sh
+    pip install mkdocs-material=="9.*" # (1)!
+    ```
+
 /// note | 标题
 
 内容
