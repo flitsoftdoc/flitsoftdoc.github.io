@@ -161,14 +161,14 @@ MARLlib与RLlib关系紧密，MARLlib建立在RLlib提供的基础之上。MARLl
 虽然RLlib为强化学习提供了强大的基础设施，但其多智能体场景存在一些挑战，导致使用起来并不十分高效。这些挑战主要源于：
 
 - **缺乏标准化和统一的智能体-环境接口**：多智能体强化学习涉及多个智能体与环境的交互，这增加了接口设计的复杂性。而RLlib的多智能体场景缺乏统一的接口，缺少清晰的规范来表示和交换智能体与环境间的信息，从而阻碍了不同MARL算法的开发和比较。  
-- **复杂性与新手可访问性差**：在RLlib中，多智能体场景 (1) 通常需要对底层框架有深入理解，这使得它对多智能体强化学习的新手而言不够友好。有效利用RLlib的多智能体功能需要先掌握高级RL概念，这对新入门的研究人员和实践者形成了障碍1。  
-{.annotate}
-
-1. 示例见此链接: https://github.com/ray-project/ray/blob/master/rllib/examples/multi_agent_custom_policy.py
-
+- **复杂性与新手可访问性差**：在RLlib中，多智能体场景(${ }^{1}$)通常需要对底层框架有深入理解，这使得它对多智能体强化学习的新手而言不够友好。有效利用RLlib的多智能体功能需要先掌握高级RL概念，这对新入门的研究人员和实践者形成了障碍。  
 - **缺乏统一的算法集成点**：RLlib的多智能体场景在设计上没有针对不同算法的统一集成点。这导致在RLlib中有效比较和结合不同的MARL算法变得困难。研究人员和实践者在实现和评估自己的算法时缺乏标准化方式，从而阻碍了该领域的进展与合作。  
 
 解决这些挑战对推动多智能体强化学习研究至关重要，需要努力简化并提升RLlib多智能体场景的可用性，为研究人员和开发者提供一个更易访问、更高效的实验框架。  
+
+/// info | 1
+示例见此链接: https://github.com/ray-project/ray/blob/master/rllib/examples/multi_agent_custom_policy.py
+///
 
 > 1. 示例见此链接: https://github.com/ray-project/ray/blob/master/rllib/examples/multi_agent_custom_policy.py
 
