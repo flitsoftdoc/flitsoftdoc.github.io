@@ -166,7 +166,7 @@ MARLlib与RLlib关系紧密，MARLlib建立在RLlib提供的基础之上。MARLl
 
 解决这些挑战对推动多智能体强化学习研究至关重要，需要努力简化并提升RLlib多智能体场景的可用性，为研究人员和开发者提供一个更易访问、更高效的实验框架。  
 
-/// note | 1
+/// info | 1
 
 示例见此链接: https://github.com/ray-project/ray/blob/master/rllib/examples/multi_agent_custom_policy.py
 ///
