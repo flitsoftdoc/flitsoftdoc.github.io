@@ -58,7 +58,9 @@ HIGHLIGHTS方法被提出用于总结智能体行为，以帮助人们评估这�
 
 ![](https://cdn.mathpix.com/cropped/2025_08_16_f89e22256b09be02c148g-05.jpg?height=869&width=1281&top_left_y=985&top_left_x=573){ width="600" } 
 
+/// caption
 图1. 可解释强化学习智能体开发过程的总体概览。
+///
 
 
 ### 2.1. 背景
