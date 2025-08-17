@@ -22,9 +22,73 @@ Tab 2 content
     ```
 
 /// note | 标题
+内容
+///
+
+/// note | 标题
 
 内容
 ///
+
+/// abstract | 标题
+
+内容
+///
+
+/// info | 标题
+
+内容
+///
+
+
+/// tip | 标题
+
+内容
+///
+
+/// success | 标题
+
+内容
+///
+
+
+/// question | 标题
+
+内容
+///
+
+/// warning | 标题
+
+内容
+///
+
+/// failure | 标题
+
+内容
+///
+
+/// danger | 标题
+
+内容
+///
+
+/// bug | 标题
+
+内容
+///
+
+
+/// example | 标题
+
+内容
+///
+
+
+/// quote | 标题
+
+内容
+///
+
 
 /// details | 标题
     type: warning
