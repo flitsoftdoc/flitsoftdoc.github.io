@@ -167,11 +167,9 @@ MARLlib与RLlib关系紧密，MARLlib建立在RLlib提供的基础之上。MARLl
 解决这些挑战对推动多智能体强化学习研究至关重要，需要努力简化并提升RLlib多智能体场景的可用性，为研究人员和开发者提供一个更易访问、更高效的实验框架。  
 
 /// admonition | 1
-
 示例见此链接: https://github.com/ray-project/ray/blob/master/rllib/examples/multi_agent_custom_policy.py
 ///
 
-> 1. 示例见此链接: https://github.com/ray-project/ray/blob/master/rllib/examples/multi_agent_custom_policy.py
 
 ### E.2 MARLlib vs RLlib
 
@@ -199,8 +197,14 @@ MARLlib对RLlib的主要贡献包括：
 
 此外，MARLlib还为用户提供了新的功能，包括流程自动适配与训练兼容性测试，并配备了关于多智能体强化学习的完整文档。
 
-> 2. https://github.com/Replicable-MARL/MARLlib/blob/master/examples/add_new_env.py  
-> 3. https://github.com/Replicable-MARL/MARLlib/blob/master/examples/customize_policy_sharing.py
+/// admonition | 2
+https://github.com/Replicable-MARL/MARLlib/blob/master/examples/add_new_env.py  
+///
+
+/// admonition | 3
+https://github.com/Replicable-MARL/MARLlib/blob/master/examples/customize_policy_sharing.py
+///
+
 
 ## 附录F. 相关工作
 
@@ -216,7 +220,10 @@ MARLlib对RLlib的主要贡献包括：
 
 尽管如此，已有的库通过放弃任务侧接口的统一性来支持多任务。例如，MAPPO官方实现为每个不同任务创建了单独的runner。截至目前，MAPPO基准支持四个环境，并因此准备了超过六个runner文件，包括共享和非共享模式${ }^{4}$。然而，这种方法存在局限性，因为新任务不断涌现，使得维护大量runner变得不切实际。
 
-> 4. https://github.com/marlbenchmark/on-policy/tree/main/onpolicy/runner
+/// admonition | 4
+https://github.com/marlbenchmark/on-policy/tree/main/onpolicy/runner
+///
+
 
 在讨论了任务侧的当前进展后，我们将注意力转向算法侧。我们的目标不是在算法层面比较孰优孰劣，而是探讨过去将尽可能多的算法纳入统一框架的努力。表1展示了部分相关框架的对比。在此我们对每个框架做简要介绍：
 
