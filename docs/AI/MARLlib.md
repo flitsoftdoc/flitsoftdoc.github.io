@@ -31,7 +31,7 @@
 | MARLAlgorithms | 1 合作 | 9 | 共享 | MLP+GRU | MARL-Algorithms |
 | EPyMARL | 4 合作 | 9 | 共享 + 分离 | GRU | PyMARL |
 | MAlib | 4 自博弈 | 9 | 共享 + 分组 + 分离 | MLP+LSTM | MAlib |
-| MAPPO | 4 合作 | 1 | 共享 + 分离 | MLP+{GRU+CNN | pytorch-a2c-ppo-acktr -gail (Kostrikovk, 2018) |
+| MAPPO | 4 合作 | 1 | 共享 + 分离 | MLP+GRU+CNN | pytorch-a2c-ppo-acktr -gail (Kostrikovk, 2018) |
 | MARLlib | 15+ 无限制 | 18 | 共享+分组+分离 可定制 | MLP+LSTM+GRU +CNN | Ray (Moritz et al., 2018) RLlib (Liang et al., 2018) |
 
 
@@ -39,7 +39,8 @@
 
 MARLlib的架构由三个关键组成部分构成：1）用于统一多智能体环境的标准化封装器；2）在智能体级别实现的算法数据流；3）用于解决任务与多智能体学习过程之间可能出现的兼容性问题的灵活策略映射策略。
 
-![](https://cdn.mathpix.com/cropped/2025_08_17_cfa30e152f291943db2bg-03.jpg?height=689&width=1497&top_left_y=260&top_left_x=311){width="500"}
+![](https://cdn.mathpix.com/cropped/2025_08_17_cfa30e152f291943db2bg-03.jpg?height=689&width=1497&top_left_y=260&top_left_x=311){width="600"}
+
 图1：MARLlib概览——一个将算法与任务集成到统一框架中的框架。
 
 
