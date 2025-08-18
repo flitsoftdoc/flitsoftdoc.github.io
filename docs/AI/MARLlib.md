@@ -39,7 +39,7 @@
 
 MARLlib的架构由三个关键组成部分构成：1）用于统一多智能体环境的标准化封装器；2）在智能体级别实现的算法数据流；3）用于解决任务与多智能体学习过程之间可能出现的兼容性问题的灵活策略映射策略。
 
-![](https://cdn.mathpix.com/cropped/2025_08_17_cfa30e152f291943db2bg-03.jpg?height=689&width=1497&top_left_y=260&top_left_x=311){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_08_17_cfa30e152f291943db2bg-03.jpg?height=689&width=1497&top_left_y=260&top_left_x=311){width="700"}
 
 图1：MARLlib概览——一个将算法与任务集成到统一框架中的框架。
 
@@ -144,9 +144,10 @@ MARLlib提供了一个API，具有用户友好的编程接口，在简化库使�
 ## 附录D. 参数
 
 在MARLlib中，初始化算法时可选择三类超参数：`common`、`finetuned`和`test`。  
-- **common超参数** 适用于在新任务上进行常规训练，此时最优超参数未知。  
-- **finetuned超参数** 建议用于与其他算法在常用MARL任务（如MPE和SMAC）上进行公平比较。  
-- **test超参数** 用于开发和测试新算法，或引入新的多智能体环境。  
+
+- **common**： 适用于在新任务上进行常规训练，此时最优超参数未知。  
+- **finetuned**： 建议用于与其他算法在常用MARL任务（如MPE和SMAC）上进行公平比较。  
+- **test**： 用于开发和测试新算法，或引入新的多智能体环境。  
 
 你可以通过访问该链接找到所有可用参数。
 
