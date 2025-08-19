@@ -106,7 +106,7 @@ Hungarian算法（集中式）对应算法1。Hungarian算法是一种经典的�
 
 **算法1 Hungarian算法在最优任务分配中的应用**
 
-![](https://cdn.mathpix.com/snip/images/dlQwiAhDJ2Oo3Gu0f7vrD3MEmxYmSC96-F0WpcpRubc.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/dlQwiAhDJ2Oo3Gu0f7vrD3MEmxYmSC96-F0WpcpRubc.original.fullsize.png){width="600"}
 
 
 ### 2.2. 分布式任务分配算法
@@ -115,7 +115,7 @@ Bertsekas $\epsilon$-Auction算法（集中式/分布式）对应算法2。Berts
 
 **算法2 Bertsekas $\epsilon$-Auction算法在最优任务分配中的应用**
 
-![](https://cdn.mathpix.com/snip/images/jDujEcrGKkeFs8xTTargLsSxnw5m4trECs8y4K0dyuc.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/jDujEcrGKkeFs8xTTargLsSxnw5m4trECs8y4K0dyuc.original.fullsize.png){width="600"}
 
 CBBA（Consensus-Based Bundle Algorithm，分布式）对应算法3。CBBA是一种先进的分布式任务分配算法，它结合了市场竞价与局部一致性协商 [33]。在CBBA中，每个智能体根据自身能力和任务收益贪心地构建一组任务序列（捆绑），然后智能体之间进行通信以协商一致，通过交换各自的分配意图并根据一定规则解决冲突（多个智能体选择同一任务），直至达成无冲突的任务分配一致意见 [33]。CBBA具有以下特点 [33]：(1) 完全去中心化决策，没有中央节点，适用于大规模团队以避免随智能体数量增加而出现的集中计算与通信瓶颈；(2) 多项式时间复杂度，算法随任务和智能体数量线性或多项式增长，因此在任务/智能体规模较大时仍能运行（可扩展性良好）；(3) 能处理复杂场景，如每个智能体执行多个任务（时间扩展分配）、异构智能体与任务价值等，并在一定假设下对解的质量提供保证（输出可行解并具备性能保证 [33]）。CBBA适合动态任务场景，因为其迭代过程可在任务集发生变化时重新触发：当新任务加入或智能体失效时，每个智能体可更新自身任务序列并再次通信以达成新共识。这种局部自适应机制使CBBA在应对任务和环境变化时具备鲁棒性。需要注意的是，标准CBBA假设同步通信，并要求智能体在每轮广播分配意图，这可能带来一定通信开销；后续研究还提出了异步版本（ACBBA），以减少通信频率和网络负担，同时保持收敛 [33]。总体而言，CBBA是分布式任务分配算法中的主流方法，我们将其作为去中心化的基准进行评估；它无需中央控制即可获得近似最优的任务分配方案。
 
@@ -123,11 +123,11 @@ CBBA（Consensus-Based Bundle Algorithm，分布式）对应算法3。CBBA是一
 
 **算法3 CBBA在分布式任务分配中的应用**
 
-![](https://cdn.mathpix.com/snip/images/XfqbI2G10sd7Z9IxAZWaPM9csEZUI8pfJ7x7tUjexaM.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/XfqbI2G10sd7Z9IxAZWaPM9csEZUI8pfJ7x7tUjexaM.original.fullsize.png){width="600"}
 
 **算法4 拍卖2-Opt改进算法在分布式任务分配中的应用**
 
-![](https://cdn.mathpix.com/snip/images/jbRSWM037Mz0LNHSuTF-EuEccwJ3JqUEu33w_AyrT-Y.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/jbRSWM037Mz0LNHSuTF-EuEccwJ3JqUEu33w_AyrT-Y.original.fullsize.png){width="600"}
 
 
 ### 2.3. 基于RL的方法
