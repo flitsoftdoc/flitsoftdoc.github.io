@@ -363,9 +363,7 @@ $$
 
 - 我们尚未探索极端异常场景，例如没有任何客户端存在，或所有客户端聚集在地图边缘的情况。
 - 引言中提到，MANET 的优势之一是具备韧性（见第 1.2 节）。然而，我们提出的 MANET 方法并未提供冗余。我们预计这可以通过设计融入蜂群，并计划在不久的将来重点研究该问题（及其形式化验证）。
-- 我们认为，用于控制能效的参数已包含在基于力的节点控制中：在第 4.1.3 节公式 (7) 中，我们将无人机间的作用距离设为 1，此时该力趋近于零。由于距离影响能效，未来的研究可利用模型的这一部分来调节无人机间通信的功耗。同样，第 3.2 节中的 LQM 在距离为 1 时达到平台值。尽管这与 MANET 中数据传输的能耗相关，但目前的研究并未评估该成本。
-
-  未来的研究，尤其是针对具体应用的研究，将会考虑这一网络性能指标。
+- 我们认为，用于控制能效的参数已包含在基于力的节点控制中：在第 4.1.3 节公式 (7) 中，我们将无人机间的作用距离设为 1，此时该力趋近于零。由于距离影响能效，未来的研究可利用模型的这一部分来调节无人机间通信的功耗。同样，第 3.2 节中的 LQM 在距离为 1 时达到平台值。尽管这与 MANET 中数据传输的能耗相关，但目前的研究并未评估该成本。未来的研究，尤其是针对具体应用的研究，将会考虑这一网络性能指标。
 
 - 在性能评估中，我们注意到实验设置及公式 (5)-(7) 的细微变化会导致蜂群出现奇特的涌现行为（例如，一长串相连的无人机左右摆动，直到与客户端连接）。未来工作将研究此类行为的设计与利用，以及实现它们所需的环境条件。
 - 在公式 (2) 中，我们将 LQM 定义为路径中最弱链路的质量。未来可以通过更复杂的定义来反映连接的其他属性，使 LQM 受整条路径信号衰减的影响。任意连接到最佳可用接入点 $j$ 的节点 $i$ 的递归定义如下：
@@ -376,10 +374,6 @@ $$
 
 - 在第 2.3 节中，我们特意将场景限定在二维域。目前我们实验室的大量项目与海事领域相关，因此该设定满足需求。尽管如此，我们并不认为将理论推广至三维存在问题。未来工作将致力于研究适应障碍丰富环境或复杂地形（例如城市峡谷或室内搜救）的改进方法。
 
-Author Contributions: Conceptualization, F.S.; methodology, F.S.; software, F.S.; validation, F.S. and H.H.; formal analysis, F.S., H.H. and A.A.; investigation, F.S., H.H. and A.A.; resources, F.S. and A.A.; data curation, F.S.; writing-original draft preparation, F.S., H.H. and A.A.; writing-review and editing, F.S., H.H. and A.A.; visualization, F.S.; supervision, F.S. and A.A.; project administration, F.S. and A.A.; funding acquisition, F.S. and A.A. All authors have read and agreed to the published version of the manuscript.
-
-Funding: This work was supported by VTT's Government Grant (GG_SecureSoc2022, Project \#132273).
-Conflicts of Interest: The authors declare no conflict of interest.
 
 ## References
 
@@ -434,5 +428,5 @@ Conflicts of Interest: The authors declare no conflict of interest.
 49. Pinell, C.; Prol, F.S.; Bhuiyan, M.Z.H.; Praks, J. Receiver architectures for positioning with low earth orbit satellite signals: A survey. EURASIP J. Adv. Signal Process. 2023, 2023, 60. [CrossRef]
 50. Kassas, Z.M.; Kozhaya, S.; Kanj, H.; Saroufim, J.; Hayek, S.W.; Neinavaie, M.; Khairallah, N.; Khalife, J. Navigation with Multi-Constellation LEO Satellite Signals of Opportunity: Starlink, OneWeb, Orbcomm, and Iridium. In Proceedings of the 2023 IEEE/ION Position, Location and Navigation Symposium (PLANS), Monterey, CA, USA, 24-27 April 2023; pp. 338-343. [CrossRef]
 
-Disclaimer/Publisher's Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
+
 
