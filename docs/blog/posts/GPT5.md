@@ -6,13 +6,10 @@ slug: GPT-5
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
 ---
 
-
 # GPT-5提升有限，AI发展是否已入瓶颈期
 OpenAI最新发布的大语言模型，其性能提升幅度未能给业界带来惊喜。这一结果让人们开始质疑，人工智能行业依靠现有技术路径还能否实现下一次重大突破。
-
-![](https://cdn.mathpix.com/snip/images/wk4Lyxw5QNemIiDwwxAbAeMybBuSi7f6gGOZXIKFrf8.original.fullsize.png){width="300"}
-
 <!-- more -->
+![](https://cdn.mathpix.com/snip/images/wk4Lyxw5QNemIiDwwxAbAeMybBuSi7f6gGOZXIKFrf8.original.fullsize.png){width="300"}
 
 人工智能领域的最新进展，与其说是一次巨大的飞跃，不如说是一次谨慎的微调。在GPT-4驱动ChatGPT风靡全球两年后，OpenAI终于发布了其新一代模型GPT-5。外界曾普遍期望GPT-5能再次带来颠覆性的性能飞跃，然而，它与Anthropic的Claude、谷歌的Gemini等顶尖模型的差距并未显著拉开。这似乎在暗示，业界或许需要探索全新的范式，才能构建出更强大的AI系统。
 
