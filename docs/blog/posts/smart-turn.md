@@ -1,6 +1,6 @@
 ---
 date: 2025-08-24
-categories: [Note]
+categories: [Notes]
 tags: [AI, LLM]   # 若启用 tags 插件
 slug: Smart-Turn
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
