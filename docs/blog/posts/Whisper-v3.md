@@ -1,7 +1,7 @@
 ---
 date: 2025-08-24
 categories: [Notes]
-tags: [AI, LLM]   # 若启用 tags 插件
+tags: [AI, LLM, ASR]   # 若启用 tags 插件
 slug: Whisper-v3
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
 ---
