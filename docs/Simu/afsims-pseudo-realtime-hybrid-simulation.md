@@ -50,6 +50,11 @@ Simulation, discrete event, frame step, hybrid, realtime, virtual, constructive
 - 硬实时（Hard realtime）：对同步实时执行有极高要求的仿真，超出分配的执行时间是绝对不可接受的。
 - 伪实时（Pseudo-realtime）：对实时执行要求不那么严格的仿真。在大多数情况下，比如 $95\%$ 或更多时间里，仿真满足其时间约束，而剩余 $5\%$ 时间内的仿真真实性偏差并不严重。也称为软实时（soft realtime）。
 
+
+---
+
+AFSIM 的开发者最初专注于实现军事任务仿真的能力。其他一些任务仿真，或可用于实现任务仿真的通用仿真工具对公众可用；然而，只有部分适用于政府用途。此外，还有一些仿真对公众不可用，但可供美国政府及其批准的合作伙伴使用。这些包括 EADSIM、FLAMES、SUPPRESSOR、联合仿真环境（Joint Simulation Environment，JSE）以及下一代威胁仿真（NGTS）。这些仿真环境的运行模式如表1所示。读者应注意，这些环境各自是为满足特定需求而开发的，对运行模式支持的比较仅反映了这些需求的一部分。
+
 表1展示了一些相关的仿真环境对执行模式的支持情况，尽管 AFSIM 是唯一支持全部模式的环境。
 
 | 仿真环境 | 离散事件 | 离散时间 | 同步 | 伪实时 |
@@ -65,9 +70,6 @@ EADSIM：扩展防空仿真（Extended Air Defense Simulation）；
 MIXR：混合现实（Mixed Reality）；  
 NGTS：下一代威胁仿真（Next Generation Threat Simulation）。
 
----
-
-AFSIM 的开发者最初专注于实现军事任务仿真的能力。其他一些任务仿真，或可用于实现任务仿真的通用仿真工具对公众可用；然而，只有部分适用于政府用途。此外，还有一些仿真对公众不可用，但可供美国政府及其批准的合作伙伴使用。这些包括 EADSIM、FLAMES、SUPPRESSOR、联合仿真环境（Joint Simulation Environment，JSE）以及下一代威胁仿真（NGTS）。这些仿真环境的运行模式如表1所示。读者应注意，这些环境各自是为满足特定需求而开发的，对运行模式支持的比较仅反映了这些需求的一部分。
 
 在公开可用的选项中，有若干支持基于时间步的执行。MathWorks 的 MATLAB/Simulink 环境通常作为时间步应用使用，尽管它也有 SimEvent 扩展用于离散事件和混合模式，SimScape 插件支持在同步模式下运行。${ }^{7,8}$ Simulation Open Framework Application (SOFA) 是一个基于时间步的环境，专注于异步物理和医学仿真。${ }^{9}$ 尽管通常不被视为仿真环境，Epic Games 的 Unreal Engine 可以归类为同步的基于时间步的物理仿真。${ }^{10}$ 美国航空航天局（NASA）艾姆斯研究中心已开源了两个仿真环境，均为基于时间步的异步模式：（a）任务仿真工具包（Mission Simulation Toolkit），用于航天器自主研究与开发；（b）多保真度仿真器（Multi-Fidelity Simulator, MFSim），用于空中交通仿真。${ }^{11,12}$ 在国防部的软件工具中，EAAGLES（Extensible Architecture for the Analysis and Generation of Linked Simulations，可扩展分析与生成关联仿真的架构）及其后继者 MIXR 混合现实仿真平台已开源。这些软件包提供了许多基于时间步的同步仿真能力。${ }^{13}$ 特别是其设计与构建在许多方面与 AFSIM 相似。MIXR 是一个面向对象的软件框架，用 $\mathrm{C}++$ 编写，使用重点在于同步虚拟仿真。
 
