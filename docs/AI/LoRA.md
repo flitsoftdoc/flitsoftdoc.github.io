@@ -317,16 +317,16 @@ $$
 
 总之，LoRA 在保持推理效率的前提下，实现了对大规模预训练模型微调的**极大参数压缩**，为大模型在资源受限环境下的下游部署提供了可行方案，并为进一步研究微调机理提供了启发。
 
-[论文中文译文](/pdf/28.LoRA-2106.09685v2.ch.pdf)
+[论文中文译文](/assets/pdf/28.LoRA-2106.09685v2.ch.pdf)
 
 <iframe
-  src="/pdf/Advanced_Battle_Management_System.pdf"
+  src="/assets/pdf/28.LoRA-2106.09685v2.ch.pdf"
   width="100%"
   height="600"
   style="border:1px solid #ccc;"
 >
   此浏览器不支持 iframe，请  
-  <a href="/pdf/28.LoRA-2106.09685v2.ch.pdf">点击下载 PDF</a>
+  <a href="/assets/pdf/28.LoRA-2106.09685v2.ch.pdf">点击下载 PDF</a>
 </iframe>
 
 
