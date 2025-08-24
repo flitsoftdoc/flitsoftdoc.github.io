@@ -146,7 +146,7 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 随后，**Application** 执行主程序循环 **RUN_EVENT_LOOP**。若在执行过程中出现错误，**Application** 会捕获并打印错误信息，最后关闭程序，将所有文件和资源释放回操作系统。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=1102&width=744&top_left_y=263&top_left_x=287){width="400" style="display:block;margin:0 auto"}
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=1102&width=744&top_left_y=263&top_left_x=287){width="300" style="display:block;margin:0 auto"}
 
 图4. **ClockSource** 和 **RealTimeClockSource** 类提供启动、停止（暂停）和重置时钟的方法，可用于控制仿真推进。
 
