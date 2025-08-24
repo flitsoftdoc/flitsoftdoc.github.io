@@ -79,7 +79,7 @@ NGTS：下一代威胁仿真（Next Generation Threat Simulation）。
 
 AFSIM 的历史和整体设计此前已有文献发表。${ }^{21,22}$ 本文重点描述 AFSIM 仿真执行核心的软件类和算法。但在此之前，下一节将总结此前已发表的 AFSIM 描述，并提供其他相关背景。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-04.jpg?height=489&width=1159&top_left_y=263&top_left_x=466)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-04.jpg?height=489&width=1159&top_left_y=263&top_left_x=466){width="600" style="display:block;margin:0 auto"}
 
 图 1. AFSIM 的基于组件的架构允许用户分析员定义具有不同建模细节层次的灵活可扩展平台。分析员可以使用多种内置组件类型，或使用外部开发的组件类型。 
 
