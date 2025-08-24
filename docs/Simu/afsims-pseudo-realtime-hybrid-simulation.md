@@ -23,9 +23,9 @@ Simulation, discrete event, frame step, hybrid, realtime, virtual, constructive
 
 仿真软件框架和应用程序已经在各种概念设计下被开发出来，用以解决大量不同的问题。概念设计类型可以按方法或世界观来分类，关注于某个仿真包中的“原子”元素，并从此展开。一般来说，有两种方法：一种聚焦于离散的时间单位，另一种聚焦于离散的事件。许多基于离散时间的仿真也常被称为“基于帧”的仿真，其中一帧是一个固定的时间增量。少数软件包既支持离散事件模式，也支持基于帧的模式，可以视为混合仿真。
 
-随着美国国防采办与保障体系的改革呼声日益强调数字化工程，建模与仿真仍将是开发高效军事系统的重要工具。在数字化工程框架下，系统开发者需要执行多种仿真分析来开发有效的系统。基于帧的仿真应用广泛，从操作员训练、用户界面设计实验，到由建模与仿真（M\&S）驱动的兵棋推演。一个普遍的主题是，基于帧的仿真通常以交互式虚拟模式运行，操作员在回路（OITL）或指挥员在回路（CITL），或以其他方式观察仿真，从而能够跟随仿真状态随时间展开的过程，并可能提供输入以影响仿真状态。相比之下，在无需交互的构造性仿真中，用户希望所有计算尽可能快地完成。这两种运行模式可以称为同步和异步。（需要注意的是，仿真并不一定要基于帧才能以同步模式运行。）交互式仿真的典型要求是时间看起来以恒定速率推进，通常与挂钟同步的“实时”，或以比实时更快或更慢的速率运行。对于许多应用来说，“硬”实时同步可能有用但不是必须的。与硬实时要求不同，许多仿真只是尝试给出合理的实时运行表象，本文将其称为伪实时（pseudo-realtime），其定义将在后文更明确地给出。
+随着美国国防采办与保障体系的改革呼声日益强调数字化工程，建模与仿真仍将是开发高效军事系统的重要工具。在数字化工程框架下，系统开发者需要执行多种仿真分析来开发有效的系统。基于帧的仿真应用广泛，从操作员训练、用户界面设计实验，到由建模与仿真（M&S）驱动的兵棋推演。一个普遍的主题是，基于帧的仿真通常以交互式虚拟模式运行，操作员在回路（OITL）或指挥员在回路（CITL），或以其他方式观察仿真，从而能够跟随仿真状态随时间展开的过程，并可能提供输入以影响仿真状态。相比之下，在无需交互的构造性仿真中，用户希望所有计算尽可能快地完成。这两种运行模式可以称为同步和异步。（需要注意的是，仿真并不一定要基于帧才能以同步模式运行。）交互式仿真的典型要求是时间看起来以恒定速率推进，通常与挂钟同步的“实时”，或以比实时更快或更慢的速率运行。对于许多应用来说，“硬”实时同步可能有用但不是必须的。与硬实时要求不同，许多仿真只是尝试给出合理的实时运行表象，本文将其称为伪实时（pseudo-realtime），其定义将在后文更明确地给出。
 
-随着过去几十年软件工程的发展，建模与仿真（M\&S）软件的工程化水平也在不断提升。目前已有许多设计良好、可扩展且灵活的仿真软件包，可用于各种仿真目的。美国空军研究实验室航空系统部长期在多个应用中使用一个建模、仿真与分析（MS\&A）软件包——高级仿真集成建模框架（AFSIM）。本文介绍了AFSIM执行仿真所采用的软件设计和算法。通过支持不同仿真执行的多种运行模式，AFSIM 使用户免于在多个仿真环境中维护冗余的场景和概念定义，从而能够快速在虚拟和构造性分析之间切换。
+随着过去几十年软件工程的发展，建模与仿真（M&S）软件的工程化水平也在不断提升。目前已有许多设计良好、可扩展且灵活的仿真软件包，可用于各种仿真目的。美国空军研究实验室航空系统部长期在多个应用中使用一个建模、仿真与分析（MS&A）软件包——高级仿真集成建模框架（AFSIM）。本文介绍了AFSIM执行仿真所采用的软件设计和算法。通过支持不同仿真执行的多种运行模式，AFSIM 使用户免于在多个仿真环境中维护冗余的场景和概念定义，从而能够快速在虚拟和构造性分析之间切换。
 
 本文结构如下：背景部分提供了来自其他文献的关键概念定义，并描述了适用于国防部应用和公开可用的软件包，这些软件包分别实现了上述主要模式中的一种，或在某些情况下同时实现两种。接下来的部分给出了AFSIM的高层描述，以及该框架在各种模式下提供的一些应用。软件设计部分首先详细介绍了AFSIM应用的核心软件类，然后是这些类实现的算法。最后，本文对所述概念进行总结，并提出未来探索的方向。
 
@@ -276,10 +276,10 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 1. Law AM. Simulation Modeling and Analysis, Fifth Edition. New York, NY: McGraw-Hill, 2015.
 2. Gamez D. The simulation of spiking neural networks. In: Abu-Taieh E (ed) Handbook of Research on Discrete Event Simulation Environments: Technologies and Applications. Hershey, PA: Information Science Reference, 2009. pp. 337-358.
-3. Naturo J. Building Software for Simulation: Theory and Algorithms, with Applications in C++. Hoboken, New Jersey: John Wiley \& Sons, Inc., 2011.
+3. Naturo J. Building Software for Simulation: Theory and Algorithms, with Applications in C++. Hoboken, New Jersey: John Wiley & Sons, Inc., 2011.
 4. Cellier F and Kofman E. Continuous System Simulation. New York, NY: Springer Science+Business Media, Inc., 2006.
 5. Hodson D and Baldwin R. Characterizing, measuring, and validating the temporal consistency of live-virtual-constructive environments. Simulation 2009; 85(10): 671-682.
-6. Real-time Platform Reference Federation Object Model Product Development Group. Standard for Guidance, Rationale, and Interoperability Modalities for the Real-time Platform Reference Federation Object Model, https:// www.sisostds.org/DigitalLibrary.aspx?Command=Core_Do wnload\&EntryId=30823 (accessed 8 January 2021).
+6. Real-time Platform Reference Federation Object Model Product Development Group. Standard for Guidance, Rationale, and Interoperability Modalities for the Real-time Platform Reference Federation Object Model, https:// www.sisostds.org/DigitalLibrary.aspx?Command=Core_Do wnload&EntryId=30823 (accessed 8 January 2021).
 7. Clune MI, Mosterman PJ and Cassandras CG. Discrete event and hybrid system simulation with SimEvents. In: 2006 8th International Workshop on Discrete Event Systems, 10-12 July 2006, Ann Arbor, MI. IEEE: Piscataway, NJ, pp. 386-387.
 8. Mathworks, Inc.SimScape, https://www.mathworks.com/ help/physmod/simscape/index.html (2019, accessed 11 December 2020).
 9. Faure F, Duriez C, Delingette H, et al. SOFA: a multi-model framework for interactive physical simulation. In: Payan Y (ed) Soft tissue biomechanical modeling for computer assisted surgery. Studies in mechanobiology, tissue engineering and biomaterials, volume 11. New York: Springer, 2012. pp. 283-321.
