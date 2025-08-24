@@ -106,7 +106,7 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 本节将展示和描述若干重要类的类设计。需要注意的是，AFSIM 的实际软件实现包含的成员变量和函数远多于此处所能展示的。部分代码标识符（类名、变量名和函数名）已为样式和清晰性做了调整。为了便于理解，这里仅展示与仿真执行和配置各种模式相关的变量和函数。类设计之后，将以若干伪代码算法的形式描述这些类的功能。这里所描述的仿真执行核心基于 **AFSIM 2.5 版本**（2019年10月发布）；不过，该部分代码自 **AFSIM 2.0 版本**（2016年5月发布）以来保持稳定，未有重大修改。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-05.jpg?height=481&width=817&top_left_y=260&top_left_x=249){width="300" style="display:block;margin:0 auto"}
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-05.jpg?height=481&width=817&top_left_y=260&top_left_x=249){width="400" style="display:block;margin:0 auto"}
 
 图2. **Application** 和 **StandardApplication** 类为开发者提供了初始化和运行仿真的服务。这些服务可以通过用户开发的 **ApplicationExtensions** 进行扩展。
 
@@ -123,7 +123,7 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 对于事件步进仿真，其涉及的类如图6所示。与帧步进模式不同，**EventStepSimulation** 不直接与 **Platform** 实例及其组件交互，而是由平台组件（包括 **Mover** 类）调度事件，例如将 **Mover UpdateEvent** 添加到由 **EventManager** 维护的事件队列中。详细的类图见图7，展示了这些类的关键数据成员和函数。**Mover** 类维护平台的状态（位置、速度和姿态），其状态在每次调用 **Mover** 的 **update** 函数时更新，函数内部通过数值积分方式求解运动方程。**Mover** 的 **update** 函数在帧步进和事件步进模式下通过不同的函数栈被调用。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-06.jpg?height=1110&width=1083&top_left_y=260&top_left_x=504)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-06.jpg?height=1110&width=1083&top_left_y=260&top_left_x=504){width="400" style="display:block;margin:0 auto"}
 
 图3. **Simulation** 类及其子类 **EventStepSimulation** 和 **FrameStepSimulation** 负责模型和事件的计时与执行，并可配置为实时运行。
 
@@ -146,19 +146,19 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 随后，**Application** 执行主程序循环 **RUN_EVENT_LOOP**。若在执行过程中出现错误，**Application** 会捕获并打印错误信息，最后关闭程序，将所有文件和资源释放回操作系统。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=1102&width=744&top_left_y=263&top_left_x=287)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=1102&width=744&top_left_y=263&top_left_x=287){width="400" style="display:block;margin:0 auto"}
 
 图4. **ClockSource** 和 **RealTimeClockSource** 类提供启动、停止（暂停）和重置时钟的方法，可用于控制仿真推进。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=630&width=801&top_left_y=1608&top_left_x=260)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=630&width=801&top_left_y=1608&top_left_x=260){width="400" style="display:block;margin:0 auto"}
 
 图5. 驱动帧步进仿真的主要类。注意 **FrameStepSimulation** 类直接关联平台组件（如 **Mover**），并注意 **EventManager** 类中存在事件队列，用于处理非连续或“一次性”现象。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=841&width=809&top_left_y=263&top_left_x=1114)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=841&width=809&top_left_y=263&top_left_x=1114){width="400" style="display:block;margin:0 auto"}
 
 图6. 驱动事件步进仿真的主要类。注意 **EventStepSimulation** 类与平台 **Mover** 组件之间的间接关联程度。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=809&width=812&top_left_y=1505&top_left_x=1111)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-07.jpg?height=809&width=812&top_left_y=1505&top_left_x=1111){width="400" style="display:block;margin:0 auto"}
 
 图7. 显示事件步进模式下的关键函数。当 **MoverUpdateEvent** 从队列中取出时，其 **execute** 函数被调用，进而调用 **Mover** 的 **update** 函数。
 
@@ -166,17 +166,17 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 **算法1.** AFSIM Mission 主函数创建应用和仿真对象，然后执行事件循环。
 
-![](https://cdn.mathpix.com/snip/images/7ieQk0bB82tcSiJJwLkO1--qvZ-cjqLxFkTh7MZ6ojQ.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/7ieQk0bB82tcSiJJwLkO1--qvZ-cjqLxFkTh7MZ6ojQ.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 **算法2.** AFSIM 应用控制仿真，调用其函数以阻塞和推进。
 
-![](https://cdn.mathpix.com/snip/images/vyZ8LTjsjsqtMhTTy4bGWKOz1L36_p_EUJfDOCCSqpU.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/vyZ8LTjsjsqtMhTTy4bGWKOz1L36_p_EUJfDOCCSqpU.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 ---
 
 函数 **RUN_EVENT_LOOP** 具有简单的结构，如算法2所示。它通过调用两个函数推动仿真时间前进：**WAIT_FOR_ADVANCE_TIME** 和 **ADVANCE_TIME**。命令行选项和用户输入脚本命令（算法步骤1.3）决定了执行的是哪个派生类的函数实现，从而提供了在离散事件风格或帧步进风格下执行的灵活性。该函数还使用本地 **WallClock** 周期性地向用户打印状态信息，使用户能够了解仿真进展情况。需要注意的是，**WallClock** 是一个持续累积时间的时钟，与仿真状态无关。即使仿真暂停，**WallClock** 仍会推进，而仿真时钟源会根据特定请求和事件的发生而停止或启动。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-08.jpg?height=508&width=809&top_left_y=260&top_left_x=1071)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-08.jpg?height=508&width=809&top_left_y=260&top_left_x=1071){width="400" style="display:block;margin:0 auto"}
 
 图8. 在帧步进模式下，仿真通过 **ADVANCE_TIME**、**ADVANCE_FRAME** 和 **WAIT_FOR_ADVANCE_TIME** 函数的动作与计算推进。
 
@@ -219,7 +219,7 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 接下来，将展示和描述事件步进模式下的执行算法。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-10.jpg?height=502&width=811&top_left_y=260&top_left_x=1071)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-10.jpg?height=502&width=811&top_left_y=260&top_left_x=1071){width="400" style="display:block;margin:0 auto"}
 
 图9. 在事件步进模式下，仿真通过 **ADVANCE_TIME**、**DISPATCH_EVENTS**、**DISPATCH_SIM_EVENTS**、**DISPATCH_WALL_EVENTS** 和 **WAIT_FOR_ADVANCE_TIME** 等函数的动作与计算推进。
 
@@ -234,11 +234,11 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 **算法6.** 事件步进的 AFSIM 仿真仅在实时模式下并且有“长”等待时间时才会等待。CPU 仅在“短”时间段内释放，这是在非实时操作系统中获得更高可靠性的一种策略。
 
-![](https://cdn.mathpix.com/snip/images/qTH0XOvXbpI1EaCSlN-V8E4rADXVuy6EsO9ux_NHkEc.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/qTH0XOvXbpI1EaCSlN-V8E4rADXVuy6EsO9ux_NHkEc.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 **算法7.** AFSIM 仿真推进到事件队列中的下一个事件时间，或来自时钟控制器的时间，并调度所有发生在该时间之前或该时间的未处理事件。
 
-![](https://cdn.mathpix.com/snip/images/ZG8v-oy8u5rDS0EY3B-5CF0g7sMtxWFHo8EJifO26KE.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/ZG8v-oy8u5rDS0EY3B-5CF0g7sMtxWFHo8EJifO26KE.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 ---
 
@@ -246,11 +246,11 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 **算法8.** 事件调度分两步：1）调度请求仿真时间的仿真事件；2）调度 wall 事件，主要是暂停和恢复等控制事件。这两步均使用算法9定义的辅助函数，但分别操作不同的事件队列，并分别使用仿真时间或挂钟时间。
 
-![](https://cdn.mathpix.com/snip/images/ZRCqdi5HOhEmPD0lTd4EUcAjaNsYD0CA_K5A8fMV8-s.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/ZRCqdi5HOhEmPD0lTd4EUcAjaNsYD0CA_K5A8fMV8-s.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 **算法9.** 事件调度通过查看队列中的下一个事件，如果其计划时间早于推进的目标时间，则将其弹出并执行。这与算法5.11中 **ADVANCE_FRAME** 的步骤3非常相似。
 
-![](https://cdn.mathpix.com/snip/images/5ZUlS2g1VI2_t0D5tJ1RXKrweanhIWWiw_--PWo98oE.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/5ZUlS2g1VI2_t0D5tJ1RXKrweanhIWWiw_--PWo98oE.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 在 **DISPATCH_HELPER** 中，算法与 **ADVANCE_FRAME** 函数的步骤3非常类似。函数接收期望执行的事件时间作为输入，获取队列中下一个事件的引用，并检查其执行时间是否早于或等于输入时间。如果满足条件，则将事件从队列中弹出并执行；若事件请求重新调度，则将其加入回队列，并再次获取下一个事件的引用。
 
