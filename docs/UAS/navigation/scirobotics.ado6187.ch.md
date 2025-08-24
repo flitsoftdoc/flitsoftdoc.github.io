@@ -653,6 +653,15 @@ Table S1. 不同方法的实现细节
 ## 本文其他补充材料包括：
 ### 视频1
 
+<div style="position:relative;aspect-ratio:16/9;max-width:960px">
+  <iframe src="https://www.youtube.com/embed/GPHuzG0ANmI)"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+          style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+</div>
+
 ![type:video](https://www.youtube.com/embed/GPHuzG0ANmI)
 
 
