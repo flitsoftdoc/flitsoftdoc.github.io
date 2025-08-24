@@ -653,28 +653,29 @@ Table S1. 不同方法的实现细节
 ## 本文其他补充材料包括：
 ### 视频1
 
-{{< youtube GPHuzG0ANmI 320 180 >}}
+![type:video](https://www.youtube.com/embed/GPHuzG0ANmI)
+
 
 视频 1. 提出 SUPER 系统的概览。SUPER 展示了其在高速下安全穿越未知且杂乱环境的能力，能够避开如电力线等细小障碍，并在多种场景中表现出鲁棒性，包括目标跟踪和自主探索。
 
 ### 视频S1至S4
 
 <video controls width="640">
-  <source src="/media/ado6187_movie_s1.mp4"  type="video/mp4" />
+  <source src="/assets/video/ado6187_movie_s1.mp4"  type="video/mp4" />
   您的浏览器不支持 video 标签。
 </video>
 
 视频 S1. 未知环境中的安全高速导航。
 
 <video controls width="640">
-  <source src="/media/ado6187_movie_s2.mp4"  type="video/mp4" />
+  <source src="/assets/video/ado6187_movie_s2.mp4"  type="video/mp4" />
   您的浏览器不支持 video 标签。
 </video>
 
 视频 S2. 杂乱环境中的导航。
 
 <video controls width="640">
-  <source src="/media/ado6187_movie_s3.mp4"  type="video/mp4" />
+  <source src="/assets/video/ado6187_movie_s3.mp4"  type="video/mp4" />
   您的浏览器不支持 video 标签。
 </video>
 
