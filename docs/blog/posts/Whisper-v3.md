@@ -8,11 +8,15 @@ slug: Whisper-v3
 
 
 
-# Whisper Large-v3 上线要点：更强多语言 ASR、细节优化与上手指南
+# Whisper Large-v3 上线：更强多语言 ASR、细节优化与上手指南
 
-OpenAI 的最新开源语音识别与翻译模型 **Whisper large-v3** 已在 Hugging Face 发布。相较 large-v2，官方卡片给出的结论是**在多种语言上将错误率再降 10–20%**，并对模型与使用方式做了多处工程细节说明。本文提炼关键信息、适配实战场景，并给出最短可运行示例。
-
+OpenAI 的最新开源语音识别与翻译模型 **Whisper large-v3** 已在 Hugging Face 发布。相较 large-v2，官方卡片给出的结论是**在多种语言上将错误率再降 10–20%**，并对模型与使用方式做了多处工程细节说明。
 <!-- more -->
+Whisper 是 OpenAI 在论文 *Robust Speech Recognition via Large-Scale Weak Supervision*（作者 Alec Radford 等人）中提出的一个先进的自动语音识别（ASR）与语音翻译模型。该模型基于超过 **500 万小时标注数据**进行训练，在零样本（zero-shot）场景下展现出了强大的跨数据集和跨领域的泛化能力。
+
+**Whisper large-v3-turbo** 是对 **Whisper large-v3** 的裁剪版本进行微调（finetuned）得到的。在本质上，它与原模型完全一致，唯一的区别是 **解码层（decoding layers）从 32 层减少到 4 层**。因此，它能以更快的速度运行，但会牺牲少量的识别质量。更多细节可以在 GitHub 相关讨论中找到。
+
+
 
 
 * **性能**：多语言场景相对 large-v2 **10–20% 错误率下降**。
@@ -21,6 +25,7 @@ OpenAI 的最新开源语音识别与翻译模型 **Whisper large-v3** 已在 Hu
 * **语言覆盖**：支持 **99 种语言**；可做**转写**与**英译**。
 * **许可**：**Apache-2.0**，可商用。
 
+![](https://cdn.mathpix.com/snip/images/o7w2xq2AMkqibsobM88FiACMFewDKV73LVmp3h0M2u4.original.fullsize.png){width="500"}
 ---
 
 ## v3 与 v2 的关键差异
@@ -40,6 +45,12 @@ OpenAI 的最新开源语音识别与翻译模型 **Whisper large-v3** 已在 Hu
 ---
 
 ## 三步上手（Transformers）
+
+Whisper large-v3-turbo 已在 Hugging Face 🤗 Transformers 中得到支持。要运行该模型，需要先安装 Transformers 库。在下面的示例中，我们还会安装：
+
+* 🤗 Datasets（用于从 Hugging Face Hub 加载音频数据集）
+* 🤗 Accelerate（用于加快模型加载速度）
+
 
 1. 安装依赖：
 
@@ -115,3 +126,5 @@ print(pipe("audio.mp3")["text"])
 > 总结：Whisper large-v3 以更细的声学表征与更大的训练混合数据，兑现了跨语言**稳步降错**与**工程化落地**的双重承诺。若你的应用涉及多语、长音频或在线转写，这是 2025 年仍然值得优先选型与基准对比的开源 ASR 基座。
 
 https://github.com/openai/whisper
+
+https://huggingface.co/openai/whisper-large-v3
