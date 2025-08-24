@@ -2,7 +2,7 @@
 # MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
 
 <audio controls>
-  <source src="/media/RAL_simulator.wav" type="audio/wav" />
+  <source src="/assets/audio/RAL_simulator.wav" type="audio/wav" />
   您的浏览器不支持音频播放。
 </audio>
 
@@ -90,13 +90,13 @@ MARSIM为轻量级计算平台上的真实环境模拟提供了一种基于激�
 
 
 <iframe
-  src="/pdf/RAL_simulator.pdf"
+  src="/assets/pdf/RAL_simulator.pdf"
   width="100%"
   height="900"
   style="border:1px solid #ccc;"
 >
   此浏览器不支持 iframe，请  
-  <a href="/pdf/RAL_simulator.pdf">点击下载 PDF</a>
+  <a href="/assets/pdf/RAL_simulator.pdf">点击下载 PDF</a>
 </iframe>
 
 [论文原文链接](https://arxiv.org/abs/2211.10716)
