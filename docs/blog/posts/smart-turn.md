@@ -1,7 +1,7 @@
 ---
 date: 2025-08-24
 categories: [Notes]
-tags: [AI, LLM]   # 若启用 tags 插件
+tags: [AI, LLM, VAD]   # 若启用 tags 插件
 slug: Smart-Turn
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
 ---
@@ -10,7 +10,7 @@ slug: Smart-Turn
 
  Daily 宣布开源语音轮次检测模型 **Smart Turn** 的重大更新版本 **v2**。新版本在三方面显著升级：推理速度更快、模型更小、更易部署；并在多语言能力上一次性新增 13 种语言，使语音智能体的“何时开口/停口”判断更自然、更可靠。
 
-![](https://www.daily.co/blog/content/images/size/w2000/2025/07/4-1.png){width="600"}
+![](https://www.daily.co/blog/content/images/size/w2000/2025/07/4-1.png){width="300"}
 
 <!-- more -->
 
