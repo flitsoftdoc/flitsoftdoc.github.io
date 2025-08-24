@@ -192,12 +192,12 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 **算法3.** 帧步进模式下的 AFSIM 仿真在等待时非常精确：在需要推进前的4毫秒让出CPU，然后占用CPU直至下一帧开始。
 
-![](https://cdn.mathpix.com/snip/images/ynq_qJzHMJxoA0Sr_tag4RLSTc89FSJ0UPpe-df02lQ.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/ynq_qJzHMJxoA0Sr_tag4RLSTc89FSJ0UPpe-df02lQ.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 ---
 
 推进到下一帧由两个层次的函数控制：**ADVANCE_TIME** 和 **ADVANCE_FRAME**，分别详见算法4和算法5。  
-- **ADVANCE_TIME** 是一个重载函数。在帧步进仿真中，它从仿真时钟源获取时间并与下一帧时间比较。若时钟在运行，则 **WAIT_FOR_ADVANCE_TIME** 会保证仿真时间等于下一帧时间。在 **ADVANCE_TIME** 内部，当前仿真时间被设定为“下一帧时间 + 一个微小增量（$1 \mu s$）”与挂钟时间的较小值。若该值大于下一帧时间，表明挂钟至少比下一帧时间快 $1 \mu s$，这意味着确实到了推进的时刻。此时会向仿真观察器（记录输出并写入日志文件的对象）发送时间推进的消息，并检查仿真是否已到结束点并需进入收尾操作。若仿真时间不大于下一帧时间，则说明挂钟落后于下一帧时间。在 **WAIT_FOR_ADVANCE_TIME** 中，如果时钟源已停止，该函数会休眠4毫秒并返回。在此情境下，**ADVANCE_TIME** 会调用基类 **Simulation** 的实现，用于检查挂钟事件，特别是恢复暂停仿真的事件。
+ **ADVANCE_TIME** 是一个重载函数。在帧步进仿真中，它从仿真时钟源获取时间并与下一帧时间比较。若时钟在运行，则 **WAIT_FOR_ADVANCE_TIME** 会保证仿真时间等于下一帧时间。在 **ADVANCE_TIME** 内部，当前仿真时间被设定为“下一帧时间 + 一个微小增量（$1 \mu s$）”与挂钟时间的较小值。若该值大于下一帧时间，表明挂钟至少比下一帧时间快 $1 \mu s$，这意味着确实到了推进的时刻。此时会向仿真观察器（记录输出并写入日志文件的对象）发送时间推进的消息，并检查仿真是否已到结束点并需进入收尾操作。若仿真时间不大于下一帧时间，则说明挂钟落后于下一帧时间。在 **WAIT_FOR_ADVANCE_TIME** 中，如果时钟源已停止，该函数会休眠4毫秒并返回。在此情境下，**ADVANCE_TIME** 会调用基类 **Simulation** 的实现，用于检查挂钟事件，特别是恢复暂停仿真的事件。
 
 在 **WAIT_FOR_ADVANCE_TIME** 和 **ADVANCE_TIME** 的复杂逻辑确保确实到了推进时刻之后，程序控制权交给 **ADVANCE_FRAME**（算法5）。该函数执行四个主要步骤：  
 (a) 更新当前和下一帧时间；  
@@ -209,11 +209,11 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 **算法4.** 帧步进模式下，AFSIM 仿真通过检查仿真时间是否超过下一帧起始时间来推进。注意该实现覆盖了基类中的实现（见算法7）。暂停的仿真将在基类的 **ADVANCE_TIME** 功能中恢复。
 
-![](https://cdn.mathpix.com/snip/images/oGg7UDWkg_pJm5Ij6ZEmQNCvmudhXbIapFdkJzkypUs.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/oGg7UDWkg_pJm5Ij6ZEmQNCvmudhXbIapFdkJzkypUs.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 **算法5.** 推进一帧包含四个主要步骤：1）更新当前和下一帧时间；2）将连续模型更新到当前时间；3）执行所有排队事件；4）检查并处理超出帧时间的情况。
 
-![](https://cdn.mathpix.com/snip/images/0EepsXe_KDdQOi0R8JCFEo8kQWvVeZ8UFqUeCBmBYbI.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/0EepsXe_KDdQOi0R8JCFEo8kQWvVeZ8UFqUeCBmBYbI.original.fullsize.png){width="400" style="display:block;margin:0 auto"}
 
 值得注意的是，在算法5的第二个主要步骤中，存在对多线程更新平台和传感器的初步支持，使用一个 **MultiThreadManager** 类（此处未详细介绍）。对于许多仿真需求而言，可重复性是首要任务，而当计算顺序影响仿真结果时，这会带来挑战。该主题将在结论部分再次讨论。
 
