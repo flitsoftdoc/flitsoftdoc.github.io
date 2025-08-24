@@ -73,7 +73,7 @@ NGTS：下一代威胁仿真（Next Generation Threat Simulation）。
 
 在公开可用的选项中，有若干支持基于时间步的执行。MathWorks 的 MATLAB/Simulink 环境通常作为时间步应用使用，尽管它也有 SimEvent 扩展用于离散事件和混合模式，SimScape 插件支持在同步模式下运行。${ }^{7,8}$ Simulation Open Framework Application (SOFA) 是一个基于时间步的环境，专注于异步物理和医学仿真。${ }^{9}$ 尽管通常不被视为仿真环境，Epic Games 的 Unreal Engine 可以归类为同步的基于时间步的物理仿真。${ }^{10}$ 美国航空航天局（NASA）艾姆斯研究中心已开源了两个仿真环境，均为基于时间步的异步模式：（a）任务仿真工具包（Mission Simulation Toolkit），用于航天器自主研究与开发；（b）多保真度仿真器（Multi-Fidelity Simulator, MFSim），用于空中交通仿真。${ }^{11,12}$ 在国防部的软件工具中，EAAGLES（Extensible Architecture for the Analysis and Generation of Linked Simulations，可扩展分析与生成关联仿真的架构）及其后继者 MIXR 混合现实仿真平台已开源。这些软件包提供了许多基于时间步的同步仿真能力。${ }^{13}$ 特别是其设计与构建在许多方面与 AFSIM 相似。MIXR 是一个面向对象的软件框架，用 $\mathrm{C}++$ 编写，使用重点在于同步虚拟仿真。
 
-同时，还有若干公开可用的离散事件仿真软件包。JaamSim 是一个开源仿真包，主要用于石油和天然气行业。${ }^{14}$ 离散事件系统规范（DEVS, Discrete Event Systems Specification）形式化方法启发了多个开源软件包，包括 DEVSim++ 和 DEVSimPy，分别用 $\mathrm{C}++$ 和 Python 编写。${ }^{15,16}$
+同时，还有若干公开可用的离散事件仿真软件包。JaamSim 是一个开源仿真包，主要用于石油和天然气行业。${ }^{14}$ 离散事件系统规范（DEVS, Discrete Event Systems Specification）形式化方法启发了多个开源软件包，包括 DEVSim++ 和 DEVSimPy，分别用 C++ 和 Python 编写。${ }^{15,16}$
 
 最后，还有若干由美国空军开发并用于空中任务和战役仿真的环境，它们构成了 AFSIM 的技术传承。这些环境主要用于构造性仿真，包括用于交战级仿真的 Brawler 和增强型地空模型（ESAMS）、用于任务级仿真的 Suppressor，以及用于战役仿真的 Thunder 和合成战区作战研究模型（STORM）。${ }^{17-20}$ 这些环境均基于离散事件设计，通常用于异步执行，尽管 Brawler、ESAMS 和 Suppressor 也有扩展以支持作为分布式仿真一部分的同步运行。
 
@@ -89,7 +89,7 @@ AFSIM：高级仿真集成建模框架（Advanced Framework for Simulation, Inte
 ## 3. AFSIM 概述
 
 AFSIM 是一个面向对象的软件框架，用于创建仿真应用，主要聚焦于军事领域和任务。${ }^{21,22}$  
-AFSIM 使用 $\mathrm{C}++$ 编写，基于平台与组件的架构设计，以及多个平台和组件之间的交互。平台是仿真中的顶层对象，通常用于表示在特定物理域（地面、空中、太空、海面、水下）中运行的载具。平台也可以表示建筑、组织或个体——任何能够做出决策并采取某种仿真行为的实体或代理。组件则表示子系统，例如传感器、通信设备、运动模型、信息处理等。组件化架构示意图如图1所示。在后续章节的软件设计图和算法描述中，将重点介绍 **Mover** 组件；不过，其他组件的调用和与仿真执行核心（simulation executive）的交互方式大体相同。作为一个框架，AFSIM 允许开发者创建非常灵活的仿真应用，并能以多种配置运行。一个常用的应用是 **AFSIM MISSION**，其运行模式包括：
+AFSIM 使用C++ 编写，基于平台与组件的架构设计，以及多个平台和组件之间的交互。平台是仿真中的顶层对象，通常用于表示在特定物理域（地面、空中、太空、海面、水下）中运行的载具。平台也可以表示建筑、组织或个体——任何能够做出决策并采取某种仿真行为的实体或代理。组件则表示子系统，例如传感器、通信设备、运动模型、信息处理等。组件化架构示意图如图1所示。在后续章节的软件设计图和算法描述中，将重点介绍 **Mover** 组件；不过，其他组件的调用和与仿真执行核心（simulation executive）的交互方式大体相同。作为一个框架，AFSIM 允许开发者创建非常灵活的仿真应用，并能以多种配置运行。一个常用的应用是 **AFSIM MISSION**，其运行模式包括：
 
 - 基于事件步进（event-stepped）或基于帧步进（frame-stepped）
 - 异步运行，或同步于时钟（可为实时时钟）
@@ -106,7 +106,7 @@ AFSIM 开发团队还创建了一个名为 **WARLOCK** 的应用，它通过基�
 
 本节将展示和描述若干重要类的类设计。需要注意的是，AFSIM 的实际软件实现包含的成员变量和函数远多于此处所能展示的。部分代码标识符（类名、变量名和函数名）已为样式和清晰性做了调整。为了便于理解，这里仅展示与仿真执行和配置各种模式相关的变量和函数。类设计之后，将以若干伪代码算法的形式描述这些类的功能。这里所描述的仿真执行核心基于 **AFSIM 2.5 版本**（2019年10月发布）；不过，该部分代码自 **AFSIM 2.0 版本**（2016年5月发布）以来保持稳定，未有重大修改。
 
-![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-05.jpg?height=481&width=817&top_left_y=260&top_left_x=249)
+![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-05.jpg?height=481&width=817&top_left_y=260&top_left_x=249){width="300" style="display:block;margin:0 auto"}
 
 图2. **Application** 和 **StandardApplication** 类为开发者提供了初始化和运行仿真的服务。这些服务可以通过用户开发的 **ApplicationExtensions** 进行扩展。
 
