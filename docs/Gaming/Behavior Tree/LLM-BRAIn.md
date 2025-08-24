@@ -7,7 +7,7 @@
 **音频概览：**
 
 <audio controls>
-  <source src="/media/BT2208.04211v2.ch.wav" type="audio/wav" />
+  <source src="/assets/media/BT2208.04211v2.ch.wav" type="audio/wav" />
   您的浏览器不支持音频播放。
 </audio>
 
@@ -102,7 +102,7 @@ LLM-BRAIn 目前存在以下局限性：
   style="border:1px solid #ccc;"
 >
   此浏览器不支持 iframe，请  
-  <a href="/pdf/LLM-BRAIn.pdf">点击下载 PDF</a>
+  <a href="/assets/pdf/LLM-BRAIn.pdf">点击下载 PDF</a>
 </iframe>
 
 [论文原文链接](https://arxiv.org/abs/2305.19352)

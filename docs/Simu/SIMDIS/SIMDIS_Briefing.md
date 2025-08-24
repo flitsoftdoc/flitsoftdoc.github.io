@@ -25,12 +25,12 @@ SIMDIS已经由美国海军作战测试与评估司令部（COMOPTEVFOR）独立
 
 
 <iframe
-  src="/pdf/SIMDIS_Briefing.pdf"
+  src="/assets/pdf/SIMDIS_Briefing.pdf"
   width="100%"
   height="600"
   style="border:1px solid #ccc;"
 >
   此浏览器不支持 iframe，请  
-  <a href="/pdf/SIMDIS_Briefing.pdf">点击下载 PDF</a>
+  <a href="/assets/pdf/SIMDIS_Briefing.pdf">点击下载 PDF</a>
 </iframe>
 
