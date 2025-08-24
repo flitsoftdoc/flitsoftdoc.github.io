@@ -96,13 +96,13 @@ BTs可以与各种AI范式相结合，以增强性能、学习能力和自动化
 
 
 <iframe
-  src="/pdf/Behavior Trees in Robot Control Systems.ch.pdf"
+  src="/assets/pdf/Behavior Trees in Robot Control Systems.ch.pdf"
   width="100%"
   height="900"
   style="border:1px solid #ccc;"
 >
   此浏览器不支持 iframe，请  
-  <a href="/pdf/Behavior Trees in Robot Control Systems.ch.pdf">点击下载 PDF</a>
+  <a href="/assets/pdf/Behavior Trees in Robot Control Systems.ch.pdf">点击下载 PDF</a>
 </iframe>
 
 [论文原文链接](https://arxiv.org/abs/2203.13083)

@@ -78,18 +78,18 @@ ABMS面临诸多挑战。它缺乏一组明确定义的最低性能目标、单�
 
 
 
-[中文译文](/pdf/Advanced_Battle_Management_System.pdf)
+[中文译文](/assets/pdf/Advanced_Battle_Management_System.pdf)
 
 
 
 <iframe
-  src="/pdf/Advanced_Battle_Management_System.pdf"
+  src="/assets/pdf/Advanced_Battle_Management_System.pdf"
   width="100%"
   height="600"
   style="border:1px solid #ccc;"
 >
   此浏览器不支持 iframe，请  
-  <a href="/pdf/Advanced_Battle_Management_System.pdf">点击下载 PDF</a>
+  <a href="/assets/pdf/Advanced_Battle_Management_System.pdf">点击下载 PDF</a>
 </iframe>
 
 
