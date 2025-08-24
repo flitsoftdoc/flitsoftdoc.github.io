@@ -79,7 +79,8 @@ AFSIM 的历史和整体设计此前已有文献发表。${ }^{21,22}$ 本文重
 
 ![](https://cdn.mathpix.com/cropped/2025_08_24_073f7b838835bf37d3d0g-04.jpg?height=489&width=1159&top_left_y=263&top_left_x=466)
 
-图 I. AFSIM 的基于组件的架构允许用户分析员定义具有不同建模细节层次的灵活可扩展平台。分析员可以使用多种内置组件类型，或使用外部开发的组件类型。  
+图 1. AFSIM 的基于组件的架构允许用户分析员定义具有不同建模细节层次的灵活可扩展平台。分析员可以使用多种内置组件类型，或使用外部开发的组件类型。 
+
 AFSIM：高级仿真集成建模框架（Advanced Framework for Simulation, Integration, and Modeling）；DIS：分布式交互仿真（Distributed Interactive Simulation）；EW：电子战（Electronic Warfare）；XIO：可扩展输入/输出系统（Extensible Input/Output System）。
 
 
