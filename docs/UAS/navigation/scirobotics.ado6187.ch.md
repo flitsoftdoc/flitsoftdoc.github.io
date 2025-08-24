@@ -654,7 +654,7 @@ Table S1. 不同方法的实现细节
 ### 视频1
 
 <div style="position:relative;aspect-ratio:16/9;max-width:960px">
-  <iframe src="https://www.youtube.com/embed/GPHuzG0ANmI)"
+  <iframe src="https://www.youtube.com/embed/GPHuzG0ANmI"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
@@ -662,7 +662,6 @@ Table S1. 不同方法的实现细节
           style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
 </div>
 
-![type:video](https://www.youtube.com/embed/GPHuzG0ANmI)
 
 
 视频 1. 提出 SUPER 系统的概览。SUPER 展示了其在高速下安全穿越未知且杂乱环境的能力，能够避开如电力线等细小障碍，并在多种场景中表现出鲁棒性，包括目标跟踪和自主探索。
