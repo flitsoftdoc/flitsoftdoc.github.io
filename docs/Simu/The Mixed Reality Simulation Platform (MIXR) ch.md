@@ -1,6 +1,6 @@
 
 
-# 混合现实仿真平台 MIXR
+# MIXR 混合现实仿真平台 
 
 Douglas D. Hodson , David P. Gehl 
 
