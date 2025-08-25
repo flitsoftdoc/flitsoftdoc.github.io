@@ -89,7 +89,7 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 - WSF_SOSM_SENSOR - 光谱光学（IR）感测模型（SOSM）的接口
 - WSF_SURFACE_WAVE_RADAR_SENSOR - 超视距雷达地波传感器模型
 
-许多传感器，例如RADAR传感器模型，实现了建模的电磁相互作用，并且可能受到干扰。
+许多传感器，例如RADAR传感器模型，实现了电磁相互作用的建模，并且可能受到干扰。
 
 #### 1.3.3 通信 Communications
 
@@ -133,8 +133,8 @@ WSF_RADIO_TRANSCEIVER和WSF_JTIDS_TRANSCEIVER都实现了建模的电磁相互�
 #### 1.3.6 其它组件
 
 AFSIM平台还可以使用其他组件（Other Components）类型，例如以下几种：
-- Command Chain - 提供平台的命令和控制报告结构。
-  
+
+- Command Chain - 提供平台的命令和控制报告结构。  
 - Fuel - 提供燃料消耗和加燃料能力。
 - Intersection Mesh - 提供平台详细几何形状的表示，以便进行光线追踪计算。
 - Navigation Errors - 模拟平台计算出的位置。
