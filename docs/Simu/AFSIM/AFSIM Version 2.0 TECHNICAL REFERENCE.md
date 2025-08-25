@@ -71,6 +71,10 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 - WSF_FIRES_MOVER - 用于间接火力（火箭、炮兵、迫击炮）弹药的移动体
 - WSF_P6DOF_MOVER - 高保真度的伪-6DOF移动体，提供角度和平移运动学。
 
+/// note | WSF前缀
+ WSF: = World Simulation Framework。在 AFSIM 中，WSF_ 前缀用于标识框架内置的标准组件类型（如平台、移动体、传感器、通信、武器、处理器等）。AFSIM 的基线可执行程序也叫 World Simulation Framework Executive（Wsf Exec）。
+///
+
 
 #### 1.3.2 传感器 Sensors
 
@@ -1477,35 +1481,13 @@ AFNES的IADS能力在2008年变得可操作，并目前正被多个波音开发�
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ----------
 
-在“Review of the Research Progress in Combat Simulation Software”中参考文献中提到的几个有关AFSIM的文献
+在[“Review of the Research Progress in Combat Simulation Software”](https://www.mdpi.com/2076-3417/13/9/5571)中参考文献中提到的几个有关AFSIM的文献
 
-https://www.mdpi.com/2076-3417/13/9/5571
-
-36. Thompson, J.S.; Hodson, D.D. AFSIMs pseudo-realtime hybrid simulation software design. J. Def. Model. Simul. 2022, 19, 575-587. [Google Scholar] [CrossRef]
-37. Allison, D.; Shimmin, K.; Schley, W.; Bryson, D. Automated 6DOF Model Generation and Actuator Sizing within AFSIM. In 2019 SAE AeroTech Americas Congress and Exhibition; United States Air Force: Charleston, SC, USA, 2019. [Google Scholar]
-38. Hanlon, N.; Garcia, E.; Casbeer, D.W.; Pachter, M. AFSIM implementation and simulation of the active target defense differential game. In Proceedings of the 2018 AIAA Guidance, Navigation, and Control Conference, Kissimmee, FL, USA, 8-12 January 2018; AIAA: Kissimmee, FL, USA, 2018. [Google Scholar]
+1.  Thompson, J.S.; Hodson, D.D. AFSIMs pseudo-realtime hybrid simulation software design. J. Def. Model. Simul. 2022, 19, 575-587. [Google Scholar] [CrossRef]
+2.  Allison, D.; Shimmin, K.; Schley, W.; Bryson, D. Automated 6DOF Model Generation and Actuator Sizing within AFSIM. In 2019 SAE AeroTech Americas Congress and Exhibition; United States Air Force: Charleston, SC, USA, 2019. [Google Scholar]
+3.  Hanlon, N.; Garcia, E.; Casbeer, D.W.; Pachter, M. AFSIM implementation and simulation of the active target defense differential game. In Proceedings of the 2018 AIAA Guidance, Navigation, and Control Conference, Kissimmee, FL, USA, 8-12 January 2018; AIAA: Kissimmee, FL, USA, 2018. [Google Scholar]
 
 
 
