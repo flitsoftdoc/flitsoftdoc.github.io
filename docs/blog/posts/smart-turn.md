@@ -94,3 +94,29 @@ API 文档见 Fal 模型页。
 * **数据质量关键**：持续清洗与人工验证能显著提升效果，官方也在号召社区共同完善。
 
 https://github.com/pipecat-ai/smart-turn
+
+
+Josh Whiton 的实验案例：
+
+Five neural nets, achieving completely local voice AI, no internet, on an M1 with only 16GB ram.
+
+https://x.com/joshwhiton/status/1957534570540356046
+
+
+Neural-based voice activity detection and turn detection means it's interruptible, but never interrupts me, and is able to sit idle and waiting. It's been flawless so far.
+
+12B parameters is definitely smart enough for some very cool use-cases (will share more later).
+
+Computers that can "think" feel strangely alive compared to dumb or networked hardware.
+
+Fast? No. But crazy that it works at all on such a modest machine.
+
+The stack:
+
+- Silero VAD voice activity detection
+- Whisper Large v3 turbo
+- Smart Turn v2 by @trydaily
+- Kokoro_tts
+- Gemma_3_12B_it_QAT_Q4 rock-solid on @lmstudio
+- vision easily removed thx to gguf @ggerganov
+- @pipecat_ai integration by @kwindla
