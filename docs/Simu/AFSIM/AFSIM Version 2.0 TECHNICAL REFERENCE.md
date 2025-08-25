@@ -175,7 +175,9 @@ AFSIM 还提供了采用低仰角杂波模型来模拟由于地形影响带了�
 
 （Electronic Warfare Effects）
 
-与如RF干扰器（例如，WSF_RF_JAMMER）等系统相关联的发射器可能定义发射器进行电子攻击接收器的能力，从而实施电子攻击（EA）技术。同样，与传感器或通信系统（例如，WSF_RADAR_SENSOR或WSF_RADIO_TRANSCEIVER）相关联的接收器可能定义接收器减轻电子攻击效果的能力，从而实施电子防护（EP）技术。可用的EA和EP技术以及它们的效果在附录D“AFSIM EW架构”中有完整的描述。
+与如RF干扰器（例如，WSF_RF_JAMMER）等系统相关联的发射器可能定义发射器进行电子攻击接收器的能力，从而实施电子攻击（EA）技术。
+
+同样，与传感器或通信系统（例如，WSF_RADAR_SENSOR或WSF_RADIO_TRANSCEIVER）相关联的接收器可能定义接收器减轻电子攻击效果的能力，从而实施电子防护（EP）技术。可用的EA和EP技术以及它们的效果在附录D“AFSIM EW架构”中有完整的描述。
 
 #### 1.4.5  通信网络
 
