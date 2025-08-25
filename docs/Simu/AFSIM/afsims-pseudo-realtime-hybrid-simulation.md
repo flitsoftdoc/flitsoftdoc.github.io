@@ -17,13 +17,6 @@ Approved for public release, unlimited distribution. Case \# AFRL-2020-0485, 9 D
   您的浏览器不支持音频播放。
 </audio>
 
-<audio controls preload="metadata" style="width:30%">
-  <source src="/assets/audio/afsims-pseudo-realtime-hybrid-simulation.m4a" type="audio/mpeg">
-  您的浏览器不支持音频播放。
-</audio>
-
-
-
 
 #### Keywords
 
