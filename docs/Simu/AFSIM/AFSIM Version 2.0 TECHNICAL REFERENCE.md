@@ -201,7 +201,7 @@ AFSIM配备了通过通信设备发送和接收Link-16 Tadil-J消息的能力。
 
 #### 1.4.8 任务 Tasks
 
-AFSIM的任务管理服务提供了发送和接收任务分配、执行任务以及提供处理这些分配的状态信息的功能。任务通常与踪迹相关联；例如，根据踪迹位置发起传感器跟踪请求，在给定的踪迹位置发射武器等。
+AFSIM的任务管理服务提供了发送和接收任务分配、执行任务以及提供处理这些分配的状态信息的功能。**任务通常与踪迹相关联**；例如，根据踪迹位置发起传感器跟踪请求，在给定的踪迹位置发射武器等。
 
 #### 1.4.9  行为建模 Behavior Modeling
 
@@ -1506,3 +1506,15 @@ https://www.mdpi.com/2076-3417/13/9/5571
 36. Thompson, J.S.; Hodson, D.D. AFSIMs pseudo-realtime hybrid simulation software design. J. Def. Model. Simul. 2022, 19, 575-587. [Google Scholar] [CrossRef]
 37. Allison, D.; Shimmin, K.; Schley, W.; Bryson, D. Automated 6DOF Model Generation and Actuator Sizing within AFSIM. In 2019 SAE AeroTech Americas Congress and Exhibition; United States Air Force: Charleston, SC, USA, 2019. [Google Scholar]
 38. Hanlon, N.; Garcia, E.; Casbeer, D.W.; Pachter, M. AFSIM implementation and simulation of the active target defense differential game. In Proceedings of the 2018 AIAA Guidance, Navigation, and Control Conference, Kissimmee, FL, USA, 8-12 January 2018; AIAA: Kissimmee, FL, USA, 2018. [Google Scholar]
+
+
+
+<iframe
+  src="/assets/pdf/AFSIM Version 2 TECHNICAL REFERENCE.pdf"
+  width="100%"
+  height="900"
+  style="border:1px solid #ccc;"
+>
+  此浏览器不支持 iframe，请  
+  <a href="/assets/pdf/AFSIM Version 2 TECHNICAL REFERENCE.pdf">点击下载 PDF</a>
+</iframe>

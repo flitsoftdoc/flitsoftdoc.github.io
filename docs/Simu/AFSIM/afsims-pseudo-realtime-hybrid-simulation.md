@@ -5,9 +5,17 @@ J Scott Thompson  and Douglas D Hodson
 
 Approved for public release, unlimited distribution. Case \# AFRL-2020-0485, 9 December 2020.
 
+
 #### 摘要
 
 仿真方法通常分为两类：离散时间或离散事件。对于军事建模与仿真的需求，这两类方法通常分别对应于虚拟仿真（virtual simulation，意味着有人机交互）和构造性仿真（constructive simulation，意味着无人工交互）。美国空军研究实验室开发并发布了 AFSIM（Advanced Framework for Simulation, Integration, and Modeling，高级仿真集成建模框架），面向同时使用虚拟仿真和构造性仿真的用户群体。本文记录了AFSIM支持这两种模式的软件设计和主要算法，这一能力被称为混合仿真。
+
+**音频概览：**
+
+<audio controls>
+  <source src="/assets/audio/afsims-pseudo-realtime-hybrid-simulation.m4a" type="audio/m4a" />
+  您的浏览器不支持音频播放。
+</audio>
 
 
 #### Keywords
