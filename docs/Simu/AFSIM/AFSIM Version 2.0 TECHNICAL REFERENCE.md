@@ -736,17 +736,23 @@ $$
 被动 RF 计算（ESM，RWR）使用单向方程。
 
 下标 ' r ' 的值用于被动 RF 接收器，而下标 ' x ' 的值用于传感器、干扰器或通信发射机。扩展方程如下：
+
 $$
-\begin{aligned}
-P_{r} & =D_{x r} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.4a } \\
-& =P_{x} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.2b } \\
-& =P_{p e a k} \times D C \times \frac{G_{x}}{L_{x}} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.1 （ESM.1）}
-\end{aligned}
+\begin{align*}
+P_r &= D_{xr}\times \frac{\lambda^2}{4\pi}\times \frac{G_r}{L_r}\times F_{BW}\times F_{POL}
+     \tag*{From RF.4a} \\
+    &= P_x \times \frac{A_{xr}}{4\pi R_{xr}^2}\times \frac{\lambda^2}{4\pi}\times \frac{G_r}{L_r}\times F_{BW}\times F_{POL}
+     \tag*{From RF.2b} \\
+    &= P_{\mathrm{peak}}\times DC \times \frac{G_x}{L_x}\times \frac{A_{xr}}{4\pi R_{xr}^2}\times
+       \frac{\lambda^2}{4\pi}\times \frac{G_r}{L_r}\times F_{BW}\times F_{POL}
+     \tag*{From RF.1(ESM.1)}
+\end{align*}
 $$
+
 
 信噪比计算如下：
 $$
-S N=\frac{P_{r}}{N} \quad(\mathrm{ESM} .2)
+SN=\frac{P_{r}}{N}  \tag{ESM.2}
 $$
 
 表 A-10. 被动接收机噪声变量
