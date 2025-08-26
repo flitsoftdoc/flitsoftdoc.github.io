@@ -472,13 +472,19 @@ $$
 #### A.3.3 接收自由空间信号
 
 RF.4a 用于直接、单向（通信、被动 RF 和干扰）。RF.4b 用于双向（雷达，SAR）。
-$$
-P_r=D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \quad \text { One-way, Transmitter - to - receiver } \tag { RF.4a } 
-$$
+
+单程，发射机 → 接收机：
 
 $$
- P_r=D_{t r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{40} \quad \text { Two - way, Target - to - receiver } \tag{ RF.4b }
+P_r = D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \tag{RF.4a}
 $$
+
+双程，目标 → 接收机：
+
+$$
+P_r = D_{t r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{40} \tag{RF.4b}
+$$
+
 
 表 A-4：自由空间接收功率变量
 
@@ -500,7 +506,7 @@ $$
 
 $F_{t l}=F_t-\frac{1}{2} B_t \quad$ 发射机频谱的低端频率
 
-$F_{t u}=F_t+\frac{1}{2} B_t \quad$ 发射机谱的高端频率
+$F_{t u}=F_t+\frac{1}{2} B_t \quad$ 发射机频谱的高端频率
 
 $F_{r l}=F_r-\frac{1}{2} B_r \quad$ 接收机的低端调谐频率
 
@@ -516,13 +522,20 @@ $F_{r u}=F_r+\frac{1}{2} B_r \quad$ 接收机的高端调谐频率
 | $F_t$ | 发射机频率 | 发射机频谱的中心频率。               |
 
 FBW 的结果值取决于发射器和接收器的高低频率之间的关系。
+
 $$
-\begin{aligned}
-F_{B W}&=0  \quad\quad\quad \text{ if }\quad F_{x u} \leq F_{r l} \\
-F_{B W}& =0 \quad\quad\quad \text{ if }\quad F_{x l} \geq F_{r u} \\
-F_{B W}& =\min \left(\frac{\min \left(F_{x u}, F_{r u}\right)-\max \left(F_{x l}, F_{r l}\right)}{F_{x u}-F_{x l}}, 1.0\right) \quad \text{(RF.5)}
-\end{aligned}
+F_{B W}=0  \quad\quad\quad \text{ if }\quad F_{x u} \leq F_{r l} 
 $$
+
+$$
+F_{B W}=0 \quad\quad\quad \text{ if }\quad F_{x l} \geq F_{r u} 
+$$
+
+
+$$
+F_{B W}& =\min \left(\frac{\min \left(F_{x u}, F_{r u}\right)-\max \left(F_{x l}, F_{r l}\right)}{F_{x u}-F_{x l}}, 1.0\right) \tag(RF.5}
+$$
+
 
 
 #### A.3.5 接收机噪声功率
@@ -548,31 +561,36 @@ $$
 
 3. 如果指定了 `noise_figure`，并且省略了 `antenna_ohmic_loss` 和 `receive_line_loss`，则计算噪声功率为：
 $$
-N=k \times T_0 \times B \times N F \quad\text { ( RF.6a )}
+N=k \times T_0 \times B \times N F \tag { RF.6a}
 $$
 
 4. 使用 "Radar Range Performance"，Lamont V. Blake，1986，Artech House, Inc.，第4章中定义的算法计算噪声功率。
 
-天线的噪声温度（ $T_{a n t} = \text{sky temperature due to the antenna pointing angle}$）：
+天线的噪声温度（ $T_{a n t} =\text{由于天线指向角导致的天空温度}$）：
 $$
-T_a = T_0 + (0.876 \times T_{ant}-254.0) / \text{antenna-ohmic-loss} \quad\quad \text { ( RF.6b ) }
+T_a = T_0 + (0.876 \times T_{ant}-254.0) / \text{天线欧姆损耗} \tag{ RF.6b}
 $$
+
 接收机线路损失产生的噪声温度贡献：
 $$
-T_l = T_0 \times(\text { receive-line-loss }-1.0) \quad\text { ( RF.6c )}
+T_l = T_0 \times(\text{接收线损耗} - 1.0) \tag{RF.6c}
 $$
-接收机产生的噪声温度贡献：
+
+接收机产生的噪声温度贡献：  
 $$
-T_r = T_0 \times(\text { noise-figure }-1.0) \quad\text { ( RF.6d )}
+T_r = T_0 \times(\text{噪声系数} - 1.0) \tag{RF.6d}
 $$
-总系统温度：
+
+总系统温度：  
 $$
-T_s= T_a + T_l+\left(\text { receive-line-loss } \times T_r\right) \quad\text { ( RF.6e )}
+T_s = T_a + T_l + \left(\text{接收线损耗} \times T_r\right) \tag{RF.6e}
 $$
-噪声功率：
+
+噪声功率：  
 $$
-N=k \times T_s \times B \quad \text { (RF.6f) }
+N = k \times T_s \times B \tag{RF.6f}
 $$
+
 
 
 #### A.3.6 天线增益方向图
@@ -597,7 +615,7 @@ $$
 
 
 $$
-G=G_0 \times \cos ^n(\theta) \quad \text { (RF.7) }
+G=G_0 \times \cos ^n(\theta) \tag{RF.7}
 $$
 
 表 A-7：天线增益变量
