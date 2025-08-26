@@ -44,6 +44,10 @@ AFSIM平台由属性、信息、组件和链接组成（见图1）。属性包�
 
 内部链接以灵活的方式将单个内部平台组件连接在一起。外部链接通过通信设备提供平台间的通信。
 
+/// note | WSF_前缀
+ WSF: = World Simulation Framework。在 AFSIM 中，WSF_ 前缀用于标识框架内置的标准组件类型（如平台、移动体、传感器、通信、武器、处理器等）。AFSIM 的基线可执行程序也叫 World Simulation Framework Executive（Wsf Exec）。
+///
+
 ### 1.3 平台组件
 
 （Platform Components）
@@ -73,26 +77,16 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 - `WSF_P6DOF_MOVER` - 高保真度的伪-6DOF移动体，提供角度和平移运动学。
 ///
 
-- `WSF_AIR_MOVER` - 用于空中车辆运动的路线移动体
-- `WSF_GROUND_MOVER` - 用于地形跟随的地面车辆的路线移动体
-- `WSF_ROAD_MOVER` - 在道路网络上移动的地面移动体，能够沿其遍历最短路径
-- `WSF_SURFACE_MOVER` - 用于水面船只的路线移动体
-- `WSF_SUBSURFACE_MOVER` - 用于可潜水车辆的路线移动体
-- `WSF_NORAD_SPACE_MOVER` - 用于围绕地球轨道的平台的移动体
-- `WSF_GUIDED_MOVER` - 能够表示引导滑翔炸弹或单级或多级引导导弹的移动体
-- `WSF_TSPI_MOVER` - 根据从文本文件中读取的时间空间位置信息（TSPI）数据更新位置的移动体
-- `WSF_FIRES_MOVER` - 用于间接火力（火箭、炮兵、迫击炮）弹药的移动体
-- `WSF_P6DOF_MOVER` - 高保真度的伪-6DOF移动体，提供角度和平移运动学。
 
-/// note | WSF前缀
- WSF: = World Simulation Framework。在 AFSIM 中，WSF_ 前缀用于标识框架内置的标准组件类型（如平台、移动体、传感器、通信、武器、处理器等）。AFSIM 的基线可执行程序也叫 World Simulation Framework Executive（Wsf Exec）。
-///
+
+
 
 
 #### 1.3.2 传感器 Sensors
 
 传感器系统用于感知平台周围的环境。有许多类型的标准传感器模型，其中一些包括：
 
+/// note | Sensors
 - `WSF_ACOUSTIC_SENSOR `- 基线声学传感器模型
 - `WSF_AMBER_SENSOR` - 提供与TMAP AMBER雷达模型的接口
 - `WSF_EOIR_SENSOR` - 光电/红外（EOIR）传感器模型
@@ -105,6 +99,7 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 - `WSF_SAR_SENSOR` - 基线合成孔径雷达（SAR）模型
 - `WSF_SOSM_SENSOR `- 光谱光学（IR）感测模型（SOSM）的接口
 - `WSF_SURFACE_WAVE_RADAR_SENSOR` - 超视距雷达地波传感器模型
+///
 
 许多传感器，例如RADAR传感器模型，实现了电磁相互作用的建模，并且可能受到干扰。
 
@@ -112,9 +107,11 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 通信系统用于将信息从一个平台传输到另一个平台。除了模型选择，该框架还提供了一组丰富的网络选项，详细说明在下一节中。AFSIM提供三种系统模型：
 
+/// note | Communications
 - `WSF_COMM_TRANSCEIVER` - 实现完美或有线通信
 - `WSF_RADIO_TRANSCEIVER` - 实现无线电频率通信
 - `WSF_JTIDS_TRANSCEIVER` - 实现JTIDS/Link 16通信
+///
 
 `WSF_RADIO_TRANSCEIVER `和 `WSF_JTIDS_TRANSCEIVER` 都实现了建模的电磁相互作用，并受到干扰的影响。
 
@@ -124,11 +121,14 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 随AFSIM交付的武器组件如下：
 
-- `WSF_EXPLICIT_WEAPON` 表示在发射时被模拟为一个独立平台的武器。  
-- `WSF_IMPLICIT_WEAPON` 表示不需要独立飞行的武器。
-- `WSF_RF_JAMMER` 是一个无线电频率干扰器，可用于破坏雷达、电子支援措施（ESM）和无线电通信系统。
-- `WSF_LASER_WEAPON` 表示一个具有独立可配置激光流量模型的高能激光（HEL）武器。
+
+/// note | Weapons
+- `WSF_EXPLICIT_WEAPON` - 表示在发射时被模拟为一个独立平台的武器。  
+- `WSF_IMPLICIT_WEAPON` - 表示不需要独立飞行的武器。
+- `WSF_RF_JAMMER` - 是一个无线电频率干扰器，可用于破坏雷达、电子支援措施（ESM）和无线电通信系统。
+- `WSF_LASER_WEAPON` - 表示一个具有独立可配置激光流量模型的高能激光（HEL）武器。
 - `WSF_CUED_LASER_WEAPON` 是`WSF_LASER_WEAPON`的一个实现，由一个单独的光束指导传感器进行提示。
+///
 
 请注意，只有一个显式武器模型。这是因为通过使用各自独特的平台组件配置武器平台类型，可以实现导弹、炸弹等的广泛可能性。例如，导弹可以被指定为一个配置有导引移动体和导引计算机（处理器）的武器平台类型，而正是这个移动体和导引计算机被配置用于模拟导弹的独特特性。
 
@@ -136,6 +136,8 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 处理器用于实现平台的心智或计算处理能力。在标准框架中有许多可用的处理器，最常见的包括：
 
+
+/// note |  Processors
 - `WSF_SCRIPT_PROCESSOR` - 一个通用处理器，用于执行用AFSIM脚本语言编写的脚本，以实现自定义行为和自定义处理。
 - `WSF_TASK_PROCESSOR` - 一个可编程的有限状态机，用于对平台已知的轨迹进行命令和控制决策。
 - `WSF_RIPR_PROCESSOR` - 一个更高级的可编程处理器，用于进行命令和控制决策。
@@ -144,6 +146,7 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 - `WSF_IMAGE_PROCESSOR` - 模拟成像传感器产生的“图像”的分析。
 - `WSF_MESSAGE_PROCESSOR` - 一个可编程的路由器和消息解释器。
 - `WSF_TRACK_PROCESSOR` - 接受来自板载（on-board）和非板载（off-board）来源的轨迹（Track），并将它们馈送给轨迹管理器。还会定期将本地轨迹的更新发送给其他平台。
+///
 
 根据其实现，处理器可能会定期被调用，或作为接收消息或时间间隔到期等某些事件的结果而被调用。
 
@@ -151,11 +154,14 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 AFSIM平台还可以使用其他组件（Other Components）类型，例如以下几种：
 
+
+/// note |  Other Components
 - Command Chain - 提供平台的命令和控制报告结构。  
 - Fuel - 提供燃料消耗和加燃料能力。
 - Intersection Mesh - 提供平台详细几何形状的表示，以便进行光线追踪计算。
 - Navigation Errors - 模拟平台计算出的位置。
 - Visual Part - 提供一个可用于可视化目的并计算几何形状的组件。
+  ///
 
 如果需要一种未随标准AFSIM分发提供的新组件类型，可以使用AFSIM的**基于组件的架构**（CBA，新引入于2.0版本）进行集成。AFSIM CBA提供了一个抽象的平台组件接口，该接口可扩展以轻松添加新的和现有的基础组件类型，以及为现有的传感器、处理器和武器组件添加额外功能的组件“扩展”。使用CBA，不仅可以通用地、简单地将新的和现有的功能集成到平台上，而且使用和理解它们通常也更容易。
 
@@ -192,9 +198,9 @@ AFSIM 还提供了采用低仰角杂波模型来模拟由于地形影响带了�
 
 （Electronic Warfare Effects）
 
-与如RF干扰器（例如，WSF_RF_JAMMER）等系统相关联的发射器可能定义发射器进行电子攻击接收器的能力，从而实施电子攻击（EA）技术。
+与如RF干扰器（例如，`WSF_RF_JAMMER`）等系统相关联的发射器可能定义发射器进行电子攻击接收器的能力，从而实施电子攻击（EA）技术。
 
-同样，与传感器或通信系统（例如，WSF_RADAR_SENSOR或WSF_RADIO_TRANSCEIVER）相关联的接收器可能定义接收器减轻电子攻击效果的能力，从而实施电子防护（EP）技术。可用的EA和EP技术以及它们的效果在附录D“AFSIM EW架构”中有完整的描述。
+同样，与传感器或通信系统（例如，`WSF_RADAR_SENSOR`或`WSF_RADIO_TRANSCEIVER`）相关联的接收器可能定义接收器减轻电子攻击效果的能力，从而实施电子防护（EP）技术。可用的EA和EP技术以及它们的效果在附录D“AFSIM EW架构”中有完整的描述。
 
 #### 1.4.5  通信网络
 
@@ -228,7 +234,7 @@ AFSIM的任务执行是通过AFSIM脚本语言进行的，这是实现平台行�
 
 **Figure 2:**  图形表示的任务处理器状态机示例。
 
-<img src="https://cdn.mathpix.com/snip/images/gl4xJr15pSryt4TnPC5Y2dDIwKwWkFbur5cLk8GaoGY.original.fullsize.png" width=400/>
+<img src="https://cdn.mathpix.com/snip/images/gl4xJr15pSryt4TnPC5Y2dDIwKwWkFbur5cLk8GaoGY.original.fullsize.png" width=600/>
 
 **Figure 3:** An Example RIPR Behavior Tree
 
@@ -301,7 +307,7 @@ AFSIM提供了一次执行一组仿真运行的能力，其中每次运行都从
 
 #### 2.1.1 世界仿真框架执行程序 （WSF Exec）
 
-基础的AFSIM仿真应用程序被称为世界仿真框架执行程序（Wsf Exec, World Simulation Framework Executive）。Wsf Exec读取用户定义的输入文件，执行仿真，并输出那些用户定义的数据文件。由于Wsf Exec集成了所有标准的AFSIM功能，因此它用于执行所有与AFSIM版本一起发布的仿真演示和场景，包括AFSIM IADS场景。Wsf Exec也最常用作AFSIM IDE执行信息丰富的图形环境中的模拟场景的模拟引擎。
+基础的AFSIM仿真应用程序被称为 世界仿真框架执行程序** World Simulation Framework Executive**  （Wsf Exec）。Wsf Exec读取用户定义的输入文件，执行仿真，并输出那些用户定义的数据文件。由于Wsf Exec集成了所有标准的AFSIM功能，因此它用于执行所有与AFSIM版本一起发布的仿真演示和场景，包括AFSIM IADS场景。Wsf Exec也最常用作AFSIM IDE执行信息丰富的图形环境中的模拟场景的模拟引擎。
 
 注意：Wsf Exec很可能会更名为“AFSIM Mission”。
 
