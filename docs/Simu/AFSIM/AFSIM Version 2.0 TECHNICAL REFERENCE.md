@@ -668,30 +668,21 @@ AFSIM雷达模型有效地计算单个脉冲（或连续波形）的功率，然
 #### A.4.1 Calculation of Received Power 计算接收功率
 
 应用方程 RF.1 到 RF.4，以下用于计算从单个脉冲（或连续波形）接收到的功率。注意，这不包括干扰。干扰在一个单独的步骤中处理。
-$$
-\begin{aligned}
-P_{r} & =D_{t r} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{40} & & \text { From RF.4b } \\
-& =P_{t} \times \frac{A_{t r}}{4 \pi R_{t r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{40} & & \text { From RF.2d } \\
-& =D_{x t} \times \sigma_{t} \times \frac{A_{t r}}{4 \pi R_{t r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{40} & & \text { From RF.3b } \\
-& =P_{x} \times \frac{A_{x t}}{4 \pi R_{x t}^{2}} \times \sigma_{t} \times \frac{A_{t r}}{4 \pi R_{t r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{40} & & \text { From RF.2c } \\
-& =P_{p e a k} \times D C \times \frac{G_{x}}{L_{x}} \times \frac{A_{x t}}{4 \pi R_{x t}^{2}} \times \sigma_{t} \times \frac{A_{t r}}{4 \pi R_{t r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{40} & & \text { From RF.1 (Radar.1)}
-\end{aligned}
-$$
 
 
 $$
 \begin{align*}
 P_r &= D_{tr}\cdot \frac{\lambda^2}{4\pi}\cdot \frac{G_r}{L_r}\cdot F_{40}
-     \tag*{\small From RF.\,4b} \\
+     \tag*{From RF.4b} \\
     &= P_t \cdot \frac{A_{tr}}{4\pi R_{tr}^2}\cdot \frac{\lambda^2}{4\pi}\cdot \frac{G_r}{L_r}\cdot F_{40}
-     \tag*{\small From RF.\,2d} \\
+     \tag*{From RF.2d} \\
     &= D_{xt}\cdot \sigma_t \cdot \frac{A_{tr}}{4\pi R_{tr}^2}\cdot \frac{\lambda^2}{4\pi}\cdot \frac{G_r}{L_r}\cdot F_{40}
-     \tag*{\small From RF.\,3b} \\
+     \tag*{From RF.3b} \\
     &= P_x \cdot \frac{A_{xt}}{4\pi R_{xt}^2}\cdot \sigma_t \cdot \frac{A_{tr}}{4\pi R_{tr}^2}\cdot \frac{\lambda^2}{4\pi}\cdot \frac{G_r}{L_r}\cdot F_{40}
-     \tag*{\small From RF.\,2c} \\
+     \tag*{From RF.2c} \\
     &= P_{\mathrm{peak}}\cdot DC \cdot \frac{G_x}{L_x}\cdot \frac{A_{xt}}{4\pi R_{xt}^2}\cdot \sigma_t \cdot
        \frac{A_{tr}}{4\pi R_{tr}^2}\cdot \frac{\lambda^2}{4\pi}\cdot \frac{G_r}{L_r}\cdot F_{40}
-     \tag*{\small From RF.\,1 \,(Radar.\,1)}
+     \tag*{From RF.1 (Radar.1)}
 \end{align*}
 $$
 
@@ -702,7 +693,7 @@ $$
 
 处理后的信号计算如下：
 $$
-S=P_{r} \times P C R \times G_{I} \times A F \quad \text { (Radar.2) }
+S=P_{r} \times P C R \times G_{I} \times A F \tag {Radar.2}
 $$
 
 表 A-8：处理后的功率变量
