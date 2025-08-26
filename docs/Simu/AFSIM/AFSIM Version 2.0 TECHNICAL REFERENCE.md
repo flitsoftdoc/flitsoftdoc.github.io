@@ -1161,7 +1161,7 @@ Figure C-4. 在AFSIM电子战（EW）架构中的EA（电子攻击）和EP（电
     - 伪目标效应，并创建轨迹
     - 脉冲类型效应
 - `WSF_POL_MOD_EFFECT`
-    - 基于 WSF_SLC_DEGRADE_EFFECT，添加了一些数据以模拟极化调制技术
+    - 基于 `WSF_SLC_DEGRADE_EFFECT`，添加了一些数据以模拟极化调制技术
     - 引发 EP SLC 效应的退化
 - `WSF_POWER_EFFECT`
      - 干扰器增益/退化效应
@@ -1197,16 +1197,16 @@ Figure C-5. 用于EA（电子攻击）的基类型效果的层次结构。
 - `WSF_AGILITY_EFFECT`
     - 频率和/或模式敏捷性/多样性效应
 - `WSF_COMM_EFFECT`
-   - 减轻通信效应
+    - 减轻通信效应
 - `WSF_POWER_EFFECT`
     - 干扰器增益/退化效应
-   - 大多数效应的基础类型
+    - 大多数效应的基础类型
 - `WSF_PULSE_EFFECT`
     - 脉冲级效应
-   - 其他脉冲类型效应的基础
+    - 其他脉冲类型效应的基础
 - `WSF_PULSE_SUPPRESS_EFFECT`
     - 用于脉冲型电子攻击效应的脉冲抑制效应
-  - 脉冲类型效应
+    - 脉冲类型效应
 - `WSF_SLB_EFFECT`
     - 旁瓣消除器效应
 - `WSF_SLC_EFFECT`
