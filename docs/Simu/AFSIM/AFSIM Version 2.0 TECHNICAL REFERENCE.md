@@ -451,9 +451,9 @@ $$
 | 符号     | 来源           | 描述                                                         |
 | :------- | :------------- | :----------------------------------------------------------- |
 | $A_{sd}$ | 发射器衰减模型 | 在从信号源（s）到目的地（d）传播信号时，计算大气衰减效应后仍然保留的信号部分。 |
-| Dsd      | 计算得出       | 计算在目的地（d）处来自信号源（s）的的自由空间功率密度。     |
-| Ps       | 计算得出       | 信号源（s）发射功率。可为发射功率（方程 RF.1）或目标的反射功率（方程 RF.3）。 |
-| Rsd      | 计算得出       | 信号源（s）与目的地（d）之间的斜距。                         |
+| $D_{sd}$      | 计算得出       | 计算在目的地（d）处来自信号源（s）的的自由空间功率密度。     |
+| $P_s$       | 计算得出       | 信号源（s）发射功率。可为发射功率（方程 RF.1）或目标的反射功率（方程 RF.3）。 |
+| $R_sd$      | 计算得出       | 信号源（s）与目的地（d）之间的斜距。                         |
 
 #### A.3.2 自由空间信号的反射
 
@@ -473,11 +473,11 @@ $$
 
 RF.4a 用于直接、单向（通信、被动 RF 和干扰）。RF.4b 用于双向（雷达，SAR）。
 $$
-\begin{aligned}
-& P_r=D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \quad \text { One-way, Transmitter - to - receiver } \quad \text { (RF.4a) } \\
-& P_r=D_{t r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{40} \quad \text { Two - way, Target - to - receiver } \quad \text { (RF.4b) }\\
-&
-\end{aligned}
+P_r=D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \quad \text { One-way, Transmitter - to - receiver } \tag { (RF.4a) } 
+$$
+
+$$
+ P_r=D_{t r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{40} \quad \text { Two - way, Target - to - receiver } \tag{ (RF.4b) }\\
 $$
 
 表 A-4：自由空间接收功率变量
