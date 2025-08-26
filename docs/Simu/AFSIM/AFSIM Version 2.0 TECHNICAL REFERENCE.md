@@ -228,7 +228,7 @@ AFSIM的任务管理服务提供了发送和接收任务分配、执行任务以
 
 #### 1.4.9  行为建模 Behavior Modeling
 
-AFSIM的任务执行是通过AFSIM脚本语言进行的，这是实现平台行为的最常用方法。框架为任务执行提供了两个选项：WSF_TASK_PROCESSOR和WSF_QUANTUM_TASK_PROCESSOR。WSF_TASK_PROCESSOR使用有限状态机，其中踪迹在各个状态之间移动，脚本基于当前状态实现行为（参见图2，其中圆圈代表状态，箭头代表转换规则）。WSF_QUANTUM_TASK_PROCESSOR使用行为树（图3），这是一种人工智能技术，在该技术中，行为作为图或“树”的节点被创建和排列。行为节点可以以有趣和相互关联的方式排列在一起，从而提供了更多的灵活性，以选择和执行行为。人工智能架构和行为树在附录D中有进一步的描述。
+AFSIM的任务执行是通过AFSIM脚本语言进行的，这是实现平台行为的最常用方法。框架为任务执行提供了两个选项：`WSF_TASK_PROCESSOR`和`WSF_QUANTUM_TASK_PROCESSOR`。`WSF_TASK_PROCESSOR`使用有限状态机，其中踪迹在各个状态之间移动，脚本基于当前状态实现行为（参见图2，其中圆圈代表状态，箭头代表转换规则）。`WSF_QUANTUM_TASK_PROCESSOR`使用行为树（图3），这是一种人工智能技术，在该技术中，行为作为图或“树”的节点被创建和排列。行为节点可以以有趣和相互关联的方式排列在一起，从而提供了更多的灵活性，以选择和执行行为。人工智能架构和行为树在附录D中有进一步的描述。
 
 <img src="https://cdn.mathpix.com/snip/images/VnmjQIErtJFilzeowrNZHCIAsSaP2x855EAxmlmuMLc.original.fullsize.png" width=400 />
 
