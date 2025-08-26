@@ -431,19 +431,19 @@ $$
 从信号源（s）到目的地（d）的自由空间信号传播是使用以下方程计算的。在单向交互中，'s' 和 'd' 分别是发射机和接收机（方程 RF.2b）。在双向交互中，有两条传播路径。第一条是从发射机到目标（方程 RF.2c），第二条是从目标到接收机（方程 RF.2d）。
 
 $$
-D_{s d}=P_s \times \frac{A_{s d}}{4 \pi R_{s d}^2} & \text { General Form } \tag{(RF.2a)}
+D_{s d}=P_s \times \frac{A_{s d}}{4 \pi R_{s d}^2} \quad \text { General Form } \tag{(RF.2a)}
 $$
 
 $$
-D_{x r}=P_x \times \frac{A_{x r}}{4 \pi R_{x r}^2} & \text { Transmitter - to - receiver } \tag{(RF.2b)}
+D_{x r}=P_x \times \frac{A_{x r}}{4 \pi R_{x r}^2} \quad \text { Transmitter - to - receiver } \tag{(RF.2b)}
 $$
 
 $$
-D_{x t}=P_x \times \frac{A_{x t}}{4 \pi R_{x t}^2} & \text { Transmitter - to - target }\tag{(RF.2c)}
+D_{x t}=P_x \times \frac{A_{x t}}{4 \pi R_{x t}^2} \quad \text { Transmitter - to - target }\tag{(RF.2c)}
 $$
 
 $$
-D_{t r}=P_t \times \frac{A_{t r}}{4 \pi R_{t r}^2} & \text { Target }- \text { to }- \text { receiver }\tag{(RF.2d)}
+D_{t r}=P_t \times \frac{A_{t r}}{4 \pi R_{t r}^2} \quad \text { Target }- \text { to }- \text { receiver }\tag{(RF.2d)}
 $$
 
 表 A-2：自由空间传播变量
