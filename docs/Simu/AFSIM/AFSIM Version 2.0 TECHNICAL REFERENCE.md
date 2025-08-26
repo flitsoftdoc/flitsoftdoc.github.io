@@ -729,7 +729,7 @@ $$
 
 目标的检测是由两种机制中的一种来确定的。通过指定一个检测阈值，可以使用一个简单的二元检测器。如果信噪比超过这个阈值，则声明成功检测。
 
-也可以使用 Marcum-Swerling 检测器，它会根据给定的信噪比产生一个检测概率。如果计算出的检测概率超过所需的检测概率，则声明成功检测。通过使用 swerling_case、number_of_pulses_integrated、probability_of_false_alarm 和 detector_law 命令来选择这种检测器。
+也可以使用 Marcum-Swerling 检测器，它会根据给定的信噪比产生一个检测概率。如果计算出的检测概率超过所需的检测概率，则声明成功检测。通过使用 `swerling_case`、`number_of_pulses_integrated`、`probability_of_false_alarm` 和 `detector_law` 命令来选择这种检测器。
 
 ### A.5 Passive RF Sensor(WSF_ESM_SENSOR)
 
