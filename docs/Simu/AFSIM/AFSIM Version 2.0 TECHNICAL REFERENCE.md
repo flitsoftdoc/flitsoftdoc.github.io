@@ -413,7 +413,7 @@ AFSIM使用一组通用的类来封装涉及射频（RF）交互的组件（实�
 ### A.3 直接发射功率的计算
 
 $$
-P_x=P_{\text {peak }} \times D C \times \frac{G_x}{L_x} \tag{(RF.1)}
+P_x=P_{\text {peak }} \times D C \times \frac{G_x}{L_x} \tag{RF.1}
 $$
 
 表 A-1：发射功率变量
@@ -431,19 +431,19 @@ $$
 从信号源（s）到目的地（d）的自由空间信号传播是使用以下方程计算的。在单向交互中，'s' 和 'd' 分别是发射机和接收机（方程 RF.2b）。在双向交互中，有两条传播路径。第一条是从发射机到目标（方程 RF.2c），第二条是从目标到接收机（方程 RF.2d）。
 
 $$
-D_{s d}=P_s \times \frac{A_{s d}}{4 \pi R_{s d}^2} \quad \text { General Form } \tag{(RF.2a)}
+D_{s d}=P_s \times \frac{A_{s d}}{4 \pi R_{s d}^2} \quad \text { General Form } \tag{RF.2a}
 $$
 
 $$
-D_{x r}=P_x \times \frac{A_{x r}}{4 \pi R_{x r}^2} \quad \text { Transmitter - to - receiver } \tag{(RF.2b)}
+D_{x r}=P_x \times \frac{A_{x r}}{4 \pi R_{x r}^2} \quad \text { Transmitter - to - receiver } \tag{RF.2b}
 $$
 
 $$
-D_{x t}=P_x \times \frac{A_{x t}}{4 \pi R_{x t}^2} \quad \text { Transmitter - to - target }\tag{(RF.2c)}
+D_{x t}=P_x \times \frac{A_{x t}}{4 \pi R_{x t}^2} \quad \text { Transmitter - to - target }\tag{RF.2c}
 $$
 
 $$
-D_{t r}=P_t \times \frac{A_{t r}}{4 \pi R_{t r}^2} \quad \text { Target }- \text { to }- \text { receiver }\tag{(RF.2d)}
+D_{t r}=P_t \times \frac{A_{t r}}{4 \pi R_{t r}^2} \quad \text { Target }- \text { to }- \text { receiver }\tag{RF.2d}
 $$
 
 表 A-2：自由空间传播变量
@@ -459,7 +459,7 @@ $$
 
 一个有效反射自由空间信号的目标实际上创建了一个新的“发射源”。源的功率简单地是传入信号的信号密度与反射源有效面积的乘积。反射器可以是一个平台（例如在进行双向雷达交互时）或者可以是地球的表面（在进行杂波计算时）。然后可以通过应用方程 RF.3 将反射功率传播到接收器。
 $$
-P_t=D_{x t} \times \sigma_t \tag {(RF.3) }
+P_t=D_{x t} \times \sigma_t \tag {RF.3 }
 $$
 表 A-3：自由空间反射信号变量
 
@@ -473,11 +473,11 @@ $$
 
 RF.4a 用于直接、单向（通信、被动 RF 和干扰）。RF.4b 用于双向（雷达，SAR）。
 $$
-P_r=D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \quad \text { One-way, Transmitter - to - receiver } \tag { (RF.4a) } 
+P_r=D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \quad \text { One-way, Transmitter - to - receiver } \tag { RF.4a } 
 $$
 
 $$
- P_r=D_{t r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{40} \quad \text { Two - way, Target - to - receiver } \tag{ (RF.4b) }\\
+ P_r=D_{t r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{40} \quad \text { Two - way, Target - to - receiver } \tag{ RF.4b }
 $$
 
 表 A-4：自由空间接收功率变量
