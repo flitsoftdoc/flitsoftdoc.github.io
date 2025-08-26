@@ -533,7 +533,7 @@ $$
 
 
 $$
-F_{B W}=\min \left(\frac{\min \left(F_{x u}, F_{r u}\right)-\max \left(F_{x l}, F_{r l}\right)}{F_{x u}-F_{x l}}, 1.0\right) \tag(RF.5}
+F_{B W}=\min \left(\frac{\min \left(F_{x u}, F_{r u}\right)-\max \left(F_{x l}, F_{r l}\right)}{F_{x u}-F_{x l}}, 1.0\right) \tag{RF.5}
 $$
 
 
