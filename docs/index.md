@@ -1,4 +1,4 @@
-# Infinity is more complex than you might think
+# Infinity Is More Complex Than You Might Think
 
 ## 数学宇宙的尽头是秩序还是混沌？
 
