@@ -60,16 +60,16 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 有许多类型的标准移动体模型，提供了在每个领域中表示平台的能力，从海底到太空。与AFSIM一起提供的一些移动体示例包括以下内容：
 
-- WSF_AIR_MOVER - 用于空中车辆运动的路线移动体
-- WSF_GROUND_MOVER - 用于地形跟随的地面车辆的路线移动体
-- WSF_ROAD_MOVER - 在道路网络上移动的地面移动体，能够沿其遍历最短路径
-- WSF_SURFACE_MOVER - 用于水面船只的路线移动体
-- WSF_SUBSURFACE_MOVER - 用于可潜水车辆的路线移动体
-- WSF_NORAD_SPACE_MOVER - 用于围绕地球轨道的平台的移动体
-- WSF_GUIDED_MOVER - 能够表示引导滑翔炸弹或单级或多级引导导弹的移动体
-- WSF_TSPI_MOVER - 根据从文本文件中读取的时间空间位置信息（TSPI）数据更新位置的移动体
-- WSF_FIRES_MOVER - 用于间接火力（火箭、炮兵、迫击炮）弹药的移动体
-- WSF_P6DOF_MOVER - 高保真度的伪-6DOF移动体，提供角度和平移运动学。
+- `WSF_AIR_MOVER` - 用于空中车辆运动的路线移动体
+- `WSF_GROUND_MOVER` - 用于地形跟随的地面车辆的路线移动体
+- `WSF_ROAD_MOVER` - 在道路网络上移动的地面移动体，能够沿其遍历最短路径
+- `WSF_SURFACE_MOVER` - 用于水面船只的路线移动体
+- `WSF_SUBSURFACE_MOVER` - 用于可潜水车辆的路线移动体
+- `WSF_NORAD_SPACE_MOVER` - 用于围绕地球轨道的平台的移动体
+- `WSF_GUIDED_MOVER` - 能够表示引导滑翔炸弹或单级或多级引导导弹的移动体
+- `WSF_TSPI_MOVER` - 根据从文本文件中读取的时间空间位置信息（TSPI）数据更新位置的移动体
+- `WSF_FIRES_MOVER` - 用于间接火力（火箭、炮兵、迫击炮）弹药的移动体
+- `WSF_P6DOF_MOVER` - 高保真度的伪-6DOF移动体，提供角度和平移运动学。
 
 /// note | WSF前缀
  WSF: = World Simulation Framework。在 AFSIM 中，WSF_ 前缀用于标识框架内置的标准组件类型（如平台、移动体、传感器、通信、武器、处理器等）。AFSIM 的基线可执行程序也叫 World Simulation Framework Executive（Wsf Exec）。
@@ -80,18 +80,18 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 传感器系统用于感知平台周围的环境。有许多类型的标准传感器模型，其中一些包括：
 
-- WSF_ACOUSTIC_SENSOR - 基线声学传感器模型
-- WSF_AMBER_SENSOR - 提供与TMAP AMBER雷达模型的接口
-- WSF_EOIR_SENSOR - 光电/红外（EOIR）传感器模型
-- WSF_ESM_SENSOR - 基线被动射频检测传感器
-- WSF_GEOMETRIC_SENSOR - 完全基于几何的基线传感器
-- WSF_IRST_SENSOR - 基线红外搜索与追踪传感器
-- WSF_OPTICAL_SENSOR - 基线光学传感器模型
-- WSF_OTH_RADAR_SENSOR - 基线超视距背向散射（OTH-B）天波雷达模型
-- WSF_RADAR_SENSOR - 基线雷达模型
-- WSF_SAR_SENSOR - 基线合成孔径雷达（SAR）模型
-- WSF_SOSM_SENSOR - 光谱光学（IR）感测模型（SOSM）的接口
-- WSF_SURFACE_WAVE_RADAR_SENSOR - 超视距雷达地波传感器模型
+- `WSF_ACOUSTIC_SENSOR `- 基线声学传感器模型
+- `WSF_AMBER_SENSOR` - 提供与TMAP AMBER雷达模型的接口
+- `WSF_EOIR_SENSOR` - 光电/红外（EOIR）传感器模型
+- `WSF_ESM_SENSOR` - 基线被动射频检测传感器
+- `WSF_GEOMETRIC_SENSOR` - 完全基于几何的基线传感器
+- `WSF_IRST_SENSOR` - 基线红外搜索与追踪传感器
+- `WSF_OPTICAL_SENSOR` - 基线光学传感器模型
+- `WSF_OTH_RADAR_SENSOR` - 基线超视距背向散射（OTH-B）天波雷达模型
+- `WSF_RADAR_SENSOR `- 基线雷达模型
+- `WSF_SAR_SENSOR` - 基线合成孔径雷达（SAR）模型
+- `WSF_SOSM_SENSOR `- 光谱光学（IR）感测模型（SOSM）的接口
+- `WSF_SURFACE_WAVE_RADAR_SENSOR` - 超视距雷达地波传感器模型
 
 许多传感器，例如RADAR传感器模型，实现了电磁相互作用的建模，并且可能受到干扰。
 
@@ -103,7 +103,7 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 - WSF_RADIO_TRANSCEIVER - 实现无线电频率通信
 - WSF_JTIDS_TRANSCEIVER - 实现JTIDS/Link 16通信
 
-WSF_RADIO_TRANSCEIVER和WSF_JTIDS_TRANSCEIVER都实现了建模的电磁相互作用，并受到干扰的影响。
+`WSF_RADIO_TRANSCEIVER `和 `WSF_JTIDS_TRANSCEIVER` 都实现了建模的电磁相互作用，并受到干扰的影响。
 
 #### 1.3.4 武器 Weapons
 
@@ -1153,38 +1153,36 @@ Figure C-4. 在AFSIM电子战（EW）架构中的EA（电子攻击）和EP（电
 
 在 AFSIM 中定义的具体电子攻击（EA）效果如下，附有简短的描述：
 
-- WSF_COMM_EFFECT
-
-  - 引发通信效应
-
-- WSF_COVER_PULSE_EFFECT
-  - 按概率引发覆盖脉冲效应
-- WSF_FALSE_TARGET_EFFECT
-  - 伪目标效应，并创建轨迹
-  - 脉冲类型效应
-- WSF_POL_MOD_EFFECT
-  - 基于 WSF_SLC_DEGRADE_EFFECT，添加了一些数据以模拟极化调制技术
-  - 引发 EP SLC 效应的退化
-- WSF_POWER_EFFECT
-  - 干扰器增益/退化效应
+- `WSF_COMM_EFFECT`
+    - 引发通信效应
+- `WSF_COVER_PULSE_EFFECT`
+   - 按概率引发覆盖脉冲效应
+- `WSF_FALSE_TARGET_EFFECT`
+   - 伪目标效应，并创建轨迹
+   - 脉冲类型效应
+- `WSF_POL_MOD_EFFECT`
+   - 基于 WSF_SLC_DEGRADE_EFFECT，添加了一些数据以模拟极化调制技术
+   - 引发 EP SLC 效应的退化
+- `WSF_POWER_EFFECT`
+    - 干扰器增益/退化效应
   - 大多数效应的基础类型
-- WSF_PULSE_EFFECT
-  - 脉冲级效应
-  - 其他脉冲级基础类型的基础
-- WSF_RADIUS_EFFECT
-  - 目标/干扰器/雷达三者的半径效应
-- WSF_REPEATER_EFFECT
-  - 应用重复干扰效应
-- WSF_RPJ_EFFECT
-  - 随机脉冲干扰/调制（RPJ/RPM）效应
-  - 脉冲类型效应
-- WSF_SIMPLE_FT_EFFECT
-  - 简单的伪目标效应，不创建轨迹
-  - 脉冲类型效应
-- WSF_SLC_DEGRADE_EFFECT
-  - 额外的 SLC 退化因素
-- WSF_TRACK_EFFECT
-  - 引发轨迹错误效应(s)
+- `WSF_PULSE_EFFECT`
+    - 脉冲级效应
+   - 其他脉冲级基础类型的基础
+- `WSF_RADIUS_EFFECT`
+    - 目标/干扰器/雷达三者的半径效应
+- `WSF_REPEATER_EFFECT`
+    - 应用重复干扰效应
+- `WSF_RPJ_EFFECT`
+   - 随机脉冲干扰/调制（RPJ/RPM）效应
+   - 脉冲类型效应
+- `WSF_SIMPLE_FT_EFFECT`
+   - 简单的伪目标效应，不创建轨迹
+   - 脉冲类型效应
+- `WSF_SLC_DEGRADE_EFFECT`
+   - 额外的 SLC 退化因素
+- `WSF_TRACK_EFFECT`
+   - 引发轨迹错误效应(s)
 
 这些EA（电子攻击）效果也使用AFSIM内部基类的继承，如图C-5所示，这些基类也能够在继承类中从命令输入级别使用其输入命令。
 
@@ -1196,25 +1194,25 @@ Figure C-5. 用于EA（电子攻击）的基类型效果的层次结构。
 
 在 AFSIM 中定义的具体电子保护（EP）效果如下，附有简短的描述：
 
-- WSF_AGILITY_EFFECT
-  - 频率和/或模式敏捷性/多样性效应
-- WSF_COMM_EFFECT
-  - 减轻通信效应
-- WSF_POWER_EFFECT
-  - 干扰器增益/退化效应
-  - 大多数效应的基础类型
-- WSF_PULSE_EFFECT
-  - 脉冲级效应
-  - 其他脉冲类型效应的基础
-- WSF_PULSE_SUPPRESS_EFFECT
-  - 用于脉冲型电子攻击效应的脉冲抑制效应
+- `WSF_AGILITY_EFFECT`
+    - 频率和/或模式敏捷性/多样性效应
+- `WSF_COMM_EFFECT`
+   - 减轻通信效应
+- `WSF_POWER_EFFECT`
+    - 干扰器增益/退化效应
+   - 大多数效应的基础类型
+- `WSF_PULSE_EFFECT`
+    - 脉冲级效应
+   - 其他脉冲类型效应的基础
+- `WSF_PULSE_SUPPRESS_EFFECT`
+    - 用于脉冲型电子攻击效应的脉冲抑制效应
   - 脉冲类型效应
-- WSF_SLB_EFFECT
-  - 旁瓣消除器效应
-- WSF_SLC_EFFECT
-  - 侧瓣抵消器效应
-- WSF_TRACK_EFFECT
-  - 减轻轨迹错误效应
+- `WSF_SLB_EFFECT`
+    - 旁瓣消除器效应
+- `WSF_SLC_EFFECT`
+    - 侧瓣抵消器效应
+- `WSF_TRACK_EFFECT`
+    - 减轻轨迹错误效应
 
 这些EP（电子防护）技术也使用AFSIM内部基类的继承，如图C-6所示，这些基类也能够在继承类中从命令输入级别执行其输入命令。
 
