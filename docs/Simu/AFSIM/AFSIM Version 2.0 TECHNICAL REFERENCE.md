@@ -60,6 +60,19 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 有许多类型的标准移动体模型，提供了在每个领域中表示平台的能力，从海底到太空。与AFSIM一起提供的一些移动体示例包括以下内容：
 
+/// note | Movers
+- `WSF_AIR_MOVER` - 用于空中车辆运动的路线移动体
+- `WSF_GROUND_MOVER` - 用于地形跟随的地面车辆的路线移动体
+- `WSF_ROAD_MOVER` - 在道路网络上移动的地面移动体，能够沿其遍历最短路径
+- `WSF_SURFACE_MOVER` - 用于水面船只的路线移动体
+- `WSF_SUBSURFACE_MOVER` - 用于可潜水车辆的路线移动体
+- `WSF_NORAD_SPACE_MOVER` - 用于围绕地球轨道的平台的移动体
+- `WSF_GUIDED_MOVER` - 能够表示引导滑翔炸弹或单级或多级引导导弹的移动体
+- `WSF_TSPI_MOVER` - 根据从文本文件中读取的时间空间位置信息（TSPI）数据更新位置的移动体
+- `WSF_FIRES_MOVER` - 用于间接火力（火箭、炮兵、迫击炮）弹药的移动体
+- `WSF_P6DOF_MOVER` - 高保真度的伪-6DOF移动体，提供角度和平移运动学。
+///
+
 - `WSF_AIR_MOVER` - 用于空中车辆运动的路线移动体
 - `WSF_GROUND_MOVER` - 用于地形跟随的地面车辆的路线移动体
 - `WSF_ROAD_MOVER` - 在道路网络上移动的地面移动体，能够沿其遍历最短路径
