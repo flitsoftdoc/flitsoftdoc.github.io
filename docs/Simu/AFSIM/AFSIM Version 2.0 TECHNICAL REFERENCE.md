@@ -99,9 +99,9 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 通信系统用于将信息从一个平台传输到另一个平台。除了模型选择，该框架还提供了一组丰富的网络选项，详细说明在下一节中。AFSIM提供三种系统模型：
 
-- WSF_COMM_TRANSCEIVER - 实现完美或有线通信
-- WSF_RADIO_TRANSCEIVER - 实现无线电频率通信
-- WSF_JTIDS_TRANSCEIVER - 实现JTIDS/Link 16通信
+- `WSF_COMM_TRANSCEIVER` - 实现完美或有线通信
+- `WSF_RADIO_TRANSCEIVER` - 实现无线电频率通信
+- `WSF_JTIDS_TRANSCEIVER` - 实现JTIDS/Link 16通信
 
 `WSF_RADIO_TRANSCEIVER `和 `WSF_JTIDS_TRANSCEIVER` 都实现了建模的电磁相互作用，并受到干扰的影响。
 
@@ -111,11 +111,11 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 随AFSIM交付的武器组件如下：
 
-- WSF_EXPLICIT_WEAPON 表示在发射时被模拟为一个独立平台的武器。  
-- WSF_IMPLICIT_WEAPON 表示不需要独立飞行的武器。
-- WSF_RF_JAMMER 是一个无线电频率干扰器，可用于破坏雷达、电子支援措施（ESM）和无线电通信系统。
-- WSF_LASER_WEAPON 表示一个具有独立可配置激光流量模型的高能激光（HEL）武器。
-- WSF_CUED_LASER_WEAPON 是WSF_LASER_WEAPON的一个实现，由一个单独的光束指导传感器进行提示。
+- `WSF_EXPLICIT_WEAPON` 表示在发射时被模拟为一个独立平台的武器。  
+- `WSF_IMPLICIT_WEAPON` 表示不需要独立飞行的武器。
+- `WSF_RF_JAMMER` 是一个无线电频率干扰器，可用于破坏雷达、电子支援措施（ESM）和无线电通信系统。
+- `WSF_LASER_WEAPON` 表示一个具有独立可配置激光流量模型的高能激光（HEL）武器。
+- `WSF_CUED_LASER_WEAPON` 是`WSF_LASER_WEAPON`的一个实现，由一个单独的光束指导传感器进行提示。
 
 请注意，只有一个显式武器模型。这是因为通过使用各自独特的平台组件配置武器平台类型，可以实现导弹、炸弹等的广泛可能性。例如，导弹可以被指定为一个配置有导引移动体和导引计算机（处理器）的武器平台类型，而正是这个移动体和导引计算机被配置用于模拟导弹的独特特性。
 
@@ -123,14 +123,14 @@ AFSIM还允许插入和使用新的组件模型（传感器、武器等）以及
 
 处理器用于实现平台的心智或计算处理能力。在标准框架中有许多可用的处理器，最常见的包括：
 
-- WSF_SCRIPT_PROCESSOR - 一个通用处理器，用于执行用AFSIM脚本语言编写的脚本，以实现自定义行为和自定义处理。
-- WSF_TASK_PROCESSOR - 一个可编程的有限状态机，用于对平台已知的轨迹进行命令和控制决策。
-- WSF_RIPR_PROCESSOR - 一个更高级的可编程处理器，用于进行命令和控制决策。
-- WSF_GUIDANCE_COMPUTER - 实现导弹的制导计算机。
-- WSF_GROUND_TARGET_FUSE 和 WSF_AIR_TARGET_FUSE - 实现武器平台的引信机制。
-- WSF_IMAGE_PROCESSOR - 模拟成像传感器产生的“图像”的分析。
-- WSF_MESSAGE_PROCESSOR - 一个可编程的路由器和消息解释器。
-- WSF_TRACK_PROCESSOR - 接受来自板载（on-board）和非板载（off-board）来源的轨迹（Track），并将它们馈送给轨迹管理器。还会定期将本地轨迹的更新发送给其他平台。
+- `WSF_SCRIPT_PROCESSOR` - 一个通用处理器，用于执行用AFSIM脚本语言编写的脚本，以实现自定义行为和自定义处理。
+- `WSF_TASK_PROCESSOR` - 一个可编程的有限状态机，用于对平台已知的轨迹进行命令和控制决策。
+- `WSF_RIPR_PROCESSOR` - 一个更高级的可编程处理器，用于进行命令和控制决策。
+- `WSF_GUIDANCE_COMPUTER `- 实现导弹的制导计算机。
+- `WSF_GROUND_TARGET_FUSE` 和 `WSF_AIR_TARGET_FUSE` - 实现武器平台的引信机制。
+- `WSF_IMAGE_PROCESSOR` - 模拟成像传感器产生的“图像”的分析。
+- `WSF_MESSAGE_PROCESSOR` - 一个可编程的路由器和消息解释器。
+- `WSF_TRACK_PROCESSOR` - 接受来自板载（on-board）和非板载（off-board）来源的轨迹（Track），并将它们馈送给轨迹管理器。还会定期将本地轨迹的更新发送给其他平台。
 
 根据其实现，处理器可能会定期被调用，或作为接收消息或时间间隔到期等某些事件的结果而被调用。
 
@@ -1156,33 +1156,33 @@ Figure C-4. 在AFSIM电子战（EW）架构中的EA（电子攻击）和EP（电
 - `WSF_COMM_EFFECT`
     - 引发通信效应
 - `WSF_COVER_PULSE_EFFECT`
-   - 按概率引发覆盖脉冲效应
+    - 按概率引发覆盖脉冲效应
 - `WSF_FALSE_TARGET_EFFECT`
-   - 伪目标效应，并创建轨迹
-   - 脉冲类型效应
+    - 伪目标效应，并创建轨迹
+    - 脉冲类型效应
 - `WSF_POL_MOD_EFFECT`
-   - 基于 WSF_SLC_DEGRADE_EFFECT，添加了一些数据以模拟极化调制技术
-   - 引发 EP SLC 效应的退化
+    - 基于 WSF_SLC_DEGRADE_EFFECT，添加了一些数据以模拟极化调制技术
+    - 引发 EP SLC 效应的退化
 - `WSF_POWER_EFFECT`
-    - 干扰器增益/退化效应
-  - 大多数效应的基础类型
+     - 干扰器增益/退化效应
+     - 大多数效应的基础类型
 - `WSF_PULSE_EFFECT`
     - 脉冲级效应
-   - 其他脉冲级基础类型的基础
+    - 其他脉冲级基础类型的基础
 - `WSF_RADIUS_EFFECT`
     - 目标/干扰器/雷达三者的半径效应
 - `WSF_REPEATER_EFFECT`
     - 应用重复干扰效应
 - `WSF_RPJ_EFFECT`
-   - 随机脉冲干扰/调制（RPJ/RPM）效应
-   - 脉冲类型效应
+    - 随机脉冲干扰/调制（RPJ/RPM）效应
+    - 脉冲类型效应
 - `WSF_SIMPLE_FT_EFFECT`
-   - 简单的伪目标效应，不创建轨迹
-   - 脉冲类型效应
+    - 简单的伪目标效应，不创建轨迹
+    - 脉冲类型效应
 - `WSF_SLC_DEGRADE_EFFECT`
-   - 额外的 SLC 退化因素
+    - 额外的 SLC 退化因素
 - `WSF_TRACK_EFFECT`
-   - 引发轨迹错误效应(s)
+    - 引发轨迹错误效应(s)
 
 这些EA（电子攻击）效果也使用AFSIM内部基类的继承，如图C-5所示，这些基类也能够在继承类中从命令输入级别使用其输入命令。
 
