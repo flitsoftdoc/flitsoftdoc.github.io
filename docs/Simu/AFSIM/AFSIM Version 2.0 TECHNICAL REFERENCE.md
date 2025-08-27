@@ -1222,7 +1222,7 @@ $$
 
 小于零的值会被限制为零，大于一的值会被限制为一。
 
-## B.6 References
+### B.6 References
 
 1. Doerry, Armin W., "Performance Limits for Synthetic Aperture Radar - second edition", Sandia National Laboratory Report SAND2006-0821, 2006.
 2. Johnson, Jeffery, "AFSIM Communications, Sensor and Jamming Equations", Boeing
@@ -1425,7 +1425,7 @@ Figure C-7. AFSIM EW 交互流程图
 
 RIPR是与AFSIM一起提供的用于行为建模的框架。RIPR是基于代理的，这意味着每个代理根据其自身的知识进行行动；然而，代理之间进行合作和通信是很常见的。RIPR最好被认为是一组工具和算法的集合，它们在构建一个智能代理时能很好地结合在一起。然而，大多数现代的RIPR代理确实包含一个感知处理器和一个量子任务处理器。代理通过查询平台及其子系统以获取信息来感知世界。代理内部构建知识，做出决策，然后通过相应地控制其平台来采取行动。大多数平台查询和控制动作都是在AFSIM脚本语言内部进行的。RIPR执行的知识构建和决策动作得到了这里总结的各种人工智能技术的支持。
 
-#### D.2 Perception Processor 感知处理器
+### D.2 Perception Processor 感知处理器
 
 一个RIPR代理维护着其自己对威胁、资产和同伴的认知。这代表了代理有限的大脑，信息可能是延迟或错误的。为了表示不同技能水平的角色，每个代理都有自己可调整的认知模型。例如，一个"专家"级飞行员代理可以维护他每5秒更新（查看雷达）的16个威胁的知识。
 
@@ -1703,7 +1703,7 @@ AFNES的IADS能力在2008年变得可操作，并目前正被多个波音开发�
 2.  Allison, D.; Shimmin, K.; Schley, W.; Bryson, D. Automated 6DOF Model Generation and Actuator Sizing within AFSIM. In 2019 SAE AeroTech Americas Congress and Exhibition; United States Air Force: Charleston, SC, USA, 2019. [Google Scholar]
 3.  Hanlon, N.; Garcia, E.; Casbeer, D.W.; Pachter, M. AFSIM implementation and simulation of the active target defense differential game. In Proceedings of the 2018 AIAA Guidance, Navigation, and Control Conference, Kissimmee, FL, USA, 8-12 January 2018; AIAA: Kissimmee, FL, USA, 2018. [Google Scholar]
 
-### 原文：
+### 原文
 
 <iframe
   src="/assets/pdf/AFSIM Version 2 TECHNICAL REFERENCE.pdf"
