@@ -622,10 +622,10 @@ $$
 
 | 符号 | 来源                                   | 描述                                                         |
 | :--- | :------------------------------------- | :----------------------------------------------------------- |
-| G0   | antenna_pattern                        | 当观察感兴趣的点时，天线未经修改的增益。                     |
-| G    | Computed                               | 经过修改以包括电子波束扫描效应的增益。                       |
-| θ    | Computed                               | 天线面的法线与指向感兴趣点的矢量之间的角度。                 |
-| N    | electronic_beam_steering_loss exponent | 一个可选的指数，用以反映当波束从天线面的法线移开时，增益的降低程度。 |
+| $G_0$   | antenna_pattern                        | 当观察感兴趣的点时，天线未经修改的增益。                     |
+| $G$    | Computed                               | 经过修改以包括电子波束扫描效应的增益。                       |
+| $\theta$    | Computed                               | 天线面的法线与指向感兴趣点的矢量之间的角度。                 |
+| $N$   | electronic_beam_steering_loss exponent | 一个可选的指数，用以反映当波束从天线面的法线移开时，增益的降低程度。 |
 
 
 
@@ -647,19 +647,19 @@ $$
 
 目前支持一个模型：
 
-- fast_multipath - 实现了定义在 'Radar Range Performance Analysis', Lamont V. Blake, 1986, Artech House, Inc. 中的方法。它计算了由于信号在圆形、粗糙的地球表面上的镜面反射导致的有益或破坏性干涉的效应。可以提供两个因素来定义反射点处表面的性质。
+- `fast_multipath` - 实现了定义在* 'Radar Range Performance Analysis', Lamont V. Blake, 1986, Artech House, Inc. *中的方法。它计算了由于信号在圆形、粗糙的地球表面上的镜面反射导致的有益或破坏性干涉的效应。可以提供两个因素来定义反射点处表面的性质。
   
-- ground_wave_propagation - 国际电信联盟、无线电通信部门、研究组3（无线电波传播）提供的GRWAVE FORTRAN代码的C++移植版。
+- `ground_wave_propagation` - 国际电信联盟、无线电通信部门、研究组3（无线电波传播）提供的GRWAVE FORTRAN代码的C++移植版。
   
-- alarm - 高级低空雷达模型（ALARM）中的球形地球刀片衍射（SEKE）传播代码，已移植到C++。
+- `alarm` - 高级低空雷达模型（ALARM）中的球形地球刀片衍射（SEKE）传播代码，已移植到C++。
 
 #### A.3.9 Clutter Algorithms 杂波算法
 
 通过在接收器块中使用 `clutter_model` 命令，可以启用杂波的使用。基础AFSIM中的杂波选项如下：
 
-- surface_clutter - 这一模型利用雷达特性、俯角和作为地形和地表覆盖函数的后向散射系数查找，但不考虑地形。
-- alarm - 类似于surface_clutter，但考虑到地形，这一模型是从高级低空雷达模型（ALARM）移植到C++的。
-- surface_clutter_table - 在一个表中表示杂波，该表包含作为目标高度和目标范围函数的数据。此外，如果该表是站点特定的，它还将包含作为目标方位函数的数据。该表可以直接提供，或者可以使用其他模型之一从传感器图中生成。在后一种情况下，使用该表比直接使用其他模型提供了速度优化。surface_clutter和alarm模型都是低角度杂波模型，即它们计算的杂波信号值仅对小的（正和负）俯角有效。由于这一限制，它们通常仅用于地面雷达。两种模型都从相同的杂波后向散射系数集中提取数据，包括来自MIT/林肯实验室参考文献 "Low Angle Radar Clutter," 由J. Barrie Billingsley编写的全部数据集。
+- `surface_clutte`r - 这一模型利用雷达特性、俯角和作为地形和地表覆盖函数的后向散射系数查找，但不考虑地形。
+- `alarm `- 类似于surface_clutter，但考虑到地形，这一模型是从高级低空雷达模型（ALARM）移植到C++的。
+- `surface_clutter_table` - 在一个表中表示杂波，该表包含作为目标高度和目标范围函数的数据。此外，如果该表是站点特定的，它还将包含作为目标方位函数的数据。该表可以直接提供，或者可以使用其他模型之一从传感器图中生成。在后一种情况下，使用该表比直接使用其他模型提供了速度优化。surface_clutter和alarm模型都是低角度杂波模型，即它们计算的杂波信号值仅对小的（正和负）俯角有效。由于这一限制，它们通常仅用于地面雷达。两种模型都从相同的杂波后向散射系数集中提取数据，包括来自MIT/林肯实验室参考文献 "Low Angle Radar Clutter," 由J. Barrie Billingsley编写的全部数据集。
 
 ### A.4 RadarSensor(WSF_RADAR_SENSOR)
 
@@ -689,7 +689,7 @@ $$
 
 
 
-#### A.4.2 Signal Processing and Detectionv 信号处理与检测
+#### A.4.2 Signal Processing and Detection 信号处理与检测
 
 处理后的信号计算如下：
 $$
@@ -700,14 +700,15 @@ $$
 
 | 符号           | 来源                                | 描述                                                         |
 | :------------- | :---------------------------------- | :----------------------------------------------------------- |
-| AF             | adjustment_factor                   | 一个用于考虑模型未提供的其他常数效应的通用调整因子。         |
+| $AF$             | adjustment_factor                   | 一个用于考虑模型未提供的其他常数效应的通用调整因子。         |
 | $\mathrm{G_i}$ | integration_gain                    | 由于多个脉冲积累而得到的增益。注意：如果指定了Swerling情况，这将在内部计算。 |
-| PCR            | transmitter pulse_compression_ratio | 脉冲压缩比。                                                 |
+| $PCR$            | transmitter pulse_compression_ratio | 脉冲压缩比。                                                 |
 | $\mathrm{P_r}$ | Equation Radar.1                    | 接收到的功率。                                               |
 | $\mathrm{S}$   | Computed                            | 处理后的功率。                                               |
 
-> Swerling 是一种用于描述雷达目标回波功率随时间变化的模型。这些模型通常用于模拟不同类型的雷达目标（如飞机、船只或地面车辆）以及环境因素（如天气）对雷达检测性能的影响。Swerling 模型有几种不同的变体（例如，Swerling I、II、III 和 IV），每种变体都描述了不同类型的目标和/或情境。
-
+\\\ note | Swerling 
+ Swerling 是一种用于描述雷达目标回波功率随时间变化的模型。这些模型通常用于模拟不同类型的雷达目标（如飞机、船只或地面车辆）以及环境因素（如天气）对雷达检测性能的影响。Swerling 模型有几种不同的变体（例如，Swerling I、II、III 和 IV），每种变体都描述了不同类型的目标和/或情境。
+\\\
 
 
 信噪比计算如下：
