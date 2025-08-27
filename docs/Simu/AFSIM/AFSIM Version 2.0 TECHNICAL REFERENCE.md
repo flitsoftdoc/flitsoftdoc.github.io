@@ -762,7 +762,7 @@ $$
 | :------------- | :--------- | :------------------- |
 | $\mathrm{N}$   | 方程 RF.6  | 接收器的噪声功率。   |
 | $\mathrm{P_r}$ | 方程 ESM.1 | 处理过的功率。       |
-| $SN$             | 计算得出   | 信噪比（或干扰比）。 |
+| $\mathrm{SN}$             | 计算得出   | 信噪比（或干扰比）。 |
 
 如果 $SN$ 超过以下定义的阈值，则会宣布成功检测：
 
@@ -806,6 +806,17 @@ P_{r} & =D_{x r} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \ti
 & =P_{p e a k} \times D C \times \frac{G_{x}}{L_{x}} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.1 (Jam.1)}
 \end{aligned}
 $$
+
+
+$$
+\begin{align*}
+P_r & =D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \tag*{From RF.4a}\\
+& =P_x \times \frac{A_{x r}}{4 \pi R_{x r}^2} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \tag*{From RF.2b}\\
+& =P_{p e a k} \times D C \times \frac{G_x}{L_x} \times \frac{A_{x r}}{4 \pi R_{x r}^2} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L}\tag*{From RF. 1 (Jam.1)}
+\end{align*}
+$$
+
+
 
 
 
