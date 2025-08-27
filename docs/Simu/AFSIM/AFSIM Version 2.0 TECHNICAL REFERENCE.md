@@ -1244,11 +1244,11 @@ $$
 
 在AFSIM系统定义中，EA（电子攻击）技术与图C-2中显示的发射系统相关联。同样，EP（电子防护）技术与图C-3中显示的接收系统相关联。发射机然后可以在发射机和接收机之间成功交互后将EA技术传递给接收机。EA和EP技术及其相关效果之间的交互是通过用户对EA和EP交互的映射来完成的，并在图C-3中描绘的发射机-接收机交互期间发生。虽然图C-2描述了一个传感器，但电子战技术的交互也与AFSIM中的通信系统相关，因为它们共享相同的基础接收机功能。
 
-<img src="https://cdn.mathpix.com/snip/images/En1TwlcCt5McI59vLlH9uL_U8pWKw8gb_En8DxnbiqM.original.fullsize.png" width=400 />
+<img src="https://cdn.mathpix.com/snip/images/En1TwlcCt5McI59vLlH9uL_U8pWKw8gb_En8DxnbiqM.original.fullsize.png" width=500 />
 
 **Figure C-2**. AFSIM中EA（电子攻击）技术的电子干扰（Jamming）系统架构
 
-<img src="https://cdn.mathpix.com/snip/images/BQXVEQ3f5MkJl2ti_C3esbnD5k4w0P7dBfzUW-aGjEs.original.fullsize.png"  width=400/>
+<img src="https://cdn.mathpix.com/snip/images/BQXVEQ3f5MkJl2ti_C3esbnD5k4w0P7dBfzUW-aGjEs.original.fullsize.png"  width=500/>
 
 **Figure C-3.** AFSIM中EP（电子防护）技术的雷达系统架构
 
@@ -1294,7 +1294,7 @@ Figure C-4. 在AFSIM电子战（EW）架构中的EA（电子攻击）和EP（电
 
 这些EA（电子攻击）效果也使用AFSIM内部基类的继承，如图C-5所示，这些基类也能够在继承类中从命令输入级别使用其输入命令。
 
-![](https://cdn.mathpix.com/cropped/2023_09_28_c5918ac9744d0906d814g-46.jpg?height=1138&width=1718&top_left_y=239&top_left_x=236)
+![](https://cdn.mathpix.com/cropped/2023_09_28_c5918ac9744d0906d814g-46.jpg?height=1138&width=1718&top_left_y=239&top_left_x=236){width="500" style="display:block;margin:0 auto"}
 
 Figure C-5. 用于EA（电子攻击）的基类型效果的层次结构。
 
@@ -1324,7 +1324,7 @@ Figure C-5. 用于EA（电子攻击）的基类型效果的层次结构。
 
 这些EP（电子防护）技术也使用AFSIM内部基类的继承，如图C-6所示，这些基类也能够在继承类中从命令输入级别执行其输入命令。
 
-<img src="https://cdn.mathpix.com/snip/images/Oc2owhN1LAGJcL4bLlF08QQKjrFsgUEax71u7ReqAa8.original.fullsize.png"  width=400/>
+![](https://cdn.mathpix.com/snip/images/Oc2owhN1LAGJcL4bLlF08QQKjrFsgUEax71u7ReqAa8.original.fullsize.png){width="500" style="display:block;margin:0 auto"}
 
 Figure C-6. 电子防护（EP）的基础类型效应层次结构
 
@@ -1595,7 +1595,7 @@ AFNES的IADS能力在2008年变得可操作，并目前正被多个波音开发�
 2.  Allison, D.; Shimmin, K.; Schley, W.; Bryson, D. Automated 6DOF Model Generation and Actuator Sizing within AFSIM. In 2019 SAE AeroTech Americas Congress and Exhibition; United States Air Force: Charleston, SC, USA, 2019. [Google Scholar]
 3.  Hanlon, N.; Garcia, E.; Casbeer, D.W.; Pachter, M. AFSIM implementation and simulation of the active target defense differential game. In Proceedings of the 2018 AIAA Guidance, Navigation, and Control Conference, Kissimmee, FL, USA, 8-12 January 2018; AIAA: Kissimmee, FL, USA, 2018. [Google Scholar]
 
-
+### 原文：
 
 <iframe
   src="/assets/pdf/AFSIM Version 2 TECHNICAL REFERENCE.pdf"
@@ -1603,6 +1603,6 @@ AFNES的IADS能力在2008年变得可操作，并目前正被多个波音开发�
   height="900"
   style="border:1px solid #ccc;"
 >
-  此浏览器不支持 iframe，请  
-  <a href="/assets/pdf/AFSIM Version 2 TECHNICAL REFERENCE.pdf">点击下载 PDF</a>
+  此浏览器不支持 iframe，
+  <a href="/assets/pdf/AFSIM Version 2 TECHNICAL REFERENCE.pdf">请点击下载 PDF</a>
 </iframe>
