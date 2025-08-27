@@ -898,11 +898,15 @@ $$
 探测概率使用以下方程进行计算：
 
 $$
-\begin{align*}
-S N & =\frac{E_{\text {eff }}^{\prime}}{N E I} \\
-\beta & =S N-S_{\text {thresh }} \\
-P_{d} & =1-Q(\beta)
-\end{align*}
+S N =\frac{E_{\text {eff }}^{\prime}}{N E I} 
+$$
+
+$$
+\beta  =S N-S_{\text {thresh }} 
+$$
+
+$$
+P_{d}  =1-Q(\beta)
 $$
 
 表 A-14：红外搜索与跟踪（IRST）检测概率变量
