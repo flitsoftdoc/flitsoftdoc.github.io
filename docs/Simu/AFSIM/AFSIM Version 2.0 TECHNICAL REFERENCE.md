@@ -1238,21 +1238,21 @@ $$
 
 在AFSIM中实施电子战技术的一般编码方法是遵循一个面向对象（OO）的方法/框架，以便更容易地添加/更新新的电子战效果，同时在架构内部数据和方法的定位上增加了一些复杂性。电子战架构进一步细分为电子攻击（EA）和电子防护（EP）类，而电子支持（ES）则在AFSIM架构的另一部分中考虑。EA和EP类中的每一个都有多种技术，每一种都有其自己预定义和用户定义的称为效果的特性，如图C-1所示。
 
-<img src="https://cdn.mathpix.com/snip/images/MFkC9xE23HeK9PgbKI9dwpKmh4dGjHnxTcXolfKFHiE.original.fullsize.png" width=400 />
+<img src="https://cdn.mathpix.com/snip/images/MFkC9xE23HeK9PgbKI9dwpKmh4dGjHnxTcXolfKFHiE.original.fullsize.png" width=600 />
 
 **Figure C-1.** 电子战系统架构
 
 在AFSIM系统定义中，EA（电子攻击）技术与图C-2中显示的发射系统相关联。同样，EP（电子防护）技术与图C-3中显示的接收系统相关联。发射机然后可以在发射机和接收机之间成功交互后将EA技术传递给接收机。EA和EP技术及其相关效果之间的交互是通过用户对EA和EP交互的映射来完成的，并在图C-3中描绘的发射机-接收机交互期间发生。虽然图C-2描述了一个传感器，但电子战技术的交互也与AFSIM中的通信系统相关，因为它们共享相同的基础接收机功能。
 
-<img src="https://cdn.mathpix.com/snip/images/En1TwlcCt5McI59vLlH9uL_U8pWKw8gb_En8DxnbiqM.original.fullsize.png" width=500 />
+![](https://cdn.mathpix.com/snip/images/En1TwlcCt5McI59vLlH9uL_U8pWKw8gb_En8DxnbiqM.original.fullsize.png){width="500" style="display:block;margin:0 auto"}
 
 **Figure C-2**. AFSIM中EA（电子攻击）技术的电子干扰（Jamming）系统架构
 
-<img src="https://cdn.mathpix.com/snip/images/BQXVEQ3f5MkJl2ti_C3esbnD5k4w0P7dBfzUW-aGjEs.original.fullsize.png"  width=500/>
+![](https://cdn.mathpix.com/snip/images/BQXVEQ3f5MkJl2ti_C3esbnD5k4w0P7dBfzUW-aGjEs.original.fullsize.png){width="500" style="display:block;margin:0 auto"}
 
 **Figure C-3.** AFSIM中EP（电子防护）技术的雷达系统架构
 
-<img src="https://cdn.mathpix.com/snip/images/gZvJJxCqAf2jf6SXC1dslitJ_wadqLVA5mcEHjrfbXc.original.fullsize.png"  width=600/>
+![](https://cdn.mathpix.com/snip/images/gZvJJxCqAf2jf6SXC1dslitJ_wadqLVA5mcEHjrfbXc.original.fullsize.png){width="700" style="display:block;margin:0 auto"}
 
 
 Figure C-4. 在AFSIM电子战（EW）架构中的EA（电子攻击）和EP（电子防护）交互映射。
