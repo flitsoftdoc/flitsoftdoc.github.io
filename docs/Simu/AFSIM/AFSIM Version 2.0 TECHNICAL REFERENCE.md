@@ -798,15 +798,7 @@ $$
 
 干扰计算使用单程方程，其中发射机是干扰机，接收机是雷达或通信接收机。在进行雷达检测或尝试通信时进行干扰计算。AFSIM 将汇总所有可能影响输出的干扰机的功率（即，如果存在会影响接收机的带内功率）。
 
-下标 ' r ' 的值是用于传感器或通信接收器的，而下标 ' x ' 的值是用于干扰发射机的。扩展方程如下：
-$$
-\begin{aligned}
-P_{r} & =D_{x r} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.4a } \\
-& =P_{x} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.2b } \\
-& =P_{p e a k} \times D C \times \frac{G_{x}}{L_{x}} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.1 (Jam.1)}
-\end{aligned}
-$$
-
+下标 ' $r$' 的值是用于传感器或通信接收器的，而下标 ' $x$ ' 的值是用于干扰发射机的。扩展方程如下：
 
 $$
 \begin{align*}
@@ -817,20 +809,17 @@ P_r & =D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B
 $$
 
 
-
-
-
 ### A.8 Communications (WSF_RADIO_TRANSCEIVER)
 
 通信计算使用单程方程。
 
 下标 '  r  ' 的值是用于通信接收机的，而下标 ' x ' 的值是用于通信发射机的。扩展方程如下：
 $$
-\begin{aligned}
-P_{r} & =D_{x r} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.4a } \\
-& =P_{x} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.2b } \\
-& =P_{\text {peak }} \times D C \times \frac{G_{x}}{L_{x}} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} & & \text { From RF.1 (Comm.1)}
-\end{aligned}
+\begin{align*}
+P_{r} & =D_{x r} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} \tag*{From RF.4a } \\
+& =P_{x} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} \tag*{From RF.2b} \\
+& =P_{\text {peak }} \times D C \times \frac{G_{x}}{L_{x}} \times \frac{A_{x r}}{4 \pi R_{x r}^{2}} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} \tag*{From RF.1 (Comm.1)}
+\end{align*}
 $$
 
 
