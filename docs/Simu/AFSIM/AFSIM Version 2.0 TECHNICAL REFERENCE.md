@@ -863,7 +863,7 @@ $$
 | $\mathrm{A}_{\text {proj }}$ | 平台光学特征 | 传感器观察到的目标的投影面积。     |
 | $\mathrm{I}_{\mathrm{c}}$    | 计算得出     | 目标的对比度辐射强度。             |
 
-计算大气透过率，$t$（沿路径传播后剩余的信号的部分）(原文丢失，乃自行补充)：
+计算大气透过率，$t$（沿路径传播后剩余的信号的部分）(原文遗漏，乃自行补充)：
 
 $$
 t(\lambda, R) \;=\; \exp\!\left(-\int_0^{R} \kappa_{\mathrm{ext}}(\lambda, s)\, \mathrm{d}s\right)
@@ -916,13 +916,12 @@ $$
 
 
 
-
-
 ## Appendix B- AFSIM合成孔径雷达方程
 
 ### B.1 The Radar Range Equation 雷达距离方程
 
 以下方程是 AFSIM 用于计算从一个单一脉冲的射频信号接收到的功率的标准方程。该方程没有假设发射器和接收器是位于同一位置，也没有考虑任何额外的信号处理技术，如脉冲压缩或多个脉冲的累积：
+
 $$
 P_{r}=P_{\text {peak }}(D C)\left(\frac{G_{x}}{L_{x}}\right)\left(\frac{A_{x t}}{4 \pi R_{x t}^{2}}\right) \sigma\left(\frac{A_{t r}}{4 \pi R_{t r}^{2}}\right)\left(\frac{\lambda^{2}}{4 \pi}\right)\left(\frac{G_{r}}{L_{r}}\right) F_{40} F_{B W} F_{P O L}
 $$
@@ -942,6 +941,23 @@ $$
 |        $ F_{40} $        | 发射机传播模型        | 考虑直接和间接反射之间的有建设性和破坏性干涉的传播模式因子   |
 |  $ \overline{F_{BW}} $   |                       | 考虑发射信号带宽和接收机带宽之间不匹配的因子。这主要用于雷达发射机和被动射频接收机，或者干扰器和雷达接收机之间的交互。它不用于捕获系统中非理想匹配滤波器的效应。 |
 |  $ \overline{F_{pol}} $  | 发射机/接收机极化     | 考虑发射信号和接收天线之间的极化不匹配的因子                 |
+
+
+| 变量 | AFSIM 来源 | 说明 |
+| :--- | :--- | :--- |
+| $P_{\text{peak}}$ | transmitter power | 发射机的峰值发射功率。 |
+| DC | transmitter duty cycle | 用户定义的发射机占空比（默认：1.0，如果未定义）。 |
+| $\lambda$ | transmitter frequency or wavelength | 辐射信号的波长。 |
+| $G_x, G_r$ | transmitter / receiver antenna_pattern | 发射机和接收机天线的增益。 |
+| $L_x, L_r$ | transmitter / receiver internal loss | 发射机和接收机的内部损耗。 |
+| $A_{xt}, A_{tr}$ | transmitter attenuation model | 由衰减模型计算得到的单程大气衰减因子（0..1）。 |
+| $R_{xt}, R_{tr}$ | Computed | 发射机到目标以及目标到接收机的距离。 |
+| $\sigma$ |  | 目标的雷达截面积（可以是目标本身或“分辨单元”）。 |
+| $F_{40}$ | transmitter propagation_model | 模式传播因子，用于描述直射波与间接反射波之间的相长与相消干涉效应。 |
+| $F_{BW}$ |  | 用于描述发射信号带宽与接收机带宽不匹配的因子。这主要用于雷达发射机与被动RF接收机之间，或干扰机与雷达接收机之间的相互作用。它并不用于刻画系统中非理想匹配滤波器的效应。 |
+| $F_{\text{pol}}$ | transmitter / receiver polarization | 用于描述发射信号与接收天线之间极化失配的因子。 |
+
+
 
 对于合成孔径雷达（SAR），发射机和接收机是共位的，所以 $ R = R_{xt} = R_{tr} $ 和 $ A = A_{xt} = A_{tr} $。另外，将假设发射和接收天线的增益是相同的，即 $ G = G_t = G_r $。还会做以下假设：
 
