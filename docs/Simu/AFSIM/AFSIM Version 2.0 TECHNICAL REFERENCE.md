@@ -814,6 +814,7 @@ $$
 通信计算使用单程方程。
 
 下标 '  r  ' 的值是用于通信接收机的，而下标 ' x ' 的值是用于通信发射机的。扩展方程如下：
+
 $$
 \begin{align*}
 P_{r} & =D_{x r} \times \frac{\lambda^{2}}{4 \pi} \times \frac{G_{r}}{L_{r}} \times F_{B W} \times F_{P O L} \tag*{From RF.4a } \\
@@ -842,7 +843,9 @@ $$
 
 ### A.9 IRST Sensor(WSF_IRST_SENSOR)
 
-#### A.9.1 Computing the target irradiance
+#### A.9.1 计算目标辐照度
+
+（Computing the target irradiance）
 
 确定背景辐亮度。这包括一种相对简单的能力，用于包括仰望天空或俯视地面的效果。
 
@@ -869,22 +872,24 @@ $$
 
 #### A.9.2 Adjusting for installation effects 考虑安装效应
 
-传感器通常安装在观察窗口后面，这将会遮蔽视场中的区域或以其他方式减少信号。这种遮蔽或信号减少统称为“安装效应”，并通过在接收器模块中使用 antenna_pattern 命令来考虑。虽然红外传感器中没有“天线”，但为了方便起见，它被当作这样对待。该命令引用一个天线增益方向图，其中的增益（或更可能是损失）代表一个因子，该因子用于修改有效目标辐照度来体现安装效应，即：
+传感器通常安装在观察窗口后面，这将会遮蔽视场中的区域或以其他方式减少信号。这种遮蔽或信号减少统称为“安装效应”，并通过在接收器模块中使用 `antenna_pattern `命令来考虑。虽然红外传感器中没有“天线”，但为了方便起见，它被当作这样对待。该命令引用一个天线增益方向图，其中的增益（或更可能是损失）代表一个因子，该因子用于修改有效目标辐照度来体现安装效应，即：
 $$
 E_{\text {eff }}^{\prime}=E_{\text {eff }} \times G \quad\quad\text{(IRST.1)}
 $$
 
 其中，G 是兴趣方向上的“天线增益”。在窗口之外的区域将增益设置为非常小的值，实际上使得该区域的目标变得无法检测。
 
-#### A.9.3 Computing the probability of detection 计算探测概率
+#### A.9.3  计算探测概率
+
+(Computing the probability of detection)
 
 探测概率使用以下方程进行计算：
 $$
-\begin{aligned}
+\begin{align*}
 S N & =\frac{E_{\text {eff }}^{\prime}}{N E I} \\
 \beta & =S N-S_{\text {thresh }} \\
 P_{d} & =1-Q(\beta)
-\end{aligned}
+\end{align*}
 $$
 
 表 A-14：红外搜索与跟踪（IRST）检测概率变量
