@@ -827,7 +827,7 @@ $$
 
 信噪比是按照以下方式计算的：
 $$
-S N=\frac{P_{r}}{N+J} \quad(\text { Comm.2) }
+S N=\frac{P_{r}}{N+J} \tag{Comm.2}
 $$
 
 表A-12：通信信号和噪声变量
@@ -863,7 +863,16 @@ $$
 | $\mathrm{A}_{\text {proj }}$ | 平台光学特征 | 传感器观察到的目标的投影面积。     |
 | $\mathrm{I}_{\mathrm{c}}$    | 计算得出     | 目标的对比度辐射强度。             |
 
-计算大气透过率，$t$（沿路径传播后剩余的信号的部分）：
+计算大气透过率，$t$（沿路径传播后剩余的信号的部分）(原文丢失，乃自行补充)：
+
+$$
+t(\lambda, R) \;=\; \exp\!\left(-\int_0^{R} \kappa_{\mathrm{ext}}(\lambda, s)\, \mathrm{d}s\right)
+\;\approx\; \exp\!\left(-\kappa_{\mathrm{ext}}(\lambda)\, R\right) \tag{A.9-t}
+$$
+其中
+$$
+\kappa_{\mathrm{ext}}(\lambda) \;=\; \kappa_{\mathrm{abs}}(\lambda) \;+\; \kappa_{\mathrm{sca}}(\lambda)
+$$
 
 计算有效目标辐照度，$E_{\text {eff }}$（有时称为 CEI）
 $$
