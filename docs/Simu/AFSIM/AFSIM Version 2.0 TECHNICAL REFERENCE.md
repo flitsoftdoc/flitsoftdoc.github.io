@@ -1073,7 +1073,7 @@ $$
 将$G_{a}$和$G_{r}$的结果代入$S N R_{\text {image }}$的方程中：
 
 $$
-& S N R_{\text {image }}=P_{\text {peak }} \frac{G^{2} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} B_{N} F_{N}} G_{a} G_{r} 
+S N R_{\text {image }}=P_{\text {peak }} \frac{G^{2} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} B_{N} F_{N}} G_{a} G_{r} 
 $$
 
 $$
