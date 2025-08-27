@@ -722,8 +722,8 @@ $$
 
 | 符号 | 来源           | 描述                                                         |
 | :--- | :------------- | :----------------------------------------------------------- |
-| $C $   | 接收机杂波模型 | 杂波功率。                                                   |
-| $J $   | 方程 Jam.1     | 进行干扰的功率。这是在检测交互时，雷达接收机上的入射功率之和。 |
+| $C$   | 接收机杂波模型 | 杂波功率。                                                   |
+| $J$   | 方程 Jam.1     | 进行干扰的功率。这是在检测交互时，雷达接收机上的入射功率之和。 |
 | $N$    | 方程 RF.6      | 接收机噪声功率。                                             |
 | $S$   | 方程 Radar.2   | 处理后的功率。                                               |
 | $SN$   | 计算得出       | 信噪比（或干扰比）。                                         |
@@ -736,7 +736,7 @@ $$
 
 被动 RF 计算（ESM，RWR）使用单向方程。
 
-下标 ' r ' 的值用于被动 RF 接收器，而下标 ' x ' 的值用于传感器、干扰器或通信发射机。扩展方程如下：
+下标 ' $r$ ' 的值用于被动 RF 接收器，而下标 ' $x$ ' 的值用于传感器、干扰器或通信发射机。扩展方程如下：
 
 $$
 \begin{align*}
@@ -866,12 +866,14 @@ $$
 计算大气透过率，$t$（沿路径传播后剩余的信号的部分）(原文遗漏，乃自行补充)：
 
 $$
-t(\lambda, R) \;=\; \exp\!\left(-\int_0^{R} \kappa_{\mathrm{ext}}(\lambda, s)\, \mathrm{d}s\right)
-\;\approx\; \exp\!\left(-\kappa_{\mathrm{ext}}(\lambda)\, R\right) \tag{A.9-t}
+t(\lambda, R) = \exp \left(-\int_0^{R} \kappa_{\mathrm{ext}}(\lambda, s)\, \mathrm{d}s\right)
+\approx \exp\left(-\kappa_{\mathrm{ext}}(\lambda) R\right) \tag{A.9-t}
 $$
+
 其中
+
 $$
-\kappa_{\mathrm{ext}}(\lambda) \;=\; \kappa_{\mathrm{abs}}(\lambda) \;+\; \kappa_{\mathrm{sca}}(\lambda)
+\kappa_{\mathrm{ext}}(\lambda) =\kappa_{\mathrm{abs}}(\lambda) + \kappa_{\mathrm{sca}}(\lambda)
 $$
 
 计算有效目标辐照度，$E_{\text {eff }}$（有时称为 CEI）
@@ -1015,6 +1017,8 @@ $$
 
 ### B.2 方位处理增益（相干脉冲累积）
 
+（Azimuth Processing Gain (Coherent Pulse Integration)）
+
 SAR图像的创建涉及在适合生成所需质量图像的时间段内相干地收集大量脉冲。
 
 Table B-3: SAR Dwell Time Variables
@@ -1044,7 +1048,9 @@ $$
 G_{a}=n_{\text {image }}=t_{D} f_{p}=\frac{\lambda K_{a} R f_{p}}{2 V \delta_{a} \sin \theta_{s q}}
 $$
 
-### B.3 Range Processing Gain (Pulse Compression) 距离处理增益（脉冲压缩）
+### B.3  距离处理增益（脉冲压缩）
+
+（Range Processing Gain (Pulse Compression)）
 
 表格 B-4：距离处理增益变量
 
@@ -1061,11 +1067,13 @@ $$
 ### B.4 信噪比方程的不同形式
 
 将$G_{a}$和$G_{r}$的结果代入$S N R_{\text {image }}$的方程中：
+
 $$
-\begin{aligned}
-& S N R_{\text {image }}=P_{\text {peak }} \frac{G^{2} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} B_{N} F_{N}} G_{a} G_{r} \\
-& S N R_{\text {image }}=P_{\text {peak }} \frac{G^{2} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} B_{N} F_{N}} \frac{\lambda K_{a} R f_{p}}{2 V \delta_{a} \sin \theta_{s q}} \frac{\tau_{u}}{\tau_{c}}
-\end{aligned}
+& S N R_{\text {image }}=P_{\text {peak }} \frac{G^{2} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} B_{N} F_{N}} G_{a} G_{r} 
+$$
+
+$$
+S N R_{\text {image }}=P_{\text {peak }} \frac{G^{2} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} B_{N} F_{N}} \frac{\lambda K_{a} R f_{p}}{2 V \delta_{a} \sin \theta_{s q}} \frac{\tau_{u}}{\tau_{c}}
 $$
 
 这是AFSIM用来计算具有雷达散射截面$\sigma$的物体返回的形式。这可以是目标或分辨率单元。
@@ -1074,17 +1082,22 @@ $$
 
 在匹配滤波器的情况下：
 
-
 $$
 B_{N}=\frac{1}{\tau_{c}}
 $$
+
 代入：
+
 $$
-\begin{gathered}
-S N R_{\text {image }}=P_{\text {peak }} \frac{G^{2} \lambda^{3} \sigma}{(4 \pi)^{3} R^{3} L_{x} L_{r} L_{a t m}} \frac{\tau_{c}}{k T_{0} B_{N} F_{N}} \frac{K_{a} f_{p}}{2 V \delta_{a} \sin \theta_{s q}} \frac{\tau_{u}}{\tau_{c}} \\
-S N R_{\text {image }}=P_{\text {peak }} \tau_{u} f_{p} \frac{G^{2} \lambda^{3} \sigma}{(4 \pi)^{3} R^{3} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} F_{N}} \frac{K_{a}}{2 V \delta_{a} \sin \theta_{s q}} \\
+S N R_{\text {image }}=P_{\text {peak }} \frac{G^{2} \lambda^{3} \sigma}{(4 \pi)^{3} R^{3} L_{x} L_{r} L_{a t m}} \frac{\tau_{c}}{k T_{0} B_{N} F_{N}} \frac{K_{a} f_{p}}{2 V \delta_{a} \sin \theta_{s q}} \frac{\tau_{u}}{\tau_{c}} 
+$$
+
+$$
+S N R_{\text {image }}=P_{\text {peak }} \tau_{u} f_{p} \frac{G^{2} \lambda^{3} \sigma}{(4 \pi)^{3} R^{3} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} F_{N}} \frac{K_{a}}{2 V \delta_{a} \sin \theta_{s q}} 
+$$
+
+$$
 S N R_{\text {image }}=P_{\text {avg }} \frac{G^{2} \lambda^{3} \sigma}{(4 \pi)^{3} R^{3} L_{x} L_{r} L_{a t m}} \frac{1}{k T_{0} F_{N}} \frac{K_{a}}{2 V \delta_{a} \sin \theta_{s q}}
-\end{gathered}
 $$
 
 其中平均功率定义为：
@@ -1103,21 +1116,24 @@ Table B-5: 分辨单元变量
 | 变量        | AFSIM 数据源 | 描述                                                 |
 | ----------- | ------------ | ---------------------------------------------------- |
 | $\sigma^0$  | 回波系数     | 回波系数。                                           |
-| $\delta_r $ |              | 距离分辨率（从有效脉冲宽度计算）。                   |
+| $\delta_r$ |              | 距离分辨率（从有效脉冲宽度计算）。                   |
 | $\delta_rg$ |              | 地面平面上的距离分辨率。                             |
 | $\psi_g$    |              | 入射角。是指观察点处的视线矢量与切线平面之间的角度。 |
 
 代入：
 $$
-\begin{gathered}
-S N R_{\text {image }}=P_{\text {avg }} \frac{G^{2} \lambda^{3}}{(4 \pi)^{3} R^{3} L_{x} L_{r} L_{a t m}} \sigma^{0} \delta_{a} \frac{\delta_{r}}{\cos \psi_{g}} \frac{1}{k T_{0} F_{N}} \frac{K_{a}}{2 V \delta_{a} \sin \theta_{s q}} \\
+S N R_{\text {image }}=P_{\text {avg }} \frac{G^{2} \lambda^{3}}{(4 \pi)^{3} R^{3} L_{x} L_{r} L_{a t m}} \sigma^{0} \delta_{a} \frac{\delta_{r}}{\cos \psi_{g}} \frac{1}{k T_{0} F_{N}} \frac{K_{a}}{2 V \delta_{a} \sin \theta_{s q}} 
+$$
+
+$$
 S N R_{\text {image }}=P_{\text {avg }} \frac{G^{2} \lambda^{3}}{(4 \pi)^{3} R^{3} L_{x} L_{r} L_{a t m}} \frac{\sigma^{0} \delta_{r}}{\cos \psi_{g}} \frac{1}{k T_{0} F_{N}} \frac{K_{a}}{2 V \sin \theta_{s q}}
-\end{gathered}
 $$
 
 这基本上等同于参考文献1附录B中提出的多种形式（不过他们始终假设是正侧向的收集，所以 $\sin \theta_{s q}$ 始终为1）。
 
-### B.5 Creation of AFSIM Pseudo-Images AFSIM虚拟图像的创建
+### B.5 AFSIM伪图像的创建
+
+（Creation of AFSIM Pseudo-Images ）
 
 AFSIM不产生真实图像，而是产生伪图像，指示图像中的物体、物体占据的分辨率单元（像素）数量和物体的强度。
 
@@ -1165,11 +1181,15 @@ $$
 
 对于目标在其中并未被地形遮挡的每一个样本，将执行以下操作：
 $$
-\begin{gathered}
-N_{\text {seen }}=N_{\text {seen }}+1 \\
-P_{\text {sum }}=P_{\text {sum }}+P_{\text {sample }} \\
+N_{\text {seen }}=N_{\text {seen }}+1
+$$
+
+$$
+P_{\text {sum }}=P_{\text {sum }}+P_{\text {sample }} 
+$$
+
+$$
 N P_{\text {sum }}=N P_{\text {sum }}+N P_{\text {sample }}
-\end{gathered}
 $$
 
 在第3步中，必须计算实际达到的杂波与噪声比（Clutter-to-Noise Ratio）。在这一点上进行这一计算是因为现在已知实际收集到的脉冲数（用户可能选择在所需时间之前或之后关闭系统）。
@@ -1206,9 +1226,9 @@ $$
 4. Skolnik, M., Radar Handbook, 2nd edition, New York: McGraw-Hill, 1990.
 
 
-## Appendix C- AFSIM Electronic Warfare Overview
+## Appendix C- AFSIM 电子战概览
 
-### C.1 Electronic Warfare Architecture
+### C.1 电子战架构
 
 在AFSIM中，电子战（EW）能力提供了从现有数据、低级模型（工程模型、交互模型等）对电子战技术的影响进行建模的功能，而无需捕获大量高精度信息（即脉冲级建模）。这主要结果在于数据/表格驱动的能力，以及在行为明确定义、文档化并已证明遵循特定指导方针的地方使用方程。这种建模水平的优点是提高了运行时间，并允许使用单一/少量模型定义来评估与不同系统上技术的不同效果相关的许多交互的较少细节。缺点是可能损失一些精度，并且某些边缘情况可能不会始终被正确捕获。
 
