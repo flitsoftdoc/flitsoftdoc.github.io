@@ -706,9 +706,9 @@ $$
 | $\mathrm{P_r}$ | Equation Radar.1                    | 接收到的功率。                                               |
 | $\mathrm{S}$   | Computed                            | 处理后的功率。                                               |
 
-\\\ note | Swerling 
+/// note | Swerling 
  Swerling 是一种用于描述雷达目标回波功率随时间变化的模型。这些模型通常用于模拟不同类型的雷达目标（如飞机、船只或地面车辆）以及环境因素（如天气）对雷达检测性能的影响。Swerling 模型有几种不同的变体（例如，Swerling I、II、III 和 IV），每种变体都描述了不同类型的目标和/或情境。
-\\\
+///
 
 
 信噪比计算如下：
@@ -811,8 +811,8 @@ $$
 $$
 \begin{align*}
 P_r & =D_{x r} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \tag*{From RF.4a}\\
-& =P_x \times \frac{A_{x r}}{4 \pi R_{x r}^2} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \tag*{From RF.2b}\\
-& =P_{p e a k} \times D C \times \frac{G_x}{L_x} \times \frac{A_{x r}}{4 \pi R_{x r}^2} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L}\tag*{From RF. 1 (Jam.1)}
+  & =P_x \times \frac{A_{x r}}{4 \pi R_{x r}^2} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L} \tag*{From RF.2b}\\
+  & =P_{p e a k} \times D C \times \frac{G_x}{L_x} \times \frac{A_{x r}}{4 \pi R_{x r}^2} \times \frac{\lambda^2}{4 \pi} \times \frac{G_r}{L_r} \times F_{B W} \times F_{P O L}\tag*{From RF. 1 (Jam.1)}
 \end{align*}
 $$
 
