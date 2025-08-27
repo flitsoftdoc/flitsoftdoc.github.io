@@ -882,6 +882,7 @@ $$
 #### A.9.2 Adjusting for installation effects 考虑安装效应
 
 传感器通常安装在观察窗口后面，这将会遮蔽视场中的区域或以其他方式减少信号。这种遮蔽或信号减少统称为“安装效应”，并通过在接收器模块中使用 `antenna_pattern `命令来考虑。虽然红外传感器中没有“天线”，但为了方便起见，它被当作这样对待。该命令引用一个天线增益方向图，其中的增益（或更可能是损失）代表一个因子，该因子用于修改有效目标辐照度来体现安装效应，即：
+
 $$
 E_{\text {eff }}^{\prime}=E_{\text {eff }} \times G \quad\quad\text{(IRST.1)}
 $$
@@ -893,6 +894,7 @@ $$
 (Computing the probability of detection)
 
 探测概率使用以下方程进行计算：
+
 $$
 \begin{align*}
 S N & =\frac{E_{\text {eff }}^{\prime}}{N E I} \\
@@ -905,7 +907,7 @@ $$
 
 | 符号                           | 来源                        | 描述                                                         |
 | :----------------------------- | :-------------------------- | :----------------------------------------------------------- |
-| E' eff                         | 方程 IRST.1                 | 有效目标辐照度。                                             |
+| $\mathrm{E_{eff} ^{\prime}}$                     | 方程 IRST.1                 | 有效目标辐照度。                                             |
 | NEI                            | noise_equivalent_irradiance | 传感器噪声的等效辐照度。                                     |
 | $\mathrm{P}_{\mathrm{d}}$      | 计算得出                    | 检测概率。                                                   |
 | $\mathrm{Q}(\beta)$            |                             | 高斯概率函数（参见 'Handbook of Mathematic Functions', Abramowitz 和 Stegun, 方程 26.2.5） |
