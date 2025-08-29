@@ -1,0 +1,5135 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="FlitSoft Documents">
+      
+      
+        <meta name="author" content="flitsoftdoc">
+      
+      
+        <link rel="canonical" href="https://flitsoftdoc.github.io/AI/LoRA/">
+      
+      
+        <link rel="prev" href="../Foundation%20models%20and%20intelligent%20decision-making/">
+      
+      
+        <link rel="next" href="../MARLlib/">
+      
+      
+      <link rel="icon" href="/assets/logo/grid.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>LoRA - FlitSoft Doc Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/pseudo-code.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XX66BVLPNX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XX66BVLPNX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XX66BVLPNX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lora" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="FlitSoft Doc Hub" class="md-header__button md-logo" aria-label="FlitSoft Doc Hub" data-md-component="logo">
+      
+  <img src="/assets/logo/grid.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FlitSoft Doc Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LoRA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../UAS/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  UAS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../EM/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Gaming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../C2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NGC3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Simu/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Visual/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Visualization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FlitSoft Doc Hub" class="md-nav__button md-logo" aria-label="FlitSoft Doc Hub" data-md-component="logo">
+      
+  <img src="/assets/logo/grid.png" alt="logo">
+
+    </a>
+    FlitSoft Doc Hub
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../UAS/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    UAS
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            UAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Formation Control
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Formation Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Formation%20Control/%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%98%B5%E5%9E%8B%E5%8F%98%E6%8D%A2%E8%BF%87%E6%B8%A1%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    固定翼无人机阵型变换过渡轨迹生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Formation%20Control/%E5%9F%BA%E4%BA%8E%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B%E6%8E%A7%E5%88%B6%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%BC%96%E9%98%9F%E9%A3%9E%E8%A1%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于非线性模型预测控制的无人机编队飞行
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Formation%20Control/%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%9B%86%E7%BE%A4%E5%9B%BA%E5%AE%9A%E9%98%B5%E5%9E%8B%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无人机集群固定阵型轨迹生成模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fix wing uav flight sim
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fix wing uav flight sim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/fix_wing_uav_flight_sim/fix_wing_uav_flight_sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    小型固定翼无人机飞行动力学模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/fix_wing_uav_flight_sim/JSBSim_Quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSBSim Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/fix_wing_uav_flight_sim/JSBSim_User_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSBSim 用户手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/fix_wing_uav_flight_sim/StandaloneLaeroModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轻量级飞行动力学模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Navigation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Navigation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/navigation/scirobotics.ado6187.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向微型无人机的安全保障高速导航
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Path Searching
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Path Searching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    A* Search
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            A* Search
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Path%20Searching/A%2A%20Search/A%2A%20Path%20Searching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于运动基元的A*算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trajectory Planning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Trajectory Planning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Trajectory_Planning/Key%20of%20Trajectory%20Manage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轨迹管理的几个关键问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_2" id="__nav_1_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+     B spline
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_2">
+            <span class="md-nav__icon md-icon"></span>
+             B spline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Trajectory_Planning/%20B-spline/%E9%9A%9C%E7%A2%8D%E7%8E%AF%E5%A2%83%E4%B8%8BB%E6%A0%B7%E6%9D%A1%E8%BD%A8%E8%BF%B9%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    障碍环境下B样条轨迹问题解析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Trajectory_Planning/%20B-spline/%E9%9A%9C%E7%A2%8D%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BAB%20%E6%A0%B7%E6%9D%A1%E9%81%BF%E9%9A%9C%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    固定翼无人机B 样条避障轨迹生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_3" id="__nav_1_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cubic Polynomial Curve
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cubic Polynomial Curve
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Trajectory_Planning/Cubic%20Polynomial%20Curve/Cubic%20Polynomial%20Curve%20Trajectory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用于轨迹规划的三次样条插值
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_4" id="__nav_1_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kappa trajectories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kappa trajectories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Trajectory_Planning/kappa-trajectories/kappa-%E8%BD%A8%E8%BF%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    κ轨迹平滑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Trajectory_Planning/kappa-trajectories/kappa%E8%BD%A8%E8%BF%B9%E7%82%B9%E7%94%9F%E6%88%90C%2B%2B%E4%BB%A3%E7%A0%81%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    κ轨迹点生成代码说明
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Trajectory_Planning/kappa-trajectories/Real-time_dynamic_trajectory_smoothing_for_unmanne%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无人机实时动态轨迹平滑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Trajectory_Planning/kappa-trajectories/%E7%AD%89%E9%95%BF%E8%BD%A8%E8%BF%B9kappa%E6%B1%82%E8%A7%A3%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    等长轨迹κ求解算法设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Velocity Plan
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Velocity Plan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UAS/Velocity_Plan/%E4%B8%89%E6%AE%B5S%E6%9B%B2%E7%BA%BF%E9%80%9F%E5%BA%A6%E8%A7%84%E5%88%92%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    三段S曲线速度规划模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    EM
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            EM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Antenna Pattern
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Antenna Pattern
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Antenna%20Pattern/01.%E8%BE%9B%E6%A0%BC%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    辛格方向图模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Antenna%20Pattern/02.%E9%AB%98%E6%96%AF%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高斯方向图模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comm
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Comm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Comm/%E5%9C%B0%E7%A9%BA%E6%B5%8B%E6%8E%A7%E9%93%BE%E8%B7%AF%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    地空测控链路计算模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Radar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Radar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无源侦察测向定位模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8B%EF%BC%88%E7%A9%BA%E5%AF%B9%E5%9C%B0%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    空对地雷达对抗侦察效能模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E9%80%9A%E7%94%A8%E4%BE%A6%E5%AF%9F%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达对抗侦察效能通用模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%B9%B2%E6%89%B0%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8Bv3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达干扰效能模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Radar/%E9%9B%B7%E8%BE%BE%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB%E7%A6%BB%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%99%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达探测距离计算器
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_6" id="__nav_2_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Radar Equations for Modern Radar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Radar Equations for Modern Radar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1章 雷达方程的发展
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2章 搜索雷达方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第3章 杂波与干扰压制下的雷达方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Americas-AI-Action-Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Americas AI Action Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Foundation%20models%20and%20intelligent%20decision-making/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundation models and intelligent decision making
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    LoRA
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    LoRA
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 研究背景与动机
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 问题定义
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. LoRA 方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. LoRA 方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 核心思想：低秩分解更新
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 核心思想：低秩分解更新">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 与全量微调的关系
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 在 Transformer 中的应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. LoRA 的实用优势与局限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. LoRA 的实用优势与局限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 优势
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 局限
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 实验验证
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 实验验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 基线方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-roberta-baselarge-glue" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 RoBERTa Base/Large 上的 GLUE 基准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-deberta-xxl-glue" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 DeBERTa XXL 上的 GLUE 基准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-gpt-2-mediumlarge-nlg" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 GPT-2 Medium/Large 上的 NLG 任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-gpt-3-175b" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 GPT-3 175B 上的规模化实验
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 对 LoRA 更新矩阵的深入分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 对 LoRA 更新矩阵的深入分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 选取哪些权重进行 LoRA 更优
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 更新矩阵是否真低秩？最佳秩 \(r\) 的选择
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-delta-w-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 更新矩阵 \(\Delta W\) 与原权重 \(W\) 之间的关联
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 结论与展望
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 结论与展望">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 主要贡献
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 未来研究方向
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MARLlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MARLlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why%20We%20Think%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why We Think
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Gaming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Decision
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Decision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Comparative%20Analysis%20of%20Task%20Allocation%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多无人机任务分配算法的比较分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/DAVIS_OCEANS_2025_PDF_XPRESS%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向无人水面艇探测的传感器套件设计框架
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Multi-UAV%20Task%20Assignment%20in%20Dynamic%20Environments%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    动态环境下多无人机任务分配技术现状
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Policy%20Space%20Response%20Oracles-%20A%20Survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    策略空间响应预言机 PSRO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Towards%20Global%20Explainability%20of%20Artificial%20Intelligence%20Agent%20Tactics%20in%20Close%20Air%20Combat%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向近距离空战中人工智能智能体战术的全局可解释性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Behavior Tree
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Behavior Tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Behavior%20Tree/Behavior%20Trees%20in%20Robot%20Control%20Systems.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行为树在机器人控制系统中的应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Behavior%20Tree/BehaviorTree.CPP%204.6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviorTree.CPP库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Behavior%20Tree/BT2208.04211v2.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    机器人应用中的行为树和状态机
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Behavior%20Tree/Generation%20of%20Behavior%20Trees%20for%20Dynamic%20Agents%20Based%20on%20Market%20Inspired%20Task%20Allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于市场启发的任务分配的动态智能体行为树生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Behavior%20Tree/LLM-BRAIn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LLM-BRAIn: 基于LLM驱动的行为树快速生成方
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gaming/Behavior%20Tree/%E8%A1%8C%E4%B8%BA%E6%A0%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行为树基本概念
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../C2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    NGC3
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            NGC3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C2/Advanced%20Battle%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    先进战斗管理系统 (ABMS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C2/AEP-84%20VOLI%20EDA%20V1%20ch-all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    北约工程出版物 AEP-84 Volume I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C2/Decision%20Advantage%20and%20Initiative%20Completing%20Joint%20All-Domain%20Command%20and%20Control.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    决策优势与主动权
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C2/Force-Based%20MANET_FANET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于力的无人机蜂群自组织MANET/FANET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Simu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Simulation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/HIL%20Swarm%20Simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HIL Swarm Simulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/MARSIM%3A%20A%20point-realistic%20simulator%20for%20LiDAR-based%20UAVs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/OctoMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OctoMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/The%20Mixed%20Reality%20Simulation%20Platform%20%28MIXR%29%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIXR 混合现实仿真平台
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/ZMQ%20guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZMQ guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%9C%82%E7%BE%A4%E6%99%BA%E8%83%BD%E8%AE%AD%E7%BB%83%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1.v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    蜂群算法训练平台设计方案
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AFSIM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            AFSIM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/AFSIM/AFSIM.cn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/AFSIM/AFSIM%20Version%202.0%20TECHNICAL%20REFERENCE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM V2.0 TECHNICAL REFERENCE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/AFSIM/afsims-pseudo-realtime-hybrid-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM 的伪实时混合仿真软件设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            SIMDIS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/SIMDIS/SIMDIS%20SDK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK 架构分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/SIMDIS/SIMDIS%20SDK%20SimCore%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK SimCore代码库分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Simu/SIMDIS/SIMDIS_Briefing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS Briefing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Visual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Visualization
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Visual/TacView/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tacview Technical Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Visual/%E5%9F%BA%E4%BA%8ESIMDIS%20SDK%E4%B8%8EOSG%E7%9A%843D%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E7%BB%BC%E5%90%88%E5%AE%9E%E6%96%BD%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK与OSG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 研究背景与动机
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 问题定义
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. LoRA 方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. LoRA 方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 核心思想：低秩分解更新
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 核心思想：低秩分解更新">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 与全量微调的关系
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-transformer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 在 Transformer 中的应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. LoRA 的实用优势与局限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. LoRA 的实用优势与局限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 优势
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 局限
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 实验验证
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 实验验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 基线方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-roberta-baselarge-glue" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 RoBERTa Base/Large 上的 GLUE 基准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-deberta-xxl-glue" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 DeBERTa XXL 上的 GLUE 基准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-gpt-2-mediumlarge-nlg" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 GPT-2 Medium/Large 上的 NLG 任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-gpt-3-175b" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 GPT-3 175B 上的规模化实验
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 对 LoRA 更新矩阵的深入分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 对 LoRA 更新矩阵的深入分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-lora" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 选取哪些权重进行 LoRA 更优
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 更新矩阵是否真低秩？最佳秩 \(r\) 的选择
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-delta-w-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 更新矩阵 \(\Delta W\) 与原权重 \(W\) 之间的关联
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 结论与展望
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 结论与展望">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 主要贡献
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 未来研究方向
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io/raw/main/docs/AI/LoRA.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="lora">LoRA<a class="headerlink" href="#lora" title="Permanent link">&para;</a></h1>
+<h2 id="1">1. 研究背景与动机<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>当下，自然语言处理领域普遍采取“大规模预训练＋下游微调”的范式。然而，随着模型规模不断增大，<strong>全量微调(fine-tuning)</strong> 面临以下两大挑战：</p>
+<ol>
+<li><strong>存储与部署成本高昂</strong>：例如在 GPT-3 175B（约1750亿参数）上进行全量微调时，每个任务都需要保存一套完整的 175B 参数，若同时支持多个任务，则需要占用数 TB 级别的存储空间，且加载模型实例时开销巨大。</li>
+<li><strong>训练资源门槛升高</strong>：对于 Adam 这样的自适应优化器，需要为所有参数维护梯度和优化器状态，GPT-3 175B 全量微调时，显存占用高达约 1.2TB，这对大多数团队和硬件环境几乎无法承受。</li>
+</ol>
+<p>为缓解上述问题，既往研究尝试<strong>冻结部分权重</strong>或通过引入外部适配器（adapter）/前缀（prompt/prefix）等模块来降低可训练参数规模。但这些方法往往会带来以下弊端：</p>
+<ul>
+<li><strong>Adapter 方法增加推理时延</strong>：在 Transformer 层间插入一个小规模的瓶颈层（Adapter），虽参数量少，但必须在正向推理时进行额外计算，在线推理时（尤其 Batch Size=1 情况下）延迟不容忽视。</li>
+<li><strong>Prompt/Prefix 方法难以优化且占用输入长度</strong>：这类方法通过在输入序列中插入特殊标记，使模型在前向时多处理一段“可训练”激活；但随着特殊标记数目增多，性能提升并不稳定，而且会减少可用于下游任务的实际 Token 数。</li>
+</ul>
+<p>鉴于此，论文提出一种新的 <strong>低秩适配(LoRA, Low-Rank Adaptation)</strong> 策略：在保持预训练权重不变的前提下，通过向每层注入低秩分解矩阵来进行微调，从而在不增加推理时延、不缩减序列长度的情况下，大幅降低可训练参数量和显存占用。</p>
+<hr />
+<h2 id="2">2. 问题定义<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>假设已得到一个预训练的自回归语言模型 <span class="arithmatex">\(P_\Phi(y\mid x)\)</span>，其参数为 <span class="arithmatex">\(\Phi_0\)</span>。在下游任务中，往往通过最大化条件语言建模目标进行全量微调：</p>
+<div class="arithmatex">\[
+\max_{\Phi}\sum_{(x,y)\in \mathcal{Z}}\sum_{t=1}^{|y|} \log P_{\Phi}(y_t)(y_t \mid x, y_{&lt; t}) \quad,\quad \Phi = \Phi_0 + \Delta \Phi
+\]</div>
+<p>此时需为每个下游任务保存一份 <span class="arithmatex">\(\Delta \Phi\)</span>，且 <span class="arithmatex">\(|\Delta \Phi| = |\Phi_0|\)</span>。当 <span class="arithmatex">\(\Phi_0\)</span> 较大（如 GPT-3 175B）时，无论是<strong>存储</strong>还是<strong>训练显存</strong>都几近或超出可承受范围。</p>
+<p>论文改写该问题为：寻找一个仅依赖于少量参数 <span class="arithmatex">\(\Theta\)</span> 的更新映射 <span class="arithmatex">\(\Delta \Phi(\Theta)\)</span> 使得</p>
+<div class="arithmatex">\[
+\max_{\Theta}\sum_{(x,y)\in \mathcal{Z}}\sum_{t=1}^{|y|} \log P_{\Phi_0 + \Delta \Phi(\Theta)}(y_t \mid x, y_{&lt; t}) \quad,\quad |\Theta| \ll |\Phi_0|.
+\]</div>
+<p>最终目标是在<strong>显存占用</strong>与<strong>可训练参数量</strong>大幅下降的同时，仍保持或超越全量微调的模型性能。</p>
+<hr />
+<h2 id="3-lora">3. LoRA 方法<a class="headerlink" href="#3-lora" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 核心思想：低秩分解更新<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>LoRA 的核心假设是：在大规模预训练模型的下游微调过程中，<strong>权重变化 <span class="arithmatex">\(\Delta W\)</span> 具有“低秩”特性</strong>，即若原始权重矩阵 <span class="arithmatex">\(W_0\in \mathbb{R}^{d\times k}\)</span> 进行更新因子 <span class="arithmatex">\(\Delta W\)</span>，则可以近似为低秩分解</p>
+<div class="arithmatex">\[
+W_0 + \Delta W = W_0 + B A,
+\quad
+B \in \mathbb{R}^{d \times r},\;
+A \in \mathbb{R}^{r \times k},\;
+r \ll \min(d, k).
+\]</div>
+<p>其中，<span class="arithmatex">\(W_0\)</span> 冻结不更新，仅对矩阵 <span class="arithmatex">\(A, B\)</span> 进行梯度更新。这样就将原来需要更新的 <span class="arithmatex">\(d\times k\)</span> 参数量，压缩为 <span class="arithmatex">\(d\times r + r\times k\approx 2dr\)</span> 个参数。</p>
+<p>在前向计算时，对于某一层输入向量 <span class="arithmatex">\(x\in \mathbb{R}^k\)</span>，原本输出为 <span class="arithmatex">\(h = W_0 x\)</span>。采用 LoRA 后，输出变为</p>
+<div class="arithmatex">\[
+h = W_0 x + \Delta W\,x = W_0 x + B (A x).
+\tag{3}
+\]</div>
+<p>因此在实现上，只需在每次前向时多做一个 <span class="arithmatex">\(A x\)</span> 然后左乘 <span class="arithmatex">\(B\)</span>，并与原始输出相加即可。论文实施时将 <span class="arithmatex">\(B\)</span> 初始化为零矩阵，<span class="arithmatex">\(A\)</span> 初始化为服从高斯分布的小随机值，保证微调初期 <span class="arithmatex">\(\Delta W = BA\)</span> 为零；训练过程中，会对 <span class="arithmatex">\(A,B\)</span> 应用缩放系数 <span class="arithmatex">\(\alpha/r\)</span>（对相同的学习率而言相当于缩放初始值），以方便在不同秩 <span class="arithmatex">\(r\)</span> 下无需大幅调参而保持收敛稳定。</p>
+<h4 id="311">3.1.1 与全量微调的关系<a class="headerlink" href="#311" title="Permanent link">&para;</a></h4>
+<ul>
+<li>当 <span class="arithmatex">\(r = \min(d,k)\)</span> 时，等价于对原始权重矩阵 <span class="arithmatex">\(W_0\)</span> 进行全秩微调，相当于完整的 <span class="arithmatex">\(\Delta W\)</span>；</li>
+<li>当采用更小的 <span class="arithmatex">\(r\)</span> 时，只训练低秩子空间中的更新，从而实现<strong>与全量微调相似的表达力</strong>，但参数量和计算开销大幅减少。</li>
+</ul>
+<hr />
+<h3 id="32-transformer">3.2 在 Transformer 中的应用<a class="headerlink" href="#32-transformer" title="Permanent link">&para;</a></h3>
+<p>论文将 LoRA 主要应用于 Transformer 结构中<strong>自注意力模块（self-attention）</strong>的投影矩阵：查询矩阵 <span class="arithmatex">\(W_q\)</span>、键矩阵 <span class="arithmatex">\(W_k\)</span>、值矩阵 <span class="arithmatex">\(W_v\)</span>、输出矩阵 <span class="arithmatex">\(W_o\)</span> 以及前馈网络（MLP）部分的全连接权重矩阵。具体做法如下：</p>
+<ol>
+<li><strong>仅对注意力投影矩阵应用 LoRA</strong>：论文在大多数实验中只在 <span class="arithmatex">\(W_q\)</span> 和 <span class="arithmatex">\(W_v\)</span> 上引入低秩更新矩阵 <span class="arithmatex">\(\Delta W_q = B_q A_q\)</span>，<span class="arithmatex">\(\Delta W_v = B_v A_v\)</span>，并冻结其它权重（包括 MLP 层和层归一化层等）。实验证明，这样已经能够获得与全量微调相当或更优的性能。</li>
+<li><strong>保持正向推理时延不变</strong>：在部署推理时，只需将训练好的 <span class="arithmatex">\(\Delta W\)</span> 与 <span class="arithmatex">\(W_0\)</span> 合并为 <span class="arithmatex">\(W_0 + BA\)</span>，正向计算流程与微调后模型完全一致，没有新增任何顺序化计算，因此<strong>不会增加推理时延</strong>。</li>
+<li><strong>灵活切换任务</strong>：将 <span class="arithmatex">\(\Delta W\)</span> 合并后对应于某个任务的权重写入硬盘，多个任务只需维护一份基础预训练权重与若干份低秩适配参数（大小通常为几 MB），切换任务时仅载入对应的 <span class="arithmatex">\(\Delta W\)</span>，显存和存储占用极小。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>应用位置</th>
+<th>维度</th>
+<th>低秩参数量 <span class="arithmatex">\(\displaystyle 2\times d\times r\)</span></th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(W_q\)</span></td>
+<td><span class="arithmatex">\(d\times d\)</span></td>
+<td><span class="arithmatex">\(2dr\)</span></td>
+<td>查询投影，只改前两项</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_v\)</span></td>
+<td><span class="arithmatex">\(d\times d\)</span></td>
+<td><span class="arithmatex">\(2dr\)</span></td>
+<td>值投影</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>实践中，仅在 <span class="arithmatex">\(W_q, W_v\)</span> 上应用 <span class="arithmatex">\(r=4\)</span> 时（共计适配参数约数 MB 级别），即可满足 GPT-3 175B各种下游任务的性能需求。</p>
+<hr />
+<h2 id="4-lora">4. LoRA 的实用优势与局限<a class="headerlink" href="#4-lora" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 优势<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>显存占用降低</strong></p>
+</li>
+<li>
+<p>由于大部分权重冻结，不需为其维护梯度或优化器状态，仅对低秩矩阵 <span class="arithmatex">\(A,B\)</span> 更新。以 GPT-3 175B 为例，LoRA 微调时显存从约 1.2 TB 降至约 350 GB，节省约 3 倍显存。</p>
+</li>
+<li>
+<p><strong>可训练参数量大幅减少</strong></p>
+</li>
+<li>
+<p>对 GPT-3 175B，仅在 <span class="arithmatex">\(W_q,W_v\)</span> 部分以 <span class="arithmatex">\(r=4\)</span> 方式注入，则低秩参数量约为 4.7 M，相比全量微调（175 B）减少约 10 000 ×。</p>
+</li>
+<li>
+<p><strong>推理时延不增加</strong></p>
+</li>
+<li>
+<p>预先合并 <span class="arithmatex">\(\Delta W = B A\)</span> 到权重后，推理流程与全量微调相同，不会引入顺序化计算。与 Adapter 方法相比，Adapter 在每层插入瓶颈层会造成推理时间因顺序运算大幅增长，而 LoRA 不存在此缺陷。</p>
+</li>
+<li>
+<p><strong>任务切换便捷</strong></p>
+</li>
+<li>
+<p>共享同一份预训练权重，在不同任务间只需加载不同的几 MB 级别的低秩适配参数，存储和部署成本极低。</p>
+</li>
+<li>
+<p><strong>训练吞吐量提升</strong></p>
+</li>
+<li>
+<p>由于冻结大部分权重，反向传播计算量下降，在相同硬件下可获得约 25% 的训练速度提升。</p>
+</li>
+</ol>
+<h3 id="42">4.2 局限<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>批量多任务训练不便</strong></p>
+</li>
+<li>
+<p>若想在一个 Batch 中同时对不同任务样本使用不同的 <span class="arithmatex">\(\Delta W\)</span>（即 A,B 不同），需在正向时动态切换权重，或者不合并权重，此时推理/训练流程复杂。论文指出若对延迟敏感，可以选择动态加载 LoRA 模块，否则需将不同 <span class="arithmatex">\(\Delta W\)</span> 合并到原权重，从而无法混合多任务一起正向。</p>
+</li>
+<li>
+<p><strong>低秩假设或不适用所有任务</strong></p>
+</li>
+<li>
+<p>当下游任务与预训练任务域差异极大（例如全新语言、跨模态任务）时，所需更新可能并不低秩，此时 LoRA 的表达能力可能受限。论文在 GPT-3 上实验发现对于大部分 NLP 任务，仅需 <span class="arithmatex">\(r=1\)</span> 即可；但也提示并非所有任务都适用，需要适度调节秩 <span class="arithmatex">\(r\)</span>。</p>
+</li>
+</ol>
+<hr />
+<h2 id="5">5. 实验验证<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>论文在四种主流 Transformer 结构上进行了大规模实验：RoBERTa、DeBERTa、GPT-2 以及 GPT-3 175B。下文中，对照各项结果进行说明。</p>
+<h3 id="51">5.1 基线方法<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>基线名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Full Fine-Tuning（FT）</strong></td>
+<td>对所有权重和偏置进行微调。</td>
+</tr>
+<tr>
+<td><strong>BitFit</strong></td>
+<td>仅训练偏置向量（bias），其它权重冻结。</td>
+</tr>
+<tr>
+<td><strong>Adapter (Houlsby 等)</strong></td>
+<td>在自注意力和 MLP 后插入瓶颈 Adapter 层。AdapterL/AdapterH 两种变体，分别对应单适配器或双适配器结构，参数量约为原模型的 1% 左右。</td>
+</tr>
+<tr>
+<td><strong>Prefix-Tuning/Embedding (PE)</strong></td>
+<td>在输入/层激活前加入 lp + li 个可训练 Token 激活，等同于动态插入额外可训练参数，无法并行优化且会占用下游任务的序列长度。</td>
+</tr>
+<tr>
+<td><strong>Prefix-Layer (PL)</strong></td>
+<td>类似于 PrefixEmbed，但对各层插入可训练的激活向量，同样占用计算和序列长度。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-roberta-baselarge-glue">5.2 RoBERTa Base/Large 上的 GLUE 基准<a class="headerlink" href="#52-roberta-baselarge-glue" title="Permanent link">&para;</a></h3>
+<p>论文在 GLUE 数据集（包含 MNLI、SST-2、MRPC、CoLA、QNLI、QQP、RTE、STS-B）上对 RoBERTa base (125M 参数) 和 RoBERTa large (355M 参数) 进行了多种方法对比。部分结果汇总如下（指标为各任务对应分数，整体为平均得分；越高越好）：</p>
+<table>
+<thead>
+<tr>
+<th>模型 (RoBERTa Base)</th>
+<th>可训练参数</th>
+<th>MNLI</th>
+<th>SST-2</th>
+<th>MRPC</th>
+<th>CoLA</th>
+<th>QNLI</th>
+<th>QQP</th>
+<th>RTE</th>
+<th>STS-B</th>
+<th>Avg.</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FT (125M)</td>
+<td>125 M</td>
+<td>87.6</td>
+<td>94.8</td>
+<td>90.2</td>
+<td>63.6</td>
+<td>92.8</td>
+<td>91.9</td>
+<td>78.7</td>
+<td>91.2</td>
+<td>86.4</td>
+<td></td>
+</tr>
+<tr>
+<td>BitFit (0.1 M)</td>
+<td>0.1 M</td>
+<td>84.7</td>
+<td>93.7</td>
+<td>92.7</td>
+<td>62.0</td>
+<td>91.8</td>
+<td>84.0</td>
+<td>81.5</td>
+<td>90.8</td>
+<td>85.2</td>
+<td></td>
+</tr>
+<tr>
+<td>AdapterD (0.3 M)</td>
+<td>0.3 M</td>
+<td>87.1</td>
+<td>94.2</td>
+<td>88.5</td>
+<td>60.8</td>
+<td>93.1</td>
+<td>90.2</td>
+<td>71.5</td>
+<td>89.7</td>
+<td>84.4</td>
+<td></td>
+</tr>
+<tr>
+<td>AdapterD (0.9 M)</td>
+<td>0.9 M</td>
+<td>87.3</td>
+<td>94.7</td>
+<td>88.4</td>
+<td>62.6</td>
+<td>93.0</td>
+<td>90.6</td>
+<td>75.9</td>
+<td>90.3</td>
+<td>85.4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LoRA (r=4, 0.3 M)</strong></td>
+<td>0.3 M</td>
+<td>87.5</td>
+<td>95.1</td>
+<td>89.7</td>
+<td>63.4</td>
+<td>93.3</td>
+<td>90.8</td>
+<td>86.6</td>
+<td>91.5</td>
+<td>87.2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>模型 (RoBERTa Large)</th>
+<th>可训练参数</th>
+<th>MNLI</th>
+<th>SST-2</th>
+<th>MRPC</th>
+<th>CoLA</th>
+<th>QNLI</th>
+<th>QQP</th>
+<th>RTE</th>
+<th>STS-B</th>
+<th>Avg.</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FT (355 M)</td>
+<td>355 M</td>
+<td>90.2</td>
+<td>96.4</td>
+<td>90.9</td>
+<td>68.0</td>
+<td>94.7</td>
+<td>92.2</td>
+<td>86.6</td>
+<td>92.4</td>
+<td>88.9</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LoRA (r=8, 0.8 M)</strong></td>
+<td>0.8 M</td>
+<td>90.6</td>
+<td>96.2</td>
+<td>90.9</td>
+<td>68.2</td>
+<td>94.9</td>
+<td>91.6</td>
+<td>87.4</td>
+<td>92.6</td>
+<td>89.0</td>
+<td></td>
+</tr>
+<tr>
+<td>AdptP (3.0 M)</td>
+<td>3.0 M</td>
+<td>90.2</td>
+<td>96.1</td>
+<td>90.2</td>
+<td>68.3</td>
+<td>94.8</td>
+<td>91.9</td>
+<td>83.8</td>
+<td>92.1</td>
+<td>88.4</td>
+<td></td>
+</tr>
+<tr>
+<td>AdptP (0.8 M)</td>
+<td>0.8 M</td>
+<td>90.5</td>
+<td>96.6</td>
+<td>89.7</td>
+<td>67.8</td>
+<td>94.8</td>
+<td>91.7</td>
+<td>80.1</td>
+<td>91.9</td>
+<td>87.9</td>
+<td></td>
+</tr>
+<tr>
+<td>AdptH (6.0 M)</td>
+<td>6.0 M</td>
+<td>89.9</td>
+<td>96.2</td>
+<td>88.7</td>
+<td>66.5</td>
+<td>94.7</td>
+<td>92.1</td>
+<td>83.4</td>
+<td>91.0</td>
+<td>87.8</td>
+<td></td>
+</tr>
+<tr>
+<td>AdptH (0.8 M)</td>
+<td>0.8 M</td>
+<td>90.3</td>
+<td>96.3</td>
+<td>87.7</td>
+<td>66.3</td>
+<td>94.7</td>
+<td>91.5</td>
+<td>72.9</td>
+<td>91.5</td>
+<td>86.4</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LoRA (0.8 M)</strong></td>
+<td>0.8 M</td>
+<td>90.6</td>
+<td>96.2</td>
+<td>90.2</td>
+<td>68.2</td>
+<td>94.8</td>
+<td>91.6</td>
+<td>85.2</td>
+<td>92.3</td>
+<td>88.6</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>从上表可以看出，<strong>LoRA 在仅用 0.3 M—0.8 M 可训练参数的情况下，几乎匹配甚至略超全量微调</strong>，且优于其他几种参数高效微调方法（如 Adapter、BitFit 等）。</p>
+<hr />
+<h3 id="53-deberta-xxl-glue">5.3 DeBERTa XXL 上的 GLUE 基准<a class="headerlink" href="#53-deberta-xxl-glue" title="Permanent link">&para;</a></h3>
+<p>DeBERTa XXL（约 1.5B 参数）也是较大规模可用模型。论文在 GLUE 任务上对比了下列设置：</p>
+<table>
+<thead>
+<tr>
+<th>模型 (DeBERTa XXL)</th>
+<th>可训练参数</th>
+<th>MNLI</th>
+<th>SST-2</th>
+<th>MRPC</th>
+<th>CoLA</th>
+<th>QNLI</th>
+<th>QQP</th>
+<th>RTE</th>
+<th>STS-B</th>
+<th>Avg.</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FT (1.5 B)</td>
+<td>1500 M</td>
+<td>91.8</td>
+<td>97.2</td>
+<td>92.0</td>
+<td>72.0</td>
+<td>96.0</td>
+<td>92.7</td>
+<td>93.9</td>
+<td>92.9</td>
+<td>91.1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>LoRA (r=8, 4.7 M)</strong></td>
+<td>4.7 M</td>
+<td>91.9</td>
+<td>96.9</td>
+<td>92.6</td>
+<td>72.4</td>
+<td>96.0</td>
+<td>92.9</td>
+<td>94.9</td>
+<td>93.0</td>
+<td>91.3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>结果显示，LoRA 仅用 4.7 M 可训练参数，就能略微超过全量微调的 DeBERTa XXL，且比 Adapter 等方法表现更稳定。</p>
+<hr />
+<h3 id="54-gpt-2-mediumlarge-nlg">5.4 GPT-2 Medium/Large 上的 NLG 任务<a class="headerlink" href="#54-gpt-2-mediumlarge-nlg" title="Permanent link">&para;</a></h3>
+<p>针对生成任务，论文在 E2E NLG Challenge、WebNLG、DART 等数据集上对比了以下方法。以 E2E NLG Challenge（指标包括 BLEU、NIST、METEOR、ROUGE-L、CIDEr；越高越好）为例：</p>
+<table>
+<thead>
+<tr>
+<th>模型 &amp; 方法</th>
+<th>可训练参数</th>
+<th>BLEU</th>
+<th>NIST</th>
+<th>METEOR</th>
+<th>ROUGE-L</th>
+<th>CIDEr</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-2 Medium (FT, 354.9 M)</td>
+<td>354.9 M</td>
+<td>68.2</td>
+<td>8.62</td>
+<td>0.4565</td>
+<td>0.710</td>
+<td>2.47</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-2 Medium (AdapterL, 0.37 M)</td>
+<td>0.37 M</td>
+<td>66.3</td>
+<td>8.41</td>
+<td>0.450</td>
+<td>0.698</td>
+<td>2.40</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-2 Medium (AdapterL, 11.09 M)</td>
+<td>11.09 M</td>
+<td>68.9</td>
+<td>8.71</td>
+<td>0.461</td>
+<td>0.713</td>
+<td>2.47</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-2 Medium (AdapterH, 11.09 M)</td>
+<td>11.09 M</td>
+<td>67.3</td>
+<td>8.50</td>
+<td>0.460</td>
+<td>0.707</td>
+<td>2.44</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-2 Medium (FTTop2, 25.19 M)</td>
+<td>25.19 M</td>
+<td>68.1</td>
+<td>8.59</td>
+<td>0.460</td>
+<td>0.708</td>
+<td>2.41</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-2 Medium (PreLayer, 0.35 M)</td>
+<td>0.35 M</td>
+<td>69.7</td>
+<td>8.81</td>
+<td>0.461</td>
+<td>0.714</td>
+<td>2.49</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>GPT-2 Medium (LoRA, 0.35 M)</strong></td>
+<td>0.35 M</td>
+<td><strong>70.4</strong></td>
+<td><strong>8.85</strong></td>
+<td><strong>0.4689</strong></td>
+<td><strong>0.7186</strong></td>
+<td><strong>2.5349</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>模型 &amp; 方法</th>
+<th>可训练参数</th>
+<th>BLEU</th>
+<th>NIST</th>
+<th>METEOR</th>
+<th>ROUGE-L</th>
+<th>CIDEr</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-2 Large (FT, 774.0 M)</td>
+<td>774.0 M</td>
+<td>68.5</td>
+<td>8.78</td>
+<td>0.460</td>
+<td>0.699</td>
+<td>2.45</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-2 Large (AdapterL, 0.88 M)</td>
+<td>0.88 M</td>
+<td>69.1</td>
+<td>8.68</td>
+<td>0.463</td>
+<td>0.714</td>
+<td>2.49</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-2 Large (AdapterL, 23.00 M)</td>
+<td>23.00 M</td>
+<td>68.9</td>
+<td>8.70</td>
+<td>0.461</td>
+<td>0.713</td>
+<td>2.45</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-2 Large (PreLayer, 0.77 M)</td>
+<td>0.77 M</td>
+<td>70.3</td>
+<td>8.85</td>
+<td>0.462</td>
+<td>0.717</td>
+<td>2.47</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>GPT-2 Large (LoRA, 0.77 M)</strong></td>
+<td>0.77 M</td>
+<td><strong>70.4</strong></td>
+<td><strong>8.89</strong></td>
+<td><strong>0.4689</strong></td>
+<td><strong>0.720</strong></td>
+<td><strong>2.47</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>由此可见，<strong>LoRA 在仅 0.3 M—0.8 M 可训练参数的情况下，取得了与全量微调相当甚至略优的生成质量</strong>。</p>
+<hr />
+<h3 id="55-gpt-3-175b">5.5 GPT-3 175B 上的规模化实验<a class="headerlink" href="#55-gpt-3-175b" title="Permanent link">&para;</a></h3>
+<p>最后，论文将 LoRA 扩展至 GPT-3 175B，重点验证其在大模型下的可行性及性能。实验包括 WikiSQL（NL→SQL）、MultiNLI (MNLI-matched) 和 SAMSum（三元组对话摘要）三种任务，结果如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>可训练参数</th>
+<th>WikiSQL (Acc. %)</th>
+<th>MultiNLI-m (Acc. %)</th>
+<th>SAMSum (Rouge-1/2/L)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPT-3 (FT)</td>
+<td>175 255.8 M</td>
+<td>73.8</td>
+<td>89.5</td>
+<td>52.0/28.0/44.5</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-3 (BitFit, 14.2 M)</td>
+<td>14.2 M</td>
+<td>71.3</td>
+<td>91.0</td>
+<td>51.3/27.4/43.5</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-3 (PreEmbed, 3.2 M)</td>
+<td>3.2 M</td>
+<td>63.1</td>
+<td>88.6</td>
+<td>48.3/24.2/40.5</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-3 (PreLayer, 20.2 M)</td>
+<td>20.2 M</td>
+<td>70.1</td>
+<td>89.5</td>
+<td>50.8/27.3/43.5</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-3 (AdapterH, 7.1 M)</td>
+<td>7.1 M</td>
+<td>71.9</td>
+<td>89.8</td>
+<td>53.0/28.9/44.8</td>
+<td></td>
+</tr>
+<tr>
+<td>GPT-3 (AdapterH, 40.1 M)</td>
+<td>40.1 M</td>
+<td>73.2</td>
+<td>91.5</td>
+<td>53.2/29.0/45.1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>GPT-3 (LoRA, 4.7 M)</strong></td>
+<td>4.7 M</td>
+<td>73.4</td>
+<td>91.7</td>
+<td>53.8/29.8/45.9</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>GPT-3 (LoRA, 37.7 M)</strong></td>
+<td>37.7 M</td>
+<td>74.0</td>
+<td>91.6</td>
+<td>53.4/29.2/45.1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>可以看出，<strong>LoRA 在极少参数（4.7 M）情况下，已经逼近或超越了全量微调（175 B）的性能</strong>，并且随着可训练参数量增加（37.7 M），任务性能略有提升但基本趋于稳定。实验还给出了不同方法在可训练参数数目上的性能曲线（图 2），LoRA 的表现明显更为平滑和可扩展。</p>
+<hr />
+<h2 id="6-lora">6. 对 LoRA 更新矩阵的深入分析<a class="headerlink" href="#6-lora" title="Permanent link">&para;</a></h2>
+<p>针对为何低秩更新能取得上述效果，论文进行了多项实证研究，探讨更新矩阵 <span class="arithmatex">\(\Delta W\)</span> 的秩及与原权重 <span class="arithmatex">\(W\)</span> 之间的关系。以下是关键结论：</p>
+<h3 id="61-lora">6.1 选取哪些权重进行 LoRA 更优<a class="headerlink" href="#61-lora" title="Permanent link">&para;</a></h3>
+<p>在 GPT-3 175B 上设定约 18 M 参数预算，实验对比了在不同注意力矩阵上分别应用 LoRA 的效果（秩 <span class="arithmatex">\(r\)</span> 根据权重数目反算，适配 <span class="arithmatex">\(W_q, W_v\)</span> 时取 <span class="arithmatex">\(r=4\)</span>，仅适配单矩阵时取 <span class="arithmatex">\(r=8\)</span>）。结果（表 5）显示：</p>
+<table>
+<thead>
+<tr>
+<th>适配位置</th>
+<th>可训练参数约 18 M</th>
+<th>WikiSQL (Acc. %)</th>
+<th>MNLI(m) (Acc. %)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>仅 <span class="arithmatex">\(W_q\)</span> (r=8)</td>
+<td>18 M</td>
+<td>68.8—70.4</td>
+<td>90.7—90.9</td>
+<td></td>
+</tr>
+<tr>
+<td>仅 <span class="arithmatex">\(W_k\)</span> (r=8)</td>
+<td>18 M</td>
+<td>70.0</td>
+<td>90.8</td>
+<td></td>
+</tr>
+<tr>
+<td>仅 <span class="arithmatex">\(W_v\)</span> (r=8)</td>
+<td>18 M</td>
+<td>73.0</td>
+<td>91.0</td>
+<td></td>
+</tr>
+<tr>
+<td>仅 <span class="arithmatex">\(W_o\)</span> (r=8)</td>
+<td>18 M</td>
+<td>73.2</td>
+<td>91.3</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_q,W_k\)</span> (各 r=4)</td>
+<td>18 M</td>
+<td>71.4</td>
+<td>91.3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong><span class="arithmatex">\(W_q,W_v\)</span> (各 r=4)</strong></td>
+<td>18 M</td>
+<td><strong>73.7</strong></td>
+<td><strong>91.3</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_q,W_k,W_v,W_o\)</span> (r=2)</td>
+<td>18 M</td>
+<td>73.7</td>
+<td>91.7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>可见，在预算固定时，<strong>同时适配 <span class="arithmatex">\(W_q\)</span> 与 <span class="arithmatex">\(W_v\)</span>（各 <span class="arithmatex">\(r=4\)</span>）能够获得最佳整体表现</strong>。单独适配某一矩阵往往次优，比如仅适配 <span class="arithmatex">\(W_q\)</span> 需要更高 <span class="arithmatex">\(r\)</span> 才能接近效果。</p>
+<hr />
+<h3 id="62-r">6.2 更新矩阵是否真低秩？最佳秩 <span class="arithmatex">\(r\)</span> 的选择<a class="headerlink" href="#62-r" title="Permanent link">&para;</a></h3>
+<p>实验进一步在 GPT-3 上考察了不同秩 <span class="arithmatex">\(r\)</span> 对下游任务性能的影响。以同时适配 <span class="arithmatex">\(\{W_q,W_v\}\)</span> 为例，在 WikiSQL 和 MNLI 上，当 <span class="arithmatex">\(r\)</span> 取 1、2、4、8、64 时，性能如表 6 所示：</p>
+<table>
+<thead>
+<tr>
+<th>适配位置</th>
+<th>r</th>
+<th>WikiSQL (±0.5 %)</th>
+<th>MNLI (±0.1 %)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>仅 <span class="arithmatex">\(W_q\)</span></td>
+<td>1</td>
+<td>68.8</td>
+<td>90.7</td>
+</tr>
+<tr>
+<td>仅 <span class="arithmatex">\(W_q\)</span></td>
+<td>2</td>
+<td>69.6</td>
+<td>90.9</td>
+</tr>
+<tr>
+<td>仅 <span class="arithmatex">\(W_q\)</span></td>
+<td>4</td>
+<td>70.5</td>
+<td>91.1</td>
+</tr>
+<tr>
+<td>仅 <span class="arithmatex">\(W_q\)</span></td>
+<td>8</td>
+<td>70.4</td>
+<td>90.7</td>
+</tr>
+<tr>
+<td>仅 <span class="arithmatex">\(W_q\)</span></td>
+<td>64</td>
+<td>70.0</td>
+<td>90.7</td>
+</tr>
+<tr>
+<td><strong><span class="arithmatex">\(W_q,W_v\)</span></strong></td>
+<td>1</td>
+<td>73.4</td>
+<td>91.3</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_q,W_v\)</span></td>
+<td>2</td>
+<td>73.3</td>
+<td>91.4</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_q,W_v\)</span></td>
+<td>4</td>
+<td>73.7</td>
+<td>91.3</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_q,W_v\)</span></td>
+<td>8</td>
+<td>73.8</td>
+<td>91.6</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_q,W_v\)</span></td>
+<td>64</td>
+<td>73.5</td>
+<td>91.4</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_q,W_k,W_v,W_o\)</span></td>
+<td>1</td>
+<td>74.1</td>
+<td>91.2</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>可见，仅用 <span class="arithmatex">\(r=1\)</span> 即可让 <span class="arithmatex">\(\{W_q,W_v\}\)</span> 在这两项任务上达到接近最优性能，进一步说明了更新 <span class="arithmatex">\(\Delta W\)</span> 的“<strong>内在秩（intrinsic rank）</strong>”极低。反之，仅适配单个矩阵 <span class="arithmatex">\(W_q\)</span> 时则需要稍大 <span class="arithmatex">\(r\)</span> 才能逼近。</p>
+<hr />
+<h3 id="63-delta-w-w">6.3 更新矩阵 <span class="arithmatex">\(\Delta W\)</span> 与原权重 <span class="arithmatex">\(W\)</span> 之间的关联<a class="headerlink" href="#63-delta-w-w" title="Permanent link">&para;</a></h3>
+<p>论文借助<strong>奇异值分解（SVD）</strong>和<strong>子空间相似度（Grassmann  距离投影）</strong>来探究 <span class="arithmatex">\(\Delta W\)</span> 与 <span class="arithmatex">\(W\)</span> 的关联程度。</p>
+<ol>
+<li><strong><span class="arithmatex">\(\Delta W\)</span> 是否与 <span class="arithmatex">\(W\)</span> 的主要奇异向量方向对齐？</strong>
+   定义对于矩阵 <span class="arithmatex">\(W\)</span> 的前 <span class="arithmatex">\(r\)</span> 个左右奇异向量分别为 <span class="arithmatex">\(U_W \in \mathbb{R}^{d\times r}, V_W \in \mathbb{R}^{k\times r}\)</span>；对于 <span class="arithmatex">\(\Delta W\)</span> 的对应前 <span class="arithmatex">\(r\)</span> 个奇异向量为 <span class="arithmatex">\(U_{\Delta}, V_{\Delta}\)</span>。论文计算了</li>
+</ol>
+<p>$$
+   \lVert U_{\Delta}^\top\,W\,V_{\Delta} \rVert_F
+   \quad\text{与}\quad
+   \lVert W \rVert_F,\;\lVert \Delta W \rVert_F
+   $$</p>
+<p>的对比，发现 <strong><span class="arithmatex">\(\Delta W\)</span> 与 <span class="arithmatex">\(W\)</span> 之间存在明显相关性</strong>，即 <span class="arithmatex">\(\lVert U_{\Delta}^\top\,W\,V_{\Delta} \rVert_F\)</span> 远大于对随机矩阵情形，说明 <span class="arithmatex">\(\Delta W\)</span> 更倾向于放大 <span class="arithmatex">\(W\)</span> 中尚未充分强调但对下游任务重要的特征模式。举例：在 GPT-3 第 48 层 <span class="arithmatex">\(W_q\)</span> 上，当 <span class="arithmatex">\(r=4\)</span> 时，有</p>
+<p>$$
+   \frac{\Vert\Delta W_q\Vert_F}{\Vert U_{\Delta}^\top\,W_q\,V_{\Delta}\Vert_F} \approx 21.5,
+   \quad
+   \Vert W_q\Vert_F \approx 61.95,\;\Vert \Delta W_q\Vert_F \approx 6.91,\;\Vert U^\top W_q V\Vert_F \approx 0.32,
+$$</p>
+<p>而随机矩阵投影仅约 0.02，可见 <span class="arithmatex">\(\Delta W\)</span> 在特征放大方面的力度远超随机噪声。</p>
+<ol>
+<li>
+<p><strong>不同秩 <span class="arithmatex">\(r\)</span> 学得的子空间是否一致？</strong>
+   论文考察了在相同层（如 GPT-3 第 48 层）下，<span class="arithmatex">\(\Delta W\)</span> 当 <span class="arithmatex">\(r=8\)</span> 与 <span class="arithmatex">\(r=64\)</span> 时得到的奇异值向量子空间之间的重叠程度，计算归一化子空间相似度 <span class="arithmatex">\(\phi(\Delta W_{r=8}, \Delta W_{r=64})\)</span>，发现<strong>最重要的前几维方向（尤其第 1 奇异向量）高度重合</strong>，而后续方向多为噪声。由此进一步佐证：<span class="arithmatex">\(\Delta W\)</span> 的“有效秩”非常低。</p>
+</li>
+<li>
+<p><strong>不同随机种子学得的 <span class="arithmatex">\(\Delta W\)</span> 子空间是否稳定？</strong>
+   当 <span class="arithmatex">\(r=64\)</span> 时，论文对两次随机初始化训练得到的 <span class="arithmatex">\(\Delta W\)</span> 做同样的子空间相似度分析，发现<strong>前数个奇异方向在不同种子之间具有一定重叠</strong>，而随机高秩矩阵之间却无此现象。说明 LoRA 的优化结果并非完全随机，而是在低秩子空间里学得了较稳定的模式。</p>
+</li>
+</ol>
+<hr />
+<h2 id="7">7. 结论与展望<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="71">7.1 主要贡献<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<ol>
+<li>提出 <strong>LoRA</strong>，利用低秩分解技术，仅对部分权重层注入 <span class="arithmatex">\(B\in \mathbb{R}^{d \times r}\)</span>、<span class="arithmatex">\(A\in \mathbb{R}^{r \times d}\)</span> 两个低秩矩阵进行微调，而冻结大部分预训练权重，从而显著降低可训练参数量（如 GPT-3 175B 仅需 <span class="arithmatex">\(\sim4.7\)</span> M），同时在推理阶段不引入额外时延。</li>
+<li>在多种模型（RoBERTa、DeBERTa、GPT-2、GPT-3）和任务（NLU、NLG）上全面实验，证明 LoRA 在仅用数百万参数的情况下，能够<strong>获得或超过全量微调的性能</strong>，并优于其他高效微调方法（Adapter、Prefix 等）。</li>
+<li>通过实证分析，揭示了<strong>微调更新矩阵 <span class="arithmatex">\(\Delta W\)</span> 的“内在秩”极低</strong>，并与原权重 <span class="arithmatex">\(W\)</span> 具有显著相关性，从而从<strong>理论和经验</strong>两方面说明 LoRA 原理的合理性。</li>
+</ol>
+<h3 id="72">7.2 未来研究方向<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<p>论文指出若干可拓展方向：</p>
+<ol>
+<li><strong>与其他高效微调方法结合</strong>：如将 LoRA 与 Prefix-Tuning、Adapter、Tensor-Product 结构等组合，或利用不同张量分解方法进一步压缩参数空间。</li>
+<li><strong>微调机理研究</strong>：深入探索为何低秩更新能够捕获下游任务所需特征，以及 <span class="arithmatex">\(\Delta W\)</span> 如何重塑预训练特征空间。LoRA 的低秩约束使得此类分析更易开展。</li>
+<li><strong>自动化权重选取</strong>：目前论文主要通过经验或少量验证选取在哪些权重矩阵上应用 LoRA；未来可研究更<strong>有理论依据</strong>或通过自动搜索的方式来决定最优注入位置。</li>
+<li><strong>进一步压缩与加速</strong>：针对不同任务的秩需求进行动态调节，或探索更稀疏/结构化的低秩分解形式，以在更严格资源约束下保持性能。</li>
+</ol>
+<p>总之，LoRA 在保持推理效率的前提下，实现了对大规模预训练模型微调的<strong>极大参数压缩</strong>，为大模型在资源受限环境下的下游部署提供了可行方案，并为进一步研究微调机理提供了启发。</p>
+<p><a href="/assets/pdf/28.LoRA-2106.09685v2.ch.pdf">论文中文译文</a></p>
+<p><iframe
+  src="/assets/pdf/28.LoRA-2106.09685v2.ch.pdf"
+  width="100%"
+  height="600"
+  style="border:1px solid #ccc;"
+>
+  此浏览器不支持 iframe，请  
+  <a href="/assets/pdf/28.LoRA-2106.09685v2.ch.pdf">点击下载 PDF</a>
+</iframe>
+</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.action.view", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

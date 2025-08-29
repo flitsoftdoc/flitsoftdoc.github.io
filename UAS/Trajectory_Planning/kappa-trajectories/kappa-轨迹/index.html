@@ -1,0 +1,3913 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="FlitSoft Documents">
+      
+      
+        <meta name="author" content="flitsoftdoc">
+      
+      
+        <link rel="canonical" href="https://flitsoftdoc.github.io/UAS/Trajectory_Planning/kappa-trajectories/kappa-%E8%BD%A8%E8%BF%B9/">
+      
+      
+        <link rel="prev" href="../../Cubic%20Polynomial%20Curve/Cubic%20Polynomial%20Curve%20Trajectory/">
+      
+      
+        <link rel="next" href="../kappa%E8%BD%A8%E8%BF%B9%E7%82%B9%E7%94%9F%E6%88%90C%2B%2B%E4%BB%A3%E7%A0%81%E8%AF%B4%E6%98%8E/">
+      
+      
+      <link rel="icon" href="/assets/logo/grid.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>κ轨迹平滑 - FlitSoft Doc Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/pseudo-code.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XX66BVLPNX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XX66BVLPNX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XX66BVLPNX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="FlitSoft Doc Hub" class="md-header__button md-logo" aria-label="FlitSoft Doc Hub" data-md-component="logo">
+      
+  <img src="/assets/logo/grid.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FlitSoft Doc Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              κ轨迹平滑
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  UAS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../EM/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../AI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Gaming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../C2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NGC3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Simu/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Visual/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Visualization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="FlitSoft Doc Hub" class="md-nav__button md-logo" aria-label="FlitSoft Doc Hub" data-md-component="logo">
+      
+  <img src="/assets/logo/grid.png" alt="logo">
+
+    </a>
+    FlitSoft Doc Hub
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    UAS
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            UAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Formation Control
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Formation Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Formation%20Control/%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%98%B5%E5%9E%8B%E5%8F%98%E6%8D%A2%E8%BF%87%E6%B8%A1%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    固定翼无人机阵型变换过渡轨迹生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Formation%20Control/%E5%9F%BA%E4%BA%8E%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B%E6%8E%A7%E5%88%B6%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%BC%96%E9%98%9F%E9%A3%9E%E8%A1%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于非线性模型预测控制的无人机编队飞行
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Formation%20Control/%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%9B%86%E7%BE%A4%E5%9B%BA%E5%AE%9A%E9%98%B5%E5%9E%8B%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无人机集群固定阵型轨迹生成模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fix wing uav flight sim
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fix wing uav flight sim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fix_wing_uav_flight_sim/fix_wing_uav_flight_sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    小型固定翼无人机飞行动力学模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fix_wing_uav_flight_sim/JSBSim_Quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSBSim Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fix_wing_uav_flight_sim/JSBSim_User_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSBSim 用户手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fix_wing_uav_flight_sim/StandaloneLaeroModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轻量级飞行动力学模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Navigation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Navigation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../navigation/scirobotics.ado6187.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向微型无人机的安全保障高速导航
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Path Searching
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Path Searching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    A* Search
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            A* Search
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Path%20Searching/A%2A%20Search/A%2A%20Path%20Searching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于运动基元的A*算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trajectory Planning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Trajectory Planning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Key%20of%20Trajectory%20Manage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轨迹管理的几个关键问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_2" id="__nav_1_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+     B spline
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_2">
+            <span class="md-nav__icon md-icon"></span>
+             B spline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%20B-spline/%E9%9A%9C%E7%A2%8D%E7%8E%AF%E5%A2%83%E4%B8%8BB%E6%A0%B7%E6%9D%A1%E8%BD%A8%E8%BF%B9%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    障碍环境下B样条轨迹问题解析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%20B-spline/%E9%9A%9C%E7%A2%8D%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BAB%20%E6%A0%B7%E6%9D%A1%E9%81%BF%E9%9A%9C%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    固定翼无人机B 样条避障轨迹生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_3" id="__nav_1_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cubic Polynomial Curve
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cubic Polynomial Curve
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cubic%20Polynomial%20Curve/Cubic%20Polynomial%20Curve%20Trajectory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用于轨迹规划的三次样条插值
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_4" id="__nav_1_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kappa trajectories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kappa trajectories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    κ轨迹平滑
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kappa%E8%BD%A8%E8%BF%B9%E7%82%B9%E7%94%9F%E6%88%90C%2B%2B%E4%BB%A3%E7%A0%81%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    κ轨迹点生成代码说明
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-time_dynamic_trajectory_smoothing_for_unmanne%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无人机实时动态轨迹平滑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AD%89%E9%95%BF%E8%BD%A8%E8%BF%B9kappa%E6%B1%82%E8%A7%A3%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    等长轨迹κ求解算法设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Velocity Plan
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Velocity Plan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Velocity_Plan/%E4%B8%89%E6%AE%B5S%E6%9B%B2%E7%BA%BF%E9%80%9F%E5%BA%A6%E8%A7%84%E5%88%92%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    三段S曲线速度规划模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../EM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    EM
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            EM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Antenna Pattern
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Antenna Pattern
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Antenna%20Pattern/01.%E8%BE%9B%E6%A0%BC%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    辛格方向图模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Antenna%20Pattern/02.%E9%AB%98%E6%96%AF%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高斯方向图模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comm
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Comm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Comm/%E5%9C%B0%E7%A9%BA%E6%B5%8B%E6%8E%A7%E9%93%BE%E8%B7%AF%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    地空测控链路计算模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Radar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Radar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无源侦察测向定位模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8B%EF%BC%88%E7%A9%BA%E5%AF%B9%E5%9C%B0%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    空对地雷达对抗侦察效能模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E9%80%9A%E7%94%A8%E4%BE%A6%E5%AF%9F%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达对抗侦察效能通用模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%B9%B2%E6%89%B0%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8Bv3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达干扰效能模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Radar/%E9%9B%B7%E8%BE%BE%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB%E7%A6%BB%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%99%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达探测距离计算器
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_6" id="__nav_2_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Radar Equations for Modern Radar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Radar Equations for Modern Radar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1章 雷达方程的发展
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2章 搜索雷达方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第3章 杂波与干扰压制下的雷达方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../AI/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Americas-AI-Action-Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Americas AI Action Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Foundation%20models%20and%20intelligent%20decision-making/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundation models and intelligent decision making
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/LoRA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LoRA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/MARLlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MARLlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Why%20We%20Think%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why We Think
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Gaming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Decision
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Decision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Comparative%20Analysis%20of%20Task%20Allocation%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多无人机任务分配算法的比较分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/DAVIS_OCEANS_2025_PDF_XPRESS%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向无人水面艇探测的传感器套件设计框架
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Multi-UAV%20Task%20Assignment%20in%20Dynamic%20Environments%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    动态环境下多无人机任务分配技术现状
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Policy%20Space%20Response%20Oracles-%20A%20Survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    策略空间响应预言机 PSRO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Towards%20Global%20Explainability%20of%20Artificial%20Intelligence%20Agent%20Tactics%20in%20Close%20Air%20Combat%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向近距离空战中人工智能智能体战术的全局可解释性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Behavior Tree
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Behavior Tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/Behavior%20Trees%20in%20Robot%20Control%20Systems.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行为树在机器人控制系统中的应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/BehaviorTree.CPP%204.6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviorTree.CPP库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/BT2208.04211v2.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    机器人应用中的行为树和状态机
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/Generation%20of%20Behavior%20Trees%20for%20Dynamic%20Agents%20Based%20on%20Market%20Inspired%20Task%20Allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于市场启发的任务分配的动态智能体行为树生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/LLM-BRAIn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LLM-BRAIn: 基于LLM驱动的行为树快速生成方
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/%E8%A1%8C%E4%B8%BA%E6%A0%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行为树基本概念
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../C2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    NGC3
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            NGC3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Advanced%20Battle%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    先进战斗管理系统 (ABMS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/AEP-84%20VOLI%20EDA%20V1%20ch-all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    北约工程出版物 AEP-84 Volume I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Decision%20Advantage%20and%20Initiative%20Completing%20Joint%20All-Domain%20Command%20and%20Control.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    决策优势与主动权
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Force-Based%20MANET_FANET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于力的无人机蜂群自组织MANET/FANET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Simu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Simulation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/HIL%20Swarm%20Simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HIL Swarm Simulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/MARSIM%3A%20A%20point-realistic%20simulator%20for%20LiDAR-based%20UAVs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/OctoMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OctoMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/The%20Mixed%20Reality%20Simulation%20Platform%20%28MIXR%29%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIXR 混合现实仿真平台
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/ZMQ%20guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZMQ guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%9C%82%E7%BE%A4%E6%99%BA%E8%83%BD%E8%AE%AD%E7%BB%83%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1.v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    蜂群算法训练平台设计方案
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AFSIM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            AFSIM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/AFSIM.cn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/AFSIM%20Version%202.0%20TECHNICAL%20REFERENCE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM V2.0 TECHNICAL REFERENCE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/afsims-pseudo-realtime-hybrid-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM 的伪实时混合仿真软件设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            SIMDIS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS%20SDK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK 架构分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS%20SDK%20SimCore%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK SimCore代码库分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS_Briefing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS Briefing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Visual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Visualization
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Visual/TacView/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tacview Technical Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Visual/%E5%9F%BA%E4%BA%8ESIMDIS%20SDK%E4%B8%8EOSG%E7%9A%843D%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E7%BB%BC%E5%90%88%E5%AE%9E%E6%96%BD%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK与OSG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io/raw/main/docs/UAS/Trajectory_Planning/kappa-trajectories/kappa-轨迹.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">κ轨迹平滑<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>本文实现了一种实时算法，该算法生成 <span class="arithmatex">\(\kappa\)</span>-轨迹。如果 <span class="arithmatex">\(\kappa=1\)</span>，则 <span class="arithmatex">\(\kappa\)</span> 轨迹以最短时间从航路点段 <span class="arithmatex">\(\overline{\mathbf{w}_{i-1} \mathbf{w}_{i}}\)</span> 过渡到航路点段 <span class="arithmatex">\(\overline{\mathbf{w}_{i} \mathbf{w}_{i+1}}\)</span>。如果 <span class="arithmatex">\(\kappa=0\)</span>，则 <span class="arithmatex">\(\kappa\)</span>-轨迹执行一个最小时间过渡，前提是它直接通过 <span class="arithmatex">\(\mathbf{w}_{i}\)</span>。我们还将在本节中展示如何选择 <span class="arithmatex">\(\kappa\)</span>，使得 <span class="arithmatex">\(\kappa\)</span>-轨迹具有与原始航路点路径相同的路径长度。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2022_07_18_9ff4460d05508d94c751g-14.jpg?height=374&amp;width=508&amp;top_left_y=168&amp;top_left_x=383" /></p>
+<p>图6. 选择 <span class="arithmatex">\(u\)</span> 背后基本思想的图示。</p>
+<p>算法的基本思想如图6所示。右转和左转约束分别由方程(10)-(11)给出的 <span class="arithmatex">\(\mathcal{C}_{R}\)</span> 和 <span class="arithmatex">\(\mathcal{C}_{L}\)</span> 在不同时间点表示。时间的进程由 <span class="arithmatex">\(t_{1}, \ldots t_{6}\)</span> 表示。为了避免图形过于复杂，图中未显示在时间 <span class="arithmatex">\(t_{2}\)</span> 和 <span class="arithmatex">\(t_{5}\)</span> 时的右转约束 <span class="arithmatex">\(\mathcal{C}_{R}\)</span>。在时间 <span class="arithmatex">\(t_{1}\)</span> 时，DTS 正在跟踪航路点段 <span class="arithmatex">\(\overline{\mathbf{w}_{i-1} \mathbf{w}_{i}}\)</span>。当左转圆 <span class="arithmatex">\(\mathcal{C}_{L}\)</span> 在时间 <span class="arithmatex">\(t_{2}\)</span> 与 <span class="arithmatex">\(\mathcal{C}_{\mathbf{p}(\kappa)}\)</span> 相交时，<span class="arithmatex">\(u\)</span> 被设置为 <span class="arithmatex">\(-c\)</span>。左转约束被跟随，直到右转圆 <span class="arithmatex">\(\mathcal{C}_{R}\)</span> 在时间 <span class="arithmatex">\(t_{3}\)</span> 与 <span class="arithmatex">\(\mathcal{C}_{\mathbf{p}(\kappa)}\)</span> 完全一致。然后，DTS 变量 <span class="arithmatex">\(u\)</span> 被设置为 <span class="arithmatex">\(+c\)</span>，右转约束被跟随，直到左转约束 <span class="arithmatex">\(\mathcal{C}_{L}\)</span> 在时间 <span class="arithmatex">\(t_{4}\)</span> 与航路点段 <span class="arithmatex">\(\overline{\mathbf{w}_{i} \mathbf{w}_{i+1}}\)</span> 相交。DTS 变量 <span class="arithmatex">\(u\)</span> 再次被设置为 <span class="arithmatex">\(-c\)</span>，直到它在时间 <span class="arithmatex">\(t_{5}\)</span> 到达航路点段，此时 <span class="arithmatex">\(u\)</span> 被设置为零。</p>
+<p>对于 <span class="arithmatex">\(\kappa \in [0,1)\)</span>，图7展示了DTS选择 <span class="arithmatex">\(u\)</span> 的流程图。DTS算法的名义状态是跟踪当前的航路点路径段。由于方程(7)-(9)是通过固定采样率求解器求解的，因此无法通过简单地设置 <span class="arithmatex">\(u=0\)</span> 来跟踪路径。使用的跟踪算法将在第五节中讨论。当DTS开始跟踪当前航路点段时，首先计算 <span class="arithmatex">\(\mathcal{C}_{p(\kappa)}\)</span> 的位置。如果转弯是顺时针转弯，则监测约束圆 <span class="arithmatex">\(\mathcal{C}_{L}\)</span>，直到它与 <span class="arithmatex">\(\mathcal{C}_{p(\kappa)}\)</span> 相交，此时 <span class="arithmatex">\(u \leftarrow -c\)</span>（图6中的时间 <span class="arithmatex">\(t_{2}\)</span>）。当 <span class="arithmatex">\(u = -c\)</span> 时，DTS 的运动使得 <span class="arithmatex">\(\mathcal{C}_{L}\)</span> 静止不动。然后监测约束圆 <span class="arithmatex">\(\mathcal{C}_{R}\)</span>，直到它与 <span class="arithmatex">\(\mathcal{C}_{p(\kappa)}\)</span> 完全重合，此时 <span class="arithmatex">\(u \leftarrow +c\)</span>（时间 <span class="arithmatex">\(t_{3}\)</span>）。此时，<span class="arithmatex">\(\mathcal{C}_{R}\)</span> 静止不动，监测 <span class="arithmatex">\(\mathcal{C}_{L}\)</span>，直到它从右侧与航路点段 <span class="arithmatex">\(\overline{\mathbf{w}_{i} \mathbf{w}_{i+1}}\)</span> 相交，此时 <span class="arithmatex">\(u \leftarrow -c\)</span>（时间 <span class="arithmatex">\(t_{4}\)</span>）。此时，约束圆 <span class="arithmatex">\(\mathcal{C}_{L}\)</span> 静止不动，监测 <span class="arithmatex">\(\mathcal{C}_{R}\)</span>，直到它不再与 <span class="arithmatex">\(\overline{\mathbf{w}_{i} \mathbf{w}_{i+1}}\)</span> 相交，此时恢复跟踪（时间 <span class="arithmatex">\(t_{5}\)</span>）。如果转弯是逆时针方向，则遵循类似的步骤。</p>
+<p>切换时间通过找到圆和直线的交点来确定。在数字硬件中找到这些切换时间存在实际问题。这些问题及其相关影响将在第五节中讨论。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2022_07_18_9ff4460d05508d94c751g-15.jpg?height=430&amp;width=528&amp;top_left_y=178&amp;top_left_x=364" /></p>
+<p>图7. 针对 <span class="arithmatex">\(\kappa \in [0,1)\)</span> 的DTS算法框图</p>
+<p>如果 <span class="arithmatex">\(\kappa=1\)</span>，则DTS算法将大大简化。与 <span class="arithmatex">\(\kappa \in [0,1)\)</span> 的情况类似，第一步是确定 <span class="arithmatex">\(\mathcal{C}_{\mathbf{p}(\kappa)}\)</span> 和转弯方向。如图8所示，对于顺时针转弯，DTS 跟踪直线路径段 <span class="arithmatex">\(\overline{\mathbf{w}_{i-1} \mathbf{w}_{i}}\)</span>，直到 <span class="arithmatex">\(\mathcal{C}_{R}\)</span> 与 <span class="arithmatex">\(\mathcal{C}_{p(\kappa)}\)</span> 重合，此时 <span class="arithmatex">\(u \leftarrow +c\)</span>（图8中的时间 <span class="arithmatex">\(t_{2}\)</span>）。然后，<span class="arithmatex">\(\mathcal{C}_{R}\)</span> 静止不动，监测 <span class="arithmatex">\(\mathcal{C}_{L}\)</span>，直到整个圆位于航路点段 <span class="arithmatex">\(\overline{\mathbf{w}_{i} \mathbf{w}_{i+1}}\)</span> 的左侧（时间 <span class="arithmatex">\(t_{3}\)</span>），此时恢复跟踪。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2022_07_18_9ff4460d05508d94c751g-15.jpg?height=402&amp;width=498&amp;top_left_y=901&amp;top_left_x=378" /></p>
+<p>图8. 针对 <span class="arithmatex">\(\kappa=1\)</span> 的DTS算法。</p>
+<p>以下定理断言，DTS算法实现了第三节中定义的极值 <span class="arithmatex">\(\kappa\)</span>-轨迹。</p>
+<p>定理 5：图7所示的DTS算法实现了第三节中定义的极值 <span class="arithmatex">\(\kappa\)</span>-轨迹。</p>
+<p>DTS算法可以根据所使用的应用配置为不同的模式。例如，可能希望选择 <span class="arithmatex">\(\kappa\)</span> 以便轨迹与航路点的距离为 <span class="arithmatex">\(D\)</span>。例如，这种模式可以用于确保附加到无人机上的传感器的探测范围经过航路点。如果 <span class="arithmatex">\(D \in \left[0, R\left(1 / \sin \frac{\beta}{2} - 1\right)\right]\)</span>，那么通过使用方程(19)，可以简单地证明 <span class="arithmatex">\(\kappa\)</span> 的正确选择是</p>
+<div class="arithmatex">\[
+\kappa^{*}=\frac{D}{R} \frac{\sin \frac{\beta}{2}}{1-\sin \frac{\beta}{2}} .
+\]</div>
+<p>如果希望轨迹直接通过航路点，则选择 <span class="arithmatex">\(\kappa^{*} = 0\)</span>。另一方面，如果希望在航路点之间仅通过一次转弯过渡，则选择 <span class="arithmatex">\(\kappa^{*} = 1\)</span>。</p>
+<p>对于时间关键任务，通常希望根据航路点路径规划任务。然而，如果轨迹平滑过程改变了航路点路径的路径长度，那么任务的时间安排将受到影响。因此，希望选择 <span class="arithmatex">\(\kappa\)</span>，使得 <span class="arithmatex">\(\kappa\)</span>-轨迹的路径长度等于航路点路径的路径长度。为此，下面的引理推导了 <span class="arithmatex">\(\kappa\)</span>-轨迹路径长度的解析表达式。</p>
+<p>引理 6：如果 <span class="arithmatex">\(\kappa \in [0,1]\)</span>，且 <span class="arithmatex">\(R = \hat{v} / c\)</span>，则图4中所示的 <span class="arithmatex">\(\kappa\)</span>-轨迹的路径长度由以下公式给出：
+$$
+\begin{aligned}
+&amp;\mathcal{L}\left(\kappa, \mathbf{w}<em i="i">{i+1}, \mathbf{w}</em>}, \mathbf{w<em i_1="i+1">{i-1}\right)=\left|\mathbf{w}</em>}-\mathbf{w<em i="i">{i}\right|+\left|\mathbf{w}</em>\right| \
+&amp;+2 R\left(\frac{\pi-\beta}{2}+2 \cos ^{-1}(\Xi(\kappa, \beta))-\Xi(\kappa, \beta) \sqrt{\frac{1}{\Xi(\kappa, \beta)^{2}}-1}-(1-\kappa) \cos \frac{\beta}{2}-\kappa \cot \frac{\beta}{2}\right),
+\end{aligned}
+$$}-\mathbf{w}_{i-1</p>
+<p>where</p>
+<div class="arithmatex">\[
+\beta=\cos ^{-1}\left(\left(\frac{\mathbf{w}_{i+1}-\mathbf{w}_{i}}{\left\|\mathbf{w}_{i+1}-\mathbf{w}_{i}\right\|}\right)^{T}\left(\frac{\mathbf{w}_{i}-\mathbf{w}_{i-1}}{\left\|\mathbf{w}_{i}-\mathbf{w}_{i-1}\right\|}\right)\right),
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\Xi(\kappa, \beta)=\frac{(1+\kappa)+(1-\kappa) \sin \frac{\beta}{2}}{2} .
+\]</div>
+<p>证明：参考图 9，我们看到
+$$
+\begin{aligned}
+\mathcal{L} &amp;=\left|\mathbf{w}<em i="i">{i+1}-\mathbf{w}</em>}\right|+\left|\mathbf{w<em i-1="i-1">{i}-\mathbf{w}</em>}\right|-2\left(\overline{\mathbf{w<em i_1="i+1">{i} c}+\overline{c e}\right)+2(R \theta+R(\pi / 2+\theta-\beta / 2)) \
+&amp;=\left|\mathbf{w}</em>}-\mathbf{w<em i="i">{i}\right|+\left|\mathbf{w}</em>}-\mathbf{w<em i="i">{i-1}\right|+2 R\left(\frac{\pi-\beta}{2}+2 \theta-\frac{\overline{\mathbf{w}</em>\right)
+\end{aligned}
+$$} c}+\overline{c e}}{R</p>
+<p>We note that</p>
+<div class="arithmatex">\[
+\overline{c e}=\sqrt{(R+\overline{c d})^{2}-R^{2}} .
+\]</div>
+<p>根据正弦定律，</p>
+<div class="arithmatex">\[
+\frac{\overline{\mathbf{w}_{i} c}}{\sin \left(\frac{\pi}{2}+\theta-\frac{\beta}{2}\right)}=\frac{R+\overline{\mathbf{w}_{i} \mathbf{p}(\kappa)}}{\sin \left(\frac{\pi}{2}-\theta\right)}=\frac{R-\overline{c d}}{\sin \left(\frac{\beta}{2}\right)} .
+\]</div>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2022_07_18_9ff4460d05508d94c751g-17.jpg?height=734&amp;width=504&amp;top_left_y=170&amp;top_left_x=378" /></p>
+<p>图9. 引理 6 证明中的定义。</p>
+<p>通过解出 <span class="arithmatex">\(\overline{cd}\)</span> 和 <span class="arithmatex">\(\overline{\mathbf{w}_{i} c}\)</span>，我们得到：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\overline{c d} &amp;=R-\left(R+\overline{\mathbf{w}_{i} \mathbf{p}(\kappa)}\right) \frac{\sin \left(\frac{\beta}{2}\right)}{\cos \theta} \\
+\overline{\mathbf{w}_{i} c} &amp;=\left(R+\overline{\mathbf{w}_{i} \mathbf{p}(\kappa)}\right) \frac{\cos \left(\theta-\frac{\beta}{2}\right)}{\cos \theta}=\left(R+\overline{\mathbf{w}_{i} \mathbf{p}(\kappa)}\right)\left(\cos \frac{\beta}{2}+\tan \theta \sin \frac{\beta}{2}\right) .
+\end{aligned}
+\]</div>
+<p>从图9，使用 <span class="arithmatex">\(\cos \theta = \frac{R}{R + \overline{c d}}\)</span>，我们得到：</p>
+<div class="arithmatex">\[
+\cos \theta=\frac{R+\left(R+\overline{\mathbf{w}_{i} \mathbf{p}(\kappa)}\right) \sin \left(\frac{\beta}{2}\right)}{2 R}
+\]</div>
+<p>注意到 <span class="arithmatex">\(\beta \in (0, \pi)\)</span> 并从方程(19)中代入，得到：</p>
+<div class="arithmatex">\[
+\overline{\mathbf{w}_{i} \mathbf{p}(\kappa)}=\kappa R\left(\frac{1}{\sin \left(\frac{\beta}{2}\right)}-1\right)
+\]</div>
+<p>解出 <span class="arithmatex">\(\theta\)</span>，得到：</p>
+<div class="arithmatex">\[
+\theta=\cos ^{-1}\left(\frac{(1+\kappa)+(1-\kappa) \sin \frac{\beta}{2}}{2}\right)=\cos ^{-1}(\Xi(\kappa, \beta)) .
+\]</div>
+<p>将方程(36)和(38)代入方程(34)，得到：</p>
+<div class="arithmatex">\[
+\overline{c e}=R \sqrt{\frac{4}{\left[(1+\kappa)+(1-\kappa) \sin \frac{\beta}{2}\right]^{2}}-1}=R \sqrt{\frac{1}{\Xi^{2}(\kappa, \beta)}-1}
+\]</div>
+<p>从图9中注意到 <span class="arithmatex">\(\tan \theta = \frac{\overline{c e}}{R}\)</span>，并使用方程(40)，我们可以从方程(37)中解出 <span class="arithmatex">\(\overline{\mathbf{w}_{i} c}\)</span>，得到：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\overline{\mathbf{w}_{i} c} &amp;=R\left((1-\kappa)+\frac{\kappa}{\sin \frac{\beta}{2}}\right)\left(\cos \frac{\beta}{2}+\sin \frac{\beta}{2} \sqrt{\frac{4}{\left[(1+\kappa)+(1-\kappa) \sin \frac{\beta}{2}\right]^{2}}-1}\right) \\
+&amp;=R\left((\Xi(\kappa, \beta)-1) \sqrt{\frac{1}{\Xi^{2}(\kappa, \beta)}-1}+(1-\kappa) \cos \frac{\beta}{2}+\kappa \cot \frac{\beta}{2}\right) .
+\end{aligned}
+\]</div>
+<p>因此，将方程(39)、(40)和(41)代入方程(33)得到方程(30)。</p>
+<p>从引理6可以看出，航路点路径 <span class="arithmatex">\(\overline{\mathbf{w}_{i-1} \mathbf{w}_{i} \mathbf{w}_{i+1}}\)</span> 和相关的 <span class="arithmatex">\(\kappa\)</span>-轨迹之间的路径长度差异由以下给出：
+$$
+\begin{aligned} \Lambda\left(\kappa, \mathbf{w}<em i="i">{i+1}, \mathbf{w}</em>
+$$}, \mathbf{w}_{i-1}\right)=2 R\left(\frac{\pi-\beta}{2}+2 \cos ^{-1}(\Xi(\kappa, \beta))-\Xi(\kappa, \beta) \sqrt{\frac{1}{\Xi(\kappa, \beta)^{2}}-1}\right.\ &amp;\left.-(1-\kappa) \cos \frac{\beta}{2}-\kappa \cot \frac{\beta}{2}\right) . \end{aligned</p>
+<p>以下引理将用于找到 <span class="arithmatex">\(\kappa\)</span>，使得 <span class="arithmatex">\(\kappa\)</span>-轨迹与航路点轨迹具有相同的路径长度。</p>
+<p>引理 7：如果 <span class="arithmatex">\(\beta \in [0, \pi)\)</span> 且 <span class="arithmatex">\(\kappa \in [0, 1]\)</span>，则 <span class="arithmatex">\(\Lambda\)</span> 是 <span class="arithmatex">\(\kappa\)</span> 的递减函数。此外，<span class="arithmatex">\(\left.\Lambda\left(0, \mathbf{w}_{i+1}, \mathbf{w}_{i}, \mathbf{w}_{i-1}\right)\right)&gt;0\)</span> 且 <span class="arithmatex">\(\Lambda\left(1, \mathbf{w}_{i+1}, \mathbf{w}_{i}, \mathbf{w}_{i-1}\right)&lt;0\)</span>。</p>
+<p>证明：对式（42）关于 <span class="arithmatex">\(\kappa\)</span> 求导，经过一些代数变换，得</p>
+<div class="arithmatex">\[
+\frac{\partial \Lambda}{\partial \kappa} = 2R \left[-\frac{\partial \Xi}{\partial \kappa} \sqrt{\frac{1}{\Xi^2} - 1} + \frac{\partial \Xi}{\partial \kappa} \frac{1}{\sqrt{1-\Xi^2}} \left(-2 + \frac{1}{\Xi}\right) + \cot \frac{\beta}{2} \left(\sin \frac{\beta}{2} - 1\right) \right].
+\]</div>
+<p>由式（32）知，<span class="arithmatex">\(\beta \in [0,\pi)\)</span> 且 <span class="arithmatex">\(\kappa \in [0,1]\)</span> 意味着 <span class="arithmatex">\(\Xi \geq 0\)</span> 且</p>
+<div class="arithmatex">\[
+\frac{\partial \Xi}{\partial \kappa} = \frac{1 - \sin \frac{\beta}{2}}{2} &gt; 0.
+\]</div>
+<p>因此，若</p>
+<div class="arithmatex">\[
+-2 + \frac{1}{\Xi} \leq 0,
+\]</div>
+<p>则有</p>
+<div class="arithmatex">\[
+\frac{\partial \Lambda}{\partial \kappa} &lt; 0.
+\]</div>
+<p>根据定义，有</p>
+<div class="arithmatex">\[
+\begin{aligned}
+-2 + \frac{1}{\Xi} &amp;= -2 + \frac{1 + \sin \frac{\beta}{2}}{2} + \kappa \frac{1 - \sin \frac{\beta}{2}}{2} \\
+&amp;\leq -2 + \frac{1 + \sin \frac{\beta}{2}}{2} + \frac{1 - \sin \frac{\beta}{2}}{2} \\
+&amp;= -1.
+\end{aligned}
+\]</div>
+<p>因此，<span class="arithmatex">\(\Lambda\)</span> 关于 <span class="arithmatex">\(\kappa\)</span> 是递减函数。</p>
+<p>具体表达式为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\Lambda\left(\kappa, \mathbf{w}_{i+1}, \mathbf{w}_i, \mathbf{w}_{i-1}\right) = 2R \Bigg(&amp; \frac{\pi - \beta}{2} + 2 \cos^{-1}(\Xi(\kappa, \beta)) - \Xi(\kappa, \beta) \sqrt{\frac{1}{\Xi(\kappa, \beta)^2} - 1} \\
+&amp; - (1-\kappa) \cos \frac{\beta}{2} - \kappa \cot \frac{\beta}{2} \Bigg).
+\end{aligned}
+\]</div>
+<p>注意到</p>
+<div class="arithmatex">\[
+\Xi(0, \beta) = \frac{1 + \sin \frac{\beta}{2}}{2},
+\]</div>
+<p>从式（42）经代数变换可得</p>
+<div class="arithmatex">\[
+\Lambda(0, \beta) = 2R \left[ \frac{\pi - \beta}{2} + 2 \cos^{-1} \left( \frac{1 + \sin \frac{\beta}{2}}{2} \right) - \sqrt{1 - \frac{1}{4} \left(1 + \sin \frac{\beta}{2}\right)^2} - \cos \frac{\beta}{2} \right].
+\]</div>
+<p>注意 <span class="arithmatex">\(\Lambda(0, \pi) = 0\)</span>，且</p>
+<div class="arithmatex">\[
+\frac{\partial \Lambda}{\partial (\beta/2)}(0, \beta) = 2R \left[ \left( \sin \frac{\beta}{2} - 1 \right) + \frac{ \cos \frac{\beta}{2} \left( \frac{1}{4} (1 + \sin \frac{\beta}{2}) - 1 \right) }{ \sqrt{1 - \frac{1}{4} (1 + \sin \frac{\beta}{2})^2} } \right].
+\]</div>
+<p>由拉格朗日余项定理 [29]，存在 <span class="arithmatex">\(a \in (\beta, \pi)\)</span>，使得</p>
+<div class="arithmatex">\[
+\Lambda(0, \beta) = \frac{\partial \Lambda}{\partial (\beta/2)} (0, a) \left( \frac{\beta - \pi}{2} \right).
+\]</div>
+<p>容易证明，对于所有 <span class="arithmatex">\(a \in [0, \pi)\)</span>，有</p>
+<div class="arithmatex">\[
+\frac{\partial \Lambda}{\partial (\beta/2)} (0, a) &lt; 0,
+\]</div>
+<p>这意味着 <span class="arithmatex">\(\Lambda(0) &gt; 0\)</span>。</p>
+<p>另外注意</p>
+<div class="arithmatex">\[
+\Xi(1, \beta) = 1,
+\]</div>
+<p>由式（42）可得</p>
+<div class="arithmatex">\[
+\Lambda(1, \beta) = 2R \left[ \frac{\pi - \beta}{2} - \cot \frac{\beta}{2} \right].
+\]</div>
+<p>对其求导得到</p>
+<div class="arithmatex">\[
+\frac{\partial \Lambda}{\partial (\beta/2)} (1, \beta) = \cot^2 \frac{\beta}{2} &gt; 0.
+\]</div>
+<p>因此，根据拉格朗日余项定理，存在 <span class="arithmatex">\(a \in (\beta, \pi)\)</span>，使得</p>
+<div class="arithmatex">\[
+\Lambda(1, \beta) = \cot^2 \frac{\beta}{2} \left( \frac{\beta - \pi}{2} \right).
+\]</div>
+<p>这意味着对于所有 <span class="arithmatex">\(\beta \in [0, \pi)\)</span>，<span class="arithmatex">\(\Lambda(1, \beta) &lt; 0\)</span>。</p>
+<p>对于时间关键任务，必须保证由DTS生成的轨迹的路径长度与原始航路点轨迹 <span class="arithmatex">\(\mathcal{P}\)</span> 的路径长度相同。下一个定理表明，存在一个 <span class="arithmatex">\(\kappa \in [0, 1]\)</span> 使得路径长度相等。</p>
+<p>定理 8：如果 <span class="arithmatex">\(\Lambda\left(\kappa, \mathbf{w}_{i-1}, \mathbf{w}_{i}, \mathbf{w}_{i+1}\right)\)</span> 如方程(42)所给出，其中 <span class="arithmatex">\(\beta \in [0, \pi)\)</span> 如方程(31)所给出，且 <span class="arithmatex">\(R = \hat{v} / c\)</span>，则存在唯一的 <span class="arithmatex">\(\kappa^{*} \in [0,1]\)</span> 使得 <span class="arithmatex">\(\Lambda\left(\kappa^{*}\right) = 0\)</span>。此外，对应于 <span class="arithmatex">\(\kappa^{*}\)</span> 的 <span class="arithmatex">\(\kappa\)</span>-轨迹与航路点路径 <span class="arithmatex">\(\overline{\mathbf{w}_{i-1} \mathbf{w}_{i} \mathbf{w}_{i+1}}\)</span> 具有相同的路径长度，即：
+$$
+L=\left|\mathbf{w}<em i-1="i-1">{i}-\mathbf{w}</em>}\right|+\left|\mathbf{w<em i="i">{i+1}-\mathbf{w}</em>\right| .
+$$</p>
+<p>此外，<span class="arithmatex">\(\kappa^{*}\)</span> 可以通过使用二分查找算法高效地数值求解，精确度为 <span class="arithmatex">\(\bigcirc\left(2^{-n}\right)\)</span>，其中 <span class="arithmatex">\(n\)</span> 是 <span class="arithmatex">\(\Lambda\)</span> 的函数评估次数。</p>
+<p>证明：由引理6可知，<span class="arithmatex">\(\Lambda\)</span> 表示 <span class="arithmatex">\(\kappa\)</span>-轨迹与航路点路径的路径长度差。因此，若 <span class="arithmatex">\(\Lambda=0\)</span>，则两路径长度相等。由引理7知，存在唯一的 <span class="arithmatex">\(\kappa^* \in [0,1)\)</span>，使得 <span class="arithmatex">\(\Lambda(\kappa^*)=0\)</span>。</p>
+<p>由于 <span class="arithmatex">\(\Lambda(0) &gt; 0\)</span> 且 <span class="arithmatex">\(\Lambda(1) &lt; 0\)</span>，二分法搜索的第一步选取 <span class="arithmatex">\(\kappa=0.5\)</span>。<span class="arithmatex">\(\Lambda(0.5)\)</span> 的符号决定了 <span class="arithmatex">\(\kappa^*\)</span> 所在区间，精确度达到 <span class="arithmatex">\(2^{-1}\)</span>。后续函数调用进一步细化该估计值。</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.action.view", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4216 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="FlitSoft Documents">
+      
+      
+        <meta name="author" content="flitsoftdoc">
+      
+      
+        <link rel="canonical" href="https://flitsoftdoc.github.io/UAS/">
+      
+      
+      
+        <link rel="next" href="Formation%20Control/%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%98%B5%E5%9E%8B%E5%8F%98%E6%8D%A2%E8%BF%87%E6%B8%A1%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90/">
+      
+      
+      <link rel="icon" href="/assets/logo/grid.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>无人机系统仿真与建模 - FlitSoft Doc Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/pseudo-code.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XX66BVLPNX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XX66BVLPNX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XX66BVLPNX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="FlitSoft Doc Hub" class="md-header__button md-logo" aria-label="FlitSoft Doc Hub" data-md-component="logo">
+      
+  <img src="/assets/logo/grid.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FlitSoft Doc Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              无人机系统仿真与建模
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  UAS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../EM/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../AI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Gaming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../C2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NGC3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Simu/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Visual/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Visualization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FlitSoft Doc Hub" class="md-nav__button md-logo" aria-label="FlitSoft Doc Hub" data-md-component="logo">
+      
+  <img src="/assets/logo/grid.png" alt="logo">
+
+    </a>
+    FlitSoft Doc Hub
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    UAS
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            UAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Formation Control
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Formation Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Formation%20Control/%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%98%B5%E5%9E%8B%E5%8F%98%E6%8D%A2%E8%BF%87%E6%B8%A1%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    固定翼无人机阵型变换过渡轨迹生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Formation%20Control/%E5%9F%BA%E4%BA%8E%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B%E6%8E%A7%E5%88%B6%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%BC%96%E9%98%9F%E9%A3%9E%E8%A1%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于非线性模型预测控制的无人机编队飞行
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Formation%20Control/%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%9B%86%E7%BE%A4%E5%9B%BA%E5%AE%9A%E9%98%B5%E5%9E%8B%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无人机集群固定阵型轨迹生成模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fix wing uav flight sim
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fix wing uav flight sim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fix_wing_uav_flight_sim/fix_wing_uav_flight_sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    小型固定翼无人机飞行动力学模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fix_wing_uav_flight_sim/JSBSim_Quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSBSim Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fix_wing_uav_flight_sim/JSBSim_User_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSBSim 用户手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fix_wing_uav_flight_sim/StandaloneLaeroModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轻量级飞行动力学模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Navigation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Navigation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="navigation/scirobotics.ado6187.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向微型无人机的安全保障高速导航
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Path Searching
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Path Searching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    A* Search
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            A* Search
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Path%20Searching/A%2A%20Search/A%2A%20Path%20Searching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于运动基元的A*算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trajectory Planning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Trajectory Planning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trajectory_Planning/Key%20of%20Trajectory%20Manage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轨迹管理的几个关键问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_2" id="__nav_1_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+     B spline
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_2">
+            <span class="md-nav__icon md-icon"></span>
+             B spline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trajectory_Planning/%20B-spline/%E9%9A%9C%E7%A2%8D%E7%8E%AF%E5%A2%83%E4%B8%8BB%E6%A0%B7%E6%9D%A1%E8%BD%A8%E8%BF%B9%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    障碍环境下B样条轨迹问题解析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trajectory_Planning/%20B-spline/%E9%9A%9C%E7%A2%8D%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BAB%20%E6%A0%B7%E6%9D%A1%E9%81%BF%E9%9A%9C%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    固定翼无人机B 样条避障轨迹生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_3" id="__nav_1_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cubic Polynomial Curve
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cubic Polynomial Curve
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trajectory_Planning/Cubic%20Polynomial%20Curve/Cubic%20Polynomial%20Curve%20Trajectory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用于轨迹规划的三次样条插值
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_4" id="__nav_1_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kappa trajectories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kappa trajectories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trajectory_Planning/kappa-trajectories/kappa-%E8%BD%A8%E8%BF%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    κ轨迹平滑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trajectory_Planning/kappa-trajectories/kappa%E8%BD%A8%E8%BF%B9%E7%82%B9%E7%94%9F%E6%88%90C%2B%2B%E4%BB%A3%E7%A0%81%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    κ轨迹点生成代码说明
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trajectory_Planning/kappa-trajectories/Real-time_dynamic_trajectory_smoothing_for_unmanne%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无人机实时动态轨迹平滑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trajectory_Planning/kappa-trajectories/%E7%AD%89%E9%95%BF%E8%BD%A8%E8%BF%B9kappa%E6%B1%82%E8%A7%A3%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    等长轨迹κ求解算法设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Velocity Plan
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Velocity Plan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Velocity_Plan/%E4%B8%89%E6%AE%B5S%E6%9B%B2%E7%BA%BF%E9%80%9F%E5%BA%A6%E8%A7%84%E5%88%92%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    三段S曲线速度规划模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../EM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    EM
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            EM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Antenna Pattern
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Antenna Pattern
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Antenna%20Pattern/01.%E8%BE%9B%E6%A0%BC%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    辛格方向图模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Antenna%20Pattern/02.%E9%AB%98%E6%96%AF%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高斯方向图模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comm
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Comm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Comm/%E5%9C%B0%E7%A9%BA%E6%B5%8B%E6%8E%A7%E9%93%BE%E8%B7%AF%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    地空测控链路计算模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Radar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Radar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Radar/%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无源侦察测向定位模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8B%EF%BC%88%E7%A9%BA%E5%AF%B9%E5%9C%B0%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    空对地雷达对抗侦察效能模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E9%80%9A%E7%94%A8%E4%BE%A6%E5%AF%9F%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达对抗侦察效能通用模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Radar/%E9%9B%B7%E8%BE%BE%E5%B9%B2%E6%89%B0%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8Bv3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达干扰效能模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Radar/%E9%9B%B7%E8%BE%BE%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB%E7%A6%BB%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%99%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达探测距离计算器
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_6" id="__nav_2_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Radar Equations for Modern Radar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Radar Equations for Modern Radar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1章 雷达方程的发展
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2章 搜索雷达方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第3章 杂波与干扰压制下的雷达方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../AI/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI/Americas-AI-Action-Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Americas AI Action Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI/Foundation%20models%20and%20intelligent%20decision-making/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundation models and intelligent decision making
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI/LoRA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LoRA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI/MARLlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MARLlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI/Why%20We%20Think%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why We Think
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Gaming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Decision
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Decision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Comparative%20Analysis%20of%20Task%20Allocation%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多无人机任务分配算法的比较分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/DAVIS_OCEANS_2025_PDF_XPRESS%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向无人水面艇探测的传感器套件设计框架
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Multi-UAV%20Task%20Assignment%20in%20Dynamic%20Environments%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    动态环境下多无人机任务分配技术现状
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Policy%20Space%20Response%20Oracles-%20A%20Survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    策略空间响应预言机 PSRO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Towards%20Global%20Explainability%20of%20Artificial%20Intelligence%20Agent%20Tactics%20in%20Close%20Air%20Combat%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向近距离空战中人工智能智能体战术的全局可解释性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Behavior Tree
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Behavior Tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Behavior%20Tree/Behavior%20Trees%20in%20Robot%20Control%20Systems.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行为树在机器人控制系统中的应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Behavior%20Tree/BehaviorTree.CPP%204.6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviorTree.CPP库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Behavior%20Tree/BT2208.04211v2.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    机器人应用中的行为树和状态机
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Behavior%20Tree/Generation%20of%20Behavior%20Trees%20for%20Dynamic%20Agents%20Based%20on%20Market%20Inspired%20Task%20Allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于市场启发的任务分配的动态智能体行为树生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Behavior%20Tree/LLM-BRAIn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LLM-BRAIn: 基于LLM驱动的行为树快速生成方
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gaming/Behavior%20Tree/%E8%A1%8C%E4%B8%BA%E6%A0%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行为树基本概念
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../C2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    NGC3
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            NGC3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C2/Advanced%20Battle%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    先进战斗管理系统 (ABMS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C2/AEP-84%20VOLI%20EDA%20V1%20ch-all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    北约工程出版物 AEP-84 Volume I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C2/Decision%20Advantage%20and%20Initiative%20Completing%20Joint%20All-Domain%20Command%20and%20Control.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    决策优势与主动权
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C2/Force-Based%20MANET_FANET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于力的无人机蜂群自组织MANET/FANET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Simu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Simulation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/HIL%20Swarm%20Simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HIL Swarm Simulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/MARSIM%3A%20A%20point-realistic%20simulator%20for%20LiDAR-based%20UAVs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/OctoMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OctoMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/The%20Mixed%20Reality%20Simulation%20Platform%20%28MIXR%29%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIXR 混合现实仿真平台
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/ZMQ%20guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZMQ guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%9C%82%E7%BE%A4%E6%99%BA%E8%83%BD%E8%AE%AD%E7%BB%83%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1.v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    蜂群算法训练平台设计方案
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AFSIM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            AFSIM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/AFSIM/AFSIM.cn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/AFSIM/AFSIM%20Version%202.0%20TECHNICAL%20REFERENCE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM V2.0 TECHNICAL REFERENCE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/AFSIM/afsims-pseudo-realtime-hybrid-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM 的伪实时混合仿真软件设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            SIMDIS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/SIMDIS/SIMDIS%20SDK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK 架构分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/SIMDIS/SIMDIS%20SDK%20SimCore%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK SimCore代码库分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simu/SIMDIS/SIMDIS_Briefing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS Briefing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../Visual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Visualization
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Visual/TacView/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tacview Technical Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Visual/%E5%9F%BA%E4%BA%8ESIMDIS%20SDK%E4%B8%8EOSG%E7%9A%843D%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E7%BB%BC%E5%90%88%E5%AE%9E%E6%96%BD%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK与OSG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/category/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../blog/category/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      无人机任务行动谱系
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mdo" class="md-nav__link">
+    <span class="md-ellipsis">
+      融入多域作战（MDO）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      基础性要求：高逼真度、强对抗性战场环境建模
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基础性要求：高逼真度、强对抗性战场环境建模">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      超越动力学：电磁与网络空间域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟强对抗电磁环境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      集成多域威胁
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟智能无人机系统作战的核心挑战
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模拟智能无人机系统作战的核心挑战">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      蜂群难题：去中心化系统建模
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      跨越鸿沟：“仿真到现实”的差距
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vva" class="md-nav__link">
+    <span class="md-ellipsis">
+      “黑箱”困境：人工智能驱动系统的验证、确认与鉴定（VV&amp;A）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      集成挑战：互操作性与规模化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      无人机系统仿真的先进方法论
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="无人机系统仿真的先进方法论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      学会战斗：用于自主战术生成的强化学习
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      数字孪生革命：从设计到预测性维护
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      场景引擎：生成式AI在兵棋推演与任务规划中的应用
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      人的维度：面向人机协同与认知优势的仿真
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="人的维度：面向人机协同与认知优势的仿真">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mum-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      面向人机协同（MUM-T）的“人在环路”仿真
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      操作员模拟：认知建模与自适应接口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      为信任而训练
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      确保可控：用于条令法规验证的仿真
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="确保可控：用于条令法规验证的仿真">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roe" class="md-nav__link">
+    <span class="md-ellipsis">
+      编码交战规则（ROE）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      仿真作为致命性自主武器系统（LAWS）的认证工具
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      战略展望
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io/raw/main/docs/UAS/index.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">无人机系统仿真与建模<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>在过去几十年中，无人机系统（Unmanned Aircraft Systems, UAS）已经从最初执行“枯燥、肮脏或危险”（dull, dirty, or dangerous）任务的简单遥控飞行器（Remotely Piloted Vehicles, RPVs）演变为现代战争中不可或缺的高度自主化平台 。人工智能（AI）、机器学习（ML）和计算机视觉等技术的深度融合，是推动这一转变的核心驱动力，使得无人机系统不仅能够独立执行任务，还能进行复杂的协同作战，成为关键的军事资产 。在探讨其仿真与建模时，必须明确无人机系统（UAS）的完整定义：它是一个包含飞行器、地面控制站、数据链以及其他支持设备的综合系统，而不仅仅是飞行器本身 。这种系统性的视角对于理解和构建有效的仿真环境至关重要。</p>
+<p>人工智能在本领域扮演着双重且相互促进的关键角色。首先，AI被嵌入无人机系统平台内部，赋予其前所未有的自主导航、集群协同（swarming）和动态决策能力 。其次，AI正在彻底变革用于开发、测试和训练这些系统的建模与仿真（Modeling and Simulation, M\&amp;S）环境 。由AI驱动的仿真能够提供极高的真实度、具备学习和适应能力的对手，并能模拟包含海量变量的复杂作战场景，从而极大地提升了训练效率和战备水平 。</p>
+<p>这种双重作用形成了一个紧密的共生演化反馈循环。更先进的无人机自主能力（如大规模蜂群战术）要求更复杂的仿真环境来进行有效的测试和验证。反过来，AI驱动的仿真技术（如通过强化学习训练的智能体）的突破，又极大地加速了为实体无人机开发更强自主算法的进程。这一过程始于简单的无人机对应简单的模拟器。当AI被引入无人机，催生了如蜂群作战等复杂行为后 ，现有模拟器已无法准确建模这些非线性的涌现行为 。因此，必须将AI技术深度集成到仿真环境中，例如使用强化学习来模拟动态变化的对手，才能构建一个有效的测试平台 。最终，这个先进的仿真环境自身又成为一个强大的“数字靶场”，用以训练和催生下一代更智能的无人机算法 。这个自增强的循环，正以前所未有的速度推动着无人作战能力的迭代。</p>
+<h2 id="_2"><strong>无人机任务行动谱系</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>今天的无人机系统已经远远超出了单一的察打功能，其任务谱系覆盖了现代战场的几乎所有方面。这些任务包括：</p>
+<ul>
+<li><strong>情报、监视与侦察（ISR）</strong>：这是无人机的传统核心任务，利用高分辨率光电/红外（EO/IR）传感器和合成孔径雷达（SAR）进行持续监视 。  </li>
+<li><strong>精确打击</strong>：无人作战飞行器（UCAV）能够使用精确制导炸弹、反坦克导弹等武器对高价值或时间敏感目标进行外科手术式打击 。  </li>
+<li><strong>电子战（EW）</strong>：无人机可携带干扰吊舱，对敌方雷达和通信系统进行压制，或作为信号中继器支持己方通信 。   </li>
+<li><strong>通信中继</strong>：在卫星或视线通信受限的环境中，长航时无人机可以作为空中通信节点，确保部队间的联系畅通 。  </li>
+<li><strong>“母舰”平台</strong>：大型无人机可以作为空中平台，释放和回收小型无人机，或为无人机蜂群提供指挥与控制支持 。</li>
+</ul>
+<h2 id="mdo"><strong>融入多域作战（MDO）</strong><a class="headerlink" href="#mdo" title="Permanent link">&para;</a></h2>
+<p>在现代军事思想中，无人机不再是孤立的空中资产，而是融入多域作战（Multi-Domain Operations, MDO）框架的关键节点 。MDO强调在陆、海、空、天、网络五大领域内实现无缝协同与一体化作战 。无人机凭借其长航时、多功能和网络化特性，成为连接这些领域的理想平台。例如，一架无人机可以利用其机载传感器为地面炮兵提供目标指示（空-陆协同），同时作为通信中继节点支持海上舰艇的行动（空-海协同），并利用其电子战载荷干扰敌方网络（空-网协同） 。这种深度融合对建模与仿真提出了极高的要求，因为它不仅需要精确模拟单个平台的性能，还必须能够模拟跨领域、跨系统之间的复杂交互和依赖关系，确保在仿真环境中的互操作性等同于现实世界。</p>
+<p>一个深刻的转变在于，低成本、可消耗甚至商用现货（COTS）无人机的武器化，正在“民主化”曾经由少数大国垄断的空中力量 。这种趋势带来了显著的经济和战略上的非对称性。正如近期冲突所揭示的，使用价值数千美元的改装商用无人机摧毁价值数百万美元的主战坦克或防空系统，已成为常态 。这种悬殊的成本交换比给技术先进的军队带来了巨大的防御压力，因为防御方为拦截一枚廉价无人机所花费的成本（如一枚防空导弹）可能远超无人机本身 。这种非对称性从根本上改变了仿真的课题。</p>
+<p>建模与仿真工作现在不仅要关注高端对高端的对等冲突，还必须能够模拟一个由大量、多样化、低技术水平的商用无人机构成的不可预测的威胁环境。这就要求仿真模型能够精确表征各种低成本威胁，并评估各类反无人机系统（C-UAS）——无论是动能武器还是定向能武器——在应对饱和攻击时的效能和成本效益 。仿真的焦点必须从传统的“高端对抗”扩展到“低端饱和攻击对高端防御”的新场景。</p>
+<p><strong>表1. 军用无人机角色演进及其对建模与仿真的需求</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">无人机作战角色</th>
+<th style="text-align: left;">关键系统能力</th>
+<th style="text-align: left;">主要仿真挑战</th>
+<th style="text-align: left;">使能的建模与仿真技术</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">自主蜂群攻击</td>
+<td style="text-align: left;">协同AI、去中心化控制、动态任务/编队重构、弹性通信</td>
+<td style="text-align: left;">大规模多智能体涌现行为与稳定性；时延/丢包/拥塞对任务完成率的影响；蓝红策略对抗与欺骗</td>
+<td style="text-align: left;">Agent-Based Modeling（ABM）、多智能体强化学习（MARL）、一致性/编队控制建模、离散事件仿真（DES）、网络共仿真（ns-3/OMNeT++）、并行离散事件仿真（PDES/HPC）</td>
+</tr>
+<tr>
+<td style="text-align: left;">A2/AD环境下的持续ISR</td>
+<td style="text-align: left;">低可探测性（RCS/IR/声学）、抗干扰通信、自主/竞速导航</td>
+<td style="text-align: left;">RCS/IR特征跨角度/姿态/工况一致性验证；多路径/遮蔽/对消环境中的探测概率与虚警；GNSS拒止下导航漂移与误差可观</td>
+<td style="text-align: left;">计算电磁（CEM：全波/PO/SBR）、红外与可见光传感器链仿真（DIRSIG/MuSES等思想）、大气传输/能见度模型（MODTRAN思路）、TRN/VIO/SLAM误差模型与因子图仿真、射线追踪/地形遮蔽传播</td>
+</tr>
+<tr>
+<td style="text-align: left;">电子战/网络攻击</td>
+<td style="text-align: left;">宽带压制/诱骗、SIGINT/ESM、网络渗透/抗渗透</td>
+<td style="text-align: left;">复杂电磁环境态势生成；干扰效果度量（J/S、burn-through、覆盖体积）；协议栈与任务网联动效能</td>
+<td style="text-align: left;">射频传播/电波传播模型（射线追踪、ITU-R信道）、信号处理与波形级仿真、DRFM/诱骗效果建模、网络协议仿真（ns-3/仿真网络靶场）、频谱博弈与资源分配模型</td>
+</tr>
+<tr>
+<td style="text-align: left;">载人/无人协同（MUM-T）</td>
+<td style="text-align: left;">高带宽数据链、人机界面、任务级决策辅助/解释</td>
+<td style="text-align: left;">人在回路信任与任务接管时序；信息过载与认知负荷；AI建议的可解释性与置信管理</td>
+<td style="text-align: left;">人在回路/驾驶舱在环（HITL/CITL）、认知负荷模型（NASA-TLX/ACT-R思路）、任务交接/工作负荷仿真、可解释AI（XAI：特征归因/规则抽取/奖励分解）、STPA-Teaming安全分析</td>
+</tr>
+<tr>
+<td style="text-align: left;">SEAD/DEAD（压制/摧毁敌防空）</td>
+<td style="text-align: left;">侦察-压制一体、编队协同、诱饵/饱和打击</td>
+<td style="text-align: left;">IADS行为建模与反应时序；杀伤链时延与战术窗口评估；SAM/雷达机动与多传感器融合</td>
+<td style="text-align: left;">交战级/任务级联仿（BVR/近程机理建模思想）、蒙特卡洛作战效能评估、雷达/导弹作用域与机动学建模、红蓝博弈与策略搜索</td>
+</tr>
+<tr>
+<td style="text-align: left;">诱饵/欺骗与伪装</td>
+<td style="text-align: left;">可调特征签名（RCS/IR/轨迹）、协同假目标</td>
+<td style="text-align: left;">签名保真度与成本/载荷约束折中；“友伤/误识别”风险评估；对抗识别模型的适配</td>
+<td style="text-align: left;">签名综合（CEM/IR链路）、行为克隆/轨迹仿真、目标识别对抗样本评估、联合感知-决策共仿真</td>
+</tr>
+<tr>
+<td style="text-align: left;">通信中继/战术网关</td>
+<td style="text-align: left;">多跳Mesh、LPI/LPD波形、空域-频谱联合优化部署</td>
+<td style="text-align: left;">三维中继位置优化与覆盖；频谱共存与干扰温度约束；断连环境下的容错路由</td>
+<td style="text-align: left;">拓扑优化与图模型、射线追踪/地形遮蔽传播、动态频谱接入仿真、存储转发/中继协议仿真（ns-3）</td>
+</tr>
+<tr>
+<td style="text-align: left;">海上/濒海ISR与打击</td>
+<td style="text-align: left;">SAR/ISAR/EO-IR载荷、海面搜救/目标识别、抗盐雾风浪</td>
+<td style="text-align: left;">海杂波/风浪谱对探测性能影响；海面导管效应/折射对通信/雷达影响；舰船目标机动与虚警</td>
+<td style="text-align: left;">海杂波/CFAR检测链路建模、SAR成像/运动补偿仿真、海气边界层传播模型、目标行为与轨迹库</td>
+</tr>
+<tr>
+<td style="text-align: left;">城市环境ISR/近距支援</td>
+<td style="text-align: left;">低空NLOS通信、精细化态势感知、避障/抗干扰</td>
+<td style="text-align: left;">NLOS多径/遮挡导致的感知退化；GNSS欺骗/干扰；拥挤空域下的安全间隔与风险评估</td>
+<td style="text-align: left;">城市射线追踪/多径模型、视觉-惯导融合误差仿真、密度与风险模型、规则约束/ROE任务级仿真</td>
+</tr>
+<tr>
+<td style="text-align: left;">CBRN侦察/环境监测</td>
+<td style="text-align: left;">传感器阵列部署、溯源航迹规划、长时覆盖</td>
+<td style="text-align: left;">毒剂/放射性羽流的时空扩散不确定性；传感器误报/漏报；安全走廊与撤离路线评估</td>
+<td style="text-align: left;">羽流扩散模型（高斯/CFD）、贝叶斯源反演与不确定性量化（UQ）、覆盖-路径联合优化仿真、传感器性能ROC建模</td>
+</tr>
+<tr>
+<td style="text-align: left;">HALE/HAPS持久在位</td>
+<td style="text-align: left;">能源管理（太阳能/蓄电）、平流层定点、精密指向与热控</td>
+<td style="text-align: left;">能量收支与任务负载权衡；平流层风场与定点控制；热环境对载荷与结构影响</td>
+<td style="text-align: left;">能量收支与功率预算仿真、平流层风场模型与站位控制、热-结构-控制多学科仿真（MDAO）、高空通信链路仿真</td>
+</tr>
+<tr>
+<td style="text-align: left;">反无人机（C-UAS）拦截/压制</td>
+<td style="text-align: left;">侦测/识别/跟踪、软杀伤（干扰/接管）、硬杀伤</td>
+<td style="text-align: left;">小目标低RCS/低速/低空检测；多传感器融合跟踪稳定性；交战安全性与副损伤评估</td>
+<td style="text-align: left;">多传感器融合（雷达/EO-IR/RF指纹）、概率数据关联/多目标跟踪（JPDA/MB-MOT）、效能评估（MOP/MOE）、交战几何与避碰仿真</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3"><strong>基础性要求：高逼真度、强对抗性战场环境建模</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4"><strong>超越动力学：电磁与网络空间域</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>现代无人机系统的建模与仿真必须超越传统的物理和动力学模型。正如近期冲突所揭示的，当代战场呈现出“近乎持续的监视”特征，并且在电磁频谱（EMS）和网络空间这两个非物理领域充满了激烈的对抗 。因此，一个有效的仿真环境必须能够精确地建模这些无形但具有决定性影响的作战维度。若不考虑这些因素，仿真结果将严重脱离实战，无法为无人机系统的设计与战术发展提供有效支撑。</p>
+<h3 id="_5"><strong>模拟强对抗电磁环境</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>构建高逼真度的作战电磁环境仿真是当前无人机系统M\&amp;S的重中之重。以诺斯罗普·格鲁曼公司（Northrop Grumman）的作战电磁环境模拟器（CEESIM）为例，这类先进系统能够模拟多个、同步且动态的射频（RF）发射源，从而为复杂的电子战（EW）系统提供测试与验证平台 。这些仿真系统强调与情报数据库的深度集成，能够实时回放捕获到的真实威胁信号波形，以确保模拟环境的“忠于实战” 。其最终目标是创建一个数字化的战场环境，使无人机系统的传感器、通信链路和电子对抗措施在其中受到与真实战场同等强度的压力测试，从而全面评估其在复杂电磁环境下的生存能力和作战效能 。</p>
+<h3 id="_6"><strong>集成多域威胁</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>高逼真度的战场仿真不仅要覆盖电磁领域，还必须集成其他新兴的多域威胁。这包括定向能武器（如激光和高功率微波）、高超声速系统以及集成了动能和非动能打击手段的先进反无人机系统（C-UAS）。仿真系统必须能够精确建模这些威胁与无人机系统之间的复杂交互作用，包括评估无人机自身传感器和对抗措施在面临饱和、多样的攻击时的真实性能表现 。</p>
+<p>这种对高逼真度仿真环境的追求，其背后逻辑在于，模拟战场的逼真度直接决定了在其中开发的自主算法的实战鲁棒性。一个在纯净、无对抗的虚拟环境中训练出的AI，在部署到真实、复杂的战场时将表现得极其脆弱，甚至可能导致灾难性失败。因此，对高逼真度环境仿真的投入并非一项辅助性工作，而是开发具备实战可信度的自主作战能力的绝对前提。无人机系统日益依赖电磁频谱进行指挥、控制和感知，而对手则在积极发展旨在阻断或削弱电磁频谱使用的电子战和干扰能力 。AI驱动的无人机必须具备在这种干扰下持续作战的能力 。为了学习并获得这种韧性，AI必须在一个能够精确模拟这些干扰的仿真环境中进行训练 。如果仿真环境的逼真度不足，AI习得的策略将仅在理想条件下有效，这会产生“负向训练”效应，并导致对自身能力的错误评估。由此可见，模拟环境的质量是决定自主系统真实世界效能的直接因果因素。</p>
+<h2 id="_7"><strong>模拟智能无人机系统作战的核心挑战</strong><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8"><strong>蜂群难题：去中心化系统建模</strong><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>模拟自主无人机蜂群带来了独特的、前所未有的挑战。与单一平台不同，蜂群依赖于去中心化的协同机制和自下而上的涌现行为，这些特性极难通过传统方法进行建模和预测 。其核心挑战包括：</p>
+<ul>
+<li><strong>可扩展性（Scalability）</strong>：随着蜂群中智能体数量的增加，计算和通信的开销呈指数级增长，对仿真平台的性能提出了极高要求 。  </li>
+<li><strong>去中心化协同（Decentralized Coordination）</strong>：在没有中央控制器的情况下，如何精确建模个体间的局部交互，并使其能够产生连贯的、宏观层面的集体行为，是仿真领域的关键难题 。  </li>
+<li><strong>通信建模（Communication Modeling）</strong>：必须精确模拟飞行自组织网络（FANETs）中的网络延迟、带宽限制以及在复杂电磁环境下对干扰的脆弱性，这些因素直接影响蜂群的协同效率 。  </li>
+<li><strong>物理约束（Physical Constraints）</strong>：在仿真中必须充分考虑能量效率、电池续航以及在密集编队中避免碰撞等现实物理限制，否则仿真结果将失去意义 。</li>
+</ul>
+<h3 id="_9"><strong>跨越鸿沟：“仿真到现实”的差距</strong><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>“仿真到现实”（Sim-to-Real）的差距是自主系统开发中一个长期存在且至关重要的问题。它指的是系统在仿真环境中的表现与其在真实世界中表现之间的差异 。仿真环境往往会简化或忽略真实世界的复杂变量，如突发的气象变化、传感器噪声、未建模的硬件动态特性等，导致在仿真中表现优异的算法在现实中性能大幅下降 。</p>
+<p>针对这一难题，美国国防部高级研究计划局（DARPA）的“从不精确和抽象模型到自主技术的迁移”（TIAMAT）项目提出了一种反直觉的、颠覆性的范式 。该项目理论认为，通过在多样化的、</p>
+<p><em>低逼真度</em>的抽象模型上训练AI，可以催生出更具通用性和鲁棒性的自主能力。其核心逻辑是，这种方法迫使AI学习任务背后的基本原理和语义共性（例如，交战规则），而不是“过拟合”于某个特定高逼真度仿真环境的细节，从而更好地适应真实世界中不可预知的变化 。</p>
+<h3 id="vva"><strong>“黑箱”困境：人工智能驱动系统的验证、确认与鉴定（VV&amp;A）</strong><a class="headerlink" href="#vva" title="Permanent link">&para;</a></h3>
+<p>传统VV&amp;A方法论在面对人工智能，特别是深度学习系统时，正面临一场深刻的危机。这些系统在决策机制上如同“黑箱”，其内部逻辑不透明且难以解释 。为确定性软件系统设计的成熟VV&amp;A流程，完全不适用于那些行为会随数据输入而不断演化的非确定性学习系统 。这催生了对全新VV&amp;A框架的需求，例如基于风险的VV&amp;A方法。该方法不再试图对系统所有可能的状态进行详尽（且不可能实现）的验证，而是根据系统的预期用途和潜在的失效后果来定制验证流程，其目标是在模型不可完全解释的情况下，为其推理能力建立可信度 。</p>
+<h3 id="_10"><strong>集成挑战：互操作性与规模化</strong><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>构建大规模、多域的联合仿真环境在技术上面临着巨大障碍。其中，缺乏标准化的通信和控制协议严重限制了不同制造商生产的系统之间的互操作性，而将空中、地面、海洋等异构平台无缝集成到一个统一的仿真环境中，则是一个更为复杂的系统工程问题 。</p>
+<p>“实兵-虚拟-构造”（Live-Virtual-Constructive, LVC）集成技术被视为应对这一挑战的关键赋能手段。LVC通过将真实世界的实兵装备（Live）、处于模拟器中的操作员（Virtual）以及由AI驱动的计算机生成兵力（Constructive）融合在同一个无缝的训练与实验环境中，极大地扩展了仿真的规模和复杂度 。同时，遵循模块化开放系统架构（MOSA）原则进行系统设计，对于促进不同模块和系统间的即插即用式集成至关重要 。</p>
+<p>这些挑战并非孤立存在，而是相互交织、盘根错节。例如，一个AI模型本身就是一个“黑箱”，其VV&amp;A已然困难；而一个由成百上千个AI智能体组成的蜂群，其涌现行为并非由程序直接指定，而是源于局部交互，验证这种复杂系统的行为是完全不同量级的难题 。同样，“仿真到现实”的差距对于单一平台可能主要涉及风力等物理变量 ，但对于蜂群，则额外包含了在复杂环境中多智能体之间射频通信的不可预测物理特性，这是一个更难精确建模的问题 。因此，要解决蜂群的VV&amp;A问题，首先需要一个已经弥合了单体物理和群体通信“仿真到现实”差距的模拟环境。这揭示了各项挑战之间存在着紧密的依赖关系，必须采取系统性的、整体的解决方案，而非孤立地解决单个问题。</p>
+<h2 id="_11"><strong>无人机系统仿真的先进方法论</strong><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="_12"><strong>学会战斗：用于自主战术生成的强化学习</strong><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>强化学习（Reinforcement Learning, RL）已成为生成无人机自主行为和战术的核心技术。</p>
+<ul>
+<li><strong>核心概念</strong>：RL允许智能体在与仿真环境的持续交互中，通过“试错”来学习最优策略，以最大化累积奖励。这一特性使其非常适合解决具有延迟奖励和复杂状态空间的军事决策问题 。  </li>
+<li><strong>应用领域</strong>：RL在无人机系统领域的应用已十分广泛，涵盖了在威胁密集区域进行路径规划 、动态障碍规避，以及高对抗性的自主空战。一个标志性的例子是DARPA的“空战演进”（ACE）项目，该项目成功地让一个由AI驾驶的F-16战斗机在模拟的视距内格斗中战胜了人类王牌飞行员 。  </li>
+<li><strong>先进技术</strong>：在技术层面，研究已从标准的深度强化学习（DRL）向更复杂的层次化强化学习（HRL）发展。HRL通过将复杂任务分解为更简单的子目标（例如，由一个高层的“元控制器”分配航路点，再由一个底层的控制器执行具体的飞行动作），能够更高效地解决多阶段、长周期的复杂任务 。  </li>
+<li><strong>混合方法</strong>：为了进一步提升性能，研究人员正积极探索将RL与其他技术相结合的混合方法。例如，结合模仿学习（Imitation Learning），可以利用人类专家的演示数据来“冷启动”和加速学习过程；结合长短期记忆网络（LSTM），可以提升学习算法的收敛速度；而结合如灰狼优化器（GWO）等元启发式算法，则可以对生成的飞行路径进行精细优化，使其更加平滑和高效 。</li>
+</ul>
+<p><strong>表2. 无人机战术建模中常用的强化学习技术</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">RL 技术</th>
+<th style="text-align: left;">核心原理</th>
+<th style="text-align: left;">在无人机中的主要应用</th>
+<th style="text-align: left;">数据需求</th>
+<th style="text-align: left;">计算复杂度</th>
+<th style="text-align: left;">适应性</th>
+<th style="text-align: left;">主要优势</th>
+<th style="text-align: left;">主要局限性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>深度Q网络 (DQN)</strong></td>
+<td style="text-align: left;">学习一个函数，用于在给定状态下估计每个动作的价值（Q值）。</td>
+<td style="text-align: left;">路径规划、障碍规避</td>
+<td style="text-align: left;">低（从零开始学习）</td>
+<td style="text-align: left;">中等</td>
+<td style="text-align: left;">中等</td>
+<td style="text-align: left;">在离散动作空间中表现稳定。</td>
+<td style="text-align: left;">对超参数敏感，处理连续动作空间较难。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>近端策略优化 (PPO)</strong></td>
+<td style="text-align: left;">一种策略梯度方法，通过限制策略更新的幅度来确保学习过程的稳定性。</td>
+<td style="text-align: left;">连续控制、飞行姿态控制、机动决策</td>
+<td style="text-align: left;">低（从零开始学习）</td>
+<td style="text-align: left;">中等偏高</td>
+<td style="text-align: left;">良好</td>
+<td style="text-align: left;">兼具样本效率和实现简单性，性能稳定。</td>
+<td style="text-align: left;">在某些复杂任务中可能收敛较慢。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>层次化RL (HRL)</strong></td>
+<td style="text-align: left;">将复杂任务分解为多层次的子任务，由高层策略指导低层策略执行。</td>
+<td style="text-align: left;">复杂任务规划、远程导航、多阶段攻击</td>
+<td style="text-align: left;">中等（需要任务分解结构）</td>
+<td style="text-align: left;">高</td>
+<td style="text-align: left;">良好</td>
+<td style="text-align: left;">有效解决稀疏奖励问题，提高长期规划能力。</td>
+<td style="text-align: left;">任务分解的优劣直接影响性能，设计难度大。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>RL + 模仿学习 (IL)</strong></td>
+<td style="text-align: left;">使用专家演示数据来预训练或引导RL智能体，加速学习过程。</td>
+<td style="text-align: left;">战术机动、人机协同、特定技能学习</td>
+<td style="text-align: left;">高（依赖专家数据）</td>
+<td style="text-align: left;">中等</td>
+<td style="text-align: left;">较差</td>
+<td style="text-align: left;">显著提升样本效率，快速引导至有效策略。</td>
+<td style="text-align: left;">性能上限受限于专家水平，可能学到次优行为。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>元强化学习 (Meta-RL)</strong></td>
+<td style="text-align: left;">训练智能体“学会如何学习”，使其能够利用少量经验快速适应新任务。</td>
+<td style="text-align: left;">快速任务重配置、适应未知环境/威胁</td>
+<td style="text-align: left;">高（需要大量相关任务进行元训练）</td>
+<td style="text-align: left;">非常高</td>
+<td style="text-align: left;">优秀</td>
+<td style="text-align: left;">极强的泛化和快速适应能力。</td>
+<td style="text-align: left;">元训练过程计算成本极高，需要精心设计的任务分布。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_13"><strong>数字孪生革命：从设计到预测性维护</strong><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>数字孪生（Digital Twin, DT）技术正在军事领域引发一场深刻的变革。</p>
+<ul>
+<li><strong>定义</strong>：数字孪生是一个物理资产、流程或系统的高逼真度、动态虚拟副本，通过双向数据流与实体实时相连 。这种实时的、双向的数据同步是其与静态仿真的根本区别 。  </li>
+<li><strong>全生命周期集成</strong>：数字孪生技术贯穿无人机系统的整个生命周期：在<strong>设计研发</strong>阶段，用于测试虚拟样机；在<strong>作战规划</strong>阶段，提供精确的平台模型进行推演；在<strong>任务执行</strong>中，进行实时状态监控和性能评估；在<strong>维护保障</strong>阶段，利用运行数据预测部件故障，实现预测性维护 。  </li>
+<li><strong>“力量倍增器”</strong>：通过实现对物理实体的精确映射和未来状态的预测，数字孪生成为军事行动的“力量倍增器”。它支持进行大量的“假设-如果”（what-if）分析，优化作战性能，提高系统出勤率，并显著降低全生命周期的成本 。</li>
+</ul>
+<h3 id="ai"><strong>场景引擎：生成式AI在兵棋推演与任务规划中的应用</strong><a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
+<p>生成式人工智能（Generative AI）正在颠覆传统的军事建模与仿真，尤其是在兵棋推演和场景生成领域。</p>
+<ul>
+<li><strong>自动化场景生成</strong>：以约翰·霍普金斯大学应用物理实验室（JHU/APL）开发的GenWar系统为例，它利用自然语言聊天机器人界面，允许指挥官用日常语言描述作战构想，系统便能在数分钟内自动生成复杂的仿真场景。而在过去，这一过程需要专家团队耗费数月时间进行手动编程 。这极大地降低了兵棋推演的门槛，并加快了决策迭代的速度。  </li>
+<li><strong>AI扮演对手与裁判</strong>：AI不仅能生成场景，还能在其中扮演角色。AI生成的对手能够展现出更真实、更具适应性和不可预测性的行为，彻底改变了过去那种依赖静态、预设脚本的“红方”模式 。更进一步，像SAGE这样的系统甚至可以完全替代人类玩家，让AI与AI进行对抗。这使得在短时间内进行成百上千次高速兵棋推演成为可能，从而能够探索更广阔的策略空间，发现人类玩家难以想到的“奇异点”和制胜规律 。美国空军正积极寻求此类平台，以模拟高强度冲突，提升战备规划水平 。</li>
+</ul>
+<p>这些前沿技术的真正革命性潜力，并非在于其孤立应用，而在于它们的深度融合。可以预见一个强大的、自动化的“自主能力工厂”：一个无人机蜂群的数字孪生为强化学习智能体提供了进行训练所需的高逼真度模型；然后，一个生成式AI可以按需创建无穷无尽的复杂作战场景，将这个“数字孪生-强化学习”组合置于其中进行严苛的测试和验证。这一流程始于一个类似GenWar的生成式AI场景生成器设定任务，接着用友军资产的数字孪生和由强化学习驱动的敌方资产数字孪生来填充这个任务环境 。友方的AI智能体随后可以在这个动态、高逼真度且变化无穷的环境中进行训练。这个集成的系统构成了一个完整的、端到端的自主能力开发、测试和部署流水线，其威力远超任何单一技术的简单叠加。</p>
+<h2 id="_14"><strong>人的维度：面向人机协同与认知优势的仿真</strong><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="mum-t"><strong>面向人机协同（MUM-T）的“人在环路”仿真</strong><a class="headerlink" href="#mum-t" title="Permanent link">&para;</a></h3>
+<p>人机协同（Manned-Unmanned Teaming, MUM-T）是未来空战的核心模式，而仿真则是设计和验证其人机交互界面的关键工具。“人在环路”（Human-in-the-Loop, HITL）实验邀请专业飞行员参与，对于评估新型座舱布局、任务授权流程以及整个系统的作战效能至关重要 。这类仿真的核心目标是理解飞行员的角色如何从一个平台的直接操控者，转变为一个指挥、监管多个自主平台的“人在回路”（on-the-loop）或“人在环上”（human-on-the-loop）的战术任务指挥官 。</p>
+<h3 id="_15"><strong>操作员模拟：认知建模与自适应接口</strong><a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>更进一步的研究已经超越了单纯的界面设计，开始对人类操作员本身进行建模。研究重点是利用仿真环境实时测量操作员的认知负荷、注意力分配和态势感知水平 。DARPA的ASIST和CREATE等项目正在探索如何通过AI对战场环境和人类认知状态进行推理，从而更有效地促进人机团队合作 。最终目标是创造出能够根据操作员状态动态调整自身行为或信息呈现方式的自适应系统，以主动降低操作员的认知负担，预防人为失误 。</p>
+<h3 id="_16"><strong>为信任而训练</strong><a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>仿真是建立人类与自主队友之间“校准信任”（calibrated trust）的主要平台。通过让操作员在仿真中经历各种情景——包括正常操作和自主系统出现故障或做出意外决策的“边缘案例”——可以有效地训练他们何时应该信任AI，何时必须果断干预 。这对于有效的人机协同至关重要，因为过度信任（导致自满）和信任不足（导致错失战机）在实战中都可能带来灾难性后果 。在开发的早期阶段，诸如故事叙述和可视化作战概念（ConOps）等概念建模技术被用来确保所有利益相关方对人类在系统中的角色和责任有一个共同的、清晰的理解 。</p>
+<p>在这一过程中，人机协同仿真的根本目的发生了倒转。它不再仅仅是训练人类，而是利用人类来训练和验证自主系统。传统的飞行模拟器旨在训练飞行员操控一个已知的、确定性的飞机系统。但在人机协同中，飞行员指挥的是一个智能的、非确定性的AI智能体 。核心的设计挑战不再是空气动力学，而是人与AI之间的交互、理解和信任 。因此，仿真实验的主要输出不再是飞行员的得分，而是人机“二元组”的整体表现数据：AI的行动如何影响飞行员的认知负荷？飞行员是否能准确理解AI的意图？这个团队的整体作战效能如何？。这些宝贵的数据随后被反馈给AI开发者，用以迭代和优化自主算法。在这个新范式中，飞行员的反馈和表现数据成为了评判“何为良好协同”的“黄金标准”。人类不再仅仅是受训者，而成为了AI开发与验证流程中不可或缺的核心组成部分。</p>
+<h2 id="_17"><strong>确保可控：用于条令法规验证的仿真</strong><a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="roe"><strong>编码交战规则（ROE）</strong><a class="headerlink" href="#roe" title="Permanent link">&para;</a></h3>
+<p>建模与仿真是确保自主系统在严苛的法律和伦理框架内运行的关键工具。交战规则（Rules of Engagement, ROE）为规范军事AI的应用提供了一个灵活而具体的框架，它能够详细定义武力使用的条件、人类控制的层级和具体要求，以及在不同情况下的交战授权 。仿真提供了一个可控的、可重复的数字环境，使得开发者能够通过数千次复杂的场景测试，系统性地验证自主系统的决策逻辑是否严格遵守这些预设的约束条件，从而确保其行为的合法性与可预测性 。</p>
+<h3 id="laws"><strong>仿真作为致命性自主武器系统（LAWS）的认证工具</strong><a class="headerlink" href="#laws" title="Permanent link">&para;</a></h3>
+<p>对于致命性自主武器系统（Lethal Autonomous Weapon Systems, LAWS），仿真在正式的政策和法律审批流程中扮演着不可替代的角色。美国国防部第3000.09号指令明确规定，必须采取措施最小化可能导致意外交战的自主系统失误 。建模与仿真是该指令以及国际法（如《日内瓦公约第一附加议定书》第36条所要求的武器审查）规定的正式“验证、确认、测试与评估”（VVT\&amp;E）流程的核心组成部分 。面对自主系统庞大到近乎无限的决策空间，仿真是在武器系统部署前，探索和评估其在各种“边缘案例”下行为的唯一可行手段。</p>
+<p>对于致命性自主武器系统而言，进行详尽且可验证的仿真测试，已不仅仅是工程上的最佳实践，它构成了这些系统获得法律和伦理合法性的根本基础。武力的使用受到国际人道法（LOAC）和交战规则（ROE）等严格法律框架的约束 。外界对LAWS的主要担忧在于，它们是否能可靠地遵守这些框架，特别是区分原则和比例原则 。实弹测试不仅成本高昂、风险巨大，而且只能覆盖极小部分的潜在作战场景。因此，证明一个LAWS合规性的主要证据，必须来自于在大量、多样化的虚拟场景中进行的广泛仿真测试 。这些仿真的可信度、可追溯性（这又与第3.3节讨论的VV&amp;A问题紧密相连），将构成论证该武器系统合法性的核心法律依据。这使得建模与仿真从一个单纯的工程工具，上升为关乎自主武器未来发展的国际安全政策与法律的基石。</p>
+<h2 id="_18"><strong>战略展望</strong><a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p>数字孪生、强化学习和生成式AI这三项前沿技术正在加速融合，形成一个一体化的“自主能力工厂”。这个强大的技术组合，有望极大地缩短智能无人机系统的研发、测试、部署和升级周期，从而在未来的军事竞争中获得决定性的时间优势。</p>
+<p>展望未来十年，无人机系统仿真领域预计将出现以下关键发展：</p>
+<ul>
+<li><strong>持久化LVC环境</strong>：从临时搭建的演习环境，转向基于云计算的、7x24小时在线的持久化LVC环境。这将为部队提供随时可用的训练、实验和任务规划平台，实现战备能力的持续生成。  </li>
+<li><strong>AI原生模拟器</strong>：未来的仿真平台将不再是对现有模拟器的修补和改造，而是从底层架构开始就为AI开发而设计的“AI原生”系统。它们将内置支持大规模分布式训练、海量数据管理和复杂AI算法验证的核心功能。  </li>
+<li><strong>仿真中的可解释AI（XAI）</strong>：为了解决“黑箱”问题，可解释AI技术将被深度集成到仿真和调试环节。这将帮助开发者和操作员直观地理解AI做出某一决策的“原因”，从而建立信任，并能更快地诊断和修复算法缺陷。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.action.view", "navigation.indexes"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

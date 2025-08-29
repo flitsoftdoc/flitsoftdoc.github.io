@@ -1,0 +1,5191 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="FlitSoft Documents">
+      
+      
+        <meta name="author" content="flitsoftdoc">
+      
+      
+        <link rel="canonical" href="https://flitsoftdoc.github.io/EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch01/">
+      
+      
+        <link rel="prev" href="../../%E9%9B%B7%E8%BE%BE%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB%E7%A6%BB%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%99%A8/">
+      
+      
+        <link rel="next" href="../Radar%20Equations%20for%20MR%20ch02/">
+      
+      
+      <link rel="icon" href="/assets/logo/grid.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>第1章 雷达方程的发展 - FlitSoft Doc Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/pseudo-code.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XX66BVLPNX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XX66BVLPNX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XX66BVLPNX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="FlitSoft Doc Hub" class="md-header__button md-logo" aria-label="FlitSoft Doc Hub" data-md-component="logo">
+      
+  <img src="/assets/logo/grid.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FlitSoft Doc Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第1章 雷达方程的发展
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../UAS/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  UAS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../AI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Gaming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../C2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NGC3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Simu/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Visual/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Visualization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="FlitSoft Doc Hub" class="md-nav__button md-logo" aria-label="FlitSoft Doc Hub" data-md-component="logo">
+      
+  <img src="/assets/logo/grid.png" alt="logo">
+
+    </a>
+    FlitSoft Doc Hub
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../UAS/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    UAS
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            UAS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Formation Control
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Formation Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Formation%20Control/%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%98%B5%E5%9E%8B%E5%8F%98%E6%8D%A2%E8%BF%87%E6%B8%A1%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    固定翼无人机阵型变换过渡轨迹生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Formation%20Control/%E5%9F%BA%E4%BA%8E%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B%E6%8E%A7%E5%88%B6%E7%9A%84%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%BC%96%E9%98%9F%E9%A3%9E%E8%A1%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于非线性模型预测控制的无人机编队飞行
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Formation%20Control/%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%9B%86%E7%BE%A4%E5%9B%BA%E5%AE%9A%E9%98%B5%E5%9E%8B%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无人机集群固定阵型轨迹生成模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fix wing uav flight sim
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fix wing uav flight sim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/fix_wing_uav_flight_sim/fix_wing_uav_flight_sim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    小型固定翼无人机飞行动力学模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/fix_wing_uav_flight_sim/JSBSim_Quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSBSim Quickstart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/fix_wing_uav_flight_sim/JSBSim_User_manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    JSBSim 用户手册
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/fix_wing_uav_flight_sim/StandaloneLaeroModel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轻量级飞行动力学模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Navigation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Navigation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/navigation/scirobotics.ado6187.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向微型无人机的安全保障高速导航
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Path Searching
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Path Searching
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    A* Search
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            A* Search
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Path%20Searching/A%2A%20Search/A%2A%20Path%20Searching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于运动基元的A*算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trajectory Planning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Trajectory Planning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Trajectory_Planning/Key%20of%20Trajectory%20Manage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轨迹管理的几个关键问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_2" id="__nav_1_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+     B spline
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_2">
+            <span class="md-nav__icon md-icon"></span>
+             B spline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Trajectory_Planning/%20B-spline/%E9%9A%9C%E7%A2%8D%E7%8E%AF%E5%A2%83%E4%B8%8BB%E6%A0%B7%E6%9D%A1%E8%BD%A8%E8%BF%B9%E9%97%AE%E9%A2%98%E8%A7%A3%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    障碍环境下B样条轨迹问题解析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Trajectory_Planning/%20B-spline/%E9%9A%9C%E7%A2%8D%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%9B%BA%E5%AE%9A%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BAB%20%E6%A0%B7%E6%9D%A1%E9%81%BF%E9%9A%9C%E8%BD%A8%E8%BF%B9%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    固定翼无人机B 样条避障轨迹生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_3" id="__nav_1_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cubic Polynomial Curve
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cubic Polynomial Curve
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Trajectory_Planning/Cubic%20Polynomial%20Curve/Cubic%20Polynomial%20Curve%20Trajectory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    用于轨迹规划的三次样条插值
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6_4" id="__nav_1_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kappa trajectories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kappa trajectories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Trajectory_Planning/kappa-trajectories/kappa-%E8%BD%A8%E8%BF%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    κ轨迹平滑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Trajectory_Planning/kappa-trajectories/kappa%E8%BD%A8%E8%BF%B9%E7%82%B9%E7%94%9F%E6%88%90C%2B%2B%E4%BB%A3%E7%A0%81%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    κ轨迹点生成代码说明
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Trajectory_Planning/kappa-trajectories/Real-time_dynamic_trajectory_smoothing_for_unmanne%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无人机实时动态轨迹平滑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Trajectory_Planning/kappa-trajectories/%E7%AD%89%E9%95%BF%E8%BD%A8%E8%BF%B9kappa%E6%B1%82%E8%A7%A3%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    等长轨迹κ求解算法设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Velocity Plan
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Velocity Plan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Velocity_Plan/%E4%B8%89%E6%AE%B5S%E6%9B%B2%E7%BA%BF%E9%80%9F%E5%BA%A6%E8%A7%84%E5%88%92%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    三段S曲线速度规划模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    EM
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            EM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Antenna Pattern
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Antenna Pattern
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Antenna%20Pattern/01.%E8%BE%9B%E6%A0%BC%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    辛格方向图模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Antenna%20Pattern/02.%E9%AB%98%E6%96%AF%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    高斯方向图模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comm
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Comm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/%E5%9C%B0%E7%A9%BA%E6%B5%8B%E6%8E%A7%E9%93%BE%E8%B7%AF%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    地空测控链路计算模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Radar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Radar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%97%A0%E6%BA%90%E4%BE%A6%E5%AF%9F%E6%B5%8B%E5%90%91%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无源侦察测向定位模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8B%EF%BC%88%E7%A9%BA%E5%AF%B9%E5%9C%B0%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    空对地雷达对抗侦察效能模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9B%B7%E8%BE%BE%E5%AF%B9%E6%8A%97%E4%BE%A6%E5%AF%9F%E9%80%9A%E7%94%A8%E4%BE%A6%E5%AF%9F%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达对抗侦察效能通用模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9B%B7%E8%BE%BE%E5%B9%B2%E6%89%B0%E6%95%88%E8%83%BD%E6%A8%A1%E5%9E%8Bv3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达干扰效能模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%9B%B7%E8%BE%BE%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB%E7%A6%BB%E7%BA%BF%E8%AE%A1%E7%AE%97%E5%99%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达探测距离计算器
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_6" id="__nav_2_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Radar Equations for Modern Radar
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Radar Equations for Modern Radar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第1章 雷达方程的发展
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1章 雷达方程的发展
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 雷达方程基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 雷达方程基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 最大可用信噪比
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 最小所需信噪比
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 脉冲雷达的最大探测距离
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 原始雷达方程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Blake的脉冲雷达方程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Blake的脉冲雷达方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 Blake方程中各项的意义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-c_b-12-eq-814a" class="md-nav__link">
+    <span class="md-ellipsis">
+      - 带宽因子：\(C_{b}\) 由[12, Eq. (8.14a)]给出：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="- 带宽因子：\(C_{b}\) 由[12, Eq. (8.14a)]给出：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 距离的求解方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 Blake图的优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Blake的相干雷达方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.5 Blake的双基地雷达方程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 雷达方程的其他形式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 雷达方程的其他形式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-hall" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 Hall的雷达方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-barton" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 Barton的雷达方程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 距离计算中的常见陷阱
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 距离计算中的常见陷阱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-boldsymbolt_s" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 系统噪声温度 \(\boldsymbol{T}_{s}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.2 信噪能量比的使用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.3 平均功率的使用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.4 带宽修正与匹配因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.5 任意目标的可探测性因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#156" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.6 方向—传播因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#157" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.7 损耗因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#158" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.8 探测距离计算常见错误总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 现代雷达系统的雷达方程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 现代雷达系统的雷达方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1 需要修改距离方程的因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.1 需要修改距离方程的因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1611-eclipsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.1 遮蔽效应 (Eclipsing)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1612-stc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.2 灵敏度时间控制 (STC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1613" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.3 波束驻留因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1614" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.4 频率捷变或分集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1615" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.5 透镜因子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.2 适用于现代雷达的方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3 探测距离的计算方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.3 探测距离的计算方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1631" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3.1 探测距离计算示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1632" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3.2 固态雷达示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1633-stc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3.3 含STC的雷达示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.4 垂直覆盖图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#165" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.5 所需的探测概率
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 雷达方程发展的总结
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Radar%20Equations%20for%20MR%20ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2章 搜索雷达方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Radar%20Equations%20for%20MR%20ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第3章 杂波与干扰压制下的雷达方程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../AI/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Americas-AI-Action-Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Americas AI Action Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Foundation%20models%20and%20intelligent%20decision-making/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Foundation models and intelligent decision making
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/LoRA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LoRA
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/MARLlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MARLlib
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Why%20We%20Think%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why We Think
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Gaming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Decision
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Decision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Comparative%20Analysis%20of%20Task%20Allocation%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多无人机任务分配算法的比较分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/DAVIS_OCEANS_2025_PDF_XPRESS%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向无人水面艇探测的传感器套件设计框架
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Multi-UAV%20Task%20Assignment%20in%20Dynamic%20Environments%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    动态环境下多无人机任务分配技术现状
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Policy%20Space%20Response%20Oracles-%20A%20Survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    策略空间响应预言机 PSRO
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Towards%20Global%20Explainability%20of%20Artificial%20Intelligence%20Agent%20Tactics%20in%20Close%20Air%20Combat%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    面向近距离空战中人工智能智能体战术的全局可解释性
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Behavior Tree
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Behavior Tree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/Behavior%20Trees%20in%20Robot%20Control%20Systems.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行为树在机器人控制系统中的应用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/BehaviorTree.CPP%204.6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviorTree.CPP库
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/BT2208.04211v2.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    机器人应用中的行为树和状态机
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/Generation%20of%20Behavior%20Trees%20for%20Dynamic%20Agents%20Based%20on%20Market%20Inspired%20Task%20Allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于市场启发的任务分配的动态智能体行为树生成
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/LLM-BRAIn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LLM-BRAIn: 基于LLM驱动的行为树快速生成方
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/%E8%A1%8C%E4%B8%BA%E6%A0%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行为树基本概念
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../C2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    NGC3
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            NGC3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Advanced%20Battle%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    先进战斗管理系统 (ABMS)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/AEP-84%20VOLI%20EDA%20V1%20ch-all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    北约工程出版物 AEP-84 Volume I
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Decision%20Advantage%20and%20Initiative%20Completing%20Joint%20All-Domain%20Command%20and%20Control.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    决策优势与主动权
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Force-Based%20MANET_FANET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基于力的无人机蜂群自组织MANET/FANET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Simu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Simulation
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Simulation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/HIL%20Swarm%20Simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HIL Swarm Simulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/MARSIM%3A%20A%20point-realistic%20simulator%20for%20LiDAR-based%20UAVs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/OctoMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OctoMap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/The%20Mixed%20Reality%20Simulation%20Platform%20%28MIXR%29%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MIXR 混合现实仿真平台
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/ZMQ%20guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZMQ guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%9C%82%E7%BE%A4%E6%99%BA%E8%83%BD%E8%AE%AD%E7%BB%83%E5%B9%B3%E5%8F%B0%E8%AE%BE%E8%AE%A1.v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    蜂群算法训练平台设计方案
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AFSIM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            AFSIM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/AFSIM.cn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/AFSIM%20Version%202.0%20TECHNICAL%20REFERENCE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM V2.0 TECHNICAL REFERENCE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/afsims-pseudo-realtime-hybrid-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AFSIM 的伪实时混合仿真软件设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            SIMDIS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS%20SDK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK 架构分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS%20SDK%20SimCore%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK SimCore代码库分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS_Briefing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS Briefing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Visual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Visualization
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Visual/TacView/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tacview Technical Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Visual/%E5%9F%BA%E4%BA%8ESIMDIS%20SDK%E4%B8%8EOSG%E7%9A%843D%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7%E7%BB%BC%E5%90%88%E5%AE%9E%E6%96%BD%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SIMDIS SDK与OSG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 雷达方程基础
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 雷达方程基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 最大可用信噪比
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 最小所需信噪比
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 脉冲雷达的最大探测距离
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 原始雷达方程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Blake的脉冲雷达方程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Blake的脉冲雷达方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 Blake方程中各项的意义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-c_b-12-eq-814a" class="md-nav__link">
+    <span class="md-ellipsis">
+      - 带宽因子：\(C_{b}\) 由[12, Eq. (8.14a)]给出：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="- 带宽因子：\(C_{b}\) 由[12, Eq. (8.14a)]给出：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 距离的求解方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 Blake图的优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Blake的相干雷达方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-blake" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.5 Blake的双基地雷达方程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 雷达方程的其他形式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 雷达方程的其他形式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-hall" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 Hall的雷达方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-barton" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 Barton的雷达方程
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 距离计算中的常见陷阱
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 距离计算中的常见陷阱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-boldsymbolt_s" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 系统噪声温度 \(\boldsymbol{T}_{s}\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.2 信噪能量比的使用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.3 平均功率的使用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.4 带宽修正与匹配因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.5 任意目标的可探测性因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#156" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.6 方向—传播因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#157" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.7 损耗因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#158" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.8 探测距离计算常见错误总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 现代雷达系统的雷达方程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 现代雷达系统的雷达方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1 需要修改距离方程的因素
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.1 需要修改距离方程的因素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1611-eclipsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.1 遮蔽效应 (Eclipsing)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1612-stc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.2 灵敏度时间控制 (STC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1613" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.3 波束驻留因子
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1614" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.4 频率捷变或分集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1615" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1.5 透镜因子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.2 适用于现代雷达的方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3 探测距离的计算方法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.3 探测距离的计算方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1631" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3.1 探测距离计算示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1632" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3.2 固态雷达示例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1633-stc" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3.3 含STC的雷达示例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.4 垂直覆盖图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#165" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.5 所需的探测概率
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 雷达方程发展的总结
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io/raw/main/docs/EM/Radar/Radar Equations for Modern Radar/Radar Equations for MR ch01.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="1">第1章 雷达方程的发展<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<p>雷达距离方程是在第二次世界大战期间发展起来的，用于分析雷达系统性能，并指导雷达研发人员在当时有限的设计选项中进行选择。该主题的最早文献曾受军事安全限制，但在战争结束后发表，并被广泛传播。</p>
+<p>预测雷达探测距离的基本方法与早期研究保持一致，这一研究首次发表于1947年美国海军研究实验室的Norton和Omberg的论文中[1,2]。我们将该方程称为原始雷达方程。在本章中，我们回顾雷达方程的发展步骤，并讨论其演化为可应用于现代雷达系统分析与设计的形式。为了避免不同作者使用的符号差异造成混淆，我们将引用文献中的符号替换为一致的符号系统，这些符号在使用时定义，并在本书末尾的附录A中列出。这使得能够直接比较这些方程及其局限性和对当前问题的适用性。</p>
+<h2 id="11">1.1 雷达方程基础<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<p>雷达方程的目标是计算在给定的雷达、目标和环境参数条件下，能够实现期望探测性能的最大距离 <span class="arithmatex">\(R_{m}\)</span>。本章讨论的雷达方程限定在热噪声为唯一干扰源的环境下，即目标回波信号必须在这种干扰下被成功检测。针对其他环境的方程将在第3章中推导。</p>
+<p>雷达距离方程的推导分为三步：</p>
+<ol>
+<li>表达在给定参数下可获得的最大信噪比随距离的变化；</li>
+<li>表达满足探测需求所需的最小信噪比；</li>
+<li>结合这两个表达式，求解满足要求的雷达可实现的最大探测距离。</li>
+</ol>
+<h3 id="111">1.1.1 最大可用信噪比<a class="headerlink" href="#111" title="Permanent link">&para;</a></h3>
+<p>在二战期间，North在机密研究中[3]（后发表于《IEEE会刊》）指出，当接收系统对发射波形使用匹配滤波器时，可以获得最大可能的信噪功率比 <span class="arithmatex">\((S / N)_{\max}\)</span>。这个最大比值等于波形的能量比 <span class="arithmatex">\(E / N_{0}\)</span> <span class="arithmatex">\({ }^{1}\)</span>，其中 <span class="arithmatex">\(E\)</span> 是回波信号能量，<span class="arithmatex">\(N_{0}\)</span> 是竞争热噪声的功率谱密度。第1步所要推导的表达式就是在给定系统参数下的 <span class="arithmatex">\(E / N_{0}\)</span>。在[1]中，<span class="arithmatex">\(E / N_{0}\)</span> 定义为单脉冲的可用能量比，参照点是接收天线输出端口。本书始终采用这一参考点。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="arithmatex">\({ }^{1}\)</span> 注意，本书中的能量比是 <span class="arithmatex">\(E / N_{0}\)</span>，而不是某些教材中使用的 <span class="arithmatex">\(\Re=2E/N_{0}\)</span>。</p>
+</div>
+<p>从各向同性发射天线出发，在任意距离 <span class="arithmatex">\(R\)</span> 处，发射脉冲的能量密度 <span class="arithmatex">\(E_{p}\)</span> 为：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+E_{p}=\frac{E_{t}}{4 \pi R^{2}} \quad\left(\mathrm{~J} / \mathrm{m}^{2}\right) \tag{1.1}
+\end{equation*}
+\]</div>
+<p>其中 <span class="arithmatex">\(E_{t}\)</span>（焦耳）是发射脉冲能量，<span class="arithmatex">\(4 \pi R^{2}\)</span> 是以雷达为中心半径为 <span class="arithmatex">\(R\)</span> 的球面面积。假设发射矩形脉冲，脉宽为 <span class="arithmatex">\(\tau(\mathrm{s})\)</span>，峰值功率为 <span class="arithmatex">\(P_{t}(\mathrm{W})\)</span>，则 <span class="arithmatex">\(E_{t}=P_{t}\tau(\mathrm{J})\)</span>。当发射天线具有增益 <span class="arithmatex">\(G_{t}\)</span> 时，波束轴上的能量密度被该增益放大：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+E_{p}=\frac{E_{t} G_{t}}{4 \pi R^{2}}=\frac{P_{t} \tau G_{t}}{4 \pi R^{2}} \quad\left(\mathrm{~J} / \mathrm{m}^{2}\right) \tag{1.2}
+\end{equation*}
+\]</div>
+<p>经过雷达散射截面为 <span class="arithmatex">\(\sigma(\mathrm{m}^{2})\)</span> 的目标反射后，入射到接收天线的回波能量密度 <span class="arithmatex">\(E_{a}\)</span> 为：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+E_{a}=\frac{E_{p}\sigma}{4 \pi R^{2}}=\frac{P_{t}\tau\sigma}{(4 \pi R^{2})^{2}} \quad\left(\mathrm{~J} / \mathrm{m}^{2}\right) \tag{1.3}
+\end{equation*}
+\]</div>
+<p>式(1.3)源于雷达散射截面的定义[4]。</p>
+<p>具有有效孔径 <span class="arithmatex">\(A_{r}\)</span> 的接收天线接收到的能量 <span class="arithmatex">\(E\)</span> 为：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+E=E_{a} A_{r}=\frac{P_{t}\tau G_{t} A_{r}\sigma}{(4 \pi R^{2})^{2}} \tag{1.4}
+\end{equation*}
+\]</div>
+<p>接收天线增益的表达式为：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+G_{r}=\frac{4 \pi A_{r}}{\lambda^{2}} \tag{1.5}
+\end{equation*}
+\]</div>
+<p>其中 <span class="arithmatex">\(\lambda\)</span> 为波长，由此得到脉冲雷达接收天线输出端口处的最大可用信号能量：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+E=\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4}} \tag{1.6}
+\end{equation*}
+\]</div>
+<p>到目前为止，我们考虑的是理想情况，即发射机输出直接送入天线，且发射机—目标—接收机路径上不存在任何减少接收信号能量的损耗。为了考虑这些射频损耗，可以在分母中引入因子 <span class="arithmatex">\(L_{1}\)</span>，得到：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+E=\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{1}} \tag{1.7}
+\end{equation*}
+\]</div>
+<p>式(1.7)的推导遵循现代雷达教材中的方法，但不同之处在于它是用脉冲的能量而不是功率来表述发射与接收信号。</p>
+<p>为了求出可用能量比，参考直接连接到天线输出端口的接收机，噪声功率谱密度 <span class="arithmatex">\(N_{0}(\mathrm{W}/\mathrm{Hz})\)</span> 表示为：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+N_{0}=kT_{s} \quad (\mathrm{W}/\mathrm{Hz} \text{ 或 J}) \tag{1.8}
+\end{equation*}
+\]</div>
+<p>其中<br />
+<span class="arithmatex">\(k=1.38 \times 10^{-23} \mathrm{J}/\mathrm{K}\)</span> 为玻尔兹曼常数；<br />
+<span class="arithmatex">\(T_{s}=\)</span> 系统噪声温度（开尔文）（见第6章）。  </p>
+<p>结合式(1.7)和(1.8)，得到最大可用信噪功率比：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\left(\frac{S}{N}\right)_{\max}=\frac{E}{N_{0}}=\frac{P_{t}\tau G_{t} G_{r} \lambda^{2}\sigma}{(4 \pi)^{3} R^{4} kT_{s} L_{1}} \tag{1.9}
+\end{equation*}
+\]</div>
+<h3 id="112">1.1.2 最小所需信噪比<a class="headerlink" href="#112" title="Permanent link">&para;</a></h3>
+<p>雷达方程推导的第二个表达式给出了获得指定探测性能所需的能量比。在[1]中假设探测由人工操作员完成，其通过阴极射线管显示器观察 <span class="arithmatex">\(n\)</span> 个连续回波脉冲：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+V(n)=\frac{E_{\min}}{N_{0}} \tag{1.10}
+\end{equation*}
+\]</div>
+<p>其中 <span class="arithmatex">\(E_{\min}\)</span> 是每个接收脉冲的最小能量，在最佳观测条件下使 <span class="arithmatex">\(n\)</span> 脉冲组在显示器上可见。这与当前定义[4]一致：  </p>
+<p>可见度因子（脉冲雷达）：单脉冲信号能量与单位带宽噪声功率之比，在最佳带宽和观察环境下，能在显示器上达到规定的探测概率和虚警概率。测量位置为接收机中频部分。</p>
+<p>因此最小所需能量为：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+E_{\min}=N_{0} V(n)=kT_{s}V(n) \tag{J}
+\end{equation*}
+\]</div>
+<p>脉冲数 <span class="arithmatex">\(n\)</span> 由脉冲重复频率 <span class="arithmatex">\(f_{r}\)</span> 与观测时间 <span class="arithmatex">\(t_{o}\)</span> 的乘积决定，而 <span class="arithmatex">\(t_{o}\)</span> 取雷达波束在目标上的驻留时间或显示器与人眼观察时间常数中的较小值：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+n=f_{r} t_{o} \tag{1.12}
+\end{equation*}
+\]</div>
+<p>因此，通过对宽波束或慢扫描条件下获得的连续脉冲进行积分，可以降低所需的能量比。</p>
+<p>在[5]中报道了在最佳A型示波器<span class="arithmatex">\({ }^{2}\)</span>下 <span class="arithmatex">\(V(n)\)</span> 的实验值。对于PPI显示<span class="arithmatex">\({ }^{3}\)</span>的类似结果在[6-12]中给出。对于由电子检测取代人工目视检测的雷达系统，可见度因子被可探测性因子 <span class="arithmatex">\(D(n)\)</span> 所取代，其定义为[4]：</p>
+<p>/// info | 被可探测性因子 <span class="arithmatex">\(D(n)\)</span>
+在脉冲雷达中，单脉冲信号能量与单位带宽噪声功率之比，在给定虚警概率条件下，能实现规定的探测概率。测量方法为在中频放大器带宽内，使用与单脉冲匹配的中频滤波器，并通过最佳视频积分实现。
+///</p>
+<p>有时在 <span class="arithmatex">\(V\)</span> 和 <span class="arithmatex">\(D\)</span> 的下标中加注目标模型和相应的探测概率（例如 <span class="arithmatex">\(V_{0(50)}\)</span>，表示在稳态目标（Case 0）下实现 <span class="arithmatex">\(50\%\)</span> 探测概率所需的能量比[6-12]）。通常，<span class="arithmatex">\(V\)</span> 大于 <span class="arithmatex">\(D\)</span>，这是因为人工目视检测效率较低，如第4.6节所述。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="arithmatex">\({ }^{2}\)</span> A型示波器显示接收机输出电压随距离的变化。<br />
+<span class="arithmatex">\({ }^{3}\)</span> PPI显示将接收机电压作为亮度强度绘制在以距离和方位角为坐标的极坐标图上。</p>
+</div>
+<h3 id="113">1.1.3 脉冲雷达的最大探测距离<a class="headerlink" href="#113" title="Permanent link">&para;</a></h3>
+<p>将式(1.9)中的可用 <span class="arithmatex">\(E / N_{0}\)</span> 与所需值 <span class="arithmatex">\(V\)</span> 或 <span class="arithmatex">\(D\)</span> 相等时，可得到脉冲雷达的最大距离方程：</p>
+<p>对于人工目视探测：
+$$
+R_{m}=\left[\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma}{(4\pi)^{3} k T_{s} V(n) L_{1}}\right]^{1/4} \quad(\mathrm{m}) \tag{1.13}
+$$</p>
+<p>对于电子探测：
+$$
+R_{m}=\left[\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma}{(4\pi)^{3} k T_{s} D(n) L_{1}}\right]^{1/4} \quad(\mathrm{m}) \tag{1.14}
+$$</p>
+<p>这些方程仅是雷达探测距离预测的起点。它们给出了在自由空间条件下，沿着共用收发天线波束轴线方向，当接收能量比满足要求时的探测距离。其中，人工目视探测使用最佳滤波器，电子探测使用匹配滤波器。</p>
+<hr />
+<h2 id="12">1.2 原始雷达方程<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<p>Norton和Omberg [1] 推导的距离方程由式(1.13)表示，其基本假设如下：</p>
+<ul>
+<li>
+<p><strong>噪声功率谱密度</strong>：按下式计算<br />
+$$
+N_{0}=k T F_{n} \quad(\mathrm{W}/\mathrm{Hz}) \tag{1.15}
+$$
+其中 <span class="arithmatex">\(T=300 \,\mathrm{K}\)</span>（室温），<span class="arithmatex">\(F_{n}\)</span> 为接收机噪声系数。</p>
+</li>
+<li>
+<p><strong>可见度因子</strong>：其推导基于在A型示波器上“勉强可见”的脉冲[5]，并定义为包含非最佳带宽效应，而不是像[4]中那样使用理想可见度因子，再引入带宽修正因子[6-12]。</p>
+</li>
+<li>
+<p><strong>传播效应</strong>：文献[1]讨论了对流层吸收、折射及地面反射对雷达—目标路径的影响，但这些效应并未作为项写入原始雷达方程。</p>
+</li>
+<li>
+<p><strong>射频损耗</strong>：在[1]的最终方程中基于式(1.13)引入了收发线损 <span class="arithmatex">\(L_{t}\)</span> 与 <span class="arithmatex">\(L_{r}\)</span>。然而，该形式因包含多个数值换算常数而较为复杂，已不再实用。</p>
+</li>
+</ul>
+<p>在[1]中还引入了数值换算因子，以便直接给出以英里为单位的距离。此外，通过替换常数 <span class="arithmatex">\(4\pi, k, T\)</span> 以及采用可见度因子与目标截面的近似值，最终表达式被一个数值常数主导，从而掩盖了推导中的基本关系。这种做法是为了在当时计算工具有限（计算尺或机电计算器）的情况下，尽量将因素合并为单一数值。然而在今天，这既没有必要，也不可取。为了清晰呈现各关系并便于比较不同形式的雷达方程，后续讨论保留推导中的各项，而不引入数值换算因子。</p>
+<p>尽管存在这些限制，二战期间提出的原始雷达方程至今仍具意义。它通过信噪能量比揭示了自由空间路径探测距离与雷达及目标参数之间的基本关系。方程提出者基于North的匹配滤波理论并采用能量比作为探测成功的判据，其洞见值得认可，正如Blake所强调的那样，但却在很多当代文献中被忽视。</p>
+<hr />
+<h2 id="13-blake">1.3 Blake的脉冲雷达方程<a class="headerlink" href="#13-blake" title="Permanent link">&para;</a></h2>
+<p>美国海军研究实验室的Lamont V. Blake [6-13] 在二战研究成果的基础上，引入了更精确的术语定义。他给出的脉冲雷达基本方程为[12, p. 19, Eq. (1.34)]：</p>
+<div class="arithmatex">\[
+\begin{equation*}
+R_{m}=\left[\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma F_{t}^{2} F_{r}^{2}}{(4\pi)^{3} k T_{s} D(n) C_{b} L}\right]^{1/4} \quad(\mathrm{m}) \tag{1.16}
+\end{equation*}
+\]</div>
+<p>式(1.16)的分子在基本单位下维度为 <span class="arithmatex">\(\mathrm{J}\cdot\mathrm{m}^{4}\)</span>。相较于式(1.14)，新增加的项为：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; F_{t}=\text{发射路径的方向—传播因子；} \\
+&amp; F_{r}=\text{接收路径的方向—传播因子（见第8章）。}
+\end{aligned}
+\]</div>
+<p>分母维度为 J，其中新增项为：</p>
+<div class="arithmatex">\[
+\begin{array}{ll}
+T_{s} &amp; =\text{系统输入温度，单位K（见第6章）；} \\
+D(n) &amp; =\text{可探测性因子（定义见1.1.2节；参见第4章）；} \\
+C_{b} &amp; =\text{带宽修正因子（见10.2.3节）；} \\
+L &amp; =L_{1} L_{2}=\text{系统损耗因子。}
+\end{array}
+\]</div>
+<p>系统损耗 <span class="arithmatex">\(L\)</span> 由两个部分组成：<span class="arithmatex">\(L_{1}\)</span> 为式(1.7)中的射频损耗，降低可用能量比；<span class="arithmatex">\(L_{2}\)</span> 为信号处理损耗，使得相对于 <span class="arithmatex">\(D(n)\)</span> 需要更高的能量比。</p>
+<hr />
+<h3 id="131-blake">1.3.1 Blake方程中各项的意义<a class="headerlink" href="#131-blake" title="Permanent link">&para;</a></h3>
+<p>Blake雷达方程中的各项定义旨在确保对有无脉内调制的脉冲雷达、采用非相干积累、在自然环境下运行时均能得到准确结果。以下因素值得注意：</p>
+<ul>
+<li>
+<p><strong>发射能量</strong>：使用脉冲能量 <span class="arithmatex">\(P_{t}\tau\)</span> 使式(1.16)能直接应用于使用脉冲压缩波形的雷达，此时时宽带宽积 <span class="arithmatex">\(\tau B \gg 1\)</span>，其中 <span class="arithmatex">\(B\)</span> 为发射脉冲频谱带宽。这不同于一些方程仅用 <span class="arithmatex">\(P_{t}\)</span> 而分母出现 <span class="arithmatex">\(N_{0}B\)</span>，后者不适用于有脉内调制的情况。</p>
+</li>
+<li>
+<p><strong>方向—传播因子</strong>：Blake将 <span class="arithmatex">\(F_{t}\)</span> 与 <span class="arithmatex">\(F_{r}\)</span> 直接引入雷达方程，用以描述天线仰角方向图及地面反射的影响，它们是仰角的函数，基本不随距离变化。其定义为[14, p. 35]：</p>
+</li>
+</ul>
+<p>/// info | 方向—传播因子
+在特定条件下某点的电场幅度与在自由空间条件下，当发射波束指向该点时的电场幅度之比。
+///</p>
+<p>在式(1.16)中，该因子不包括天线方位方向图和介质衰减的影响，这些被Blake归入损耗因子 <span class="arithmatex">\(L\)</span>。<span class="arithmatex">\(F\)</span> 因子涵盖了目标仰角处相对于轴向定义的 <span class="arithmatex">\(G_{t}, G_{r}\)</span> 的天线增益、地面反射对辐射与接收场的贡献，以及低仰角路径衍射对场的修正。对于阵列天线，还包括非正侧向工作带来的增益下降，第10章中将讨论其计算。</p>
+<ul>
+<li>
+<p><strong>噪声温度</strong>：Blake引入系统噪声温度 <span class="arithmatex">\(T_{s}\)</span> 来表述内部与外部噪声源的综合效应，取代了式(1.15)中的 <span class="arithmatex">\(TF_{n}\)</span>。当接收机噪声系数很小且天线指向冷天空时，这一改进尤为重要。需注意，<span class="arithmatex">\(T_{s}\)</span> 参考于接收天线输出端，包含来自天线的热噪声、天线与接收机之间的接收线损 <span class="arithmatex">\(L_{r}\)</span>，以及接收机自身噪声。</p>
+</li>
+<li>
+<p><strong>能量比的使用</strong>：Blake延续了原始雷达方程中使用能量比作为信号判据的做法。</p>
+</li>
+<li>
+<p><strong>可探测性因子</strong>：探测过程既可能是电子探测，也可能是人工目视探测，但任何偏离理想过程的情况，都需要在损耗因子 <span class="arithmatex">\(L_{2}\)</span> 中加入相应的补偿项。</p>
+</li>
+</ul>
+<h2 id="-c_b-12-eq-814a">- <strong>带宽因子</strong>：<span class="arithmatex">\(C_{b}\)</span> 由[12, Eq. (8.14a)]给出：<a class="headerlink" href="#-c_b-12-eq-814a" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+C_{b}=\frac{B_{n}\tau}{4.8}\left(1+\frac{1.2}{B_{n}\tau}\right)^{2} \tag{1.17}
+\]</div>
+<p>其中 <span class="arithmatex">\(B_{n}\)</span> 为接收机噪声带宽。当 <span class="arithmatex">\(B_{n}=1.2/\tau\)</span> 时，该因子等于1，对应于“最佳”接收机噪声带宽。其来源与应用将在第10.3.3节讨论，而在电子探测雷达中使用 <span class="arithmatex">\(C_{b}\)</span> 引起的误差将在1.5.4节讨论。</p>
+<ul>
+<li><strong>损耗因子</strong>：式(1.16)中的系统损耗因子 <span class="arithmatex">\(L\)</span> 由以下组成：  </li>
+<li><span class="arithmatex">\(L_{t}\)</span>：发射机输出至天线端口间的传输线损；  </li>
+<li><span class="arithmatex">\(L_{\alpha}\)</span>：双程路径上的大气吸收损耗；  </li>
+<li><span class="arithmatex">\(L_{p}\)</span>：扫描雷达的波束形状损耗<span class="arithmatex">\({ }^{4}\)</span> [13]；  </li>
+<li><span class="arithmatex">\(L_{\chi}\)</span>：其他接收与信号处理损耗，未单独包含在 <span class="arithmatex">\(T_{s}, C_{b}, L_{p}, L_{\alpha}\)</span> 中。  </li>
+</ul>
+<p>其中，<span class="arithmatex">\(L_{t}\)</span> 与 <span class="arithmatex">\(L_{\alpha}\)</span> 属于减少可用能量比的射频损耗 <span class="arithmatex">\(L_{1}\)</span>，而 <span class="arithmatex">\(L_{p}\)</span> 与 <span class="arithmatex">\(L_{\chi}\)</span> 属于增加所需能量比的损耗 <span class="arithmatex">\(L_{2}\)</span>。损耗因子的处理，以及部分因子与所需探测概率相关的情况，将在第4章与第10章中详细讨论。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="arithmatex">\({ }^{4}\)</span> Blake将其称为“天线方向图损耗”，但“波束形状损耗”是原始且当前公认的术语。其将在第5章中详细讨论。</p>
+</div>
+<h3 id="132">1.3.2 距离的求解方法<a class="headerlink" href="#132" title="Permanent link">&para;</a></h3>
+<p>由于 <span class="arithmatex">\(F_{t}\)</span>、<span class="arithmatex">\(F_{r}\)</span> 和 <span class="arithmatex">\(L_{\alpha}\)</span> 等项的复杂距离依赖性，式(1.16)没有封闭解。Blake 讨论了迭代与图解方法[12, pp. 379-388]。一种简单方法被嵌入在常称为Blake图的“脉冲雷达距离计算工作表”中（见图1.1）。该图通过对分贝值进行加减运算求解方程，用袖珍计算器即可方便实现。</p>
+<p>天线高于周围地面的高度和目标仰角需要输入到Blake图中作记录，因为结果仅在这些特定条件下有效。用户随后在部分(1)输入五个参数，用它们计算系统噪声温度 <span class="arithmatex">\(T_{s}\)</span>。标注为“来自图表”的参数将在第6章中讨论，相关图表会附带等效方程以取代换算表。剩余的距离因子输入在表的(2)部分，并在(3)部分转化为分贝形式，最后求和得到 <span class="arithmatex">\(40 \log R_{0(nmi)}\)</span> 的分贝值。自由空间距离 <span class="arithmatex">\(R_{0}\)</span>（海里）通过取反对数求得。方向—传播因子 <span class="arithmatex">\(F\)</span> 单独计算（见第8章），再乘以 <span class="arithmatex">\(R_{0}\)</span> 得到初始距离估计 <span class="arithmatex">\(R^{\prime}\)</span>。该估计值随后进入两步迭代以修正大气衰减。当目标处的大气衰减系数较大时（例如毫米波雷达或有降水的微波雷达），可能需要额外的迭代步骤。</p>
+<p>Blake图的一个复杂之处在于输入的距离因子采用了混合单位。例如，雷达频率输入为 <span class="arithmatex">\(f_{\mathrm{MHz}}=(c/\lambda)/10^{6}\)</span>，而不是雷达方程中的 <span class="arithmatex">\(\lambda\)</span>。由此得到的距离方程常数将多个换算因子、常数及其量纲组合为：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; 10 \log \left[\frac{(10^{3} \,\mathrm{W}/\mathrm{kW})(10^{-6}\,\mathrm{s}/\mu \mathrm{s})(3\times 10^{8}\,\mathrm{m}/\mathrm{s})^{2}/(10^{6}\,\mathrm{Hz}/\mathrm{MHz})^{2}}{(4\pi)^{3}(1.38\times 10^{-23}\,\mathrm{W}\cdot\mathrm{s}/\mathrm{K})(185{,}200\,\mathrm{m}/100\,\mathrm{nmi})^{4}}\right] \\
+&amp; = 10 \log \left[1.292^{4}\,(\mathrm{K}\cdot \mathrm{nmi}^{4}/\mathrm{W}\cdot\mathrm{s}^{3}\cdot \mathrm{m}^{2})\right] \\
+&amp; = 4.45\,\mathrm{dB}\,[\mathrm{ref}(\mathrm{K}\cdot \mathrm{nmi}^{4}/\mathrm{W}\cdot \mathrm{s}^{3}\cdot \mathrm{m}^{2})]
+\end{aligned}
+\]</div>
+<p>需要注意的是，在Blake图中输入的是中值雷达散射截面 <span class="arithmatex">\(\sigma_{50}\)</span> 和相应的可见度因子 <span class="arithmatex">\(V_{0(50)}\)</span>，以得到 <span class="arithmatex">\(P_{d}=50\%\)</span> 时的探测距离 <span class="arithmatex">\(R_{50}\)</span>。通常指定的雷达散射截面是其平均值，对于Swerling 1型（见第4.3.3节）波动目标，平均值比中值大1.5 dB。</p>
+<p><strong>脉冲雷达距离计算工作表</strong></p>
+<p>图1.1 Blake的脉冲雷达距离计算工作表[8]。引用的图形在第4、6和7章中重现，换算分贝与比值的表格已由数字计算取代。</p>
+<p>在[6-8]中给出了 <span class="arithmatex">\(V_{0(50)}\)</span> 及电子探测对应的 <span class="arithmatex">\(D_{0(50)}\)</span> 曲线，但在很多情况下需要计算 <span class="arithmatex">\(P_{d}\neq 50\%\)</span> 的情况。Blake后续的研究[9-12]提供了不同 <span class="arithmatex">\(P_{d}\)</span> 和不同目标模型下的 <span class="arithmatex">\(D\)</span> 曲线。这些曲线要求在式(1.16)和Blake图中使用目标截面的平均值而不是中值。</p>
+<hr />
+<h3 id="133-blake">1.3.3 Blake图的优点<a class="headerlink" href="#133-blake" title="Permanent link">&para;</a></h3>
+<p>Blake图的主要优点在于它能记录计算探测距离所用的输入值及若干中间结果。缺乏这种规范可能导致关键数据未被记录，后续无法追溯。当使用工程计算器或数字计算方法替代Blake的换算表和人工中间步骤时，计算既快速又准确。Blake图的具体形式从[6]中的最初版本发展到[12]中的最终形式，经历了多次修改，但基本方法保持不变。第1.4.2节介绍了一种保持基本单位输入的图表改进形式。</p>
+<p>Blake图形式化了求解距离相关衰减的迭代过程，它被广泛接受为标准的距离计算方法。虽然理想情况下应以基本单位输入参数，但在现代条件下分贝与比值之间的换算不再依赖表格，口袋计算器或计算机即可轻松完成。然而，保持图表的基本格式仍很重要，以保证结果的可追溯性。如果仅将参数输入计算机程序直接输出探测距离，而未记录和检查输入与中间结果，则容易出现错误。</p>
+<hr />
+<h3 id="134-blake">1.3.4 Blake的相干雷达方程<a class="headerlink" href="#134-blake" title="Permanent link">&para;</a></h3>
+<p>Blake将式(1.16)推广至相干雷达[12, p. 20, Eq. (1.35)]：</p>
+<p><strong>相干雷达：</strong></p>
+<div class="arithmatex">\[
+R_{m}=\left[\frac{P_{av} t_{f}\tau G_{t} G_{r} \lambda^{2} \sigma F_{t}^{2} F_{r}^{2}}{(4\pi)^{3} k T_{s} D(1) C_{b} L}\right]^{1/4} \quad(\mathrm{m}) \tag{1.18}
+\]</div>
+<p>这里，用观测波形的能量 <span class="arithmatex">\(P_{av} t_{f}\)</span> 替代了单脉冲发射能量 <span class="arithmatex">\(P_{t}\tau=P_{av} t_{r}\)</span>，其中 <span class="arithmatex">\(P_{av}\)</span> 为平均功率，<span class="arithmatex">\(t_{f}\)</span> 为相干处理时间（CPI），<span class="arithmatex">\(t_{r}\)</span> 为脉冲重复周期（PRI）。检测所需能量比 <span class="arithmatex">\(D(1)\)</span> 对应于相干积分器的单个输出。该结果是一个通用雷达方程（类似于Hall的方程，见1.4.1节），适用于连续波（CW）雷达、脉冲多普勒雷达以及非相干脉冲雷达。</p>
+<p>将Blake图应用于相干雷达时，只需在输入中将 <span class="arithmatex">\(P_{t}\)</span> 替换为以kW为单位的平均功率 <span class="arithmatex">\(P_{av}\)</span>，并将 <span class="arithmatex">\(\tau\)</span> 替换为以<span class="arithmatex">\(\mu\)</span>s为单位的 <span class="arithmatex">\(t_{f}\)</span>。如果这些单位对CW雷达不便，则可替换为瓦特和毫秒，而不会改变方程常数。</p>
+<p>式(1.18)假设探测由多普勒滤波器输出完成，且没有进一步的非相干积累。这一限制可通过将 <span class="arithmatex">\(D(1)\)</span> 替换为 <span class="arithmatex">\(D(n^{\prime})\)</span> 来克服，从而使方程适用于对 <span class="arithmatex">\(n^{\prime}\)</span> 个滤波输出进行非相干积累的雷达。此时，可用能量的增加由分子中的比值 <span class="arithmatex">\(P_{av} t_{f}/P_{t}\tau &gt;1\)</span> 表示，而单样本所需能量的降低由分母中的比值 <span class="arithmatex">\(D(n^{\prime})/D(1)&lt;1\)</span> 表示。这样，来自所有 <span class="arithmatex">\(n\)</span> 脉冲的相干与非相干增益均被包含在探测距离的计算中。</p>
+<p>Blake的雷达方程也通过Skolnik雷达手册的前两版[15,16]得到传播。它能够在实际环境条件下、针对任何类型的波形与处理方式的雷达，准确预测任意仰角目标的最大探测距离。对其方程进行现代化修改所需的步骤相对较少，见1.6节。</p>
+<hr />
+<h3 id="135-blake">1.3.5 Blake的双基地雷达方程<a class="headerlink" href="#135-blake" title="Permanent link">&para;</a></h3>
+<p>Blake将其基本雷达方程扩展至双基地系统[12, Eq. (1.38)]：</p>
+<p><strong>双基地雷达：</strong></p>
+<div class="arithmatex">\[
+\left(R_{t} R_{r}\right)_{m}^{1/2}=\left[\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma_{b} F_{t}^{2} F_{r}^{2}}{(4\pi)^{3} k T_{s} D(n) C_{b} L}\right]^{1/4} \quad(\mathrm{m}) \tag{1.19}
+\]</div>
+<p>其中 <span class="arithmatex">\(R_{t}\)</span> 与 <span class="arithmatex">\(R_{r}\)</span> 分别是发射机到目标和目标到接收机的路径。<span class="arithmatex">\(\left(R_{t}R_{r}\right)^{1/2}\)</span> 是双基地系统中两条路径的几何平均值。第1.3.1节的评论同样适用于该方程。</p>
+<p>Blake图也可以用于双基地雷达，以得到几何平均距离。此时需分别计算 <span class="arithmatex">\(F_{t}\)</span> 与 <span class="arithmatex">\(F_{r}\)</span>，再得到双程因子 <span class="arithmatex">\(F=(F_{t}F_{r})^{1/2}\)</span> 并填入图表第8行。第9–14行的大气衰减迭代过程采用两条路径的单程衰减和，并考虑其仰角（应与两天线高度一起单独记录在表头）。</p>
+<p>Blake的方程和图表主要用于目标在雷达波形非模糊距离内的探测。对于超出非模糊距离的探测，结果仍然成立，但可能因发射信号的遮蔽（见1.6.1节与10.1.2节）或使用变化PRI导致的积累损失而产生误差。</p>
+<h2 id="14">1.4 雷达方程的其他形式<a class="headerlink" href="#14" title="Permanent link">&para;</a></h2>
+<h3 id="141-hall">1.4.1 Hall的雷达方程<a class="headerlink" href="#141-hall" title="Permanent link">&para;</a></h3>
+<p>Hall 在文献[17]中提出了脉冲雷达的雷达方程，早于Blake的工作，并澄清了前人文献中的许多问题：</p>
+<p><strong>脉冲雷达：</strong>
+$$
+R_{m}=\left[\frac{P_{t}\tau G^{2}\lambda^{2}\sigma F^{4}}{(4\pi)^{3} k T_{0} F_{n}\times 1.2 D_{x}(n) L_{t} L_{\alpha}}\right]^{1/4} \quad(\mathrm{m}) \tag{1.20}
+$$</p>
+<p>该式等价于(1.14)，但有以下替换：</p>
+<ul>
+<li>公用收发天线的增益 <span class="arithmatex">\(G^{2}\)</span> 替代 <span class="arithmatex">\(G_{t}G_{r}\)</span>；</li>
+<li>分子中加入 <span class="arithmatex">\(F^{4}\)</span> 作为双程方向—传播因子；</li>
+<li>系统温度采用 <span class="arithmatex">\(T_{0}F_{n}\)</span>，其中 <span class="arithmatex">\(T_{0}=290\ \mathrm{K}\)</span>，表示天线输出端处、标准温度环境下的接收机；</li>
+<li><span class="arithmatex">\(D L\)</span> 被 <span class="arithmatex">\(1.2 D_{x}(n) L_{t} L_{\alpha}\)</span> 替代，其中 <span class="arithmatex">\(D_{x}(n)\)</span> 为有效可探测性因子，由以下五项相乘得到：</li>
+</ul>
+<div class="arithmatex">\[
+\begin{aligned}
+D(n) &amp; = \text{非相干积累 $n$ 个脉冲的基本（理论）可探测性因子；} \\
+L_{m} &amp; = \text{非最佳带宽损耗；} \\
+L_{p} &amp; = \text{波束形状损耗；} \\
+L_{c} &amp; = \text{合并损耗；} \\
+L_{o} &amp; = \text{操作员和退化因子。}
+\end{aligned}
+\]</div>
+<p><span class="arithmatex">\(D_{x}\)</span> 被用于现代雷达的方程（见1.6节）。式(1.20)中的系数1.2表示最佳接收机带宽 <span class="arithmatex">\(B_{n}=1.2/\tau\)</span> 下的匹配损耗（假设未调制脉冲）。与非最佳中频带宽相关的附加损耗包含在 <span class="arithmatex">\(L_{m}\)</span> 中。</p>
+<p>Hall 随后提出的通用雷达方程适用于单基地与双基地、任意波形的雷达系统[18, Eq. (8)]：</p>
+<p><strong>通用情况：</strong></p>
+<div class="arithmatex">\[
+\left(R_{t}R_{r}\right)_{m}^{1/2}=\left[\frac{P_{av}t_{o} G_{t} G_{r}\lambda^{2}\sigma F_{t}^{2}F_{r}^{2}}{(4\pi)^{3} k T_{s} D_{x}(1) L_{\alpha t} L_{\alpha r}}\right]^{1/4} \quad(\mathrm{m}) \tag{1.21}
+\]</div>
+<p>该表达式结合了Blake的式(1.18)与(1.19)，替换为：</p>
+<ul>
+<li>相干积累时间 <span class="arithmatex">\(t_{f}\)</span> 假设等于观测时间 <span class="arithmatex">\(t_{o}\)</span>；</li>
+<li>可探测性因子与损耗的乘积 <span class="arithmatex">\(D(1)L\)</span> 被 <span class="arithmatex">\(D_{x}(1)L_{\alpha t}L_{\alpha r}\)</span> 替代；</li>
+<li>分母采用发射与接收路径的一程大气衰减乘积 <span class="arithmatex">\(L_{\alpha t}L_{\alpha r}\)</span>。</li>
+</ul>
+<p>由于Blake的方法已广泛应用并能给出准确结果，Hall的表达式受到的关注较少。本文收录它们是为了展示能量比在雷达方程中的合理应用。</p>
+<hr />
+<h3 id="142-barton">1.4.2 Barton的雷达方程<a class="headerlink" href="#142-barton" title="Permanent link">&para;</a></h3>
+<p>1964年出版的《雷达系统分析》[19]最初采用的雷达方程使用峰值发射功率与接收机带宽内的噪声功率，而非能量。这一不足在1988年出版的《现代雷达系统分析》[20]中得到修正。新版方程基于Blake和Hall的研究，后者引入了有效可探测性因子 <span class="arithmatex">\(D_{x}(n)\)</span>，替代了基本因子 <span class="arithmatex">\(D(n)\)</span> 及其相关损耗。Barton给出的脉冲雷达方程为[20, Eq. (1.2.25)]：</p>
+<p><strong>脉冲雷达：</strong>
+$$
+R_{m}=\left[\frac{P_{t}\tau G_{t} G_{r}\lambda^{2}\sigma F^{4}}{(4\pi)^{3} k T_{s} D_{x}(n) L_{t} L_{\alpha}}\right]^{1/4} \quad(\mathrm{m}) \tag{1.22}
+$$</p>
+<p>其中，降低可用能量比的射频损耗 <span class="arithmatex">\(L_{1}\)</span> 分解为 <span class="arithmatex">\(L_{t}\)</span> 与 <span class="arithmatex">\(L_{\alpha}\)</span>。增加所需能量比的损耗 <span class="arithmatex">\(L_{2}\)</span> 被包含在 <span class="arithmatex">\(D_{x}\)</span> 中，其定义避免了Blake因子 <span class="arithmatex">\(C_{b}\)</span> 与电子探测结合使用时引发的误差。</p>
+<p>该方程另有两种相干雷达形式：</p>
+<ul>
+<li><strong>整个观测时间的相干积累</strong>[20, Eq. (1.2.26)]：用观测时间内的能量 <span class="arithmatex">\(P_{av}t_{o}\)</span> 替代单脉冲能量 <span class="arithmatex">\(P_{t}\tau\)</span>，并用单样本的 <span class="arithmatex">\(D_{x}(1)\)</span> 替代 <span class="arithmatex">\(D_{x}(n)\)</span>；</li>
+<li><strong>CPI内相干积累 + <span class="arithmatex">\(t_{o}\)</span> 内非相干积累</strong>[20, Eq. (1.2.27)]：用CPI内的能量 <span class="arithmatex">\(P_{av}t_{f}\)</span> 替代单脉冲能量 <span class="arithmatex">\(P_{t}\tau\)</span>，并用 <span class="arithmatex">\(D_{x}(n^{\prime})\)</span> 替代 <span class="arithmatex">\(D_{x}(n)\)</span>，其中 <span class="arithmatex">\(n^{\prime}=t_{o}/t_{f}\)</span>。</li>
+</ul>
+<p>第二种形式被用于修正后的Blake图，其示例如图1.2所示。</p>
+<p><strong>脉冲雷达距离计算工作表</strong></p>
+<p>图1.2 修正后的Blake图[20, p. 21]。</p>
+<p>用户在这一版本的Blake图中的输入均采用基本单位，避免了原始图表中的多重换算因子。此时距离方程常数仅包含 <span class="arithmatex">\((4\pi)^{3}\)</span>、<span class="arithmatex">\(k\)</span> 以及将米换算为千米的因子：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\text{常数} &amp;= \left[(4\pi)^{3} \cdot 1.38\times 10^{-23}(\mathrm{J}/\mathrm{K})(1000\,\mathrm{m}/\mathrm{km})^{4}\right]^{-1} \\
+&amp;= 3.65 \times 10^{7} \, (\mathrm{K}\cdot \mathrm{km}^{4}/\mathrm{J}\cdot \mathrm{m}^{4}) \\
+&amp;= 75.6\,\mathrm{dB}\,[\mathrm{ref}(\mathrm{K}\cdot \mathrm{km}^{4}/\mathrm{J}\cdot \mathrm{m}^{4})]
+\end{aligned}
+\]</div>
+<p>输入步骤、中间计算、分贝换算以及大气衰减迭代的过程与原始Blake图相同。Blake的 <span class="arithmatex">\(C_{b}\)</span> 在此被替换为匹配因子 <span class="arithmatex">\(M\)</span>，定义见第10.2.3节。</p>
+<p>2005年出版的《雷达系统分析与建模》给出了最通用的雷达方程形式[21, Eq. (1.20)]：</p>
+<p><strong>通用形式：</strong>
+$$
+R_{m}^{4}=\frac{P_{av} t_{f} G_{t} G_{r}\lambda^{2}\sigma F_{p}^{2}F_{t}^{2}F_{r}^{2}}{(4\pi)^{3} k T_{s} D_{x}(n^{\prime}) L_{t} L_{\alpha}} \tag{1.23}
+$$</p>
+<p>这一形式与图1.2中的修正Blake图一致，但额外加入了因子 <span class="arithmatex">\(F_{p}^{2}\)</span>，用于考虑发射与接收天线间可能的极化失配。该因子通常取为1，但其存在强调了接收天线的极化可能与目标回波的实际极化不一致，即使目标截面 <span class="arithmatex">\(\sigma\)</span> 是按发射极化计算并给定的。例如，当发射与接收均采用右旋圆极化时，通常指定的 <span class="arithmatex">\(\sigma\)</span> 实际对应左旋圆极化分量的回波，而接收天线对此不敏感（见10.1.1节）。</p>
+<hr />
+<h2 id="15">1.5 距离计算中的常见陷阱<a class="headerlink" href="#15" title="Permanent link">&para;</a></h2>
+<p>有必要在此对上述及文献中的各种雷达方程形式进行评论，并指出使用中可能引发的误差来源。</p>
+<hr />
+<h3 id="151-boldsymbolt_s">1.5.1 系统噪声温度 <span class="arithmatex">\(\boldsymbol{T}_{s}\)</span><a class="headerlink" href="#151-boldsymbolt_s" title="Permanent link">&para;</a></h3>
+<p>原始方程(1.9)中的 <span class="arithmatex">\(kTF_{n}\)</span> 本意是表示接收机输入端的噪声功率谱密度 <span class="arithmatex">\(N_{0}\)</span>。Blake则严谨地定义了其对应的 <span class="arithmatex">\(kT_{s}\)</span> 及其多个组成部分，以提高噪声计算的准确性[12, p. 152]。这一方法在现代低噪声系数系统中尤为重要，尤其当天线指向冷天空时。第6章将对其公式进行讨论，并给出实例，表明若简单假设环境温度 <span class="arithmatex">\(T_{0}=290\,\mathrm{K}\)</span>，会导致方程结果出现显著误差。</p>
+<p>Blake的公式应作为所有雷达方程中热噪声表达的标准替代形式。这一做法已在Skolnik雷达手册的前两版[15,16]以及Barton[20-22]中采用。其他一些雷达方程表达式错误地依赖简化关系 <span class="arithmatex">\(N_{0}=kT_{0}F_{n}\)</span>，该关系仅在 <span class="arithmatex">\(F_{n}&gt;10\ \mathrm{dB}\)</span> 的雷达中尚可接受。而在现代雷达中，它无法准确建模噪声功率谱密度，导致最小所需信号能量计算出现 <span class="arithmatex">\(1-2\ \mathrm{dB}\)</span> 的误差。</p>
+<hr />
+<h3 id="152">1.5.2 信噪能量比的使用<a class="headerlink" href="#152" title="Permanent link">&para;</a></h3>
+<p>原始方程以及Blake和Hall的方程均正确地基于输入信号能量与噪声功率谱密度的比值，而不是某个不明确（且通常无法测量）的带宽内的功率比。这使得能够使用North的匹配滤波理论来表示最大可用信噪比[3]：</p>
+<div class="arithmatex">\[
+\left(\frac{S}{N}\right)_{\max}=\frac{E}{N_{0}} \tag{1.24}
+\]</div>
+<p>其中 <span class="arithmatex">\(E\)</span> 为信号能量，<span class="arithmatex">\(N_{0}\)</span> 为滤波器输入处的噪声谱密度。该关系给出了雷达性能的上限，并可通过引入匹配因子来适应实际接收机与处理器性能低于匹配滤波器的情况。所需输入能量比由此因子提高。</p>
+<p>若雷达方程分子采用发射功率 <span class="arithmatex">\(P_{t}\)</span> 而分母采用接收机带宽 <span class="arithmatex">\(B_{n}\)</span> 或某种“有效带宽”，几乎必然导致错误。在发射脉冲压缩或调频连续波（FM-CW）信号时，这种形式更是完全不适用。即使在未调制脉冲情况下，当 <span class="arithmatex">\(B_{n}&lt;1/\tau\)</span> 时，分母中的小 <span class="arithmatex">\(B_{n}\)</span> 会使计算的 <span class="arithmatex">\(R_{m}\)</span> 过大，趋近无穷大（即接收机失效）。当 <span class="arithmatex">\(B_{n}\gg 1/\tau\)</span> 时，计算出的 <span class="arithmatex">\(R_{m}\)</span> 又可能偏小，因为较小的视频或显示带宽相对于接收机通过的噪声减少了噪声功率。</p>
+<p>纵观雷达文献，许多作者在方程分母中直接引入接收机带宽 <span class="arithmatex">\(B_{n}\)</span> 的噪声功率。在少数分子中出现脉冲能量的情况下，推导通常基于未调制脉冲且假设 <span class="arithmatex">\(B_{n}\tau=1\)</span>。</p>
+<hr />
+<h3 id="153">1.5.3 平均功率的使用<a class="headerlink" href="#153" title="Permanent link">&para;</a></h3>
+<p>采用平均发射功率而非峰值功率的雷达方程（如式(1.18)、(1.21)或(1.23)）更值得推荐，因为它们强调了在热噪声环境中探测距离对平均功率的依赖，而不是对峰值功率或其他波形参数。这些参数虽然在确定探测距离之外的应用中具有实际意义，但并非决定探测性能的根本因素。只要对匹配滤波和积分（相干与非相干）的贡献和损耗表述准确，使用峰值功率并非错误。但在现代雷达中，系统带宽已无法直接测量，使得这种表达愈发困难。</p>
+<hr />
+<h3 id="154">1.5.4 带宽修正与匹配因子<a class="headerlink" href="#154" title="Permanent link">&para;</a></h3>
+<p>当将式(1.17)中的 <span class="arithmatex">\(C_{b}\)</span> 应用于电子探测雷达时，会引入误差。在 <span class="arithmatex">\(B_{n}\tau=1.2\)</span> 时取 <span class="arithmatex">\(C_{b}=1.0\)</span>，会错误地暗示此“最佳带宽滤波器”就是匹配滤波器。而原始雷达方程推导自人工在示波管显示器上目视检测的雷达，实验测得的 <span class="arithmatex">\(V\)</span> 值中已包含显示器/观察者过程固有的 <span class="arithmatex">\(2-3\ \mathrm{dB}\)</span> 损耗，即便在“最佳带宽”下也是如此[19, p. 171]。在式(1.14)或(1.16)中使用的可探测性因子 <span class="arithmatex">\(D\)</span> 定义在匹配滤波条件下，因此需要引入匹配因子 <span class="arithmatex">\(M\)</span>（不同于 <span class="arithmatex">\(C_{b}\)</span>），以表达任何滤波器不匹配效应。该问题在4.6节和10.3节将进一步讨论。</p>
+<hr />
+<h3 id="155">1.5.5 任意目标的可探测性因子<a class="headerlink" href="#155" title="Permanent link">&para;</a></h3>
+<p>文献及第4章中给出了常用目标模型的可探测性因子精确方程。Rice [23] 推导的稳态目标（Case 0）单脉冲可探测性因子 <span class="arithmatex">\(D_{0}(1)\)</span> 可通过数学程序方便求解。Marcum [24] 将理论扩展至非相干积累 <span class="arithmatex">\(n\)</span> 个脉冲的 <span class="arithmatex">\(D_{0}(n)\)</span>。Swerling [25] 给出了适用于Case 1–4目标的表达式，其幅度统计对应自由度为2或4的卡方分布，并区分幅度慢变或快变情况。本书将其记为 <span class="arithmatex">\(D_{1}(n)\ldots D_{4}(n)\)</span>。文献[21]又补充了一个广义模型，给出 <span class="arithmatex">\(D_{e}(n,n_{e})\)</span>，适用于幅度统计符合自由度为 <span class="arithmatex">\(2n_{e}\)</span> 的卡方分布的目标。该模型涵盖Case 0–4，还包括 <span class="arithmatex">\(1\leq n_{e}\leq n\)</span> 的目标（包括常见的非整数值）。</p>
+<p>第4章将介绍这些模型的精确与近似计算方法。若采用不合适的目标模型，可能造成数dB的误差，特别是当雷达系统利用时间、频率、空间或极化分集时，Swerling模型描述的目标更易出现问题。</p>
+<h3 id="156">1.5.6 方向—传播因子<a class="headerlink" href="#156" title="Permanent link">&para;</a></h3>
+<p>在雷达方程的分子中引入方向—传播因子 <span class="arithmatex">\(F_{t}\)</span> 与 <span class="arithmatex">\(F_{r}\)</span>，或它们的几何平均值 <span class="arithmatex">\(F\)</span>，对于任何目标不在天线仰角波束轴上、且波束主瓣未完全离开雷达—目标路径下方地面的情况，都是准确计算探测距离所必需的。大多数教材虽提及这些因子的必要性，但往往将其与雷达方程分开讨论，而非直接嵌入方程中。对于相控阵雷达在非正侧向方向观测目标时，该因子的处理需要特别关注（见第10.2.1节）。</p>
+<hr />
+<h3 id="157">1.5.7 损耗因子<a class="headerlink" href="#157" title="Permanent link">&para;</a></h3>
+<p>波束形状损耗 <span class="arithmatex">\(L_{p}\)</span> 是式(1.16)和(1.18)中损耗因子 <span class="arithmatex">\(L\)</span> 的组成部分之一。这假设目标在回波脉冲的整个积累时间内并未始终处于雷达波束轴线上（例如雷达波束扫描过目标时）。第5章表明，除非积累了分布在天线主瓣范围内的多个脉冲，否则 <span class="arithmatex">\(L_{p}\)</span> 是所需探测概率 <span class="arithmatex">\(P_{d}\)</span> 的函数。</p>
+<p>另一个需要谨慎处理的问题是波束形状损耗与嵌入方向—传播因子 <span class="arithmatex">\(F\)</span> 的天线方向图之间的关系。Blake的方法将 <span class="arithmatex">\(L_{p}\)</span> 应用于常规二维搜索雷达的方位扫描效应，同时用 <span class="arithmatex">\(F^{4}\)</span> 描述目标在仰角方向图中的位置效应。对于二维扫描，可取 <span class="arithmatex">\(F=1\)</span>，同时在没有地面反射效应的区域引入损耗 <span class="arithmatex">\(L_{p}^{2}\)</span>，以评估整个仰角扇区的平均性能。该问题将在第8章进一步讨论。</p>
+<p>在相控阵雷达中，波束轴向增益随非正侧向扫描角度变化。增益 <span class="arithmatex">\(G_{t}\)</span> 和 <span class="arithmatex">\(G_{r}\)</span> 通常定义在正侧向波束轴线上，非正侧向扫描因子被包含在 <span class="arithmatex">\(F\)</span> 中，因此 <span class="arithmatex">\(F\)</span> 同时是仰角与方位的函数。另一种方法是定义整个扫描扇区的平均扫描损耗（见10.2.1节），用于描述扫描范围内的增益变化。与波束形状损耗类似，扫描扇区损耗会增加正侧向所需的能量比，其大小依赖于所要求的 <span class="arithmatex">\(P_{d}\)</span>，除非通过调整各扫描角度下的发射能量来补偿非正侧向波束的增益降低（见10.2.1节）。</p>
+<p>方程中的其他损耗 <span class="arithmatex">\(L_{x}\)</span> 用于涵盖一系列损耗因子，这些将在第10章中详细讨论。其中一些损耗因子同样是所需 <span class="arithmatex">\(P_{d}\)</span> 的函数，因此若要获得准确的探测距离结果，必须与可探测性因子 <span class="arithmatex">\(D\)</span> 一并调整。</p>
+<hr />
+<h3 id="158">1.5.8 探测距离计算常见错误总结<a class="headerlink" href="#158" title="Permanent link">&para;</a></h3>
+<p>在使用雷达方程时常见的错误包括：</p>
+<ul>
+<li>用 <span class="arithmatex">\(T_{0}=290\,\mathrm{K}\)</span> 替代实际系统噪声温度 <span class="arithmatex">\(T_{s}\)</span>；</li>
+<li>使用信噪功率比并引入不明确的带宽 <span class="arithmatex">\(B\)</span>，而不是能量比。任何在方程中包含接收机带宽 <span class="arithmatex">\(B\)</span> 的雷达方程都会带来混淆，甚至严重错误；</li>
+<li>使用峰值功率但未包含相应的处理因子和损耗；</li>
+<li>将带宽修正因子 <span class="arithmatex">\(C_{b}\)</span> 用于非包含目视检测损耗的情况；</li>
+<li>使用的可见度因子或可探测性因子未考虑目标的实际统计特性和雷达分集效应；</li>
+<li>未包含合适的方向—传播因子；</li>
+<li>未计入所有实际损耗。</li>
+</ul>
+<hr />
+<h2 id="16">1.6 现代雷达系统的雷达方程<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
+<h3 id="161">1.6.1 需要修改距离方程的因素<a class="headerlink" href="#161" title="Permanent link">&para;</a></h3>
+<p>雷达技术与反雷达对抗的发展在应用雷达方程时引入了新的问题。这些问题大多可通过在雷达方程分子中引入合适的距离相关响应因子 <span class="arithmatex">\(F_{\text{rdr}}\)</span> 来解决。<span class="arithmatex">\(F_{\text{rdr}}\)</span> 包含以下几个组成部分。在低可探测目标的情况下，这些因子尤为重要，因为其减小的散射截面可能使得目标在出现遮蔽效应和STC作用的距离之外无法被探测。</p>
+<hr />
+<h4 id="1611-eclipsing">1.6.1.1 遮蔽效应 (Eclipsing)<a class="headerlink" href="#1611-eclipsing" title="Permanent link">&para;</a></h4>
+<p>接收信号的遮蔽效应出现在两类波形中：（1）采用固态发射机、占空比超过约 <span class="arithmatex">\(1\%\)</span> 的低PRF雷达；（2）中高PRF雷达。<span class="arithmatex">\({ }^{5}\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="arithmatex">\({ }^{5}\)</span> 对于低PRF波形，目标在非模糊距离内；对于高PRF波形，目标在非模糊速度内；对于中PRF波形，目标同时超出非模糊距离和速度。</p>
+</div>
+<ul>
+<li><strong>固态发射机</strong>：固态射频功率放大器无法像电子管那样以低占空比换取高峰值功率<span class="arithmatex">\({ }^{6}\)</span>。因此，固态发射机的设计倾向于更高的占空比，通常 <span class="arithmatex">\(D_{u}=5\%\sim 20\%\)</span>，以便在器件峰值功率较低的情况下获得所需的平均功率。对于低PRF雷达，脉冲重复周期 <span class="arithmatex">\(t_{r}\)</span> 必须足够长以避免距离模糊，而更高的 <span class="arithmatex">\(D_{u}\)</span> 需要比电子管发射机常用的更长脉冲。例如，非模糊距离 <span class="arithmatex">\(R_{u}=450\,\mathrm{km}\)</span> 需要 <span class="arithmatex">\(t_{r}\geq 3\,\mathrm{ms}\)</span>。若 <span class="arithmatex">\(D_{u}=20\%\)</span>，则发射脉宽 <span class="arithmatex">\(\tau \geq 600\,\mu\mathrm{s}\)</span>。此时，来自 <span class="arithmatex">\(R&lt;R_{\min}=\tau c/2 \approx 90\,\mathrm{km}\)</span> 的回波会被遮蔽：回波前段与发射脉冲重叠，导致信噪比损失；来自 <span class="arithmatex">\(R&gt;R_{u}-R_{\min}\)</span> 的回波同样会被尾端遮蔽。此类情况的雷达方程需在 <span class="arithmatex">\(F_{\text{rdr}}\)</span> 中加入距离相关的遮蔽因子 <span class="arithmatex">\(F_{\text{ecl}}\)</span>。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="arithmatex">\({ }^{6}\)</span> 占空比（或占空因子）是脉冲宽度与脉冲重复周期之比。</p>
+</div>
+<p>部分固态雷达采用双脉冲组形式，即每个长脉冲伴随一个频率偏移的短脉冲，用于覆盖长脉冲遮蔽的近程区。在这种情况下，只有长脉冲的平均功率贡献于远程目标的探测，雷达方程应体现这一点。近程脉冲无法避免非模糊距离远端的遮蔽。</p>
+<p>对于无法在 <span class="arithmatex">\(R_{\min}\)</span> 内探测低可探测目标的雷达，遮蔽因子可能完全阻止目标在该范围内被探测。</p>
+<ul>
+<li><strong>中高PRF波形</strong>：MPRF与HPRF波形长期用于机载雷达，也出现在部分地基雷达中。这类波形隐含的要求是探测 <span class="arithmatex">\(R&gt;R_{u}\)</span> 的目标。最大探测距离的计算需在方程中引入遮蔽因子，该因子在特定PRF下是距离的确定函数。当在每个波束位置使用多种PRF（无论是在波束驻留期间还是扫描间）时，该因子通常以统计方式表示（见10.2.1节）。</li>
+</ul>
+<h4 id="1612-stc">1.6.1.2 灵敏度时间控制 (STC)<a class="headerlink" href="#1612-stc" title="Permanent link">&para;</a></h4>
+<p>许多低PRF雷达使用STC，以避免在中、短程对大目标或杂波导致接收机或处理器饱和，并抑制对小型移动目标（如鸟类和车辆）的不必要探测。STC通过在某个STC范围 <span class="arithmatex">\(R_{\text{stc}}\)</span> 内降低接收灵敏度来实现，该范围的选择使目标雷达散射截面阈值 <span class="arithmatex">\(\sigma_{\text{min}}\)</span> 得以设定，只有超过此阈值的目标才会被探测。衰减作用施加在接收机之前的RF部分，或接收机的早期级，以限制预期回波输入的幅度。图1.5展示了与距离相关的STC因子 <span class="arithmatex">\(F_{\text{stc}}\)</span> 的影响。采用STC的雷达即使在近程，也会失去对低于 <span class="arithmatex">\(\sigma_{\text{min}}\)</span> 的低可探测目标的探测能力。</p>
+<hr />
+<h4 id="1613">1.6.1.3 波束驻留因子<a class="headerlink" href="#1613" title="Permanent link">&para;</a></h4>
+<p>在某些情况下，雷达波束移动过快，接收波束轴线已不再靠近发射脉冲照射长程目标的角度，而回波在延迟 <span class="arithmatex">\(t_{d}&lt;t_{r}\)</span> 时到达。</p>
+<ul>
+<li>如果雷达连续以角速率 <span class="arithmatex">\(\omega\)</span> 扫描，使得两脉冲之间的角度变化 <span class="arithmatex">\(\Delta\theta=\omega t_{r}\)</span> 显著但小于波束宽度，则需要引入与距离相关的波束驻留因子。如果 <span class="arithmatex">\(\Delta\theta\)</span> 大于波束宽度，回波信号将丢失。</li>
+<li>电子扫描雷达通常分步扫描，波束在发射位置驻留，直至最远目标的回波到达。在某些情况下，接收波束可能会返回到先前脉冲照射目标的角度以接收回波，但这种操作方式不常见，且返回驻留的时间有限。</li>
+</ul>
+<p>在这两种情况下，扫描雷达都会对超出波束驻留时间延迟的信号产生歧视，因此雷达方程中引入波束驻留因子 <span class="arithmatex">\(F_{\text{bd}}\)</span> 作为 <span class="arithmatex">\(F_{\text{rdr}}\)</span> 的组成部分来描述这一效应。</p>
+<hr />
+<h4 id="1614">1.6.1.4 频率捷变或分集<a class="headerlink" href="#1614" title="Permanent link">&para;</a></h4>
+<p>脉冲到脉冲的频率变化（捷变）或脉冲组到组的频率变化（分集）用于规避干扰，并平均化目标RCS（例如降低闪烁损耗）。在这些技术中，接收机频率会调整到紧前一发射脉冲的频率。其对RCS平均化的有利作用体现在目标模型中，用于计算可探测性因子 <span class="arithmatex">\(D_{e}(n,n_{e})\)</span>。而对于在频率改变后到达的回波，则需要在雷达方程中引入频率分集因子 <span class="arithmatex">\(F_{\text{fd}}\)</span> 作为 <span class="arithmatex">\(F_{\text{rdr}}\)</span> 的组成部分，以反映该类信号的抑制。</p>
+<hr />
+<h4 id="1615">1.6.1.5 透镜因子<a class="headerlink" href="#1615" title="Permanent link">&para;</a></h4>
+<p>Weil [26] 引入的透镜损耗来源于对流层折射随仰角的变化。尽管Blake在[12, pp. 188-192]中讨论过，但该因素有时被忽略，因为它未在雷达方程中作为单独项出现。为避免遗漏，这里将双程透镜因子 <span class="arithmatex">\(F_{\text{lens2}}\)</span> 纳入 <span class="arithmatex">\(F_{\text{rdr}}\)</span>。需注意它不能与分母中的大气衰减 <span class="arithmatex">\(L_{\alpha}\)</span> 合并，因为它并非增加系统噪声温度的耗散性损耗。</p>
+<hr />
+<h3 id="162">1.6.2 适用于现代雷达的方程<a class="headerlink" href="#162" title="Permanent link">&para;</a></h3>
+<p><strong>Modern Radar System Analysis Software, Version 3.0 (MRSAS3)</strong> [22] 是一套运行在 Mathcad <span class="arithmatex">\({}^{\text{©}}\)</span> 下的完整工作表（通常被称为程序），可计算雷达探测距离与测量精度。该版本开发于雷达技术变革与目标RCS缩小日益显著的时期，前文1.6.1已指出传统雷达方程的局限性。该软件通过在式(1.23)中增加随距离变化的响应因子 <span class="arithmatex">\(F_{\text{rdr}}\)</span> 来改进，系统的电压响应平方修正了随距离变化的可用能量：</p>
+<div class="arithmatex">\[
+E=\frac{P_{av} t_{f} G_{t} G_{r} \lambda^{2} \sigma F_{p}^{2} F_{t}^{2} F_{r}^{2} F_{\text{rdr}}^{2}}{(4\pi)^{3} R^{4} L_{t} L_{\alpha}} \tag{1.25}
+\]</div>
+<p>其中：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+F_{\text{rdr}} &amp;= F_{\text{ecl}} F_{\text{stc}} F_{\text{bd}} F_{\text{fd}} F_{\text{lens2}} \\
+F_{\text{ecl}} &amp;= \text{遮蔽因子；} \\
+F_{\text{stc}} &amp;= \text{灵敏度时间控制因子；} \\
+F_{\text{bd}} &amp;= \text{波束驻留因子；} \\
+F_{\text{fd}} &amp;= \text{频率分集因子；} \\
+F_{\text{lens2}} &amp;= \text{双程透镜因子。}
+\end{aligned}
+\]</div>
+<p>这五个因子在第7章和第10章中详细讨论，这里简要说明：</p>
+<ul>
+<li><strong>遮蔽因子</strong>：长期以来在高/中PRF机载雷达中被认为重要。随着高占空比固态发射机应用于地基雷达，遮蔽成为普遍问题。<span class="arithmatex">\(F_{\text{ecl}}\)</span> 的详细见10.1.2。</li>
+<li><strong>STC因子</strong>：在接收机前或接收机早期级施加可变电压增益 <span class="arithmatex">\(F_{\text{stc}}\leq 1\)</span>（见10.1.2）。假设竞争噪声主要出现在STC之后的级，因而输出信噪比与 <span class="arithmatex">\(F_{\text{stc}}^{2}\)</span> 成正比。</li>
+<li><strong>波束驻留因子</strong>：通常为1，但当波束运动导致目标回波接收时天线增益下降时，该因子减小（见10.1.2）。</li>
+<li><strong>频率分集因子</strong>：只要接收机仍锁定在回波频率上，该因子取1。它确保模糊距离回波在频率分集或捷变下被抑制。</li>
+<li><strong>透镜因子</strong>：Weil指出该因子会降低低仰角长程目标的可用能量，因为对流层折射导致波束仰角扩展（见7.4节）。它不同于增加系统噪声温度的大气吸收损耗 <span class="arithmatex">\(L_{\alpha}\)</span>，因此应作为独立因子表达。</li>
+</ul>
+<p>由此得到的现代雷达方程[22, Eq. (7.67)]为：</p>
+<p><strong>现代雷达：</strong>
+$$
+R_{m}^{4}=\frac{P_{av} t_{f} G_{t} G_{r}\lambda^{2}\sigma F_{p}^{2} F_{t}^{2} F_{r}^{2} F_{\text{rdr}}^{2}}{(4\pi)^{3} k T_{s} D_{x}(n^{\prime}) L_{t} L_{\alpha}} \tag{1.26}
+$$</p>
+<hr />
+<h3 id="163">1.6.3 探测距离的计算方法<a class="headerlink" href="#163" title="Permanent link">&para;</a></h3>
+<p>在Blake图中，通过简单迭代过程求解存在距离相关大气衰减时的探测距离。引入额外的距离相关响应因子以及随距离可能变化的信号处理模式后，需要更稳健的方法。其基本思路与1.1节相同：分别求解可用与所需能量比作为距离的函数，当两者相等时即得到最大探测距离。该方法既可采用图解方式[21, Section 1.6]，也可通过计算机实现[22]。文献[22]中的中间结果图表展示了此过程及距离相关项对可用与所需能量比的影响。</p>
+<hr />
+<h4 id="1631">1.6.3.1 探测距离计算示例<a class="headerlink" href="#1631" title="Permanent link">&para;</a></h4>
+<p>表1.1列出了一个非相干二维低空监视雷达的参数。图1.3展示了对于 <span class="arithmatex">\(1.0\,\mathrm{m}^{2}\)</span> 目标、恒定仰角 <span class="arithmatex">\(1^{\circ}\)</span> 入射、在 <span class="arithmatex">\(P_{d}=50\%\)</span> 下的可用与所需能量比 <span class="arithmatex">\(E/N_{0}\)</span> 与 <span class="arithmatex">\(D_{x}\)</span>。计算使用 Modern Radar System Analysis Software [22]，在用户设定的最大距离（此例为150 km）内按100个等距步长向内进行。探测距离 <span class="arithmatex">\(R_{m}\)</span> 的确定方法为：检查 <span class="arithmatex">\(E/N_{0}\)</span> 与 <span class="arithmatex">\(D_{x}\)</span> （以分贝表示）的差值，直到差值为正，再通过插值确定确切的 <span class="arithmatex">\(R_{m}\)</span>。此例中 <span class="arithmatex">\(R_{m}=132\,\mathrm{km}\)</span>。示例雷达建模为在 <span class="arithmatex">\(R_{p}=50\,\mathrm{km}\)</span> 内采用MTI处理，但在该范围内MTI损耗引起的 <span class="arithmatex">\(D_{x}\)</span> 增加并未影响 <span class="arithmatex">\(R_{m}\)</span>，只要 <span class="arithmatex">\(R_{p}&lt;R_{m}&lt;R_{u}\)</span>（此例 <span class="arithmatex">\(R_{u}=135\,\mathrm{km}\)</span>）。</p>
+<p><strong>表1.1 示例二维雷达参数</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数</th>
+<th style="text-align: left;">数值</th>
+<th style="text-align: left;">参数</th>
+<th style="text-align: left;">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">雷达频率 <span class="arithmatex">\(f_{0}\)</span></td>
+<td style="text-align: left;">3.0 GHz</td>
+<td style="text-align: left;">波长 <span class="arithmatex">\(\lambda\)</span></td>
+<td style="text-align: left;">0.10 m</td>
+</tr>
+<tr>
+<td style="text-align: left;">峰值功率 <span class="arithmatex">\(P_{t}\)</span></td>
+<td style="text-align: left;">100 kW</td>
+<td style="text-align: left;">平均功率 <span class="arithmatex">\(P_{av}\)</span></td>
+<td style="text-align: left;">110.8 W</td>
+</tr>
+<tr>
+<td style="text-align: left;">脉冲宽度 <span class="arithmatex">\(\tau=\tau_{n}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(1.0\,\mu s\)</span></td>
+<td style="text-align: left;">脉冲重复频率 <span class="arithmatex">\(f_{r}\)</span></td>
+<td style="text-align: left;">1108 Hz</td>
+</tr>
+<tr>
+<td style="text-align: left;">发射线损 <span class="arithmatex">\(L_{t}\)</span></td>
+<td style="text-align: left;">1.0 dB</td>
+<td style="text-align: left;">天线增益 <span class="arithmatex">\(G\)</span></td>
+<td style="text-align: left;">40.0 dB</td>
+</tr>
+<tr>
+<td style="text-align: left;">方位波束宽度 <span class="arithmatex">\(\theta_{a}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(1.3^{\circ}\)</span></td>
+<td style="text-align: left;">仰角波束宽度 <span class="arithmatex">\(\theta_{e}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(2.0^{\circ}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">方位扫描扇区 <span class="arithmatex">\(A_{m}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(360^{\circ}\)</span></td>
+<td style="text-align: left;">帧时间 <span class="arithmatex">\(t_{s}\)</span></td>
+<td style="text-align: left;">6.0 s</td>
+</tr>
+<tr>
+<td style="text-align: left;">每次驻留脉冲数 <span class="arithmatex">\(n\)</span></td>
+<td style="text-align: left;">24</td>
+<td style="text-align: left;">系统温度 <span class="arithmatex">\(T_{s}\)</span></td>
+<td style="text-align: left;">987 K</td>
+</tr>
+<tr>
+<td style="text-align: left;">探测概率 <span class="arithmatex">\(P_{d}\)</span></td>
+<td style="text-align: left;">0.50</td>
+<td style="text-align: left;">虚警概率 <span class="arithmatex">\(P_{fa}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(10^{-6}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">基本可探测性因子 <span class="arithmatex">\(D\)</span></td>
+<td style="text-align: left;">2.7 dB</td>
+<td style="text-align: left;">匹配因子 <span class="arithmatex">\(M\)</span></td>
+<td style="text-align: left;">0.8 dB</td>
+</tr>
+<tr>
+<td style="text-align: left;">波束形状损耗 <span class="arithmatex">\(L_{p}\)</span></td>
+<td style="text-align: left;">1.2 dB</td>
+<td style="text-align: left;">其他损耗 <span class="arithmatex">\(L_{x}\)</span></td>
+<td style="text-align: left;">3.3 dB</td>
+</tr>
+<tr>
+<td style="text-align: left;">可探测性因子 <span class="arithmatex">\(D_{x}\)</span></td>
+<td style="text-align: left;">8.0 dB</td>
+<td style="text-align: left;">衰减 <span class="arithmatex">\(L_{\alpha}\)</span>（在 <span class="arithmatex">\(R_{m}\)</span> 处）</td>
+<td style="text-align: left;">1.8 dB</td>
+</tr>
+<tr>
+<td style="text-align: left;">方向—传播因子 <span class="arithmatex">\(F\)</span></td>
+<td style="text-align: left;">1.0</td>
+<td style="text-align: left;">距离相关因子 <span class="arithmatex">\(F_{\text{rdr}}\)</span></td>
+<td style="text-align: left;">0 dB</td>
+</tr>
+<tr>
+<td style="text-align: left;">目标RCS <span class="arithmatex">\(\sigma\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(1.0\,\mathrm{m}^{2}\)</span></td>
+<td style="text-align: left;">热噪声下探测距离 <span class="arithmatex">\(R_{m}\)</span></td>
+<td style="text-align: left;">132 km</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-042.jpg?height=500&amp;width=1060&amp;top_left_y=1412&amp;top_left_x=175" /></p>
+<p><strong>图1.3 示例雷达能量比与距离关系：实线为信号能量，比虚线为所需能量。MTI处理在 <span class="arithmatex">\(R&lt;R_{p}=50\,\mathrm{km}\)</span> 内增加 <span class="arithmatex">\(L_{x}\)</span>。</strong></p>
+<h4 id="1632">1.6.3.2 固态雷达示例<a class="headerlink" href="#1632" title="Permanent link">&para;</a></h4>
+<p>一种可能的固态版本示例雷达被建模，具有相同的平均功率和非模糊距离，但占空比为 <span class="arithmatex">\(20\%\)</span>，得到的脉宽 <span class="arithmatex">\(\tau=180\,\mu s\)</span>。在 <span class="arithmatex">\(R&lt;27\,\mathrm{km}\)</span> 和 <span class="arithmatex">\(108\,\mathrm{km}&lt;R&lt;162\,\mathrm{km}\)</span> 时出现遮蔽效应，其影响如图1.4所示的可用能量比曲线。此时探测发生在 <span class="arithmatex">\(R_{m}=114\,\mathrm{km}\)</span>，目标从遮蔽区中出现时几乎完全获得脉冲压缩增益。短程的遮蔽在此情况下对 <span class="arithmatex">\(R_{m}\)</span> 无影响。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-043.jpg?height=521&amp;width=1107&amp;top_left_y=925&amp;top_left_x=175" /></p>
+<p><strong>图1.4 固态雷达（<span class="arithmatex">\(D_{u}=20\%\)</span>）的能量比与距离关系。</strong></p>
+<hr />
+<h4 id="1633-stc">1.6.3.3 含STC的雷达示例<a class="headerlink" href="#1633-stc" title="Permanent link">&para;</a></h4>
+<p>图1.5展示了在示例雷达的非模糊距离前半段内应用STC的结果。上曲线表示对目标散射截面 <span class="arithmatex">\(\sigma=1\,\mathrm{m}^{2}\)</span> 的期望效果，此时在 <span class="arithmatex">\(R&lt;R_{m}\)</span> 的所有距离上，可用能量都保持在所需值之上。实线曲线表示较小目标（<span class="arithmatex">\(\sigma=0.032\,\mathrm{m}^{2}=-15\,\mathrm{dBsm}\)</span>）的情况，显示该目标在任何距离上都无法达到 <span class="arithmatex">\(P_{d}=50\%\)</span> 的要求。这种性能在空管雷达中是理想的，例如希望探测 <span class="arithmatex">\(\sigma \geq 1\,\mathrm{m}^{2}\)</span> 的目标，同时排除几乎所有鸟类。但在现代防空雷达中则不可接受。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-044.jpg?height=533&amp;width=1124&amp;top_left_y=265&amp;top_left_x=166" /></p>
+<p><strong>图1.5 含STC的示例雷达能量比与距离关系。</strong></p>
+<hr />
+<h3 id="164">1.6.4 垂直覆盖图<a class="headerlink" href="#164" title="Permanent link">&para;</a></h3>
+<p>Blake图或其他雷达方程解给出的是监视雷达在垂直平面覆盖中的单个点，其方向—传播因子 <span class="arithmatex">\(F(\theta_{t})\)</span> 在特定目标仰角 <span class="arithmatex">\(\theta_{t}\)</span> 下有效。因为Blake图中的距离 <span class="arithmatex">\(R^{\prime}\)</span> 与 <span class="arithmatex">\(F\)</span> 成正比，所以一种简单绘制覆盖的方法是将 <span class="arithmatex">\(F(\theta)\)</span> 作为仰角 <span class="arithmatex">\(\theta\)</span> 的函数计算，并将探测距离包络表达为 <span class="arithmatex">\(R^{\prime}(\theta)\)</span>。若大气衰减在波束宽度内变化不大，这种方法即可满足；否则，就需要在扇区内多个仰角上重复迭代衰减计算。[22]的处理方法是：对每个绘制的仰角，利用 <span class="arithmatex">\(F, L_{\alpha}, L_{\mathrm{rdr}}\)</span> 随距离变化的函数计算可用能量比，并采用足够小的步长生成平滑的覆盖曲线。所需能量比 <span class="arithmatex">\(D_{x}\)</span> 随距离变化（例如由波束形状、MTI损耗和STC引起）的计算，也能得到Blake图难以直接获得的结果。示例雷达的覆盖如图1.6所示。</p>
+<p>图1.6的计算条件为：表1.1中的雷达，在地表rms高度偏差 <span class="arithmatex">\(\sigma_{h}=3\,\mathrm{m}\)</span> 的环境下运行，仅产生一个低于 <span class="arithmatex">\(0.1^{\circ}\)</span> 仰角的显著反射瓣。若无此效应，该反射瓣将延伸到非模糊距离 <span class="arithmatex">\(R_{u}=135\,\mathrm{km}\)</span> 以外，但在该区间 <span class="arithmatex">\(D_{x}\)</span> 增大超过了可用能量比，因此覆盖被截断在 <span class="arithmatex">\(R_{u}\)</span>。同样，由于 <span class="arithmatex">\(R&lt;R_{p}=50\,\mathrm{km}\)</span> 时使用了MTI处理，<span class="arithmatex">\(D_{x}\)</span> 增大导致波束顶部曲线在穿过该范围时出现轻微凸起。在波束中心 <span class="arithmatex">\(\theta=1^{\circ}\)</span> 时，<span class="arithmatex">\(P_{d}=50\%\)</span> 的曲线与图1.3中显示的探测距离一致。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-045.jpg?height=652&amp;width=1144&amp;top_left_y=274&amp;top_left_x=175" /></p>
+<p><strong>图1.6 示例雷达垂直覆盖图：<span class="arithmatex">\(P_{d}=90\%\)</span>（内曲线）与 <span class="arithmatex">\(P_{d}=50\%\)</span>（外曲线）。</strong></p>
+<p>在单一仰角进行的距离计算虽有许多用途，但无法传达垂直覆盖图所展示的信息。垂直覆盖图以直观可解释的形式提供了评估监视雷达性能所需的数据。另一方面，图1.3–1.5所示的曲线则用于分析在特定仰角下控制探测距离的因素。两种表现形式及其他中间结果都是必要的，以避免估算雷达距离时常见的错误。</p>
+<hr />
+<h3 id="165">1.6.5 所需的探测概率<a class="headerlink" href="#165" title="Permanent link">&para;</a></h3>
+<p>雷达方程中使用的可探测性因子 <span class="arithmatex">\(D\)</span> 取决于所需的探测概率。该概率通常任意设为 <span class="arithmatex">\(P_{d}=0.5\sim 0.9\)</span>。然而，实际需求取决于接收雷达输出的系统运行模式。单次告警很少足以表明目标存在，因为这种告警可能由噪声或干扰的随机虚警引起。通常需要第二次探测来确认，并建立航迹文件，这意味着单次扫描 <span class="arithmatex">\(P_{d}\geq 0.5\)</span>（通常 <span class="arithmatex">\(\geq 0.8\)</span>）才能可靠地获取并维持航迹。图1.7显示了在不同单次扫描 <span class="arithmatex">\(P_{d}\)</span> 下，为获得给定累积航迹获取概率所需的扫描次数。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-046.jpg?height=596&amp;width=1025&amp;top_left_y=325&amp;top_left_x=232" /></p>
+<p><strong>图1.7 累积航迹获取概率随扫描次数的变化，单次扫描探测概率范围 <span class="arithmatex">\(50\%\sim 90\%\)</span>。典型的跟踪扫描系统要求在5次连续扫描中至少有3次探测（引自[21]）。</strong></p>
+<p>图1.8给出了在不同单次扫描 <span class="arithmatex">\(P_{d}\)</span> 下的航迹保持概率。由这两幅图可见，若雷达要支持可靠的跟踪扫描，需满足 <span class="arithmatex">\(P_{d}\geq 0.8\)</span>。</p>
+<p>许多现代雷达（包括多功能阵列雷达和与相控阵跟踪雷达配合的常规搜索雷达）可以调配资源，使得即使搜索模式下的 <span class="arithmatex">\(P_{d}\)</span> 远低于0.8，也能建立并维持航迹。在初次探测后安排立即验证驻留，并可能相对于常规搜索功能增加发射能量，可使目标存在得到确认，并高概率建立跟踪，且仅需少量增加时间与能量需求。结果是最大跟踪距离由累积探测概率 <span class="arithmatex">\(P_{c}\)</span>（而非单次探测概率 <span class="arithmatex">\(P_{d}\)</span>）达到可接受值所决定。此时雷达方程中可使用 <span class="arithmatex">\(P_{d}\approx 0.3\)</span> 或更低的数值，从而显著扩展雷达作用距离[27]。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-046.jpg?height=511&amp;width=988&amp;top_left_y=1379&amp;top_left_x=250" /></p>
+<p><strong>图1.8 航迹保持概率随扫描次数的变化，不同单次扫描探测概率下的典型跟踪扫描系统。若连续两次探测失败则丢失航迹（引自[21]）。</strong></p>
+<hr />
+<h2 id="17">1.7 雷达方程发展的总结<a class="headerlink" href="#17" title="Permanent link">&para;</a></h2>
+<p>本章回顾了雷达方程从二战起源到现代雷达应用的发展历程，强调了Lamont Blake的贡献，并建议以他的方程表达方式作为当前与未来雷达性能分析的准确起点。文中介绍了对Blake方程的修正，使其适应现代雷达系统更复杂的特性与工作模式，但其基本方法仍然是可靠估算雷达探测距离的基石。正如Marcum在讨论原始雷达方程时指出的[24, p. 1]：</p>
+<p><code>使用上述方程时可能遇到的陷阱几乎是无穷的，其中许多困难早已被人们认识。</code></p>
+<p>自Marcum发表研究以来，又有新的问题被发现。现代计算技术克服了许多局限，并提供了高精度结果，但同时也可能掩盖其他问题，并鼓励使用一些导致误差远超表面精度的处理方法。避免这些错误正是Blake仔细分析的核心目的。这同样也是后续发展（[20-22]）以及本章和全书其余部分所追求的目标。</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>[1] Norton, K. A. and A. C. Omberg, "The Maximum Range of a Radar Set," Proc. IRE, Vol. 35, No. 1, January 1947, pp. 4-24. Reprinted in [2].</p>
+<p>[2] Barton, D. K., (ed.), The Radar Equation, Dedham, MA: Artech House, 1974.</p>
+<p>[3] North, D. O., "An Analysis of the Factors Which Determine Signal/Noise Discrimination in Pulsed Carrier Systems," RCA Laboratories Technical Report PTR-6C, June 25, 1943. Reprinted: Proc. IEEE, Vol. 51, No. 67, July 1963, pp. 1015-1027.</p>
+<p>[4] IEEE Standard 100, The Authoritative Dictionary of IEEE Standards Terms, 7th ed., New York: IEEE Press, 2000.</p>
+<p>[5] Haeff, A. W., "Minimum Detectable Radar Signal and Its Dependence Upon Parameters of Radar Systems," Proc. IRE, Vol. 34, No. 11, November 1946, pp. 857-861.</p>
+<p>[6] Blake, L. V., "Interim Report on Basic Pulse-Radar Maximum Range Calculations," Naval Research Laboratory Report 1106, November 1960.</p>
+<p>[7] Blake, L. V., "Recent Advancements in Basic Radar Range Calculation," IRE Trans. on Military Electronics, Vol. MIL-5, No. 2, April 1961, pp. 154-164. Reprinted in [2].</p>
+<p>[8] Blake, L. V., "A Guide to Basic Pulse-Radar Maximum-Range Calculation, Part 1-Equations, Definitions, and Aids to Calculation," Naval Research Laboratory Report 5868, December 28, 1962.</p>
+<p>[9] Blake, L. V., "A Guide to Basic Pulse-Radar Maximum-Range Calculation, Part 1-Equations, Definitions, and Aids to Calculation," Naval Research Laboratory Report 6930, December 23, 1969. Summarized in [2].</p>
+<p>[10] Blake, L. V., "A Guide to Basic Pulse-Radar Maximum-Range Calculation, Part 2-Derivation of Equations, Bases of Graphs, and Additional Explanations," Naval Research Laboratory Report 7010, December 31, 1969.
+[11] Blake, L. V., "Prediction of Radar Range," Chapter 2 in [15, 16].</p>
+<p>[12] Blake, L. V., Radar Range-Performance Analysis, Lexington, MA: D. C. Heath, 1980; Dedham, MA: Artech House, 1986.</p>
+<p>[13] Blake, L. V., "The Effective Number of Pulses per Beamwidth for a Scanning Radar," Proc IRE, Vol. 41, No. 6, June 1953, pp. 770-774, with addendum: December 1953, p. 1785. Reprinted in [2].</p>
+<p>[14] Kerr, D. E., (ed.), Propagation of Short Radio Waves, Vol. 13 in MIT Radiation Laboratory Series, New York: McGraw-Hill, 1951. Reprinted (CD ROM edition): Norwood, MA: Artech House, 1999.</p>
+<p>[15] Skolnik, M. I., (ed.), Radar Handbook, New York: McGraw-Hill, 1970.</p>
+<p>[16] Skolnik, M. I., (ed.), Radar Handbook, 2nd ed., New York: McGraw-Hill, 1990.</p>
+<p>[17] Hall, W. M., "Prediction of Pulse Radar Performance," Proc. IRE, Vol. 44, No. 2, February 1956, pp. 224-231. Reprinted in [2].</p>
+<p>[18] Hall, W. M., "General Radar Equation," Space/Aeronautics R and D Handbook, 1962-63. Reprinted in [2].</p>
+<p>[19] Barton, D. K., Radar System Analysis, Englewood Cliffs, NJ: Prentice-Hall, 1964; Dedham, MA: Artech House 1976.</p>
+<p>[20] Barton, D.. K., Modern Radar System Analysis, Norwood, MA: Artech House, 1988.</p>
+<p>[21] Barton, D. K., Radar System Analysis and Modeling, Norwood, MA: Artech House, 2005.</p>
+<p>[22] Barton, D. K., Modern Radar System Analysis Software and User's Manual, Version 3.0, Norwood, MA: Artech House, 2007.</p>
+<p>[23] Rice, S. O., "Mathematical Analysis of Random Noise," Bell Sys. Tech. J., Vol. 23, No. 3, July 1944, pp. 282-332 and Vol. 24, No. 1, January 1945, pp. 461-556. Reprinted: Selected Papers on Noise and Stochastic Processes, (N. Wax, ed.), New York: Dover Publ., 1954.</p>
+<p>[24] Marcum, J. I., "A Statistical Theory of Target Detection by Pulsed Radar, RAND Corp. Research Memo RM-754, December 1, 1947. Reprinted: IRE Trans. on Information Theory, Vol.IT-6, No. 2, April 1960, pp. 59-144; excerpted: Detection and Estimation, (S. S. Haykin, ed.), Stroudsburg, PA: Halstad Press, 1976, pp. 57-121.</p>
+<p>[25] Swerling, P., "Probability of Detection for Fluctuating Targets," RAND Corp. Research Memo RM-1217, March 17, 1954. Reprinted: IRE Trans. on Information Theory, Vol. IT-6, No. 2, April 1960, pp. 269-308; Detection and Estimation, (S. S. Haykin, ed.), Stroudsburg, PA: Halstad Press, 1976, 122-158.</p>
+<p>[26] Weil, T. A., "Atmospheric Lens Effect, Another Loss for the Radar Range Equation," IEEE Trans. on Aerospace and Electronic Systems, Vol. AES-9, No. 1, January 1973, pp. 51-54. Reprinted in [2].</p>
+<p>[27] Barton, D. K., "Maximizing Firm-Track Range on Low-Observable Targets," IEEE International Conf. Radar-2000, Washington, DC, May 8-12, 2000, pp. 24-29.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "content.action.view", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,56 @@
+/* 统一调整页头 Logo 显示尺寸（SVG 或 PNG 都生效） */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 32px;    /* 改成你想要的高度：如 24/28/32px 或 1.75rem 等 */
+  width: auto;     /* 按比例缩放 */
+}
+
+/* 可选：移动端再小一点 */
+@media (max-width: 600px) {
+  .md-header__button.md-logo img,
+  .md-header__button.md-logo svg {
+    height: 24px;
+  }
+}
+
+
+/* 正文字体 */
+@font-face{
+  font-family: "MySans";
+  src: url("../assets/fonts/AktivGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face{ 
+  font-family: "MySans";
+  src: url("../assets/fonts/AktivGrotesk-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+@font-face{
+  font-family:"MySans";
+  src:url("../assets/fonts/AktivGrotesk-XBold.woff2") format("woff2");
+  font-weight: 800; font-style:normal; font-display:swap;
+}
+
+@font-face{
+  font-family:"MySans";
+  src:url("../assets/fonts/AktivGrotesk-Black.woff2") format("woff2");
+  font-weight: 900; font-style:normal; font-display:swap;
+}
+
+
+/* 文档区标题更粗 */
+.md-typeset h1 { font-weight: 800; }
+.md-typeset h2 { font-weight: 800; }
+.md-typeset h3, .md-typeset h4, .md-typeset h5, .md-typeset h6 { font-weight: 700; }
+
+/* 用 CSS 变量告诉主题用哪套字体（不要直接写 body{font-family}） */
+:root{
+  --md-text-font: "MySans";
+}
+
+/* 隐藏文档来源信息 */
+.md-header__source {
+  display: none !important;
+}
+
