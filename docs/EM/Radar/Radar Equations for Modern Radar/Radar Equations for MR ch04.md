@@ -282,7 +282,8 @@ $$
 
 Swerling [12] 提出了四种常用的随时间起伏的目标模型。这些模型的电压统计特性对应于不同自由度的卡方分布，用以表示目标电压矢量的高斯同相与正交分量的抽样情况，且目标可能具有快起伏或慢起伏。表 4.1 用自由度、独立目标样本数 $n_{e}$ 以及起伏速率（由目标相关时间 $t_{c}$ 与脉冲重复间隔 $t_{r}$ 的关系定义）描述了 Swerling 模型的统计特性。$n$ 个脉冲在积分时间 $t_{o}=n t_{r}$ 内接收。
 
-表 4.1 Swerling 目标模型的参数  
+表 4.1 Swerling 目标模型的参数 
+
 | 情形 | 自由度 dof | $n_{e}$ | 起伏速率 |
 | :---: | :---: | :---: | :--- |
 | 1 | 2 | 1 | 慢起伏：$t_{c} \gg n t_{r}$ |
@@ -358,32 +359,39 @@ $$
 
 #### 4.3.3.1 单脉冲情形 1 的精确方程
 
-对于情形 1 的单个回波脉冲，其检测概率为  
+对于情形 1 的单个回波脉冲，其检测概率为
+
 $$
 \begin{equation*}
 P_{d}=\int_{y_{b}}^{\infty} d P_{v}=\exp \left(-\frac{y_{b}^{2}}{2(\bar{S}+N)}\right)=\exp \left(\frac{\ln P_{f a}}{1+\bar{S} / N}\right) \tag{4.26}
 \end{equation*}
 $$
+
 其中，$y_{b}$ 是由公式 (4.15) 给出的单脉冲判决电压阈值。  
 式 (4.26) 可以很容易地反解得到基本的单脉冲可检测因子 $D_{11}=D_{1}(1)$ ：
+
 $$
 \begin{equation*}
 D_{11}=\frac{\ln P_{f a}}{\ln P_{d}}-1 \tag{4.27}
 \end{equation*}
 $$
+
 由于精确方程形式非常简单，因此在单脉冲情形 1 的检测计算中并不需要使用近似公式。
 
 #### 4.3.3.2 多脉冲 ($n$ 脉冲) 情形 1 的精确表达式
 
 对于情形 1 目标，采用 $n$ 脉冲积累时，$P_{d}$ 的精确表达式为 [6, p.390, Eq. (11.2-38)]：
+
 $$
 \begin{equation*}
 P_{d 1}=1-P_{\gamma}\left(y_{b}, n-1\right)+\left(1+\frac{1}{n s}\right)^{n-1} \exp \left(-\frac{y_{b}}{1+n s}\right) P_{\gamma}\left[\frac{y_{b}}{1+1 / n s}, n-1\right], \quad n>1 \tag{4.28}
 \end{equation*}
 $$
+
 其中，$P_{\gamma}(x, n)$ 为不完全伽马函数 (见公式 (4.3))，$y_{b}$ 是由公式 (4.6) 给出的判决阈值，$s=\bar{S}/N$ 是平均信噪比。
 
 对于 $n>1$ 的情形 1 目标，其精确的可检测因子只能通过 (4.28) 的数值求根得到：
+
 $$
 \begin{equation*}
 D_{1}(n)=\operatorname{root}_{s}\left\{P_{d 1}=1-P_{\gamma}\left(y_{b}, n-1\right)+\left(1+\frac{1}{n s}\right)^{n-1} \exp \left(-\frac{y_{b}}{1+n s}\right) P_{\gamma}\left[\frac{y_{b}}{1+1 / n s}, n-1\right]\right\} \tag{4.29}
@@ -393,27 +401,33 @@ $$
 #### 4.3.3.3 多脉冲情形 1 可检测因子的近似式
 
 检测概率的一个近似式为 [6, p.390, Eq. (11.2-39)]：
+
 $$
 \begin{equation*}
 P_{d} \approx\left(1+\frac{1}{s n}\right)^{n-1} \exp \left(-\frac{y_{b}}{1+n s}\right) \tag{4.30}
 \end{equation*}
 $$
+
 该公式是通过假设在 $P_{f a} \ll 1$ 时，(4.28) 中的不完全伽马函数接近于 1 而得出的。  
 当 $n=1$ 时，该公式是精确的；在 $P_{f a}<0.05$ 时，$P_{d}$ 的误差小于 0.005；而当 $P_{f a}<0.01$ 或 $s>10$ 时，该误差可忽略不计。  
 然而，该近似式无法反解得到可检测因子，因此需要进一步近似。
 
 可检测因子可由 [6, p.392, Eq. (11.2-43)] 得到：该推导首先对 (4.30) 两边取自然对数，然后假设 $\ln (1+1/n s) \approx 1/n s$ 且 $1+n s \approx n s$，从而得到
+
 $$
 \begin{equation*}
 D_{1}(n) \approx \frac{n-1-y_{b}}{n \ln P_{d}} \tag{4.31}
 \end{equation*}
 $$
+
 采用 Gregers-Hansen 对 $y_{b}$ 的近似，可进一步得到：
+
 $$
 \begin{equation*}
 D_{1}(n) \approx \frac{1}{n \ln \left(1 / P_{d}\right)}\left\{\sqrt{n}\left[\Phi^{-1}\left(P_{f a}\right)-\frac{\Phi^{-1}\left(P_{f a}\right)+\ln P_{f a}+1}{(1.1 n-0.1)^{0.51}}\right]+1\right\} \tag{4.32}
 \end{equation*}
 $$
+
 该近似的精度如图 4.4 所示：当 $P_{d} \geq 0.3, \; P_{f a} \leq 10^{-3}$ 时，误差在 $\approx 0.5 \mathrm{~dB}$ 以内；而当 $n>10$ 时，精度进一步提高。对于 $n=1$，不绘制曲线，因为可由 (4.27) 直接精确计算。需要注意的是，在高检测概率和大 $n$ 的情况下，该近似非常精确，而精确公式可能超出内置函数的适用范围。
 
 对于情形 1 目标的检测性能，可以由通用方程 (4.23) 和 (4.24) 描述，这些方程使用不完全伽马函数 $P_{\gamma}$ 及其逆函数 $P_{\gamma}^{-1}$ 表达，独立目标样本数为 $n_{e}=1$ ：  
@@ -438,23 +452,29 @@ $$
 #### 4.3.4.1 情形 2 的精确方程
 
 对于情形 2 目标，$P_{d}$ 的精确表达式为 [6, p.404, Eq. (11.3-21)]：
+
 $$
 \begin{equation*}
 P_{d 2}=1-\frac{1}{(n-1)!} \int_{0}^{y_{b} /(s+1)} y^{n-1} e^{y} d y=1-P_{\gamma}\left(\frac{y_{b}}{s+1}, n\right)=1-P_{\gamma}\left[\frac{P_{\gamma}^{-1}\left(1-P_{f a}, n\right)}{s+1}, n\right] \tag{4.35}
 \end{equation*}
 $$
+
 该精确结果同样可以由通用方程 (4.23) 得到，只需令 $n_{e}=n$：
+
 $$
 \begin{equation*}
 P_{d 2}\left(s, P_{f a}, n\right)=P_{d}\left(s, P_{f a}, n, n\right)=1-P_{\gamma}\left[\frac{P_{\gamma}^{-1}\left(1-P_{f a}, n\right)}{s+1}, n\right] \tag{4.36}
 \end{equation*}
 $$
+
 可检测因子 $D_{2}(n)$ 可以通过对 (4.35) 关于 $s$ 求根得到，或者通过逆不完全伽马函数得到。由 (4.35) 可写为：
+
 $$
 \begin{equation*}
 D_{2}(n)=s=\frac{y_{b}\left(P_{f a}, n\right)}{P_{\gamma}^{-1}\left(1-P_{d}, n\right)}=\frac{P_{\gamma}^{-1}\left(1-P_{f a}, n\right)}{P_{\gamma}^{-1}\left(1-P_{d}, n\right)}-1 \tag{4.37}
 \end{equation*}
 $$
+
 该精确表达式同样可由通用方程 (4.24) 得到，只需令 $n_{e}=n$。
 
 #### 4.3.4.2 情形 2 的检测概率与可检测因子的近似式
@@ -466,14 +486,17 @@ $$
 ### 4.3.5 Swerling 情形 3
 
 在文献 [6, p.410, Eq. (11.4-21)] 中，推导出了情形 3 下信号加噪声的概率密度函数。由此得到情形 3 检测概率的一个近似表达式 [6, p.421, Eq. (11.4-24)]：
+
 $$
 \begin{equation*}
 P_{d 3}=\left(1+\frac{2}{n s}\right)^{n-2}\left(1+\frac{y_{b}}{1+(n s / 2)}-\frac{n-2}{n s / 2}\right) \exp \left(\frac{-y_{b}}{1+(n s / 2)}\right) \tag{4.38}
 \end{equation*}
 $$
+
 该公式在 $n=1$ 或 2 时为精确解，而在更大的 $n$ 时为近似解。要反解 (4.38) 得到可检测因子 $D_{3}(n)$，只能通过数值求根的方法。
 
 文献 [6] 中给出了 $n \gg 1$ 时的情形 3 近似，采用图解方法反解 $P_{d}$ 方程以得到 $D_{3}(n)$。更高精度的近似可以通过通用方程得到，此时令 $n_{e}=2$：
+
 $$
 \begin{gather*}
 P_{d 3}\left(s, P_{f a}, n\right)=P_{d}\left(s, P_{f a}, n, 2\right)=1-P_{\gamma}\left[\frac{P_{\gamma}^{-1}\left(1-P_{f a}, n\right)-(n-2)}{(n / 2) s+1}, 2\right]  \tag{4.39}\\
@@ -489,13 +512,16 @@ $$
 ### 4.3.6 Swerling 情形 4
 
 情形 4 的 $P_{d}$ 精确表达式为 [6, p.427, Eq. (11.5-19)]：
+
 $$
 \begin{equation*}
 P_{d 4}=1-\frac{n!}{[1+(s / 2)]^{n}} \sum_{k=0}^{n}\left[\frac{(s / 2)^{k}}{k!(n-k)!} P_{\gamma}\left(\frac{y_{b}}{1+(s / 2)}, n+k\right)\right] \tag{4.41}
 \end{equation*}
 $$
+
 对 (4.41) 关于 $s$ 求根即可得到 $D_{4}(n)$。  
 文献 [6, p.438, Eq. (11.5-25c)] 给出的情形 4 检测概率近似公式精度不足，而由通用方程推导出的近似式为：
+
 $$
 \begin{gather*}
 P_{d 4}\left(s, P_{f a}, n\right)=P_{d}\left(s, P_{f a}, n, 2 n\right)=1-P_{\gamma}\left[\frac{P_{\gamma}^{-1}\left(1-P_{f a}, n\right)+n}{(1 / 2) s+1}, 2 n\right]  \tag{4.42}\\
@@ -518,12 +544,15 @@ $$
 
 关于已知信号的检测，文献 [6, pp.291-298] 进行了讨论。  
 一个单脉冲以已知的频率和相位到达后，通过相干检测器处理，其中的参考正弦波具有相同的频率和相位，从而对输入信号进行线性变换并在基带产生一个正脉冲。由此得到的检测器输出信噪比 $s_{o}$ 恰好是输入信噪比 $s$ 的两倍，因为检测器滤除了 50% 的噪声功率。判决阈值可精确表示为：
+
 $$
 \begin{equation*}
 y_{b}=\Phi^{-1}\left(P_{f a}\right) \tag{4.44}
 \end{equation*}
 $$
+
 检测概率为：
+
 $$
 \begin{equation*}
 P_{d}\left(s, P_{f a}\right)=\Phi\left[\Phi^{-1}\left(P_{f a}\right)-\sqrt{2 s}\right] \tag{4.45}
@@ -531,13 +560,16 @@ P_{d}\left(s, P_{f a}\right)=\Phi\left[\Phi^{-1}\left(P_{f a}\right)-\sqrt{2 s}\
 $$
 
 解 (4.45)，即可得到稳态目标在相干检测下单脉冲的可检测因子：
+
 $$
 \begin{equation*}
 D_{c 1}\left(P_{d}, P_{f a}\right)=s=\frac{1}{2}\left[\Phi^{-1}\left(P_{f a}\right)-\Phi^{-1}\left(P_{d}\right)\right]^{2} \tag{4.46}
 \end{equation*}
 $$
+
 例如，对于相干检测，当 $P_{d}=0.9, \; P_{f a}=10^{-6}$ 时，单脉冲需求为 $D_{c 1}=12.60 \,\mathrm{dB}$；相比之下，包络检波的单脉冲需求为 $D_{0}(1)=13.18 \,\mathrm{dB}$。  
 当对 $n$ 个脉冲进行相干积累时，每个脉冲的需求为：
+
 $$
 \begin{equation*}
 D_{c}\left(P_{d}, P_{f a}, n\right)=\frac{D_{c 1}\left(P_{d}, P_{f a}\right)}{n}=\frac{1}{2 n}\left[\Phi^{-1}\left(P_{f a}\right)-\Phi^{-1}\left(P_{d}\right)\right]^{2} \tag{4.47}
@@ -551,13 +583,16 @@ $$
 ### 4.4.2 包络检波与检测器损耗
 
 当信号与噪声一起通过包络检波器时，会产生检测器损耗（亦称为“小信号抑制效应”）。此时输出信噪比 $s_{o}$ 不再是相干检波时的 $2 s$，而是：
+
 $$
 \begin{equation*}
 s_{o}=\frac{2 s}{C_{x}} \approx \frac{2 s^{2}}{s+2.3} \tag{4.48}
 \end{equation*}
 $$
+
 其中近似式 $C_{x}=(s+2.3)/s$ 来自文献 [15] 的经验公式。  
 将 $s_{o}=2 D_{c 1}$（满足检测要求所需条件），解得 $s=D_{0}(n)$，即可得到 $n$ 脉冲稳态目标的可检测因子：
+
 $$
 \begin{equation*}
 D_{0}\left(P_{d}, P_{f a}, n\right) \approx \frac{D_{c 1}\left(P_{d}, P_{f a}\right)}{n}\left[\frac{1}{2}+\sqrt{\frac{1}{4}+\frac{2.3 n}{D_{c 1}\left(P_{d}, P_{f a}\right)}}\right] \tag{4.49}
@@ -571,15 +606,18 @@ $$
 ### 4.4.3 积分损耗
 
 包络检波器输入端所需的总信号能量为 $n D_{0}(n)$。其与单脉冲能量需求之比称为积分损耗（integration loss），由 Marcum [4] 定义：
+
 $$
 \begin{equation*}
 L_{i}(n) \equiv \frac{n D_{0}(n)}{D_{01}} \tag{4.50}
 \end{equation*}
 $$
+
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-147.jpg?height=785&width=970&top_left_y=272&top_left_x=252)  
 图 4.8 基于检测器损耗推导的 $D_{0}(n)$ 与公式 (4.12) 精确值的比较。
 
 其中 $D_{0}(1)$ 简记为 $D_{01}$。根据 (4.49)，将 $D_{c 1}$ 代换为 $D_{01}/C_{x}=D_{01}^{2}/\left(D_{01}+2.3\right)$，积分损耗可表示为：
+
 $$
 \begin{equation*}
 L_{i}(n)=\frac{1+\sqrt{1+9.2 n\left(D_{01}+2.3\right) / D_{01}^{2}}}{1+\sqrt{1+9.2\left(D_{01}+2.3\right) / D_{01}^{2}}} \tag{4.51}
@@ -598,6 +636,7 @@ $$
 非相干积分存在损耗 $L_{i}$ 并不意味着此类积分方式不可取。它仅表示在相同脉冲数下，非相干积分的效果不如相干积分。然而，相干积分往往是不可能的，甚至在某些情况下是不希望的。正如将在第 4.5.1 节中说明的，采用分集技术获得的 $2 \leq n \leq 10$ 个样本进行非相干积分时，即使能够实现相干积分，其在 $P_{d}>0.5$ 的条件下也可能表现出更优的性能。
 
 非相干积分相对于单脉冲的性能增益定义为：
+
 $$
 \begin{equation*}
 G_{i}(n)=\frac{n}{L_{i}(n)} \tag{4.52}
@@ -611,6 +650,7 @@ $$
 ### 4.4.5 起伏损耗
 
 对于 **Case 1 起伏目标**，其可检测因子可通过稳态目标可检测因子 $D_{0}(n)$ 乘以起伏损耗 $L_{f 1}$ 得到，定义如下：
+
 $$
 \begin{equation*}
 L_{f 1}(n) \equiv \frac{D_{1}(n)}{D_{0}(n)} \tag{4.53}
@@ -623,6 +663,7 @@ $$
 图 4.10 Case 1 起伏损耗 $L_{f 1}$ 随 $P_{d}$ 的变化曲线（不同 $P_{f a}$ 与 $n$ 的情况）。
 
 对图 4.10 数据的解析近似可得 $L_{f 1}^{\prime}$（以 dB 表示）作为 $n, P_{d}, P_{f a}$ 的函数：
+
 $$
 \begin{equation*}
 L_{f 1}^{\prime}(n) \approx\left[0.895 \log \left(1-P_{d}\right)-2\left(1-P_{d}\right)^{4}\right](1+0.03 \log n)\left[1-0.02\left(6+\log P_{f a}\right)\right]-1 \tag{4.54}
@@ -634,6 +675,7 @@ $$
 ### 4.4.6 Case 1 可检测因子
 
 结合 (4.18)、(4.51) 与 (4.54)，Case 1 起伏目标的可检测因子为：
+
 $$
 \begin{equation*}
 D_{1}\left(P_{d}, P_{f a}, n\right)=\frac{1}{n} D_{01}\left(P_{d}, P_{f a}\right) L_{i}(n) L_{f 1}\left(P_{d}, P_{f a}, n\right) \tag{4.55}
@@ -650,6 +692,7 @@ $$
 - 积分损耗 $L_{i}$（图 4.9），  
 - 起伏损耗 $L_{f 1}$（图 4.10），  
 然后再减去 $10 \log n$：
+
 $$
 \begin{equation*}
 D_{1}^{\prime}(n)=D_{01}^{\prime}+L_{i}^{\prime}(n)+L_{f 1}^{\prime}(n)-10 \log n \tag{4.56}
@@ -661,6 +704,7 @@ $$
 ### 4.4.7 其他起伏目标的可检测因子
 
 文献 [15] 已经证明，起伏损耗的分贝值与独立目标样本数 $n_{e}$ 成反比：
+
 $$
 \begin{align*}
 10 \log \left[L_{f}\left(n, n_{e}\right)\right] & \approx\left(1 / n_{e}\right) 10 \log \left[L_{f 1}(n)\right]  \tag{4.57}\\
@@ -669,6 +713,7 @@ L_{f}^{\prime}\left(n, n_{e}\right) & \approx\left(1 / n_{e}\right) L_{f 1}^{\pr
 $$
 
 该近似与 Kanter [16] 所得到的精确结果非常接近。因此，对于任意 **卡方目标模型**，其可检测因子 $D^{\prime}$（以 dB 表示）可近似为：
+
 $$
 \begin{equation*}
 D_{e}^{\prime}\left(n, n_{e}\right)=D_{01}^{\prime}+L_{i}^{\prime}(n)+\left(1 / n_{e}\right) L_{f 1}^{\prime}(n)-10 \log n \tag{4.58}
@@ -687,6 +732,7 @@ Swerling 模型中 $n_{e}$ 的取值列于表 4.1；对于其他卡方模型，�
 
 举例来说，假设在波束驻留时间 $t_{o}$ 内对 **Case 1 目标** 接收 16 个脉冲：  
 $t_{o}=16 t_{r}$。这些脉冲可进行相干积分，从而在包络检波器处得到一个样本，其能量为 $E / N_{0}=16 E_{1} / N_{0}$，其中 $E_{1}$ 为单脉冲能量。若要求 $P_{d}=0.9$，$P_{f a}=10^{-6}$，由公式 (4.27) 得到：
+
 $$
 D_{1}(1)=130.1=21.1 \,\mathrm{dB}
 $$
@@ -715,6 +761,7 @@ $$
 #### 4.5.2.1 时间分集
 
 在积分时间 $t_{o}$ 内接收脉冲时，同相与正交电压分量可能发生变化，从而产生 $n_{e t}>1$ 个独立样本用于积分 [2, p. 86, Eq. (2.50)]：
+
 $$
 \begin{equation*}
 n_{e t}=1+\frac{t_{o}}{t_{c}} \leq n \tag{4.59}
@@ -722,6 +769,7 @@ n_{e t}=1+\frac{t_{o}}{t_{c}} \leq n \tag{4.59}
 $$
 
 其中 $t_{c}$ 为目标回波的相关时间，由 [2, p. 86, Eq. (2.60)] 给出：
+
 $$
 \begin{equation*}
 t_{c}=\frac{\lambda}{2 \omega_{a} L_{x}} \tag{4.60}
@@ -757,6 +805,7 @@ $$
 **单基地雷达**在一条路径上观测目标，此时目标的方位角随时间缓慢变化，如 (4.60) 中的 $\omega_{a}$ 所示。**多基地雷达**使用多条同时存在的路径，可以利用空间分集在每个脉冲中获得多个独立样本。  
 
 当发射与接收路径的平分线相对于目标轴的夹角为 $\theta$，并且发生变化量 $\Delta \theta$ 时，独立信号样本数为：
+
 $$
 \begin{equation*}
 n_{e s}=1+\frac{\Delta \theta}{\theta_{c}} \tag{4.63}
@@ -774,6 +823,7 @@ $$
 #### 4.5.2.5 可用的独立样本
 
 在驻留时间内积分的独立信号样本数为：
+
 $$
 \begin{equation*}
 n_{e}=n_{e t} n_{e f} n_{e s} n_{e p} \leq n \tag{4.64}
