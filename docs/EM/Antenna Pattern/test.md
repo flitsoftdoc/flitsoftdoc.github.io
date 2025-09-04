@@ -44,7 +44,7 @@
 内容
 ///
 
-///warningt | warning
+///warning | warning
 
 内容
 ///
@@ -58,3 +58,10 @@ Apple
 
 
 `note`/`abstract`/`attention`/`caution`/`danger`/`error`/`tip`/`hint`/`warning` 
+
+
+/// info | info
+
+内容
+///
+
