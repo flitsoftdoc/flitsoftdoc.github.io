@@ -396,17 +396,19 @@ $$
 
 混合处理的计算步骤列在表 5.5 中。稳态目标的数据未绘制，因为可以通过将 1-D 损失平方（dB 值翻倍）得到近似值，参见图 5.3 和 5.4。
 
+表 5.5 稳定目标在混合处理下计算波束形状损失的步骤
 
 
-| (1) Add signals from beams in line $a$ (5.47) | $S_i(i, j, k, a)=\sum_{m=m_2(a)}^{m_2(a)} s(i, j, k, m, a)$ |  |
+| 步骤 | 数学表达式 | 式号 |
 | :--- | :--- | :--- |
-| (2) Steady-target detection probability for integrated signal in line $a$ (5.48) | $P_{d i\{0\}}(i, j, k, a)=\Phi\left[\sqrt{2 \ln \left(1 / P_{f a}\right)}-\sqrt{2 S_i(i,, j, k, a)+1}\right]$ |  |
-| (3) Steady-target cumulative probability over all lines (5.49) | $P_{c\{0\}}(i, j, k)=1-\prod_{m=m_1(a)}^{m_2(a)}\left[1-P_{d i\{0\}}(i, j, k, a)\right]$ |  |
-| (4) Case 1 cumulative probability over all lines | $P_{c\{1\}}(i, j, k)=(1 / s) \int_0^{\infty} \exp (-p / s) P_{c\{0\}}(p, j, k) d p$ | (5.54) |
-| (5) Average $P_{m i\{1\}}$ over all target positions | $\overline{P_{c\{1\}}}(i, k)=\frac{1}{j_{\max }} \sum_j P_{c\{1\}}(i, j, k)$ | (5.55) |
-| (6) Detectability factor with beamshape loss | $D_{p\{1\}}(k, u)=s_x, x=\operatorname{root}_i\left[\overline{P_{c\{1\}}}(i, k)=P_{d u}\right]$ | (5.56) |
-| (7) Reference detectability factor | $D_{r 1}(k, u)=\Delta_k\left[\left(\ln P_{f a} / \ln P_d\right)-1\right]$ | (5.57) |
-| (8) Beamshape loss | $L_{p 2\{1\}}(k, u)=D_{p\{1\}}(k, u) / D_{r\{1\}}(k, u)$ | (5.58) |
+| (1) 对 $a=1,2,3$ 的各条波束信号求和 | $S_i(i, j, k, a)=\sum_{m=m_1(a)}^{m_2(a)} s(i, j, k, m)$ | (5.47) |
+| (2) 线 $a$ 上集成信号的检测概率 | $P_{d i\{0\}}(i, j, k, a)=\Phi\left[\sqrt{2 \ln \left(1 / P_{f a}\right)}-\sqrt{2 S_i(i, j, k, a)+1}\right]$ | (5.48) |
+| (3) 所有线上的累积检测概率 | $P_{d i\{0\}}(i, j, k)=1-\prod_{m=m_1(a)}^{m_2(a)}\left[1-P_{d i\{0\}}(i, j, k, a)\right]$ | (5.49) |
+| (4) 各目标位置上的平均 $P_{d i\{0\}}$ | $\overline{P_{d i\{0\}}}(i, k)=\frac{1}{j_{\max }} \sum_j P_{d i\{0\}}(i, j, k)$ | (5.50) |
+| (5) 含波束形状损失的可探测性因子 | $D_{p\{0\}}(k, u)=s_x, \; x=\operatorname{root}_i\left[\overline{P_{d i\{0\}}}(i, k)=P_{d u}\right]$ | (5.51) |
+| (6) 参考可探测性因子 | $D_{r\{0\}}(k, u)=\frac{\Delta_k}{2}\left\{\left[\sqrt{2 \ln \left(1 / P_{f a}\right)}-\Phi^{-1}\left(P_{d u}\right)\right]^2-1\right\}$ | (5.52) |
+| (7) 波束形状损失 | $L_{p 2\{0\}}(k, u)=D_{p\{0\}}(k, u) / D_{r\{0\}}(k, u)$ | (5.53) |
+
 
 ### 5.4.3 Case 1 的 2-D 扫描波束形状损失
 
@@ -434,7 +436,7 @@ Case 1 混合处理的波束形状损失如图5.17所示。通过对每条扫描
 
 表5.6 Case 1 混合处理下波束形状损失的计算步骤
 
-| 步骤 | 公式 | 注释 |
+| 步骤 | 公式 | 式号 |
 | :--- | :--- | :--- |
 | (1) 对线 $a$ 中波束信号求和 (5.47) | $S_{i}(i, j, k, a)=\sum_{m=m_{1}(a)}^{m_{2}(a)} s(i, j, k, m, a)$ |  |
 | (2) 线 $a$ 积分信号稳态目标检测概率 (5.48) | $P_{d i\{0\}}(i, j, k, a)=\Phi\left[\sqrt{2 \ln \left(1 / P_{f a}\right)}-\sqrt{2 S_{i}(i, j, k, a)+1}\right]$ |  |
@@ -484,9 +486,9 @@ Case 2 混合处理下波束形状损失的计算步骤列于表5.7。步骤(1)�
 
 表5.7 Case 2 混合处理下波束形状损失计算步骤
 
-| 步骤 | 公式 | 注释 |
+| 步骤 | 公式 | 式号 |
 | :--- | :--- | :--- |
-| (1) 对线 $a$ 中波束信号求和 (5.47) | $S_{i}(i, j, k, a)=\sum_{m=m_{1}(a)}^{m_{2}(a)} s(i, j, k, m, a)$ |  |
+| (1) 对线 $a$ 中波束信号求和 | $S_{i}(i, j, k, a)=\sum_{m=m_{1}(a)}^{m_{2}(a)} s(i, j, k, m, a)$ |  (5.47) |
 | (2) 线 $a$ 积分信号 Case 2 检测概率 | $P_{d\{2\}}(i, j, k, a)=1-P_{\gamma}\left\{\frac{P_{\gamma}^{-1}\left(1-P_{f a}, 1\right)-\left[1-n_{e 1}(k)\right]}{\left[1 / n_{e 1}(k)\right] S_{i}(i, j, k, a)+1}, n_{e 1}(k)\right\}$ | (5.60) |
 | (3) 所有线 Case 2 累计概率 | $P_{c\{2\}}(i, j, k)=1-\prod_{m=m_{1}(a)}^{m_{2}(a)}\left\{1-P_{d\{2\}}[s(i, j, k, a)]\right\}$ | (5.61) |
 | (4) 对所有目标位置平均 | $\overline{P_{c\{2\}}}(i, k)=\frac{1}{j_{\max }} \sum_{j} P_{c\{2\}}(i, j, k)$ | (5.62) |
