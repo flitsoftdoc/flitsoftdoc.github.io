@@ -762,17 +762,17 @@ Case 2的累积检测损失如图5.37所示。对于$Delta>1$，所有$P_d$下�
 
 [10] Doviak, R. J. and Zrnic, D. S., Doppler Radar and Weather Observations, 2nd ed., New York: Academic Press, 1993.
 
-# Appendix 5A 分析近似波束形状损失
+## Appendix 5A 分析近似波束形状损失
 
 虽然第 5.3.1–5.3.7 节给出的计算方法可准确估计波束形状损失，但在雷达分析程序中可能耗时过长。以下近似公式旨在匹配由余弦加权矩形孔径形成的波束计算出的波束形状损失。使用余弦加权矩形孔径而非高斯波束，是因为它更能体现稀疏采样导致的主瓣两侧快速衰减时的损失增加。近似公式可在 0.1–0.2 dB 内匹配前述各情况的计算值，并在间距 $\Delta \rightarrow 0.71$ 时与密集采样值合并。带撇号的符号表示分贝值，1-D 扫描密集采样值记为 $L_{p0}^{\prime}$。
 
 ---
 
-## 5A.1 一维波束形状损失
+### 5A.1 一维波束形状损失
 
 对于 $\Delta>0.71$ 使用下列公式；对于 $\Delta \le 0.71$，取 $L_{p1}^{\prime} = L_{p0}^{\prime} = 1.24~\mathrm{dB}$。
 
-### 5A.1.1 稳定目标积分处理的近似公式
+#### 5A.1.1 稳定目标积分处理的近似公式
 
 $$
 \begin{equation*}
@@ -780,7 +780,7 @@ L_{p 1}^{\prime}\left(P_{d}, \Delta\right)=L_{p 0}^{\prime}+23\left(P_{d}-0.3\ri
 \end{equation*}
 $$
 
-### 5A.1.2 稳定目标累积检测的近似公式
+#### 5A.1.2 稳定目标累积检测的近似公式
 
 在随后的方程中，项 $C\left(P_{d}, \Delta\right)$ 表示间距 $\Delta$ 与给定 $P_{d}$ 时最小损失间距之间的差值。损失遵循不同的函数 $A\left(P_{d}, \Delta\right)$，针对该项的正负值分别定义。
 
@@ -796,7 +796,7 @@ C\left(P_{d}, \Delta\right) & =\Delta+1.15\left(P_{d}-0.3\right)^{0.83}-1.5
 \end{align*}
 $$
 
-### 5A.1.3 Case 1 目标积分处理的近似公式
+#### 5A.1.3 Case 1 目标积分处理的近似公式
 
 $$
 \begin{equation*}
@@ -804,7 +804,7 @@ L_{p 1}^{\prime}\left(P_{d}, \Delta\right)=L_{p 0}^{\prime}+5.6 P_{d}^{0.6}(\Del
 \end{equation*}
 $$
 
-### 5A.1.4 Case 1 目标累积检测的近似公式
+#### 5A.1.4 Case 1 目标累积检测的近似公式
 
 $$
 \begin{align*}
@@ -818,7 +818,7 @@ A\left(P_{d}, \Delta\right) & =\left[3.25-\Delta L\left(P_{d}\right)\right] P_{d
 $$
 
 
-### 5A.1.5 Case 2 目标积分处理的近似公式
+#### 5A.1.5 Case 2 目标积分处理的近似公式
 
 $$
 \begin{equation*}
@@ -826,7 +826,7 @@ L_{p 1}^{\prime}\left(P_{d}, \Delta\right)=L_{p 0}^{\prime}+6 P_{d}(\Delta-0.71)
 \end{equation*}
 $$
 
-### 5A.1.6 Case 2 目标累积检测的近似公式
+#### 5A.1.6 Case 2 目标累积检测的近似公式
 
 $$
 \begin{align*}
@@ -842,11 +842,11 @@ $$
 L_{p n 1}^{\prime}\left(P_{d}, \Delta\right)=L_{p 1}^{\prime}\left(P_{d}, \Delta\right)-10 \log (\Delta)
 $$
 
-## 5A.2 具有矩形网格的二维波束形状损耗
+### 5A.2 具有矩形网格的二维波束形状损耗
 
 二维波束形状损耗以 dB 表示，记为 $L_{p 2}^{\prime}$。所有公式适用于 $\Delta>0.71$；若 $\Delta \leq 0.71$，则 $L_{p 2}^{\prime}=2 L_{0}^{\prime}=2.48$。
 
-### 5A.2.1 稳定目标积分处理的近似公式
+#### 5A.2.1 稳定目标积分处理的近似公式
 
 $$
 \begin{equation*}
@@ -865,7 +865,7 @@ C\left(P_{d}, \Delta\right) & =\Delta+0.81\left(P_{d}-0.3\right)^{0.6}-1.35
 \end{align*}
 $$
 
-### 5A.2.3 稳定目标混合处理的近似公式
+#### 5A.2.3 稳定目标混合处理的近似公式
 
 $$
 \begin{align*}
@@ -876,7 +876,7 @@ C\left(P_{d}, \Delta\right) & =\Delta+0.79\left(P_{d}-0.3\right)^{0.72}-1.3
 \end{align*}
 $$
 
-### 5A.2.4 Case 1 目标积分处理的近似公式
+#### 5A.2.4 Case 1 目标积分处理的近似公式
 
 $$
 \begin{equation*}
@@ -884,7 +884,7 @@ L_{p 2}^{\prime}\left(P_{d}, \Delta\right)=2 L_{p 0}^{\prime}+13.5 P_{d}^{0.75}(
 \end{equation*}
 $$
 
-### 5A.2.5 Case 1 目标累积检测的近似公式
+#### 5A.2.5 Case 1 目标累积检测的近似公式
 
 $$
 \begin{align*}
@@ -897,7 +897,7 @@ A\left(P_{d}, \Delta\right) & =1.5\left(1.9-P_{d}\right)^{1.4}\left[\frac{C\left
 \end{align*}
 $$
 
-### 5A.2.6 Case 1 目标混合处理近似公式
+#### 5A.2.6 Case 1 目标混合处理近似公式
 
 $$
 \begin{align*}
@@ -911,13 +911,13 @@ C\left(P_{d}, \Delta\right) &= \Delta+0.28\left(P_{d}-0.3\right)^{0.63}-1
 \end{align*} \tag{5.86}
 $$
 
-### 5A.2.7 Case 2 目标积分处理近似公式
+#### 5A.2.7 Case 2 目标积分处理近似公式
 
 $$
 L_{p 2}^{\prime}\left(P_{d}, \Delta\right)=2 L_{p 0}^{\prime}+15 P_{d}^{1.55}(\Delta-0.71)^{2.3} \tag{5.87}
 $$
 
-### 5A.2.8 Case 2 目标累积检测近似公式
+#### 5A.2.8 Case 2 目标累积检测近似公式
 
 $$
 \begin{align*}
@@ -931,7 +931,7 @@ C\left(P_{d}, \Delta\right) &= \Delta+0.23\left(P_{d}-0.3\right)^{0.26}-1.05
 \end{align*} \tag{5.88}
 $$
 
-### 5A.2.9 Case 2 目标混合处理近似公式
+#### 5A.2.9 Case 2 目标混合处理近似公式
 
 $$
 \begin{align*}
@@ -945,13 +945,13 @@ C\left(P_{d}, \Delta\right) &= \Delta+0.18\left(P_{d}-0.3\right)^{0.37}-0.95
 \end{align*} \tag{5.89}
 $$
 
-### 5A.2.10 Diversity 目标积分处理近似公式
+#### 5A.2.10 Diversity 目标积分处理近似公式
 
 $$
 L_{p 2}^{\prime}\left(P_{d}, \Delta\right)=2 L_{p 0}^{\prime}+13.5 P_{d}^{1.2}(\Delta-0.71)^{2.3}-2.3\left(0.9-P_{d}\right)^{2}(\Delta-0.71)^{3} \tag{5.90}
 $$
 
-### 5A.2.11 Diversity 目标累积检测近似公式
+#### 5A.2.11 Diversity 目标累积检测近似公式
 
 $$
 \begin{align*}
@@ -966,7 +966,7 @@ C\left(P_{d}, \Delta\right) &= \Delta+0.18\left(P_{d}-0.3\right)^{0.37}-1.1
 $$
 
 
-### 5A.2.12 Diversity目标混合处理近似公式
+#### 5A.2.12 Diversity目标混合处理近似公式
 
 $$
 \begin{align*}
@@ -985,17 +985,17 @@ $$
 L_{p n 2}^{\prime}\left(P_{d}, \Delta\right)=L_{p 2}^{\prime}\left(P_{d}, \Delta\right)-20 \log (\Delta)
 $$
 
-## 5A.3 2-D 三角格扫描天线形状损失
+### 5A.3 2-D 三角格扫描天线形状损失
 
 记为 $L_{p T 2}^{\prime}$，适用于 $\Delta>0.71$，否则 $L_{p T 2}^{\prime}=2 L_{0}^{\prime}=2.48$。
 
-### 5A.3.1 Steady Target 积分处理近似公式
+#### 5A.3.1 Steady Target 积分处理近似公式
 
 $$
 L_{p T 2}^{\prime}\left(P_{d}, \Delta\right) = 2 L_{p 0}^{\prime}+12 P_{d}^{1.75}(\Delta-0.71)^{2.4}-9.5\left(0.9-P_{d}\right)^{3.7}(\Delta-0.71)^{2} \tag{5.93}
 $$
 
-### 5A.3.2 Steady Target 累积检测近似公式
+#### 5A.3.2 Steady Target 累积检测近似公式
 
 $$
 \begin{align*}
@@ -1009,7 +1009,7 @@ C\left(P_{d}, \Delta\right) &= \Delta+0.69\left(P_{d}-0.3\right)^{0.63}-1.4
 \end{align*} \tag{5.94}
 $$
 
-### 5A.3.3 Steady Target 混合处理近似公式
+#### 5A.3.3 Steady Target 混合处理近似公式
 
 $$
 \begin{align*}
@@ -1023,13 +1023,13 @@ C\left(P_{d}, \Delta\right) &= \Delta+0.77\left(P_{d}-0.3\right)^{0.33}-1.5
 \end{align*} \tag{5.95}
 $$
 
-### 5A.3.4 Case 1 积分处理近似公式
+#### 5A.3.4 Case 1 积分处理近似公式
 
 $$
 L_{p T 2}^{\prime}\left(P_{d}, \Delta\right) = 2 L_{p 0}^{\prime}+7 P_{d}^{0.5}(\Delta-0.71)^{2.7}-8.5\left(0.9-P_{d}\right)^{3}(\Delta-0.71)^{4} \tag{5.96}
 $$
 
-### 5A.3.5 Case 1 累积检测近似公式
+#### 5A.3.5 Case 1 累积检测近似公式
 
 $$
 \begin{align*}
@@ -1043,7 +1043,7 @@ C\left(P_{d}, \Delta\right) &= \Delta + 0.23\left(P_{d}-0.3\right)^{0.26}-1.2
 \end{align*} \tag{5.97}
 $$
 
-### 5A.3.6 Case 1 混合处理近似公式
+#### 5A.3.6 Case 1 混合处理近似公式
 
 $$
 \begin{align*}
@@ -1057,13 +1057,13 @@ C\left(P_{d}, \Delta\right) &= \Delta + 0.23\left(P_{d}-0.3\right)^{0.26}-1.15
 \end{align*} \tag{5.98}
 $$
 
-### 5A.3.7 Case 2 积分处理近似公式
+#### 5A.3.7 Case 2 积分处理近似公式
 
 $$
 L_{p T 2}^{\prime}\left(P_{d}, \Delta\right) = 2 L_{p 0}^{\prime}+8 P_{d}^{0.9}(\Delta-0.71)^{2.5}-6\left(0.9-P_{d}\right)^{4}(\Delta-0.71)^{2.5} \tag{5.99}
 $$
 
-### 5A.3.8 Case 2 累积检测近似公式
+#### 5A.3.8 Case 2 累积检测近似公式
 
 $$
 \begin{align*}
@@ -1077,7 +1077,7 @@ C\left(P_{d}, \Delta\right) &= \Delta + 0.18\left(P_{d}-0.3\right)^{0.37}-1.15
 \end{align*} \tag{5.100}
 $$
 
-### 5A.3.9 Case 2 混合处理近似公式
+#### 5A.3.9 Case 2 混合处理近似公式
 
 $$
 \begin{align*}
@@ -1091,13 +1091,13 @@ C\left(P_{d}, \Delta\right) &= \Delta + 0.18\left(P_{d}-0.3\right)^{0.37}-1.1
 \end{align*} \tag{5.101}
 $$
 
-### 5A.3.10 Diversity Target 积分处理近似公式
+#### 5A.3.10 Diversity Target 积分处理近似公式
 
 $$
 L_{p T 2}^{\prime}\left(P_{d}, \Delta\right) = 2 L_{p 0}^{\prime}+(\Delta-0.71)^{2.7}\Big[7.5 P_{d}^{0.7}-12\left(0.9-P_{d}\right)^{5}\Big] \tag{5.102}
 $$
 
-### 5A.3.11 Diversity Target 累积检测近似公式
+#### 5A.3.11 Diversity Target 累积检测近似公式
 
 $$
 \begin{align*}
@@ -1111,7 +1111,7 @@ C\left(P_{d}, \Delta\right) &= \Delta + 0.18\left(P_{d}-0.3\right)^{0.37}-1.15
 \end{align*} \tag{5.103}
 $$
 
-### 5A.3.12 Diversity Target 混合处理近似公式
+#### 5A.3.12 Diversity Target 混合处理近似公式
 
 $$
 \begin{align*}
