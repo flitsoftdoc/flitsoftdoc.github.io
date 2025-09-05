@@ -854,7 +854,7 @@ L_{p 2}^{\prime}\left(P_{d}, \Delta\right)=2 L_{p 0}^{\prime}+21 P_{d}^{2.7}(\De
 \end{equation*}
 $$
 
-### 5A.2.2 稳定目标累积检测的近似公式
+#### 5A.2.2 稳定目标累积检测的近似公式
 
 $$
 \begin{align*}
