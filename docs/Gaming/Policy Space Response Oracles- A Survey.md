@@ -50,17 +50,16 @@ ${ }^{2}$ 为简便起见，我们常常将解概念与计算该解的MSS使用�
 
 我们注意到，PSRO 框架可以被视为经验博弈论分析（Empirical Game-Theoretic Analysis, EGTA）[Wellman, 2006] 的一个实例。EGTA 包括一系列基于仿真构建和分析受限博弈的方法。关于 EGTA 的全面介绍，可参考 Wellman 等人 [2024] 的综述。作为 EGTA 与 PSRO 联系的一个具体例子，在早期的 EGTA 工作中，Schvartzman 和 Wellman [2009] 使用表格型 RL 作为最佳响应预言机（当时深度 RL 尚不存在），并将受限博弈的 NE 作为生成策略的最佳响应目标（即 MSS）。
 
-![](https://cdn.mathpix.com/cropped/2025_08_25_cc73c6e94ea7ff68acf9g-03.jpg?height=354&width=1421&top_left_y=178&top_left_x=349) 
-
-图1：分别展示了 DO 和 PSRO 框架。PSRO 通过引入 MSS 推广了 DO 框架，使得最佳响应目标不再局限于 NE。此外，PSRO 能够容纳多种 RO 和（近似）最佳响应预言机。
-
-
 
 ### 2.1 框架
 
 一个标准型（又称战略型）博弈的表示形式 $\mathcal{G}=\left(N,\left(S_{i}\right),\left(u_{i}\right)\right)$ 是一个三元组，其中 $N$ 是有限的玩家集合，每个玩家都有一个非空的策略集合 $S_{i}$，以及一个效用函数 $u_{i}: \Pi_{j \in N} S_{j} \rightarrow \mathbb{R}$。受限博弈 $\hat{\mathcal{G}}_{S \downarrow X}=\left(N,\left(X_{i}\right),\left(\hat{u}_{i}\right)\right)$ 是完整博弈 $\mathcal{G}$ 的投影，玩家从受限策略集合 $X_{i} \subseteq S_{i}$ 中选择策略，效用可以通过仿真进行估计。
 
 图1展示了DO应用于双矩阵博弈的特殊情况（左图），以及一般的PSRO框架（右图）。在PSRO中，每个玩家会初始化一个策略集合 $X_{i}$，并通过对剖面空间 $X$ 中的策略剖面进行仿真来得到效用，从而形成一个初始的受限博弈 $\hat{\mathcal{G}}_{S \downarrow X}$。在PSRO的每一次迭代中，MSS 会从当前受限博弈 $\hat{\mathcal{G}}_{S \downarrow X}$ 中指定一个剖面 $\sigma \in \Delta X$ 作为下一个最佳响应目标，其中 $\Delta$ 表示某集合上的概率单纯形。然后，每个玩家 $i \in N$ 独立地计算（学习）一个针对其响应目标（RO）的最佳响应 $s_{i}^{\prime} \in S_{i}$。RO 是一个关于策略剖面的函数，记作 $RO_{i}(\sigma)$。在标准PSRO中，RO 可以写作 $RO_{i}(\sigma)=u_{i}\left(s_{i}^{\prime}, \sigma_{-i}\right)$，对 $s_{i}^{\prime}$ 进行最大化即可得到玩家 $i$ 针对其他玩家策略 $\sigma_{-i}$ 的最佳响应。在该过程中，其他玩家的策略 $\sigma_{-i}$ 是固定的，这使得环境对学习的玩家来说是平稳的，从而能够计算出响应。之后，该最佳响应 $s_{i}^{\prime}$ 会被加入受限博弈中的策略集合 $X_{i}$。这一过程会重复进行，直到满足某个停止条件（例如，完成固定次数的迭代，或受限博弈NE的估计遗憾低于阈值）。
+
+![](https://cdn.mathpix.com/cropped/2025_08_25_cc73c6e94ea7ff68acf9g-03.jpg?height=354&width=1421&top_left_y=178&top_left_x=349) 
+
+图1：分别展示了 DO 和 PSRO 框架。PSRO 通过引入 MSS 推广了 DO 框架，使得最佳响应目标不再局限于 NE。此外，PSRO 能够容纳多种 RO 和（近似）最佳响应预言机。
 
 ### 2.2 PSRO中的策略探索
 
