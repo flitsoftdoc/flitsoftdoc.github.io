@@ -2,7 +2,7 @@
 
 # 雷达方程在现代雷达中的应用
 
-
+## Radar Equations for Modern Radar
 
 ![](https://cdn.mathpix.com/snip/images/29zz41cg_vDdZtrIvPrFJmAH7zlwaNltE3ahxHxKqgg.original.fullsize.png){ width="400" } 
 
