@@ -53,7 +53,7 @@ $$
 
 $$
 \begin{equation*}
-E=E_{a} A_{r}=\frac{P_{t}\tau G_{t} A_{r}\sigma}{(4 \pi R^{2})^{2}} \tag{1.4}
+E=E_{a} A_{r}=\frac{P_{t}\tau G_{t} A_{r}\sigma}{(4 \pi R^{2})^{2}} \quad(\mathrm{~J}) \tag{1.4}
 \end{equation*}
 $$
 
@@ -69,7 +69,7 @@ $$
 
 $$
 \begin{equation*}
-E=\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4}} \tag{1.6}
+E=\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4}} \quad(\mathrm{~J}) \tag{1.6}
 \end{equation*}
 $$
 
@@ -77,7 +77,7 @@ $$
 
 $$
 \begin{equation*}
-E=\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{1}} \tag{1.7}
+E=\frac{P_{t}\tau G_{t} G_{r} \lambda^{2} \sigma}{(4 \pi)^{3} R^{4} L_{1}} \quad(\mathrm{~J}) \tag{1.7}
 \end{equation*}
 $$
 
@@ -115,13 +115,15 @@ $$
 
 其中 $E_{\min}$ 是每个接收脉冲的最小能量，在最佳观测条件下使 $n$ 脉冲组在显示器上可见。这与当前定义[4]一致：  
 
-可见度因子（脉冲雷达）：单脉冲信号能量与单位带宽噪声功率之比，在最佳带宽和观察环境下，能在显示器上达到规定的探测概率和虚警概率。测量位置为接收机中频部分。
+/// note | 可见度因子（脉冲雷达）
+单脉冲信号能量与单位带宽噪声功率之比，在最佳带宽和观察环境下，能在显示器上达到规定的探测概率和虚警概率。测量位置为接收机中频部分。
+///
 
 因此最小所需能量为：
 
 $$
 \begin{equation*}
-E_{\min}=N_{0} V(n)=kT_{s}V(n) \tag{J}
+E_{\min}=N_{0} V(n)=kT_{s}V(n) \quad(\mathrm{J})\tag{1.11}
 \end{equation*}
 $$
 
@@ -243,7 +245,7 @@ Blake雷达方程中的各项定义旨在确保对有无脉内调制的脉冲雷
 - **可探测性因子**：探测过程既可能是电子探测，也可能是人工目视探测，但任何偏离理想过程的情况，都需要在损耗因子 $L_{2}$ 中加入相应的补偿项。
 
 - **带宽因子**：$C_{b}$ 由[12, Eq. (8.14a)]给出：
-- 
+  
 $$
 C_{b}=\frac{B_{n}\tau}{4.8}\left(1+\frac{1.2}{B_{n}\tau}\right)^{2} \tag{1.17}
 $$
