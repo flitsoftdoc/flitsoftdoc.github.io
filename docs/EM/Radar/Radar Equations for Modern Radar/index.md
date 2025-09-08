@@ -4,7 +4,7 @@
 
 ## Radar Equations for Modern Radar
 
-![](https://cdn.mathpix.com/snip/images/29zz41cg_vDdZtrIvPrFJmAH7zlwaNltE3ahxHxKqgg.original.fullsize.png){ width="400" } 
+![](https://cdn.mathpix.com/snip/images/29zz41cg_vDdZtrIvPrFJmAH7zlwaNltE3ahxHxKqgg.original.fullsize.png){ width="200" } 
 
 《雷达方程在现代雷达中的应用》是一部深入探讨雷达性能分析核心——雷达方程——的权威学术著作。该书由雷达领域的杰出专家 David K. Barton 撰写，旨在扩展和更新该领域的经典理论，以确保其完全适用于现代雷达系统的设计与分析。
 
