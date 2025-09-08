@@ -4,9 +4,9 @@
 
 ## Radar Equations for Modern Radar
 
-![](https://cdn.mathpix.com/snip/images/29zz41cg_vDdZtrIvPrFJmAH7zlwaNltE3ahxHxKqgg.original.fullsize.png){ width="200" } 
-
 《雷达方程在现代雷达中的应用》是一部深入探讨雷达性能分析核心——雷达方程——的权威学术著作。该书由雷达领域的杰出专家 David K. Barton 撰写，旨在扩展和更新该领域的经典理论，以确保其完全适用于现代雷达系统的设计与分析。
+
+![](https://cdn.mathpix.com/snip/images/29zz41cg_vDdZtrIvPrFJmAH7zlwaNltE3ahxHxKqgg.original.fullsize.png){ width="200" } 
 
 
 **作者背景**：本书作者 David K. Barton 拥有卓越的行业背景和深厚的学术造诣。他自 1949 年于哈佛大学物理系毕业后，便投身于雷达工程领域，其职业生涯横跨了白沙导弹试验场、美国陆军信号兵实验室、RCA 公司以及雷神公司等重要机构。Barton 先生在雷达发展史上留下了显著的印记，例如，他开创性地研发了首部单脉冲仪表雷达 AN/FPS-16，并参与设计了用于弹道导弹预警系统（BMEWS）的 AN/FPS-49 雷达。凭借其杰出贡献，他荣获了 IEEE 丹尼斯·J·皮卡德雷达技术与应用奖章，并当选为美国国家工程院院士。此外，自 1975 年以来，他长期担任 Artech House 雷达系列丛书的编辑，该系列已成为业内的权威出版物。
