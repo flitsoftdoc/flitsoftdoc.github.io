@@ -285,6 +285,8 @@ $$
 
 **脉冲雷达距离计算工作表**
 
+![](https://cdn.mathpix.com/snip/images/4pWObJKLYPL40ncNce6y_aCpFcVOXB1NC2TaMfL0D_o.original.fullsize.png)
+
 图1.1 Blake的脉冲雷达距离计算工作表[8]。引用的图形在第4、6和7章中重现，换算分贝与比值的表格已由数字计算取代。
 
 在[6-8]中给出了 $V_{0(50)}$ 及电子探测对应的 $D_{0(50)}$ 曲线，但在很多情况下需要计算 $P_{d}\neq 50\%$ 的情况。Blake后续的研究[9-12]提供了不同 $P_{d}$ 和不同目标模型下的 $D$ 曲线。这些曲线要求在式(1.16)和Blake图中使用目标截面的平均值而不是中值。
@@ -404,6 +406,8 @@ $$
 
 **脉冲雷达距离计算工作表**
 
+![](https://cdn.mathpix.com/snip/images/N0E4F6QoEaT2irA_Tckd3d98bJUYv_ftMQSe6iKpF6k.original.fullsize.png)
+
 图1.2 修正后的Blake图[20, p. 21]。
 
 
@@ -423,7 +427,7 @@ $$
 
 **通用形式：**
 $$
-R_{m}^{4}=\frac{P_{av} t_{f} G_{t} G_{r}\lambda^{2}\sigma F_{p}^{2}F_{t}^{2}F_{r}^{2}}{(4\pi)^{3} k T_{s} D_{x}(n^{\prime}) L_{t} L_{\alpha}} \tag{1.23}
+R_{m}^{4}=\frac{P_{av} t_{f} G_{t} G_{r}\lambda^{2}\sigma F_{p}^{2}F_{t}^{2}F_{r}^{2}}{(4\pi)^{3} k T_{s} D_{x}(n^{\prime}) L_{t} L_{\alpha}} \quad(\mathrm{m})\tag{1.23}
 $$
 
 这一形式与图1.2中的修正Blake图一致，但额外加入了因子 $F_{p}^{2}$，用于考虑发射与接收天线间可能的极化失配。该因子通常取为1，但其存在强调了接收天线的极化可能与目标回波的实际极化不一致，即使目标截面 $\sigma$ 是按发射极化计算并给定的。例如，当发射与接收均采用右旋圆极化时，通常指定的 $\sigma$ 实际对应左旋圆极化分量的回波，而接收天线对此不敏感（见10.1.1节）。
@@ -574,7 +578,7 @@ Weil [26] 引入的透镜损耗来源于对流层折射随仰角的变化。尽�
 **Modern Radar System Analysis Software, Version 3.0 (MRSAS3)** [22] 是一套运行在 Mathcad ${}^{\text{©}}$ 下的完整工作表（通常被称为程序），可计算雷达探测距离与测量精度。该版本开发于雷达技术变革与目标RCS缩小日益显著的时期，前文1.6.1已指出传统雷达方程的局限性。该软件通过在式(1.23)中增加随距离变化的响应因子 $F_{\text{rdr}}$ 来改进，系统的电压响应平方修正了随距离变化的可用能量：
 
 $$
-E=\frac{P_{av} t_{f} G_{t} G_{r} \lambda^{2} \sigma F_{p}^{2} F_{t}^{2} F_{r}^{2} F_{\text{rdr}}^{2}}{(4\pi)^{3} R^{4} L_{t} L_{\alpha}} \tag{1.25}
+E=\frac{P_{av} t_{f} G_{t} G_{r} \lambda^{2} \sigma F_{p}^{2} F_{t}^{2} F_{r}^{2} F_{\text{rdr}}^{2}}{(4\pi)^{3} R^{4} L_{t} L_{\alpha}} \quad(\mathrm{J})\tag{1.25}
 $$
 
 其中：
@@ -602,7 +606,7 @@ $$
 
 **现代雷达：**
 $$
-R_{m}^{4}=\frac{P_{av} t_{f} G_{t} G_{r}\lambda^{2}\sigma F_{p}^{2} F_{t}^{2} F_{r}^{2} F_{\text{rdr}}^{2}}{(4\pi)^{3} k T_{s} D_{x}(n^{\prime}) L_{t} L_{\alpha}} \tag{1.26}
+R_{m}^{4}=\frac{P_{av} t_{f} G_{t} G_{r}\lambda^{2}\sigma F_{p}^{2} F_{t}^{2} F_{r}^{2} F_{\text{rdr}}^{2}}{(4\pi)^{3} k T_{s} D_{x}(n^{\prime}) L_{t} L_{\alpha}} \quad(\mathrm{m})\tag{1.26}
 $$
 
 ---
