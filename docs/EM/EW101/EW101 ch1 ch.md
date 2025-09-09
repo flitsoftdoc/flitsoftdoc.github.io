@@ -73,10 +73,10 @@
 
 ESM（或 ES）与信号情报（SIGINT）有所区分，后者包括通信情报（COMINT）和电子情报（ELINT）——尽管所有这些领域都涉及接收敌方信号。区别（随着信号复杂度的提升愈发模糊）在于接收信号的目的不同。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-04.jpg?height=367&width=1058&top_left_y=1801&top_left_x=283)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-04.jpg?height=367&width=1058&top_left_y=1801&top_left_x=283){width="400"}
 图 1.1 电子战传统上分为 ESM、ECM 和 ECCM。反辐射武器不属于 EW。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-05.jpg?height=475&width=784&top_left_y=278&top_left_x=353)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-05.jpg?height=475&width=784&top_left_y=278&top_left_x=353){width="400"}
 图 1.2 当前 NATO 的电子战定义将 EW 分为 ES、EA 和 EP。EA 现在包括反辐射和定向能武器。
 
 - COMINT 接收敌方通信信号，以从这些信号所承载的信息中提取情报。

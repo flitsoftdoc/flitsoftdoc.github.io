@@ -30,15 +30,15 @@
 
 通信干扰（COMJAM）是对通信信号的干扰。这通常被认为是对战术HF、VHF和UHF信号的干扰，使用噪声调制的掩护干扰，但它也可以是对点对点微波通信链路或远程资产指挥与数据链路的干扰。如图9.1所示，敌方的通信链路将信号从发射机（XMTR）传送到接收机（RCVR）。干扰机（JMR）也向接收机天线发射信号，但其功率足够强，可以克服天线增益的不利因素（如果接收天线为窄波束并对准发射机），并使信号以足够的功率被接收并输出给接收机操作员或处理器，从而将所需信息的质量降低到不可用水平。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-37.jpg?height=420&width=860&top_left_y=285&top_left_x=385)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-37.jpg?height=420&width=860&top_left_y=285&top_left_x=385){width="400"}  
 图 9.1 通信干扰破坏接收机从所需信号中恢复信息的能力。  
 
 一个典型雷达同时具有发射机和接收机，并共用同一副定向天线。雷达接收机被设计为最佳接收由雷达发射机照射目标返回的信号。通过分析回波信号，雷达可以确定陆、海、空资产的位置和速度并跟踪之——无论是友方用途（如空管）还是敌方用途（如导弹或火炮攻击）。雷达干扰机通过提供掩护或欺骗信号来阻止雷达定位或跟踪目标（见图9.2）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-37.jpg?height=407&width=837&top_left_y=1691&top_left_x=386)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-37.jpg?height=407&width=837&top_left_y=1691&top_left_x=386){width="400"}  
 图 9.2 雷达干扰（可为掩护或欺骗）破坏雷达从回波信号中恢复目标信息的能力。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-38.jpg?height=568&width=573&top_left_y=247&top_left_x=536)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-38.jpg?height=568&width=573&top_left_y=247&top_left_x=536){width="400"}  
 图 9.3 掩护干扰将雷达的回波信号隐藏于接收机/处理器。  
 
 ---
@@ -49,7 +49,7 @@
 
 欺骗干扰使雷达从所需信号与干扰信号的组合中得出错误结论，如图9.4所示。通常，这种干扰会在距离、角度或速度上将雷达引诱离开真实目标。在欺骗干扰下，雷达接收到一个表面上有效的回波信号，并“认为”自己正在跟踪一个有效目标。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-39.jpg?height=343&width=876&top_left_y=297&top_left_x=369)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-39.jpg?height=343&width=876&top_left_y=297&top_left_x=369){width="400"}  
 图 9.4 欺骗干扰干扰雷达处理，生成关于目标位置或速度的虚假信息。  
 
 ---
@@ -58,7 +58,7 @@
 
 自卫干扰与支援干扰如图9.5所示。二者通常被归类为雷达干扰，但也可以是任何用于保护友方资产的干扰（例如，干扰用于协调攻击的通信网）。自卫干扰由被探测或跟踪的平台上携带的干扰机发出。支援干扰则涉及由另一平台上的干扰机发射干扰信号来保护另一平台。通常，被保护的平台位于威胁的致命射程内，而支援干扰机位于该武器的致命射程之外。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-39.jpg?height=371&width=823&top_left_y=867&top_left_x=398)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-39.jpg?height=371&width=823&top_left_y=867&top_left_x=398){width="400"}  
 图 9.5 自卫干扰由目标平台自身携带的干扰机提供。支援干扰使另一平台上的高功率干扰机保护被威胁平台。  
 
 
@@ -88,7 +88,7 @@ $$
 
 其中，$P_{T}$ = 发射机功率（dBm）；$G_{T}$ = 发射天线增益（dB）；$F$ = 传输频率（MHz）；$D_{S}$ = 发射机到接收机的距离（km）；$G_{R}$ = 接收天线增益（dB）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-40.jpg?height=325&width=888&top_left_y=1746&top_left_x=309)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-40.jpg?height=325&width=888&top_left_y=1746&top_left_x=309){width="400"}  
 图 9.6 所需信号到达接收机输入，其强度由发射机功率、两端天线增益以及与频率和链路距离相关的链路损耗决定。  
 
 对于雷达信号（如图9.7所示），发射机和接收机通常共址并共享同一天线，因此信号到达接收机的功率水平由下式决定（同样为dB值，推导见第2章）：
@@ -111,13 +111,13 @@ $$
 
 其中，$P_{J}$ = 干扰机发射功率（dBm，限定在接收机带宽内）；$G_{J}$ = 干扰机天线增益（dB）；$F$ = 传输频率（MHz）；$D_{J}$ = 干扰机到接收机的距离（km）；$G_{R J}$ = 接收天线对干扰方向的增益（dB）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-41.jpg?height=357&width=916&top_left_y=1753&top_left_x=355)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-41.jpg?height=357&width=916&top_left_y=1753&top_left_x=355){width="400"}  
 图 9.7 雷达信号到达接收机，其强度由天线增益的平方、目标往返距离、信号频率以及目标RCS决定。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-42.jpg?height=449&width=823&top_left_y=269&top_left_x=345)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-42.jpg?height=449&width=823&top_left_y=269&top_left_x=345){width="400"}  
 图 9.8 干扰信号到达接收机输入，其强度由发射功率、干扰机天线增益、与频率相关的链路损耗、链路距离以及接收天线在干扰方向上的增益决定。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-42.jpg?height=464&width=866&top_left_y=1667&top_left_x=324)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-42.jpg?height=464&width=866&top_left_y=1667&top_left_x=324){width="400"}  
 图 9.9 如果接收天线不是全向的，其对干扰信号的增益会不同（通常较低），与其对所需信号的增益不同。  
 
 ---
@@ -153,7 +153,7 @@ $$
 \end{gathered}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-43.jpg?height=806&width=849&top_left_y=1354&top_left_x=389)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-43.jpg?height=806&width=849&top_left_y=1354&top_left_x=389){width="400"}  
 图 9.10 干扰/信号比就是接收机通带内两接收信号功率之比。  
 
 考虑这样一个情况：雷达发射功率为1 kW（+60 dBm），天线增益30 dB，目标RCS为10 $\mathrm{m}^2$，目标距离10 km；干扰机发射功率为1 kW，天线增益20 dB，距雷达40 km，干扰信号通过雷达天线0 dB旁瓣进入。此时J/S计算为：
@@ -192,10 +192,10 @@ $$
 
 在通信干扰中，突破距离的概念不如雷达直观，但有时仍然有用。在这种情况下，突破距离是指在特定干扰条件下，通信链路仍然能够有效工作的距离（见图9.12）。它是指在发射机与接收机之间的距离下，接收机拥有足够的信噪比来解调并恢复所需信息。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-45.jpg?height=634&width=903&top_left_y=1417&top_left_x=374)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-45.jpg?height=634&width=903&top_left_y=1417&top_left_x=374){width="400"}  
 图 9.11 突破距离是指雷达到目标的距离，在此距离内干扰机无法阻止雷达完成任务。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-46.jpg?height=613&width=859&top_left_y=257&top_left_x=326)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-46.jpg?height=613&width=859&top_left_y=257&top_left_x=326){width="400"}  
 图 9.12 通信干扰中的突破距离等效于，当所需发射机到接收机的距离缩短到接收机能以足够质量接收信号时。  
 
 ---
@@ -361,10 +361,10 @@ $$
 
 对干扰机而言，问题在于必须将其可用功率分布在接收机可能接收的整个频率范围、整个可能的空间角度范围以及整个接收机可能接收信号的时间段上（见图9.14）。然而，只有穿透接收机所有防御的部分功率（见图9.14）才会贡献到J/S。由于干扰机发射功率与其体积、重量、主电源可用性和成本直接相关，因此答案几乎从来不是单纯增加干扰机输出功率。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-51.jpg?height=328&width=866&top_left_y=302&top_left_x=379)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-51.jpg?height=328&width=866&top_left_y=302&top_left_x=379){width="400"}  
 图 9.13 干扰信号中真正有效的部分是能够穿透雷达所有角度、频率和时间选择性的部分。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-51.jpg?height=604&width=912&top_left_y=1602&top_left_x=355)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-51.jpg?height=604&width=912&top_left_y=1602&top_left_x=355){width="400"}  
 图 9.14 噪声干扰能量必须覆盖接收机所需信号可能存在的全部时频空间。  
 
 ---
@@ -375,10 +375,10 @@ $$
 
 最终，干扰机能够将功率集中在最有效的位置。如图9.16所示，功率管理还能减少干扰平台对“跟踪干扰源”武器的脆弱性，因为它降低了对这些武器可用的干扰机辐射功率。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-52.jpg?height=481&width=847&top_left_y=1651&top_left_x=333)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-52.jpg?height=481&width=847&top_left_y=1651&top_left_x=333){width="400"}  
 图 9.15 功率管理系统将干扰功率集中在雷达回波信号所在的方向、频率和时间槽中，从而尽量减少能量浪费。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-53.jpg?height=458&width=852&top_left_y=290&top_left_x=386)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-53.jpg?height=458&width=852&top_left_y=290&top_left_x=386){width="400"}  
 图 9.16 将干扰能量指向目标接收机既能提高干扰效果，又能降低对跟踪干扰源武器的脆弱性。  
 
 ---
@@ -407,10 +407,10 @@ $$
 
 如图9.18所示，雷达通过使用“前沿门”和“后沿门”来跟踪目标的距离。当某一门内的脉冲能量更大时，雷达会移动两个门以平衡能量，从而实现距离跟踪。通过在真实回波脉冲上叠加更强的干扰脉冲，干扰机“捕获”了两个门，并产生足够的干扰脉冲能量，将其拖离真实（“皮肤”）回波的到达时间。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-55.jpg?height=656&width=895&top_left_y=272&top_left_x=364)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-55.jpg?height=656&width=895&top_left_y=272&top_left_x=364){width="400"}  
 图 9.17 距离门拖曳干扰机发射功率更强的回波信号，并逐渐延迟其时间。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-55.jpg?height=700&width=887&top_left_y=1138&top_left_x=360)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-55.jpg?height=700&width=887&top_left_y=1138&top_left_x=360){width="400"}  
 图 9.18 干扰机通过调整早、晚门的时间来平衡更高的干扰脉冲功率。  
 
 ---
@@ -419,7 +419,7 @@ $$
 
 雷达具有一个“分辨单元”来解析目标。分辨单元的距离维度通常取为脉冲在距离上的一半长度（即脉冲宽度乘光速的一半）；宽度维度通常认为是雷达天线波束宽度（即天线3 dB波束宽度的一半正弦值的两倍，再乘以雷达到目标的距离）。目标跟踪过程可以理解为试图保持目标处于分辨单元的中心位置。通过将距离门向时间外移动，距离门拖曳干扰机会将分辨单元从目标处移开，如图9.19所示。当真实目标超出分辨单元时，雷达的跟踪就会中断。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-56.jpg?height=497&width=900&top_left_y=250&top_left_x=297)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-56.jpg?height=497&width=900&top_left_y=250&top_left_x=297){width="400"}  
 图 9.19 距离门拖曳干扰机在距离上将雷达的分辨单元拖离目标，但方位保持准确。  
 
 ---
@@ -436,10 +436,10 @@ $$
 
 通过对合成回波信号求微分，雷达会看到如图9.21所示的信号，其中在两个脉冲的前沿处出现尖峰。如果雷达跟踪这一前沿信号，那么当干扰脉冲前沿在相对时间上逐渐后移时，它将不会被拖离。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-57.jpg?height=472&width=758&top_left_y=271&top_left_x=442)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-57.jpg?height=472&width=758&top_left_y=271&top_left_x=442){width="400"}  
 图 9.20 雷达接收机接收到的合成干扰和回波信号同时包含两个脉冲的信息。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-57.jpg?height=376&width=873&top_left_y=1800&top_left_x=384)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-57.jpg?height=376&width=873&top_left_y=1800&top_left_x=384){width="400"}  
 图 9.21 通过检测并跟踪皮肤回波的前沿，雷达可以保持锁定在皮肤回波上。  
 
 ---
@@ -448,7 +448,7 @@ $$
 
 一种相关的干扰技术通过将距离门朝向雷达而不是远离雷拉来克服前沿跟踪。这种技术称为“内向距离门拖曳（inbound range gate pull-off）”，或简称“距离门拉入（range gate pull-in）”。图9.22展示了这种技术下干扰脉冲的移动情况。干扰脉冲的前沿将领先于皮肤回波的前沿，从而“窃取”前沿跟踪器。为了预测下一脉冲的到达时间，使干扰脉冲能够提前一个精确控制的时间量，必须知道脉冲重复间隔（PRI）。因此，对于具有单一PRI的雷达，距离门拉入相对容易。但对于交错脉冲列，该技术需要很高的复杂度，而对于随机时序脉冲则完全无效。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-58.jpg?height=613&width=876&top_left_y=238&top_left_x=314)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-58.jpg?height=613&width=876&top_left_y=238&top_left_x=314){width="400"}  
 图 9.22 通过预判雷达脉冲，距离门拉入干扰机能够对抗前沿跟踪，但如果雷达没有单一稳定的脉冲重复频率，则会非常困难。  
 
 ---
@@ -467,7 +467,7 @@ $$
 
 老练的电子战人员会意识到上述描述在多个方面是简化的，但这种理想化的反增益干扰说明了其原理。实际应用可能在多方面与理想情况不同。一种方法是在主波束接近受保护目标时才施加反增益干扰。还有一些实现形式使用不同于理想逆增益模式的干扰波形。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-59.jpg?height=565&width=941&top_left_y=269&top_left_x=350)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-59.jpg?height=565&width=941&top_left_y=269&top_left_x=350){width="400"}  
 图 9.23 理想的反增益干扰机会产生一个与雷达接收天线增益相反的信号，使雷达接收机接收恒定的信号电平。  
 
 ---
@@ -482,10 +482,10 @@ $$
 
 现在考虑雷达跟踪机制对该合成信号的反应：皮肤回波最小值出现时的天线扫描角度现在成为最大信号功率角度，因此跟踪器将雷达扫描引向远离目标而不是指向目标。当干扰成功时，这会使雷达跟踪偏离目标，直到雷达丢失目标并被迫尝试重新捕获并重新开始跟踪过程。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-60.jpg?height=649&width=863&top_left_y=1441&top_left_x=324)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-60.jpg?height=649&width=863&top_left_y=1441&top_left_x=324){width="400"}  
 图 9.24 圆锥扫描天线波束在目标未居中的情况下会产生正弦输出。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-61.jpg?height=465&width=942&top_left_y=271&top_left_x=341)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-61.jpg?height=465&width=942&top_left_y=271&top_left_x=341){width="400"}  
 图 9.25 干扰机在圆锥扫描波形的最小值时发射同步强脉冲，造成反增益干扰。  
 
 
@@ -495,15 +495,15 @@ $$
 
 如图9.27所示，雷达可以通过记录最大皮肤回波出现时方位（或垂直）波束的位置来确定目标的方位角；最大皮肤回波出现时俯仰（或水平）波束的位置决定了目标的俯仰角。如果两束波束恰好同时扫过目标（如图9.26所示），两次响应将是时间同步的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-62.jpg?height=582&width=581&top_left_y=231&top_left_x=464)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-62.jpg?height=582&width=581&top_left_y=231&top_left_x=464){width="400"}  
 图 9.26 一种重要的TWS雷达类型使用不同波束来测量目标的方位角和俯仰角。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-62.jpg?height=408&width=892&top_left_y=1678&top_left_x=305)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-62.jpg?height=408&width=892&top_left_y=1678&top_left_x=305){width="400"}  
 图 9.27 TWS雷达使用图9.26中的天线波束，通过皮肤回波出现的时间来测量目标位置。  
 
 图9.28说明了对TWS雷达的反增益干扰。该图仅考虑其中一束波束，但该技术可以用于其中任一波束，甚至同时用于两束波束。图第一行是单束波束中的皮肤回波。雷达通过平衡角度门的早门与晚门中的能量来跟踪该波束中的目标。图第二行是干扰信号——与雷达脉冲同步的脉冲突发。图第三行是雷达接收机接收到的皮肤回波与干扰信号的组合。如果干扰机脉冲突发进行时间扫描（向前或向后），它们将穿过目标回波，捕获角度门，从而使TWS雷达失去对目标的锁定。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-63.jpg?height=575&width=916&top_left_y=283&top_left_x=355)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-63.jpg?height=575&width=916&top_left_y=283&top_left_x=355){width="400"}  
 图 9.28 反增益干扰机将各波束中的角度门拖离皮肤回波。  
 
 ---
@@ -512,10 +512,10 @@ $$
 
 “仅接收扫描（SORO）”雷达使用一部跟随目标的天线发射稳定信号，并利用扫描接收天线获取跟踪信息。如图9.29所示，位于目标处的接收机将看到一个恒幅信号，因此干扰机无法测量雷达扫描周期或确定最小值的位置。然而，如果目标处的接收机能够识别所用雷达的类型，它就会知道接收天线的大致扫描速率。图9.30展示了对SORO雷达实施反增益干扰的方法。图第一行显示了接收到的皮肤回波信号（由于跟踪图样是由接收天线扫描引起的，该波形只存在于雷达内部）。如图第二行所示，干扰机产生与雷达脉冲同步的脉冲突发。突发速率略高或略低于假设的接收天线扫描速率，从而使突发信号“穿过”接收天线的扫描图样，如图第三行所示。尽管这种干扰突发模式不会像与雷达扫描完全同步那样持续产生$180^{\circ}$的跟踪误差，但它几乎总会导致错误的跟踪信号。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-63.jpg?height=448&width=880&top_left_y=1698&top_left_x=377)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-63.jpg?height=448&width=880&top_left_y=1698&top_left_x=377){width="400"}  
 图 9.29 SORO雷达对目标施加稳定照射信号，并用扫描接收天线跟踪目标。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-64.jpg?height=594&width=885&top_left_y=274&top_left_x=300)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-64.jpg?height=594&width=885&top_left_y=274&top_left_x=300){width="400"}  
 图 9.30 将周期性移动的同步脉冲突发注入SORO雷达的跟踪波形中，会造成反增益干扰。  
 
 ---
@@ -526,7 +526,7 @@ $$
 
 目标距离和RCS的巨大变化要求雷达必须使用AGC。（如果你想找点“乐子”，可以回到第2.5节，对比一下：在100 km距离、RCS为$0.1 \ \mathrm{m}^{2}$的目标，与在1 km距离、RCS为$200 \ \mathrm{m}^{2}$的目标，雷达接收机接收的功率相差多大。）由于雷达接收机只接收一种信号（即自身发射信号的皮肤回波），它对宽瞬时动态范围的需求不大，但必须能够快速降低增益以接受强大的皮肤回波。随后，它必须保持这一降低后的增益设置，以便进行精确的幅度测量来跟踪目标。因此，雷达采用“快起动/慢衰减”的AGC。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-65.jpg?height=707&width=907&top_left_y=288&top_left_x=350)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-65.jpg?height=707&width=907&top_left_y=288&top_left_x=350){width="400"}  
 图 9.31 AGC干扰机捕获雷达的AGC，使其跟踪信号降低到无法进行角度跟踪。  
 
 AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲。如图9.31所示，这些脉冲捕获了雷达的AGC。由此导致的增益降低使所有带内信号大幅度衰减。皮肤回波信号被抑制到极低水平，以至于雷达无法有效跟踪目标。
@@ -539,10 +539,10 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 速度门拖曳（VGPO）干扰机的工作原理如图9.33所示。图9.33(a)显示目标皮肤回波位于速度门中心；未显示真实回波中存在的其他成分。图9.33(b)中，干扰机在目标处接收到雷达信号的相同频率上产生一个更强的信号。皮肤回波返回雷达时频率会发生偏移（多普勒效应），但由于目标与干扰机共同运动，干扰信号会发生相同的频移，因此仍落在雷达的速度门内。图9.33(c)中，干扰机将干扰信号在频率上拖离皮肤回波。由于干扰信号更强，它捕获了速度门，使其偏离皮肤回波。图9.33(d)中，干扰机使速度门偏移得足够远，以至于皮肤回波超出了速度门范围，从而打破了雷达的速度跟踪。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-66.jpg?height=503&width=916&top_left_y=1606&top_left_x=300)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-66.jpg?height=503&width=916&top_left_y=1606&top_left_x=300){width="400"}  
 图 9.32 AGC干扰机捕获雷达的AGC，使其跟踪信号降低到无法进行角度跟踪。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-67.jpg?height=635&width=1241&top_left_y=276&top_left_x=136)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-67.jpg?height=635&width=1241&top_left_y=276&top_left_x=136){width="400"}  
 图 9.33 速度门拖曳干扰机利用与距离门拖曳相同的原理，但作用于频域。  
 
 一个重要的考虑因素是干扰机能以多快速度拖动速度门。答案取决于雷达跟踪电路的设计，但一个安全的假设是雷达必须能够跟踪某类已知目标。任何类型电子战交战的几何分析通常显示，最大相对加速度来自转弯而非线性加速——因此目标最大转弯率能很好地指示雷达必须跟踪的最大速度变化率。
@@ -569,10 +569,10 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 分辨单元的宽度由天线波束范围决定——取决于波束宽度以及雷达到目标的距离。波束宽度通常认为是3 dB波束宽度，因此在$n \ \mathrm{km}$的距离上，波束覆盖$(2n \times \sin(\tfrac{1}{2}\text{3dB波束宽度}))$ km——但这并不能完整描述情况。雷达能否在方位或俯仰上区分两个目标，取决于天线波束扫过它们时两目标回波的相对强度。显然，如果两目标相距足够远，以至于它们不能同时位于天线波束内，雷达就能区分它们（即“分辨”）。由于雷达发射和接收天线模式通常相同，位于天线波束轴线3 dB角度处的目标，其接收回波功率将比位于波束轴线的目标低6 dB（发射功率减少3 dB，回波再减少3 dB），如图9.35所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-68.jpg?height=565&width=845&top_left_y=1544&top_left_x=328)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-68.jpg?height=565&width=845&top_left_y=1544&top_left_x=328){width="400"}  
 图 9.34 雷达分辨单元的宽度由天线波束宽度决定，深度由脉冲宽度决定。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-69.jpg?height=554&width=888&top_left_y=1597&top_left_x=321)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-69.jpg?height=554&width=888&top_left_y=1597&top_left_x=321){width="400"}  
 图 9.35 位于天线波束轴线半个波束宽度的目标，其回波功率将降低6 dB。  
 
 现在考虑当天线从一个目标移向另一个目标时，两个相距半个波束宽度的目标总接收信号功率会发生什么变化。第一个目标的功率衰减速度会比第二个目标的功率增加速度慢——因此雷达会看到一个连续的“凸起”回波功率。在小于半个波束宽度的分离下，这种现象更加明显。当两个目标的分离超过半个波束宽度时，回波响应才会出现两个“凸起”，而且直到目标分离约一个完整波束宽度时才明显。因此，可以认为分辨单元的宽度为一个完整波束宽度，但若保守起见，则按半个波束宽度计算。
@@ -581,7 +581,7 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 综上，雷达分辨单元的定义是：由波束宽度和雷达脉冲持续时间内信号传播一半距离所围成的区域。George Stimson的《机载雷达导论》（SciTech Publishing, 1998）对这些要点进行了深入而出色的讨论。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-70.jpg?height=334&width=897&top_left_y=250&top_left_x=312)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-70.jpg?height=334&width=897&top_left_y=250&top_left_x=312){width="400"}  
 图 9.36 两个目标在距离上相隔一个脉冲宽度时，其回波在时间上相隔一个脉冲宽度。  
 
 ---
@@ -590,7 +590,7 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 在花费大量篇幅描述分辨单元后，可以简单地说，如果两架飞机处于单一分辨单元内，如图9.37所示，单脉冲雷达无法分辨它们，因此将跟踪它们的质心。若将分辨单元取为半个波束宽度×半个脉冲宽度，则当脉冲宽度很短时，两机必须保持紧密的纵向编队（例如，脉冲宽度100 ns对应的距离为15 m）。横向编队容差较大（例如，雷达波束宽度$1^{\circ}$时，在30 km距离处的分辨能力约为261 m）。当然，随着距离减小，分辨单元会显著变窄。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-71.jpg?height=739&width=852&top_left_y=283&top_left_x=283)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-71.jpg?height=739&width=852&top_left_y=283&top_left_x=283){width="400"}  
 图 9.37 当两目标处于同一雷达分辨单元内时，即实现了编队干扰。  
 
 如图9.38所示，如果采用压制脉冲或噪声干扰以剥夺雷达的距离信息，编队干扰可以在目标距离分离更大的情况下实施。这类干扰通常所需的$\mathrm{J}/\mathrm{S}$较低（0至+10 dB）。
@@ -601,7 +601,7 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 闪烁干扰同样涉及处于同一雷达分辨单元内的两个目标。但这两目标各自携带干扰机，并协同工作。两个干扰机以协调的“闪烁”速率交替开启，该速率接近雷达导引伺服的带宽（通常为0.1至10 Hz）。如果找到跟踪响应的共振点，就会导致雷达天线指向出现大幅超调。针对一对正确闪烁的干扰机引导的导弹，将在两机之间交替摆动，并随着目标距离减小而摆动幅度越来越大，从而无法实现正确的末端制导。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-71.jpg?height=453&width=907&top_left_y=1742&top_left_x=298)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-71.jpg?height=453&width=907&top_left_y=1742&top_left_x=298){width="400"}  
 图 9.38 如果剥夺雷达的距离信息，编队干扰可以在目标更大距离分离的情况下实现。  
 
 
@@ -609,7 +609,7 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 地形反射干扰技术（见图9.39）对主动或半主动导引的导弹制导系统尤为有效。该方法生成一个强大的模拟雷达回波，并以一定角度发射，使其从地面反射。干扰机的发射必须具有足够的有效辐射功率（ERP），以保证地面反射信号到达导弹跟踪天线时，其强度显著超过被攻击飞机的皮肤回波。如果实施得当，这将使导弹被引导至受保护飞机下方。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-72.jpg?height=201&width=909&top_left_y=1957&top_left_x=300)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-72.jpg?height=201&width=909&top_left_y=1957&top_left_x=300){width="400"}  
 图 9.39 将强大的雷达信号转发至地面反射，会使雷达跟踪器引导至受保护飞机下方的位置。  
 
 ---
@@ -618,7 +618,7 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 图9.40展示了带通滤波器的幅度通带。滤波器被设计用于在通带内尽可能小的衰减下通过所有频率，同时尽可能强地衰减通带外的所有信号。理想滤波器（有时称为“石墙滤波器”）会对通带外哪怕略微偏离的信号施加无限衰减。然而，现实中的滤波器存在“裙带”区，其中输入信号的衰减量与其偏离通带中心频率的程度成正比。裙带的斜率是每倍频程6 dB，即每当频率相对通带中心翻倍时，衰减增加4倍——这是每级滤波器的典型特性。滤波器还具有“最终抑制”水平，即对远离通带的信号施加的最大衰减，通常约为60 dB。这意味着：非常强的带外信号仍可能穿透滤波器，尤其是在接近通带的频率范围内。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-73.jpg?height=681&width=888&top_left_y=273&top_left_x=350)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-73.jpg?height=681&width=888&top_left_y=273&top_left_x=350){width="400"}  
 图 9.40 滤波器的幅度响应对超出通带的信号进行衰减，且在“裙带”内逐渐增强；滤波器的相位响应在通带外未定义。  
 
 图9.40中的另一条曲线表示滤波器的相位响应。在通带内，设计良好的滤波器通常具有相对线性的相位响应。然而，在通带边缘之外，相位响应未定义，且可能极端非线性。这意味着，如果在“裙带”频率范围内接收到强干扰信号，它将具有错误的相位，从而导致雷达跟踪电路失效。当然，该技术所需的$\mathrm{J}/\mathrm{S}$比必须非常高，因为干扰信号必须克服滤波器的抑制，并且其功率显著大于真实皮肤回波。
@@ -629,7 +629,7 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 图9.41为频谱图。如第4章所述，超外差接收机使用本振（LO）将输入射频（RF）信号转换为中频（IF）。该频率转换在混频器中完成，混频器会生成输入信号的谐波以及所有信号的和频与差频。混频器的输出经过滤波后进入中频放大器（有时还会进入另一个频率转换级）。本振频率要么高于、要么低于所调谐接收频率一个中频的差值。例如，在一台调谐至800 kHz的AM广播接收机中，本振频率为$1,255 \ \mathrm{kHz}$（因为IF为455 kHz）。此时的“镜像”频率是$1,710 \ \mathrm{kHz}$，若该频率上的信号进入混频器，它同样会出现在IF放大器中，从而严重降低接收机性能。为防止这种“镜像响应”，接收机设计几乎总会包含滤波器，以阻止镜像频率进入混频器。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-74.jpg?height=480&width=930&top_left_y=252&top_left_x=276)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-74.jpg?height=480&width=930&top_left_y=252&top_left_x=276){width="400"}  
 图 9.41 超外差接收机或频率转换器中的中频等于接收调谐频率与本振频率的差值。  
 
 侦察接收机通常采用多次变频设计，以避免镜像响应问题。
@@ -645,10 +645,10 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 为了生成交叉极化信号，干扰机配备两个正交极化天线的转发通道（即两个线极化天线，极化方向相差$90^{\circ}$），如图9.42所示。虽然任何一组正交极化均可，但图中展示为垂直与水平极化。如果接收到的垂直极化信号被以水平极化转发，而接收到的水平极化信号被以垂直极化转发，那么回传信号将与原始接收信号交叉极化，如图9.43所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-75.jpg?height=606&width=580&top_left_y=1530&top_left_x=528)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-75.jpg?height=606&width=580&top_left_y=1530&top_left_x=528){width="400"}  
 图 9.42 交叉极化干扰机通过两个正交极化天线接收雷达信号，并以相互正交的极化方式转发。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-76.jpg?height=337&width=912&top_left_y=247&top_left_x=297)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-76.jpg?height=337&width=912&top_left_y=247&top_left_x=297){width="400"}  
 图 9.43 通过将正交极化信号分量分别转发并偏转$90^{\circ}$，交叉极化干扰机会生成与接收信号交叉极化的信号。  
 
 该技术通常需要$20\sim40 \ \mathrm{dB}$的$\mathrm{J}/\mathrm{S}$比，具体取决于雷达天线设计。需要注意的是，若天线带有极化滤波罩，其几乎不易受到交叉极化干扰影响。
@@ -659,10 +659,10 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 此处适合回顾一下单脉冲雷达的跟踪电路是如何工作的。考虑一个双通道单脉冲系统（见图9.44）。两个独立传感器（如天线）接收皮肤回波信号。角度跟踪功能通过比较这两个接收信号获得。这需要强调两信号的差异以生成误差信号；如果连接两个传感器的连线垂直于目标方向，两接收信号将完全相同。但当传感器阵列的波束偏离目标时，跟踪器必须生成误差信号，以驱动天线波束重新指向目标。为保证目标跟踪，误差信号必须与接收信号强度无关，最简单的方法是将差分信号归一化，与和信号比较。图9.45展示了和信号（$\Sigma$）与差信号（$\Delta$）随波束轴线偏离目标方向的变化关系。跟踪信号由$\Delta - \Sigma$生成。该值越大，修正幅度越大；$\Delta$的符号则决定修正方向。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-76.jpg?height=484&width=582&top_left_y=1625&top_left_x=462)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-76.jpg?height=484&width=582&top_left_y=1625&top_left_x=462){width="400"}  
 图 9.44 单脉冲跟踪器通常生成两个通道的和信号与差信号，并由$\Delta-\Sigma$生成跟踪误差信号。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-77.jpg?height=700&width=928&top_left_y=273&top_left_x=353)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-77.jpg?height=700&width=928&top_left_y=273&top_left_x=353){width="400"}  
 图 9.45 和信号与差信号随跟踪器波束轴线相对于目标方向的变化曲线。  
 
 ---
@@ -679,15 +679,15 @@ AGC干扰机以大约等于雷达天线扫描速率的频率发射极强脉冲�
 
 图9.47显示了从雷达到转发器再返回雷达的总路径长度，在两转发器环路长度相同的情况下，无论雷达方向如何，该路径长度始终相同。因此，两个转发器的信号到达雷达跟踪天线时始终相差$180^{\circ}$，导致雷达传感器的合成响应在本应出现峰值的位置产生空零。结合图9.45的和/差信号曲线，可以看出：若和信号本应有峰值的位置出现空零，则跟踪信号将被严重畸变。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-78.jpg?height=632&width=1241&top_left_y=1430&top_left_x=140)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-78.jpg?height=632&width=1241&top_left_y=1430&top_left_x=140){width="400"}  
 图 9.46 交叉眼干扰机可由安装在飞机翼尖的两个转发环路组成，其中一环路具有$180^{\circ}$相移，两条电气路径长度相同。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-79.jpg?height=801&width=929&top_left_y=269&top_left_x=350)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-79.jpg?height=801&width=929&top_left_y=269&top_left_x=350){width="400"}  
 图 9.47 从雷达到干扰环路再返回雷达的电气路径长度在两个环路中保持一致，与雷达方向无关。  
 
 这一效应通常表现为皮肤回波波前的扭曲，如图9.48所示。这种波前畸变每隔几度就会重复一次。注意，尖锐不连续性的中心出现在雷达位置，正是图9.47所示效应的结果。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-79.jpg?height=433&width=941&top_left_y=1696&top_left_x=345)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-79.jpg?height=433&width=941&top_left_y=1696&top_left_x=345){width="400"}  
 图 9.48 交叉眼干扰机在雷达处生成回波波前的不连续畸变，导致产生虚假跟踪误差信号。  
 
 交叉眼干扰应用有两个主要限制：其一，两条转发路径的电气长度必须高度匹配（通常要求在5电气度以内）。这非常困难，因为电缆、波导等的电气“长度”会随温度和信号强度变化。（请注意，在典型雷达频率下，$5^{\circ}$对应的电长度小于1毫米。）其二，该技术需要非常高的$\mathrm{J}/\mathrm{S}$比（20 dB或以上），因为空零必须足够强以压制和信号。

@@ -104,7 +104,7 @@ $$
 
 如图所示，图 2.1 适用于视距链路（即发射和接收天线可以“看见”彼此，并且传输路径不会过于接近陆地或水面），且天气良好。我们将首先考虑这种情况。之后，我们会在链路计算中加入恶劣天气和非视距传播的影响。信号以某个 dBm 功率水平从发射机发出。它经过发射天线增益“增加”。（如果天线增益小于 1 或 0 dB，天线发出的信号强度会低于发射机输出功率。）天线发出的信号功率称为有效辐射功率（ERP），通常以 dBm 表示。辐射信号在发射和接收天线之间传播时会因各种因素而衰减。对于良好天气下的视距链路，衰减因素仅包括扩展损耗和大气损耗。信号随后经过接收天线增益“增加”（该值可以是正数或负数，取决于天线特性）。最终信号到达接收机时为“接收功率”。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-11.jpg?height=676&width=864&top_left_y=322&top_left_x=342)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-11.jpg?height=676&width=864&top_left_y=322&top_left_x=342){width="400"}  
 图 2.1 计算接收信号电平（单位 dBm）的方法：在发射机功率（dBm）上加上发射天线增益（dB），减去链路损耗（dB），再加上接收天线增益（dB）。
 
 上述过程称为“链路方程”或“链路方程的 dB 形式”。尽管说法是单数形式，但“链路方程”实际上指的是一组方程，用于通过链路其他要素来计算传播过程中任意点的信号强度。
@@ -132,7 +132,7 @@ $$
 L_{S}(\text{dB}) = 32.4 + 20 \log_{10}(\text{距离，km}) + 20 \log_{10}(\text{频率，MHz})
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-12.jpg?height=850&width=842&top_left_y=1238&top_left_x=329)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-12.jpg?height=850&width=842&top_left_y=1238&top_left_x=329){width="400"}  
 图 2.2 扩展损耗可通过从频率（GHz）到传输距离（km）画直线，在中间刻度上读出扩展损耗值（dB）。
 
 注意，这里假设为良好天气下的视距传播。常数 32.4 是各种单位换算因子的组合，仅在距离单位为千米、频率单位为兆赫时才正确。链路方程在 $1 \,\mathrm{dB}$ 精度时，通常将该值取整为 32。
@@ -147,7 +147,7 @@ $$
 
 如果接收功率至少等于接收机灵敏度，通信即可在链路中实现。例如，如果接收功率为 -59 dBm（如上例所示），而接收机灵敏度为 -65 dBm，则通信可以进行。因为接收信号比接收机灵敏度高出 6 dB，我们说该链路有 6 dB 的余量。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-14.jpg?height=833&width=848&top_left_y=311&top_left_x=361)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-14.jpg?height=833&width=848&top_left_y=311&top_left_x=361){width="400"}  
 图 2.3 大气衰减（单位 dB/km）可通过从频率点（GHz）画线到曲线，再向左延伸到衰减刻度来确定。
 
 #### 2.2.4 有效距离
@@ -195,7 +195,7 @@ $$
 
 本书中给出的链路方程公式（以及大多数从事系统级电子战工作的人员所用的公式）存在一个严重的逻辑缺陷。但它们让我们的工作简单得多，以至于我们愿意竭力捍卫它们，即使面对那些将严谨视为信条的人。缺陷在于，我们在“以太波”中（即发射天线和接收天线之间）以 dBm 表示信号功率。问题是，dBm 只是毫瓦的对数表示。dBm 表示的信号强度是“功率”，而电功率只在导线或电路中定义。在从发射天线传播到接收天线的过程中，信号必须用“电场强度”准确描述，最常见的量化方式是以微伏每米（$\mu \mathrm{V}/\mathrm{m}$）表示。（见图 2.4 和图 2.5。）
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-16.jpg?height=329&width=784&top_left_y=320&top_left_x=397)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-16.jpg?height=329&width=784&top_left_y=320&top_left_x=397){width="400"}  
 图 2.4 严格来说，只有在导线或电路中才能用 dBm 表示信号强度。在“以太波”中，正确的做法是用 $\mu \mathrm{V}/\mathrm{m}$ 表示电场强度。
 
 那么，我们如何得到适用于链路分析的 dBm 数值呢？这里用到了一个“技巧” [n. 1. 巧妙策略；机动方法。2. 微妙或具有欺骗性的手段]。该技巧是在空间中信号感兴趣点假设一个虚拟的、理想的单位增益天线。信号强度（dBm）即为该虚拟天线输出的数值。因此，如果该虚拟天线位于发射天线与接收天线的连线上，并几乎贴近发射天线（忽略近场效应），其输出即为有效辐射功率（ERP）。类似地，当表示到达接收天线的功率（通常称为 $P_{A}$）时，虚拟天线也位于同一条线上，但几乎贴近接收天线。
@@ -210,7 +210,7 @@ $$
 
 其中 $P=$ 信号强度（dBm）；$E=$ 电场强度（$\mu \mathrm{V}/\mathrm{m}$）；$F=$ 频率（MHz）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-16.jpg?height=336&width=792&top_left_y=1855&top_left_x=392)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-16.jpg?height=336&width=792&top_left_y=1855&top_left_x=392){width="400"}  
 图 2.5 辐射信号通常以理想接收机和全向天线能接收到的功率来描述。
 
 将 dBm 转换为 $\mu \mathrm{V}/\mathrm{m}$ 的公式为：
@@ -239,7 +239,7 @@ $$
 
 许多教材给出的雷达方程形式更适合雷达人，因为其重点在于雷达自身的探测性能。但对电子战人员而言，更有用的方式是将雷达方程分解为一系列“链路”，如图 2.6 所示，并统一用 dB 和 dBm 表示。这使我们能够处理到达目标的雷达功率；干扰机必须产生的功率（以等于或超过某个固定因子目标返回雷达接收机的功率）；以及其他许多有用的数值。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-18.jpg?height=304&width=812&top_left_y=298&top_left_x=404)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-18.jpg?height=304&width=812&top_left_y=298&top_left_x=404){width="400"}  
 图 2.6 为便于电子战应用，雷达距离方程可描述为一系列链路。
 
 你会认出之前介绍的扩展损耗公式 $[32.4 + 20 \log(D) + 20 \log(F)]$，为了方便，常数 32.4 通常取整为 32。还有一个用于目标雷达截面积所致信号反射因子的简便公式：$[-39 + 10 \log(\sigma) + 20 \log(F)]$。该公式将在第 10 章中推导并详细讨论。  
@@ -288,7 +288,7 @@ $$
 
 这是最简单形式的干扰方程。在第 3 章中，我们将讨论定向接收天线的情况，此时两信号会对应不同的天线增益因子。当然，我们还会讨论雷达接收机同时接收期望回波信号和干扰信号（即来自干扰机）的情况。所有这些表达式都将建立在上述简单的 dB 形式公式基础之上。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-19.jpg?height=485&width=913&top_left_y=1687&top_left_x=334)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-19.jpg?height=485&width=913&top_left_y=1687&top_left_x=334){width="400"}  
 图 2.7 干扰信号可描述为从各个发射机到接收天线的链路
 
 
@@ -328,10 +328,10 @@ $$
 
 球面三角形的“边”必须是单位球的大圆，即必须是球面与通过球心的平面的交线。三角形的“角”是这些平面相交的夹角。球面三角形的“边”和“角”都用角度来测量。“边”的大小是该边两端点在球心所夹的角。在通常术语中，边用小写字母表示，角用与对边对应的大写字母表示，如图 2.9 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-21.jpg?height=667&width=898&top_left_y=1474&top_left_x=340)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-21.jpg?height=667&width=898&top_left_y=1474&top_left_x=340){width="400"}  
 图 2.8 球面三角学基于单位球中的几何关系。球心的位置取决于所要解决的问题。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-22.jpg?height=599&width=601&top_left_y=307&top_left_x=499)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-22.jpg?height=599&width=601&top_left_y=307&top_left_x=499){width="400"}  
 图 2.9 一个球面三角形有三条“边”，它们是球面的大圆。它有三个“角”，即包含这些大圆的平面之间的交角。
 
 需要注意的是，平面三角形的一些性质在球面三角形中并不适用。例如，一个球面三角形的三个角都可能是 $90^{\circ}$。
@@ -374,10 +374,10 @@ $$
 
 直角球面三角形允许使用 Napier 法则推导出的简化三角公式。注意图 2.11 中的五分圆盘，它包括直角球面三角形的所有部分，除了那个 $90^{\circ}$ 的角。还要注意，其中有三部分前缀为 “co-”。这意味着在 Napier 法则中，这些部分的三角函数必须变为余函数（如正弦变余弦等）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-23.jpg?height=573&width=573&top_left_y=1616&top_left_x=501)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-23.jpg?height=573&width=573&top_left_y=1616&top_left_x=501){width="400"}  
 图 2.10 一个直角球面三角形有一个 $90^{\circ}$ 的“角”。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-24.jpg?height=857&width=877&top_left_y=312&top_left_x=372)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-24.jpg?height=857&width=877&top_left_y=312&top_left_x=372){width="400"}  
 图 2.11 Napier 法则通过这个五分圆盘为直角球面三角形提供简化的方程。
 
 Napier 法则如下：
@@ -419,7 +419,7 @@ $$
 \text{Error} = M - \arccos[\cos (M) / \cos (El)]
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-25.jpg?height=266&width=586&top_left_y=1872&top_left_x=453)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-25.jpg?height=266&width=586&top_left_y=1872&top_left_x=453){width="400"}  
 图 2.12 典型 DF 系统测量信号到达方向与参考方向之间的角度。
 
 ---
@@ -449,10 +449,10 @@ $$
 
 其中 $\mathrm{Az}_{RCVR}$ 和 $\mathrm{El}_{RCVR}$ 的计算方法见 2.5.3 节。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-26.jpg?height=352&width=887&top_left_y=1814&top_left_x=357)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-26.jpg?height=352&width=887&top_left_y=1814&top_left_x=357){width="400"}  
 图 2.13 在一般情况下计算多普勒频移时，发射机和接收机都可能以任意方向的速度矢量运动
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-27.jpg?height=544&width=652&top_left_y=307&top_left_x=456)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-27.jpg?height=544&width=652&top_left_y=307&top_left_x=456){width="400"}  
 图 2.14 在以发射机为球心的单位球上，速度矢量和接收机的方位与俯仰构成两个直角球面三角形。
 
 角 A 和角 B 的计算方法为：
@@ -496,10 +496,10 @@ $$
 
 图 2.16 中的两个直角球面三角形和一个球面三角形用于计算目标与滚转轴之间的角距离 $j$：
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-28.jpg?height=333&width=584&top_left_y=1834&top_left_x=512)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-28.jpg?height=333&width=584&top_left_y=1834&top_left_x=512){width="400"}  
 图 2.15 飞机上的 ESM 系统观测到威胁辐射源。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-29.jpg?height=445&width=896&top_left_y=304&top_left_x=354)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-29.jpg?height=445&width=896&top_left_y=304&top_left_x=354){width="400"}  
 图 2.16 在以飞机为球心的单位球上，目标（T）和滚转轴（R）的方位与俯仰构成两个直角球面三角形。
 
 $$
@@ -533,5 +533,5 @@ $$
 
 最后，如图 2.17 所示，HUD 上威胁符号的位置由其到滚转轴的角距离 $(j)$ 决定，并由威胁位置到局部垂直方向的偏移角 $G$ 与飞机滚转角之和来确定在 HUD 上的竖直偏移。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-30.jpg?height=379&width=777&top_left_y=600&top_left_x=414)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-30.jpg?height=379&width=777&top_left_y=600&top_left_x=414){width="400"}  
 图 2.17 操作员屏幕上威胁显示符号的位置由其到滚转轴的角距离，以及威胁位置相对于局部垂直方向的偏移角与飞机滚转角之和共同决定。

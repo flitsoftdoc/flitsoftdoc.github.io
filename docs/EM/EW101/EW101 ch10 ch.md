@@ -38,20 +38,20 @@
 
 一种新颖且特别有价值的雷达诱饵用途，是迫使防御系统（如防空网络）开启其雷达，从而使其易于被探测和攻击。这通常需要独立机动诱饵。如果诱饵在外观和行为上足够逼真，获取雷达或其他探测传感器就会将其交给跟踪雷达。一旦跟踪雷达开启，它们就会暴露于敌方武器的攻击，例如由飞机在武器致命范围外发射的反辐射导弹（见图10.3）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-04.jpg?height=636&width=931&top_left_y=271&top_left_x=312)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-04.jpg?height=636&width=931&top_left_y=271&top_left_x=312){width="400"}  
 图10.1 饱和诱饵迫使武器传感器处理大量表观目标，降低其攻击真实目标的能力。
 
 #### 10.1.4 引诱诱饵
 
 在引诱任务中，诱饵吸引已对目标建立跟踪的雷达，使其转而跟踪诱饵。随后，诱饵远离目标，如图10.4所示。跟踪雷达只考虑方位角（有时包括俯仰角）、距离和回波信号频率的狭窄区段，通过角度、距离和频率门实现。如果诱饵能将这些门移动足够远，使其偏离真实目标，雷达对目标的跟踪锁定就会被打破。因此，我们所称的引诱诱饵也可以称为“脱锁诱饵”。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-04.jpg?height=356&width=921&top_left_y=1776&top_left_x=317)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-04.jpg?height=356&width=921&top_left_y=1776&top_left_x=317){width="400"}  
 图10.2 如果武器传感器在探测到真实目标前先获取了诱饵，它可能会攻击诱饵，浪费昂贵的制导导弹。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-05.jpg?height=551&width=926&top_left_y=288&top_left_x=355)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-05.jpg?height=551&width=926&top_left_y=288&top_left_x=355){width="400"}  
 图10.3 如果诱饵迫使防空雷达跟踪它，那么处于武器系统致命范围外的攻击机就能用反辐射导弹攻击它。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-05.jpg?height=780&width=904&top_left_y=1311&top_left_x=367)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-05.jpg?height=780&width=904&top_left_y=1311&top_left_x=367){width="400"}  
 图10.4 在引诱任务中，诱饵在与目标同一雷达分辨单元内启动，但具有较大的表观RCS。它捕获雷达的跟踪门并将其移离目标。
 
 ### 10.2 RCS与反射功率
@@ -68,10 +68,10 @@ $$
 
 与所有“dB方程”一样，该表达式需要一些限定条件。首先，要理解$P_{2}$和$P_{1}$是理想接收机接收的反射功率和入射功率，该接收机使用理想全向天线且非常靠近目标反射点（忽略天线近场效应）。如常见做法，常数（此处为-39）用于处理物理常数与单位换算因子。只有在使用正确单位（此处为dBm、$\mathrm{m}^{2}$和MHz）时才有效。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-06.jpg?height=404&width=892&top_left_y=1765&top_left_x=281)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-06.jpg?height=404&width=892&top_left_y=1765&top_left_x=281){width="400"}  
 图10.5 RCS决定了目标入射功率与其反射功率之间的比率。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-07.jpg?height=460&width=426&top_left_y=283&top_left_x=600)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-07.jpg?height=460&width=426&top_left_y=283&top_left_x=600){width="400"}  
 图10.6 无论是目标还是诱饵的RCS，都可以视为放大器和两副天线的组合。RCS引起的有效信号增益是放大器增益与两副天线增益之和。
 
 例如，一个$10\ \mathrm{GHz}$信号被$1\ \mathrm{m}^{2}$的RCS反射，其反射“增益”为：
@@ -88,7 +88,7 @@ $$
 
 无源诱饵只是雷达反射器。它们的RCS取决于尺寸和几何形状，因为材料总是由能够很好反射电磁波的介质构成（通常是金属、金属化织物或金属化玻璃纤维）。每种简单形状都有其特征性的最大RCS。由于角反射器反射效率极高，并能在较宽角度范围内提供高RCS，它常被用于无源诱饵。如图10.7所示，入射信号经三次反射被引导回源方向。现在考虑一个圆柱反射器及其内部可容纳的角反射器的相对RCS，如图10.8所示。为贴近实际，假设角反射器具有四分之一圆弧边。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-08.jpg?height=406&width=721&top_left_y=250&top_left_x=376)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-08.jpg?height=406&width=721&top_left_y=250&top_left_x=376){width="400"}  
 图10.7 角反射器效率极高，能在宽广角度范围内实现定向反射。
 
 
@@ -113,7 +113,7 @@ $$
 \sigma_{CR} / \sigma_{CYL}=\left(15.59 L^{4} \lambda\right) /\left(\lambda^{2} 2 \pi a b^{2}\right)
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-08.jpg?height=525&width=825&top_left_y=1639&top_left_x=331)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-08.jpg?height=525&width=825&top_left_y=1639&top_left_x=331){width="400"}  
 图10.8 将角反射器置于圆柱区域内，其RCS比相同尺寸的圆柱反射器提高了100倍以上。
 
 当 $b=L=1.5a$ 时，$\sigma_{CR} / \sigma_{CYL}=3.72 L / \lambda$。  
@@ -135,7 +135,7 @@ $$
 
 饱和诱饵可以是无源的或有源的，但它们必须提供与目标大致相同的RCS。它们还必须具备其他可被雷达探测的特征，并且这些特征必须与目标足够接近，以“欺骗”雷达。这些特征的例子包括运动、喷气发动机调制（如果能被探测到）、以及信号调制。图10.9展示了一个无源干扰诱饵的例子。在这里，箔条云团（提供接近受保护舰船的无源RCS）以某种模式释放，使得攻击雷达控制系统必须将每一个箔条云团都当作目标进行处理。（请注意，这幅图并非按比例绘制；箔条云团的释放范围在实际中会大得多。）
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-10.jpg?height=671&width=878&top_left_y=240&top_left_x=297)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-10.jpg?height=671&width=878&top_left_y=240&top_left_x=297){width="400"}  
 图10.9 一艘舰船处于与其RCS大致相同的箔条云团模式中，会迫使攻击导弹在许多目标中寻找真实目标。舰船在机动且箔条云团随风移动，这使得这一任务更加困难。
 
 ### 10.6 引诱诱饵
@@ -152,18 +152,18 @@ $$
 
 需要强调的是，为了诱饵有效，它必须在威胁雷达看来与目标无法区分。如果威胁雷达测量到诱饵未能产生的回波信号参数，它将忽略诱饵并继续跟踪目标。此类参数的例子包括喷气发动机调制以及与目标尺寸和形状相关的效应。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-11.jpg?height=661&width=345&top_left_y=1481&top_left_x=641)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-11.jpg?height=661&width=345&top_left_y=1481&top_left_x=641){width="400"}  
 图10.10 起初，威胁雷达将分辨单元对准目标。引诱诱饵在威胁分辨单元内启动，呈现出显著大于目标的RCS。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-12.jpg?height=618&width=435&top_left_y=243&top_left_x=533)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-12.jpg?height=618&width=435&top_left_y=243&top_left_x=533){width="400"}  
 图10.11 更大的RCS使威胁雷达的分辨单元跟踪诱饵，而不是目标。
 
 图10.13简化表示了威胁雷达在诱饵操作序列中观测到的RCS。这幅图忽略了目标相对雷达方位变化以及雷达到目标距离变化的几何效应。这两个问题将在下一节中讨论。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-12.jpg?height=573&width=444&top_left_y=1584&top_left_x=533)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-12.jpg?height=573&width=444&top_left_y=1584&top_left_x=533){width="400"}  
 图10.12 当威胁雷达的分辨单元被拉得足够远，使目标不再处于其中时，雷达只能看到并跟踪诱饵。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-13.jpg?height=703&width=888&top_left_y=283&top_left_x=367)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-13.jpg?height=703&width=888&top_left_y=283&top_left_x=367){width="400"}  
 图10.13 更大RCS的引诱诱饵捕获了雷达的跟踪门，使其偏离目标。
 
 #### 10.6.2 舰船防护中的引诱功能
@@ -174,13 +174,13 @@ $$
 
 另一种对舰船防御重要的诱饵操作模式称为“倾泻模式”。在这种模式下，诱饵（例如箔条云团）被布放在雷达分辨单元之外，如图10.15所示。随后使用欺骗式干扰机（例如距离门拖曳干扰机）将分辨单元从目标处拉到诱饵上，如图10.16所示。只要诱饵产生的RCS与受保护目标相当（且无法区分），雷达就会锁定诱饵。当然，诱饵必须布放在一个不会使攻击导弹意外重新获取舰船的位置。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-14.jpg?height=501&width=552&top_left_y=238&top_left_x=428)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-14.jpg?height=501&width=552&top_left_y=238&top_left_x=428){width="400"}  
 图10.14 用于引诱模式的箔条云团被布放在分辨单元的边角处，使其最快速地与舰船分离，并引导攻击导弹远离舰船。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-14.jpg?height=492&width=477&top_left_y=929&top_left_x=505)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-14.jpg?height=492&width=477&top_left_y=929&top_left_x=505){width="400"}  
 图10.15 当舰船防护箔条以倾泻模式使用时，它被布放在威胁雷达分辨单元之外。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-14.jpg?height=589&width=528&top_left_y=1575&top_left_x=478)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-14.jpg?height=589&width=528&top_left_y=1575&top_left_x=478){width="400"}  
 图10.16 受保护舰船上的欺骗干扰机将威胁雷达的分辨单元拉到箔条云团上。
 
 ### 10.7 交战过程中的有效RCS
@@ -216,15 +216,15 @@ $$
 
 一枚反舰导弹从飞机上发射，朝舰船飞来，并在地平线处（距离舰船约10 km）开启其主动跟踪雷达。舰船的ESM系统已发出攻击即将发生的警告，舰船在自身与导弹之间释放了一枚诱饵。如图10.17所示，诱饵和舰船均处于导弹雷达波束内。假设诱饵成功捕获导弹雷达，并在远离舰船时吸引雷达波束跟随，则舰船会脱离雷达波束，如图10.18所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-16.jpg?height=446&width=530&top_left_y=243&top_left_x=476)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-16.jpg?height=446&width=530&top_left_y=243&top_left_x=476){width="400"}  
 图10.17 导弹主动跟踪雷达、诱饵(D)和目标的交战在雷达开启时开始。诱饵和目标都处于雷达天线波束内。
 
 考虑舰船上ESM接收机观测到的交战情况。如果没有诱饵（或其他电子战）保护，导弹将以接近马赫1的速度直飞舰船，舰船会始终处于导弹雷达波束的中心或附近。ESM系统接收的信号功率随时间的变化如图10.19所示。雷达的ERP是其发射机功率与天线峰值增益之和（dB）。ESM系统天线增益保持不变，频率保持不变。但信号传播距离随着导弹接近而迅速减小，导致$20 \log (d)$项迅速变化。此项使得传播损耗与距离平方成函数关系，因此接收信号功率将呈现图10.19所示曲线。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-16.jpg?height=313&width=547&top_left_y=1796&top_left_x=414)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-16.jpg?height=313&width=547&top_left_y=1796&top_left_x=414){width="400"}  
 图10.18 如果诱饵捕获了雷达，雷达天线波束会随着导弹跟踪诱饵而偏离目标，诱饵远离目标。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-17.jpg?height=345&width=503&top_left_y=278&top_left_x=562)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-17.jpg?height=345&width=503&top_left_y=278&top_left_x=562){width="400"}  
 图10.19 在交战过程中，目标接收到的功率等于雷达ERP减去（递减的）传播损耗。
 
 幸运的是，诱饵捕获了雷达并使其天线波束偏离舰船。当舰船脱离雷达主波束时，雷达在舰船方向上的ERP会急剧下降，如图10.20所示。顺便提一句，如果诱饵没有成功捕获导弹雷达，而是它自己脱离天线波束，那么它将看到与舰船相同的信号历史。
@@ -233,10 +233,10 @@ $$
 
 有源诱饵的有效RCS取决于其增益和最大输出功率。如图10.21所示，恒定增益诱饵产生的RCS（dBsm）为$39+$ 增益$(\mathrm{dB})-20 \log (F)$（MHz），直到导弹足够接近，使得诱饵接收到的信号等于最大输出功率减去诱饵增益。此后，每当接收信号功率增加1 dB，有效RCS就减少1 dB。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-17.jpg?height=469&width=515&top_left_y=1720&top_left_x=557)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-17.jpg?height=469&width=515&top_left_y=1720&top_left_x=557){width="400"}  
 图10.20 如果诱饵捕获导弹雷达，目标上的信号功率会随着其脱离雷达天线波束而下降。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-18.jpg?height=351&width=495&top_left_y=238&top_left_x=500)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-18.jpg?height=351&width=495&top_left_y=238&top_left_x=500){width="400"}  
 图10.21 诱饵的有效雷达截面积取决于其增益和最大输出功率。
 
 预激发振荡器诱饵始终以最大功率发射，而不论接收信号功率大小，因此当接收到非常弱的雷达信号（即远距离）时，接收信号与发射信号的差值极大。实际上，诱饵具有巨大的增益，从而产生极大的有效RCS。
@@ -247,7 +247,7 @@ $$
 39+G-20 \log (10,000)=39+80-80=39 \mathrm{dBsm}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-18.jpg?height=397&width=557&top_left_y=1706&top_left_x=471)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-18.jpg?height=397&width=557&top_left_y=1706&top_left_x=471){width="400"}  
 图10.22 预激发振荡器诱饵的有效RCS随雷达到诱饵距离变化。对于固定增益诱饵，RCS保持恒定，直到诱饵饱和。
 
 当诱饵接收到的雷达信号为 $100 \mathrm{~W}-80 \mathrm{~dB}(+50 \mathrm{dBm}-80 \mathrm{~dB}=-30 \mathrm{dBm})$ 时，其RCS开始下降。这发生在ERP满足如下关系时：

@@ -31,10 +31,10 @@ EW和SIGINT系统出于多种原因需要定位信号辐射源，这些原因总
 
 - **角度和距离**。如图8.2所示，该方法仅需一个截获点，但必须同时测量角度和距离。大多数雷达通过这种方式定位目标，因为它们是主动辐射体，能直接测距，而EW和SIGINT系统必须被动测距。单站定位（SSL）系统使用这种方法来测量高频（HF，约3至30 MHz）发射机的距离。由于HF信号从电离层“反射”，可以通过测量接收到的反射信号的仰角以及电离层反射点的状态（“高度”）来确定距离。飞机雷达告警接收机则通过接收信号功率，并结合雷达的已知发射功率，计算传播损耗将信号衰减至接收功率时的距离，从而确定该雷达的距离。这两种方法的精度都很低。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-03.jpg?height=364&width=660&top_left_y=1715&top_left_x=521)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-03.jpg?height=364&width=660&top_left_y=1715&top_left_x=521){width="400"}  
 图 8.1 三角测量需要从多个位置进行方向测量。二维测量（方位角）的交点即为辐射源的可能位置。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-04.jpg?height=359&width=532&top_left_y=302&top_left_x=562)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-04.jpg?height=359&width=532&top_left_y=302&top_left_x=562){width="400"}  
 图 8.2 在角度和距离技术中，辐射源到DF系统的距离由接收信号的强度推导得出。  
 
 - **多重距离测量**。该方法通过两个已知半径弧线的交点定位辐射源。对于EW和SIGINT应用的实际测距方法存在两个主要问题。首先，如图8.3所示，来自两个截获点的弧线在两个位置相交，因此必须使用某种方法来解决这种二义性。其次（通常更困难），很难以足够精度被动测量到一个非合作发射机的距离。到达时间差辐射源定位系统（详见8.8节）是这种方法的变体，能提供非常精确的定位。
@@ -43,13 +43,13 @@ EW和SIGINT系统出于多种原因需要定位信号辐射源，这些原因总
 
 - **单一移动截获机的多角度测量**。如图8.5所示，一个截获机可以在不同位置进行DF测量来定位发射机。然而，准确定位需要大约相隔$90^{\circ}$的方位线，这要求截获机在目标最小距离的1.4倍范围内飞行——同时目标发射机保持发射且静止。对于远距离辐射源，即使是空中截获机，这段时间也可能过长。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-04.jpg?height=345&width=424&top_left_y=1667&top_left_x=622)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-04.jpg?height=345&width=424&top_left_y=1667&top_left_x=622){width="400"}  
 图 8.3 多重距离测量通过两个弧线的交点定位辐射源。由于弧线在两个点相交，系统必须确定哪一个是真实位置。同时，从弧线边缘到中心的距离测量通常也很困难。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-05.jpg?height=350&width=655&top_left_y=326&top_left_x=509)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-05.jpg?height=350&width=655&top_left_y=326&top_left_x=509){width="400"}  
 图 8.4 如果系统知道其所在平台与辐射源的高度差，则通过测量方位角和俯仰角即可确定发射机位置。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-05.jpg?height=419&width=633&top_left_y=1701&top_left_x=519)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-05.jpg?height=419&width=633&top_left_y=1701&top_left_x=519){width="400"}  
 图 8.5 移动截获机可以进行多次方向测量，比较它们，并确定固定辐射源的位置。  
 
 ### 8.3 辐射源定位精度
@@ -66,15 +66,15 @@ EW和SIGINT系统出于多种原因需要定位信号辐射源，这些原因总
 
 在使用三角测量的辐射源定位系统中，截获几何是一个重要考虑因素。如图8.6所示，定位精度取决于角度测量误差和到辐射源的距离。因此，远距离DF系统需要比近距离系统高得多的角度精度才能实现相同的定位精度。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-07.jpg?height=222&width=737&top_left_y=331&top_left_x=463)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-07.jpg?height=222&width=737&top_left_y=331&top_left_x=463){width="400"}  
 图 8.6 DF系统产生的定位精度取决于角度误差和到辐射源的距离。  
 
 定位精度的另一个问题来源于截获机相对于目标发射机的位置关系。术语**圆概率误差（CEP）**经常用于描述辐射源定位系统的精度。CEP原为轰炸和火炮领域的术语，指半数炸弹或炮弹落入的假想圆的半径。在辐射源定位中，有时（被误用为）表示一个圆，该圆位于与辐射源相距$\pm$ RMS误差角的方位线之间，如图8.7所示。定位圆的大小取决于角度误差以及目标发射机与截获站的距离。若要使“CEP圆”确实为圆，两个截获站必须相隔$90^{\circ}$（从目标发射机的视角看）并且距离大致相同。当它们相隔小于$90^{\circ}$时，如图8.8所示，方位线之间形成不对称区域，需要用椭圆，因此使用“椭圆概率误差”来描述在一个维度上显著差于另一个维度的定位精度。如果站点相隔大于$90^{\circ}$，或一个站点距离目标显著更近，也会出现这种不对称。CEP一词也应用于这些不理想的几何条件。它通常被定义为误差椭圆的长短轴向量和，并校正为：测得辐射源位置落在真实位置CEP半径范围内的概率为$50\%$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-07.jpg?height=621&width=715&top_left_y=1499&top_left_x=475)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-07.jpg?height=621&width=715&top_left_y=1499&top_left_x=475){width="400"}  
 图 8.7 “圆概率误差”是描述来自两个DF站的角度测量定位精度的常用方式。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-08.jpg?height=1090&width=621&top_left_y=288&top_left_x=528)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-08.jpg?height=1090&width=621&top_left_y=288&top_left_x=528){width="400"}  
 图 8.8 “椭圆概率误差”是描述当两个DF站的截获几何非最优时定位精度不对称性的常用方式。  
 
 ### 8.3.2 定位精度预算
@@ -95,7 +95,7 @@ $$
 - **$E_{R}$**：在角度测量系统中通常是指用于测量方位的北向参考的不准确性。在缺乏惯性导航设备的小型平台上，这可能成为中高精度系统的主要限制因素。在极高精度系统中，参考误差来自测量时间或频率的参考时钟。来自GPS的高精度时间/频率参考已显著缓解了现代系统中的该问题。  
 - **$E_{S}$**：通常只在地面辐射源定位系统中是问题。其主要原因是来自附近地形或物体的多径反射。对固定站点进行站址校准能显著提高精度，但对移动系统通常不可行。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-09.jpg?height=551&width=737&top_left_y=1627&top_left_x=480)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-09.jpg?height=551&width=737&top_left_y=1627&top_left_x=480){width="400"}  
 图 8.9 实际定位精度取决于测量精度和参考精度。  
 
 
@@ -138,20 +138,20 @@ $$
 
 若要用单个方向天线确定辐射源的实际位置，必须获得某种距离测量。如果辐射源的发射功率已知（EW威胁信号中常见这种情况），可以根据接收功率估算距离。否则，必须依靠其他信息来确定距离（例如，利用已知高度差，如图8.4所示）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-12.jpg?height=487&width=722&top_left_y=1655&top_left_x=473)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-12.jpg?height=487&width=722&top_left_y=1655&top_left_x=473){width="400"}  
 图 8.10 窄波束天线在主轴附近的增益远高于其他角度。其他角度的信号显著衰减。  
 
 ### 8.4.2 Watson-Watt 方法
 
 Robert Watson-Watt爵士在20世纪20年代开发的技术被广泛应用于价格适中的陆基机动DF系统。如图8.11所示，三个偶极子天线馈入三个独立接收机，两个端部天线（相距约$1/4$波长）的相干和与中央感应天线形成一个心形增益方向图，如图8.12所示。如果将两端天线绕感应天线旋转，旋转的心形方向图即可提供任意方位角信号的入射方向信息。在实际Watson-Watt系统中，天线布置如图8.13所示，外围天线的对置对依次切换到两个接收机中，以模拟旋转。天线数量越多，DF精度越高。但通过合理校准，即使只有四根天线也能提供可接受的结果。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-13.jpg?height=484&width=626&top_left_y=752&top_left_x=523)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-13.jpg?height=484&width=626&top_left_y=752&top_left_x=523){width="400"}  
 图 8.11 Watson-Watt方法使用相距约$1/4$波长的两根天线和一个中央感应天线。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-13.jpg?height=544&width=549&top_left_y=1482&top_left_x=235)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-13.jpg?height=544&width=549&top_left_y=1482&top_left_x=235){width="400"}  
 图 8.12 基本Watson-Watt阵列中的三根天线形成心形增益方向图。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-13.jpg?height=546&width=542&top_left_y=1485&top_left_x=903)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-13.jpg?height=546&width=542&top_left_y=1485&top_left_x=903){width="400"}  
 图 8.13 圆形偶极子阵列中对置的天线元件可以依次切换到Watson-Watt接收机中以模拟旋转。  
 
 进一步简化时，中央感应天线的功能可以由所有外围天线的和来提供。这使得Watson-Watt原理可以通过一个简单的四根垂直偶极子对称布置在天线桅杆周围的阵列实现。正如本章后续部分将看到的，相同类型的天线阵列可用于多种DF技术（但天线接入系统的方式以及数据处理方式大不相同）。
@@ -171,15 +171,15 @@ $$
 
 由于EW威胁信号的发射功率通常已知，因此接收功率允许计算到辐射源的大致距离，从而实现完整定位。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-14.jpg?height=392&width=575&top_left_y=1764&top_left_x=543)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-14.jpg?height=392&width=575&top_left_y=1764&top_left_x=543){width="400"}  
 图 8.14 理想幅度比较DF天线的功率增益在主轴到$90^{\circ}$范围内随角度线性变化。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-15.jpg?height=420&width=636&top_left_y=314&top_left_x=511)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-15.jpg?height=420&width=636&top_left_y=314&top_left_x=511){width="400"}  
 图 8.15 两个相距$90^{\circ}$的线性增益天线的极坐标表示显示了如何通过多天线幅度比较确定辐射源位置。  
 
 通过如图8.16所示将四根此类天线对称安装在飞机周围，可以实现$360^{\circ}$方位覆盖。由于天线的高前后比，对于任何一个发射机，最多只有两根天线会接收到显著功率，除非发射机几乎正对某根天线的主轴。机体的不规则形状会扭曲每根天线的增益模式，从而降低DF精度，除非通过系统校准消除这些误差。然而，要在此类系统中获得高精度的距离或方位测量，需要极其复杂的校准方案——因此，当需要超过$5\sim10^{\circ}$的DF精度时，通常采用其他DF技术。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-16.jpg?height=436&width=669&top_left_y=293&top_left_x=492)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-16.jpg?height=436&width=669&top_left_y=293&top_left_x=492){width="400"}  
 （注意：天线相对于飞机尺寸来说要小得多。）  
 
 图 8.16 四根背腔螺旋天线对称安装在飞机周围，可实现瞬时$360^{\circ}$辐射源定位。  
@@ -194,7 +194,7 @@ $$
 
 构建干涉仪DF系统的最大挑战是保持两副天线与接收机的电气路径长度尽可能相等，因为AOA测量精度取决于能否准确测量两接收机输出之间的相位差。这要求电缆长度完全一致，且天线、接收机、前置放大器和开关的相位响应完全相同，直至相位比较器——对所有信号强度和所有温度均需如此。这是极具挑战的任务，因此大多数已部署的干涉仪系统都采用某种实时校准方案来修正相位不匹配。例外情况是将天线和所有关键部件都装入同一个（体积不大的）盒子中。如稍后章节将看到的，在接收机必须远离天线的系统中，还有一些巧妙的方法能使电路的关键部分保持接近天线。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-17.jpg?height=522&width=695&top_left_y=312&top_left_x=490)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-17.jpg?height=522&width=695&top_left_y=312&top_left_x=490){width="400"}  
 图 8.17 基本干涉仪系统通过比较两副匹配天线馈入的信号相位来确定信号的入射角。
 
 
@@ -206,7 +206,7 @@ $$
 \mathrm{AOA}=\arcsin(d/B)
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-18.jpg?height=497&width=803&top_left_y=285&top_left_x=435)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-18.jpg?height=497&width=803&top_left_y=285&top_left_x=435){width="400"}  
 图 8.18 干涉仪通过干涉三角形相对于其基线确定信号的入射角。  
 
 理解干涉原理有助于引入一个假想概念，称为“波前”。电磁波从发射天线向外径向传播——基础电子学教材常将其类比为石子落入池塘后扩散的水波环。“波前”是辐射波中某一固定相位点，它随波从发射机向外传播。
@@ -227,7 +227,7 @@ $$
 
 其中，$\phi$ = 信号在两天线接收时的相对相位（度）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-18.jpg?height=335&width=787&top_left_y=1764&top_left_x=442)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-18.jpg?height=335&width=787&top_left_y=1764&top_left_x=442){width="400"}  
 图 8.19 信号以近似光速传播，当一个波长通过接收天线时其相位变化$360^{\circ}$。  
 
 ---
@@ -238,15 +238,15 @@ $$
 
 图8.21展示了一组背腔螺旋天线阵列，可用于精确测量微波雷达发射机的方位角和俯仰角。水平阵列天线用于测量方位角，垂直阵列天线用于测量俯仰角。在每种情况下，长基线提供高精度但存在歧义，而短基线用于消除歧义。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-19.jpg?height=455&width=470&top_left_y=1677&top_left_x=624)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-19.jpg?height=455&width=470&top_left_y=1677&top_left_x=624){width="400"}  
 图 8.20 完整干涉仪DF系统包括多副天线，两两切换到干涉仪中以形成多条基线。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-20.jpg?height=878&width=806&top_left_y=298&top_left_x=430)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-20.jpg?height=878&width=806&top_left_y=298&top_left_x=430){width="400"}  
 图 8.21 五副背腔螺旋天线可组成阵列，为高精度、宽带宽、方位与俯仰干涉测向系统提供信号。  
 
 图8.22展示了一组适用于VHF或UHF DF系统的垂直偶极子阵列。在此情况下，任意两根天线均可组成六条基线。对角基线比边基线长1.414倍。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-20.jpg?height=412&width=638&top_left_y=1696&top_left_x=511)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-20.jpg?height=412&width=638&top_left_y=1696&top_left_x=511){width="400"}  
 图 8.22 四根垂直偶极子可形成六条基线，用于干涉仪测向系统。  
 
 ---
@@ -261,20 +261,20 @@ $$
 
 图8.25展示了一种可能用于定向干涉仪系统的典型天线阵列方向图。注意干涉原理仅在两天线覆盖区域内有效。然而，由于该原理依赖于两天线接收信号的相位差，因此由天线增益差异导致的接收信号幅度差异对结果的影响次要。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-21.jpg?height=350&width=568&top_left_y=1773&top_left_x=557)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-21.jpg?height=350&width=568&top_left_y=1773&top_left_x=557){width="400"}  
 图 8.23 干涉仪确定的入射角定义了一条到发射机的可能方向圆锥。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-22.jpg?height=407&width=544&top_left_y=300&top_left_x=562)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-22.jpg?height=407&width=544&top_left_y=300&top_left_x=562){width="400"}  
 图 8.24 图8.23圆锥与水平面的交点定义了测量信号的两个可能入射方位角。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-22.jpg?height=436&width=561&top_left_y=913&top_left_x=550)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-22.jpg?height=436&width=561&top_left_y=913&top_left_x=550){width="400"}  
 图 8.25 如果干涉仪DF系统采用定向阵列，目标发射机必须位于构成基线的两天线方向图的重叠区域内。  
 
 许多地基DF系统必须瞬时覆盖$360^{\circ}$，其基线天线必须在方位上全向（垂直偶极子最常见）。这些系统通过使用不同方向的另一条基线进行测量来解决镜像歧义。图8.26展示了一个$360^{\circ}$地基系统的例子。天线1和3形成的基线与天线2和4形成的基线有一个共同解，该解即为正确结果。
 
 若干涉仪DF系统必须处理远离水平面几度以上的信号（安装在飞机上的系统几乎总是这种情况），显然必须同时测量方位角和俯仰角才能提供准确DOA。一个重要例外是：若飞机定位的辐射源已知在地面或接近地面且距离较远，并且系统只考虑飞机机翼接近水平时接收到的数据，则二维空基系统仍能提供有用数据。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-23.jpg?height=847&width=840&top_left_y=329&top_left_x=415)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-23.jpg?height=847&width=840&top_left_y=329&top_left_x=415){width="400"}  
 图 8.26 在$360^{\circ}$地基干涉仪DF系统中，两条方向不同的基线可以解决镜像歧义。  
 
 ---
@@ -285,7 +285,7 @@ $$
 
 图8.27总结了两个重要规律。首先，任何干涉仪DF系统在基线垂直方向（图中$0^{\circ}$）精度最高，在基线两端方向（图中$\pm90^{\circ}$）精度最差。其次，基线越长（相对于接收信号的波长），精度越高。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-24.jpg?height=969&width=1008&top_left_y=312&top_left_x=317)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-24.jpg?height=969&width=1008&top_left_y=312&top_left_x=317){width="400"}  
 图 8.27 干涉仪基线两端天线测得的相位差随入射角和基线长度（相对于接收信号波长）变化。  
 
 图8.27还有一个更微妙的含义。注意当基线长于半波长时，AOA从$+90^{\circ}$到$-90^{\circ}$时相位差变化超过$360^{\circ}$。由于干涉仪无法判断两天线接收信号是否处于同一波周期，它会给出非常精确但存在歧义的答案。通常通过使用一条更短的基线进行另一次测量来解决该歧义。
@@ -331,10 +331,10 @@ $$
 
 最简单的多普勒测向仪如图8.28所示。天线A固定，天线B绕其旋转。每副天线都馈入接收机，比较天线B与天线A接收到的信号频率。图8.29展示了天线B每次旋转过程中其速度矢量在$360^{\circ}$范围内的变化。其指向发射机的速度分量是正弦变化的，在图中位于天线A正下方时达到正峰值。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-26.jpg?height=441&width=648&top_left_y=1715&top_left_x=504)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-26.jpg?height=441&width=648&top_left_y=1715&top_left_x=504){width="400"}  
 图 8.28 多普勒DF系统可以通过让一副天线（B）绕固定天线（A）旋转形成。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-27.jpg?height=479&width=640&top_left_y=331&top_left_x=509)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-27.jpg?height=479&width=640&top_left_y=331&top_left_x=509){width="400"}  
 图 8.29 当天线B绕固定天线A旋转时，其与发射机的距离变化率呈周期性变化。  
 
 对于任意方向来的信号，观测到的差频（天线B频率 - 天线A频率）随时间变化，如图8.30所示。当天线B位于天线A和发射机之间时，多普勒频移为负。由于DF系统已知天线B的位置，零交叉点的时间可以很容易转换为信号的入射角。
@@ -345,7 +345,7 @@ $$
 
 让一副天线实际绕另一副天线旋转显然存在机械困难，因此大多数多普勒DF系统采用多个天线围绕中央“感应”天线呈圆形排列。在大多数欧洲机场降落时可以看到的天线圆就是多普勒DF阵列，用于被动定位飞机上的空对地发射机。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-27.jpg?height=508&width=1154&top_left_y=1660&top_left_x=257)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-27.jpg?height=508&width=1154&top_left_y=1660&top_left_x=257){width="400"}  
 图 8.30 多普勒效应使天线B接收的频率相对于天线A接收的频率呈正弦变化。  
 
 外围天线依次切换到接收机，形成旋转天线的效果。在某些系统中，省略感应天线，而用所有外围天线输出的和作为“参考输入”。尽管外围天线数量越多结果越精确，但即便“圆”中只有三副天线，该原理也能工作。当天线数量较少时，必须对原始DF数据应用显著修正因子才能获得较好的DF精度。
@@ -364,14 +364,14 @@ $$
 
 两个运动接收机定位固定发射机的情况如图8.31所示。如果我们知道确切的发射频率，则每个接收机的测得频率定义了其速度矢量与发射机之间的夹角。因此，如果已知每个接收机的速度矢量（速度和方向），我们即可定位发射机。该图假设所有元素在同一平面内；若在三维空间定位，则需要三副不在一条直线上的接收机。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-29.jpg?height=431&width=573&top_left_y=312&top_left_x=550)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-29.jpg?height=431&width=573&top_left_y=312&top_left_x=550){width="400"}  
 图 8.31 来自固定发射机的信号将以一个与发射机速度和速度矢量夹角相关的频率被每个运动接收机接收。  
 
 在EW应用中，我们极少知道确切的发射频率。好消息是，即便如此，仅通过比较两个接收机接收频率的差值，也能推断出发射机位置的一些有用信息。如果两接收机速度完全相同，差频将与它们速度矢量与发射机方向夹角的余弦差成正比。满足该条件的发射机位置有无数个，但它们都位于一条弯曲（数学上可定义）的线上（见图8.32）。由于两接收机速度通常会有至少轻微差异，数学处理会稍微复杂一些，但所有可能的发射机位置仍然位于一条可由计算机定义的曲线上。（你也可以算，但可能会老死在算式前。）
 
 若要得到唯一位置，必须确定发射机位于该曲线的哪一点。最常见方法是通过另一对接收机进行独立的频率差测量（三副接收机可形成两对独立接收机）。第二对接收机生成另一条曲线，与第一条曲线交点即为发射机位置。三维定位需要三对独立接收机。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-29.jpg?height=457&width=594&top_left_y=1711&top_left_x=543)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-29.jpg?height=457&width=594&top_left_y=1711&top_left_x=543){width="400"}  
 图 8.32 两个运动接收机测得的频率差可用于计算一条通过发射机位置的曲线。  
 
 ---
@@ -394,10 +394,10 @@ TOA辐射源定位系统的实现方式主要取决于接收机之间的间距�
 
 如果接收机相距较远（如在不同飞机或地面站），则需要如图8.34所示的实现方式。在这种情况下，每个接收点进行精确的时间测量，并将这些时间值传输给处理器，由其完成计算并定位发射机。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-31.jpg?height=556&width=623&top_left_y=1600&top_left_x=526)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-31.jpg?height=556&width=623&top_left_y=1600&top_left_x=526){width="400"}  
 图 8.33 若两接收机距离较近，可通过校准电缆将TOA辐射源定位实现于单一处理器。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-32.jpg?height=604&width=1176&top_left_y=298&top_left_x=254)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-32.jpg?height=604&width=1176&top_left_y=298&top_left_x=254){width="400"}  
 图 8.34 当接收机相距较远时，TOA辐射源定位要求在每个接收点进行精确TOA测量。  
 
 ---
@@ -406,7 +406,7 @@ TOA辐射源定位系统的实现方式主要取决于接收机之间的间距�
 
 真正的TOA方法要求我们知道信号从发射机发出的确切时间（即信号必须包含某种可解码的时间参考）。在EW应用中这种情况很少见，但幸运的是，我们仍可通过其信号到达两接收机的时间差来推断发射机位置。如果所有元素在同一平面内，该时间差定义了一条弯曲（但数学上可定义）的曲线，该曲线通过发射机位置（见图8.35）。若要确定发射机在该曲线上的具体位置，必须使用另一条TDOA基线（需增加一副接收机），以生成另一条曲线，与第一条曲线交点即为发射机位置。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-32.jpg?height=554&width=662&top_left_y=1552&top_left_x=504)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-32.jpg?height=554&width=662&top_left_y=1552&top_left_x=504){width="400"}  
 图 8.35 两个接收机的到达时间差定义了一条通过发射机位置的曲线。  
 
 上述TOA实现的所有讨论同样适用于TDOA方法，只是每种情况下都需增加一个接收机。即：二维辐射源定位需要三副接收机（形成两条独立基线），三维定位则需要三副非共面的接收机（形成三条独立基线）。由于EW应用通常依赖TDOA，因此以下讨论将主要集中于TDOA。
@@ -439,7 +439,7 @@ TOA辐射源定位系统的实现方式主要取决于接收机之间的间距�
 
 在TDOA系统中，每个接收机的输出都会被数字化。带有时间标签的数字化信号通过数据链路发送到处理器。处理器实际上是在时间上“滑动”一个信号相对于另一个信号，并测量两信号随施加延迟变化的相关性。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-34.jpg?height=666&width=845&top_left_y=1168&top_left_x=345)  
+![](https://cdn.mathpix.com/cropped/2025_09_08_374f5ec223a7a7f2b19ag-34.jpg?height=666&width=845&top_left_y=1168&top_left_x=345){width="400"}  
 图 8.36 模拟调制信号的时间差定义通过延迟一个信号并测量相关性确定。  
 
 ---

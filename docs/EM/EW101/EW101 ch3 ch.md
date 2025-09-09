@@ -45,7 +45,7 @@
 | 波束宽度（Beamwidth） | 天线的角覆盖范围，通常以度为单位（定义见下文）。 |
 | 效率（Efficiency） | 实际发射或接收的信号功率与天线波束覆盖球面比例所对应理论功率的百分比。 |
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-03.jpg?height=534&width=872&top_left_y=313&top_left_x=369)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-03.jpg?height=534&width=872&top_left_y=313&top_left_x=369){width="400"}  
 图 3.1 天线参数定义基于天线增益方向图的几何特性。
 
 #### 3.1.3 关于天线增益的更多内容
@@ -58,7 +58,7 @@
 
 一个重要的电子战极化技巧是：用圆极化天线接收未知方向的线极化信号。这样始终会损失 3 dB，但避免了交叉极化情况下可能出现的 25 dB 损失。当接收信号可能具有任意极化（即任意线极化或圆极化）时，通常会用 LHC 与 RHC 天线快速测量并选择较强的信号。对于电子战常见的宽频带天线，交叉极化损耗 25 dB 是常见值。而窄频带天线（如通信卫星链路中的天线）则可以设计到交叉极化隔离度大于 30 dB。雷达告警接收机中的小型圆极化天线，其交叉极化隔离度可能只有 10 dB。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-05.jpg?height=788&width=827&top_left_y=1347&top_left_x=379)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-05.jpg?height=788&width=827&top_left_y=1347&top_left_x=379){width="400"}  
 图 3.2 交叉极化损耗范围从 0 dB 到约 25 dB。注意 $3-\mathrm{dB}$ 损耗适用于任何线极化与圆极化的组合。
 
 ### 3.2 天线的类型
@@ -71,7 +71,7 @@
 
 表 3.2  根据角覆盖范围、极化方式和带宽选择传输或接收天线类型  
 
-![](https://cdn.mathpix.com/snip/images/1D64L78CyxNc8lbaih3NptqP7TLERhigisyDD8hthes.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/1D64L78CyxNc8lbaih3NptqP7TLERhigisyDD8hthes.original.fullsize.png){width="400"}
 
 | 角覆盖范围 | 极化 | 带宽 | 天线类型 |
 | :--- | :--- | :--- | :--- |
@@ -91,7 +91,7 @@
 
 图 3.3 便于总结了电子战应用中各种类型天线的参数。对于每种天线类型，左栏展示了天线物理特性的粗略示意图。中栏展示了该类型天线在俯仰角和方位角上的大致增益方向图。只有这些曲线的一般形状是有用的——某一具体天线的实际增益方向图将由其设计决定。右栏则总结了预期的典型规格。这里“典型”是一个重要的词，因为参数的可能范围要宽得多。例如，理论上任何类型的天线都可以用于任意频率范围。然而，物理尺寸、安装方式和适用场景的实际考虑，使得某种天线类型通常被用于其“典型”的频率范围。
 
-![](https://cdn.mathpix.com/snip/images/fer26DM5iH5Iqy_zAiOYHkzR682BNeicpHLOHmRY0lw.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/fer26DM5iH5Iqy_zAiOYHkzR682BNeicpHLOHmRY0lw.original.fullsize.png){width="400"}
 
 图 3.3 各类天线具有特征性的增益方向图和典型规格；每类天线的具体天线的方向图与规格由其设计细节决定。
 
@@ -105,7 +105,7 @@
 
 图 3.4 展示了效率为 $55 \%$ 的抛物面天线的增益与波束宽度之间的关系。这一效率是你在商用天线中常见的，该类天线的工作带宽相对较窄（约 $10 \%$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-09.jpg?height=755&width=1232&top_left_y=1387&top_left_x=195)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-09.jpg?height=755&width=1232&top_left_y=1387&top_left_x=195){width="400"}  
 图 3.4 对于任何类型天线，增益与波束宽度之间存在明确的权衡关系。本图展示了效率为 55% 的抛物面天线的增益与波束宽度的关系。
 
 在电子战和侦察应用中经常使用的宽带天线（一个倍频程或更多），其效率将小于 $55 \%$。假设波束在方位角和俯仰角上是对称的。使用该图时，从天线波束宽度画一条线到曲线，再向左读出增益（以 dB 表示）。
@@ -120,7 +120,7 @@ $$
 
 其中 $A$ 为以 dBsm 表示的面积（即相对于 $1 \mathrm{~m}^{2}$ 的 dB 值）；$G$ 为波束轴线增益（dB）；$F$ 为工作频率（MHz）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-10.jpg?height=1329&width=888&top_left_y=833&top_left_x=356)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-10.jpg?height=1329&width=888&top_left_y=833&top_left_x=356){width="400"}  
 图 3.5 天线的有效面积是其增益与工作频率的函数。
 
 #### 3.3.3 天线增益作为口径与频率的函数
@@ -133,7 +133,7 @@ $$
 
 其中 $G$ 为天线增益（dB）；$D$ 为反射面直径（米）；$F$ 为工作频率（MHz）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-11.jpg?height=724&width=854&top_left_y=1460&top_left_x=373)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-11.jpg?height=724&width=854&top_left_y=1460&top_left_x=373){width="400"}  
 图 3.6 抛物面天线的增益是其口径、工作频率和天线效率的函数。本标度图对应 $55 \%$ 效率。
 
 一些天线制造商可以向你提供便携的计算尺，用来进行这种权衡（适用于任意效率），只需致电或写信联系销售部门即可。（这些通常是免费的广告赠品。）这些计算尺还包括其他有用信息（而且挺有趣）。
@@ -183,7 +183,7 @@ $$
 
 当作为接收阵列时，移相器使得来自选定方向的信号在信号合成器中同相叠加。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-14.jpg?height=809&width=828&top_left_y=290&top_left_x=374)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-14.jpg?height=809&width=828&top_left_y=290&top_left_x=374){width="400"}  
 图 3.7 相控阵天线由若干天线单元组成，每个单元连接一个独立控制的移相器。移相器设置为使来自选定角度的信号在合成器中同相叠加——反之，从所有单元发射的信号在选定角度观察时相干增强。
 
 相控阵可以是线阵，即天线单元排成一行，通过移相器在某一平面（例如水平面）实现波束收缩与指向。在这种情况下，阵列的波束宽度仅由该平面内的移相器决定。另一方向（例如垂直方向）的波束宽度则由单个天线在该方向的波束宽度决定。
@@ -217,10 +217,10 @@ $$
 
 如图 3.9 所示，当波束偏离阵列波束轴线角度进行扫描时，其波束宽度按余弦关系增加。以 $10.2^{\circ}$ 波束为例，如果偏离波束轴线 $45^{\circ}$ 扫描，其波束宽度将增加到 $14.4^{\circ}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-15.jpg?height=443&width=1067&top_left_y=1673&top_left_x=254)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-15.jpg?height=443&width=1067&top_left_y=1673&top_left_x=254){width="400"}  
 图 3.8 为避免栅瓣，天线单元间距不得大于最高频率下的半波长。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-16.jpg?height=941&width=1190&top_left_y=282&top_left_x=273)  
+![](https://cdn.mathpix.com/cropped/2025_09_07_0922af04c1af494c1b73g-16.jpg?height=941&width=1190&top_left_y=282&top_left_x=273){width="400"}  
 图 3.9 阵列增益按离开波束轴线角度的余弦函数减小，波束宽度则按相同的比率增加。
 
 #### 3.4.4 相控阵天线增益
