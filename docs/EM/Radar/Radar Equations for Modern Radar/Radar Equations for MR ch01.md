@@ -285,7 +285,7 @@ $$
 
 **脉冲雷达距离计算工作表**
 
-![](https://cdn.mathpix.com/snip/images/4pWObJKLYPL40ncNce6y_aCpFcVOXB1NC2TaMfL0D_o.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/4pWObJKLYPL40ncNce6y_aCpFcVOXB1NC2TaMfL0D_o.original.fullsize.png){width="700"}
 
 图1.1 Blake的脉冲雷达距离计算工作表[8]。引用的图形在第4、6和7章中重现，换算分贝与比值的表格已由数字计算取代。
 
@@ -406,7 +406,7 @@ $$
 
 **脉冲雷达距离计算工作表**
 
-![](https://cdn.mathpix.com/snip/images/N0E4F6QoEaT2irA_Tckd3d98bJUYv_ftMQSe6iKpF6k.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/N0E4F6QoEaT2irA_Tckd3d98bJUYv_ftMQSe6iKpF6k.original.fullsize.png){width="700"}
 
 图1.2 修正后的Blake图[20, p. 21]。
 
