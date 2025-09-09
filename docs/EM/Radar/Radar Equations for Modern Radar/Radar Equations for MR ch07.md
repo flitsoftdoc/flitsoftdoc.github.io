@@ -132,6 +132,7 @@ $$
 其中海平面水汽密度为$\rho_{w 0}=7.75 \mathrm{~g} / \mathrm{m}^{3}$，对应标准大气下$60\%$的相对湿度。必须分别采用气压和水汽密度剖面，以反映低高度区域水汽的集中分布。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-246.jpg?height=636&width=887&top_left_y=276&top_left_x=285){width="400"}
+
 图7.2 水汽密度随高度变化的曲线，$\rho_{w 0}=7.75 \mathrm{~g} / \mathrm{m}^{3}$。
 
 
