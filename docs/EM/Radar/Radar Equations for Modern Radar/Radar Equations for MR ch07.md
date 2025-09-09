@@ -66,7 +66,7 @@ $$
 
 标准大气由美国专家委员会在20世纪50年代定义，1976年版[5]在本文撰写时仍然有效，由NOAA、NASA和USAF的专家更新。它在$32\ \mathrm{km}$高度以下与1964年ICAO标准相同，在50 km以下与1973年ISO标准相同。低于$30\ \mathrm{km}$高度的温度和压力数据如图7.1所示，与雷达相关。注意压力剖面接近指数型，尽管在约$11\ \mathrm{km}$高度其斜率发生了变化。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-244.jpg?height=703&width=1169&top_left_y=691&top_left_x=160)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-244.jpg?height=703&width=1169&top_left_y=691&top_left_x=160){width="400"}
 图7.1 美国1976年标准大气的温度与压力。
 
 温度由三个线性分段表示，斜率在11 km和20 km处发生变化。海平面的参数为：
@@ -130,7 +130,7 @@ $$
 
 其中海平面水汽密度为$\rho_{w 0}=7.75 \mathrm{~g} / \mathrm{m}^{3}$，对应标准大气下$60\%$的相对湿度。必须分别采用气压和水汽密度剖面，以反映低高度区域水汽的集中分布。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-246.jpg?height=636&width=887&top_left_y=276&top_left_x=285)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-246.jpg?height=636&width=887&top_left_y=276&top_left_x=285){width="400"}
 图7.2 水汽密度随高度变化的曲线，$\rho_{w 0}=7.75 \mathrm{~g} / \mathrm{m}^{3}$。
 
 
@@ -160,7 +160,7 @@ $h_{s}=$ 地表高度（km）。
 
 > ${ }^{4}$ 在[1,3]中，尺度高度$h_{0}$由其倒数$c$（单位$\mathrm{km}^{-1}$）表示，但尺度高度$h_{0}$（定义为$N$下降到地表值的$1/e$时对应的高度）具有明确的物理意义。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-247.jpg?height=702&width=952&top_left_y=274&top_left_x=250)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-247.jpg?height=702&width=952&top_left_y=274&top_left_x=250){width="400"}  
 图7.3 折射度随高度变化曲线，$\rho_{w 0}=7.75 \mathrm{~g} / \mathrm{m}^{3}$。
 
 在式(7.6)的最后一种形式中出现近似符号，是因为与$N_{0}$配合使用的尺度高度$h_{0}$应略大于$N_{s}$的情况。[3, p. 66, Table 3.3]中给出的尺度高度$h_{0}$列于表7.1中，并且在$200 \leq N \leq 450$的范围内可用下式表示，精度为0.02 km：
@@ -327,7 +327,7 @@ $$
 
 在式(7.11)中，$F_{0} \mu_{N 0}^{2}$项表示非共振吸收，而$F_{N \pm} \mu_{N \pm}^{2}$表示表7.2所列的共振。高度因子$g(h)$（式(7.13)、(7.14)）已包含在Blake的方程中，基于[8]。海平面大气的计算结果如图7.4所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-252.jpg?height=707&width=992&top_left_y=320&top_left_x=248)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-252.jpg?height=707&width=992&top_left_y=320&top_left_x=248){width="400"}  
 图7.4 海平面大气氧气的衰减系数 $k_{\alpha O}$。
 
 
@@ -356,7 +356,7 @@ $$
 
 式(7.19)中涉及$f/100$的项表示来自高于100 GHz的吸收线的非共振（残余）水汽系数，而涉及$f/f_{r 1}$的项表示由式(7.20)定义的共振贡献之和。${ }^{5}$ 标准密度$\rho_{w}(0)=7.75 \ \mathrm{g}/\mathrm{m}^3$时的水汽衰减系数如图7.5所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-253.jpg?height=715&width=992&top_left_y=804&top_left_x=248)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-253.jpg?height=715&width=992&top_left_y=804&top_left_x=248){width="400"}  
 图7.5 海平面大气水汽的衰减系数 $k_{\alpha W}$，水汽密度 $\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
 > ${ }^{5}$ 式(7.19)–(7.21)中的常数与文献有所不同，以保证采用单一温度基准$T(0)=288 \ \mathrm{K}$（而不是文献中同时出现的288 K和300 K）；水汽密度$\rho$采用$\mathrm{g}/\mathrm{m}^3$而不是以torr为单位的分压力；气压采用mbar而不是torr。
@@ -367,7 +367,7 @@ $$
 
 图7.6显示了海平面大气（水汽密度$7.75 \ \mathrm{g}/\mathrm{m}^3$）的总衰减系数，以及氧气和水汽的单独贡献。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-254.jpg?height=696&width=990&top_left_y=320&top_left_x=248)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-254.jpg?height=696&width=990&top_left_y=320&top_left_x=248){width="400"}  
 图7.6 海平面大气的衰减系数：总衰减$k_{\alpha}$（实线）；氧气$k_{\alpha O}$（虚线）；水汽$k_{\alpha W}$（点划线），水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
 ---
@@ -384,7 +384,7 @@ $$
 
 离开雷达并以仰角$\theta_{0}$发射的路径，在达到$h_{m} \ \mathrm{km}$高度时的总双程衰减$L_{\alpha t}(h_{m})$由[1, p. 209, Eq. (5.46)]给出：
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-255.jpg?height=649&width=987&top_left_y=281&top_left_x=248)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-255.jpg?height=649&width=987&top_left_y=281&top_left_x=248){width="400"}  
 图7.7 不同高度下的大气衰减系数$k_{\alpha}$随频率的变化，海平面水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$：$h=0$（实线），$h=3 \ \mathrm{km}$（虚线），$h=10 \ \mathrm{km}$（点划线）。
 
 $$
@@ -408,37 +408,37 @@ $$
 
 路径到达距离$R$、波束仰角为$\theta$时的衰减$L_{\alpha}(R, \theta)$，可通过将式(7.22)的结果绘制为$R\left(h_{m}, \theta\right)$（由式(7.8)给出）的函数得到。结果如图7.9–7.18所示，与Blake [1, pp. 210-216, Figures 5.12-5.19]给出的结果等效，这些结果被广泛用于获取雷达方程中的大气衰减。本书中的曲线基于海平面水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$，对应标准大气下$60\%$的相对湿度，并采用对数-对数坐标绘制，以提高读数精度。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-256.jpg?height=666&width=1073&top_left_y=457&top_left_x=195)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-256.jpg?height=666&width=1073&top_left_y=457&top_left_x=195){width="400"}  
 图7.8 从海平面穿过对流层的大气衰减，随频率和不同波束仰角的变化；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-256.jpg?height=664&width=1030&top_left_y=1248&top_left_x=221)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-256.jpg?height=664&width=1030&top_left_y=1248&top_left_x=221){width="400"}  
 图7.9 大气衰减随距离$R$的变化，频率$f_{0}=225 \ \mathrm{MHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-257.jpg?height=735&width=1135&top_left_y=272&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-257.jpg?height=735&width=1135&top_left_y=272&top_left_x=175){width="400"}  
 图7.10 大气衰减随距离$R$的变化，频率$f_{0}=450 \ \mathrm{MHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-257.jpg?height=732&width=1131&top_left_y=1138&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-257.jpg?height=732&width=1131&top_left_y=1138&top_left_x=175){width="400"}  
 图7.11 大气衰减随距离$R$的变化，频率$f_{0}=1.3 \ \mathrm{GHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-258.jpg?height=726&width=1122&top_left_y=272&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-258.jpg?height=726&width=1122&top_left_y=272&top_left_x=175){width="400"}  
 图7.12 大气衰减随距离$R$的变化，频率$f_{0}=3.0 \ \mathrm{GHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-258.jpg?height=733&width=1133&top_left_y=1120&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-258.jpg?height=733&width=1133&top_left_y=1120&top_left_x=175){width="400"}  
 图7.13 大气衰减随距离$R$的变化，频率$f_{0}=5.6 \ \mathrm{GHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-259.jpg?height=731&width=1128&top_left_y=276&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-259.jpg?height=731&width=1128&top_left_y=276&top_left_x=175){width="400"}  
 图7.14 大气衰减随距离$R$的变化，频率$f_{0}=10 \ \mathrm{GHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-259.jpg?height=724&width=1122&top_left_y=1129&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-259.jpg?height=724&width=1122&top_left_y=1129&top_left_x=175){width="400"}  
 图7.15 大气衰减随距离$R$的变化，频率$f_{0}=15 \ \mathrm{GHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-260.jpg?height=726&width=1122&top_left_y=272&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-260.jpg?height=726&width=1122&top_left_y=272&top_left_x=175){width="400"}  
 图7.16 大气衰减随距离$R$的变化，频率$f_{0}=35 \ \mathrm{GHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-260.jpg?height=728&width=1122&top_left_y=1120&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-260.jpg?height=728&width=1122&top_left_y=1120&top_left_x=175){width="400"}  
 图7.17 大气衰减随距离$R$的变化，频率$f_{0}=45 \ \mathrm{GHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-261.jpg?height=726&width=1117&top_left_y=272&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-261.jpg?height=726&width=1117&top_left_y=272&top_left_x=175){width="400"}  
 图7.18 大气衰减随距离$R$的变化，频率$f_{0}=95 \ \mathrm{GHz}$，不同波束仰角；标准大气，水汽密度$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^3$。
 
 
@@ -456,10 +456,10 @@ $$
 
 其中$k_{\alpha}(0)$、$k_{\alpha O}(0)$和$k_{\alpha W}(0)$为海平面下的衰减系数。图7.19展示了不同水汽密度$\rho$对应的$W_{\rho}$。由此得到的缩放衰减$L_{\alpha}\left(h_{m}, \rho_{w}\right)=W_{\rho}\left(\rho_{w}\right)L_{\alpha}\left(h_{m}, 7.75\right)$仅为近似值，因为它未能反映相对系数随高度变化的情况。但如图7.20所示，其结果与精确值非常接近，差异小于水汽密度知识中的典型误差。在一般大气条件下，可直接使用图7.8–7.18所给曲线。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-262.jpg?height=566&width=972&top_left_y=485&top_left_x=252)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-262.jpg?height=566&width=972&top_left_y=485&top_left_x=252){width="400"}  
 图7.19 水汽因子$W_{\rho}$随频率的变化，不同水汽密度条件下。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-262.jpg?height=649&width=987&top_left_y=1133&top_left_x=246)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-262.jpg?height=649&width=987&top_left_y=1133&top_left_x=246){width="400"}  
 图7.20 大气衰减$L_{\alpha}$随距离的变化，频率$f_{0}=10 \ \mathrm{GHz}$，不同仰角条件下，水汽密度$\rho_{w 0}=12.5 \ \mathrm{g}/\mathrm{m}^{3}$。实线：式(7.22)精确计算结果；虚线：采用$\rho_{w 0}=7.75 \ \mathrm{g}/\mathrm{m}^{3}$的衰减乘以水汽因子$W_{\rho}$的近似结果。
 
 ---
@@ -507,7 +507,7 @@ $$
 
 Nathanson的表格给出了水平与垂直极化下稍有不同的$a$和$b$值，与观测结果一致，观测表明圆极化波逐渐向椭圆极化转变。这对采用极化双工的通信系统至关重要，但对雷达雨衰减计算而言，采用两种极化常数的平均值已足够，且其精度优于天气模型所能保证的水平。Medhurst [16]和Blake指出，实测衰减常常大于理论预测值。Blake认为这可能是由于暴雨期间相对湿度接近$300\%$，该效应可通过在式(7.23)中增加$\rho_{w}$并利用所得的$W_{\rho}$提高大气气体衰减来建模。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-264.jpg?height=750&width=895&top_left_y=272&top_left_x=305)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-264.jpg?height=750&width=895&top_left_y=272&top_left_x=305){width="400"}  
 图7.21 双程雨衰减系数（$T=293 \ \mathrm{K}$），随频率和不同降雨率的变化，利用式(7.24)结合式(7.25)与(7.26)计算。
 
 
@@ -555,10 +555,10 @@ $$
 
 图7.23比较了高、低降雨率下不同温度的影响。可见，仅微波和较低雷达波段受温度变化影响较大，但在L波段时系数可增加或减少一倍，在S波段时可变化约1.6倍。降雨区域内温度剖面的不确定性使得在X波段及以下频率难以精确估算损耗，但最大的百分比误差出现在衰减较低的地方，因此对距离计算造成的误差是适度的。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-266.jpg?height=487&width=1159&top_left_y=272&top_left_x=164)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-266.jpg?height=487&width=1159&top_left_y=272&top_left_x=164){width="400"}  
 图7.22 雨衰减的温度修正因子，随波长和频率的变化。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-266.jpg?height=584&width=988&top_left_y=878&top_left_x=254)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-266.jpg?height=584&width=988&top_left_y=878&top_left_x=254){width="400"}  
 图7.23 雨衰减系数在$T=273 \ \mathrm{K}, 291 \ \mathrm{K}$和313 K条件下的比较。
 
 ---
@@ -567,7 +567,7 @@ $$
 
 遇到特定雨衰减的概率取决于雷达运行的气候类型。图7.24显示了四种气候中降雨率超过某一值的时间百分比和对应的年小时数。以温带大陆性气候为例，“中等”降雨率$3 \ \mathrm{mm}/\mathrm{h}$大约占1\%的时间，即每年约90小时；“大雨”$16 \ \mathrm{mm}/\mathrm{h}$的概率约为0.2\%，对应每年18小时。是否需要在距离计算中考虑这些衰减水平取决于雷达业务的可靠性需求。例如，对于繁忙机场的监视雷达来说，每年18小时的显著探测距离下降可能是不可接受的，而对其他雷达则可能可以接受。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-267.jpg?height=886&width=830&top_left_y=272&top_left_x=333)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-267.jpg?height=886&width=830&top_left_y=272&top_left_x=333){width="400"}  
 图7.24 四种气候下的降雨率出现情况 [改编自18, p. 16-11, Figure 16-8]。
 
 更详细的降雨统计可见于Crane [19]撰写的专著，旨在描述通信链路上的雨衰减问题。他提供的数据包括以$0.001\%$和$1.0\%$概率观测到的降雨率所对应的雨元最大高度。在纬度$\pm 40^\circ$之间，这些高度分别为$4-5.5 \ \mathrm{km}$和$2.7-4.6 \ \mathrm{km}$。Nathanson [15, p. 223]给出了一张降雨率与高度的关系图，最大高度接近$9 \ \mathrm{km}$。他认为，在许多情况下，采用均匀降雨率到$4 \ \mathrm{km}$高度的模型已足够。另一方面，也有观测表明，在雷暴云中存在降雨率超过$250 \ \mathrm{mm}/\mathrm{h}$的反射率，其由接近12 km高度的上升气流支撑，而地面并未降雨。
@@ -618,7 +618,7 @@ C_{T s}=\left[4.4-1.7(273-T)^{0.23}\right] \times 10^{-5}, \quad T<273 \tag{7.30
 \end{equation*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-269.jpg?height=651&width=900&top_left_y=883&top_left_x=283)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-269.jpg?height=651&width=900&top_left_y=883&top_left_x=283){width="400"}  
 图7.25 干雪的衰减系数随频率的变化，与小雨（虚线）对比。
 
 最终结果为：
@@ -657,10 +657,10 @@ $$
 
 其中$K=\left(\varepsilon_{c}-1\right)/\left(\varepsilon_{c}+2\right)$，该参数在[12]中使用。图7.27展示了归一化衰减系数$k_{\alpha c}/M$随频率的变化，分别对应$T=273, 293, 313 \ \mathrm{K}$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-270.jpg?height=434&width=1109&top_left_y=1513&top_left_x=166)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-270.jpg?height=434&width=1109&top_left_y=1513&top_left_x=166){width="400"}  
 图7.26 Debye公式的温度相关参数$\varepsilon_{0}$和$\Delta \lambda$；对所有$T$，$\varepsilon_{\infty}=5.5$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-271.jpg?height=803&width=1005&top_left_y=325&top_left_x=250)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-271.jpg?height=803&width=1005&top_left_y=325&top_left_x=250){width="400"}  
 图7.27 云衰减系数$k_{\alpha c}/M$随频率的变化，三种温度条件下。
 
 当$f<60 \ \mathrm{GHz}$时，$\operatorname{Im}(-K)$的近似为：
@@ -723,7 +723,7 @@ $$
 
 如图7.28所示，从雷达天线出射的射线在对流层中会发生向下折射。以仰角$\theta_{0}$从地面发射的一条射线，到达目标点$(R, h_{t})$时的真实仰角为$\theta_{t}$。该路径上的时间延迟比真空路径多$\delta_{t}=(R_{d}-R)/c$，其中$R_{d}$由射线追迹公式(7.8)给出。射线路径的弯曲在$\theta_{0}=0$时最大，随后随着$\theta_{0}$增加而单调减小。其结果是，地面辐射在角度区间$\theta_{0}$至$\theta_{0}+\Delta_{0}$内的能量，被分布到目标处稍大的角度区间$\theta_{t}$至$\theta_{t}+\Delta_{t}$，导致能量密度低于真空传播预测值。该效应由Weil [22]描述，他给出了目标仰角与距离的双程损耗曲线。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-273.jpg?height=409&width=1146&top_left_y=270&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-273.jpg?height=409&width=1146&top_left_y=270&top_left_x=175){width="400"}  
 图7.28 射线穿过对流层的几何关系。
 
 损耗可以通过不同方法计算，其中一种直接方法是将单程透镜损耗表示为出射射线最终仰角$\theta_{t}$对发射仰角$\theta_{0}$的导数：
@@ -744,7 +744,7 @@ $$
 
 这些结果与[22]及[1, p. 192, Figure 5.7]的数据高度一致。不过后者仅覆盖至750 km的范围，且在接近零角度时未能显示继续增加的损耗，而这一趋势在$R>2000 \ \mathrm{km}$时达到最大。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-274.jpg?height=588&width=882&top_left_y=265&top_left_x=318)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-274.jpg?height=588&width=882&top_left_y=265&top_left_x=318){width="400"}  
 图7.29 不同波束仰角下的双程对流层透镜损耗随距离的变化。
 
 在图7.28中，最小绘制仰角$0.03^{\circ}$的曲线在远距离偏离平滑趋势，这是因为在$\theta<0.1^{\circ}$时，由射线追迹式(7.8)求解式(7.40)的导数较为困难。然而，折射率剖面中通常存在的变化，会在该区域掩盖这些计算误差。
@@ -772,7 +772,7 @@ $$
 
 地球磁场$H$相对于局部水平有一定夹角，与射线方向相差$\Delta \theta$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-275.jpg?height=450&width=1152&top_left_y=990&top_left_x=180)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-275.jpg?height=450&width=1152&top_left_y=990&top_left_x=180){width="400"}  
 图7.30 射线穿过电离层的几何关系。
 
 ---
@@ -809,7 +809,7 @@ $$
 | 夜间E层 | $8 \times 10^{9}$ | 120 | 10 |
 | 夜间F层 | $4 \times 10^{11}$ | 300 | 45 |
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-276.jpg?height=726&width=968&top_left_y=1065&top_left_x=252)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-276.jpg?height=726&width=968&top_left_y=1065&top_left_x=252){width="400"}  
 图7.31 典型电离层电子密度$N_{e}$：白天（实线）、夜间（虚线）。
 
 电子密度可随太阳活动和纬度上下浮动约两倍，但图7.31所示数值可用于计算电离层对雷达信号的典型影响。
@@ -862,7 +862,7 @@ $$
 - $N_{e}(h)$ ：电子密度（电子数/$\mathrm{cm}^3$）；  
 - $h_{1}, h_{2}$ ：有效电子密度的高度范围（cm）。  
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-278.jpg?height=739&width=1149&top_left_y=274&top_left_x=167)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-278.jpg?height=739&width=1149&top_left_y=274&top_left_x=167){width="400"}  
 图7.32 典型昼夜电离层的总电子数，仰角$0^{\circ}$与$90^{\circ}$条件下。
 
 地磁场随高度变化为：
@@ -892,13 +892,13 @@ $$
 
 该损耗如图7.35所示，对应目标高度$h=300 \ \mathrm{km}$。当旋转次数超过20次平均时，损耗为3 dB；当旋转次数较少时，损耗呈振荡，在$0^{\circ}-130^{\circ}$范围平均时接近4 dB。当最大旋转角减小至低于$20^{\circ}$时，损耗趋近于0 dB。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-279.jpg?height=715&width=1122&top_left_y=1195&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-279.jpg?height=715&width=1122&top_left_y=1195&top_left_x=175){width="400"}  
 图7.33 $f=100 \ \mathrm{MHz}$下典型昼夜条件的法拉第旋转角，仰角$0^{\circ}$与$90^{\circ}$，随高度变化。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-280.jpg?height=610&width=1124&top_left_y=276&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-280.jpg?height=610&width=1124&top_left_y=276&top_left_x=175){width="400"}  
 图7.34 高度$h \geq 600 \ \mathrm{km}$时，典型昼夜条件的法拉第旋转角，随频率变化。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-280.jpg?height=614&width=1021&top_left_y=1010&top_left_x=239)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-280.jpg?height=614&width=1021&top_left_y=1010&top_left_x=239){width="400"}  
 图7.35 法拉第旋转损耗随频率变化。
 
 白天电离层在零度仰角下，图7.34表明$f \geq 3 \ \mathrm{GHz}$时旋转角小于$20^{\circ}$。因此在L波段（1.3 GHz）及以下，对高度超过250 km的目标，应用雷达方程时必须考虑法拉第旋转。若采用圆极化，旋转仅改变接收信号的相位而不会造成损耗。若采用线极化，可使用双极化接收天线：要么自适应组合两路极化跟随旋转信号，要么非相干叠加两通道接收机输出，此时仅引入微小积分损失。
@@ -946,7 +946,7 @@ $$
 
 由于电离层群速度$v_{g}=n_{i}c$，延迟为正。图7.36显示了延迟随比值$N_{t}/f_{0}^{2}$的变化。  
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-282.jpg?height=666&width=862&top_left_y=602&top_left_x=312)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-282.jpg?height=666&width=862&top_left_y=602&top_left_x=312){width="400"}  
 图7.36 电离层时间延迟，随比值$N_{t}/f_{0}^{2}$变化，$N_{t}$以$\mathrm{m}^{-2}$计，$f_{0}$以Hz计。
 
 例如，当载波频率$f_{0}=100 \ \mathrm{MHz}$，目标位于典型白天电离层以外，零度仰角时$N_{t}=10^{18}/\mathrm{m}^{2}$，信号返回时延长$28 \ \mu s$，相当于比真实目标远4.2 km。  
@@ -999,13 +999,13 @@ $$
 
 图7.37与图7.38展示了电离层色散对矩形脉冲的展宽与幅度降低效应。以$B_{n}\tau=1$条件下的矩形脉冲$\tau=0.1 \ \mu s$为例，载波频率从10 GHz降至145 MHz时，延迟增加至$4 \ \mu s$，差分延迟$\delta_{t}=0.5 \ \mu s$，脉宽展宽至$0.5 \ \mu s$，幅度下降至原电压的一半以下。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-284.jpg?height=651&width=1120&top_left_y=1162&top_left_x=177)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-284.jpg?height=651&width=1120&top_left_y=1162&top_left_x=177){width="400"}  
 图7.37 矩形$0.1 \ \mu s$脉冲穿过电离层及匹配滤波器后的波形。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-285.jpg?height=581&width=977&top_left_y=276&top_left_x=250)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-285.jpg?height=581&width=977&top_left_y=276&top_left_x=250){width="400"}  
 图7.38 去除时间延迟后的波形细节。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-285.jpg?height=636&width=1126&top_left_y=953&top_left_x=177)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-285.jpg?height=636&width=1126&top_left_y=953&top_left_x=177){width="400"}  
 图7.39 电离层色散损耗随$\delta_{t}B_{n}$变化。
 
 由于滤波器响应无法校正带宽内的相移，导致信号幅度下降（见图7.39）。Brookner [25]讨论了高斯脉冲的展宽与损耗，并指出：在白天强电离层条件下、低仰角传输时，信号“可用带宽”约为1 MHz（$f_{0}=100 \ \mathrm{MHz}$），与图7.37中$\delta_{t}B_{n}=0.5$和图7.38中1.3 dB损耗一致。  

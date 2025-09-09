@@ -145,7 +145,7 @@ $$
 
 例如，考虑一部水平极化的S波段雷达，其仰角波束宽度 $\theta_{e}=6^{\circ}$，在海面上方 $h_{r}=10 \mathrm{~m}$ 处工作。仰角波束的轴线通常设定为在地平线上方 $\theta_{b} \approx \theta_{e} / 3$。图8.1所示的 $F$ 因子下部瓣近似为正弦形状，与 (8.11) 式预测一致。应用到雷达方程时，在最低瓣中心的距离约为该仰角自由空间距离的两倍。对于零轴倾斜，地平线上 $f(\theta)=1$，第一瓣的幅度应为 $F_{i}=2.0$，而不是图中所示的略低值。如果将仰角坐标转换为给定距离下的目标高度，图中将显示雷达-目标路径的高度增益因子。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-294.jpg?height=806&width=867&top_left_y=265&top_left_x=305)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-294.jpg?height=806&width=867&top_left_y=265&top_left_x=305){width="400"}
 图8.1 海面上典型搜索雷达的干涉方向图-传播因子（实线），天线电压方向图 $f\left(\theta_{t}\right)$（虚线）和 $f\left(-\theta_{r}\right)$（点划线）。
 
 基于计算接收信号和所需信号能量随距离的变化并确定满足要求的最大距离的计算机方法，用于求解探测距离。雷达方程中与距离相关的参数，包括大气衰减和 $F$ 因子，基于假定的目标轨迹在每个距离上计算。如果该轨迹保持相对于雷达的恒定仰角，则只要结果探测距离足够大以保持恒定路径差 $\delta$（见第8.2节），则可能无需重复计算 $F$ 因子。
@@ -158,7 +158,7 @@ $$
 
 其几何如图8.2所示。对于该简单模型，输入参数为雷达波长 $\lambda$、天线高度 $h_{r}$（高于地表）以及目标仰角 $\theta_{t}$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-295.jpg?height=524&width=1001&top_left_y=698&top_left_x=259)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-295.jpg?height=524&width=1001&top_left_y=698&top_left_x=259){width="400"}
 图8.2 平地远距离目标几何，箭头绘制为接收情况。
 
 反射波到达雷达站时与直射波平行，可以视为通过镜面反射点的直线，指向位于地表以下 $h_{r}$ 处的镜像天线。该反射波相对于地表的掠射角 $\psi$ 等于仰角 $\theta_{t}$，路径差为
@@ -204,7 +204,7 @@ $$
 \end{align*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-296.jpg?height=579&width=1128&top_left_y=1146&top_left_x=197)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-296.jpg?height=579&width=1128&top_left_y=1146&top_left_x=197){width="400"}
 图8.3 平地任意距离目标几何。
 
 反射波到达并从平地表面反射，其掠射角 $\psi$ 大于目标的仰角：
@@ -258,7 +258,7 @@ $$
 
 目标距离处的地表低于切平面的量为
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-298.jpg?height=599&width=1146&top_left_y=265&top_left_x=177)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-298.jpg?height=599&width=1146&top_left_y=265&top_left_x=177){width="400"}
 图8.4 球面地球的一阶修正。
 
 $$
@@ -307,7 +307,7 @@ $$
 
 Blake [3, pp. 249-253] 推导了在球面地球上，以仰角 $\theta_{t}$ 观测远距离目标时路径差和掠射角的表达式。几何如图8.5所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-299.jpg?height=667&width=997&top_left_y=1168&top_left_x=263)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-299.jpg?height=667&width=997&top_left_y=1168&top_left_x=263){width="400"}
 图8.5 球面地球远距离目标的几何。
 
 Blake 给出了由反射点地面距离所对的地心角 [3, p. 252, 式 (6.40)]：
@@ -366,7 +366,7 @@ p=\frac{2}{\sqrt{3}} \sqrt{k_{e} a_{e}\left(h_{t}+h_{r}\right)+\left(\frac{G}{2}
 \end{equation*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-301.jpg?height=693&width=987&top_left_y=276&top_left_x=257)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-301.jpg?height=693&width=987&top_left_y=276&top_left_x=257){width="400"}
 图8.6 球面地球任意距离目标的几何。
 
 $$
@@ -560,7 +560,7 @@ f & =\text{频率，Hz}.
 
 这些公式给出了盐水在不同频率下的取值，如图8.7所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-306.jpg?height=421&width=1164&top_left_y=588&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-306.jpg?height=421&width=1164&top_left_y=588&top_left_x=175){width="400"}  
 图8.7 盐水介电常数组成部分：$T=10^{\circ} \mathrm{C}$（实线）；$T=20^{\circ} \mathrm{C}$（虚线）。
 
 所得的反射系数在X波段和VHF下，对不同表面的结果绘制在图8.8和图8.9中（见表8.2），其中加入了淡水和陆地表面的数据。陆地表面数据来自 [5]。在微波波段，盐水的曲线与淡水的曲线相近，但在波长增加时二者分离。
@@ -578,10 +578,10 @@ f & =\text{频率，Hz}.
 | 差土壤（干） | 3.5 | 4 | 0.3 | 0.005 |
 | 雪、冰 | 3 | 3 | 0.001 | 0.001 |
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-307.jpg?height=1421&width=1001&top_left_y=265&top_left_x=237)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-307.jpg?height=1421&width=1001&top_left_y=265&top_left_x=237){width="400"}  
 图8.8 垂直极化反射系数的幅度和相位。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-308.jpg?height=1366&width=1025&top_left_y=265&top_left_x=237)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-308.jpg?height=1366&width=1025&top_left_y=265&top_left_x=237){width="400"}  
 图8.9 水平极化反射系数的幅度和相位。
 
 对于垂直极化，幅度 $\rho_{0 v}$ 在伪布儒斯特角 $\psi_{B}$ 处降至最小，此时相位在从接近 $180^{\circ}$ 到 $0^{\circ}$ 的过程中经过 $90^{\circ}$。该角的近似表达式为：
@@ -671,7 +671,7 @@ $$
 
 [7] 中报道的实验值 $\rho_{d}$ 未超过0.4。这部分是因为未对高海况下的遮蔽效应进行修正，同时也是因为大多数低高度终端之间的漫反射能量倾向于来自路径两端附近的表面区域。在该实验中，几乎一半的漫反射能量到达了天线主瓣下部或负仰角位置，减少了测得的 $\rho_{d}$。这种情况在许多雷达应用中同样存在，从而限制了天线实际接收到的漫反射能量。[8, pp. 519-520] 中的程序给出了漫反射能量的仰角密度 $\eta_{d}$ 以及天线增益方向图实际接收的 $(\rho_{0}\rho_{d})^{2}$ 分量。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-311.jpg?height=520&width=742&top_left_y=276&top_left_x=377)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-311.jpg?height=520&width=742&top_left_y=276&top_left_x=377){width="400"}  
 图8.10 归一化表面粗糙度 $(\sigma_{h}/\lambda)\sin \psi$ 下的散射系数：镜面散射系数 $\rho_{s}$（实线）和漫反射系数 $\rho_{d}$（虚线）。
 
 
@@ -725,7 +725,7 @@ D \approx\left(1+\frac{2 G_{1} G_{2}}{k_{e} a_{e} G \sin \psi}\right)^{-1 / 2} \
 \end{equation*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-313.jpg?height=691&width=899&top_left_y=270&top_left_x=290)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-313.jpg?height=691&width=899&top_left_y=270&top_left_x=290){width="400"}  
 图8.11 植被因子 $\rho_{v}$ 随不同频段（VHF、S波段和X波段）下的掠射角变化。
 
 该因子来源于第一Fresnel区内地球曲率的影响，并作为一个乘子作用于 $F_{i}$ 方程中的反射系数 $\rho$。
@@ -800,7 +800,7 @@ F_{d 0}^{\prime}=\sqrt{\frac{F_{d 0}^{2}}{F_{d 0}^{2}+1}} \tag{8.69}
 \end{equation*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-315.jpg?height=572&width=990&top_left_y=898&top_left_x=248)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-315.jpg?height=572&width=990&top_left_y=898&top_left_x=248){width="400"}  
 图8.12 典型单程衍射因子：单模值 $F_{d 0}$（实线），修正因子 $F_{d 0}^{\prime}$（虚线）。绘制条件为目标高度 $h_{t}=1 \mathrm{~km}$，雷达高度 $h_{r}=10 \mathrm{~m}, \lambda=0.1 \mathrm{~m}$。干涉区与衍射区在 $\delta=\lambda / 6$ 时的 $R_{\delta}$ 处相接，视界距离为 $R_{h}$。
 
 已经发展出使用高阶模态的方法，可以在中间区内无需插值就得到精确的 $F_{d 0}$。其中一个例子是Smooth-Earth and Knife-Edge (SEKE) 程序 [12]，它结合了多模光滑球面衍射、反射和刀刃衍射，用于计算任意地形剖面的 $F$ 因子。已有运行于个人计算机的SEKE版本，但尚未广泛使用。
@@ -820,7 +820,7 @@ $$
 
 地基雷达常常部署在由离散障碍物形成地平线的位置，如图8.13所示。该障碍物并不需要有锋利的轮廓，因为在雷达波长下，几乎任何地表特征在低掠射角时都能表现为刀刃衍射。树木、建筑物，甚至低矮的山脊和台阶都能在光滑球面之上形成一个遮蔽角。该地平线处的传播因子为 $F_{d k}=0.5$，对于双程传播给出 $F_{d k}^{4}=-12 \mathrm{~dB}$。在遮蔽角以下，$F_{d k}$ 的衰减速度比光滑球面更缓慢，使一些雷达能够在阴影区内探测目标。这种能力在长波雷达波长以及远高于地表的障碍物上最为明显，但即使在微波频段，也已被通信系统利用山脉或山脊的障碍增益加以应用。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-316.jpg?height=400&width=963&top_left_y=1048&top_left_x=272)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-316.jpg?height=400&width=963&top_left_y=1048&top_left_x=272){width="400"}  
 图8.13 刀刃衍射与光滑球面衍射的比较。
 
 刀刃衍射的传播因子依赖于障碍物顶部与雷达和目标之间直线路径的垂直距离 $h$（图8.14）。定义衍射参数 $v$ 为：
@@ -854,12 +854,12 @@ $$
 \end{align*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-317.jpg?height=658&width=1161&top_left_y=270&top_left_x=164)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-317.jpg?height=658&width=1161&top_left_y=270&top_left_x=164){width="400"}  
 图8.14 刀刃衍射。(b) 中的虚线表示近似式 (8.73)。
 
 当该因子大于在无障碍物情况下的光滑球面衍射值时，就会出现障碍增益。然而，必须确保障碍物顶部处于自由空间场中。例如，图8.15展示了一个典型的单一障碍衍射情况。在此情形下，雷达到障碍之间地形反射的额外路径长为 $\delta_{0}=0.6 \mathrm{~m}$，当 $\lambda<6 \delta_{0}$ 时，应采用刀刃衍射来描述障碍之后的场分布。对于更长的波长或更低的天线或障碍高度，障碍物顶部将不能被完全照亮，此时刀刃对 $F_{d k}$ 的贡献会因地形反射干涉或光滑球面衍射而减弱。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-318.jpg?height=1044&width=799&top_left_y=270&top_left_x=340)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-318.jpg?height=1044&width=799&top_left_y=270&top_left_x=340){width="400"}  
 图8.15 刀刃衍射示例。（引自 [3, p. 31]。© 1982, Artech House，经许可转载。）
 
 
@@ -893,7 +893,7 @@ $$
 
 图8.16给出了一个典型情况下 $F_{i}$ 随距离变化的曲线，其中目标高度 $h_{t}=1 \mathrm{~km}$，雷达高度 $h_{r}=10 \mathrm{~m}$，波长 $\lambda=0.1 \mathrm{~m}$，地表粗糙度 $\sigma_{h}=1 \mathrm{~m}$，并假设宽仰角波束。两条虚线标出了中间区的范围，从 $R_{\delta}=128 \mathrm{~km}$ 到 $R_{h}=143.5 \mathrm{~km}$。在接近 $R_{h}$ 处的急剧上升是发散因子的作用结果，但如将在第8.6.1节所示，这并不会影响最终结果。短距离下瓣纹结构的衰减是由掠射角增加导致镜面散射系数减小造成的。对于没有植被的光滑表面，这些瓣纹将持续保持 +6 dB 的峰值，直到被天线方向图削弱。更粗糙的表面则倾向于将反射效应限制在如图所示的初始瓣（约 115 km）。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-319.jpg?height=535&width=974&top_left_y=1373&top_left_x=248)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-319.jpg?height=535&width=974&top_left_y=1373&top_left_x=248){width="400"}  
 图8.16 典型单程 $F_{i}$：目标高度 $h_{t}=1 \mathrm{~km}$，雷达高度 $h_{r}=10 \mathrm{~m}$，波长 $\lambda=0.1 \mathrm{~m}$，地表粗糙度 $\sigma_{h}=1 \mathrm{~m}$。接近地平线处的上升来自发散因子。
 
 ---
@@ -934,12 +934,12 @@ $$
 
 干涉因子 $F_{i}(R)$ 可通过在式 (8.9) 中代入目标仰角 $\theta_{t}$ 作为 $R$ 的函数（由式 (8.47) 给出）来计算。图8.17展示了与图8.14和图8.18相同目标轨迹的一个例子。注意，插值过程消除了发散因子的影响，因为当距离接近 $R_{h}$ 时，它对 $F_{d}$ 赋予了较大的权重。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-321.jpg?height=568&width=987&top_left_y=793&top_left_x=248)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-321.jpg?height=568&width=987&top_left_y=793&top_left_x=248){width="400"}  
 图8.17 典型单程 $F$：几何条件同前图。干涉因子（点划线）、衍射因子（虚线）、插值结果（实线）。注意发散因子的影响被消除了。
 
 当用于VHF雷达时，这种插值方法的效果略差，如图8.18所示。插值曲线的 $F$ 因子可能低于更精确的多模衍射模型得到的结果。然而，该曲线仍捕捉到了微波与VHF传播之间的本质差别，即VHF的中间区范围更长，$F$ 在较短距离（较高仰角）下就低于1，但随着距离进入衍射区，其下降速度更慢。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-322.jpg?height=559&width=972&top_left_y=290&top_left_x=248)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-322.jpg?height=559&width=972&top_left_y=290&top_left_x=248){width="400"}  
 图8.18 VHF雷达（$\lambda=3 \mathrm{~m}$）的典型单程 $F$，几何条件同前图。干涉因子（点划线）、衍射因子（虚线）、插值结果（实线）。
 
 
@@ -965,7 +965,7 @@ $$
 
 函数 $F_{d}^{\prime}\left(h_{t}\right)$ 和 $F_{i}\left(h_{t}\right)$ 可通过在选定的 $R$ 下改变 $h_{t}$ 并代入 (8.68) 与 (8.47) 得到。图8.19展示了结果，即在固定距离 $R$ 下的高度增益因子。这种表示方法清晰地展现了当目标下降到地平线以下时信号功率的急剧减小。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-323.jpg?height=702&width=730&top_left_y=408&top_left_x=371)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-323.jpg?height=702&width=730&top_left_y=408&top_left_x=371){width="400"}  
 图8.19 单程 $F$ 随高度的函数：$R=100 \mathrm{~km}$，雷达高度 $h_{r}=10 \mathrm{~m}$，波长 $\lambda=0.1 \mathrm{~m}$，地表粗糙度 $\sigma_{h}=1 \mathrm{~m}$。干涉因子（点划线）、衍射因子（虚线）、插值结果（实线）。
 
 ---
@@ -1044,7 +1044,7 @@ $$
 
 图8.20展示了利用 [13] 生成的计算机覆盖图示例。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-325.jpg?height=664&width=1159&top_left_y=1248&top_left_x=171)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-325.jpg?height=664&width=1159&top_left_y=1248&top_left_x=171){width="400"}  
 图8.20 低空监视雷达的覆盖图示例：考虑 $F$ 因子的覆盖（粗实线），自由空间覆盖（粗虚线）。
 
 该格式中，以斜距为纵坐标、以切平面上的高度为横坐标，比Blake所用的格式更便于绘图。在Blake的格式中，纵坐标是地面距离，在高空时等斜距线会向内弯曲。[14] 所述的后者格式在绘制的覆盖范围延伸至与斜距相当的高度时，可更好地保持覆盖轮廓的形状。

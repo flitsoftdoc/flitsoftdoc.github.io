@@ -12,7 +12,7 @@
 
 回顾一下，扫描雷达中积分脉冲数$n$通常计算为目标在单向半功率波束宽度$\theta_{3}$内接收到的脉冲数。探测概率通常假设积分$n$个相同幅度的脉冲，波束形状损失$L_p$的引入旨在确保轴向信号功率足够高，使得探测概率$P_d$可按假设所有$n$个脉冲均以轴向天线增益接收来计算。图5.1显示了一个在一维扫描中由高斯波束调制的脉冲序列，其中$n=10$，轴向功率为$L_{p1}=1.33$倍于矩形参考波束的功率。该调制序列的峰值功率设置为使其总能量等于矩形波束的能量。为了在信号处理时恢复这些能量，积分器权重必须匹配波束的双向高斯模式，如图所示，贡献显著的脉冲数量约为16个，而不仅仅是半功率波束内的10个脉冲。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-161.jpg?height=467&width=968&top_left_y=900&top_left_x=252)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-161.jpg?height=467&width=968&top_left_y=900&top_left_x=252){width="400"}
 图5.1 由一维扫描高斯波束调制的脉冲序列，$n=10$脉冲。具有轴向功率$L_{p1}=1.33$的整个调制序列能量等于矩形参考波束（粗虚线）的10个脉冲能量。
 
 ### 5.1.2 角空间采样
@@ -168,7 +168,7 @@ $$
 
 - **波束角度**：三个波束用$m=1,2,3$表示，其中心角度为$\theta_b(k, m)=(m-2)\Delta_k$，如图5.2所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-167.jpg?height=458&width=1014&top_left_y=1173&top_left_x=232)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-167.jpg?height=458&width=1014&top_left_y=1173&top_left_x=232){width="400"}  
 图5.2 一维扫描计算波束形状损失的波束和目标位置。
 
 - **目标角度**：为了表示均匀分布在角度$\theta$上的目标，在波束2的轴线与波束3轴线中点之间放置五个目标，如图5.2所示。目标索引$j$在$j=1,2,\ldots,j_{\text{max}}$之间变化，其中$j_{\text{max}}=5$：
@@ -217,14 +217,14 @@ $$
 | (4) 考虑波束形状损失的可探测性因子 | $D_{p\{0\}}(k, u)=s_{x}, x=\operatorname{root}_{i}\left[\overline{P_{c\{0\}}}(i, k)=P_{d u}\right]$ | (5.23) |
 | 步骤(5)和(6)与积分处理相同。 |  |  |
 
-![](https://cdn.mathpix.com/snip/images/UmUN5yzV8zHCzlW05vu8GUlUIvpAqNbakvDVjx-tsbA.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/UmUN5yzV8zHCzlW05vu8GUlUIvpAqNbakvDVjx-tsbA.original.fullsize.png){width="400"}
 图5.3 稳定目标积分处理情况下波束形状损失 $L_{p 1}$ 与样本间隔 $\Delta$ 的关系。虚线表示密集采样值 $L_{p 0}^{\prime}=1.24 \mathrm{~dB}$。
 
 #### 5.3.2.2 稳定目标的累计检测
 
 累计检测概率是指在扫描过程中至少有一次检测成功的概率。关于波束形状损失，每个波束位置（驻留）分别尝试检测。结果如图5.4所示。此时的损失包括累计检测效率低于积分的影响（参见第10.2.5节）。对于高 $P_{d}$，在波束间隔约为 0.75 波束宽度时存在最佳间隔，此时连续波束位置的累计检测可替代积分。因此，即使每个波束宽度的样本数降至 1，积分稳态目标样本仍是值得的。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-170.jpg?height=449&width=1093&top_left_y=784&top_left_x=217)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-170.jpg?height=449&width=1093&top_left_y=784&top_left_x=217){width="400"}
 图5.4 稳定目标累计检测情况下波束形状损失 $L_{p 1}$ 与样本间隔 $\Delta$ 的关系。
 
 ### 5.3.3 一维扫描的 Case 1 波束形状损失
@@ -252,7 +252,7 @@ $$
 
 Case 1 积分处理的结果如图5.5所示。与稳态目标相比，波束形状损失对 $P_{d}$ 的依赖性较小，在 $0.5<\Delta<1.5$ 范围内，位于
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-171.jpg?height=441&width=1098&top_left_y=1513&top_left_x=210)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-171.jpg?height=441&width=1098&top_left_y=1513&top_left_x=210){width="400"}
 图5.5 Case 1 积分处理情况下，波束形状损失 $L_{p 1}$ 与样本间隔 $\Delta_{k}$ 的关系。
 
 $L_{p 0}=1.24 \mathrm{~dB}$ 以上且低于 4.2 dB。这是因为目标波动使得 Case 1 目标的可探测性因子随 $P_{d}$ 的变化更为迅速，从而掩盖了波束模式引起的信号功率变化。对于 $P_{d}>0.65$，Case 1 的波束形状损失小于稳态目标，而在该概率以下则大于稳态目标。
@@ -261,7 +261,7 @@ $L_{p 0}=1.24 \mathrm{~dB}$ 以上且低于 4.2 dB。这是因为目标波动使
 
 Case 1 累计检测的结果如图5.6所示。对于所有样本间隔，损失均大于积分处理。高 $P_{d}$ 时最佳波束间隔约为 0.95 波束宽度。对于 $\Delta>1$，损失随 $P_{d}$ 的变化较稳态目标的情况小。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-172.jpg?height=436&width=1078&top_left_y=821&top_left_x=221)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-172.jpg?height=436&width=1078&top_left_y=821&top_left_x=221){width="400"}
 图5.6 Case 1 累计检测情况下，波束形状损失 $L_{p 1}(k, u)$ 与样本间隔 $\Delta_{k}$ 的关系。
 
 ### 5.3.4 Case 2 一维扫描波束形状损失
@@ -276,12 +276,12 @@ $$
 
 其中 $\overline{f_{g}^{x}[\theta(j, k, m)]}$ 为三束的平均值，$m=1,2,3$。图5.7显示了样本数量随波束间隔变化的情况。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-173.jpg?height=480&width=838&top_left_y=272&top_left_x=329)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-173.jpg?height=480&width=838&top_left_y=272&top_left_x=329){width="400"}
 图5.7 独立目标样本数 $n_{e}$ 随波束间隔 $\Delta_{k}$ 的变化。
 
 图5.8显示了三种目标模型的参考可探测性因子，对于波束间隔 $\Delta_{k}=1$ 时，$n_{e}(k)=1.5$。对于较大波束间隔，Case 2 的因子接近 Case 1 的值，此时 $n_{e}(k) \rightarrow 1$；对于较小波束间隔，接近稳态目标的值，$n_{e}(k) \gg 1$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-173.jpg?height=587&width=955&top_left_y=1072&top_left_x=252)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-173.jpg?height=587&width=955&top_left_y=1072&top_left_x=252){width="400"}
 图5.8 一维扫描参考可探测性因子 $D_{r\{0,1,2\}}$，波束间隔 $\Delta_{k}=1$。
 
 表5.4列出了计算 Case 2 目标波束形状损失的两种信号处理方法步骤。对于积分处理，步骤与稳态目标类似，但在步骤(2)中使用 Case 2 的 $P_{d\{2\}}$ (公式4.36)，在步骤(5)中使用根据 $\Delta_{k}$ 调整的 $D_{r\{2\}}$ (公式4.37)。
@@ -310,7 +310,7 @@ Case 2 的积分处理波束形状损失未单独绘制，因为实际上与 Cas
 
 Case 2 的累计检测结果如图5.9所示。对于 $\Delta>1$，结果介于稳态目标和 Case 1 之间。由于参考可探测性因子考虑了 Case 2 积分处理相对于 Case 1 的多样性优势，$\Delta=0.5$ 时的损失略微分布在适用于稳态目标和 Case 1 的值周围，并且当 $P_{d}>0.3$ 时，波束形状损失高于 Case 1。然而，这并不意味着需要更高的信噪比，因为参考值的降低幅度大于 $L_{p}$ 的增加。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-175.jpg?height=441&width=1096&top_left_y=274&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-175.jpg?height=441&width=1096&top_left_y=274&top_left_x=175){width="400"}
 图5.9 Case 2 目标累计检测下波束形状损失 $L_{p 1}(k, u)$ 与样本间隔 $\Delta_{k}$ 的关系。
 
 ### 5.3.5 1-D 扫描搜索雷达方程中使用的波束形状损失
@@ -335,20 +335,20 @@ $$
 
 能量重新分配对波束形状损失的净影响如图5.10和图5.11所示，分别对应稳态目标和 Case 1 目标的积分处理。数据表明，对于 $P_{d}=0.9$，积分处理的最优波束间距约为 $\Delta \approx 1.1$，随着 $P_{d}$ 降低而增大。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-176.jpg?height=462&width=1132&top_left_y=272&top_left_x=180)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-176.jpg?height=462&width=1132&top_left_y=272&top_left_x=180){width="400"}
 图5.10 稳态目标积分处理下净波束形状损失 $L_{p n 1}$ 与样本间隔 $\Delta_{k}$ 的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-176.jpg?height=462&width=1137&top_left_y=830&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-176.jpg?height=462&width=1137&top_left_y=830&top_left_x=175){width="400"}
 图5.11 Case 1 积分处理下净波束形状损失 $L_{p n 1}$ 与样本间隔 $\Delta_{k}$ 的关系。
 
 电子扫描搜索可能执行伪随机扫描，而非确定性步进扫描。在这种情况下，邻近波束的积分可能难以实现，因此使用累计检测过程。稳态目标和 Case 1 的累计检测净波束形状损失如图5.12和图5.13所示。稳态目标的最优间距与信号积分处理相同，Case 1 增加到 $\Delta_{k}=1.2$。最优间距的损失为：稳态目标 $L_{p n 1}=3.1 \mathrm{~dB}$，波动目标 $L_{p n 1}=1.9 \mathrm{~dB}$。
 
 其他波动目标的净波束形状损失曲线未包含在此，因为 Case 1 是雷达系统设计的主要类型，而 Case 2 的结果介于稳态目标和 Case 1 之间。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-177.jpg?height=445&width=1104&top_left_y=272&top_left_x=204)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-177.jpg?height=445&width=1104&top_left_y=272&top_left_x=204){width="400"}
 图5.12 稳态目标累计检测下净波束形状损失与样本间隔 $\Delta_{k}$ 的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-177.jpg?height=458&width=1126&top_left_y=819&top_left_x=180)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-177.jpg?height=458&width=1126&top_left_y=819&top_left_x=180){width="400"}
 图5.13 Case 1 混合处理下净波束形状损失与样本间隔 $\Delta_{k}$ 的关系。
 
 ## 5.4 二维栅格扫描中的稀疏采样
@@ -357,7 +357,7 @@ $$
 
 第二个复杂因素是可能使用三种处理方法中的任意一种：在整个扫描范围内进行积分或累计检测，或对每条扫描线进行积分后，再对三条线进行累计检测，我们称之为混合处理。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-178.jpg?height=860&width=867&top_left_y=272&top_left_x=316)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-178.jpg?height=860&width=867&top_left_y=272&top_left_x=316){width="400"}
 图5.14 二维栅格扫描的波束网格与目标样本位置。
 
 第三个复杂因素是现在必须考虑四种目标模型，而不是三种：
@@ -418,14 +418,14 @@ $$
 
 Case 1 积分处理的结果如图5.15所示。波束形状损失位于 $2 L_{p 0}^{\prime}=2.48 \mathrm{~dB}$ 以上且小于 9.6 dB，对应 $0.5<\Delta_{k}<1.5$。与一维扫描的 Case 1 损失相比，可见二维损失几乎正好是 1-D 损失的平方（分贝值加倍）。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-180.jpg?height=461&width=1146&top_left_y=1445&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-180.jpg?height=461&width=1146&top_left_y=1445&top_left_x=175){width="400"}
 图5.15 Case 1 积分处理下，波束形状损失 $L_{p 2}$ 与样本间距 $\Delta_{k}$ 的关系。虚线表示密集采样值 $L_{p 2}^{\prime}=2.48 \mathrm{~dB}$。
 
 #### 5.4.3.2 Case 1 累计检测
 
 Case 1 累计检测的结果如图5.16所示。累计检测效率较低的影响被考虑在内，小间距样本的损失增加。如同积分处理情况，二维损失约等于一维损失的平方。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-181.jpg?height=460&width=1135&top_left_y=694&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-181.jpg?height=460&width=1135&top_left_y=694&top_left_x=175){width="400"}
 图5.16 Case 1 累计检测下，波束形状损失 $L_{p 2}$ 与样本间距 $\Delta_{k}$ 的关系。
 
 #### 5.4.3.3 Case 1 混合处理
@@ -447,7 +447,7 @@ Case 1 混合处理的波束形状损失如图5.17所示。通过对每条扫描
 | (7) 参考可探测因子 | $D_{r 1}(k, u)=\Delta_{k}\left[\left(\ln P_{f a} / \ln P_{d}\right)-1\right]$ | (5.57) |
 | (8) 波束形状损失 | $L_{p 2\{1\}}(k, u)=D_{p\{1\}}(k, u) / D_{r\{1\}}(k, u)$ | (5.58) |
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-182.jpg?height=466&width=1150&top_left_y=1048&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-182.jpg?height=466&width=1150&top_left_y=1048&top_left_x=175){width="400"}
 图5.17 Case 1 混合处理下，波束形状损失 $L_{p 2}$ 与样本间距 $\Delta_{k}$ 的关系。
 
 ### 5.4.4 Case 2 波束形状损失（2-D 扫描）
@@ -460,24 +460,24 @@ $$
 
 图5.18显示了独立样本数随波束间距变化的关系。图5.19显示了所有目标模型（包括第5.4.5节讨论的多样性目标）的参考可探测因子。可见，多样性目标的可探测因子位于 Case 1 和 Case 2 之间。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-183.jpg?height=445&width=768&top_left_y=705&top_left_x=351)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-183.jpg?height=445&width=768&top_left_y=705&top_left_x=351){width="400"}
 图5.18 二维扫描中独立目标样本数随波束间距变化的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-183.jpg?height=559&width=907&top_left_y=1243&top_left_x=287)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-183.jpg?height=559&width=907&top_left_y=1243&top_left_x=287){width="400"}
 图5.19 二维扫描中各目标模型参考可探测因子 $D_{r\{0,1,2,D\}}$，$\Delta_{k}=1$。
 
 #### 5.4.4.1 Case 2 积分处理
 
 Case 2 积分处理下的波束形状损失如图5.20所示。与 Case 1 类似，对于 $\Delta<0.71$，损失趋于密集采样值。高 $P_{d}$ 下，随着 $\Delta$ 增大，损失略高于 Case 1。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-184.jpg?height=463&width=1115&top_left_y=509&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-184.jpg?height=463&width=1115&top_left_y=509&top_left_x=175){width="400"}
 图5.20 Case 2 积分处理下，波束形状损失 $L_{p 2}$ 与样本间距 $\Delta_{k}$ 的关系。
 
 #### 5.4.4.2 Case 2 累计检测
 
 整个扫描的 Case 2 累计检测波束损失如图5.21所示。$P_{d}=0.9$ 时最优间距为 $\Delta \approx 0.9$，对应 $L_{p 2}=5.8 \mathrm{~dB}$；随着 $P_{d}$ 降低，最优间距上升至 $\Delta \approx 1.1$（$P_{d}=0.3$）。$\Delta<0.7$ 的较大损失是由于累计检测效率低造成的。Case 2 的累计检测损失大于 Case 1，但这是由于 Case 2 参考水平 $D_{r 2}$ 较低，并不意味着其需要更高的 SNR 来达到相同检测性能。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-184.jpg?height=478&width=1146&top_left_y=1463&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-184.jpg?height=478&width=1146&top_left_y=1463&top_left_x=175){width="400"}
 图5.21 Case 2 累计检测下，波束形状损失 $L_{p 2}$ 与样本间距 $\Delta_{k}$ 的关系。
 
 #### 5.4.4.3 Case 2 混合处理
@@ -502,7 +502,7 @@ Case 2 混合处理下的波束形状损失如图5.22所示。曲线与 Case 1�
 
 表 5.8 给出了在整个扫描范围内进行积分以及累积检测时，计算多样性目标波束形状损失的步骤。该目标定义为具有 **Rayleigh 起伏**，其幅度在每条扫描线上相关，但相邻扫描线之间不相关。因此，其相关性特征介于情形 1 和情形 2 之间。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-186.jpg?height=464&width=1131&top_left_y=281&top_left_x=177)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-186.jpg?height=464&width=1131&top_left_y=281&top_left_x=177){width="400"}  
 图 5.22 情形 2 下混合处理时波束形状损失 $L_{p 2}$ 随采样间隔 $\Delta_{k}$ 的变化。
 
 表 5.8 计算多样性目标波束形状损失的方法  
@@ -534,21 +534,21 @@ Case 2 混合处理下的波束形状损失如图5.22所示。曲线与 Case 1�
 
 多样性目标在积分处理下的波束形状损失如图5.23所示。该目标的损失几乎与Case 2不可区分，而Case 2在整个扫描中使用积分处理时，也几乎与Case 1无法区分。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-187.jpg?height=486&width=996&top_left_y=1217&top_left_x=257)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-187.jpg?height=486&width=996&top_left_y=1217&top_left_x=257){width="400"}  
 图5.23 多样性目标积分处理下的波束形状损失$L_{p 2}$与采样间距 $\Delta_{k}$ 的关系。
 
 #### 5.4.5.2 多样性目标的累积检测
 
 多样性目标在整个扫描中进行累积检测的波束形状损失如图5.24所示。对于 $P_d=0.9$，最佳采样间距约为 $Delta \approx 0.9$，此时$L_{p 2}=5.3~\mathrm{dB}$；随着 $P_d$降低，最佳采样间距向上移动，对于$P_d=0.3$ 时约为 $Delta \approx 1.15$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-188.jpg?height=471&width=1115&top_left_y=272&top_left_x=206)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-188.jpg?height=471&width=1115&top_left_y=272&top_left_x=206){width="400"}  
 图5.24 多样性目标累积检测下的波束形状损失$L_{p 2} $与采样间距 $\Delta_k $的关系。
 
 #### 5.4.5.3 多样性目标的混合处理
 
 多样性目标的混合处理波束形状损失如图5.25所示。其损失与Case 2目标非常相似。对于$P_d=0.9$，最佳采样间距为$Delta=0.85$，此时损失为 4.7 dB。采样间距$Delta>1.3$ 会引入不可接受的损失，对于需要高 $P_d$的应用不可采用。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-188.jpg?height=471&width=1130&top_left_y=1171&top_left_x=195)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-188.jpg?height=471&width=1130&top_left_y=1171&top_left_x=195){width="400"}  
 图5.25 多样性目标混合处理下的波束形状损失$L_{p 2}$与采样间距 $Delta_k$的关系。
 
 ### 5.4.6 2-D 光栅扫描中搜索雷达方程的波束形状损失
@@ -565,16 +565,16 @@ $$
 
 对覆盖大扇区的2-D扫描收集的信号进行积分可能不易实现（例如，对于高速目标，其可能在扫描周期内穿过距离分辨单元）。更实际的方法是混合处理：对光栅每一行的相邻波束进行积分，再通过整个扫描的累积检测将连续行组合。该情况下的净波束形状损失在图5.28和图5.29中分别给出了Case 1和Case 2目标的结果。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-189.jpg?height=478&width=1146&top_left_y=909&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-189.jpg?height=478&width=1146&top_left_y=909&top_left_x=175){width="400"}  
 图5.26 Case 1目标累积检测下的净波束形状损失$L_{p n 2}$ 与采样间距$Delta_k$的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-189.jpg?height=478&width=1146&top_left_y=1463&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-189.jpg?height=478&width=1146&top_left_y=1463&top_left_x=175){width="400"}  
 图5.27 Case 2目标累积检测下的净波束形状损失$L_{p n 2}$与采样间距 $Delta_k$的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-190.jpg?height=524&width=1078&top_left_y=440&top_left_x=200)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-190.jpg?height=524&width=1078&top_left_y=440&top_left_x=200){width="400"}  
 图5.28 Case 1目标混合处理下的净波束形状损失$L_{p n 2}$与采样间距$Delta_k$的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-190.jpg?height=458&width=1096&top_left_y=1048&top_left_x=199)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-190.jpg?height=458&width=1096&top_left_y=1048&top_left_x=199){width="400"}  
 图5.29 Case 2目标混合处理下的净波束形状损失 $L_{p n 2}$与采样间距 $Delta_k$的关系。
 
 在这些净波束形状损失的比较中，并未考虑密集采样扫描在角度估计精度方面的优势。当采用“边扫描边跟踪”技术（track-while-scan）利用重叠波束的检测数据形成跟踪文件时，精度的提高可能使额外的能量消耗是合理的。然而，在设计搜索扫描以最小化功率和时间时，波束间距达到一个波束宽度或更大通常是有利的。在能够在首次检测后立即分配验证和跟踪启动波束的系统中，跟踪启动发生的距离（以概率$P_{\text{track}}$表示）可以延伸到多个扫描的累积检测概率等于$P_{\text{track}}$的距离。稀疏采样减少扫描时间并进行多次扫描的另一个优点是，波动目标通常会在扫描之间变得不相关，从而降低波动损失。
@@ -583,7 +583,7 @@ $$
 
 三角网格的几何布局与矩形网格（第5.4节）类似，但连续扫描线的波束在$x$ 坐标上错开$0.5 \Delta$，而在 $y$ 坐标上的间距从 $Delta$缩小为$sqrt{0.75} \Delta$，形成图5.30所示的等边三角形。目标位置占据中心波束的一个象限，但竖直间距相对于矩形光栅进行了$sqrt{0.75}$ 的缩放。其结果是在扫描扇区内实现了更均匀的能量分布，并降低了波束形状损失。计算方法遵循矩形网格的方法，但有以下变化。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-191.jpg?height=787&width=1016&top_left_y=958&top_left_x=237)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-191.jpg?height=787&width=1016&top_left_y=958&top_left_x=237){width="400"}  
 图5.30 三角扫描网格的波束布局和目标样本位置。
 
 ### 5.5.1 三角网格的计算方法
@@ -600,45 +600,45 @@ $$
 
 Case 1的积分处理波束形状损失如图5.31所示。高 $P_d$下的损失明显低于图5.15矩形网格的损失。相邻行间距较近所需的额外功率为$1 / \sqrt{0.75}$或 0.63 dB，而$P_d=0.9$ 时$Delta=1.2$ 的损失降低为2 dB。对于 $Delta \rightarrow 0.5$ 的轻微上升是因为未包括图5.30所示九波束网格以外的贡献，而这些贡献在参考可探测性因子的计算中被假定包括。实际处理系统中是否会扩展积分到这些波束尚不确定。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-192.jpg?height=471&width=1150&top_left_y=1243&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-192.jpg?height=471&width=1150&top_left_y=1243&top_left_x=175){width="400"}  
 图5.31 Case 1在整个扫描上积分处理下的波束形状损失 $L_{p T 2}$与采样间距$Delta_k$的关系。
 
 #### 5.5.3.2 Case 1的累积检测处理
 
 Case 1的累积检测损失如图5.32所示。高 $P_d$ 且 $Delta>1.1$时的损失仍明显低于矩形网格。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-193.jpg?height=461&width=1122&top_left_y=276&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-193.jpg?height=461&width=1122&top_left_y=276&top_left_x=175){width="400"}  
 图5.32 Case 1累积检测下的波束形状损失 $L_{p T 2}$与采样间距$Delta_k$ 的关系。
 
 #### 5.5.3.3 Case 1的混合处理
 
 图5.33显示了Case 1混合处理的损失。与矩形网格相比，对于$Delta>1.1$ 的损失降低明显，而当$Delta \rightarrow 0.5$时有轻微增加。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-193.jpg?height=465&width=1133&top_left_y=1100&top_left_x=174)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-193.jpg?height=465&width=1133&top_left_y=1100&top_left_x=174){width="400"}  
 图5.33 Case 1混合处理下的波束形状损失 $L_{p T 2}$与采样间距$Delta_k$ 的关系。
 
 ### 5.5.4 三角网格的Case 2波束形状损失
 
 与矩形网格相比，扫描行间距较近使Case 2的独立样本数量略有增加，导致参考可探测性因子略有下降，如图5.34和5.35所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-194.jpg?height=425&width=738&top_left_y=268&top_left_x=377)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-194.jpg?height=425&width=738&top_left_y=268&top_left_x=377){width="400"}  
 图5.34 三角网格中独立目标样本数量随波束间距变化。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-194.jpg?height=605&width=983&top_left_y=797&top_left_x=250)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-194.jpg?height=605&width=983&top_left_y=797&top_left_x=250){width="400"}  
 图5.35 三角网格参考可探测性因子 $D_{r\{0,1,2, D\}}(P_d)$，$Delta_k=1$。
 
 #### 5.5.4.1 Case 2的积分处理
 
 Case 2的积分处理波束形状损失如图5.36所示。损失略高于Case 1，因为样本不包含用于计算参考可探测性因子的所有独立目标样本。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-195.jpg?height=445&width=1086&top_left_y=322&top_left_x=204)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-195.jpg?height=445&width=1086&top_left_y=322&top_left_x=204){width="400"}  
 图5.36 Case 2积分处理下的波束形状损失$L_{p T 2}$ 与采样间距$Delta_k$ 的关系。
 
 #### 5.5.4.2 Case 2的累积检测处理
 
 Case 2的累积检测损失如图5.37所示。对于$Delta>1$，所有$P_d$下的损失均低于矩形网格。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-195.jpg?height=462&width=1133&top_left_y=1048&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-195.jpg?height=462&width=1133&top_left_y=1048&top_left_x=175){width="400"}  
 图5.37 Case 2累积检测下的波束形状损失 $L_{p T 2}$ 与采样间距$Delta_k$ 的关系。
 
 #### 5.5.4.3 Case 2的混合处理
@@ -649,16 +649,16 @@ Case 2的累积检测损失如图5.37所示。对于$Delta>1$，所有$P_d$下�
 
 多样性目标的波束形状损失如图5.39-5.41所示，覆盖三种处理方法。在每种情况下，损失与Case 1目标相似，如图5.36-5.39所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-196.jpg?height=465&width=1139&top_left_y=272&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-196.jpg?height=465&width=1139&top_left_y=272&top_left_x=175){width="400"}  
 图5.38 Case 2混合处理下的波束形状损失 $L_{p T 2}$ 与采样间距 $Delta_k$ 的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-196.jpg?height=461&width=1142&top_left_y=834&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-196.jpg?height=461&width=1142&top_left_y=834&top_left_x=175){width="400"}  
 图5.39 多样性目标积分处理下的波束形状损失 $L_{p T 2}$ 与采样间距$Delta_k$的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-196.jpg?height=462&width=1137&top_left_y=1393&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-196.jpg?height=462&width=1137&top_left_y=1393&top_left_x=175){width="400"}  
 图5.40 多样性目标累积检测下的波束形状损失 $L_{p T 2}$ 与采样间距$Delta_k$ 的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-197.jpg?height=478&width=1150&top_left_y=270&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-197.jpg?height=478&width=1150&top_left_y=270&top_left_x=175){width="400"}  
 图5.41 多样性目标混合处理下的波束形状损失 $L_{p T 2}$与采样间距 $Delta_k$的关系。
 
 ### 5.5.6 三角网格搜索雷达方程中的波束形状损失
@@ -667,13 +667,13 @@ Case 2的累积检测损失如图5.37所示。对于$Delta>1$，所有$P_d$下�
 
 从图5.42-5.44可得出的主要结论是，在搜索雷达方程中用于二维扫描（三角网格）的净波束形状损失必须显著大于通常用于密集采样的$L_{p 2}=1.77=2.48~\mathrm{dB}$。在常规间距约为0.71波束宽度时，损失范围为混合处理约7.5 dB，累积检测约8.5 dB。要达到最小损失 $2-4~\mathrm{dB}$，需要将间距增加至约1.3波束宽度。如此大的间距会降低角度估计精度，但会显著缩短扫描给定搜索体积所需的时间。这在多功能雷达中可能是一种优势，尤其是在初次探测后立即进行跟踪采集的情况下。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-197.jpg?height=466&width=1139&top_left_y=1483&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-197.jpg?height=466&width=1139&top_left_y=1483&top_left_x=175){width="400"}  
 图5.42 多样性目标积分处理下的净波束形状损失 $L_{p T n 2}$ 与采样间距$Delta_k$ 的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-198.jpg?height=471&width=1148&top_left_y=272&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-198.jpg?height=471&width=1148&top_left_y=272&top_left_x=175){width="400"}  
 图5.43 多样性目标累积检测下的净波束形状损失$L_{p T n 2}$与采样间距$Delta_k$的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-198.jpg?height=466&width=1137&top_left_y=848&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-198.jpg?height=466&width=1137&top_left_y=848&top_left_x=175){width="400"}  
 图5.44 多样性目标混合处理下的净波束形状损失 $L_{p T n 2}$与采样间距 $Delta_k$的关系。
 
 ## 5.6 波束形状损失总结
@@ -690,30 +690,30 @@ Case 2的累积检测损失如图5.37所示。对于$Delta>1$，所有$P_d$下�
 
 图5.45和5.46展示了稳态目标与Case 1波动目标在积分和累积检测下的一维波束形状损失变化。对于稀疏采样，稳态目标的损失对 $P_d$的依赖性明显大于Case 1。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-199.jpg?height=456&width=1117&top_left_y=896&top_left_x=204)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-199.jpg?height=456&width=1117&top_left_y=896&top_left_x=204){width="400"}  
 图5.45 一维扫描积分处理下稳态目标（实线）与Case 1（虚线）波束形状损失 $L_{p 1}$与采样间距 $Delta_k$的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-199.jpg?height=445&width=1093&top_left_y=1467&top_left_x=215)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-199.jpg?height=445&width=1093&top_left_y=1467&top_left_x=215){width="400"}  
 图5.46 一维扫描累积检测下稳态目标（实线）与Case 1（虚线）波束形状损失$L_{p 1}$与采样间距 $Delta_k$的关系。
 
 #### 5.6.2.2 矩形网格二维扫描
 
 二维矩形网格扫描的波束形状损失如图5.47和5.48所示，分别为积分和累积检测。对于高 $P_d$，损失约为对应一维损失的平方（分贝值加倍）。对于$P_d=0.5$ 的稳态目标，二维损失超过了该关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-200.jpg?height=465&width=1137&top_left_y=566&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-200.jpg?height=465&width=1137&top_left_y=566&top_left_x=175){width="400"}  
 图5.47 矩形网格二维扫描积分处理下稳态目标（实线）与Case 1（虚线）波束形状损失 $L_{p 2}$ 与采样间距 $Delta_k$的关系。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-200.jpg?height=469&width=1148&top_left_y=1160&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-200.jpg?height=469&width=1148&top_left_y=1160&top_left_x=175){width="400"}  
 图5.48 矩形网格二维扫描累积检测下稳态目标（实线）与Case 1（虚线）波束形状损失$L_{p 1}$与采样间距$Delta_k$的关系。
 
 #### 5.6.2.3 三角网格二维扫描
 
 在等边三角形网格上布置波束，快速扫描坐标的扫描线沿 $x$ 方向错开半个间距，而另一坐标方向的间距为 $\sqrt{0.75}$ 波束宽度，可以显著减少波束形状损失。为了获得给定波束轴信噪比所需的能量仅增加约 0.6 dB。稀疏采样的损失增加远比矩形网格慢，尤其在高 $P_d$ 下，如图5.49和5.50所示。在这些图中，参考可探测性因子已调整以考虑额外能量的需求，因此在向密集采样过渡时，积分处理的损失仍为 $2 L_{p 0}=2.48~\mathrm{dB}$。对于稳态目标，两种网格间的差异比Case 1更加显著。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-201.jpg?height=462&width=1124&top_left_y=606&top_left_x=197)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-201.jpg?height=462&width=1124&top_left_y=606&top_left_x=197){width="400"}  
 图5.49 三角网格二维扫描积分处理下，Case 1波束形状损失 $L_{p 2}$ 与采样间距 $\Delta_k$ 的关系（实线：三角网格，虚线：矩形网格）。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-201.jpg?height=467&width=1146&top_left_y=1197&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-201.jpg?height=467&width=1146&top_left_y=1197&top_left_x=175){width="400"}  
 图5.50 三角网格二维扫描累积检测下，Case 1波束形状损失 $L_{p 2}$ 与采样间距 $\Delta_k$ 的关系（实线：三角网格，虚线：矩形网格）。
 
 ### 5.6.3 处理方法

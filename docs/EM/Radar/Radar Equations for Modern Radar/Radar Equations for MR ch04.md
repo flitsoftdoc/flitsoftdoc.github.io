@@ -237,7 +237,7 @@ D_{0}(1)=\frac{1}{2}\left[\frac{E_{t}}{\sqrt{N}}-\Phi^{-1}\left(P_{d}\right)\rig
 \end{gather*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-133.jpg?height=1107&width=1025&top_left_y=276&top_left_x=228)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-133.jpg?height=1107&width=1025&top_left_y=276&top_left_x=228){width="400"}  
 **图 4.1 单脉冲稳定目标可检测因子 $D_{0}(1)$**
 
 这些近似在大多数情况下精度极高，仅在 $P_{d}$ 较低时略有偏差，如图 4.2 所示。在雷达方程的多数实际应用范围内，误差小于 $0.1 \,\mathrm{dB}$。
@@ -248,7 +248,7 @@ $$
 
 Shnidman [11] 给出了一种计算稳态目标多脉冲可探测因子的近似方法。他定义了一个参数 $\eta$：
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-134.jpg?height=785&width=977&top_left_y=272&top_left_x=250)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-134.jpg?height=785&width=977&top_left_y=272&top_left_x=250){width="400"}  
 图 4.2 North 近似与 $D_{0}(1)$ 精确值的比较。
 
 $$
@@ -269,7 +269,7 @@ $$
 
 另一种近似 $D_{0}(n)$ 的方法是从 Case 1 目标（见第 4.3.3 节）的简单精确计算出发，叠加积分损耗（由式 (4.51) 近似），并减去该目标对应的起伏损耗（由式 (4.54) 近似）。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-135.jpg?height=777&width=966&top_left_y=272&top_left_x=254)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-135.jpg?height=777&width=966&top_left_y=272&top_left_x=254){width="400"}  
 图 4.3 Shnidman 近似与 $D_{0}(n)$ 精确值的比较。
 
 ---
@@ -443,7 +443,7 @@ $$
 
 对于情形 1 目标的检测性能，可以由通用方程 (4.23) 和 (4.24) 描述，这些方程使用不完全伽马函数 $P_{\gamma}$ 及其逆函数 $P_{\gamma}^{-1}$ 表达，独立目标样本数为 $n_{e}=1$ ：  
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-140.jpg?height=779&width=968&top_left_y=1142&top_left_x=252)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-140.jpg?height=779&width=968&top_left_y=1142&top_left_x=252){width="400"}  
 图 4.4 DiFranco 与 Rubin 的情形 1 近似公式与精确值比较，参数为 $n=2,10,100$，$P_{f a}=10^{-3}$ 和 $10^{-6}$。  
 
 $$
@@ -455,7 +455,7 @@ $$
 
 该通用方程的精度远高于 (4.31) 或 (4.32)，其结果如图 4.5 所示。该通用方程在 $n=1$ 时也能给出精确解。  
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-141.jpg?height=794&width=983&top_left_y=760&top_left_x=239)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-141.jpg?height=794&width=983&top_left_y=760&top_left_x=239){width="400"}  
 图 4.5 通用方程（虚线）与情形 1 精确可检测因子的比较。
 
 ### 4.3.4 Swerling 情形 2
@@ -517,7 +517,7 @@ $$
 
 结果如图 4.6 所示：当 $n=10$ 和 100 时，(4.38) 与 (4.40) 的曲线出现差异，这可能源自 (4.38) 的近似性；而在 $n=2$ 时，两组曲线完全一致。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-143.jpg?height=796&width=988&top_left_y=1063&top_left_x=254)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-143.jpg?height=796&width=988&top_left_y=1063&top_left_x=254){width="400"}  
 图 4.6 通用方程 (4.40) 与公式 (4.38) 所得情形 3 可检测因子的比较。对于 $n=2$，通用方程与精确值完全重合。
 
 ### 4.3.6 Swerling 情形 4
@@ -542,7 +542,7 @@ $$
 
 式 (4.43) 的精度如图 4.7 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-145.jpg?height=770&width=955&top_left_y=272&top_left_x=252)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-145.jpg?height=770&width=955&top_left_y=272&top_left_x=252){width="400"}  
 图 4.7 通用方程 (4.42) 与精确公式 (4.41) 所得情形 4 可检测因子的比较。
 
 ---
@@ -624,7 +624,7 @@ L_{i}(n) \equiv \frac{n D_{0}(n)}{D_{01}} \tag{4.50}
 \end{equation*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-147.jpg?height=785&width=970&top_left_y=272&top_left_x=252)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-147.jpg?height=785&width=970&top_left_y=272&top_left_x=252){width="400"}  
 图 4.8 基于检测器损耗推导的 $D_{0}(n)$ 与公式 (4.12) 精确值的比较。
 
 其中 $D_{0}(1)$ 简记为 $D_{01}$。根据 (4.49)，将 $D_{c 1}$ 代换为 $D_{01}/C_{x}=D_{01}^{2}/\left(D_{01}+2.3\right)$，积分损耗可表示为：
@@ -639,7 +639,7 @@ $$
 
 可以看出，当 $n<10$ 且 $D_{01}>10 \,\mathrm{dB}$ 时，非相干积分的惩罚较小，但当 $n$ 较大时，积分损耗近似按 $\sqrt{n}$ 增长。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-148.jpg?height=790&width=1164&top_left_y=309&top_left_x=166)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-148.jpg?height=790&width=1164&top_left_y=309&top_left_x=166){width="400"}  
 图 4.9 积分损耗随脉冲数变化的曲线，不同曲线对应不同的 $D_{01}$。
 
 ### 4.4.4 积分增益
@@ -670,7 +670,7 @@ $$
 
 其中 $P_{d}$ 与 $P_{f a}$ 在两类目标中保持一致。从图 4.10 可以看出，该损耗对 $P_{d}$ 的依赖性很强，而对 $P_{f a}$ 与 $n$ 的依赖性较弱。对于 $P_{d}\approx 0.35$，损耗约为 $0 \,\mathrm{dB}$；当 $P_{d}<0.35$ 时，损耗变为负值（即表现为增益）。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-149.jpg?height=715&width=951&top_left_y=1030&top_left_x=265)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-149.jpg?height=715&width=951&top_left_y=1030&top_left_x=265){width="400"}  
 图 4.10 Case 1 起伏损耗 $L_{f 1}$ 随 $P_{d}$ 的变化曲线（不同 $P_{f a}$ 与 $n$ 的情况）。
 
 对图 4.10 数据的解析近似可得 $L_{f 1}^{\prime}$（以 dB 表示）作为 $n, P_{d}, P_{f a}$ 的函数：
@@ -695,7 +695,7 @@ $$
 
 该公式仅需要正态分布的反积分与对数函数，配合乘除运算即可完成计算。其精度（结合 North 近似的 $D_{01}$、检测器损耗近似的 $L_{i}$ 以及公式 (4.54) 的 $L_{f 1}$）见图 4.11。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-150.jpg?height=790&width=974&top_left_y=962&top_left_x=250)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-150.jpg?height=790&width=974&top_left_y=962&top_left_x=250){width="400"}  
 图 4.11 Case 1 可检测因子 $D_{1}(n)$ 随 $P_{d}$ 的变化曲线（不同 $P_{f a}$ 与 $n$）。
 
 另一种计算方法是直接从曲线上读取并叠加各部分的分贝值：
@@ -759,7 +759,7 @@ $$
 
 在每个频率子组内可以进行相干积分，而对不同频率组的输出再进行非相干积分。假设这些频率差异足够大以致回波去相关（见第 4.5.2 节），则所需总能量随分集样本数的变化如图 4.12 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-152.jpg?height=581&width=895&top_left_y=604&top_left_x=307)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-152.jpg?height=581&width=895&top_left_y=604&top_left_x=307){width="400"}  
 图 4.12 Rayleigh 目标在不同检测概率下，$P_{f a}=10^{-6}$，16 脉冲内的分集样本数对应的总能量需求。
 
 对于 $P_{d}=0.9$，当 $n_{e}=8$ 时性能最佳，总能量需求比无分集系统减少 4.9 dB；$n_{e}=4$ 的性能也几乎相当。随着 $P_{d}$ 从 0.9 降至 0.8 再到 0.5，最优 $n_{e}$ 依次从 8 减少到 4，再到 2。
@@ -869,7 +869,7 @@ $$
 
 > 操作员损失（operator loss）的概念有时也会被使用，用于描述典型操作员相对于理想积分器所需的额外 $D_{0}$ 增加。然而，这里采取的方法是直接表达 $D_{0}$ 作为适用于真实人类操作员的数值。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-156.jpg?height=1064&width=1067&top_left_y=281&top_left_x=219)  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-156.jpg?height=1064&width=1067&top_left_y=281&top_left_x=219){width="400"}  
 图 4.13 PPI 显示在最佳观察条件下的可见性因子 $V_{0(50)}$ [17]。
 
 > 在实际中，操作员损失往往成为一个人为设定的因子，用以解释计算机性能与观测到的雷达性能之间的不一致。在某些情况下，这可能是合理的解释，但在另一些情况下，它可能被误用，以掩盖为何雷达实际性能低于计算预测的原因。无论如何，这一概念过于模糊，不能用于旨在评估特定雷达设计优劣或其他工程目的的作用距离计算。

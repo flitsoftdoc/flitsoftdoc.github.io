@@ -285,7 +285,7 @@ $$
 
 **脉冲雷达距离计算工作表**
 
-![](https://cdn.mathpix.com/snip/images/4pWObJKLYPL40ncNce6y_aCpFcVOXB1NC2TaMfL0D_o.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/4pWObJKLYPL40ncNce6y_aCpFcVOXB1NC2TaMfL0D_o.original.fullsize.png){width="400"}
 
 图1.1 Blake的脉冲雷达距离计算工作表[8]。引用的图形在第4、6和7章中重现，换算分贝与比值的表格已由数字计算取代。
 
@@ -406,7 +406,7 @@ $$
 
 **脉冲雷达距离计算工作表**
 
-![](https://cdn.mathpix.com/snip/images/N0E4F6QoEaT2irA_Tckd3d98bJUYv_ftMQSe6iKpF6k.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/N0E4F6QoEaT2irA_Tckd3d98bJUYv_ftMQSe6iKpF6k.original.fullsize.png){width="400"}
 
 图1.2 修正后的Blake图[20, p. 21]。
 
@@ -639,7 +639,7 @@ $$
 | 方向—传播因子 $F$ | 1.0 | 距离相关因子 $F_{\text{rdr}}$ | 0 dB |
 | 目标RCS $\sigma$ | $1.0\,\mathrm{m}^{2}$ | 热噪声下探测距离 $R_{m}$ | 132 km |
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-042.jpg?height=500&width=1060&top_left_y=1412&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-042.jpg?height=500&width=1060&top_left_y=1412&top_left_x=175){width="400"}
 
 **图1.3 示例雷达能量比与距离关系：实线为信号能量，比虚线为所需能量。MTI处理在 $R<R_{p}=50\,\mathrm{km}$ 内增加 $L_{x}$。**
 
@@ -650,7 +650,7 @@ $$
 
 一种可能的固态版本示例雷达被建模，具有相同的平均功率和非模糊距离，但占空比为 $20\%$，得到的脉宽 $\tau=180\,\mu s$。在 $R<27\,\mathrm{km}$ 和 $108\,\mathrm{km}<R<162\,\mathrm{km}$ 时出现遮蔽效应，其影响如图1.4所示的可用能量比曲线。此时探测发生在 $R_{m}=114\,\mathrm{km}$，目标从遮蔽区中出现时几乎完全获得脉冲压缩增益。短程的遮蔽在此情况下对 $R_{m}$ 无影响。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-043.jpg?height=521&width=1107&top_left_y=925&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-043.jpg?height=521&width=1107&top_left_y=925&top_left_x=175){width="400"}
 
 **图1.4 固态雷达（$D_{u}=20\%$）的能量比与距离关系。**
 
@@ -660,7 +660,7 @@ $$
 
 图1.5展示了在示例雷达的非模糊距离前半段内应用STC的结果。上曲线表示对目标散射截面 $\sigma=1\,\mathrm{m}^{2}$ 的期望效果，此时在 $R<R_{m}$ 的所有距离上，可用能量都保持在所需值之上。实线曲线表示较小目标（$\sigma=0.032\,\mathrm{m}^{2}=-15\,\mathrm{dBsm}$）的情况，显示该目标在任何距离上都无法达到 $P_{d}=50\%$ 的要求。这种性能在空管雷达中是理想的，例如希望探测 $\sigma \geq 1\,\mathrm{m}^{2}$ 的目标，同时排除几乎所有鸟类。但在现代防空雷达中则不可接受。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-044.jpg?height=533&width=1124&top_left_y=265&top_left_x=166)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-044.jpg?height=533&width=1124&top_left_y=265&top_left_x=166){width="400"}
 
 **图1.5 含STC的示例雷达能量比与距离关系。**
 
@@ -672,7 +672,7 @@ Blake图或其他雷达方程解给出的是监视雷达在垂直平面覆盖中
 
 图1.6的计算条件为：表1.1中的雷达，在地表rms高度偏差 $\sigma_{h}=3\,\mathrm{m}$ 的环境下运行，仅产生一个低于 $0.1^{\circ}$ 仰角的显著反射瓣。若无此效应，该反射瓣将延伸到非模糊距离 $R_{u}=135\,\mathrm{km}$ 以外，但在该区间 $D_{x}$ 增大超过了可用能量比，因此覆盖被截断在 $R_{u}$。同样，由于 $R<R_{p}=50\,\mathrm{km}$ 时使用了MTI处理，$D_{x}$ 增大导致波束顶部曲线在穿过该范围时出现轻微凸起。在波束中心 $\theta=1^{\circ}$ 时，$P_{d}=50\%$ 的曲线与图1.3中显示的探测距离一致。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-045.jpg?height=652&width=1144&top_left_y=274&top_left_x=175)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-045.jpg?height=652&width=1144&top_left_y=274&top_left_x=175){width="400"}
 
 **图1.6 示例雷达垂直覆盖图：$P_{d}=90\%$（内曲线）与 $P_{d}=50\%$（外曲线）。**
 
@@ -684,7 +684,7 @@ Blake图或其他雷达方程解给出的是监视雷达在垂直平面覆盖中
 
 雷达方程中使用的可探测性因子 $D$ 取决于所需的探测概率。该概率通常任意设为 $P_{d}=0.5\sim 0.9$。然而，实际需求取决于接收雷达输出的系统运行模式。单次告警很少足以表明目标存在，因为这种告警可能由噪声或干扰的随机虚警引起。通常需要第二次探测来确认，并建立航迹文件，这意味着单次扫描 $P_{d}\geq 0.5$（通常 $\geq 0.8$）才能可靠地获取并维持航迹。图1.7显示了在不同单次扫描 $P_{d}$ 下，为获得给定累积航迹获取概率所需的扫描次数。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-046.jpg?height=596&width=1025&top_left_y=325&top_left_x=232)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-046.jpg?height=596&width=1025&top_left_y=325&top_left_x=232){width="400"}
 
 **图1.7 累积航迹获取概率随扫描次数的变化，单次扫描探测概率范围 $50\%\sim 90\%$。典型的跟踪扫描系统要求在5次连续扫描中至少有3次探测（引自[21]）。**
 
@@ -692,7 +692,7 @@ Blake图或其他雷达方程解给出的是监视雷达在垂直平面覆盖中
 
 许多现代雷达（包括多功能阵列雷达和与相控阵跟踪雷达配合的常规搜索雷达）可以调配资源，使得即使搜索模式下的 $P_{d}$ 远低于0.8，也能建立并维持航迹。在初次探测后安排立即验证驻留，并可能相对于常规搜索功能增加发射能量，可使目标存在得到确认，并高概率建立跟踪，且仅需少量增加时间与能量需求。结果是最大跟踪距离由累积探测概率 $P_{c}$（而非单次探测概率 $P_{d}$）达到可接受值所决定。此时雷达方程中可使用 $P_{d}\approx 0.3$ 或更低的数值，从而显著扩展雷达作用距离[27]。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-046.jpg?height=511&width=988&top_left_y=1379&top_left_x=250)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-046.jpg?height=511&width=988&top_left_y=1379&top_left_x=250){width="400"}
 
 **图1.8 航迹保持概率随扫描次数的变化，不同单次扫描探测概率下的典型跟踪扫描系统。若连续两次探测失败则丢失航迹（引自[21]）。**
 
