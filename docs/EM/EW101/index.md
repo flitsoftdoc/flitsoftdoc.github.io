@@ -1,3 +1,5 @@
+# EW101
+
 多年来，EW101 始终是美国老乌鸦协会会刊《电子防御杂志》 （Journal of Electronic Defense，JED）一个广受欢迎的专栏。在每月一期的《电子防御杂志》中，EW101栏目讨论了电子战 （EW）的各个方面。没有人真正了解这个专栏深受欢迎的原因，但勿庸置疑的是它对很多人都是有帮助的。本书汇集了 EW101系列专栏中前 60 期的文章，将其编辑成章，同时增加了一些资料以保证内容的连贯性。本书的目的是使读者能对电子战有一个全面的了解，掌握电子战的基本知识并能够进行一般的电子战相关运算。
 
 ![](https://cdn.mathpix.com/snip/images/exKx8ZktW6Vx1xyELwtgviGaOomxTnPd-ph3qWbbNS0.original.fullsize.png){width="200"}
