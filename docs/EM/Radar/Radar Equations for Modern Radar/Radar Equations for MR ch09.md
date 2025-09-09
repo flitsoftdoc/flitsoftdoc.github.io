@@ -238,30 +238,30 @@ $$
 - **天线扫描调制分量**  
   扫描中的雷达波束会用单程电压方向图函数（公式 (5.3)）调制回波，该函数在时间 $t$ 上变为双程功率函数：
   
-  $$
+$$
   \begin{equation*}
   f(t)=\exp \left(-8 \ln 2 \frac{\omega_{s}^{2} t^{2}}{\theta_{3}^{2}}\right) \tag{9.18}
   \end{equation*}
-  $$
+$$
   
   其中，$\omega_{s}$ 为扫描角速度（单位 $\mathrm{rad} / \mathrm{s}$），$\theta_{3}$ 为扫描坐标下的波束宽度（单位 rad），并假设采用高斯波束近似。转换到频率域并转化为速度谱后，得到一个高斯速度谱分量，其标准差为：
   
-  $$
+$$
   \begin{equation*}
   \sigma_{v a}=\frac{\sqrt{\ln 2} \omega_{s} \lambda}{2 \pi \theta_{3}}=0.133 \frac{\omega_{s} w}{K_{\theta}} \mathrm{m} / \mathrm{s} \tag{9.19}
   \end{equation*}
-  $$
+$$
   
   其中，$K_{\theta}=w \theta_{3} / \lambda \approx 1.2$ 为波束宽度常数（单位 rad），$w$ 为扫描平面内孔径宽度（单位 m）。因此，该速度展宽与机械扫描孔径边缘速度或电子扫描相移速率成正比。
 
 - **波束宽度分量**  
   相对于雷达的杂波平均速度 $v_{0}$ 会引入另一个展宽分量，其标准差为：${ }^{5}$
   
-  $$
+$$
   \begin{equation*}
   \sigma_{v \theta}=\frac{v_{0} \theta_{3}}{4 \sqrt{\ln 2}} \sin \beta=0.300 v_{0} \theta_{3} \sin \beta \mathrm{~m} / \mathrm{s} \tag{9.20}
   \end{equation*}
-  $$
+$$
   
   其中，$\beta$ 为波束轴与相对速度矢量的夹角。
 
@@ -299,21 +299,21 @@ $$
 
 - **Weibull 分布**：一种双参数分布，表达式为
   
-  $$
+$$
   \begin{equation*}
   P(x)=\frac{x^{1 / a}}{a \alpha x} \exp \left(-\frac{x^{1 / a}}{\alpha}\right) ; \quad x \geq 0 \tag{9.23}
   \end{equation*}
-  $$
+$$
   
   其中，$a$ 为展宽（或形状）参数，用于决定分布宽度${ }^{6}$，$\alpha$ 为尺度因子。其均值、中值及其比值为：
   
-  $$
+$$
   \begin{gather*}
   \bar{x}=\alpha^{a} \Gamma(1+a)  \tag{9.24}\\
   x_{50}=(\alpha \ln 2)^{a}  \tag{9.25}\\
   \frac{\bar{x}}{x_{50}}=\frac{\Gamma(1+a)}{(\ln 2)^{a}} \tag{9.26}
   \end{gather*}
-  $$
+$$
   
   其中，$\Gamma$ 为伽玛函数。当 $a=1$ 时，该分布退化为指数分布（对应于瑞利电压分布），其均值为 $\bar{x}=\alpha$。在杂波应用中，$x$ 表示反射率与杂波传播因子的乘积 $\sigma^{0} F_{c}^{4}$。
   
@@ -321,37 +321,37 @@ $$
 
 - **对数正态分布（Lognormal 分布）**：一种双参数分布，可以用自然对数、常用对数或分贝表示，其中分贝形式在描述雷达目标和杂波时最为方便：
   
-  $$
+$$
   \begin{equation*}
   P\left(x_{\mathrm{dB}}\right)=\frac{1}{\sqrt{2 \pi} \sigma_{\mathrm{dB}}} \exp \left[-\frac{\left(x_{\mathrm{dB}}-\mu_{\mathrm{dB}}\right)^{2}}{2 \sigma_{\mathrm{dB}}^{2}}\right] \tag{9.27}
   \end{equation*}
-  $$
+$$
   
    其中，若 $x$ 表示功率项，则 $x_{\mathrm{dB}}=10 \log x$，$\sigma_{\mathrm{dB}}$ 为标准差，$\mu_{\mathrm{dB}}$ 为 $x_{\mathrm{dB}}$ 的均值（也是其中值）。其均值与中值功率及其比值为：
   
-  $$
+$$
   \begin{gather*}
   \bar{X}=10^{0.1 \mu_{\mathrm{dB}}+(0.005 \ln 10) \sigma_{\mathrm{dB}}^{2}}  \tag{9.28}\\
   x_{50}=10^{0.1 \mu_{\mathrm{dB}}}  \tag{9.29}\\
   \frac{\bar{X}}{x_{50}}=10^{(0.005 \ln 10) \sigma_{\mathrm{dB}}^{2}} \tag{9.30}
   \end{gather*}
-  $$
+$$
   
   上式在分贝中可写为：
   
-  $$
+$$
   \begin{equation*}
   10 \log \left(\frac{x_{a v}}{x_{50}}\right)=(0.05 \ln 10) \sigma_{\mathrm{dB}}^{2}=0.12 \sigma_{\mathrm{dB}}^{2} \tag{9.31}
   \end{equation*}
-  $$
+$$
 
 - **K 分布**：一种双参数分布，用于描述杂波功率 $x$，其表达式为：
   
-  $$
+$$
   \begin{equation*}
   P(x)=\frac{2 b^{(v+1) / 2} x^{(v-1) / 2}}{\Gamma(v)} K_{v-1}(2 \sqrt{b v}) ; \quad x \geq 0 \tag{9.32}
   \end{equation*}
-  $$
+$$
   
   其中，$v$ 为形状参数，$b$ 为尺度参数，$K$ 为修正贝塞尔函数（或 $K$ 函数）。该分布的性质（主要应用于海杂波）在 [1, p. 279] 和 [6, p. 109] 中有详细描述。
 
