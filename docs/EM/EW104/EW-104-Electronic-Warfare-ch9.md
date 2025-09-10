@@ -16,7 +16,7 @@ $$
 
 在射频部分，为了方便我们通常使用频率表示；然而，在光学和红外部分，频率数值过大，因此我们通常用波长来描述这些信号，单位为微米（$\mu \mathrm{m}$）。注意，微米也称作微米（micron）。红外谱中有三个对电子战重要的部分：近红外（0.78 到 $3 \mu \mathrm{m}$）、中红外（3 到 $50 \mu \mathrm{m}$）和远红外（50 到 $1,000 \mu \mathrm{m}$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_a770a666af26ed222881g-357.jpg?height=684&width=1763&top_left_y=1330&top_left_x=151){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_07_a770a666af26ed222881g-357.jpg?height=684&width=1763&top_left_y=1330&top_left_x=151){width="600"}
 
 图 9.1 电磁谱远不止射频范围。
 
