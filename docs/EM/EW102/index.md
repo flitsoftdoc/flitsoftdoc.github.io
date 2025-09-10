@@ -4,6 +4,9 @@
 
 《EW 102：电子战进阶》是David L. Adamy撰写的系列书籍中的第二本，旨在提供一个全面的电子战概览。
 
+
+![](https://cdn.mathpix.com/snip/images/sUtTzTOflnY0OhXFkzztL0htnUEcSzg1JKnyl4m8wjo.original.fullsize.png){width="200"}
+
 *   本书作为系列中的第二部，具有**独立价值**，但与第一部《EW 101》不重复。它汇集了多年《电子防御杂志》(Journal of Electronic Defense, JED)上“EW 101”专栏的材料，并将其组织成章节，补充了介绍性和辅助性材料以确保内容的完整性。
 *   书中几乎全部是**新材料**，未在《EW 101》中出现，但某些部分会简要回顾《EW 101》中涉及的相关材料，以扩展内容范围。
 *   一个重要的特色是包含了**附带解决方案的问题**，这些问题涵盖了《EW 101》和《EW 102》两本书的主题，并提供了详细的解题步骤，而非仅仅是答案。
