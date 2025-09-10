@@ -38,7 +38,8 @@ L_{\Gamma}=\frac{1}{1-\Gamma^{2}}=\frac{(\operatorname{VSWR}+1)^{2}}{4 \operator
 \end{equation*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-376.jpg?height=925&width=758&top_left_y=319&top_left_x=357)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-376.jpg?height=925&width=758&top_left_y=319&top_left_x=357){width="400"}
+
 图10.1 (a) 刚性同轴传输线与 (b) 矩形波导的损耗随频率变化情况，数据来自文献 [2]。
 
 其中 $\Gamma$ 为反射系数，VSWR 为电压驻波比。在电子扫描相控阵中，公式 (6.35) 将反射系数 $\Gamma$ 表示为相对于正侧向扫描角 $\theta$ 和单元增益模式指数 $\beta$ 的函数。由此，扫描区域内的变化损耗为：
@@ -161,7 +162,8 @@ $$
 
 其中 $D_{u}=\tau / t_{r}$ 为占空比。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-380.jpg?height=633&width=1027&top_left_y=892&top_left_x=237)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-380.jpg?height=633&width=1027&top_left_y=892&top_left_x=237){width="400"}
+
 图10.2 遮蔽：(a) 发射脉冲与回波在 PRI 中间，(b) 未遮蔽脉冲分数 $H_{\text {ecl}}$。
 
 对于未编码矩形脉冲，遮蔽脉冲能量为 $H_{\text {ecl}}$ 与其未遮蔽能量之比，不匹配滤波器传递该分数的效率为 $H_{\mathrm{ecl}}^{2}$，从而得到遮蔽因子：
@@ -308,7 +310,8 @@ $$
 
 如 [5, p. 264] 所列。这代表了反射面或透镜天线使用简单喇叭馈电所产生的照射模式。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-385.jpg?height=566&width=1168&top_left_y=1012&top_left_x=164)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-385.jpg?height=566&width=1168&top_left_y=1012&top_left_x=164){width="400"}
+
 图10.3 不同渐缩照射族的两坐标照射损耗与侧瓣水平的关系。
 
 #### 10.1.5.2 天线增益中的天线耗散损耗 $L_{a}$
@@ -426,7 +429,8 @@ $$
 
 图10.4显示了当针对PRI内均匀分布的Case 1目标取平均 $P_{d}$ 时的 $L_{\text {ecl }}$。可以看到，随着占空比增加，高 $P_{d}$ 会导致较大的损耗。通过使用不同PRI的两组或更多脉冲组可获得高累积探测概率，从而每组的 $P_{d}$ 降低，降低 $L_{\mathrm{ecl}}$。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-389.jpg?height=689&width=968&top_left_y=1223&top_left_x=252)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-389.jpg?height=689&width=968&top_left_y=1223&top_left_x=252){width="400"}
+
 图10.4 遮挡损耗随不同占空比的探测概率变化。每个占空比下 $L_{\mathrm{av}}$ 的值在 $P_{d}=0.2$ 附近以圆圈表示。
 
 这种统计损耗可与定义为对 $t_{r}$ 平均的 $H_{\mathrm{av}}^{3}$ 的倒数的损耗 $L_{\text {ecl }}$ 相比较，图中左下角附近的圆圈即表示该值。对于 $P_{d}>0.25$，统计损耗更大，而当 $P_{d} \rightarrow 1$ 时则显著更大。
@@ -443,7 +447,8 @@ $$
 
 该表达式代入 (10.21) 中的 $H(z)$，积分范围为 $0-\phi_{m}$，以计算法拉第旋转损耗。图10.5显示了 $L_{\mathrm{Far}}$ 随 $P_{d}$ 的变化，旋转角从零到不同的最大值 $\phi_{m}$。最坏情况发生在 $\phi_{m}=120^{\circ}$，此时 $H_{\mathrm{Far}}<-3 \mathrm{~dB}$ 占 0 到 $\phi_{m}$ 区间的 67%。任意整数次完整旋转的平均接收功率损耗为3 dB，但可见当 $P_{d}>20\%$ 时，$\phi_{m}=90^{\circ}$ 的统计损耗大于该平均值。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-390.jpg?height=651&width=915&top_left_y=1197&top_left_x=250)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-390.jpg?height=651&width=915&top_left_y=1197&top_left_x=250){width="400"}
+
 图10.5 线性极化天线的法拉第旋转损耗，随旋转角从零到不同 $\phi_{m}$ 的平均探测概率变化。每条曲线附近圆圈表示平均接收功率损耗。任意整数次完整旋转的损耗遵循 $\phi_{m}=90^{\circ}$ 曲线。
 
 #### 10.2.1.3 扫描扇区损耗 $L_{\text {sector }}$
@@ -452,7 +457,8 @@ $$
 
 图10.6显示了扫描扇区损耗随不同最大扫描角 $\theta_{m}$ 的 $P_{d}$ 变化，扫描扇区扩展至 $\pm \theta_{m}$。为了比较，每条曲线上的圆圈表示该扇区的平均功率损耗，当 $P_{d}>20\%$ 时，该平均值被超过。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-391.jpg?height=663&width=937&top_left_y=898&top_left_x=250)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-391.jpg?height=663&width=937&top_left_y=898&top_left_x=250){width="400"}
+
 图10.6 扫描扇区损耗随扇区平均探测概率变化，扇区范围为 $\pm \theta_{m}$。每条曲线附近的圆圈表示功率平均损耗，约在 $P_{d}=20\%$。
 
 ### 10.2.2 基本可探测性因子中的损耗
@@ -501,10 +507,12 @@ $$
 
 图10.8显示了加权线性FM波形在不同加权函数下，匹配损耗随时间旁瓣电平的变化曲线。这些曲线与图10.2(a)中给出的照明渐缩损耗曲线类似。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-394.jpg?height=461&width=766&top_left_y=276&top_left_x=355)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-394.jpg?height=461&width=766&top_left_y=276&top_left_x=355){width="400"}
+
 图10.7 不调制矩形脉冲在不同中频滤波器类型下，乘积 $\tau B_{n}$ 与匹配损耗 $L_{m}$ 的关系。资料来源：[1]。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-394.jpg?height=489&width=775&top_left_y=867&top_left_x=353)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-394.jpg?height=489&width=775&top_left_y=867&top_left_x=353){width="400"}
+
 图10.8 加权线性FM波形在不同加权函数下，时间旁瓣电平与匹配损耗 $L_{m}$ 的关系。
 
 #### 10.2.3.3 匹配因子 $M$
@@ -590,7 +598,8 @@ $$
 
 图10.9比较了最优二进制积分的积分损耗与视频积分损耗 $L_{i}(n)$。二进制积分在视频积分基础上增加的额外损耗称为二进制积分器损耗 $L_{b}$，对于 $n \geq 5$ 约为 1.4 dB。采用此近似，可避免通过 (10.29) 求解单脉冲概率的繁琐过程，而使用视频积分公式并将信号处理损耗增加 $L_{b}=1.5~\mathrm{dB}$。这一损耗通常被认为是可接受的，因为它简化了硬件设计，并且1-bit A/D转换对大幅度随机脉冲干扰有显著保护作用。无论干扰脉冲多大，它只能在第一次阈值跨越计数中增加1。对于 $n=2,3,4$，损耗高于图10.9中曲线，分别达到1.6、2.2和2.4 dB。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-397.jpg?height=653&width=1084&top_left_y=1239&top_left_x=204)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-397.jpg?height=653&width=1084&top_left_y=1239&top_left_x=204){width="400"}
+
 图10.9 不同积分方法的积分损耗比较（计算条件：$P_{d}=0.9, P_{fa}=10^{-6}, D_{0}(1)=13.2~\mathrm{dB}$）。资料来源：[1]。
 
 图10.9中还显示了 $m=1$ 的二进制积分曲线，有时称为累积积分。当累积积分在 $n>1$ 扫描中进行时，视频积分的 $L_{i}$ 与 $m=1$ 二进制积分的 $L_{b}$ 之间的差即为扫描分布损耗（见第10.1.4节）。
@@ -599,7 +608,8 @@ $$
 
 CFAR（恒虚警率）损耗源于使用自适应阈值以减少可变或非高斯干扰导致的虚警。典型实现为图10.10所示的距离单元平均 CFAR。$m$ 个相邻距离单元的包络检波输出可通过抽头延迟线同时获得，其中中心抽头代表检测单元。$m$ 个参考抽头取平均以形成目标附近雷达波束内噪声与干扰的估计 $w$，并将检测单元幅度 $x_{s}$ 与该平均值的比值作为视频输出。实际上，阈值 $E_{t}$ 是根据局部噪声估计进行缩放，而不是像前述讨论中那样使用先验值。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-398.jpg?height=282&width=979&top_left_y=1065&top_left_x=250)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-398.jpg?height=282&width=979&top_left_y=1065&top_left_x=250){width="400"}
+
 图10.10 距离单元平均 CFAR。（来源：Gregers-Hansen [12]）
 
 由于 $m$ 个相邻样本平均的干扰估计存在误差，因此应用于该平均值的权重 $w$ 必须高于完美估计时的值。因此，阈值围绕正确估计上下浮动，大部分时间过高，相对于固定阈值在正确水平时，$P_{d}$ 减小。这需要提高 SNR，这一增量即为 CFAR 损耗。图10.11 显示了单脉冲探测（$n=1$）的 CFAR 损耗。
@@ -623,7 +633,8 @@ CFAR（恒虚警率）损耗源于使用自适应阈值以减少可变或非高�
   $m_{\text {eff }}=(B_{w}/B_{n})-1$（Dicke-fix 接收机）或
   $m_{\text {eff }}=B\tau-1$（色散或脉冲压缩 CFAR）。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-399.jpg?height=530&width=730&top_left_y=747&top_left_x=371)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-399.jpg?height=530&width=730&top_left_y=747&top_left_x=371){width="400"}
+
 图10.11 单次命中探测的 CFAR 损耗通用曲线（适用于稳态或瑞利目标）。来源：Gregers-Hansen [12]。
 
 图10.11曲线的近似表示为：
@@ -723,7 +734,8 @@ $$
 
 - 速度响应损耗 $L_{\text{mti(c)}}$。当平均所有目标速度时，通过消除器系统后 $S/N$ 保持不变，但位于响应零点附近的个体目标可能被 MTI 消除或显著抑制。这是一种统计损耗，如 10.2.5 节所示计算。图10.12显示了该损耗随探测概率变化的情况，并定义为维持探测概率所需的输入信号增加。由于在高 $P_d$ 下该损耗很大，因此几乎总是采用 PRF 交错或多样性。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-402.jpg?height=651&width=1083&top_left_y=1261&top_left_x=188)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-402.jpg?height=651&width=1083&top_left_y=1261&top_left_x=188){width="400"}
+
 图10.12 MTI 速度响应损耗随探测概率变化（实线为 Case 1 目标，虚线为稳态目标）。来源：[1]。
 
 #### 10.2.5.6 脉冲多普勒损耗
@@ -815,7 +827,8 @@ $$
 
 当根据平均杂波功率在单元平均 CFAR 检测器中为 Rayleigh 分布 ($a_{w}=1$) 调整检测阈值时，误警率增加如图 10.15 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-407.jpg?height=640&width=975&top_left_y=839&top_left_x=252)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-407.jpg?height=640&width=975&top_left_y=839&top_left_x=252){width="400"}
+
 图 10.15 按预定误警概率实现的误警概率随 Weibull 杂波展宽参数变化的函数。
 
 例如，如果预定 $P_{f a}=10^{-4}$，则 $a_{w}=1.5$ 时的实际 $P_{\text {faw }}$ 增加到 0.013，$a_{w}=2$ 时增加到 0.05。在包含 $10^{5}$ 分辨单元的陆地搜索区域中，后一种情况下会产生 5,000 个陆地杂波误警。虽然人工观察者可能能够忽略这些误警并在显示器相对清晰的区域检测目标，但在任何使用电子检测的系统中，有效控制误警的措施都是必不可少的。
@@ -824,7 +837,8 @@ $$
 
 另一种可能的措施是使用两参数 CFAR [22]。在该系统中，参考单元中的样本用于估计杂波的均值和方差，并用均值乘以常数与方差相乘来设定阈值。当两参数 CFAR 检测器用于非 Rayleigh 杂波阈值调整时，Weibull 分布杂波的杂波分布损失 (3.8) 如图 10.16 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-408.jpg?height=672&width=985&top_left_y=856&top_left_x=248)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-408.jpg?height=672&width=985&top_left_y=856&top_left_x=248){width="400"}
+
 图 10.16 两参数 CFAR 检测器的杂波分布损失 $L_{c d}$，随误警概率及不同 Weibull 杂波展宽参数变化。
 
 对于对数正态杂波模型，可以通过在 (10.46) 或图 10.16 中使用等效 Weibull 展宽来近似表示：
@@ -881,7 +895,8 @@ $$
 
 图 10.17 显示了杂波地图损失随不同杂波环境下 Case 1 目标所需检测概率的变化。例如，假设 $I_{m}=40 \mathrm{~dB}$，平均输入杂波噪声比为 $C_{0}/N_{0}=+30$ dB，得到 $c-10 \mathrm{~dB}=0.1$。图 10.17 中的虚线曲线表明，对于 Rayleigh 杂波（$a_{w}=1$），可在地图损失仅 0.41 dB 下实现 $P_{d a v}=80\%$，$a_{w}=3$ 时损失升至 1.6 dB，$a_{w}=5$ 时升至 3.8 dB。检测概率为 90% 时，Rayleigh 杂波的地图损失仅 0.42 dB，而 $a_{w}=3$ 时为 1.9 dB，$a_{w}=5$ 时约为 7 dB。这些损失远小于其他误警控制方法。该地图还有两个优点：支持 MTI 或多普勒滤波前的所有电路线性工作，使这些电路能够达到理论改进因子（见第 9.6 节）；在用于选择 MTI 或常规视频处理时，它允许在无杂波单元中检测零径向速度目标，因为可以根据每个单元的实际杂波水平选择处理路径。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-410.jpg?height=658&width=957&top_left_y=1221&top_left_x=250)
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-410.jpg?height=658&width=957&top_left_y=1221&top_left_x=250){width="400"}
+
 图 10.17 杂波地图损失随平均输出杂波噪声比 $z$ 的变化，对于不同 Weibull 杂波展宽参数以及平均输出杂波噪声比 1.0（实线）、0.1（虚线）和 0.01（浅实线）。
 
 ## 10.3 视觉检测中的损失
