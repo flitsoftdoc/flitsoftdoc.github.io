@@ -182,7 +182,7 @@ $$
 
 另一个重要问题，也与 9.2.2 节相关，是大气的透过率。图 9.20 显示了红外能量能够良好传播的四个主要窗口。两个低波段窗口位于 1.5 到 $1.8 \mu \mathrm{m}$ 和 2 到 $2.5 \mu \mathrm{m}$，属于近红外区域。中红外区域有两个窗口在 3 到 5 微米波段。远红外区域有一个较大的窗口在 8 到 13 微米范围内。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_a770a666af26ed222881g-373.jpg?height=1074&width=1668&top_left_y=531&top_left_x=194){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_07_a770a666af26ed222881g-373.jpg?height=1074&width=1668&top_left_y=531&top_left_x=194){width="600"}
 
 图 9.20 红外波长下的大气透过率显示了清晰定义波长范围内的传输窗口和透过衰减区。
 
