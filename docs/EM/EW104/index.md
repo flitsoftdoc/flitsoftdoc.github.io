@@ -10,6 +10,8 @@ ISBN 13: 978-1-60807-869-1
 
 © 2015 ARTECH HOUSE
 
+![](https://cdn.mathpix.com/snip/images/jiiGWWy3pPWaLS5NhjW8uZv8q8wqbUrB4_YAy4uWgWM.original.fullsize.png){width="200"}
+
 
 这是EW 101系列的第四本书。它基于《电子防御杂志》(The Journal of Electronic Defense)中的EW 101专栏。在撰写本书时，该系列已经包含了二十年间撰写的213篇专栏。前两本书《EW 101》和《EW 102》涵盖了电子战(EW)的基础知识。第三本书《EW 103》聚焦于通信电子战，并是针对中东局势而撰写的。当时对地面电子战的关注增加，这本书旨在帮助地面部队人员应对靠近地面的敌方通信，包括用于引爆简易爆炸装置(IED)的链路，而这些IED造成了我们大部分伤亡。
 
