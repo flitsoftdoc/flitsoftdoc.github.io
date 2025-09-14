@@ -405,7 +405,7 @@
 
 接收机仿真器将接受到达接收机输入端的信号参数，并读取操作员设置的控制。接收机随后会生成输出信号，这些输出信号代表了在特定信号存在且操作员输入了这些控制动作时应有的输出。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-52.jpg?height=358&width=1245&top_left_y=1706&top_left_x=128){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-52.jpg?height=358&width=1245&top_left_y=1706&top_left_x=128){width="600"}  
 图11.29 接收信号的仿真可分为截获几何关系、接收天线位置和接收机配置三个方面。
 
 #### 11.8.2 接收机信号流程
@@ -418,7 +418,7 @@ WBIF信号进入IF放大器，在该接收机中，它包括多个以中频为�
 
 NBIF信号进入操作员（或计算机）选择的若干判别器之一。解调后的信号为音频或视频。其幅度和频率不依赖于接收信号强度，而取决于发射机对接收信号施加的调制参数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-53.jpg?height=369&width=1239&top_left_y=1780&top_left_x=194){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-53.jpg?height=369&width=1239&top_left_y=1780&top_left_x=194){width="700"}  
 图11.30 典型接收机的基本功能框图，仅涉及基本接收功能，与工作频率和设计细节无关。
 
 #### 11.8.3 仿真器
@@ -437,10 +437,10 @@ $$
 
 若SF与RTF的绝对差小于所选NBIF带宽的一半，该信号将出现在NBIF输出中。其频率由同样的公式决定，但此时“IF”为NBIF中心频率。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-54.jpg?height=451&width=1250&top_left_y=1639&top_left_x=128){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-54.jpg?height=451&width=1250&top_left_y=1639&top_left_x=128){width="600"}  
 图11.31 接收机仿真器需提供在接收机调谐与模式命令正确时应从接收机输出的信号。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-55.jpg?height=407&width=1231&top_left_y=300&top_left_x=204){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-55.jpg?height=407&width=1231&top_left_y=300&top_left_x=204){width="600"}  
 图11.32 接收机仿真器逻辑根据操作员或控制计算机的输入控制确定输出信号。
 
 由于这是一个训练仿真器，逻辑仅要求接收信号的调制与操作员所选的解调器相匹配。
@@ -449,7 +449,8 @@ $$
 
 输入接收机的信号强度取决于信号的有效辐射功率和入射方向上的天线增益。如图11.33所示，各IF输出的信号强度依赖于净增益传递函数。在该接收机中，WBIF输出电平与接收信号强度呈线性关系，因为调谐器的增益和损耗是线性的。NBIF输出与接收信号强度的对数成正比，因为IF放大器具有对数传递函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-55.jpg?height=416&width=1231&top_left_y=1744&top_left_x=204){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-55.jpg?height=416&width=1231&top_left_y=1744&top_left_x=204){width="600"} 
+
 图11.33 IF输出电平由接收机输入到信号输出的净增益决定。调制电平决定音频或视频输出电平。
 
 #### 11.8.5 处理器仿真
