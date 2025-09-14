@@ -162,7 +162,7 @@
 ![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-33.jpg?height=710&width=597&top_left_y=1451&top_left_x=519){width="400"}  
 图11.11 本图用于计算舰船和/或箔条云团是否在雷达分辨单元内。
 
-![](https://cdn.mathpix.com/snip/images/09G914rt_jpQnY41Nm4hUoVU1chsscA5vdNpsFAssb8.original.fullsize.png){width="400"}  
+![](https://cdn.mathpix.com/snip/images/09G914rt_jpQnY41Nm4hUoVU1chsscA5vdNpsFAssb8.original.fullsize.png){width="600"}  
 
 图11.12 交战计算电子表格。
 
@@ -302,8 +302,7 @@
 ![](https://cdn.mathpix.com/cropped/2025_09_08_873d78376b4337a3e945g-44.jpg?height=589&width=1240&top_left_y=1575&top_left_x=135){width="400"}  
 图11.23 威胁信号的仿真可在传输/接收/处理路径中的多个点注入。
 
-表11.2  
-仿真注入点  
+表11.2  仿真注入点  
 
 | 注入点 | 注入技术 | 仿真路径部分 |
 | :--- | :--- | :--- |
