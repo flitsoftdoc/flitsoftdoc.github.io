@@ -117,6 +117,8 @@ $$
 大气损耗 $=2 \,\mathrm{dB}$  
 接收天线增益 $=+3 \,\mathrm{dB}$  
 
+则：
+
 $$
 \begin{gathered}
 \text{接收功率} = +30 \,\mathrm{dBm} + 10 \,\mathrm{dB} - 100 \,\mathrm{dB} - 2 \,\mathrm{dB} + 3 \,\mathrm{dB} \\
