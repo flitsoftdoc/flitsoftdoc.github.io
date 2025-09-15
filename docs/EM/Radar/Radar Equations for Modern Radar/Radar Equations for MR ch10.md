@@ -773,6 +773,16 @@ $$
 
 - **角度跨距损耗 $L_{ea}$**。扫描天线对角度空间采样的峰值可能位于两个处理批次之间，造成角度跨距损耗。若采用移动窗口积分而非批处理或脉冲多普勒相干处理，则该损耗不存在。分割观测时间成多个批次可减小该损耗，但若未对批次输出做移动窗口积分，会降低积分增益。批次重叠处理可减轻损耗，但若处理为相干，将限制脉冲间 PRF 或 RF 灵活性。
 
+![](https://cdn.mathpix.com/snip/images/5UqVrb0u4y4QCEJFvkw8r5RhY2AQ1E4G7JAaezf8gJo.original.fullsize.png){width="400"}
+
+图10.13 对于矩形脉冲通过矩形滤波器且 $B \tau=1.5$ 的情况，距离跨越损失与采样间隔的关系。[1]
+
+
+![](https://cdn.mathpix.com/snip/images/Ivli5MSYbQX-s3idLd4uAaADNmIUQImJfU-ouscrk74.original.fullsize.png){width="400"}
+
+图10.14 对于加权以实现旁瓣电平 $\boldsymbol{G}_{\boldsymbol{s}}$ 的脉冲串，滤波器跨越损失与检测概率的关系。[1]
+
+
 ### 10.2.6 杂波可探测性因子损耗
 
 在第3章中，已显示杂波贡献的干扰谱密度 $C_0$ 需要调整后与白高斯噪声密度 $N_0$ 相加，形成总干扰密度。下面讨论的两个因子用于计算调整中所用的杂波可探测性因子 $D_{xc}$。
