@@ -80,7 +80,7 @@ $$
 
 表 6.1 适当传播损耗模型的选择  
 
-![](https://cdn.mathpix.com/snip/images/LM7Se0NzuBdwmKVH-nb3_-SvVQBfwzlfUh_nPqrNGC8.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/LM7Se0NzuBdwmKVH-nb3_-SvVQBfwzlfUh_nPqrNGC8.original.fullsize.png){width="600"}
 
 (表格文字对照如下)
 
