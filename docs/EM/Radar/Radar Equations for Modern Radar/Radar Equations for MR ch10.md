@@ -50,15 +50,7 @@ L_{\Gamma}(\theta)=\left(1-\left|\Gamma_{0}\right|^{2} \cos ^{\beta-1} \theta\ri
 \end{equation*}
 $$
 
-图10.1 (a) 刚性同轴传输线与 (b) 矩形波导的损耗随频率变化情况，数据来自文献 [2]。
 
-其中 $\Gamma$ 为反射系数，VSWR 为电压驻波比。在电子扫描相控阵中，公式 (6.35) 将反射系数 $\Gamma$ 表示为相对于正侧向扫描角 $\theta$ 和单元增益模式指数 $\beta$ 的函数。由此，扫描区域内的变化损耗为：
-
-$$
-\begin{equation*}
-L_{\Gamma}(\theta)=\left(1-\left|\Gamma_{0}\right|^{2} \cos ^{\beta-1} \theta\right)^{-1} \tag{10.2}
-\end{equation*}
-$$
 
 #### 10.1.1.2 大气吸收 $L_{\alpha}$
 
