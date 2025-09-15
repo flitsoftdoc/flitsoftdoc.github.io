@@ -29,7 +29,6 @@
 
 图1.1：（a）连续时间信号和（b）离散时间信号的图形表示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-16.jpg?height=336&width=792&top_left_y=1855&top_left_x=392){width="400"} 
 
 例如，数字图像（由像素的矩形阵列组成）通常被称为离散时间信号，即使其自变量（即水平和垂直位置）实际上并不对应于时间。
 
@@ -51,7 +50,7 @@
  
 图1.2：数字化人类语音的片段。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-013.jpg?height=760&width=1015&top_left_y=1069&top_left_x=615) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-013.jpg?height=760&width=1015&top_left_y=1069&top_left_x=615){width="400"}
  
 图1.3：一个单色图像。
 
@@ -63,11 +62,11 @@
 
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-013.jpg?height=426&width=819&top_left_y=1955&top_left_x=713) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-013.jpg?height=426&width=819&top_left_y=1955&top_left_x=713){width="400"}
  
 图1.4：具有一个或多个输入和一个或多个输出的系统。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-014.jpg?height=274&width=652&top_left_y=307&top_left_x=664) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-014.jpg?height=274&width=652&top_left_y=307&top_left_x=664){width="400"}
  
 图1.5：一个简单的RC网络。
 
@@ -98,7 +97,7 @@
 
 图1.8所示的一般形式的系统经常出现在控制应用中。在这种应用中，我们通常希望输出尽可能接近某个参考输入。例如，考虑一个机器人应用。参考输入可能表示末端执行器的期望位置，而输出表示实际位置。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-015.jpg?height=349&width=1097&top_left_y=1923&top_left_x=570) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-015.jpg?height=349&width=1097&top_left_y=1923&top_left_x=570){width="400"}
  
 图1.8：反馈控制系统。
 
