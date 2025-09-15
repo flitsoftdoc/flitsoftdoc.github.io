@@ -25,7 +25,7 @@
 
 信号还可以根据其是连续变量还是离散变量的函数来分类。若信号是连续变量（例如实数变量）的函数，则称其为**连续时间**信号。同样，若信号是离散变量（例如整数变量）的函数，则称其为**离散时间**信号。尽管自变量不一定表示时间，但为了方便，很多术语都是按时间来命名的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-012.jpg?height=484&width=1508&top_left_y=286&top_left_x=248){width="400"} 
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-012.jpg?height=484&width=1508&top_left_y=286&top_left_x=248){width="600"} 
 
 图1.1：（a）连续时间信号和（b）离散时间信号的图形表示。
 
@@ -85,19 +85,19 @@
 
 考虑图1.6所示的信号处理系统。图1.6(a)中的系统使用离散时间系统（如数字计算机）来处理连续时间信号。图1.6(b)中的系统使用连续时间系统（如模拟计算机）来处理离散时间信号。第一种类型的系统在当今世界中无处不在。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-015.jpg?height=622&width=1587&top_left_y=410&top_left_x=310){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-015.jpg?height=622&width=1587&top_left_y=410&top_left_x=310){width="700"}
  
 图1.6：信号处理系统。(a) 使用离散时间系统处理连续时间信号。(b) 使用连续时间系统处理离散时间信号。
 
 考虑图1.7所示的通信系统。该系统在一个位置接收消息并在另一个位置再现该消息。在这种情况下，系统的输入是要发送的消息，而输出是对原始消息的估计。通常，我们希望接收端再现的消息尽可能接近发送端传输的原始消息。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-015.jpg?height=188&width=1359&top_left_y=1404&top_left_x=443){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-015.jpg?height=188&width=1359&top_left_y=1404&top_left_x=443){width="600"}
  
 图1.7：通信系统。
 
 图1.8所示的一般形式的系统经常出现在控制应用中。在这种应用中，我们通常希望输出尽可能接近某个参考输入。例如，考虑一个机器人应用。参考输入可能表示末端执行器的期望位置，而输出表示实际位置。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-015.jpg?height=349&width=1097&top_left_y=1923&top_left_x=570){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-015.jpg?height=349&width=1097&top_left_y=1923&top_left_x=570){width="600"}
  
 图1.8：反馈控制系统。
 
