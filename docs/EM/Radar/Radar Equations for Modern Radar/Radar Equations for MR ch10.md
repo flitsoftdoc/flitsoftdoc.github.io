@@ -778,7 +778,7 @@ $$
 图10.13 对于矩形脉冲通过矩形滤波器且 $B \tau=1.5$ 的情况，距离跨越损失与采样间隔的关系。[1]
 
 
-![](https://cdn.mathpix.com/snip/images/Ivli5MSYbQX-s3idLd4uAaADNmIUQImJfU-ouscrk74.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/HpbM1POcDLCk5r64uisHTgRkelF17YXAm-pyhu2akv8.original.fullsize.png){width="400"}
 
 图10.14 对于加权以实现旁瓣电平 $\boldsymbol{G}_{\boldsymbol{s}}$ 的脉冲串，滤波器跨越损失与检测概率的关系。[1]
 
