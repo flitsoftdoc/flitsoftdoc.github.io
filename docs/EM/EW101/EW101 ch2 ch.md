@@ -423,7 +423,7 @@ $$
 /// note | 纳皮尔(Napier )多边形的另一种描述
 利用纳皮尔多边形(也称为纳皮尔圆周)的口诀可以很轻易的记住球面直角三角形的所有关联性： 以他们出现于球面三角形的顺序，依照相邻的边角关系，依序将三角形的六个角写在一个圈子内，也就是开始以一个角度开始，然后在它旁边写上相邻的边的弧角度，继续再写下下一个角度，···，最后结束成一个圆。然后删除90°的角角度并且将它相邻的弧角度替换成他们补角的数值(与原角弧度之和为90°)（也就是将 $a$ 换成 $90^{\circ}-a$ ）。 
 
-![](https://cdn.mathpix.com/snip/images/tFJ6r5suYZBMFvCfdSq88BFk9XBSEH4ITJyuqgtmtKk.original.fullsize.png){width="100"}
+![](https://cdn.mathpix.com/snip/images/tFJ6r5suYZBMFvCfdSq88BFk9XBSEH4ITJyuqgtmtKk.original.fullsize.png){width="200"}
 
 然后，这五个数组成了我们需要的纳皮尔多边形(纳皮尔圆周)，据此可以得到每个角度的余弦值等于：
 
