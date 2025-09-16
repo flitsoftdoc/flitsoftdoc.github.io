@@ -601,21 +601,23 @@ $$
 * 飞机**滚转轴**（基本等同于机体纵轴）的朝向，用相对于全局坐标的方位/俯仰表示为 $(Az_R,,El_R)$
 * 目标相对于飞机的相对位置向量
 
-  $$
-  \boldsymbol{r}=\begin{bmatrix}X_T-X_A\\ Y_T-Y_A\\ Z_T-Z_A\end{bmatrix},\quad
-  \hat{\boldsymbol{u}}_T=\frac{\boldsymbol{r}}{\lVert\boldsymbol{r}\rVert}
-  $$
+$$
+\boldsymbol{r}=\left[\begin{array}{c}
+X_T-X_A \\
+Y_T-Y_A \\
+Z_T-Z_A
+\end{array}\right], \quad \hat{\boldsymbol{u}}_T=\frac{\boldsymbol{r}}{\|\boldsymbol{r}\|}
+$$
 
 * 滚转轴方向单位向量（由 $Az_R,El_R$ 转为笛卡尔）：
 
-  $$
-  \hat{\boldsymbol{u}}_R=
-  \begin{bmatrix}
-    \cos El_R\,\cos Az_R\\
-    \cos El_R\,\sin Az_R\\
-    \sin El_R
-  \end{bmatrix}
-  $$
+$$
+\hat{\boldsymbol{u}}_R=\left[\begin{array}{c}
+\cos E l_R \cos A z_R \\
+\cos E l_R \sin A z_R \\
+\sin E l_R
+\end{array}\right]
+$$
 
 目标的**相对方位/俯仰**（用于中间理解/校验）：
 
@@ -645,7 +647,7 @@ HUD 上符号不仅要“离滚转轴多远”（半径由 $j$ 决定），还�
 
 向量法最简步骤：
 
-1. 选定**局部垂直方向**单位向量 $\hat{\boldsymbol{v}}_{\text{up}}$（机体坐标中的“向上”，或把重力方向转到机体坐标再取反），并把它与目标方向都投影到“正交于 $\hat{\boldsymbol{u}}_R$ 的平面”上：
+    1. 选定**局部垂直方向**单位向量 $\hat{\boldsymbol{v}}_{\text{up}}$（机体坐标中的“向上”，或把重力方向转到机体坐标再取反），并把它与目标方向都投影到“正交于 $\hat{\boldsymbol{u}}_R$ 的平面”上：
 
 $$
 \boldsymbol{p}_T=\hat{\boldsymbol{u}}_T-(\hat{\boldsymbol{u}}_T\!\cdot\!\hat{\boldsymbol{u}}_R)\,\hat{\boldsymbol{u}}_R,\quad
@@ -659,7 +661,7 @@ $$
 \hat{\boldsymbol{p}}_{\text{up}}=\frac{\boldsymbol{p}_{\text{up}}}{\lVert\boldsymbol{p}_{\text{up}}\rVert}
 $$
 
-2. 以 $\hat{\boldsymbol{u}}_R$ 为轴，计算从“局部垂直投影”旋到“目标投影”的**有符号夹角**：
+    2. 以 $\hat{\boldsymbol{u}}_R$ 为轴，计算从“局部垂直投影”旋到“目标投影”的**有符号夹角**：
 
 $$
 G=\operatorname{atan2}\!\Big(\hat{\boldsymbol{u}}_R\cdot(\hat{\boldsymbol{p}}_{\text{up}}\times \hat{\boldsymbol{p}}_{T}),\;\hat{\boldsymbol{p}}_{\text{up}}\cdot \hat{\boldsymbol{p}}_{T}\Big)
@@ -685,14 +687,15 @@ $$
 
 若已知飞机姿态欧拉角（偏航 $\psi$、俯仰 $\theta$、滚转 $\phi$），给出世界到机体的旋转矩阵 $R_{b\leftarrow w}(\psi,\theta,\phi)$，可直接走**机体系**：
 
-1. 目标相对向量先转到机体坐标：
+    1. 目标相对向量先转到机体坐标：
 
 $$
 \boldsymbol{r}_b = R_{b\leftarrow w}\,(\boldsymbol{r})
 $$
 
-2. 机体纵轴（滚转轴）就是 $\hat{\boldsymbol{u}}_R=\hat{\boldsymbol{x}}*b=[1,0,0]^T$；“局部垂直”常取 $\hat{\boldsymbol{v}}*{\text{up}}=\hat{\boldsymbol{z}}_b$（或根据航电定义选择）。
-3. 直接按第 2、3 节的**向量法**算 $j$ 与 $G$，再执行第 4 节映射到 HUD。
+    2. 机体纵轴（滚转轴）就是 $\hat{\boldsymbol{u}}_R=\hat{\boldsymbol{x}}*b=[1,0,0]^T$；“局部垂直”常取 $\hat{\boldsymbol{v}}*{\text{up}}=\hat{\boldsymbol{z}}_b$（或根据航电定义选择）。
+   
+    3. 直接按第 2、3 节的**向量法**算 $j$ 与 $G$，再执行第 4 节映射到 HUD。
 
 > 优点：避开跨象限与球面三角的中间角变量，数值稳定、实现简洁；同时与飞控/航电已有的姿态解算数据天然对齐。
 
