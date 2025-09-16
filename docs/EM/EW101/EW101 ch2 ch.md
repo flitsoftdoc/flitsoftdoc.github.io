@@ -588,3 +588,129 @@ $$
 
 ![](https://cdn.mathpix.com/cropped/2025_09_07_d9928404347d8040d6e0g-30.jpg?height=379&width=777&top_left_y=600&top_left_x=414){width="400"}  
 图 2.17 操作员屏幕上威胁显示符号的位置由其到滚转轴的角距离，以及威胁位置相对于局部垂直方向的偏移角与飞机滚转角之和共同决定。
+
+/// tip | 适合工程实现的等价向量/矩阵方法
+
+下面为一个比球面三角更稳健的便于工程实现的等价向量/矩阵方法。
+
+**1) 坐标与基本量**
+
+已知：
+
+* 目标 T 与飞机 A 的三维坐标：$(X_T,Y_T,Z_T)$、$(X_A,Y_A,Z_A)$
+* 飞机**滚转轴**（基本等同于机体纵轴）的朝向，用相对于全局坐标的方位/俯仰表示为 $(Az_R,,El_R)$
+* 目标相对于飞机的相对位置向量
+
+  $$
+  \boldsymbol{r}=\begin{bmatrix}X_T-X_A\\ Y_T-Y_A\\ Z_T-Z_A\end{bmatrix},\quad
+  \hat{\boldsymbol{u}}_T=\frac{\boldsymbol{r}}{\lVert\boldsymbol{r}\rVert}
+  $$
+
+* 滚转轴方向单位向量（由 $Az_R,El_R$ 转为笛卡尔）：
+
+  $$
+  \hat{\boldsymbol{u}}_R=
+  \begin{bmatrix}
+    \cos El_R\,\cos Az_R\\
+    \cos El_R\,\sin Az_R\\
+    \sin El_R
+  \end{bmatrix}
+  $$
+
+目标的**相对方位/俯仰**（用于中间理解/校验）：
+
+$$
+Az_T=\operatorname{atan2}(X_T\!-\!X_A,\;Y_T\!-\!Y_A),\quad
+El_T=\operatorname{atan2}\!\Big(Z_T\!-\!Z_A,\;\sqrt{(X_T\!-\!X_A)^2+(Y_T\!-\!Y_A)^2}\Big)
+$$
+
+> 用 `atan2` 处理跨象限不连续。
+
+**2) “到滚转轴的角距离” $j$**
+
+几何含义：单位球上，目标方向 $\hat{\boldsymbol{u}}_T$ 与滚转轴方向 $\hat{\boldsymbol{u}}_R$ 的夹角。
+
+**最稳健/直接**的表达：
+
+$$
+\cos j=\hat{\boldsymbol{u}}_T\cdot\hat{\boldsymbol{u}}_R,\qquad
+j=\arccos\!\big(\mathrm{clamp}(\hat{\boldsymbol{u}}_T\!\cdot\!\hat{\boldsymbol{u}}_R,\,-1,1)\big)
+$$
+
+> 这与文中的球面三角公式（通过 $f,h,J$ 等量）等价；他们给的是球面三角的推导链，你在实现里用点积即可，数值更稳定。
+
+**3) “绕滚转轴的角位置” → 偏移角 $G$**
+
+HUD 上符号不仅要“离滚转轴多远”（半径由 $j$ 决定），还要**绕**滚转轴在“哪一个方向”。文中定义的 $G$ 是目标方向投影到**滚转轴正交平面**后，相对于“局部垂直方向”的夹角。
+
+向量法最简步骤：
+
+1. 选定**局部垂直方向**单位向量 $\hat{\boldsymbol{v}}_{\text{up}}$（机体坐标中的“向上”，或把重力方向转到机体坐标再取反），并把它与目标方向都投影到“正交于 $\hat{\boldsymbol{u}}_R$ 的平面”上：
+
+$$
+\boldsymbol{p}_T=\hat{\boldsymbol{u}}_T-(\hat{\boldsymbol{u}}_T\!\cdot\!\hat{\boldsymbol{u}}_R)\,\hat{\boldsymbol{u}}_R,\quad
+\boldsymbol{p}_{\text{up}}=\hat{\boldsymbol{v}}_{\text{up}}-(\hat{\boldsymbol{v}}_{\text{up}}\!\cdot\!\hat{\boldsymbol{u}}_R)\,\hat{\boldsymbol{u}}_R
+$$
+
+并单位化：
+
+$$
+\hat{\boldsymbol{p}}_T=\frac{\boldsymbol{p}_T}{\lVert\boldsymbol{p}_T\rVert},\quad
+\hat{\boldsymbol{p}}_{\text{up}}=\frac{\boldsymbol{p}_{\text{up}}}{\lVert\boldsymbol{p}_{\text{up}}\rVert}
+$$
+
+2. 以 $\hat{\boldsymbol{u}}_R$ 为轴，计算从“局部垂直投影”旋到“目标投影”的**有符号夹角**：
+
+$$
+G=\operatorname{atan2}\!\Big(\hat{\boldsymbol{u}}_R\cdot(\hat{\boldsymbol{p}}_{\text{up}}\times \hat{\boldsymbol{p}}_{T}),\;\hat{\boldsymbol{p}}_{\text{up}}\cdot \hat{\boldsymbol{p}}_{T}\Big)
+$$
+
+> 这一步与文中通过 $E,F,J,f,h$ 等中间角再得到 $G$ 的球面三角做法等价，但实现更直接、不会遇到“反三角函数多解/跨象限”的坑。
+
+**4) HUD 放置规则**
+
+* **径向距离**：由 $j$ 决定（夹角越大，离中心越远；具体缩放取决于 HUD 视场/刻度）。
+* **环向角度**：文中描述是“相对于局部垂直的偏移角 **G** 与**飞机滚转角**之和，决定 HUD 上的**竖直偏移**”。工程实现里常见两种等价表述：
+
+  * 把 HUD 坐标系随机体**滚转**，则环向角就用 $G$；
+  * 把 HUD 坐标系定在驾驶员视图的“重力垂直”为竖直，则需把机体**滚转角 $\phi$**叠加进去：
+
+    $$
+    \theta_{\text{HUD}} = G + \phi
+    $$
+
+  然后按 HUD 的极坐标到屏幕坐标的映射（例如 $x = k,j,\sin\theta_{\text{HUD}},;y = k,j,\cos\theta_{\text{HUD}}$）绘制威胁符号。
+
+**5) 用姿态矩阵一步到位（推荐工程流程）**
+
+若已知飞机姿态欧拉角（偏航 $\psi$、俯仰 $\theta$、滚转 $\phi$），给出世界到机体的旋转矩阵 $R_{b\leftarrow w}(\psi,\theta,\phi)$，可直接走**机体系**：
+
+1. 目标相对向量先转到机体坐标：
+
+$$
+\boldsymbol{r}_b = R_{b\leftarrow w}\,(\boldsymbol{r})
+$$
+
+2. 机体纵轴（滚转轴）就是 $\hat{\boldsymbol{u}}_R=\hat{\boldsymbol{x}}*b=[1,0,0]^T$；“局部垂直”常取 $\hat{\boldsymbol{v}}*{\text{up}}=\hat{\boldsymbol{z}}_b$（或根据航电定义选择）。
+3. 直接按第 2、3 节的**向量法**算 $j$ 与 $G$，再执行第 4 节映射到 HUD。
+
+> 优点：避开跨象限与球面三角的中间角变量，数值稳定、实现简洁；同时与飞控/航电已有的姿态解算数据天然对齐。
+
+**6) 易错点与数值注意**
+
+* **象限/跨 $180^\circ$**：所有角度都用 `atan2`，并统一弧度或角度，避免混用。
+* **规约**：点积求 $\arccos$ 前务必 `clamp` 到 $[-1,1]$，防止浮点误差导致 `NaN`。
+* **退化情形**：当 $\hat{\boldsymbol{u}}_T\parallel \hat{\boldsymbol{u}}_R$ 时，$\boldsymbol{p}_T$ 可能接近零向量（目标几乎在滚转轴上）；此时 $j\approx 0$，环向角不重要，可把符号放在中心。
+* **坐标系约定**：机体轴向（右手/左手、$Z$ 朝上/朝下）要与 HUD 软件一致；否则 $G$ 的符号、顺时针/逆时针会颠倒。
+* **重力/垂直定义**：若采用惯导的重力方向为“局部垂直”，在极端机动或短时非定常加速度下需谨慎（可用带低通的“姿态向上”向量）。
+
+---
+
+**小结**
+
+* **$j$**：目标方向与滚转轴方向的夹角（点积即可）。
+* **$G$**：目标方向在“正交于滚转轴的平面”上，相对“局部垂直”的有符号角（用投影 + `atan2` 计算）。
+* **HUD**：半径由 $j$，环向角由 $G$（或 $G+\phi$）决定。
+
+文中那串球面三角公式提供了严谨的几何推导；而在工程实现与数值稳健性上，**三步“向量投影 + 点积/叉积 + atan2”**就能高可靠地得到同样的 HUD 放置结果。
+///
