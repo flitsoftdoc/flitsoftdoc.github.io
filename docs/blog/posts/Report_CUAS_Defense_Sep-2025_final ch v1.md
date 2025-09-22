@@ -10,7 +10,7 @@ slug: COUNTERING-SWARM
 
 报告深入探讨了**美国国防部（DoD）应对无人机威胁**的挑战与进展。报告强调，由于无人机的广泛扩散和中国等对手的先进能力，美国军事力量面临着严峻的挑战，特别是在**成本效益比**方面，因为通常需要用昂贵的导弹来拦截廉价无人机。文章详细分析了**主动和被动防御措施**，包括雷达、电子战、火炮和定向能武器，并指出必须部署**分层防御**系统来应对不同类型的威胁。此外，报告还回顾了**美军在中东和红海的实际作战经验**，指出了在**传感、威胁识别自动化**和**新兴技术部署**方面的不足。
 
-![](https://cdn.mathpix.com/snip/images/Q_naOo3IDjx8b7MvNzWnVzSwMZPwMTQvxQ3E0WVf264.original.fullsize.png){width="100"}
+![](https://cdn.mathpix.com/snip/images/Q_naOo3IDjx8b7MvNzWnVzSwMZPwMTQvxQ3E0WVf264.original.fullsize.png){width="200"}
 
 <!-- more -->
 
