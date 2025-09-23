@@ -1,6 +1,6 @@
 ---
 date: 2025-09-22
-categories: [Notes]
+categories: [Analysis]
 tags: [AI, Swarm]   # 若启用 tags 插件
 slug: COUNTERING-SWARM
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
