@@ -554,6 +554,19 @@ slug: COUNTERING-SWARM
 
 **投资高分辨率被动传感器。** 对无人机的早期探测是至关重要的第一步，它决定了是否有足够时间击退无人机，或者人员是否应采取掩护。当前，美军主要依赖主动雷达系统来发现、定位和跟踪无人机。这些传感器性能非常强大，但会发射信号，暴露位置给敌方。长距离、高分辨率的被动传感器提供了一种更具生存能力的无人机探测手段，并可减少主动雷达的开启时间。如果这种技术得到广泛应用，可能从根本上改变攻击者与防御者之间的竞争格局，使防御方占据优势。
 
+
+<iframe
+  src="/assets/pdf/Report_CUAS_Defense_Sep-2025_final.pdf"
+  width="100%"
+  height="600"
+  style="border:1px solid #ccc;"
+>
+  此浏览器不支持 iframe，请  
+  <a href="/assets/pdf/Report_CUAS_Defense_Sep-2025_final.pdf">点击下载 PDF</a>
+</iframe>
+
+### 参考文献
+
 1. Abby Sewell, Tara Copp, and Qassim Abdul-Zahra, "Troops Hurt After Three Drones Attack US Bases in Iraq as Tensions Flare After Gaza Hospital Blast," Associated Press, October 18, 2023, https://apnews.com/article/iraq-militias-iran-us-base-attack-drone-hamas-israel-war-80f6739c3ab34662afba316285914e39.
 2. Pat Ryder, "Pentagon Press Secretary Air Force Brig. Gen. Pat Ryder Holds an on-Camera Press Briefing," Department of Defense, October 19, 2023, https://www.defense.gov/News/ Transcripts/Transcript/Article/3563350/pentagon-press-secretary-air-force-brig-gen-pat-ryder-holds-an-on-camerapress/.
 3. Also on October 17, 2023, a false alarm at al-Asad Airbase resulted in a U.S. civilian contractor having a heart attack and dying: Ryder, "Pentagon Press Secretary Holds an on-Camera Press Briefing."
