@@ -36,7 +36,7 @@ RAND 的 RL 挂接器跨越了多种语言边界：它将 Python 定义的智能
 尽管语言切换复杂，RL 挂接器的运行对性能影响极小。其结构设计使得流程中最慢的步骤（如插件实例化、动态链接库 DLL 加载、大输入文件解析）只在执行阶段开始时运行一次。这使得所有后续迭代（在 RL 中通常称为 epoch）运行迅速。该架构允许即使在大数据集下也能快速重置 AFSIM 场景。
 
 **图 1 强化学习挂接器架构**  
-![](https://cdn.mathpix.com/cropped/2025_09_23_170802fa262e8810fd22g-2.jpg?height=513&width=1677&top_left_y=2008&top_left_x=224)
+![](https://cdn.mathpix.com/cropped/2025_09_23_170802fa262e8810fd22g-2.jpg?height=513&width=1677&top_left_y=2008&top_left_x=224){width="400"}
 
 RL 挂接器的关键部分是在主要仿真外部添加一个循环，其中包括一组函数调用——统称为 **应用程序接口（Application Programming Interface, API）**——供 RL gym 使用。由于模型可能需要在网络受限、互联网访问受限的环境中运行，因此必须尽量减少对 Python 库的依赖；这通过使用 C 调用来封装 C++ 函数，从而利用 Python 内置的 ctypes 模块实现。此方法需要额外步骤来创建函数调用并通过 C API 传递，但也使 DLL 对编译器差异不那么敏感，并避免强制使用 Python-C++ 模块（例如 Boost.Python）。
 
