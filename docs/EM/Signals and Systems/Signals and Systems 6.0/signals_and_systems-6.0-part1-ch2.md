@@ -267,10 +267,12 @@ $$
 
 几何上，偶函数或偶序列关于纵轴对称。偶函数和偶序列的示例如图2.2与图2.3所示。其他偶函数的例子包括余弦函数、绝对值函数和平方函数。其他偶序列的例子包括单位冲激序列（unit-impulse）和矩形序列（rectangular sequence，后面介绍）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-024.jpg?height=457&width=592&top_left_y=713&top_left_x=297)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-024.jpg?height=457&width=592&top_left_y=713&top_left_x=297){width="400"}  
+
 图2.2：偶函数示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-024.jpg?height=463&width=641&top_left_y=713&top_left_x=1086)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-024.jpg?height=463&width=641&top_left_y=713&top_left_x=1086){width="400"}   
+
 图2.3：偶序列示例。
 
 若函数 $x$ 满足
@@ -295,10 +297,12 @@ $$
 
 几何上，奇函数或奇序列关于原点对称。奇函数和奇序列的示例如图2.4与图2.5所示。很容易证明，若奇函数或奇序列 $x$ 的定义域包含0，则必有 $x(0)=0$。其他奇函数的例子包括正弦函数、符号函数（signum）和立方函数（即 $x(t)=t^{3}$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-025.jpg?height=466&width=606&top_left_y=294&top_left_x=416)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-025.jpg?height=466&width=606&top_left_y=294&top_left_x=416){width="400"}   
+
 图2.4：奇函数示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-025.jpg?height=465&width=647&top_left_y=297&top_left_x=1204)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-025.jpg?height=465&width=647&top_left_y=297&top_left_x=1204){width="400"}
+
 图2.5：奇序列示例。
 
 若函数 $x$ 满足
@@ -347,10 +351,12 @@ $$
 
 $N$ 周期序列 $x$ 的频率为 $\tfrac{1}{N}$，角频率为 $\tfrac{2 \pi}{N}$。若函数或序列不是周期的，则称其为非周期的（aperiodic）。周期函数和周期序列的示例如图2.6与图2.7所示。其他周期函数的例子包括余弦和正弦函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-026.jpg?height=455&width=847&top_left_y=297&top_left_x=572)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-026.jpg?height=455&width=847&top_left_y=297&top_left_x=572){width="400"} 
+
 图2.6：周期函数示例（基本周期为 $T$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-026.jpg?height=363&width=803&top_left_y=859&top_left_x=597)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-026.jpg?height=363&width=803&top_left_y=859&top_left_x=597){width="400"}  
+
 图2.7：周期序列示例（基本周期为4）。
 
 周期函数或序列的周期不是唯一确定的。具体来说，若函数或序列的周期为 $T$，则它同时也是 $kT$ 的周期函数或序列，其中 $k$ 为任意严格正整数。但在大多数情况下，我们关心的是满足 (2.7) 或 (2.8) 的最小（正）$T$ 或 $N$。我们称该值为基本周期（fundamental period）。对应的频率称为基频（fundamental frequency）。
