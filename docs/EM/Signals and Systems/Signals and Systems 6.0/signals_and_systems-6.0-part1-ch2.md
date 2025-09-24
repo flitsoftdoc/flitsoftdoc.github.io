@@ -16,7 +16,7 @@ $$
 \begin{aligned}
 & {[a . . b]=\{x \in \mathbb{Z}: a \leq x \leq b\},} \\
 & {[a . . b)=\{x \in \mathbb{Z}: a \leq x<b\},} \\
-& (a . . b]=\{x \in \mathbb{Z}: a<x \leq b\}, \quad \text { and } \\
+& (a . . b]=\{x \in \mathbb{Z}: a<x \leq b\},  \text { and } \\
 & (a . . b)=\{x \in \mathbb{Z}: a<x<b\} .
 \end{aligned}
 $$
@@ -34,10 +34,10 @@ $$
 
 $$
 \begin{aligned}
-& {[a, b]=\{x \in \mathbb{R}: a \leq x \leq b\}}, \\
-& (a, b)=\{x \in \mathbb{R}: a<x<b\}, \\
-& {[a, b)=\{x \in \mathbb{R}: a \leq x<b\}}, \\
-& (a, b]=\{x \in \mathbb{R}: a<x \leq b\}.
+ {[a, b]&=\{x \in \mathbb{R}: a \leq x \leq b\}}, \\
+ (a, b)&=\{x \in \mathbb{R}: a<x<b\}, \\
+ {[a, b)&=\{x \in \mathbb{R}: a \leq x<b\}}, \\
+ (a, b]&=\{x \in \mathbb{R}: a<x \leq b\}.
 \end{aligned}
 $$
 
@@ -99,11 +99,11 @@ $$
 同样，由于减法、乘法和除法也可以逐点定义，因此以下关系也成立：
 
 $$
-\begin{gathered}
-(x_{1}-x_{2})(t)=x_{1}(t)-x_{2}(t) \quad \text { 对所有 } t, \\
-(x_{1} x_{2})(t)=x_{1}(t) x_{2}(t) \quad \text { 对所有 } t, \quad \text{以及} \\
-(x_{1} / x_{2})(t)=x_{1}(t) / x_{2}(t) \quad \text { 对所有 } t .
-\end{gathered}
+\begin{aligned}
+(x_{1}-x_{2})(t)&=x_{1}(t)-x_{2}(t) \quad \text { 对所有 } t, \\
+(x_{1} x_{2})(t)&=x_{1}(t) x_{2}(t) \quad \text { 对所有 } t, \quad \text{以及} \\
+(x_{1} / x_{2})(t)&=x_{1}(t) / x_{2}(t) \quad \text { 对所有 } t .
+\end{aligned}
 $$
 
 然而需要注意的是，并非所有涉及函数的数学运算都能逐点定义。有些运算从根本上要求其操作对象是函数。卷积运算（针对函数）就是这样一个例子。如果某个运算符（这里用“$\diamond$”表示）定义为只能作用于函数，那么表达式 $(x_{1}\diamond x_{2})(t)$ 在数学上是有效的，但表达式 $x_{1}(t)\diamond x_{2}(t)$ 则无效。后者无效的原因是 $\diamond$ 运算符要求两个函数作为操作数，而 $x_{1}(t)$ 与 $x_{2}(t)$ 是数（即函数 $x_{1}$ 和 $x_{2}$ 在 $t$ 处的值）。正因如此，在使用与函数相关的数学符号时必须谨慎，否则很容易写出模糊、矛盾或毫无意义的表达式。
