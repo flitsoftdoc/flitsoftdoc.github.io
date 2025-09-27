@@ -361,7 +361,7 @@ https://starlink.sx/
 
  **starlink.sx（Starlink Coverage Tracker）** 一个由个人开发的交互式 **Starlink 覆盖/链路可视化与模拟网站**，作者为 *Mike Puchol*。网站展示星座运行、波束覆盖、用户位置到卫星、以及卫星到地面网关的链路关系，用于直观理解 Starlink 的工作方式。该项目非官方、与 SpaceX 无隶属关系。
 
-* **starlink.sx主要功能**
+ **starlink.sx主要功能**
 
   * 在地图上实时显示大量 Starlink 卫星与地面网关分布，并可查看某地“是否有卫星与网关的可行链路”。
   
