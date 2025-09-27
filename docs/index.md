@@ -16,4 +16,4 @@ We choose to go to the Moon in this decade and do the other things, **not becaus
 September 12, 1962, 
 
 
-![Apollo 11 Flight Plan](/assets/images/view.png)(/assets/images/view.png){ target="_blank" }
+![Apollo 11 Flight Plan](/assets/images/view.png)
