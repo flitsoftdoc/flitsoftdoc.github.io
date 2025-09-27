@@ -194,7 +194,8 @@ Hypatia 的 ns-3 模块可以模拟 UDP 和 TCP 流量，并记录每种传输�
 
 我们量化了“减速比”：如果 Hypatia 用 $b$ 秒真实时间模拟 $a$ 秒虚拟时间，则减速比为 $\frac{b}{a}$。结果如图 2 所示，可以直接回答实验者的问题：如果我想在 $C$ Gbit/s 的有效吞吐量下运行系统，并获取 $a$ 秒虚拟时间的数据，需要多长时间？如果在横轴 $x=C$ 时，减速比为 $y$，那么答案就是 $y \cdot a$ 秒。结果显示，例如要仿真 $\sim 10 \mathrm{Gbps}$ 网络有效吞吐量的 10 秒虚拟时间，Hypatia 对 UDP 流量需要 $\sim 33$ 分钟，而对 TCP 流量则需要 $\sim 100$ 分钟。有效吞吐量本身决定了减速比 $\frac{b}{a}$，这意味着一个简单的权衡：在固定的真实时间预算 $b$ 下，可以选择以高吞吐率仿真较短的虚拟时间，或以低吞吐率仿真较长的虚拟时间。对于相同的实验配置（星座和流量矩阵），通过设置链路线路速率即可控制有效吞吐量（在一定范围内；随着利用率上升，尽管负载增加，有效吞吐量会趋于平稳）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-05.jpg?height=462&width=701&top_left_y=284&top_left_x=1151)  
+![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-05.jpg?height=462&width=701&top_left_y=284&top_left_x=1151){width="400"}
+
 图 2：可扩展性。运行实验获得 9.2 Gbit/s 的 TCP 网络范围有效吞吐量 1 秒，耗时约 555 秒。UDP 仿真更快，13.8 Gbit/s 的有效吞吐量耗时约 269 秒。
 
 仿真瓶颈在于逐分组事件处理。由于卫星网络路径通常包含大量跳数，每个端到端分组传输会触发比数据中心网络仿真更多的事件。卫星网络的规模对仿真影响不大，至少在数万颗卫星范围内如此；仿真初始化开销随网络规模增加，但仅在开始时发生，而分组事件主导了仿真所需的真实时间。
@@ -262,7 +263,8 @@ TCP 填满缓冲并导致分组级时延恶化，是一个广为人知的问题 
 
 对于每条连接，我们计算其随时间变化的最大 RTT 与端点间测地 RTT 的比值。图 6 展示了所有连接的这一比值的 CDF。对三个星座而言，超过 $80\%$ 的连接的最大 RTT 小于测地 RTT 的两倍。考虑到地面光纤路径通常曲折，且光在光纤中的传播速度约为 $2c/3$ [9]，这意味着在我们仿真的大多数连接中，LEO 网络的时延显著低于当今互联网。相较于测地 RTT 的长尾膨胀来自端点相对较近的连接，这类连接的上下行链路开销占比较大。出于这一原因，我们在本节的图表和结果中排除了端点相距小于 500 km 的连接。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-08.jpg?height=448&width=722&top_left_y=298&top_left_x=227)  
+![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-08.jpg?height=448&width=722&top_left_y=298&top_left_x=227){width=400}
+
 图 6：RTT 与测地时延。对于大多数连接而言，LEO 网络上的最大 RTT（随时间变化）接近测地 RTT，尤其是 Telesat 与 Kuiper。然而，一些连接的最大 RTT 高出数倍。
 
 其他研究 [5, 6, 29, 44] 已经对 LEO 网络的时延做出了类似观察。然而，本研究的新发现是星座之间的比较。Telesat 的卫星数量最少，不到 Kuiper 的三分之一，也不到 Starlink 的四分之一，但在大多数连接上却实现了最低时延。Starlink 的时延也高于 Kuiper。
@@ -323,7 +325,8 @@ Hypatia 将卫星运动及其导致的路径变化这一连续过程，转换为
 
 然而，我们发现，在存在交叉流量的 LEO 网络中，未使用带宽远高于静态情况。图 10 显示了 1 秒粒度下的未使用带宽，针对的是 §4 中分析的相同连接（里约热内卢到圣彼得堡）。虽然在一些短时段（如约 20 s）内路径容量被充分利用（由该连接与交叉流量共同使用），但在大量时间内存在相当的未使用容量：在 $31\%$ 的时间内，超过三分之一的容量未被使用（排除 155-165 s 不可达时段），相比之下若卫星网络保持静态，则这一比例仅为 $11\%$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-11.jpg?height=465&width=727&top_left_y=281&top_left_x=230)  
+![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-11.jpg?height=465&width=727&top_left_y=281&top_left_x=230){width=400}
+
 图 10：未使用带宽。对于相同的里约热内卢至圣彼得堡连接，在存在交叉流量时，传输经常无法使用可用带宽。这是在固定的长时间 TCP 流集合与固定路由策略下的结果。灰色曲线为 $t=0$ 静态网络的情况。
 
 造成这一差异的原因在于路径变化导致的交叉流量转移：构成某对 GS 最短路径的链路会随时间变化，而每条链路所承载的 GS 对集合也随之变化。这意味着链路上的流量组合高度动态，使得传输难以适应——毕竟，类似 TCP 的传输目标是公平共享瓶颈带宽。但在 LEO 网络中，瓶颈及其流量组成会随时间显著变化。需要注意，这一发现并不与图 8 中的不频繁路径结构变化相矛盾。虽然中位数 GS 对的路径在 200 秒仿真期间仅变化几次，但每条端到端路径包含许多链路，其中一些链路承载了多个 GS 对的流量。这导致了交叉流量变化在单个 GS 对路径上（相对稳定的链路）上的累积效应。
@@ -358,17 +361,20 @@ Hypatia 将卫星运动及其导致的路径变化这一连续过程，转换为
 
 **端到端路径**：在 §4.1 中，我们讨论了因 LEO 动态性导致的 RTT 波动。为更好理解这些现象，直观可视化不同时刻的端到端路径非常有用。图 13 展示了 Starlink 中一条典型路径（巴黎-罗安达），该路径经历了最大的 RTT 波动之一。200 秒仿真期间的最长（117 ms）与最短（85 ms） RTT 路径如图所示。典型的南北向路径会尽可能沿某条轨道保持连通以减少时延。但在前者中，为抵达目的地需在轨道北端退出并“之字形”跳跃 9 次，而在后者中仅需 6 次。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-13.jpg?height=716&width=828&top_left_y=306&top_left_x=181)  
+![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-13.jpg?height=716&width=828&top_left_y=306&top_left_x=181){width="400"}
+
 图 13：最短路径随时间变化。在 Starlink S1 上，巴黎-罗安达路径的 RTT 在 117 ms（左）与 85 ms 之间波动。之字形路径源于拓扑中 ISL 的特性——看似接近的卫星未必直接相连。
 
 **链路利用率**：在 §5.4 中，我们讨论了即使在静态流量矩阵下，LEO 动态性也会导致链路与路径的利用率随时间波动。图 14 展示了 Kuiper 网络中相同实验的一条示例路径（芝加哥-郑州），较粗/暖色链路表示更拥塞。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-13.jpg?height=486&width=790&top_left_y=1219&top_left_x=200)  
+![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-13.jpg?height=486&width=790&top_left_y=1219&top_left_x=200){width="400"}
+
 图 14：拥塞随时间转移。示例路径（芝加哥-郑州）显示，即便输入流量静态，链路利用率仍随时间变化。上图与下图分别为 $10 s$ 与 $150 s$ 时的快照。
 
 我们还可以可视化全网瓶颈，如图 15 所示。在我们采用的流量矩阵下，大西洋跨洋 ISL（连接美国与欧洲及部分亚洲）高度拥塞。这表明在此类繁忙区域，采用非最短路径与多路径路由具有重要价值。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-13.jpg?height=454&width=812&top_left_y=295&top_left_x=1105)  
+![](https://cdn.mathpix.com/cropped/2025_09_27_8deeeaeb06d54082358fg-13.jpg?height=454&width=812&top_left_y=295&top_left_x=1105){width="400"}
+
 图 15：星座范围的利用率。在 Kuiper 中，跨大西洋路径在所测试的流量矩阵下高度拥塞。红色/粗 ISL 高度利用，而绿色/细 ISL 流量很小。无流量的 ISL 被排除。
 
 
@@ -404,7 +410,7 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 ### REFERENCES
 
-[1] Janet Abbate. 2004. Robert ("Bob") Elliot Kahn. https://amturing.acm.org/award_ winners/kahn_4598637.cfm.
+[1] Janet Abbate. 2004. Robert ("Bob") Elliot Kahn. https://amturing.acm.org/award_winners/kahn_4598637.cfm.
 
 [2] Riza Akturan and Wolfhard J Vogel. 1997. Path diversity for LEO satellite-PCS in the urban environment. In IEEE Transactions on Antennas and Propagation.
 
@@ -426,7 +432,7 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 [11] Neal Cardwell, Yuchung Cheng, C Stephen Gunn, Soheil Hassas Yeganeh, and Van Jacobson. 2017. BBR: congestion-based congestion control. In Communications of the ACM.
 
-[12] Celestrak. 2020. Orbit Visualization (e-tool per StarLink). https: //celestrak.com/cesium/orbit-viz.php?tle=/NORAD/elements/supplemental/ starlink.txt\&satcat=/pub/satcat.txt\&orbits=0\&pixelSize=3\&samplesPerPeriod= 90\&referenceFrame=1.
+[12] Celestrak. 2020. Orbit Visualization (e-tool per StarLink). https://celestrak.com/cesium/orbit-viz.php?tle=/NORAD/elements/supplemental/starlink.txt&satcat=/pub/satcat.txt&orbits=0&pixelSize=3&samplesPerPeriod=90&referenceFrame=1.
 
 [13] CesiumJS. 2020. https://cesium.com/cesiumjs/.
 
@@ -462,11 +468,11 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 [29] Mark Handley. 2018. Delay is Not an Option: Low Latency Routing in Space. In ACM HotNets.
 
-[30] Mark Handley. 2018. Starlink revisions, Nov 2018. https://www.youtube.com/ watch?v=QEIUdMiColU.
+[30] Mark Handley. 2018. Starlink revisions, Nov 2018. https://www.youtube.com/watch?v=QEIUdMiColU.
 
 [31] Mark Handley. 2019. Using Ground Relays for Low-Latency Wide-Area Routing in Megaconstellations. In ACM HotNets.
 
-[32] Mark Handley. 2019. Using ground relays with Starlink. https://www.youtube. com/watch?v=m05abdGSOxY.
+[32] Mark Handley. 2019. Using ground relays with Starlink. https://www.youtube.com/watch?v=m05abdGSOxY.
 
 [33] Thomas Henderson and Randy Katz. 2000. Network simulation for LEO satellite networks. In 18th International Communications Satellite Systems Conference and Exhibit. AIAA.
 
@@ -474,33 +480,33 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 [35] HughesNet. 2020. https://www.hughesnet.com/.
 
-[36] Iridium Communications Inc. 2020. Iridium NEXT. https://web.archive.org/web/ 20200718205415/https://www.iridiumnext.com/.
+[36] Iridium Communications Inc. 2020. Iridium NEXT. https://web.archive.org/web/20200718205415/https://www.iridiumnext.com/.
 
-[37] Iridium Communications Inc. 2020. Iridium Satellite Communications. https: //www.iridium.com/.
+[37] Iridium Communications Inc. 2020. Iridium Satellite Communications. https://www.iridium.com/.
 
-[38] ISS National Lab. 2015. ISSRDC 2015 - A Conversation with Elon Musk. https: //www.youtube.com/watch?v=ZmEg95wPiVU.
+[38] ISS National Lab. 2015. ISSRDC 2015 - A Conversation with Elon Musk. https://www.youtube.com/watch?v=ZmEg95wPiVU.
 
 [39] Vivek Jain, Viyom Mittal, and Mohit P Tahiliani. 2018. Design and implementation of TCP BBR in ns-3. In Proceedings of the 10th Workshop on ns-3. ACM.
 
 [40] Simon Kassing, Debopam Bhattacherjee, André Baptista Águas, Jens Eirik Saethre, and Ankit Singla. 2020. Hypatia source code. https://github.com/snkas/hypatia.
 
-[41] Amiko Kauderer and Kim Dismukes. 2011. NASA HSF: Definition of Two-line Element Set Coordinate System. https://spaceflight.nasa.gov/realdata/sightings/ SSapplications/Post/JavaSSOP/SSOP_Help/tle_def.html.
+[41] Amiko Kauderer and Kim Dismukes. 2011. NASA HSF: Definition of Two-line Element Set Coordinate System. https://spaceflight.nasa.gov/realdata/sightings/SSapplications/Post/JavaSSOP/SSOP_Help/tle_def.html.
 
-[42] T.S. Kelso. 2020. CelesTrak: Current NORAD Two-Line Element Sets. https: //www.celestrak.com/NORAD/elements/.
+[42] T.S. Kelso. 2020. CelesTrak: Current NORAD Two-Line Element Sets. https://www.celestrak.com/NORAD/elements/.
 
 [43] John D Kiesling. 1990. Land mobile satellite systems. In Proceedings of the IEEE.
 
 [44] Tobias Klenze, Giacomo Giuliari, Christos Pappas, Adrian Perrig, and David Basin. 2018. Networking in Heaven as on Earth. In ACM HotNets.
 
-[45] Mark Krebs. 2016. Satellite Constellation. https://patents.google.com/patent/ US20170005719A1/en.
+[45] Mark Krebs. 2016. Satellite Constellation. https://patents.google.com/patent/US20170005719A1/en.
 
-[46] Kuiper Systems LLC. 2019. Application of Kuiper Systems LLC for Authority to Launch and Operate a Non-Geostationary Satellite Orbit System in Ka-band Frequencies. https://licensing.fcc.gov/myibfs/download.do?attachment_key= 1773885.
+[46] Kuiper Systems LLC. 2019. Application of Kuiper Systems LLC for Authority to Launch and Operate a Non-Geostationary Satellite Orbit System in Ka-band Frequencies. https://licensing.fcc.gov/myibfs/download.do?attachment_key=1773885.
 
-[47] Kuiper USASAT-NGSO-8A ITU filing. 2018. https://www.itu.int/ITU-R/space/ asreceived/Publication/DisplayPublication/8716.
+[47] Kuiper USASAT-NGSO-8A ITU filing. 2018. https://www.itu.int/ITU-R/space/asreceived/Publication/DisplayPublication/8716.
 
-[48] Kuiper USASAT-NGSO-8B ITU filing. 2018. https://www.itu.int/ITU-R/space/ asreceived/Publication/DisplayPublication/8774.
+[48] Kuiper USASAT-NGSO-8B ITU filing. 2018. https://www.itu.int/ITU-R/space/asreceived/Publication/DisplayPublication/8774.
 
-[49] Kuiper USASAT-NGSO-8C ITU filing. 2018. https://www.itu.int/ITU-R/space/ asreceived/Publication/DisplayPublication/8718.
+[49] Kuiper USASAT-NGSO-8C ITU filing. 2018. https://www.itu.int/ITU-R/space/asreceived/Publication/DisplayPublication/8718.
 
 [50] Kenneth Chun Hei Kwok. 2001. Cost optimization and routing for satellite network constellations. Ph.D. Dissertation. Massachusetts Institute of Technology.
 
@@ -510,13 +516,13 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 [53] Gérard Maral. 1994. The ways to personal communications via satellite. In International journal of satellite communications. Wiley Online Library.
 
-[54] marine.rutgers.edu. 2001. Keplerian Elements. https://marine.rutgers.edu/cool/ education/class/paul/orbits.html.
+[54] marine.rutgers.edu. 2001. Keplerian Elements. https://marine.rutgers.edu/cool/education/class/paul/orbits.html.
 
 [55] Florian Meyer. 2019. A new network design for the "Internet from space". https://ethz.ch/en/news-and-events/eth-news/news/2019/12/a-new-network-design-for-the-internet-from-space.html.
 
-[56] NASA. 2008. Orbits and Kepler's Laws. https://solarsystem.nasa.gov/resources/ 310/orbits-and-keplers-laws/.
+[56] NASA. 2008. Orbits and Kepler's Laws. https://solarsystem.nasa.gov/resources/310/orbits-and-keplers-laws/.
 
-[57] NASA. 2020. General Mission Analysis Tool. https://software.nasa.gov/software/ GSC-17177-1.
+[57] NASA. 2020. General Mission Analysis Tool. https://software.nasa.gov/software/GSC-17177-1.
 
 [58] NetworkX developers. 2020. NetworkX. https://networkx.github.io/.
 
@@ -538,7 +544,7 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 [67] SpaceX. 2019. SPACEX NON-GEOSTATIONARY SATELLITE SYSTEM. https: //fcc.report/IBFS/SAT-MOD-20190830-00087/1877671.
 
-[68] SpaceX FCC filing. 2017. SpaceX V-BAND NON-GEOSTATIONARY SATELLITE SYSTEM. https://licensing.fcc.gov/myibfs/download.do?attachment_key= 1190019.
+[68] SpaceX FCC filing. 2017. SpaceX V-BAND NON-GEOSTATIONARY SATELLITE SYSTEM. https://licensing.fcc.gov/myibfs/download.do?attachment_key=1190019.
 
 [69] SpaceX FCC update. 2018. SPACEX NON-GEOSTATIONARY SATELLITE SYSTEM. https://licensing.fcc.gov/myibfs/download.do?attachment_key=1569860.
 
@@ -546,7 +552,7 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 [71] David E Sterling and John E Hatlelid. 1991. The IRIDIUM system-a revolutionary satellite communications system developed with innovative applications of technology. In MILCOM 91-Conference record. IEEE.
 
-[72] Telesat. 2018. Telesat's responses - Federal Communications Commission. http: //licensing.fcc.gov/myibfs/download.do?attachment_key=1205775.
+[72] Telesat. 2018. Telesat's responses - Federal Communications Commission. http://licensing.fcc.gov/myibfs/download.do?attachment_key=1205775.
 
 [73] Telesat. 2020. APPLICATION FOR MODIFICATION OF MARKET ACCESS AUTHORIZATION. https://fcc.report/IBFS/SAT-MPL-20200526-00053/2378318.pdf.
 
@@ -556,7 +562,7 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 [76] Viasat. 2020. https://www.viasat.com/.
 
-[77] Tanya Vladimirova and Kawsu Sidibeh. 2007. Inter-Satellite Links in LEO Constellations of Small Satellites. http://www.ee.surrey.ac.uk/m_ssc/research/vlsi/ intersatellite.html.
+[77] Tanya Vladimirova and Kawsu Sidibeh. 2007. Inter-Satellite Links in LEO Constellations of Small Satellites. http://www.ee.surrey.ac.uk/m_ssc/research/vlsi/intersatellite.html.
 
 [78] Markus Werner, Axel Jahn, Erich Lutz, and Axel Bottcher. 1995. Analysis of system parameters for LEO/ICO-satellite communication networks. In IEEE 7ournal on Selected areas in Communications.
 
@@ -564,7 +570,7 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 
 [80] Lloyd Wood. 2001. Internetworking with satellite constellations. Ph.D. Dissertation. University of Surrey.
 
-[81] Lloyd Wood. 2017. Satellite constellation visualization (SaVi). https://savi. sourceforge.io/.
+[81] Lloyd Wood. 2017. Satellite constellation visualization (SaVi). https://savi.sourceforge.io/.
 
 [82] William W Wu, Edward F Miller, Wilbur L Pritchard, and Raymond L Pickholtz. 1994. Mobile satellite communications. In Proceedings of the IEEE.
 
