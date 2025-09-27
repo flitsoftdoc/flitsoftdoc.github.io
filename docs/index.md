@@ -1,6 +1,6 @@
 # We choose to go to the Moon 
 
-But why, some say, the Moon? **Why choose this as our goal? **
+But why, some say, the Moon?  **Why choose this as our goal?**
 
 [![Apollo 11 Flight Plan](/assets/images/Apllo.jpg){ width=700} ](/assets/images/Apllo.jpg){ target="_blank" }
 
