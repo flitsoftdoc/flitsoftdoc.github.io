@@ -17,3 +17,5 @@ September 12, 1962,
 
 
 ![Apollo 11 Flight Plan](/assets/images/view.png)
+
+![Apollo 11 Flight Plan](/assets/images/earth.png)
