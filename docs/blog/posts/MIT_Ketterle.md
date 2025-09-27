@@ -6,13 +6,13 @@ slug: MIT-Ketterle
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
 ---
 
-# 爱因斯坦 vs. 玻尔的量子论战孰对孰错？MIT团队最新实验给出答案……
+# 爱因斯坦 vs. 玻尔的量子论战孰对孰错？MIT团队最新实验给出答案...
  
  MIT物理学家证实：像超人一样，光具有两种无法同时看到的身份
 
 麻省理工学院（MIT）的物理学家完成了量子物理学中最著名实验之一的理想化版本。他们的研究结果以原子级精度展示了光的双重但又难以捉摸的本质。同时，他们也证实，在这一特定量子情境下，阿尔伯特·爱因斯坦的观点是错误的。
 
-![](https://cdn.mathpix.com/snip/images/hvuYoEy8z-YDa3KFQQ5OLzhayW6iFLQW17hllKNY36A.original.fullsize.png){width="200"}
+![](https://cdn.mathpix.com/snip/images/hvuYoEy8z-YDa3KFQQ5OLzhayW6iFLQW17hllKNY36A.original.fullsize.png){width="300"}
 <!-- more -->
 实验示意图：两个悬浮在真空腔中的单原子被激光束照射，并充当两条狭缝。散射光的干涉由一台高灵敏度的相机记录下来，相机被描绘为屏幕。不相干光表现为背景，意味着光子作为粒子，仅通过了一条狭缝。
 
@@ -32,7 +32,7 @@ slug: MIT-Ketterle
 
 MIT团队负责人、2001年诺贝尔物理学奖获得者物理学教授沃尔夫冈·克特尔勒（[Wolfgang Ketterle](https://physics.mit.edu/faculty/wolfgang-ketterle/)）表示，“爱因斯坦和玻尔从未想到，可以用单个原子和单个光子来进行这样的实验，我们所做的就是一个理想化的思想实验（Gedanken experiment）。”
 
-![实验室合影，背景是一张摆放设备的桌子。](https://physics.mit.edu/wp-content/uploads/2025/07/20250728_MIT-AtomicDouble-02-press.jpg)  
+![实验室合影，背景是一张摆放设备的桌子。](https://physics.mit.edu/wp-content/uploads/2025/07/20250728_MIT-AtomicDouble-02-press.jpg){width=500} 
 “我们所做的可以看作是双缝实验的新变体。”Wolfgang Ketterle 与MIT团队成员合影：前排左起为Yoo Kyung Lee和Hanzhen Lin；后排为Jiahao Lyu、Yu-Kun Lu、Wolfgang Ketterle和Vitaly Fedoseev。
 
 他们的研究结果[发表在《物理评论快报》（*Physical Review Letters*）](https://journals.aps.org/prl/abstract/10.1103/zwhd-1k2t)。MIT的共同作者包括第一作者Vitaly Fedoseev、Hanzhen Lin、Yu-Kun Lu、Yoo Kyung Lee和Jiahao Lyu，他们均隶属于MIT物理系、[电子研究实验室（Research Laboratory of Electronics）](https://www.rle.mit.edu/)以及[MIT-哈佛超冷原子中心（MIT-Harvard Center for Ultracold Atoms）](http://cua.mit.edu/)。
