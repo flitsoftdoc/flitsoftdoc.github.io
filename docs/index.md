@@ -14,3 +14,6 @@ We choose to go to the Moon in this decade and do the other things, **not becaus
 **by John F. Kennedy at Rice University's Rice Stadium**
 
 September 12, 1962, 
+
+
+![Apollo 11 Flight Plan](/assets/images/view.png)(/assets/images/view.png){ target="_blank" }
