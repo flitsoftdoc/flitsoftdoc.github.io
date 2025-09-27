@@ -6,6 +6,8 @@ TIM SCHUBERT，LARS WOLF，以及 ULF KULAU
 
 https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9693958
 
+
+
 #### 摘要
 
 我们提出了 **ns-3-leo**，这是一个面向离散事件网络模拟器 $ns$-3 的模块，其中包含了低轨道卫星（Low Earth Orbit, LEO）巨型星座的网络移动性和链路特性模型。最初的目标是创建一个仿真环境，以便能够在此类网络中评估来自无线传感器网络（Wireless Sensor Network, WSN）和移动自组网（Mobile Ad-hoc Network, MANET）领域的现有路由协议。为了展示其能力，我们基于公开的参数对 Starlink 和 Telesat 的计划卫星星座进行了仿真。通过对按需自组距离向量路由（Ad hoc On-demand Distance Vector Routing, AODV）的仿真，我们获得了这些协议在卫星网络中面临的独特挑战的宝贵见解。现有使用距离向量路由或泛洪方式的自组协议不太可能用于宽带互联网接入，因此需要替代的方法来处理这些网络中的大规模移动性。然而，借助 ns-3-leo，我们提供了一个急需的扩展，用于支持满足卫星星座需求的协议开发。
@@ -336,6 +338,50 @@ ns-3-leo 为 ns-3 提供了这些接口和日志器定义，并包含一组类�
 尽管如此，本次评估表明，LEO 巨型星座中的路由协议面临着来自卫星高度移动性所带来的间歇性连接和快速拓扑变化的独特挑战。
 
 我们所有的源代码以及如何使用 ns-3-leo 的有用示例均可在线获取：https://gitlab.ibr.cs.tu-bs.de/tschuber/ns-3-leo。
+
+### 附录：相关资源
+
+#### 1）Low Earth Orbit Mobility
+
+https://github.com/dadada/ns-3-leo
+
+[这是https://gitlab.ibr.cs.tu-bs.de/tschuber/ns-3-leo](https://gitlab.ibr.cs.tu-bs.de/tschuber/ns-3-leo)的维护版本。它最初是作为学生硕士项目开发的，并作为[ns-3-leo：卫星群通信协议评估工具](https://ieeexplore.ieee.org/document/9693958)的一部分发布。您可能还想了解[Hypatia](https://github.com/snkas/hypatia)，它提供类似的功能，但软件更成熟。
+
+该模块提供低轨卫星的移动性模型、卫星间和卫星间传输的传播损耗模型。它还包含星间和星地信道以及相关网络设备的简化模型。它包含一些辅助工具，可用于基于可配置参数构建低轨卫星网络或从 TLE 文件导入移动性数据。
+
+#### 2）Hypatia 
+
+https://github.com/snkas/hypatia
+
+Hypatia 是一个低地球轨道 (LEO) 卫星网络仿真框架。它能够预先计算网络随时间的变化状态，并使用 ns-3 进行数据包级模拟，并提供可视化效果以帮助理解。
+
+#### 3）Starlink Coverage Tracker
+
+https://starlink.sx/
+
+ **starlink.sx（Starlink Coverage Tracker）** 一个由个人开发的交互式 **Starlink 覆盖/链路可视化与模拟网站**，作者为 *Mike Puchol*。网站展示星座运行、波束覆盖、用户位置到卫星、以及卫星到地面网关的链路关系，用于直观理解 Starlink 的工作方式。该项目非官方、与 SpaceX 无隶属关系。
+
+* **starlink.sx主要功能**
+
+  * 在地图上实时显示大量 Starlink 卫星与地面网关分布，并可查看某地“是否有卫星与网关的可行链路”。
+  
+  * 提供作者的技术博客，说明为何自建该跟踪器、关注的话题（波束数量/形状、网关与用户位置关系、覆盖与容量等），便于理解其建模思路。
+
+* **数据与原理（作者自述与社区讨论）**：网站以公开资料为依据构建仿真与可视化（如 FCC 申请信息、公开轨道数据/TLE 等）；社区帖子亦提到其“基于 FCC 资料的尽力模拟”。
+
+* **如何使用（快速上手）**
+
+  1. 用桌面浏览器打开（移动端会被拦截，提示资源占用高且需≥950px 宽度）。([Starlink][3])
+  2. 在地图上设置你的“Home location”，可看到从你位置到某颗卫星的绿色连线、以及卫星到橙色网关的连线，便于判断端到端路径是否可达。
+
+* **与同类的关系**：作者在博客里也列出其他常见 Starlink 跟踪/可视化站点（如 satellitemap.space、FindStarlink 等），starlink.sx 的特点是**更关注波束与网关-用户-卫星的关系与覆盖**，不仅仅是“看星星过境”。
+
+* **注意事项**：
+
+  * 这是第三方工具，**结果为近似与可视化**，并非官方服务质量保障或订购依据。
+  * 需要较强的本地计算与渲染能力（桌面端优先）。
+
+
 
 
 ## REFERENCES
