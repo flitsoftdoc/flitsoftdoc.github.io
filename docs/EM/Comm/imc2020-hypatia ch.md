@@ -405,87 +405,169 @@ We are grateful to our shepherd Eric Wustrow and the anonymous reviewers for the
 ### REFERENCES
 
 [1] Janet Abbate. 2004. Robert ("Bob") Elliot Kahn. https://amturing.acm.org/award_ winners/kahn_4598637.cfm.
+
 [2] Riza Akturan and Wolfhard J Vogel. 1997. Path diversity for LEO satellite-PCS in the urban environment. In IEEE Transactions on Antennas and Propagation.
+
 [3] Venkat Arun and Hari Balakrishnan. 2018. Copa: Practical Delay-Based Congestion Control for the Internet. In USENIX NSDI.
+
 [4] Jason H Bau. 2002. Topologies for satellite constellations in a cross-linked space backbone network. Ph.D. Dissertation. Massachusetts Institute of Technology.
+
 [5] Debopam Bhattacherjee, Waqar Aqeel, Ilker Nadi Bozkurt, Anthony Aguirre, Balakrishnan Chandrasekaran, P Godfrey, Gregory Laughlin, Bruce Maggs, and Ankit Singla. 2018. Gearing up for the 21st century space race. In ACM HotNets.
+
 [6] Debopam Bhattacherjee and Ankit Singla. 2019. Network topology design at $27,000 \mathrm{~km} /$ hour. In ACM CoNEXT.
+
 [7] Bhattacherjee, Debopam and Singla, Ankit. 2020. LEO satellite networks. https: //leosatsim.github.io/.
+
 [8] Alan Boyle. 2019. Amazon to offer broadband access from orbit with 3,236satellite 'Project Kuiper' constellation. https://www.geekwire.com/2019/amazon-project-kuiper-broadband-satellite/.
+
 [9] Ilker Nadi Bozkurt, Anthony Aguirre, Balakrishnan Chandrasekaran, P Brighten Godfrey, Gregory Laughlin, Bruce Maggs, and Ankit Singla. 2017. Why is the Internet so slow?!. In International Conference on Passive and Active Network Measurement. Springer.
+
 [10] David Canellis. 2020. Bezos and Musk's internet-from-space race is back on. https://thenextweb.com/hardfork/2020/03/30/oneweb-collapse-internet-space-race-leo-satellite-bezos-musk-back-on/.
+
 [11] Neal Cardwell, Yuchung Cheng, C Stephen Gunn, Soheil Hassas Yeganeh, and Van Jacobson. 2017. BBR: congestion-based congestion control. In Communications of the ACM.
+
 [12] Celestrak. 2020. Orbit Visualization (e-tool per StarLink). https: //celestrak.com/cesium/orbit-viz.php?tle=/NORAD/elements/supplemental/ starlink.txt\&satcat=/pub/satcat.txt\&orbits=0\&pixelSize=3\&samplesPerPeriod= 90\&referenceFrame=1.
+
 [13] CesiumJS. 2020. https://cesium.com/cesiumjs/.
+
 [14] Vincent WS Chan. 1999. Optical space communications: a key building block for wide area space networks. In IEEE LEOS Annual Meeting Conference Proceedings.
+
 [15] Vincent WS Chan. 2000. Optical space communications. In IEEE fournal of Selected Topics in Quantum Electronics.
+
 [16] Stephen Clark. 2020. SpaceX's Starlink network surpasses 400 -satellite mark after successful launch. https://spaceflightnow.com/2020/04/22/spacexs-starlink-network-surpasses-400-satellite-mark-after-successful-launch/.
+
 [17] Mark Claypool, Jae Won Chung, and Feng Li. 2018. BBR' an implementation of bottleneck bandwidth and round-trip time congestion control for ns-3. In Proceedings of the 10th Workshop on ns-3. ACM.
+
 [18] Gary Comparetto and Neal Hulkower. 1994. Global mobile satellite communications-A review of three contenders. In 15th International Communications Satellite Systems Conference and Exhibit. AIAA.
+
 [19] Datagraver. 2020. WORLD POPULATION DISTRIBUTION BY LATITUDE AND LONGITUDE - 2020. https://datagraver.com/case/world-population-distribution-by-latitude-and-longitude-2020.
+
 [20] Olivier L De Weck, Richard De Neufville, and Mathieu Chaize. 2004. Staged deployment of communications satellite constellations in low earth orbit. In Journal of Aerospace Computing, Information, and Communication.
+
 [21] Inigo del Portillo, Bruce G Cameron, and Edward F Crawley. 2019. A technical comparison of three low earth orbit satellite constellation systems to provide global broadband. In Acta Astronautica. Elsevier.
+
 [22] Elias Eccli. 2020. Starlink Constellation (2019/11/17-2020/05/21). https://www. youtube.com/watch?v=857UM4ErX9A.
+
 [23] Sandra Erwin. 2019. SpaceX plans to start offering Starlink broadband services in 2020. https://spacenews.com/spacex-plans-to-start-offering-starlink-broadband-services-in-2020/.
+
 [24] John V Evans. 1998. Satellite systems for personal communications. In Proceedings of the IEEE.
+
 [25] GeoRepository. 2020. WGS72. https://georepository.com/crs_4985/WGS-72.html.
+
 [26] Giacomo Giuliari, Tobias Klenze, Markus Legner, David Basin, Adrian Perrig, and Ankit Singla. 2020. Internet Backbones in Space. In ACM SIGCOMM CCR.
+
 [27] Prateesh Goyal, Akshay Narayan, Frank Cangialosi, Deepti Raghavan, Srinivas Narayana, Mohammad Alizadeh, and Hari Balakrishnan. 2018. Elasticity Detection: A Building Block for Delay-Sensitive Congestion Control. In ACM ANRW.
+
 [28] Loren Grush. 2020. SpaceX may spin out internet-from-space business and make it public. https://www.theverge.com/2020/2/6/21126540/spacex-starlink-internet-space-mega-constellation-ipo-spinoff-gwynne-shotwell.
+
 [29] Mark Handley. 2018. Delay is Not an Option: Low Latency Routing in Space. In ACM HotNets.
+
 [30] Mark Handley. 2018. Starlink revisions, Nov 2018. https://www.youtube.com/ watch?v=QEIUdMiColU.
+
 [31] Mark Handley. 2019. Using Ground Relays for Low-Latency Wide-Area Routing in Megaconstellations. In ACM HotNets.
+
 [32] Mark Handley. 2019. Using ground relays with Starlink. https://www.youtube. com/watch?v=m05abdGSOxY.
+
 [33] Thomas Henderson and Randy Katz. 2000. Network simulation for LEO satellite networks. In 18th International Communications Satellite Systems Conference and Exhibit. AIAA.
+
 [34] Mark Holmes. 2020. In the Eye of the Storm: Greg Wyler Breaks Cover to Talk OneWeb. http://interactive.satellitetoday.com/via/oneweb-special-edition/in-the-eye-of-the-storm-greg-wyler-breaks-cover-to-talk-oneweb/.
+
 [35] HughesNet. 2020. https://www.hughesnet.com/.
+
 [36] Iridium Communications Inc. 2020. Iridium NEXT. https://web.archive.org/web/ 20200718205415/https://www.iridiumnext.com/.
+
 [37] Iridium Communications Inc. 2020. Iridium Satellite Communications. https: //www.iridium.com/.
+
 [38] ISS National Lab. 2015. ISSRDC 2015 - A Conversation with Elon Musk. https: //www.youtube.com/watch?v=ZmEg95wPiVU.
+
 [39] Vivek Jain, Viyom Mittal, and Mohit P Tahiliani. 2018. Design and implementation of TCP BBR in ns-3. In Proceedings of the 10th Workshop on ns-3. ACM.
+
 [40] Simon Kassing, Debopam Bhattacherjee, André Baptista Águas, Jens Eirik Saethre, and Ankit Singla. 2020. Hypatia source code. https://github.com/snkas/hypatia.
+
 [41] Amiko Kauderer and Kim Dismukes. 2011. NASA HSF: Definition of Two-line Element Set Coordinate System. https://spaceflight.nasa.gov/realdata/sightings/ SSapplications/Post/JavaSSOP/SSOP_Help/tle_def.html.
+
 [42] T.S. Kelso. 2020. CelesTrak: Current NORAD Two-Line Element Sets. https: //www.celestrak.com/NORAD/elements/.
+
 [43] John D Kiesling. 1990. Land mobile satellite systems. In Proceedings of the IEEE.
+
 [44] Tobias Klenze, Giacomo Giuliari, Christos Pappas, Adrian Perrig, and David Basin. 2018. Networking in Heaven as on Earth. In ACM HotNets.
+
 [45] Mark Krebs. 2016. Satellite Constellation. https://patents.google.com/patent/ US20170005719A1/en.
+
 [46] Kuiper Systems LLC. 2019. Application of Kuiper Systems LLC for Authority to Launch and Operate a Non-Geostationary Satellite Orbit System in Ka-band Frequencies. https://licensing.fcc.gov/myibfs/download.do?attachment_key= 1773885.
+
 [47] Kuiper USASAT-NGSO-8A ITU filing. 2018. https://www.itu.int/ITU-R/space/ asreceived/Publication/DisplayPublication/8716.
+
 [48] Kuiper USASAT-NGSO-8B ITU filing. 2018. https://www.itu.int/ITU-R/space/ asreceived/Publication/DisplayPublication/8774.
+
 [49] Kuiper USASAT-NGSO-8C ITU filing. 2018. https://www.itu.int/ITU-R/space/ asreceived/Publication/DisplayPublication/8718.
+
 [50] Kenneth Chun Hei Kwok. 2001. Cost optimization and routing for satellite network constellations. Ph.D. Dissertation. Massachusetts Institute of Technology.
+
 [51] LeoSat. 2018. Technical Overview. http://leosat.com/media/1114/leosat-technicaloverview.pdf.
+
 [52] Jiulong Ma, Xiaogang Qi, and Lifang Liu. 2017. An Effective Topology Design Based on LEO/GEO Satellite Networks. In International Conference on Space Information Network. Springer.
+
 [53] Gérard Maral. 1994. The ways to personal communications via satellite. In International journal of satellite communications. Wiley Online Library.
+
 [54] marine.rutgers.edu. 2001. Keplerian Elements. https://marine.rutgers.edu/cool/ education/class/paul/orbits.html.
+
 [55] Florian Meyer. 2019. A new network design for the "Internet from space". https://ethz.ch/en/news-and-events/eth-news/news/2019/12/a-new-network-design-for-the-internet-from-space.html.
+
 [56] NASA. 2008. Orbits and Kepler's Laws. https://solarsystem.nasa.gov/resources/ 310/orbits-and-keplers-laws/.
+
 [57] NASA. 2020. General Mission Analysis Tool. https://software.nasa.gov/software/ GSC-17177-1.
+
 [58] NetworkX developers. 2020. NetworkX. https://networkx.github.io/.
+
 [59] North American Aerospace Defense Command. 2020. https://www.norad.mil/.
+
 [60] ns-3 Network Simulator. 2020. https://www.nsnam.org/.
+
 [61] Pedro Silva. 2016. ns3-satellite. https://gitlab.inesctec.pt/pmms/ns3-satellite.
+
 [62] Saheli Roy Choudhury. 2019. Super-fast internet from satellites is the next big thing in the space race. https://www.cnbc.com/2019/07/22/fast-internet-via-satellites-is-the-next-big-thing-in-the-space-race.html.
+
 [63] Afreen Siddiqi, Jason Mellein, and Olivier de Weck. 2005. Optimal reconfigurations for increasing capacity of communication satellite constellations. In 46th AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics and Materials Conference.
+
 [64] Kawsu Sidibeh. 2008. Adaption of the IEEE 802.11 protocol for inter-satellite links in LEO satellite networks. Ph.D. Dissertation. University of Surrey (United Kingdom).
+
 [65] SNS3. 2020. https://www.sns3.org/content/home.php.
+
 [66] SpaceX. 2016. SPACEX NON-GEOSTATIONARY SATELLITE SYSTEM. https: //fcc.report/IBFS/SAT-LOA-20161115-00118/1158350.pdf.
+
 [67] SpaceX. 2019. SPACEX NON-GEOSTATIONARY SATELLITE SYSTEM. https: //fcc.report/IBFS/SAT-MOD-20190830-00087/1877671.
+
 [68] SpaceX FCC filing. 2017. SpaceX V-BAND NON-GEOSTATIONARY SATELLITE SYSTEM. https://licensing.fcc.gov/myibfs/download.do?attachment_key= 1190019.
+
 [69] SpaceX FCC update. 2018. SPACEX NON-GEOSTATIONARY SATELLITE SYSTEM. https://licensing.fcc.gov/myibfs/download.do?attachment_key=1569860.
+
 [70] SpaceX Starlink. 2017. https://www.spacex.com/webcast.
+
 [71] David E Sterling and John E Hatlelid. 1991. The IRIDIUM system-a revolutionary satellite communications system developed with innovative applications of technology. In MILCOM 91-Conference record. IEEE.
+
 [72] Telesat. 2018. Telesat's responses - Federal Communications Commission. http: //licensing.fcc.gov/myibfs/download.do?attachment_key=1205775.
+
 [73] Telesat. 2020. APPLICATION FOR MODIFICATION OF MARKET ACCESS AUTHORIZATION. https://fcc.report/IBFS/SAT-MPL-20200526-00053/2378318.pdf.
+
 [74] Telesat. 2020. Telesat: Global Satellite Operators. https://www.telesat.com/.
+
 [75] Liam Tung. 2020. SpaceX's public beta of internet from space service coming by fall 2020. https://www.zdnet.com/article/elon-musk-spacexs-public-beta-of-internet-from-space-service-coming-by-fall-2020/.
+
 [76] Viasat. 2020. https://www.viasat.com/.
+
 [77] Tanya Vladimirova and Kawsu Sidibeh. 2007. Inter-Satellite Links in LEO Constellations of Small Satellites. http://www.ee.surrey.ac.uk/m_ssc/research/vlsi/ intersatellite.html.
+
 [78] Markus Werner, Axel Jahn, Erich Lutz, and Axel Bottcher. 1995. Analysis of system parameters for LEO/ICO-satellite communication networks. In IEEE 7ournal on Selected areas in Communications.
+
 [79] ROBERT WIEDEMAN, ALLEN SALMASI, and Dennis Rouffet. 1992. GlobalstarMobile communications where ever you are. In 14th International Communication Satellite Systems Conference and Exhibit. AIAA.
+
 [80] Lloyd Wood. 2001. Internetworking with satellite constellations. Ph.D. Dissertation. University of Surrey.
+
 [81] Lloyd Wood. 2017. Satellite constellation visualization (SaVi). https://savi. sourceforge.io/.
+
 [82] William W Wu, Edward F Miller, Wilbur L Pritchard, and Raymond L Pickholtz. 1994. Mobile satellite communications. In Proceedings of the IEEE.
+
 
 ## A 地面站中继
 
