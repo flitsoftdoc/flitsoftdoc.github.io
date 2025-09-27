@@ -2,9 +2,8 @@
 
 But why, some say, the Moon? **Why choose this as our goal? **
 
-[![Apollo 11 Flight Plan](/assets/images/Apllo.jpg){ width=600} ](/assets/images/Apllo.jpg){ target="_blank" }
+[![Apollo 11 Flight Plan](/assets/images/Apllo.jpg){ width=700} ](/assets/images/Apllo.jpg){ target="_blank" }
 
-![Apollo 11 Flight Plan](/assets/images/Apllo.jpg){ data-zoomable }
 
 And they may well ask, why climb the highest mountain? Why, 35 years ago, fly the Atlantic? Why does Rice play Texas? 
 
