@@ -13,7 +13,7 @@ slug: Infinity
 
 一种新型的无穷数似乎打破了极大数行为的规则，可能会重新绘制数学宇宙的排列方式。
 
-<img src="/assets/logo/infinity.png" width="300" alt="infinity" />
+<img src="/assets/images/infinity300.png" width="300" alt="infinity" />
 <!-- more -->
 
 1878年，Georg Cantor 首次证明了实数集——包括负数和小数——实际上比自然数（或称为整数）集更大。他用严谨的数学方法证明，虽然整数（1, 2, 3...）有无穷多个，但所有小数（包括像π这样的无理数）组成的集合，其“无穷”的程度更大。证明这一点依赖于对两个集合的精密比较，而非尝试去“数清”它们。
