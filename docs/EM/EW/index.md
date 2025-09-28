@@ -8,9 +8,11 @@
 
 认知系统感知其环境并采取行动以实现目标。它能够在更高层次上进行推理和理解，处理符号和概念信息，从而在复杂情境下做出准确决策。认知系统具有情境感知能力，能够处理不确定性，并能自主作出判断。
 
-> *“认知（Cognition）指的是动物获取、处理、存储并利用环境信息的机制。这包括感知、学习、记忆和决策。”* 
->
-> 来源：Sara Shettleworth, [**Cognition, Evolution, and Behavior**](https://global.oup.com/academic/product/cognition-evolution-and-behavior-9780195319842?cc=us&lang=en&) , Oxford University Press, Second edition, Dec 2009.  本书被认为是生命与行为科学领域的奠基性文献。
+/// note | 认知的定义
+*“认知（Cognition）指的是动物获取、处理、存储并利用环境信息的机制。这包括感知、学习、记忆和决策。”* 
+
+来源：Sara Shettleworth, [**Cognition, Evolution, and Behavior**](https://global.oup.com/academic/product/cognition-evolution-and-behavior-9780195319842?cc=us&lang=en&) , Oxford University Press, Second edition, Dec 2009.  本书被认为是生命与行为科学领域的奠基性文献。
+///
 
 
 图1 展示了这种认知循环。一个认知系统具备以下特征：
@@ -41,7 +43,9 @@ AI系统可以使用来自AI各子领域的技术，如知识管理、态势评�
 
 但只有当系统能够直接与环境交互并更新其决策过程时，它才成为CogEW系统。
 
-> **定义：** *认知电子战能够理解和预测电磁频谱环境，做出目标导向的决策以提升电子战系统的性能，并在任务相关的时间尺度上，通过最少的人类监督，从自身行动中学习。*
+/// note | 认知电子战定义
+ *认知电子战能够理解和预测电磁频谱环境，做出目标导向的决策以提升电子战系统的性能，并在任务相关的时间尺度上，通过最少的人类监督，从自身行动中学习。*
+///
 
 要被视为“认知”，系统必须与环境交互，并利用经验改变决策方式。总结如下：
 
