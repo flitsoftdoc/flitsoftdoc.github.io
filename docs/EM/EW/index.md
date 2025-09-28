@@ -32,7 +32,7 @@
 
 ![Article content](https://media.licdn.com/dms/image/v2/D5612AQFo_HqmIsGfwA/article-inline_image-shrink_1500_2232/B56ZUpCeRaHQAY-/0/1740150269747?e=1761782400&v=beta&t=HbIgyAAvVMenGZYLyuj6rDza7sFhaIG8_Enfqh1nxB4){width="400"}
 
-图2：认知电子战系统通过引入电磁频谱知识来扩展认知系统。来源 [1]。
+图2：认知电子战系统通过引入电磁频谱知识来扩展认知系统。
 
 认知系统与AI增强系统的关键区别在于：认知系统**在部署后仍能学习**。
 
