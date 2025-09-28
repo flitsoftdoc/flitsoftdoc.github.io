@@ -20,7 +20,7 @@
 - **审慎性（Deliberative）**（目标导向）
 - **变革性（Transformative）**（自学习）
 
-![Article content](https://media.licdn.com/dms/image/v2/D5612AQEdRR4-Fpff4A/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1705343140483?e=1761782400&v=beta&t=smNNccZraTDlmtF-8K9lRrpV5nnFoz7aLJTj9GjueS4)
+![Article content](https://media.licdn.com/dms/image/v2/D5612AQEdRR4-Fpff4A/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1705343140483?e=1761782400&v=beta&t=smNNccZraTDlmtF-8K9lRrpV5nnFoz7aLJTj9GjueS4){width="400"}
 
 图1：认知系统是迭代的、交互的、审慎的和变革的。
 
@@ -28,7 +28,7 @@
 
 要构建一个**认知电子战系统（Cognitive EW system, CogEW）**，我们在认知循环中增加关于电磁频谱的知识，如图2所示。该CogEW系统依然保持迭代性、交互性、审慎性和变革性。
 
-![Article content](https://media.licdn.com/dms/image/v2/D5612AQFo_HqmIsGfwA/article-inline_image-shrink_1500_2232/B56ZUpCeRaHQAY-/0/1740150269747?e=1761782400&v=beta&t=HbIgyAAvVMenGZYLyuj6rDza7sFhaIG8_Enfqh1nxB4)
+![Article content](https://media.licdn.com/dms/image/v2/D5612AQFo_HqmIsGfwA/article-inline_image-shrink_1500_2232/B56ZUpCeRaHQAY-/0/1740150269747?e=1761782400&v=beta&t=HbIgyAAvVMenGZYLyuj6rDza7sFhaIG8_Enfqh1nxB4){width="400"}
 
 图2：认知电子战系统通过引入电磁频谱知识来扩展认知系统。来源 [1]。
 
