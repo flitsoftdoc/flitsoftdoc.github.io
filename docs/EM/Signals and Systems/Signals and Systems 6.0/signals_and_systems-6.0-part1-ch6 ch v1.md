@@ -574,6 +574,7 @@ $$
 的傅里叶变换 $X$，其中 $\omega_{0}$ 为实常数。
 
 **解**：回忆 $\cos \alpha=\frac{1}{2}\left[e^{j \alpha}+e^{-j \alpha}\right]$ 对任意实数 $\alpha$ 成立。利用该关系及傅里叶变换的线性性质，可得
+
 $$
 \begin{aligned}
 X(\omega) & =\mathcal{F}\left\{\cos \left(\omega_{0} t\right)\left(\frac{1}{2}\right)\left(e^{j 20 \pi t}+e^{-j 20 \pi t}\right)\right\}(\omega) \\
@@ -581,11 +582,15 @@ X(\omega) & =\mathcal{F}\left\{\cos \left(\omega_{0} t\right)\left(\frac{1}{2}\r
 & =\frac{1}{2} \mathcal{F}\left\{e^{j 20 \pi t} \cos \left(\omega_{0} t\right)\right\}(\omega)+\frac{1}{2} \mathcal{F}\left\{e^{-j 20 \pi t} \cos \left(\omega_{0} t\right)\right\}(\omega)
 \end{aligned}
 $$
+
 根据表 6.2，有
+
 $$
 \cos \left(\omega_{0} t\right) \stackrel{CTFT}{\longleftrightarrow} \pi\left[\delta\left(\omega-\omega_{0}\right)+\delta\left(\omega+\omega_{0}\right)\right] .
 $$
+
 利用该变换对及傅里叶变换的频域平移性质，可得
+
 $$
 \begin{aligned}
 X(\omega) & =\frac{1}{2}\left(\mathcal{F}\left\{\cos \left(\omega_{0} t\right)\right\}\right)(\omega-20 \pi)+\frac{1}{2}\left(\mathcal{F}\left\{\cos \left(\omega_{0} t\right)\right\}\right)(\omega+20 \pi) \\
@@ -593,6 +598,7 @@ X(\omega) & =\frac{1}{2}\left(\mathcal{F}\left\{\cos \left(\omega_{0} t\right)\r
 & =\frac{\pi}{2}\left[\delta\left(\omega+\omega_{0}-20 \pi\right)+\delta\left(\omega-\omega_{0}-20 \pi\right)+\delta\left(\omega+\omega_{0}+20 \pi\right)+\delta\left(\omega-\omega_{0}+20 \pi\right)\right]
 \end{aligned}
 $$
+
 ### 6.7.4 时域与频域缩放（伸缩）
 
 接下来要介绍的傅里叶变换性质是时/频域缩放（即伸缩）性质，如下所示。
@@ -604,20 +610,24 @@ $$
 其中 $a$ 是任意非零实常数。
 
 **证明**：为了证明上述性质，我们按如下步骤进行。设 $y(t)=x(a t)$，并设 $Y=\mathcal{F}\{y\}$。根据傅里叶变换的定义，可得
+
 $$
 Y(\omega)=\int_{-\infty}^{\infty} x(a t) e^{-j \omega t} d t
 $$
+
 现在，我们使用变量替换。设 $\lambda=a t$，则 $t=\lambda / a$ 且 $d t=d \lambda / a$。进行变量替换（并注意积分上下限的变化），得到
+
 $$
 \begin{aligned}
-Y(\omega) & = \begin{cases}\int_{-a(\infty)}^{a(\infty)} x(\lambda) e^{-j(\omega / a) \lambda}\left(\frac{1}{a}\right) d \lambda & a>0 \\[2mm]
+Y(\omega) & = \begin{cases}\int_{-a(\infty)}^{a(\infty)} x(\lambda) e^{-j(\omega / a) \lambda}\left(\frac{1}{a}\right) d \lambda & a>0 \\
 \int_{-a(\infty)}^{a(\infty)} x(\lambda) e^{-j(\omega / a) \lambda}\left(\frac{1}{a}\right) d \lambda & a<0\end{cases} \\
-& = \begin{cases}\int_{-\infty}^{\infty} x(\lambda) e^{-j(\omega / a) \lambda}\left(\frac{1}{a}\right) d \lambda & a>0 \\[1mm]
+& = \begin{cases}\int_{-\infty}^{\infty} x(\lambda) e^{-j(\omega / a) \lambda}\left(\frac{1}{a}\right) d \lambda & a>0 \\
 \int_{\infty}^{-\infty} x(\lambda) e^{-j(\omega / a) \lambda}\left(\frac{1}{a}\right) d \lambda & a<0\end{cases} \\
-& = \begin{cases}\frac{1}{a} \int_{-\infty}^{\infty} x(\lambda) e^{-j(\omega / a) \lambda} d \lambda & a>0 \\[1mm]
+& = \begin{cases}\frac{1}{a} \int_{-\infty}^{\infty} x(\lambda) e^{-j(\omega / a) \lambda} d \lambda & a>0 \\
 -\frac{1}{a} \int_{-\infty}^{\infty} x(\lambda) e^{-j(\omega / a) \lambda} d \lambda & a<0\end{cases}
 \end{aligned}
 $$
+
 结合两种情况（即 $a>0$ 和 $a<0$），得到
 $$
 \begin{aligned}
