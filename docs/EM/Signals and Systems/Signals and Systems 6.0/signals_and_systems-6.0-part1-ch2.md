@@ -34,10 +34,10 @@ $$
 
 $$
 \begin{aligned}
-[a, b]&=\{x \in \mathbb{R}: a \leq x \leq b\}, \\
-(a, b)&=\{x \in \mathbb{R}: a<x<b\}, \\
-[a, b)&=\{x \in \mathbb{R}: a \leq x<b\}, \\
-(a, b]&=\{x \in \mathbb{R}: a<x \leq b\}.
+[a, b] &=\{x \in \mathbb{R}: a \leq x \leq b\}, \\
+(a, b) &=\{x \in \mathbb{R}: a<x<b\}, \\
+[a, b) &=\{x \in \mathbb{R}: a \leq x<b\}, \\
+(a, b] &=\{x \in \mathbb{R}: a<x \leq b\}.
 \end{aligned}
 $$
 
