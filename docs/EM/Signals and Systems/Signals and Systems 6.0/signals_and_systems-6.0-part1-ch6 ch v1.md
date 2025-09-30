@@ -668,15 +668,19 @@ $$
 接下来要介绍的傅里叶变换性质是共轭性质，如下所示。
 
 **定理 6.8（共轭）** 如果 $x(t) \stackrel{CTFT}{\longleftrightarrow} X(\omega)$，则
+
 $$
 x^{*}(t) \stackrel{CTFT}{\longleftrightarrow} X^{*}(-\omega) .
 $$
 
 **证明**：为了证明上述性质，我们按如下步骤进行。设 $y(t)=x^{*}(t)$，并设 $Y=\mathcal{F}\{y\}$。根据傅里叶变换的定义，有
+
 $$
 Y(\omega)=\int_{-\infty}^{\infty} x^{*}(t) e^{-j \omega t} d t
 $$
+
 利用共轭的性质，可将上述方程改写为
+
 $$
 \begin{aligned}
 Y(\omega) & =\left[\left(\int_{-\infty}^{\infty} x^{*}(t) e^{-j \omega t} d t\right)^{*}\right]^{*} \\
@@ -685,27 +689,35 @@ Y(\omega) & =\left[\left(\int_{-\infty}^{\infty} x^{*}(t) e^{-j \omega t} d t\ri
 & =X^{*}(-\omega)
 \end{aligned}
 $$
+
 因此，我们已经证明了共轭性质成立。
 
 **例 6.12（实函数的傅里叶变换）** 设 $X$ 为函数 $x$ 的傅里叶变换。证明：若 $x$ 为实函数，则 $X$ 是共轭对称的（即对所有 $\omega$ 有 $X(\omega)=X^{*}(-\omega)$）。
 
 **解**：根据傅里叶变换的共轭性质，有
+
 $$
 \mathcal{F}\left\{x^{*}(t)\right\}(\omega)=X^{*}(-\omega)
 $$
+
 由于 $x$ 为实函数，可将 $x^{*}$ 替换为 $x$，得到
+
 $$
 \mathcal{F} x(\omega)=X^{*}(-\omega),
 $$
+
 或等价地
+
 $$
 X(\omega)=X^{*}(-\omega)
 $$
+
 ### 6.7.6 对偶性
 
 接下来要介绍的傅里叶变换性质是对偶性，如下所示。
 
 **定理 6.9（对偶性）** 如果 $x(t) \stackrel{CTFT}{\longleftrightarrow} X(\omega)$，则
+
 $$
 X(t) \stackrel{CTFT}{\longleftrightarrow} 2 \pi x(-\omega) .
 $$
