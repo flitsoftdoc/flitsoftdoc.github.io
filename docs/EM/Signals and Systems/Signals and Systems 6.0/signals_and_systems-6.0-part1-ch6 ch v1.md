@@ -787,6 +787,7 @@ x_{1} * x_{2}(t) \stackrel{CTFT}{\longleftrightarrow} X_{1}(\omega) X_{2}(\omega
 $$
 
 **证明**：该性质的证明如下。设 $y(t)=x_{1} * x_{2}(t)$，并设 $Y=\mathcal{F}\{y\}$。根据傅里叶变换与卷积的定义，有
+
 $$
 \begin{aligned}
 Y(\omega) & =\int_{-\infty}^{\infty}\left[x_{1} * x_{2}(t)\right] e^{-j \omega t} d t \\
@@ -794,11 +795,15 @@ Y(\omega) & =\int_{-\infty}^{\infty}\left[x_{1} * x_{2}(t)\right] e^{-j \omega t
 & =\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x_{1}(\tau) x_{2}(t-\tau) e^{-j \omega t} d \tau d t
 \end{aligned}
 $$
+
 交换积分顺序，得到
+
 $$
 Y(\omega)=\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x_{1}(\tau) x_{2}(t-\tau) e^{-j \omega t} d t d \tau
 $$
+
 现在使用变量替换。设 $\lambda=t-\tau$，则 $t=\lambda+\tau$ 且 $d\lambda=d t$。代入并简化，得到
+
 $$
 \begin{aligned}
 Y(\omega) & =\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x_{1}(\tau) x_{2}(\lambda) e^{-j \omega(\lambda+\tau)} d \lambda d \tau \\
@@ -808,11 +813,13 @@ Y(\omega) & =\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x_{1}(\tau) x_{2}(\
 & =X_{1}(\omega) X_{2}(\omega)
 \end{aligned}
 $$
+
 因此，我们证明了时域卷积性质成立。
 
 傅里叶变换的时域卷积性质在实际中有重要意义。由于傅里叶变换能将卷积转换为乘法，因此可以通过傅里叶变换避免直接处理卷积操作。这在求解涉及 LTI 系统的问题时尤为有用，因为此类问题几乎总是涉及卷积（由于 LTI 系统本身就是计算卷积）。
 
 **例 6.14（傅里叶变换的时域卷积性质）** 利用表 6.2，求函数
+
 $$
 x(t)=x_{1} * x_{2}(t)
 $$
@@ -822,20 +829,25 @@ x_{1}(t)=e^{-2 t} u(t) \quad \text { 且 } \quad x_{2}(t)=u(t)
 $$
 
 **解**：设 $X_{1}$ 和 $X_{2}$ 分别为 $x_{1}$ 和 $x_{2}$ 的傅里叶变换。根据傅里叶变换的时域卷积性质，有
+
 $$
 \begin{align*}
 X(\omega) & =\left(\mathcal{F}\left\{x_{1} * x_{2}\right\}\right)(\omega) \\
 & =X_{1}(\omega) X_{2}(\omega) \tag{6.10}
 \end{align*}
 $$
+
 根据表 6.2，得
+
 $$
 \begin{aligned}
 X_{1}(\omega)= & \left(\mathcal{F}\left\{e^{-2 t} u(t)\right\}\right)(\omega) = \frac{1}{2+j \omega}, \\
 X_{2}(\omega) & =\mathcal{F}\{u(t)\} = \pi \delta(\omega)+\frac{1}{j \omega}
 \end{aligned}
 $$
+
 将 $X_{1}(\omega)$ 与 $X_{2}(\omega)$ 代入 (6.10)，得到
+
 $$
 \begin{aligned}
 X(\omega) & =\left[\frac{1}{2+j \omega}\right]\left(\pi \delta(\omega)+\frac{1}{j \omega}\right) \\
@@ -843,20 +855,25 @@ X(\omega) & =\left[\frac{1}{2+j \omega}\right]\left(\pi \delta(\omega)+\frac{1}{
 & =\frac{\pi}{2+j \omega} \delta(\omega)+\frac{1}{j 2 \omega-\omega^{2}}
 \end{aligned}
 $$
+
 根据 $\delta$ 函数的等价性质，可进一步简化为
+
 $$
 X(\omega)=\frac{\pi}{2} \delta(\omega)+\frac{1}{j 2 \omega-\omega^{2}}
 $$
+
 ### 6.7.8 时域乘法
 
 接下来要介绍的傅里叶变换性质是时域乘法（或频域卷积）性质，如下所示。
 
 **定理 6.11（时域乘法）** 如果 $x_{1}(t) \stackrel{CTFT}{\longleftrightarrow} X_{1}(\omega)$ 且 $x_{2}(t) \stackrel{CTFT}{\longleftrightarrow} X_{2}(\omega)$，则
+
 $$
 x_{1}(t) x_{2}(t) \stackrel{CTFT}{\longleftrightarrow} \frac{1}{2 \pi} X_{1} * X_{2}(\omega)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} X_{1}(\theta) X_{2}(\omega-\theta) d \theta
 $$
 
 **证明**：设 $Y(\omega)=\frac{1}{2 \pi} X_{1} * X_{2}(\omega)$ 并令 $y=\mathcal{F}^{-1} Y$。根据逆傅里叶变换定义，有
+
 $$
 \begin{aligned}
 y(t) & =\frac{1}{2 \pi} \int_{-\infty}^{\infty}\left[\frac{1}{2 \pi} X_{1} * X_{2}(\omega)\right] e^{j \omega t} d \omega \\
@@ -866,11 +883,13 @@ y(t) & =\frac{1}{2 \pi} \int_{-\infty}^{\infty}\left[\frac{1}{2 \pi} X_{1} * X_{
 $$
 
 交换积分顺序，得到
+
 $$
 y(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \frac{1}{2 \pi} X_{1}(\lambda) X_{2}(\omega-\lambda) e^{j \omega t} d \omega d \lambda
 $$
 
 进行变量替换，设 $v=\omega-\lambda$，则 $\omega=v+\lambda$ 且 $dv=d\omega$。代入并简化，得到
+
 $$
 \begin{aligned}
 y(t) & =\frac{1}{2 \pi} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \frac{1}{2 \pi} X_{1}(\lambda) X_{2}(v) e^{j(v+\lambda) t} d v d \lambda \\
@@ -887,35 +906,48 @@ $$
 从前述定理的时域乘法性质可以看出，傅里叶变换能够将乘法操作转换为卷积操作（带比例因子 $\frac{1}{2 \pi}$）。由于卷积比乘法复杂得多，我们通常会避免在工作中引入额外的卷积操作。
 
 **例 6.15（频域卷积性质）** 设 $x$ 和 $y$ 之间的关系为
+
 $$
 y(t)=x(t) \cos \left(\omega_{c} t\right)
 $$
+
 其中 $\omega_{c}$ 是非零实数。令 $Y=\mathcal{F}\{y\}$，$X=\mathcal{F}\{x\}$。求 $Y$ 关于 $X$ 的表达式。
 
 **解**：为了简化符号，定义
+
 $$
 v(t)=\cos \left(\omega_{c} t\right)
 $$
+
 并设 $V$ 为 $v$ 的傅里叶变换。根据表 6.2，有
+
 $$
 V(\omega)=\pi\left[\delta\left(\omega-\omega_{c}\right)+\delta\left(\omega+\omega_{c}\right)\right]
 $$
+
 由 $v$ 的定义，得
+
 $$
 y(t)=x(t) v(t)
 $$
+
 对两边取傅里叶变换，得到
+
 $$
 Y(\omega)=\mathcal{F}\{x(t) v(t)\}(\omega)
 $$
+
 利用傅里叶变换的频域卷积性质，得到
+
 $$
 \begin{aligned}
 Y(\omega) & =\frac{1}{2 \pi} X * V(\omega) \\
 & =\frac{1}{2 \pi} \int_{-\infty}^{\infty} X(\lambda) V(\omega-\lambda) d \lambda
 \end{aligned}
 $$
+
 代入 $V(\omega)$ 的表达式，得到
+
 $$
 \begin{aligned}
 Y(\omega) & =\frac{1}{2 \pi} \int_{-\infty}^{\infty} X(\lambda)\left(\pi\left[\delta\left(\omega-\lambda-\omega_{c}\right)+\delta\left(\omega-\lambda+\omega_{c}\right)\right]\right) d \lambda \\
@@ -925,21 +957,25 @@ Y(\omega) & =\frac{1}{2 \pi} \int_{-\infty}^{\infty} X(\lambda)\left(\pi\left[\d
 & =\frac{1}{2} X\left(\omega-\omega_{c}\right)+\frac{1}{2} X\left(\omega+\omega_{c}\right)
 \end{aligned}
 $$
+
 ### 6.7.9 时域微分
 
 接下来要介绍的傅里叶变换性质是时域微分性质，如下所示。
 
 **定理 6.12（时域微分）** 如果 $x(t) \stackrel{CTFT}{\longleftrightarrow} X(\omega)$，则
+
 $$
 \frac{d x(t)}{d t} \stackrel{CTFT}{\longleftrightarrow} j \omega X(\omega)
 $$
 
 **证明**：设 $Y(\omega)=j \omega X(\omega)$ 并令 $y=\mathcal{F}^{-1} Y$。根据逆傅里叶变换定义，有
+
 $$
 x(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} X(\omega) e^{j \omega t} d \omega
 $$
 
 对两边关于 $t$ 求导，得到
+
 $$
 \begin{aligned}
 \frac{d x(t)}{d t} & =\frac{1}{2 \pi} \int_{-\infty}^{\infty} j \omega X(\omega) e^{j \omega t} d \omega \\
@@ -951,6 +987,7 @@ $$
 由此证明了时域微分性质成立。
 
 通过重复应用上述定理，可以得到更一般的结果：
+
 $$
 \left(\frac{d}{d t}\right)^{n} x(t) \stackrel{CTFT}{\longleftrightarrow} (j \omega)^{n} X(\omega)
 $$
@@ -958,20 +995,27 @@ $$
 时域微分性质的实际意义在于，傅里叶变换将微分运算转换为乘法（乘以 $j \omega$），从而避免直接处理微分操作。这在求解微分方程或积分-微分方程时非常有用。
 
 **例 6.16（时域微分性质）** 求
+
 $$
 x(t)=\frac{d}{d t} \delta(t)
 $$
+
 的傅里叶变换 $X(\omega)$。
 
 **解**：对两边取傅里叶变换，得到
+
 $$
 X(\omega)=\mathcal{F}\left\{\frac{d}{d t} \delta(t)\right\}(\omega)
 $$
+
 利用时域微分性质，有
+
 $$
 X(\omega) = j \omega \mathcal{F}\{\delta(t)\}(\omega)
 $$
+
 根据表 6.2，$\mathcal{F}\{\delta(t)\} = 1$，因此
+
 $$
 X(\omega) = j \omega
 $$
@@ -985,11 +1029,13 @@ t x(t) \stackrel{CTFT}{\longleftrightarrow} j \frac{d}{d \omega} X(\omega)
 $$
 
 **证明**：设 $y(t)=t x(t)$ 并令 $Y=\mathcal{F} y$。根据傅里叶变换定义，有
+
 $$
 X(\omega)=\int_{-\infty}^{\infty} x(t) e^{-j \omega t} d t
 $$
 
 对两边关于 $\omega$ 求导，得到
+
 $$
 \begin{aligned}
 \frac{d}{d \omega} X(\omega) & =\int_{-\infty}^{\infty} x(t)(-j t) e^{-j \omega t} d t \\
@@ -999,6 +1045,7 @@ $$
 $$
 
 两边同时乘以 $j$，得到
+
 $$
 j \frac{d}{d \omega} X(\omega)=Y(\omega)
 $$
@@ -1006,24 +1053,30 @@ $$
 由此证明了频域微分性质成立。
 
 **例 6.17（频域微分性质）** 求
+
 $$
 x(t)=t \cos \left(\omega_{0} t\right)
 $$
+
 的傅里叶变换 $X(\omega)$，其中 $\omega_{0}$ 为非零实数。
 
 **解**：对两边取傅里叶变换，得到
+
 $$
 X(\omega)=\mathcal{F}\left\{t \cos \left(\omega_{0} t\right)\right\}(\omega)
 $$
 
 利用傅里叶变换的频域微分性质，有
+
 $$
 \begin{aligned}
 X(\omega) & =\mathcal{F}\left\{t \cos \left(\omega_{0} t\right)\right\}(\omega) \\
 & =j\left(\mathcal{D} \mathcal{F}\left\{\cos \left(\omega_{0} t\right)\right\}\right)(\omega),
 \end{aligned}
 $$
+
 其中 $\mathcal{D}$ 表示求导算子。根据表 6.2，傅里叶变换为
+
 $$
 \begin{aligned}
 X(\omega) & =j \frac{d}{d \omega}\left[\pi\left[\delta\left(\omega-\omega_{0}\right)+\delta\left(\omega+\omega_{0}\right)\right]\right] \\
@@ -1031,11 +1084,13 @@ X(\omega) & =j \frac{d}{d \omega}\left[\pi\left[\delta\left(\omega-\omega_{0}\ri
 & =j \pi \frac{d}{d \omega} \delta\left(\omega-\omega_{0}\right) + j \pi \frac{d}{d \omega} \delta\left(\omega+\omega_{0}\right)
 \end{aligned}
 $$
+
 ### 6.7.11 时域积分
 
 接下来要介绍的傅里叶变换性质是时域积分性质，如下所示。
 
 **定理 6.14（时域积分）** 如果 $x(t) \stackrel{CTFT}{\longleftrightarrow} X(\omega)$，则
+
 $$
 \int_{-\infty}^{t} x(\tau) d \tau \stackrel{CTFT}{\longleftrightarrow} \frac{1}{j \omega} X(\omega)+\pi X(0) \delta(\omega)
 $$
@@ -1046,19 +1101,25 @@ y(t)=\int_{-\infty}^{t} x(\tau) d \tau, \quad Y=\mathcal{F} y, \quad U=\mathcal{
 $$
 
 首先注意到
+
 $$
 y(t)=x * u(t)
 $$
+
 两边取傅里叶变换，并利用时域卷积性质，得到
+
 $$
 Y(\omega)=X(\omega) U(\omega) \tag{6.11}
 $$
 
 由例 6.8，可知
+
 $$
 u(t) \stackrel{CTFT}{\longleftrightarrow} \pi \delta(\omega) + \frac{1}{j \omega}
 $$
+
 于是 (6.11) 可写为
+
 $$
 \begin{aligned}
 Y(\omega) & = X(\omega) \left[ \pi \delta(\omega) + \frac{1}{j \omega} \right] \\
@@ -1067,6 +1128,7 @@ Y(\omega) & = X(\omega) \left[ \pi \delta(\omega) + \frac{1}{j \omega} \right] \
 $$
 
 根据狄拉克函数的等价性质，有
+
 $$
 Y(\omega) = \frac{1}{j \omega} X(\omega) + \pi X(0) \delta(\omega)
 $$
@@ -1083,16 +1145,19 @@ x(t) = u(t) = \int_{-\infty}^{t} \delta(\tau) d \tau
 $$
 
 取傅里叶变换，利用时域积分性质，有
+
 $$
 X(\omega) = \frac{1}{j \omega} \mathcal{F} \delta(\omega) + \pi \mathcal{F} \delta(0) \delta(\omega)
 $$
 
 利用表 6.2，$\mathcal{F} \delta = 1$，得到
+
 $$
 X(\omega) = \frac{1}{j \omega} + \pi \delta(\omega)
 $$
 
 因此，
+
 $$
 u(t) \stackrel{CTFT}{\longleftrightarrow} \frac{1}{j \omega} + \pi \delta(\omega)
 $$
@@ -1102,10 +1167,13 @@ $$
 接下来要介绍的傅里叶变换性质涉及信号能量，称为 Parseval 定理。
 
 **定理 6.15（Parseval 定理）** 如果 
+
 $$
 x(t) \stackrel{CTFT}{\longleftrightarrow} X(\omega),
 $$
+
 则有
+
 $$
 \int_{-\infty}^{\infty} |x(t)|^2 dt = \frac{1}{2 \pi} \int_{-\infty}^{\infty} |X(\omega)|^2 d\omega \tag{6.12}
 $$
@@ -1113,6 +1181,7 @@ $$
 也就是说，信号 $x$ 的能量与其傅里叶变换 $X$ 的能量相等（相差一个 $2\pi$ 的比例系数）。（回忆信号能量定义为 $\int_{-\infty}^{\infty} |x(t)|^2 dt$。）
 
 **证明**：考虑 (6.12) 左侧：
+
 $$
 \begin{aligned}
 \int_{-\infty}^{\infty} |x(t)|^2 dt &= \int_{-\infty}^{\infty} x(t) x^*(t) dt \\
@@ -1121,20 +1190,25 @@ $$
 $$
 
 利用傅里叶变换的共轭性质：
+
 $$
 x^*(t) \stackrel{CTFT}{\longleftrightarrow} X^*(-\omega)
 $$
+
 于是可得
+
 $$
 \int_{-\infty}^{\infty} |x(t)|^2 dt = \int_{-\infty}^{\infty} x(t) \left[ \frac{1}{2 \pi} \int_{-\infty}^{\infty} X^*(-\omega) e^{j \omega t} d\omega \right] dt
 $$
 
 令 $\omega \to -\omega$，得到
+
 $$
 \int_{-\infty}^{\infty} |x(t)|^2 dt = \frac{1}{2 \pi} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x(t) X^*(\omega) e^{-j \omega t} d\omega dt
 $$
 
 交换积分顺序并简化：
+
 $$
 \begin{aligned}
 \int_{-\infty}^{\infty} |x(t)|^2 dt &= \frac{1}{2 \pi} \int_{-\infty}^{\infty} X^*(\omega) \left[ \int_{-\infty}^{\infty} x(t) e^{-j \omega t} dt \right] d\omega \\
