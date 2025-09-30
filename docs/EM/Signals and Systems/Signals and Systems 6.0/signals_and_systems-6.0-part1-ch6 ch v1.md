@@ -400,6 +400,7 @@ $$
 其中 $a_{1}$ 和 $a_{2}$ 是任意复数常数。
 
 **证明**：为了证明上述性质，我们按如下步骤进行。设 $y(t)=a_{1} x_{1}(t)+a_{2} x_{2}(t)$，并设 $Y=\mathcal{F}\{y\}$。则有
+
 $$
 \begin{aligned}
 Y(\omega) & =\int_{-\infty}^{\infty}\left[a_{1} x_{1}(t)+a_{2} x_{2}(t)\right] e^{-j \omega t} d t \\
@@ -408,6 +409,7 @@ Y(\omega) & =\int_{-\infty}^{\infty}\left[a_{1} x_{1}(t)+a_{2} x_{2}(t)\right] e
 & =a_{1} X_{1}(\omega)+a_{2} X_{2}(\omega)
 \end{aligned}
 $$
+
 因此，我们已经证明了线性性质成立。
 
 **例 6.7（傅里叶变换的线性性质）** 利用傅里叶变换的性质和变换对
@@ -421,24 +423,31 @@ $$
 的傅里叶变换 $X$，其中 $A$ 和 $\omega_{0}$ 为实常数。
 
 **解**：回忆 $\cos \alpha=\frac{1}{2}\left[e^{j \alpha}+e^{-j \alpha}\right]$ 对任意实数 $\alpha$ 成立。因此，我们可以写成
+
 $$
 \begin{aligned}
 X(\omega) & =\left(\mathcal{F}\left\{A \cos \left(\omega_{0} t\right)\right\}\right)(\omega) \\
 & =\left(\mathcal{F}\left\{\frac{A}{2}\left(e^{j \omega_{0} t}+e^{-j \omega_{0} t}\right)\right\}\right)(\omega)
 \end{aligned}
 $$
+
 然后，利用傅里叶变换的线性性质可得
+
 $$
 X(\omega)=\frac{A}{2} \mathcal{F}\left\{e^{j \omega_{0} t}\right\}(\omega)+\frac{A}{2} \mathcal{F}\left\{e^{-j \omega_{0} t}\right\}(\omega)
 $$
+
 利用给定的傅里叶变换对，上式可进一步简化为：
+
 $$
 \begin{aligned}
 X(\omega) & =\frac{A}{2}\left[2 \pi \delta\left(\omega-\omega_{0}\right)\right]+\frac{A}{2}\left[2 \pi \delta\left(\omega+\omega_{0}\right)\right] \\
 & =A \pi\left[\delta\left(\omega-\omega_{0}\right)+\delta\left(\omega+\omega_{0}\right)\right] .
 \end{aligned}
 $$
+
 因此，我们得出
+
 $$
 A \cos \left(\omega_{0} t\right) \stackrel{CTFT}{\longleftrightarrow} A \pi\left[\delta\left(\omega-\omega_{0}\right)+\delta\left(\omega+\omega_{0}\right)\right] .
 $$
@@ -450,28 +459,38 @@ $$
 求函数 $x(t)=u(t)$ 的傅里叶变换 $X$。
 
 **解**：首先注意到，$x$ 可用符号函数表示为
+
 $$
 x(t)=u(t)=\frac{1}{2}+\frac{1}{2} \operatorname{sgn} t
 $$
+
 对该等式两边进行傅里叶变换，得到
+
 $$
 X(\omega)=\left(\mathcal{F}\left\{\frac{1}{2}+\frac{1}{2} \operatorname{sgn} t\right\}\right)(\omega)
 $$
+
 利用傅里叶变换的线性性质，可以写成
+
 $$
 X(\omega)=\frac{1}{2} \mathcal{F}\{1\}(\omega)+\frac{1}{2} \mathcal{F}\{\operatorname{sgn} t\}(\omega)
 $$
+
 利用给定的变换对计算这两个傅里叶变换，得到
+
 $$
 \begin{aligned}
 X(\omega) & =\frac{1}{2}[2 \pi \delta(\omega)]+\frac{1}{2}\left(\frac{2}{j \omega}\right) \\
 & =\pi \delta(\omega)+\frac{1}{j \omega}
 \end{aligned}
 $$
+
 因此，我们得出
+
 $$
 u(t) \stackrel{CTFT}{\longleftrightarrow} \pi \delta(\omega)+\frac{1}{j \omega} .
 $$
+
 ### 6.7.2 时域平移（位移）
 
 接下来要介绍的傅里叶变换性质是时域平移（即位移）性质，如下所示。
@@ -508,6 +527,7 @@ $$
 \cos \left(\omega_{0} t\right) \stackrel{CTFT}{\longleftrightarrow} \pi\left[\delta\left(\omega-\omega_{0}\right)+\delta\left(\omega+\omega_{0}\right)\right] .
 $$
 利用该变换对及傅里叶变换的线性性质，可得
+
 $$
 \begin{aligned}
 V(\omega) & =\mathcal{F}\left\{A \cos \left(\omega_{0} t\right)\right\}(\omega) \\
@@ -515,6 +535,7 @@ V(\omega) & =\mathcal{F}\left\{A \cos \left(\omega_{0} t\right)\right\}(\omega) 
 & =A \pi\left[\delta\left(\omega+\omega_{0}\right)+\delta\left(\omega-\omega_{0}\right)\right] .
 \end{aligned}
 $$
+
 根据 $v$ 的定义及傅里叶变换的时域平移性质，有
 $$
 \begin{aligned}
