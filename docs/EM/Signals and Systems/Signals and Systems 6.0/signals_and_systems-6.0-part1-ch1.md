@@ -46,7 +46,7 @@
 
 前面已经提出了一些信号的例子。这里我们提供一些信号的图形表示以作说明。图1.2描绘了一个数字化语音信号。图1.3展示了一个单色图像的例子。在这种情况下，信号表示光强度随两个变量（即水平和垂直位置）的函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-013.jpg?height=609&width=868&top_left_y=324&top_left_x=686) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-013.jpg?height=609&width=868&top_left_y=324&top_left_x=686){width="400"}
  
 图1.2：数字化人类语音的片段。
 
