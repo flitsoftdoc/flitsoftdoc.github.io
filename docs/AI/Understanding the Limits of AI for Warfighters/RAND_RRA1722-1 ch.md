@@ -330,7 +330,8 @@ AI支持者认为，AI可以使兵棋推演更高效，甚至能够用于解决�
 
 > ${ }^{31}$ Elizabeth M. Bartels，《Building Better Games for National Security Policy Analysis: Towards a Social Scientific Approach》，RAND Corporation, RGSD-437, 2020。
 
-表 2.1. 按目的划分的兵棋推演类型  
+表 2.1. 按目的划分的兵棋推演类型 
+
 | 类型 | 目的 | TTPs成熟度 | 分析重点 | 示例 |
 | :--- | :--- | :--- | :--- | :--- |
 | 系统探索（Systems exploration） | 通过专家玩家的思维模型提升对战术或技术问题的理解 | 不断演化 | 问题 | RAND的灰色地带战术游戏（Gray Zone Games）${ }^{\text a}$ |
