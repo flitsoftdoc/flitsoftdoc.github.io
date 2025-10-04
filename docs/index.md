@@ -1,4 +1,4 @@
-# We choose to go to the Moon 
+# We Choose To Go To The Moon 
 
 But why, some say, the Moon?  **Why choose this as our goal?**
 
