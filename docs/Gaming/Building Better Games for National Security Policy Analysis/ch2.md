@@ -122,7 +122,10 @@
 |  | 国土安全部（DHS） | X$^\dagger$ |  |
 | 国际机构 | 英国国防部 | X$^\dagger$ |  |
 
-$\dagger$ 表示参与者为承包商或联邦资助研究机构成员
+\* 表示受访者为该部门的前成员（离任未满 5 年）；
+
+$\dagger$ 表示访谈包含了承包商（contractor）或联邦资助的研究与开发中心（federally funded research and development center, FFRDC）研究人员。
+
 
 ### 第四阶段：案例归档
 
