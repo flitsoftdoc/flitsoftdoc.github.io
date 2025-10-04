@@ -1,4 +1,4 @@
-# 利用构造性仿真促进强化学习
+# 卷6：利用构造性仿真促进强化学习
 
 ## Harnessing Constructive Simulations for Reinforcement Learning 
 
