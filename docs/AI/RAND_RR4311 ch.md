@@ -1,5 +1,5 @@
 # Air Dominance Through Machine Learning  
-### A Preliminary Exploration of Artificial Intelligence Assisted Mission Planning
+## A Preliminary Exploration of Artificial Intelligence Assisted Mission Planning
 
 ### 通过机器学习实现空中优势
 #### 人工智能辅助任务规划的初步探索
