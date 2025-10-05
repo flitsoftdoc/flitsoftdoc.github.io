@@ -1,9 +1,11 @@
-# 通过机器学习实现空中优势
+# Air Dominance Through Machine Learning  
+### A Preliminary Exploration of Artificial Intelligence Assisted Mission Planning
 
-## 人工智能辅助任务规划的初步探索
+### 通过机器学习实现空中优势
+#### 人工智能辅助任务规划的初步探索
 
 Air Dominance Through Machine Learning 
-A Preliminary Exploration of Artificial Intelligence Assisted Mission Planning
+
 
 LI ANG ZHANG, JIA XU, DARA GOLD, JEFF HAGEN, AJAY K. KOCHHAR, ANDREW J. LOHN, OSONDE A. OSOBA
 
