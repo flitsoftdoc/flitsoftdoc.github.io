@@ -4,13 +4,9 @@
 ### 通过机器学习实现空中优势
 #### 人工智能辅助任务规划的初步探索
 
-Air Dominance Through Machine Learning 
-
-
 LI ANG ZHANG, JIA XU, DARA GOLD, JEFF HAGEN, AJAY K. KOCHHAR, ANDREW J. LOHN, OSONDE A. OSOBA
 
-![](https://cdn.mathpix.com/snip/images/j5NDn2uN9H7j_dmkp5_j7z5Ey6lc7lCqeLR524uss94.original.fullsize.png){width="200"}
-
+![](https://cdn.mathpix.com/snip/images/XiqMkPnt8me9zlumzvwHNiTFZkOygw_LC61i2qD-k0c.original.fullsize.png){width="200"}
 
 ISBN: 978-1-9774-0515-9
 
