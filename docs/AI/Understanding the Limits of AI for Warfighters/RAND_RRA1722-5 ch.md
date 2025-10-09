@@ -1,6 +1,5 @@
-# UNDERSTANDING THE LIMITS OF ARTIFICIAL INTELLIGENCE FOR WARFIGHTERS 
 
-卷5：任务规划
+# 卷5：任务规划
 
 
 ## 关于本报告
@@ -16,6 +15,7 @@
 
 此处报告的研究由空军装备司令部战略规划、项目、需求和评估部门（AFMC/A5/8/9）委托，并在兰德公司项目空军的部队现代化和运用项目中进行，作为2022财年项目"理解人工智能在战争应用中的界限"的一部分。
 
+![](https://cdn.mathpix.com/snip/images/E0s7UfbUoO--ttDrKjFv1Gc5zm4wGAXtTo5GPL3PEBo.original.fullsize.png){width="200"}
 
 
 ## 致谢
