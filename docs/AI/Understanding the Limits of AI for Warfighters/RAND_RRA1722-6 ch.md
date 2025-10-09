@@ -4,6 +4,8 @@
 
 GARY J. BRIGGS
 
+![](https://cdn.mathpix.com/snip/images/R12vHWKpVIn-1xzyqJHmM3OSGOioix8d-uGgYer--8M.original.fullsize.png){width="200"}
+
 https://www.rand.org/pubs/research_reports/RRA1722-6.html
 
 ### 关键要点
