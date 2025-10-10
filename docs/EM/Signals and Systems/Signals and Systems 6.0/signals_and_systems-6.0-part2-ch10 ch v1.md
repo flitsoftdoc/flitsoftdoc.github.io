@@ -12,11 +12,13 @@ $$
 \phi_{k}(n)=e^{j(2 \pi / N) k n} \quad \text{ 对所有 } k \in \mathbb{Z}
 $$
 
+
 其中 $N$ 是一个（严格）正整数常数。由于 $e^{j \theta}$ 在变量 $\theta$ 上是 $2 \pi$ 周期的，故对所有 $m \in \mathbb{Z}$，有 $\phi_{k}=\phi_{k+mN}$。因此，上述序列集合只包含 $N$ 个不同的元素，这些元素可以通过选择任意 $N$ 个连续整数的 $k$ 来获得（例如 $k \in [0..N-1]$）。此外，由于 $\left(\frac{2 \pi}{N} k\right)/(2 \pi)=\frac{k}{N}$ 是一个有理数，每个 $\phi_{k}$ 都是周期序列。特别地，$\phi_{k}$ 的基本周期为 $\frac{N}{\operatorname{gcd}(k, N)}$。由最大公约数的定义可知，$N$ 必然是 $\frac{N}{\operatorname{gcd}(k, N)}$ 的整数倍，因此每个 $\phi_{k}$ 必然是 $N$ 周期的。由于具有相同周期的周期序列的和仍然是该周期的周期序列，所以 $\phi_{k}$ 的任意线性组合必然是 $N$ 周期的。因此，例如以下形式的和必然是 $N$ 周期的：
 
 $$
 \sum_{k=K_{0}}^{K_{0}+N-1} a_{k} \phi_{k}(n)=\sum_{k=K_{0}}^{K_{0}+N-1} a_{k} e^{j(2 \pi / N) k n}
 $$
+
 
 其中 $a_{k}$ 是复常数，$K_{0}$ 是一个整数常数。
 
@@ -28,6 +30,7 @@ x(n)=\sum_{k=\langle N\rangle} c_{k} e^{j k(2 \pi / N) n} \tag{10.1}
 \end{equation*}
 $$
 
+
 其中 $c$ 是一个复的 $N$ 周期序列，$\sum_{k=\langle N\rangle}$ 表示在任意 $N$ 个连续整数上的求和。这样的表示称为**离散时间傅里叶级数（DTFS）**。更具体地，这是傅里叶级数的复指数形式。在术语上，我们称 (10.1) 为**傅里叶级数合成公式**。
 
 由于我们经常使用傅里叶级数，有时使用一种简写符号来表示某个序列与其对应的傅里叶级数系数之间的关系。如果序列 $x$ 的傅里叶级数系数为 $c$，我们有时记作：
@@ -35,6 +38,8 @@ $$
 $$
 x(n) \stackrel{\mathrm{DTFS}}{\longleftrightarrow} c_{k} .
 $$
+
+
 ## 10.3 序列的傅里叶级数表示的确定
 
 给定一个任意的周期序列 $x$，我们需要某种方法来求解其对应的傅里叶级数表示。换句话说，我们需要一种方法来计算与 $x$ 对应的傅里叶级数系数序列。这样的一个方法由下面的定理给出。
@@ -48,11 +53,13 @@ c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n} \quad \te
 \end{equation*}
 $$
 
+
 **证明.** 回忆傅里叶级数合成公式，有
 
 $$
 x(n)=\sum_{\ell=\langle N\rangle} c_{\ell} e^{j(2 \pi / N) \ell n}
 $$
+
 
 将等式两边同时乘以 $e^{-j(2 \pi / N) k n}$，得到
 
@@ -63,17 +70,20 @@ x(n) e^{-j(2 \pi / N) k n} & =\sum_{\ell=\langle N\rangle} c_{\ell} e^{j(2 \pi /
 \end{aligned}
 $$
 
+
 在 $x$ 的一个周期 $N$ 上对等式两边求和，得到
 
 $$
 \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}=\sum_{n=\langle N\rangle} \sum_{\ell=\langle N\rangle} c_{\ell} e^{j(2 \pi / N)(\ell-k) n}
 $$
 
+
 交换右侧的求和顺序，得
 
 $$
 \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}=\sum_{\ell=\langle N\rangle} c_{\ell}\left(\sum_{n=\langle N\rangle} e^{j(2 \pi / N)(\ell-k) n}\right)
 $$
+
 
 将 $k$ 改写为 $k=N k_{1}+k_{0}$，其中 $k_{1}$ 和 $k_{0}$ 为整数，且 $k_{0} \in[0..N-1]$（即 $k_{1}=N\lfloor k / N\rfloor$，$k_{0}=\bmod (k, N)$），
 并将右侧外层求和限制在 $\ell \in[0..N-1]$，得到
@@ -88,6 +98,8 @@ $$
 & =\sum_{\ell=0}^{N-1} c_{\ell}\left(\sum_{n=\langle N\rangle} e^{j(2 \pi / N)\left(\ell-k_{0}\right) n}\right) \tag{10.3}
 \end{align*}
 $$
+
+
 现在考虑上述等式右侧的内层求和。我们注意到
 
 $$
@@ -97,6 +109,7 @@ N & \left(\ell-k_{0}\right) / N \in \mathbb{Z} \tag{10.4}\\
 0 & \text{ 否则 }
 \end{cases}
 $$
+
 
 （公式 (10.4) 的证明留作习题 A.9 供读者完成。）此外，由于 $\ell-k_{0} \in[-(N-1)..N-1]$，唯一能使 $\left(\ell-k_{0}\right) / N \in \mathbb{Z}$ 成立的情况是 $\ell-k_{0}=0$（即 $\ell=k_{0}$）。因此，(10.4) 的右边可以简化为 $N \boldsymbol{\delta}\left(\ell-k_{0}\right)$。将 (10.4) 代入 (10.3)，我们得到
 
@@ -108,11 +121,13 @@ $$
 \end{aligned}
 $$
 
+
 整理后可得
 
 $$
 c_{k_{0}}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}
 $$
+
 
 由于 $k=k_{0}$ 对 $k \in [0..N-1]$ 成立，我们有
 
@@ -120,11 +135,13 @@ $$
 c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n} \quad \text{ 对 } k \in [0..N-1]
 $$
 
+
 由于 $c$ 是 $N$ 周期的，且上述公式给出的 $c_{k}$ 关于 $k$ 也是 $N$ 周期的，因此该公式对所有 $k \in \mathbb{Z}$ 都成立。于是我们得到
 
 $$
 c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n} \quad \text{ 对所有 } k \in \mathbb{Z}
 $$
+
 
 在术语上，我们称 (10.2) 为**傅里叶级数分析公式**。
 
@@ -137,6 +154,8 @@ c_{0} & =\left.\left[\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N)
 & =\frac{1}{N} \sum_{n=\langle N\rangle} x(n)
 \end{aligned}
 $$
+
+
 因此，$c_{0}$ 就是 $x$ 在一个周期内的平均值。  
 
 **例 10.1** 求序列的傅里叶级数表示：
@@ -145,11 +164,13 @@ $$
 x(n)=\sin \left(\frac{2 \pi}{7} n\right)
 $$
 
+
 **解：** 首先，我们需要确认 $x$ 是否具有傅里叶级数表示。由于  
 
 $$
 \frac{2\pi}{\tfrac{2\pi}{7}}=(2 \pi)\left(\frac{7}{2 \pi}\right)=7
 $$
+
 
 是有理数，所以序列 $x$ 是周期序列。特别地，其周期为 $N=7$。因此，$x$ 确实有傅里叶级数表示。利用欧拉公式，我们可以将 $x$ 表示为  
 
@@ -162,11 +183,13 @@ $$
 \end{aligned}
 $$
 
+
 因此，$x$ 的傅里叶级数表示为  
 
 $$
 x(n)=\sum_{k=-3}^{3} c_{k} e^{j(2 \pi / 7) k n}
 $$
+
 
 其中  
 
@@ -180,11 +203,13 @@ c_{k}=
 \quad \text{ 且 } \quad c_{k}=c_{k+7}
 $$
 
+
 由于 $c$ 是 7 周期的，我们也可以将求和区间换成任意连续的 7 个整数，并规定 $k \in[0..6]$ 的 $c_{k}$，从而得到  
 
 $$
 x(n)=\sum_{k=\langle 7\rangle} c_{k} e^{j(2 \pi / 7) k n}
 $$
+
 
 其中  
 
@@ -198,6 +223,7 @@ c_{k}=
 \quad \text{ 且 } \quad c_{k}=c_{k+7}
 $$
 
+
 ---
 
 **例 10.2（周期冲激列）** 求以下周期冲激列的傅里叶级数表示：
@@ -205,6 +231,7 @@ $$
 $$
 x(n)=\sum_{\ell=-\infty}^{\infty} \delta(n-N \ell)
 $$
+
 
 其中 $N$ 是一个严格正整数常数。  
 
@@ -214,11 +241,13 @@ $$
 c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}
 $$
 
+
 选择在区间 $[0..N-1]$ 上求和，并代入给定的 $x$ 表达式，有  
 
 $$
 c_{k}=\frac{1}{N} \sum_{n=0}^{N-1} \delta(n) e^{-j(2 \pi / N) k n}
 $$
+
 
 利用 $\delta$ 序列的抽取（sifting）性质，得到  
 
@@ -229,16 +258,20 @@ c_{k} & =\frac{1}{N} e^{0} \\
 \end{aligned}
 $$
 
+
 因此，$x$ 的傅里叶级数表示为
+
 $$
 x(n)=\sum_{k=0}^{N-1} c_{k} e^{j(2 \pi / N) k n}
 $$
+
 
 其中  
 
 $$
 c_{k}=\frac{1}{N} \quad \text{ 对所有 } k \in \mathbb{Z}
 $$
+
 
 ---
 
@@ -254,11 +287,13 @@ x(n)=
 \end{cases}
 $$
 
+
 **解：** 回忆傅里叶级数分析公式，有  
 
 $$
 c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}
 $$
+
 
 选择在区间 $[-2..2]$ 上求和，并代入给定的 $x$ 表达式，得到  
 
@@ -270,7 +305,9 @@ c_{k}
 \end{aligned}
 $$
 
+
 化简得  
+
 $$
 \begin{aligned}
 c_{k} 
@@ -281,17 +318,20 @@ c_{k}
 \end{aligned}
 $$
 
+
 因此，$x$ 的傅里叶级数表示为  
 
 $$
 x(n)=\sum_{k=\langle 5\rangle} c_{k} e^{j(2 \pi / 5) k n}
 $$
 
+
 其中  
 
 $$
 c_{k}=\frac{1}{5}\left[1-j \sin \left(\frac{2 \pi}{5} k\right)\right] \quad \text{ 对所有 } k \in \mathbb{Z}
 $$
+
 
 ---
 
@@ -305,11 +345,13 @@ x(n)=
 \end{cases}
 $$
 
+
 **解：** 回忆傅里叶级数分析公式，有  
 
 $$
 c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}
 $$
+
 
 在区间 $[0..7]$ 上求和，得到  
 
@@ -322,6 +364,7 @@ c_{k}
 \end{aligned}
 $$
 
+
 利用等比数列求和公式，得  
 
 $$
@@ -332,7 +375,9 @@ c_{k}=
 \end{cases}
 $$
 
+
 接下来，我们需要分别对 $k \neq 0$ 和 $k=0$ 的情形化简该表达式。首先考虑 $k \neq 0$ 的情况，我们有  
+
 $$
 \begin{align*}
 c_{k} 
@@ -344,6 +389,7 @@ c_{k}
 \end{align*}
 $$
 
+
 现在考虑 $k=0$ 的情形。我们有  
 
 $$
@@ -352,6 +398,7 @@ c_{0} & =\frac{1}{8} \sum_{k=0}^{3} 1=\frac{4}{8} \\
 & =\frac{1}{2}.
 \end{aligned}
 $$
+
 
 此外，我们注意到若使用 (10.5) 来计算 $k=0$ 的情形，将得到  
 
@@ -364,17 +411,20 @@ $$
 \end{aligned}
 $$
 
+
 因此，(10.5) 对 $k=0$ 同样给出了正确结果。于是 $c_{k}$ 由 (10.5) 给出，对所有 $k \in \mathbb{Z}$ 均成立。由此，$x$ 的傅里叶级数表示为  
 
 $$
 x(n)=\sum_{k=\langle 8\rangle} c_{k} e^{j(\pi / 4) k n}
 $$
 
+
 其中  
 
 $$
 c_{k}=\frac{\sin \left(\frac{\pi}{2} k\right)}{8 e^{j(3 \pi / 8) k} \sin \left(\frac{\pi}{8} k\right)} \quad \text{ 对所有 } k \in \mathbb{Z}
 $$
+
 
 ---
 
@@ -388,11 +438,14 @@ n, & n \in [-2..2] \\
 \end{cases}
 $$
 
+
 **解：** 回忆傅里叶级数分析公式，有  
 
 $$
 c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}
 $$
+
+
 在区间 $[-3..4]$ 上进行求和，有  
 
 $$
@@ -411,17 +464,20 @@ c_{k}
 \end{aligned}
 $$
 
+
 因此，$x$ 的傅里叶级数表示为  
 
 $$
 x(n)=\sum_{k=\langle 8\rangle} c_{k} e^{j(\pi / 4) k n}
 $$
 
+
 其中  
 
 $$
 c_{k}=-j\left[\frac{1}{2} \sin \left(\frac{\pi}{2} k\right)+\frac{1}{4} \sin \left(\frac{\pi}{4} k\right)\right] \quad \text{ 对所有 } k \in \mathbb{Z}
 $$
+
 
 ---
 
@@ -443,6 +499,7 @@ c_{k}
 \end{aligned}
 $$
 
+
 此时，将上述求和式分为两种情况讨论：  
 1) $N$ 为偶数；2) $N$ 为奇数。  
 
@@ -451,6 +508,7 @@ $$
 $$
 c_{k}=\frac{1}{N} \sum_{n=-(N / 2-1)}^{N / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]
 $$
+
 
 将求和分为四部分（即 $n \in [-(N/2-1)..-1], \{0\}, [1..N/2-1], \{N/2\}$），得到  
 
@@ -466,6 +524,7 @@ c_{k}=\frac{1}{N} & \Big[x(0)[\cos (0)-j \sin (0)]
 \end{aligned}
 $$
 
+
 在第一个求和中作变量替换，并利用 $x$ 与余弦函数为偶函数、正弦函数为奇函数这一事实，有  
 
 $$
@@ -473,11 +532,14 @@ c_{k}=\frac{1}{N}\Big[x(0)+(-1)^{k} x\left(\tfrac{N}{2}\right)
 +\sum_{n=1}^{N / 2-1} x(n)\left[\cos \left(\tfrac{2 \pi}{N} k n\right)+j \sin \left(\tfrac{2 \pi}{N} k n\right)\right]
 +\sum_{n=1}^{N / 2-1} x(n)\left[\cos \left(\tfrac{2 \pi}{N} k n\right)-j \sin \left(\tfrac{2 \pi}{N} k n\right)\right]\Big].
 $$
+
+
 将两个求和式合并并化简，我们得到
 
 $$
 c_{k}=\frac{1}{N}\left[x(0)+(-1)^{k} x\left(\frac{N}{2}\right)+2 \sum_{n=1}^{N / 2-1} x(n) \cos \left(\frac{2 \pi}{N} k n\right)\right]
 $$
+
 
 接下来，考虑 $N$ 为奇数的情况。我们有
 
@@ -485,11 +547,13 @@ $$
 c_{k}=\frac{1}{N} \sum_{n=-(N-1) / 2}^{(N-1) / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]
 $$
 
+
 将求和划分为三部分（即 $n \in \left[-\frac{N-1}{2} . .-1\right], \{0\}, \left[1 . . \frac{N-1}{2}\right]$），得到
 
 $$
 c_{k}=\frac{1}{N}\left[x(0)+\sum_{n=-(N-1) / 2}^{-1} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]+\sum_{n=1}^{(N-1) / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]\right] .
 $$
+
 
 在第一个求和中进行变量替换，并利用 $x$ 与余弦是偶函数而正弦是奇函数的事实，我们有
 
@@ -497,17 +561,20 @@ $$
 c_{k}=\frac{1}{N}\left[x(0)+\sum_{n=1}^{(N-1) / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)+j \sin \left(\frac{2 \pi}{N} k n\right)\right]+\sum_{n=1}^{(N-1) / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]\right] .
 $$
 
+
 将两个求和式合并并化简，我们得到
 
 $$
 c_{k}=\frac{1}{N}\left[x(0)+2 \sum_{n=1}^{(N-1) / 2} x(n) \cos \left(\frac{2 \pi}{N} k n\right)\right] .
 $$
 
+
 将 $N$ 为偶数与 $N$ 为奇数两种情况的结果结合起来，我们得到
 
 $$
 c_{k}= \begin{cases}\frac{1}{N}\left[x(0)+(-1)^{k} x\left(\frac{N}{2}\right)+2 \sum_{n=1}^{N / 2-1} x(n) \cos \left(\frac{2 \pi}{N} k n\right)\right] & N \text { 为偶数 } \\ \frac{1}{N}\left[x(0)+2 \sum_{n=1}^{(N-1) / 2} x(n) \cos \left(\frac{2 \pi}{N} k n\right)\right] & N \text { 为奇数 }\end{cases}
 $$
+
 
 由于 $x$ 和余弦函数都是实数，因此 $c_{k}$ 必然也是实数。于是我们有 $\operatorname{Im}\left(c_{k}\right)=0$。同时，因为 $(-1)^{k}$ 和 $\cos \left(\frac{2 \pi}{N} k n\right)$ 均为偶函数，所以 $c$ 也是偶函数。
 
@@ -519,6 +586,7 @@ c_{0} & =\left.\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{j(2 \pi / N) k n}\r
 & =\frac{1}{N} \sum_{n=\langle N\rangle} x(n)
 \end{aligned}
 $$
+
 
 因此，$c_{0}$ 具有所述的取值。
 例 10.7（奇实序列的傅里叶级数）。设 $x$ 为奇实 $N$-周期序列，其傅里叶级数系数序列为 $c$。证明：
@@ -537,6 +605,7 @@ c_{k} & =\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n} \\
 \end{aligned}
 $$
 
+
 此时，我们将对上述方程的进一步处理分为两种情况：1）$N$ 为偶数，2）$N$ 为奇数。
 
 首先考虑 $N$ 为偶数的情况。我们有
@@ -544,6 +613,7 @@ $$
 $$
 c_{k}=\frac{1}{N} \sum_{n=-(N / 2-1)}^{N / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]
 $$
+
 
 将求和拆分为四部分（即 $n$ 属于 $\left[-\left(\frac{N}{2}-1\right) \ldots-1\right],\{0\},\left[1 .. \frac{N}{2}-1\right]$ 和 $\left\{\frac{N}{2}\right\}$），并利用 $x(0)=0$ 且 $x\left(\frac{N}{2}\right)=0$，得到
 
@@ -555,11 +625,13 @@ c_{k}=\frac{1}{N} & {\left[x(0)[\cos 0-j \sin 0]+\sum_{n=-(N / 2-1)}^{-1} x(n)\l
 \end{aligned}
 $$
 
+
 （注意，由定理 8.3，$x(0)=x\left(\frac{N}{2}\right)=0$。）在第一个求和中做变量变换，并利用 $x$ 和 $\sin$ 是奇函数而 $\cos$ 是偶函数，我们得到
 
 $$
 c_{k}=\frac{1}{N}\left[-\sum_{n=1}^{N / 2-1} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)+j \sin \left(\frac{2 \pi}{N} k n\right)\right]+\sum_{n=1}^{N / 2-1} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]\right]
 $$
+
 
 合并两部分求和并化简，得到
 
@@ -567,11 +639,13 @@ $$
 c_{k}=\frac{1}{N}\left[-2 j \sum_{n=1}^{N / 2-1} x(n) \sin \left(\frac{2 \pi}{N} k n\right)\right]
 $$
 
+
 接下来考虑 $N$ 为奇数的情况。我们有
 
 $$
 c_{k}=\frac{1}{N} \sum_{n=-(N-1) / 2}^{(N-1) / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]
 $$
+
 
 将求和拆分为三部分（即 $n$ 属于 $\left[-\frac{(N-1)}{2} ..-1\right],\{0\}$ 和 $\left[1 .. \frac{N-1}{2}\right]$），并利用 $x(0)=0$，得到
 
@@ -579,11 +653,13 @@ $$
 c_{k}=\frac{1}{N}\left[\sum_{n=-(N-1) / 2}^{-1} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]+\sum_{n=1}^{(N-1) / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]\right]
 $$
 
+
 在第一个求和中做变量变换，并利用 $x$ 和 $\sin$ 是奇函数而 $\cos$ 是偶函数，我们得到
 
 $$
 c_{k}=\frac{1}{N}\left[-\sum_{n=1}^{(N-1) / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)+j \sin \left(\frac{2 \pi}{N} k n\right)\right]+\sum_{n=1}^{(N-1) / 2} x(n)\left[\cos \left(\frac{2 \pi}{N} k n\right)-j \sin \left(\frac{2 \pi}{N} k n\right)\right]\right]
 $$
+
 
 合并两部分求和并化简，得到
 
@@ -591,11 +667,13 @@ $$
 c_{k}=\frac{1}{N}\left[-2 j \sum_{n=1}^{(N-1) / 2} x(n) \sin \left(\frac{2 \pi}{N} k n\right)\right]
 $$
 
+
 综合上述结果，我们得到
 
 $$
 c_{k}= \begin{cases}-\frac{2 j}{N} \sum_{n=1}^{N / 2-1} x(n) \sin \left(\frac{2 \pi}{N} k n\right) & N \text { 偶数 } \\ -\frac{2 j}{N} \sum_{n=1}^{(N-1) / 2} x(n) \sin \left(\frac{2 \pi}{N} k n\right) & N \text { 奇数 }\end{cases}
 $$
+
 
 由于 $x$ 和 $\sin$ 是实数，$c_{k}$ 必为虚数。因此，我们有 $\operatorname{Re}\left(c_{k}\right)=0$。由于 $\sin$ 是奇函数，$c$ 是奇函数。
 
@@ -604,6 +682,7 @@ $$
 $$
 c_{0}=0 .
 $$
+
 
 因此，$c_{0}$ 的值如题所示。
 ## 10.4 离散时间傅里叶级数的收敛性说明
@@ -623,11 +702,13 @@ $$
 x(n) \stackrel{D T F S}{\longleftrightarrow} a_{k} \quad \text { 且 } \quad y(n) \stackrel{D T F S}{\longleftrightarrow} b_{k},
 $$
 
+
 则
 
 $$
 A x(n)+B y(n) \stackrel{D T F S}{\longleftrightarrow} A a_{k}+B b_{k},
 $$
+
 
 其中 $A$ 和 $B$ 为复常数。换句话说，序列的线性组合会产生其傅里叶级数系数的相同线性组合。
 
@@ -636,6 +717,7 @@ $$
 $$
 x(n)=\sum_{k=\langle N\rangle} a_{k} e^{j k(2 \pi / N) n} \quad \text { 且 } \quad y(n)=\sum_{k=\langle N\rangle} b_{k} e^{j k(2 \pi / N) n} .
 $$
+
 
 现在，我们求 $A x+B y$ 的傅里叶级数。利用 $x$ 和 $y$ 的傅里叶级数表示，有
 
@@ -647,11 +729,14 @@ A x(n)+B y(n) & =A \sum_{k=\langle N\rangle} a_{k} e^{j k(2 \pi / N) n}+B \sum_{
 \end{aligned}
 $$
 
+
 由此可见，上式右边是一个傅里叶级数，其系数序列为 $c_{k}^{\prime}=A a_{k}+B b_{k}$。因此，我们得到
 
 $$
 A x(n)+B y(n) \stackrel{\mathrm{DTFS}}{\longleftrightarrow} A a_{k}+B b_{k}.
 $$
+
+
 ### 10.5.2 平移（时间移位）
 
 接下来介绍傅里叶级数的平移（即时间移位）性质，如下所示。  
@@ -661,11 +746,13 @@ $$
 x(n) \stackrel{D T F S}{\longleftrightarrow} a_{k},
 $$
 
+
 则
 
 $$
 x\left(n-n_{0}\right) \stackrel{\text { DTFS }}{\longleftrightarrow} e^{-j k(2 \pi / N) n_{0}} a_{k},
 $$
+
 
 其中 $n_{0}$ 为整数常数。
 
@@ -674,6 +761,7 @@ $$
 $$
 x(n)=\sum_{k=\langle N\rangle} a_{k} e^{j k(2 \pi / N) n}
 $$
+
 
 将 $n-n_{0}$ 代入上式，得到
 
@@ -685,11 +773,13 @@ x\left(n-n_{0}\right) & =\sum_{k=\langle N\rangle} a_{k} e^{j k(2 \pi / N)\left(
 \end{aligned}
 $$
 
+
 由此可见，上式右边是一个傅里叶级数，其系数序列为 $a_{k}^{\prime}=a_{k} e^{-j k(2 \pi / N) n_{0}}$。因此，我们得到
 
 $$
 x\left(n-n_{0}\right) \stackrel{\mathrm{DTFS}}{\longleftrightarrow} e^{-j k(2 \pi / N) n_{0}} a_{k}.
 $$
+
 
 由上述定理可知，对周期序列进行时间移位不会改变其傅里叶级数系数的幅值（因为对所有实数 $\theta$，有 $\left|e^{j \theta}\right|=1$）。
 ### 10.5.3 调制（频率移位）
@@ -702,11 +792,13 @@ $$
 x(n) \stackrel{D T F S}{\longleftrightarrow} a_{k},
 $$
 
+
 则
 
 $$
 e^{j M(2 \pi / N) n} x(n) \stackrel{D T F S}{\longleftrightarrow} a_{k-M},
 $$
+
 
 其中 $M$ 为整数常数。
 
@@ -715,6 +807,7 @@ $$
 $$
 x(n)=\sum_{k=\langle N\rangle} a_{k} e^{j(2 \pi / N) k n}
 $$
+
 
 将两边同时乘以 $e^{j(2 \pi / N) M n}$，得到
 
@@ -726,17 +819,21 @@ e^{j(2 \pi / N) M n} x(n) & =e^{j(2 \pi / N) M n} \sum_{k=\langle N\rangle} a_{k
 \end{aligned}
 $$
 
+
 现在，我们做变量变换。设 $\ell=k+M$，则 $k=\ell-M$。通过此变量变换，对 $k \in[\eta .. \eta+N-1]$ 的求和变为对 $\ell \in[-(\eta+N-1) .. -\eta]$ 的求和，这仍然是一个长度为 $N$ 的单周期求和。应用变量变换后，得到
 
 $$
 e^{j(2 \pi / N) M n} x(n)=\sum_{\ell=\langle N\rangle} a_{\ell-M} e^{j(2 \pi / N) \ell n}
 $$
 
+
 由此可见，上式右边是一个傅里叶级数，其系数序列为 $a_{\ell}^{\prime}=a_{\ell-M}$。因此，$e^{j(2 \pi / N) M n} x(n)$（即上式左边）的傅里叶级数系数序列为 $a_{k}^{\prime}=a_{k-M}$。因此，我们得到
 
 $$
 e^{j M(2 \pi / N) n} x(n) \stackrel{\mathrm{DTFS}}{\longleftrightarrow} a_{k-M}.
 $$
+
+
 ### 10.5.4 反射（时间反转）
 
 接下来介绍傅里叶级数的反射（即时间反转）性质，如下所示。  
@@ -746,11 +843,13 @@ $$
 x(n) \stackrel{D T F S}{\longleftrightarrow} a_{k},
 $$
 
+
 则
 
 $$
 x(-n) \stackrel{\text { DTFS }}{\longleftrightarrow} a_{-k} .
 $$
+
 
 证明。为了证明时间反转性质，按如下步骤进行。$x$ 的傅里叶级数为
 
@@ -758,11 +857,13 @@ $$
 x(n)=\sum_{k=\langle N\rangle} a_{k} e^{j k(2 \pi / N) n}
 $$
 
+
 将 $-n$ 代入 $n$，得到
 
 $$
 x(-n)=\sum_{k=\langle N\rangle} a_{k} e^{j k(2 \pi / N)(-n)}
 $$
+
 
 现在，做变量变换。设 $\ell=-k$，则 $k=-\ell$。通过此变量变换，对 $k \in[\eta .. \eta+N-1]$ 的求和变为对 $\ell \in[-(\eta+N-1) .. -\eta]$ 的求和，这仍然是一个长度为 $N$ 的单周期求和。应用该变量变换，得到
 
@@ -773,11 +874,13 @@ x(-n) & =\sum_{\ell=\langle N\rangle} a_{-\ell} e^{j(-\ell)(2 \pi / N)(-n)} \\
 \end{aligned}
 $$
 
+
 由此可见，上式右边是一个傅里叶级数，其系数序列为 $a_{\ell}^{\prime}=a_{-\ell}$。因此，我们得到
 
 $$
 x(-n) \stackrel{\text { DTFS }}{\longleftrightarrow} a_{-k}.
 $$
+
 
 换句话说，上述定理表明，对序列进行时间反转会使其傅里叶级数系数序列也发生相应的时间反转。
 ### 10.5.5 共轭
@@ -789,11 +892,13 @@ $$
 x^{*}(n) \stackrel{D T F S}{\longleftrightarrow} c_{-k}^{*} .
 $$
 
+
 证明。根据傅里叶级数定义，有
 
 $$
 x(n)=\sum_{k=\langle N\rangle} c_{k} e^{j k(2 \pi / N) n}
 $$
+
 
 对上式两边取复共轭，得到
 
@@ -805,17 +910,20 @@ x^{*}(n) & =\left(\sum_{k=\langle N\rangle} c_{k} e^{j k(2 \pi / N) n}\right)^{*
 \end{aligned}
 $$
 
+
 现在，做变量变换。设 $\ell=-k$，则 $k=-\ell$。通过此变量变换，对 $k \in[\eta .. \eta+N-1]$ 的求和变为对 $\ell \in[-(\eta+N-1) .. -\eta]$ 的求和，这仍然是一个长度为 $N$ 的单周期求和。应用该变量变换，得到
 
 $$
 x^{*}(n)=\sum_{\ell=\langle N\rangle} c_{-\ell}^{*} e^{j \ell(2 \pi / N) n}
 $$
 
+
 由此可见，上式右边是一个傅里叶级数，其系数序列为 $c_{\ell}^{\prime}=c_{-\ell}^{*}$。因此，$x^{*}$（即上式左边）的傅里叶级数系数序列为 $c_{k}^{\prime}=c_{-k}^{*}$。因此，我们得到
 
 $$
 x^{*}(n) \stackrel{\mathrm{DTFS}}{\longleftrightarrow} c_{-k}^{*}.
 $$
+
 
 换句话说，上述定理表明，对序列取共轭的效果相当于对其傅里叶级数系数序列进行时间反转并取共轭。
 ### 10.5.6 对偶性
@@ -827,11 +935,13 @@ $$
 a_{n} \stackrel{D T F S}{\longleftrightarrow} \frac{1}{N} x(-k) .
 $$
 
+
 证明。根据傅里叶级数定义，有
 
 $$
 x(k)=\sum_{\ell=\langle N\rangle} a_{\ell} e^{j(2 \pi / N) \ell k}
 $$
+
 
 将 $-k$ 代入 $k$，得到
 
@@ -842,11 +952,13 @@ x(-k) & =\sum_{\ell=\langle N\rangle} a_{\ell} e^{j(2 \pi / N) \ell(-k)} \\
 \end{aligned}
 $$
 
+
 两边同时乘以 $\frac{1}{N}$，得到
 
 $$
 \frac{1}{N} x(-k)=\frac{1}{N} \sum_{\ell=\langle N\rangle} a_{\ell} e^{-j(2 \pi / N) \ell k}
 $$
+
 
 现在可见，右边正是计算 $a$ 的第 $k$ 个傅里叶级数系数的（傅里叶级数分析）公式。因此，对偶性成立。
 
@@ -855,6 +967,7 @@ $$
 $$
 X(m)=\frac{1}{N} \sum_{\ell=\langle N\rangle} x(\ell) e^{-j(2 \pi / N) \ell m} \quad \text { 和 } \quad x(m)=\sum_{\ell=\langle N\rangle} X(\ell) e^{j(2 \pi / N) \ell m}
 $$
+
 
 可以看到，这两个方程除了以下两点外完全相同：1）一个 $N$ 的因子；2）指数函数中参数符号不同。因此，如果不小心用一个方程代替另一个方程，我们将得到一个几乎正确的结果。实际上，通过补偿上述两个差异（即 $N$ 的因子和指数函数符号的差异），这个几乎正确的结果可以变为正确。这实际上就是对偶性所描述的内容。
 
@@ -868,11 +981,13 @@ $$
 x(n)=\sum_{k=\langle N\rangle} a_{k} e^{j(2 \pi / N) k n} \quad \text { 和 } \quad y(n)=\sum_{k=\langle N\rangle} b_{k} e^{j(2 \pi / N) k n}
 $$
 
+
 设 $z(n)=x \circledast y(n)$，其傅里叶级数表示为
 
 $$
 z(n)=\sum_{k=\langle N\rangle} c_{k} e^{j(2 \pi / N) k n}
 $$
+
 
 则序列 $a, b$ 和 $c$ 之间的关系为
 
@@ -880,17 +995,20 @@ $$
 c_{k}=N a_{k} b_{k}
 $$
 
+
 证明。根据周期卷积的定义，有
 
 $$
 x \circledast y(n)=\sum_{m=\langle N\rangle} x(m) y(n-m)
 $$
 
+
 将 $x$ 和 $y$ 展开为其傅里叶级数表示，得到
 
 $$
 x \circledast y(n)=\sum_{m=\langle N\rangle}\left(\sum_{\ell=\langle N\rangle} a_{\ell} e^{j(2 \pi / N) \ell m}\right)\left(\sum_{k=\langle N\rangle} b_{k} e^{j(2 \pi / N) k(n-m)}\right) .
 $$
+
 
 交换求和顺序并重新排列，得到
 
@@ -902,17 +1020,20 @@ x \circledast y(n) & =\sum_{m=\langle N\rangle} \sum_{k=\langle N\rangle} \sum_{
 \end{aligned}
 $$
 
+
 对外层两个求和取 $[0 .. N-1]$，得到
 
 $$
 x \circledast y(n)=\sum_{k=0}^{N-1} \sum_{\ell=0}^{N-1} a_{\ell} b_{k} e^{j(2 \pi / N) k n} \sum_{m=\langle N\rangle} e^{j(2 \pi / N)(\ell-k) m}
 $$
 
+
 现在可见
 
 $$
 \sum_{m=\langle N\rangle} e^{j(2 \pi / N)(\ell-k) m}= \begin{cases}N & (\ell-k) / N \in \mathbb{Z} \\ 0 & \text { 否则 }\end{cases}
 $$
+
 
 （关于该事实的证明留作练习 A.9）。此外，由于 $\ell-k \in[-(N-1) .. N-1]$，$(\ell-k)/N \in \mathbb{Z}$ 意味着 $\ell-k=0$（即 $\ell=k$）。利用这些事实，可以将上式简化为
 
@@ -925,11 +1046,14 @@ x \circledast y(n) & =\sum_{k=0}^{N-1} \sum_{\ell=0}^{N-1} a_{\ell} b_{k} e^{j(2
 \end{aligned}
 $$
 
+
 由此可见，上式右边是傅里叶级数，其系数序列为 $c_{k}=N a_{k} b_{k}$。因此，$x \circledast y$（即上式左边）的傅里叶级数系数序列为
 
 $$
 c_{k}=N a_{k} b_{k}.
 $$
+
+
 ### 10.5.8 乘法
 
 接下来介绍傅里叶级数的乘法性质，如下所示。  
@@ -939,11 +1063,13 @@ $$
 x(n)=\sum_{k=\langle N\rangle} a_{k} e^{j(2 \pi / N) k n} \quad \text { 和 } \quad y(n)=\sum_{k=\langle N\rangle} b_{k} e^{j(2 \pi / N) k n} .
 $$
 
+
 设 $z(n)=x(n) y(n)$，其傅里叶级数表示为
 
 $$
 z(n)=\sum_{k=\langle N\rangle} c_{k} e^{j(2 \pi / N) k n}
 $$
+
 
 则序列 $a, b$ 和 $c$ 之间的关系为
 
@@ -951,11 +1077,13 @@ $$
 c_{k}=\sum_{n=\langle N\rangle} a_{n} b_{k-n} \quad(\text { 即 } c=a \circledast b) .
 $$
 
+
 证明。根据傅里叶级数分析方程，有
 
 $$
 c_{k}=\frac{1}{N} \sum_{\ell=\langle N\rangle} x(\ell) y(\ell) e^{-j(2 \pi / N) k \ell}
 $$
+
 
 将 $x$ 用其傅里叶级数表示代替，得到
 
@@ -966,6 +1094,7 @@ c_{k} & =\frac{1}{N} \sum_{\ell=\langle N\rangle}\left(\sum_{n=\langle N\rangle}
 \end{aligned}
 $$
 
+
 交换两重求和的顺序并重新排列，得到
 
 $$
@@ -975,11 +1104,14 @@ c_{k} & =\frac{1}{N} \sum_{n=\langle N\rangle} \sum_{\ell=\langle N\rangle} a_{n
 \end{aligned}
 $$
 
+
 注意，上式大括号内的表达式正是计算 $y$ 的第 $(k-n)$ 个傅里叶级数系数的公式，因此可以得到
 
 $$
 c_{k}=\sum_{n=\langle N\rangle} a_{n} b_{k-n}.
 $$
+
+
 ### 10.5.9 Parseval 定理
 
 傅里叶级数的另一个重要性质与序列的能量有关，如下所示。  
@@ -988,6 +1120,7 @@ $$
 $$
 \frac{1}{N} \sum_{n=\langle N\rangle}|x(n)|^{2}=\sum_{k=\langle N\rangle}\left|c_{k}\right|^{2}
 $$
+
 
 （即 $x$ 的能量与 $c$ 的能量相等，只差一个尺度因子）。
 
@@ -1001,17 +1134,20 @@ z(n)=x(n) y(n)=\sum_{k=\langle N\rangle} c_{k} e^{j(2 \pi / N) k n} .
 \end{gathered}
 $$
 
+
 根据傅里叶级数的乘法性质（即定理 10.9），有
 
 $$
 c_{k}=\sum_{n=\langle N\rangle} a_{n} b_{k-n} \tag{10.6}
 $$
 
+
 现在令 $y(n)=x^{*}(n)$，则 $z(n)=x(n) x^{*}(n)=|x(n)|^{2}$。根据傅里叶级数的共轭性质（即定理 10.6），由于 $y(n)=x^{*}(n)$，我们有
 
 $$
 b_{k}=a_{-k}^{*}
 $$
+
 
 因此，可以将 (10.6) 改写为
 
@@ -1022,11 +1158,13 @@ c_{k} & =\sum_{n=\langle N\rangle} a_{n} a_{-(k-n)}^{*} \\
 \end{align*}
 $$
 
+
 根据傅里叶级数分析方程，有
 
 $$
 c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle}|x(n)|^{2} e^{-j(2 \pi / N) k n} \tag{10.8}
 $$
+
 
 将 (10.7) 与 (10.8) 对比，得到
 
@@ -1034,11 +1172,13 @@ $$
 \frac{1}{N} \sum_{n=\langle N\rangle}|x(n)|^{2} e^{-j(2 \pi / N) k n}=\sum_{n=\langle N\rangle} a_{n} a_{n-k}^{*}
 $$
 
+
 令 $k=0$，得到
 
 $$
 \frac{1}{N} \sum_{n=\langle N\rangle}|x(n)|^{2}=\sum_{n=\langle N\rangle} a_{n} a_{n}^{*}=\sum_{n=\langle N\rangle}\left|a_{n}\right|^{2} .
 $$
+
 
 上述定理表明，序列 $x$ 的能量与其傅里叶级数系数序列 $c$ 的能量相等（仅差一个尺度因子）。换句话说，序列与其傅里叶级数系数序列之间的变换保持了能量（仅差尺度因子）。
 
@@ -1064,6 +1204,7 @@ c_{k}=c_{-k}^{*} \text { 对所有 } k \in \mathbb{Z} \text{成立} \tag{10.9}
 \end{equation*}
 $$
 
+
 （即 $c$ 是共轭对称的）。
 
 证明。首先，我们证明 $x$ 为实值序列意味着 $c$ 是共轭对称的。假设 $x$ 是实值的。根据傅里叶级数分析公式，有
@@ -1071,6 +1212,7 @@ $$
 $$
 c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}
 $$
+
 
 在上述公式中将 $k$ 替换为 $-k$ 并对两边取共轭，得到
 
@@ -1082,6 +1224,7 @@ c_{-k}^{*} & =\left(\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N)(
 \end{aligned}
 $$
 
+
 由于 $x$ 为实值（即 $x^{*}=x$ ），我们有
 
 $$
@@ -1091,6 +1234,7 @@ c_{-k}^{*} & =\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n} \
 \end{aligned}
 $$
 
+
 因此，$c$ 是共轭对称的。由此可见，$x$ 为实值序列意味着 $c$ 是共轭对称的。
 
 接下来，我们证明 $c$ 为共轭对称意味着 $x$ 是实值序列。假设 $c$ 是共轭对称的。根据傅里叶级数综合公式，有
@@ -1098,6 +1242,7 @@ $$
 $$
 x(n)=\sum_{k=\langle N\rangle} c_{k} e^{j(2 \pi / N) k n}
 $$
+
 
 对上述公式两边取复共轭，得到
 
@@ -1109,6 +1254,8 @@ x^{*}(n) & =\left(\sum_{k=\langle N\rangle} c_{k} e^{j(2 \pi / N) k n}\right)^{*
 & =\sum_{k=N_{0}}^{N_{0}+N-1} c_{k}^{*} e^{-j(2 \pi / N) k n} .
 \end{aligned}
 $$
+
+
 现在，我们进行变量替换。令 $k^{\prime}=-k$，因此 $k=-k^{\prime}$。应用该变量替换并去掉撇号，得到
 
 $$
@@ -1118,11 +1265,13 @@ x^{*}(n) & =\sum_{k=-N_{0}-N+1}^{-N_{0}} c_{-k}^{*} e^{-j(2 \pi / N)(-k) n} \\
 \end{aligned}
 $$
 
+
 由于前式右边的求和中每一项在 $k$ 上都是 $N$ 周期的，因此求和可以在任意 $N$ 个连续整数上进行。于是我们有
 
 $$
 x^{*}(n)=\sum_{k=\langle N\rangle} c_{-k}^{*} e^{j(2 \pi / N) k n}
 $$
+
 
 由于对所有 $k \in \mathbb{Z}$，$c_{k}=c_{-k}^{*}$，我们得到
 
@@ -1133,6 +1282,7 @@ x^{*}(n) & =\sum_{k=\langle N\rangle} c_{k} e^{j(2 \pi / N) k n} \\
 \end{aligned}
 $$
 
+
 因此，$x$ 为实值序列。由此可见，$c$ 为共轭对称意味着 $x$ 为实值序列，证明完毕。
 
 利用式 (10.9) 中的关系，可以推导出实值序列的傅里叶级数的另一种形式。特别地，序列 $x$ 的傅里叶级数可以表示为
@@ -1141,11 +1291,13 @@ $$
 x(n)= \begin{cases}\alpha_{0}+\sum_{k=1}^{N / 2-1}\left[\alpha_{k} \cos \left(\frac{2 \pi}{N} k n\right)+\beta_{k} \sin \left(\frac{2 \pi}{N} k n\right)\right]+\alpha_{N / 2} \cos (\pi n) & N \text { 偶数 } \\ \alpha_{0}+\sum_{k=1}^{(N-1) / 2}\left[\alpha_{k} \cos \left(\frac{2 \pi}{N} k n\right)+\beta_{k} \sin \left(\frac{2 \pi}{N} k n\right)\right] & N \text { 奇数 }\end{cases}
 $$
 
+
 其中
 
 $$
 \alpha_{0}=a_{0}, \quad \alpha_{N / 2}=a_{N / 2}, \quad \alpha_{k}=2 \operatorname{Re} a_{k}, \quad \text { 以及 } \quad \beta_{k}=-2 \operatorname{Im} a_{k}
 $$
+
 
 这称为傅里叶级数的三角形式。注意，傅里叶级数的三角形式只涉及实数量，而指数形式涉及一些复数量。因此，在处理实值序列的傅里叶级数时，有时更倾向于使用三角形式。
 
@@ -1155,11 +1307,13 @@ $$
 c_{k}=c_{-k}^{*} \text { 对所有 } k
 $$
 
+
 等价于
 
 $$
 \left|c_{k}\right|=\left|c_{-k}\right| \text { 对所有 } k \quad \text { 且 } \quad \arg c_{k}=-\arg c_{-k} \text { 对所有 } k
 $$
+
 
 （即 $\left|c_{k}\right|$ 是偶函数，$\arg c_{k}$ 是奇函数）。注意，$x$ 为实值并不必然意味着 $c$ 为实值。
 
@@ -1180,6 +1334,7 @@ c_{k}=c_{-k}^{*} \quad \text { 对所有 } k \in \mathbb{Z} \tag{10.10}
 \end{equation*}
 $$
 
+
 由于 $c$ 是 $N$ 周期的，有 $c_{-k}=c_{N-k}$，因此可将上式改写为
 
 $$
@@ -1188,6 +1343,7 @@ c_{k}=c_{N-k}^{*} \quad \text { 对所有 } k \in \mathbb{Z} \tag{10.11}
 \end{equation*}
 $$
 
+
 这证明了定理的断言 1。
 
 将 (10.10) 在 $k=0$ 处求值，得到
@@ -1195,6 +1351,7 @@ $$
 $$
 c_{0}=c_{0}^{*}
 $$
+
 
 因此，$c_{0}$ 必为实数。这证明了定理的断言 3。
 
@@ -1206,6 +1363,7 @@ c_{N / 2} & =c_{N-N / 2}^{*} \\
 & =c_{N / 2}^{*}
 \end{aligned}
 $$
+
 
 因此，$c_{N/2}$ 必为实数。这证明了定理的断言 4。
 
@@ -1226,6 +1384,7 @@ c_{N-1} & =c_{N-(N-1)}^{*} \\
 \end{aligned}
 $$
 
+
 （注意，在上述对 $c_{\lfloor N / 2\rfloor+1}$ 的化简中，我们使用了第 3.5.10 节中介绍的向下取整与向上取整函数的性质。）因此，$k \in \left[\left\lfloor\frac{N}{2}\right\rfloor+1 .. N-1\right]$ 的 $c_{k}$ 可完全由 $k \in \left[0..\left\lfloor\frac{N-1}{2}\right\rfloor\right]$ 的 $c_{k}$ 决定。因此，在 $k \in [0..N-1]$ 的 $N$ 个系数中，只有 $\left\lfloor\frac{N}{2}\right\rfloor+1$ 个是独立的。这证明了定理的断言 2。
 
 上述定理（即定理 10.13）表明，与实值序列对应的傅里叶级数系数序列 $c$ 具有高度冗余性。特别地，在单周期内，约一半的系数是冗余的。
@@ -1238,6 +1397,7 @@ $$
 $$
 x(n)=\sum_{k=\langle N\rangle} c_{k} e^{j k(2 \pi / N) n} \quad \text { 和 } \quad c_{k}=\frac{1}{N} \sum_{n=\langle N\rangle} x(n) e^{-j(2 \pi / N) k n}
 $$
+
 
 表 10.1：离散时间傅里叶级数的性质
 | 性质 | 时域 | 傅里叶域 |
@@ -1264,6 +1424,7 @@ $$
 x(n)=\frac{1}{N} \sum_{k=0}^{N-1} a_{k}^{\prime} e^{j(2 \pi / N) k n} \quad \text { 和 } \quad a_{k}^{\prime}=\sum_{n=0}^{N-1} x(n) e^{-j(2 \pi / N) k n}
 $$
 
+
 由于 $x$ 和 $a^{\prime}$ 都是 $N$ 周期的，每个序列只需单周期内的 $N$ 个样本即可完全表征。如果仅考虑 $x$ 和 $a^{\prime}$ 在单周期内的行为，可得到如下公式：
 
 $$
@@ -1273,6 +1434,7 @@ a_{k}^{\prime} & =\sum_{n=0}^{N-1} x(n) e^{-j(2 \pi / N) k n} \quad \text { 对 
 \end{aligned}
 $$
 
+
 事实上，上述两条公式定义了所谓的离散傅里叶变换（DFT）。
 
 序列 $x$ 的离散傅里叶变换（DFT）$X$ 定义为：
@@ -1281,11 +1443,13 @@ $$
 X(k)=\sum_{n=0}^{N-1} x(n) e^{-j(2 \pi / N) k n} \quad \text { 对 } k \in [0..N-1]
 $$
 
+
 上式称为 DFT 分析公式。序列 $X$ 的逆 DFT $x$ 给出为：
 
 $$
 x(n)=\frac{1}{N} \sum_{k=0}^{N-1} X(k) e^{j(2 \pi / N) k n} \quad \text { 对 } n \in [0..N-1]
 $$
+
 
 上式称为 DFT 合成公式。DFT 将长度为 $N$ 的有限序列映射为另一个长度为 $N$ 的有限序列。DFT 将在第 11 章中进一步详细讨论。
 
@@ -1323,6 +1487,7 @@ x(n) & =\sum_{k=\langle N\rangle} c_{k} e^{j(2 \pi / N) k n} \\
 \end{aligned}
 $$
 
+
 显然（从最后一行可以看出），求和中的第 $k$ 项对应一个频率为 $\frac{2 \pi}{N} k$ 的复正弦函数，其幅度被缩放为 $|c_{k}|$，时间偏移取决于 $\arg c_{k}$。对于给定的 $k$，$|c_{k}|$ 越大，对应复正弦函数 $e^{j(2 \pi / N) k n}$ 的幅度越大，因此第 $k$ 项（对应频率 $\frac{2 \pi}{N} k$）对总和的贡献越大。因此，$|c_{k}|$ 可用来量化序列 $x$ 在频率 $\frac{2 \pi}{N} k$ 上的信息量。arg $c_{k}$ 也很重要，因为它影响傅里叶级数中不同复正弦函数在叠加前的时间偏移关系。
 
 为了形式化频谱的概念，序列 $x$ 的频谱本质上就是其对应的傅里叶级数系数 $c_{k}$。由于傅里叶级数的极坐标形式解释，我们通常关注 $|c_{k}|$ 和 $\arg c_{k}$。在术语上，$|c_{k}|$ 称为 $x$ 的幅度谱，$\arg c_{k}$ 称为 $x$ 的相位谱。
@@ -1338,6 +1503,7 @@ $$
 c_{k}=\frac{\sin \left(\frac{\pi}{2} k\right)}{8 e^{j(3 \pi / 8) k} \sin \left(\frac{\pi}{8} k\right)}
 $$
 
+
 求 $x$ 的幅度谱和相位谱，并确定序列 $x$ 在 $(-\pi, \pi]$ 区间内在哪个频率（或哪些频率）上包含最多信息。
 
 **解**。首先，计算 $x$ 的幅度谱，即 $\left|c_{k}\right|$。取 $c_{k}$ 的幅值，得到：
@@ -1351,6 +1517,7 @@ $$
 \end{aligned}
 $$
 
+
 接着，计算 $x$ 的相位谱，即 $\arg c_{k}$。取 $c_{k}$ 的相位，得到：
 
 $$
@@ -1361,6 +1528,7 @@ $$
 \end{aligned}
 $$
 
+
 $x$ 的幅度谱和相位谱分别绘制在图 10.1(a) 和 (b) 中。注意，幅度谱是偶对称的，而相位谱是奇对称的。这与我们预期一致，因为 $x$ 是实序列。在 $(-\pi, \pi]$ 区间内，序列 $x$ 在频率为 0 时包含最多信息，因为此时傅里叶级数系数的幅值最大（即 $\frac{1}{2}$）。
 
 示例 10.9. 在示例 10.2 中，我们看到 $N$ 周期序列
@@ -1369,11 +1537,13 @@ $$
 x(n)=\sum_{\ell=-\infty}^{\infty} \delta(n-N \ell)
 $$
 
+
 的傅里叶级数系数序列为：
 
 $$
 c_{k}=\frac{1}{N}
 $$
+
 
 当 $N=10$ 时，求 $x$ 的幅度谱和相位谱，并绘制 $x$ 的频谱。
 
@@ -1383,11 +1553,13 @@ $$
 \left|c_{k}\right|=\left|\frac{1}{10}\right|=\frac{1}{10}.
 $$
 
+
 同理，取 $c_{k}$ 的相位，得到：
 
 $$
 \arg c_{k}=\arg \frac{1}{10}=0.
 $$
+
 
 由于所有 $c_{k}$ 都为实数，可以直接使用单个二维图绘制 $x$ 的频谱（而无需分别绘制幅度谱和相位谱）。$x$ 的频谱绘制在图 10.2 中。
 
@@ -1408,6 +1580,7 @@ $$
 \mathcal{H} x(n)=H(\Omega) e^{j \Omega n},
 $$
 
+
 其中
 
 $$
@@ -1415,6 +1588,7 @@ $$
 H(\Omega)=\sum_{n=-\infty}^{\infty} h(n) e^{-j \Omega n} \tag{10.12}
 \end{equation*}
 $$
+
 
 也就是说，$x$ 是 $\mathcal{H}$ 的本征序列，对应的本征值为 $H(\Omega)$。
 
@@ -1424,6 +1598,7 @@ $$
 H_{\mathrm{F}}(\Omega) = H_{\mathrm{Z}}\left(e^{j \Omega}\right).
 $$
 
+
 在术语上，公式 (10.12) 中的函数 $H$ 被称为系统 $\mathcal{H}$ 的**频率响应**。频率响应完全刻画了 LTI 系统的行为。因此，在分析和处理 LTI 系统时，频率响应是非常有用的。实际上，(10.12) 是基础性的，因为它定义了所谓的（离散时间）傅里叶变换（DT Fourier transform）。我们将在第 11 章对（DT）傅里叶变换进行深入研究。
 
 现在让我们考虑本征序列的一个应用。由于卷积在许多情况下处理起来非常繁琐，我们可以利用本征序列，在某些情况下避免直接处理卷积。假设我们有一个 $N$ 周期序列 $x$，其傅里叶级数表示为：
@@ -1431,6 +1606,7 @@ $$
 $$
 x(n)=\sum_{k=\langle N\rangle} c_{k} e^{j(2 \pi / N) k n}
 $$
+
 
 利用公式 (10.12) 和叠加性，我们可以确定系统对输入 $x$ 的响应 $y$ 如下：
 
@@ -1443,11 +1619,14 @@ y(n) & =\mathcal{H} x(n) \\
 & =\sum_{k=\langle N\rangle} c_{k} H\left(\frac{2 \pi}{N} k\right) e^{j(2 \pi / N) k n} .
 \end{aligned}
 $$
+
+
 因此，我们可以将 LTI 系统看作作用于傅里叶级数各个系数的实体。具体来说，系统通过将每个傅里叶级数系数与该系数对应频率下的频率响应函数值相乘来形成输出。换句话说，如果
 
 $$
 x(n) \stackrel{\mathrm{DTFS}}{\longleftrightarrow} c_{k}
 $$
+
 
 那么
 
@@ -1455,17 +1634,20 @@ $$
 y(n) \stackrel{\mathrm{DTFS}}{\longleftrightarrow} H\left(\frac{2 \pi}{N} k\right) c_{k} .
 $$
 
+
 **示例 10.10**. 一个 LTI 系统的冲激响应为
 
 $$
 h(n)=\left(\frac{1}{2}\right)^{n+1} u(n)
 $$
 
+
 求该系统对输入序列
 
 $$
 x(n)=1+\frac{1}{2} \cos \left(\frac{\pi}{2} n\right)+\frac{1}{8} \cos (\pi n)
 $$
+
 
 的响应 $y$。
 
@@ -1474,6 +1656,7 @@ $$
 $$
 H(\Omega)=\sum_{n=-\infty}^{\infty} h(n) e^{-j \Omega n}
 $$
+
 
 将 $h(n)$ 代入，得到：
 
@@ -1485,6 +1668,7 @@ H(\Omega) & =\sum_{n=-\infty}^{\infty}\left(\frac{1}{2}\right)^{n+1} u(n) e^{-j 
 \end{aligned}
 $$
 
+
 利用无限等比数列求和公式，得到：
 
 $$
@@ -1493,6 +1677,7 @@ H(\Omega) & =\frac{1}{2}\left(\frac{1}{1-\frac{1}{2} e^{-j \Omega}}\right) \\
 & =\frac{1}{2-e^{-j \Omega}}
 \end{aligned}
 $$
+
 
 接着，求 $x$ 的傅里叶级数表示。$x$ 的基本周期为 $N=\operatorname{lcm}(4,2)=4$。将 $x$ 改写为：
 
@@ -1505,17 +1690,21 @@ x(n) & =1+\frac{1}{2}\left[\frac{1}{2}\left(e^{j(\pi / 2) n}+e^{-j(\pi / 2) n}\r
 \end{aligned}
 $$
 
+
 因此，$x$ 的傅里叶级数为：
 
 $$
 x(n)=\sum_{k=-1}^{2} a_{k} e^{j(2 \pi / 4) k n}
 $$
 
+
 其中：
 
 $$
 a_{k}= \begin{cases}\frac{1}{4} & k=-1 \\ 1 & k=0 \\ \frac{1}{4} & k=1 \\ \frac{1}{8} & k=2\end{cases}
 $$
+
+
 输入序列 $x$ 的幅度谱绘制在图 10.3 中，并叠加了系统的幅度响应 $|H(\cdot)|$。
 
 根据 LTI 系统的特征序列性质，我们有
@@ -1523,6 +1712,7 @@ $$
 $$
 y(n)=\sum_{k=-1}^{2} b_{k} e^{j(2 \pi / 4) k n} \quad \text { 其中 } \quad b_{k}=a_{k} H\left(\frac{2 \pi}{4} k\right)
 $$
+
 
 计算各 $b_{k}$ 得：
 
@@ -1535,6 +1725,7 @@ b_{2} & =a_{2} H(\pi)=\frac{1}{8} \cdot \frac{1}{3} = \frac{1}{24}.
 \end{aligned}
 $$
 
+
 于是输出 $y(n)$ 为：
 
 $$
@@ -1545,6 +1736,7 @@ y(n) & =\sum_{k=-1}^{2} b_{k} e^{j(2 \pi / 4) k n} \\
 & =1+\frac{1}{4 \sqrt{5}} \cos \left(\frac{\pi}{2} n - \frac{\pi}{4}\right) + \frac{1}{24} \cos (\pi n)
 \end{aligned}
 $$
+
 
 输出序列 $y$ 的幅度谱如图 10.4 所示。
 
@@ -1566,6 +1758,7 @@ H(\Omega) & =\frac{1}{2}\frac{1}{1-\frac{1}{2}(\cos \Omega - j \sin \Omega)} \\
 \end{aligned}
 $$
 
+
 该形式用于生成图 10.3 中 $|H(\cdot)|$ 的绘图。
 
 ---
@@ -1576,11 +1769,13 @@ $$
 H(\Omega)=e^{-j \Omega}
 $$
 
+
 的 LTI 系统。求其对输入
 
 $$
 x(n)=\frac{1}{2} \cos \left(\frac{2 \pi}{5} n\right)
 $$
+
 
 的响应。
 
@@ -1590,11 +1785,13 @@ $$
 x(n)=\frac{1}{4}\left(e^{j(2 \pi /5)n}+e^{-j(2 \pi /5)n}\right)
 $$
 
+
 傅里叶级数为：
 
 $$
 x(n)=\sum_{k=-2}^{2} c_{k} e^{j(2 \pi /5) k n}, \quad c_{k}=\begin{cases}\frac{1}{4}, & k=\pm 1 \\ 0, & k=-2,0,2 \end{cases}
 $$
+
 
 利用特征序列性质，输出为：
 
@@ -1605,6 +1802,7 @@ y(n) & =\sum_{k=-2}^{2} c_{k} H\left(\frac{2 \pi}{5} k\right) e^{j(2 \pi /5) k n
 & =\frac{1}{2} \cos \left[\frac{2 \pi}{5}(n-1)\right]
 \end{aligned}
 $$
+
 
 可见 $y(n)=x(n-1)$，说明该 LTI 系统是一个理想单位延迟系统。
 ## 10.9 滤波
@@ -1621,6 +1819,7 @@ $$
 H(\Omega)= \begin{cases}1 & |\Omega| \leq \Omega_{c} \\ 0 & \Omega_{c}<|\Omega| \leq \pi\end{cases}
 $$
 
+
 其中 $\Omega_{c}$ 为截止频率。该频率响应的图示如图 10.5(a) 所示。
 
 理想高通滤波器会消除所有幅值小于某个截止频率的频率分量，同时保持其余频率分量不变。这样的滤波器具有如下频率响应：
@@ -1629,6 +1828,7 @@ $$
 H(\Omega)= \begin{cases}1 & \Omega_{c}<|\Omega| \leq \pi \\ 0 & |\Omega| \leq \Omega_{c}\end{cases}
 $$
 
+
 其中 $\Omega_{c}$ 为截止频率。该频率响应的图示如图 10.5(b) 所示。
 
 理想带通滤波器会消除所有幅值不在特定范围内的频率分量，同时保持其余频率分量不变。这样的滤波器具有如下频率响应：
@@ -1636,6 +1836,7 @@ $$
 $$
 H(\Omega)= \begin{cases}1 & \Omega_{c 1} \leq|\Omega| \leq \Omega_{c 2} \\ 0 & |\Omega|<\Omega_{c 1} \text { 或 } \Omega_{c 2}<|\Omega|<\pi\end{cases}
 $$
+
 
 其中通带范围为 $\Omega_{c 1}$ 和 $\Omega_{c 2}$。该频率响应的图示如图 10.5(c) 所示。
 
@@ -1650,11 +1851,13 @@ $$
 H(\Omega)= \begin{cases}1 & |\Omega| \leq \frac{\pi}{2} \\ 0 & \frac{\pi}{2}<|\Omega| \leq \pi\end{cases}
 $$
 
+
 假设输入 $x$ 为周期序列
 
 $$
 x(n)=1+\cos \left(\frac{\pi}{4} n\right)+\frac{1}{2} \cos \left(\frac{3 \pi}{4} n\right)+\frac{1}{5} \cos (\pi n)
 $$
+
 
 (a) 求 $x$ 的傅里叶级数表示。  
 (b) 利用此表示求系统对输入 $x$ 的响应 $y$。  
@@ -1666,6 +1869,7 @@ $$
 $$
 N=\operatorname{lcm}\{8,8,2\}=\operatorname{lcm}\left\{2^{3}, 2^{3}, 2^{1}\right\}=2^{3}=8
 $$
+
 
 利用欧拉公式，将 $x$ 重写为：
 
@@ -1679,11 +1883,13 @@ x(n) & =1+\cos \left(\frac{\pi}{4} n\right)+\frac{1}{2} \cos \left(\frac{3 \pi}{
 \end{aligned}
 $$
 
+
 因此，$x$ 的傅里叶级数为：
 
 $$
 x(n)=\sum_{k=-3}^{4} a_{k} e^{j(2 \pi / 8) k n}
 $$
+
 
 其中：
 
@@ -1691,17 +1897,20 @@ $$
 a_{k}= \begin{cases}\frac{1}{4} & k \in\{-3,3\} \\ \frac{1}{2} & k \in\{-1,1\} \\ 1 & k=0 \\ \frac{1}{5} & k=4 \\ 0 & k \in\{-2,2\}\end{cases}
 $$
 
+
 (b) 由于系统为LTI，输出 $y$ 的形式为：
 
 $$
 y(n)=\sum_{k=-\infty}^{\infty} b_{k} e^{j(2 \pi / 8) k n}
 $$
 
+
 其中：
 
 $$
 b_{k}=a_{k} H\left(\frac{2 \pi}{8} k\right)
 $$
+
 
 对于每个非零的 $a_{k}$，计算对应的 $b_{k}$：
 
@@ -1716,11 +1925,13 @@ b_{4} & =a_{4} H\left[\left(\frac{\pi}{4}\right)(4)\right]=\left(\frac{1}{5}\rig
 \end{aligned}
 $$
 
+
 因此：
 
 $$
 b_{k}= \begin{cases}1 & k=0 \\ \frac{1}{2} & k \in\{-1,1\} \\ 0 & k \in\{-3,-2,2,3,4\}\end{cases}
 $$
+
 
 (c) 最后，将 $x$ 和 $y$ 的频谱绘制在图 10.6(a) 和 (b) 中。为了说明，将频率响应 $H$ 与 $x$ 的频谱叠加显示。
 
@@ -1759,6 +1970,7 @@ $$
 a_{k}=k^{2}\left(2^{k}+2^{-k}\right) e^{j(2 \pi / 31) k}, \quad k \in[-15 .. 15]
 $$
 
+
 利用傅里叶级数性质，判断下列陈述是否正确：  
 (a) $x$ 是实序列；  
 (b) $x$ 是偶序列；  
@@ -1783,11 +1995,13 @@ $$
 H(\Omega)= \begin{cases}1 & |\Omega| \in\left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \\ 0 & |\Omega| \in\left(\frac{\pi}{2}, \pi\right]\end{cases}
 $$
 
+
 的 LTI 系统。求系统对输入  
 
 $$
 x(n)=1+\frac{1}{3} \cos \left(\frac{4 \pi}{9} n\right)+\frac{1}{6} \cos \left(\frac{6 \pi}{9} n\right)
 $$
+
 
 的响应 $y$。
 10.10 一个 LTI 系统的冲激响应为  
@@ -1796,11 +2010,13 @@ $$
 h(n)=\left(\frac{1}{2}\right)^{n+1} u(n)
 $$
 
+
 求该系统对输入  
 
 $$
 x(n)=1+\cos \left(\frac{\pi}{4} n\right)+\sin \left(\frac{\pi}{2} n\right)
 $$
+
 
 的响应 $y$。
 
@@ -1812,12 +2028,15 @@ $$
 x(n)= \begin{cases}1 & n \in\left[N_{1} .. N_{2}\right] \\ 0 & n \in\left[N_{0} .. N_{1}-1\right] \cup\left[N_{2}+1 .. N_{0}+N-1\right],\end{cases}
 $$
 
+
 其中 $N_{0}$ 为整数，$N_{1}, N_{2} \in\left[N_{0} .. N_{0}+N-1\right]$ 且 $N_{1} \leq N_{2}$。（注意：此练习与练习 A.10 密切相关。）
 
 简答：  
+
 $$
 a_{k}= \begin{cases}\frac{1}{N} e^{-j \pi\left(N_{1}+N_{2}\right) k / N} \left[\frac{\sin \left[\pi\left(N_{2}-N_{1}+1\right) k / N\right]}{\sin (\pi k / N)}\right] & \frac{k}{N} \notin \mathbb{Z} \\[2mm] \frac{N_{2}-N_{1}+1}{N} & \frac{k}{N} \in \mathbb{Z}.\end{cases}
 $$
+
 
 ### 10.10.3 MATLAB 练习
 
