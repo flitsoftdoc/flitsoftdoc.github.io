@@ -1391,10 +1391,12 @@ $$
 
 由于所有 $c_{k}$ 都为实数，可以直接使用单个二维图绘制 $x$ 的频谱（而无需分别绘制幅度谱和相位谱）。$x$ 的频谱绘制在图 10.2 中。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-101.jpg?height=1109&width=804&top_left_y=421&top_left_x=715)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-101.jpg?height=1109&width=804&top_left_y=421&top_left_x=715){width="400"}
+  
 图 10.1：序列 $x$ 的频谱。（a）幅度谱；（b）相位谱。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-101.jpg?height=374&width=904&top_left_y=1888&top_left_x=661)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-101.jpg?height=374&width=904&top_left_y=1888&top_left_x=661){width="400"}
+  
 图 10.2：序列 $x$ 的频谱。
 ## 10.8 傅里叶级数与 LTI 系统
 
@@ -1546,10 +1548,12 @@ $$
 
 输出序列 $y$ 的幅度谱如图 10.4 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-105.jpg?height=477&width=528&top_left_y=823&top_left_x=848)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-105.jpg?height=477&width=528&top_left_y=823&top_left_x=848){width="400"}
+
 **图 10.3:** 输入序列 $x$ 的幅度谱
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-105.jpg?height=455&width=528&top_left_y=1412&top_left_x=848)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-105.jpg?height=455&width=528&top_left_y=1412&top_left_x=848){width="400"}
+
 **图 10.4:** 输出序列 $y$ 的幅度谱
 
 此外，$H(\Omega)$ 可写成笛卡尔形式：
@@ -1635,7 +1639,8 @@ $$
 
 其中通带范围为 $\Omega_{c 1}$ 和 $\Omega_{c 2}$。该频率响应的图示如图 10.5(c) 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-108.jpg?height=1200&width=1071&top_left_y=748&top_left_x=461)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-108.jpg?height=1200&width=1071&top_left_y=748&top_left_x=461){width="400"}
+  
 图 10.5：（a）理想低通滤波器，（b）理想高通滤波器，（c）理想带通滤波器的频率响应。
 
 **例 10.12（低通滤波）**  
@@ -1719,7 +1724,8 @@ $$
 
 (c) 最后，将 $x$ 和 $y$ 的频谱绘制在图 10.6(a) 和 (b) 中。为了说明，将频率响应 $H$ 与 $x$ 的频谱叠加显示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-111.jpg?height=1139&width=787&top_left_y=780&top_left_x=721)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-111.jpg?height=1139&width=787&top_left_y=780&top_left_x=721){width="400"}
+  
 图 10.6：（a）输入序列 $x$ 的频谱，（b）输出序列 $y$ 的频谱。
 ## 10.10 练习
 
@@ -1733,9 +1739,11 @@ $$
 
 10.2 对下列图示的每个周期序列 $x$，求对应的傅里叶级数系数序列 $a$。每幅图中显示的样本数为周期的整数倍。如有必要，可使用傅里叶级数性质。[提示：对 (c) 部分，可使用练习 10.101 的结果。]  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-112.jpg?height=1276&width=1333&top_left_y=1223&top_left_x=413)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-112.jpg?height=1276&width=1333&top_left_y=1223&top_left_x=413){width="400"}
+  
 
-![](https://cdn.mathpix.com/snip/images/gra3ImKWELDKeWCQoHXNoo0hGp3qHwgS8BTyCdSv4gY.original.fullsize.png)  
+![](https://cdn.mathpix.com/snip/images/gra3ImKWELDKeWCQoHXNoo0hGp3qHwgS8BTyCdSv4gY.original.fullsize.png){width="400"}
+  
 
 10.3 证明，对于具有傅里叶级数系数序列 $a$ 的复周期序列 $x$：  
 (a) 当且仅当 $a$ 为偶数时，$x$ 为偶序列；  

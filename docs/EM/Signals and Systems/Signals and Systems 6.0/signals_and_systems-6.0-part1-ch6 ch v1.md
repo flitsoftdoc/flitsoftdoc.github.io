@@ -97,15 +97,18 @@ $$
 
 因此，我们找到了非周期函数 $x$ 的一种表示方法，以所有频率的复指数形式表示。我们称之为函数 $x$ 的傅里叶变换表示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-167.jpg?height=1255&width=987&top_left_y=699&top_left_x=629)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-167.jpg?height=1255&width=987&top_left_y=699&top_left_x=629){width="400"}
+
 
 图6.1：用于傅里叶变换表示推导的函数示例，其中 $T_{1}>\frac{T}{2}$。(a) 非周期函数 $x$；(b) 函数 $x_{T}$；(c) $T$-周期函数 $\tilde{x}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-168.jpg?height=1257&width=1413&top_left_y=367&top_left_x=289)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-168.jpg?height=1257&width=1413&top_left_y=367&top_left_x=289){width="400"}
+
 
 图6.2：用于傅里叶变换表示推导的函数示例，其中 $T_{1}<\frac{T}{2}$。(a) 非周期函数 $x$；(b) 函数 $x_{T}$；(c) $T$-周期函数 $\tilde{x}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-168.jpg?height=407&width=816&top_left_y=1909&top_left_x=543)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-168.jpg?height=407&width=816&top_left_y=1909&top_left_x=543){width="400"}
+
 
 图6.3：傅里叶变换表示推导中得到的积分。
 
@@ -274,7 +277,8 @@ $$
 
 避免对匿名函数书写过于冗长的方法之一是使用点符号（dot notation），在第2.1节中已介绍。再次考虑图6.4中的函数，将 $t$ 映射为 $e^{-|t|}$。使用严格正确的符号，我们可以将该函数的傅里叶变换写作“$\mathcal{F}\left\{e^{-|\cdot|}\right\}$”。换句话说，我们可以通过使用点符号来表示一个表达式引用的是函数（而不是函数的值）。点符号的示例见下文例6.4。点符号在希望使用严格符号而不显得冗长时非常有用。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-172.jpg?height=663&width=833&top_left_y=291&top_left_x=583)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-172.jpg?height=663&width=833&top_left_y=291&top_left_x=583){width="400"}
+
 
 图6.4：$e^{-|t|}$ 随 $t$ 的变化图。
 
@@ -368,7 +372,8 @@ $$
 
 考虑图6.5所示的函数 $x$。设 $\hat{x}$ 为 $x$ 的傅里叶变换表示（即 $\hat{x}(t)=\frac{1}{2 \pi} \int_{-\infty}^{\infty} X(\omega) e^{j \omega t} d \omega$，其中 $X$ 为 $x$ 的傅里叶变换）。求 $\hat{x}\left(-\frac{1}{2}\right)$ 和 $\hat{x}\left(\frac{1}{2}\right)$ 的值。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-174.jpg?height=338&width=500&top_left_y=297&top_left_x=751)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-174.jpg?height=338&width=500&top_left_y=297&top_left_x=751){width="400"}
+
 
 图6.5：函数 $x$。
 
@@ -1495,7 +1500,8 @@ $$
 
 **例 6.20.** 设 $X_{1}$ 和 $X_{2}$ 分别表示 $x_{1}$ 和 $x_{2}$ 的傅里叶变换。假设 $X_{1}$ 和 $X_{2}$ 如图 6.6(a) 和 (b) 所示。判断 $x_{1}$ 和 $x_{2}$ 是否为周期函数。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-193.jpg?height=285&width=1305&top_left_y=291&top_left_x=416)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-193.jpg?height=285&width=1305&top_left_y=291&top_left_x=416){width="400"}
+
 
 图 6.6：频谱。频谱 (a) $X_{1}$ 和 (b) $X_{2}$。  
 
@@ -1509,7 +1515,8 @@ $$
 
 **例 6.21.** 考虑一个基波周期为 $T=2$ 的周期函数 $x$，如图 6.7 所示。利用傅里叶变换，求 $x$ 的傅里叶级数表示。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-194.jpg?height=257&width=576&top_left_y=297&top_left_x=713)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-194.jpg?height=257&width=576&top_left_y=297&top_left_x=713){width="400"}
+
 
 图 6.7：周期函数 $x$。  
 
@@ -1808,7 +1815,8 @@ $$
 
 在这种情况下，$X$ 既不是纯实的，也不是纯虚的，因此我们用两幅图来表示 $X$ 的频谱：分别绘制幅度谱与相位谱，如图 6.8(a) 与 (b) 所示。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-200.jpg?height=763&width=1457&top_left_y=283&top_left_x=224)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-200.jpg?height=763&width=1457&top_left_y=283&top_left_x=224){width="400"}
+
 
 图 6.8：幅度缩放与时间平移的符号函数 $x$ 的频谱。(a) $x$ 的幅度谱；(b) $x$ 的相位谱。  
 
@@ -1828,7 +1836,8 @@ $$
 
 在这种情况下，$X$ 为实函数，因此可以将其频谱绘制在一张图上，如图 6.9 所示。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-201.jpg?height=393&width=455&top_left_y=294&top_left_x=899)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-201.jpg?height=393&width=455&top_left_y=294&top_left_x=899){width="400"}
+
 
 图 6.9：时间缩放 sinc 函数 $x$ 的频谱。  
 
@@ -1893,7 +1902,8 @@ $$
 
 (b) 由于 $|X(\omega)|$ 在 $\omega=0$ 处取最大值，因此 $x$ 在频率 $0$ 处信息量最多。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-202.jpg?height=768&width=1468&top_left_y=483&top_left_x=224)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-202.jpg?height=768&width=1468&top_left_y=483&top_left_x=224){width="400"}
+
 
 图 6.10：时间平移的符号函数的频谱。(a) $x$ 的幅度谱；(b) $x$ 的相位谱。
 
@@ -1907,7 +1917,8 @@ $$
 
 可以证明，一个函数不可能同时是时限的和带限的。（该事实的证明见习题 6.12。）为了帮助理解原因，我们回顾傅里叶变换的**时域/频域缩放性质**。根据这一性质，我们知道当对函数 $x$ 进行压缩（通过时间缩放）时，其傅里叶变换 $X$ 会扩展（通过时间缩放）。类似地，当对傅里叶变换 $X$ 进行压缩（通过时间缩放）时，函数 $x$ 会扩展（通过时间缩放）。因此，函数的时域范围与带宽之间显然存在一种反比关系。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-202.jpg?height=398&width=615&top_left_y=1788&top_left_x=696)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-202.jpg?height=398&width=615&top_left_y=1788&top_left_x=696){width="400"}
+
 
 图 6.11：具有傅里叶变换 $X$ 的函数 $x$ 的带宽。
 
@@ -2010,11 +2021,13 @@ $$
 
 这一结果提供了观察 LTI 系统行为的另一种方式。也就是说，我们可以将系统视为在频域上对输入和输出函数的傅里叶变换进行操作。换句话说，我们得到一个类似于图 6.13 的系统。在这种情况下，时域中的卷积操作被频域中的乘法所取代。输出的频谱（即傅里叶变换）等于输入的频谱与冲激响应的频谱的乘积。术语上，我们将 $H$ 称为系统的**频率响应**。系统的行为完全由频率响应 $H$ 描述。如果已知输入，我们可以计算其傅里叶变换 $X$，然后确定输出的傅里叶变换 $Y$。利用逆傅里叶变换，即可求得输出 $y$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-205.jpg?height=88&width=339&top_left_y=307&top_left_x=950)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-205.jpg?height=88&width=339&top_left_y=307&top_left_x=950){width="400"}
+
 
 图 6.12：具有输入 $x$、输出 $y$ 和冲激响应 $h$ 的 LTI 系统的时域视图。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-205.jpg?height=96&width=347&top_left_y=507&top_left_x=945)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-205.jpg?height=96&width=347&top_left_y=507&top_left_x=945){width="400"}
+
 
 图 6.13：具有输入频谱 $X$、输出频谱 $Y$ 和频率响应 $H$ 的 LTI 系统的频域视图。
 
@@ -2064,7 +2077,8 @@ $$
 
 在此特例中，$H$ 为实值函数。因此，我们可以在单个图中绘制频率响应 $H$，如图 6.14 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-205.jpg?height=382&width=436&top_left_y=756&top_left_x=910)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-205.jpg?height=382&width=436&top_left_y=756&top_left_x=910){width="400"}
+
 
 图 6.14：示例系统的频率响应。
 
@@ -2086,7 +2100,8 @@ $$
 
 $\Theta$ 的图像如图 6.15(b) 所示。与图 6.15(a) 中存在许多间断的函数不同，图 6.15(b) 中的函数是连续的。尽管这两个图中的函数在形式上不同，但在物理意义上是等价的，因为它们对应相同的物理角位移（即对于所有 $\omega \in \mathbb{R}$，有 $e^{j \operatorname{Arg} H(\omega)}=e^{j \Theta(\omega)}$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-206.jpg?height=484&width=1484&top_left_y=286&top_left_x=251)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-206.jpg?height=484&width=1484&top_left_y=286&top_left_x=251){width="400"}
+
 
 图 6.15：非卷绕相位示例。(a) 将相位函数限制在 $(-\pi, \pi]$ 范围内，(b) 对应的非卷绕相位。
 
@@ -2179,11 +2194,13 @@ $$
 
 图 6.17 考虑了一个更极端的情况。在此情况下，将 potatohead 图像的幅值谱和相位谱分别用随机数据替换，这些随机数据来自图 6.17(b) 所示的随机噪声图像。当完全用随机值替换 potatohead 图像的幅值谱时，图 6.17(c) 所示的结果图像仍可识别为原始 potatohead 图像的颗粒化版本。另一方面，当用随机值替换 potatohead 图像的相位谱时，图 6.17(d) 所示的结果图像中原始 potatohead 图像的所有可见特征都消失了。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-209.jpg?height=1378&width=1665&top_left_y=597&top_left_x=289)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-209.jpg?height=1378&width=1665&top_left_y=597&top_left_x=289){width="400"}
+
 
 图 6.16：图像中相位信息的重要性。(a) potatohead 图像和 (b) hongkong 图像。 (c) 将 potatohead 图像的幅值谱替换为 hongkong 图像的幅值谱后的图像。(d) 将 potatohead 图像的相位谱替换为 hongkong 图像的相位谱后的图像。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-210.jpg?height=1379&width=1663&top_left_y=334&top_left_x=164)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-210.jpg?height=1379&width=1663&top_left_y=334&top_left_x=164){width="400"}
+
 
 图 6.17：图像中相位信息的重要性。(a) potatohead 图像和 (b) 随机噪声图像。 (c) 将 potatohead 图像的幅值谱替换为随机图像的幅值谱后的图像。 (d) 将 potatohead 图像的相位谱替换为随机图像的相位谱后的图像。
 
@@ -2209,7 +2226,8 @@ $$
 
 因此，我们得到图 6.18(a) 所示的等价关系。由于乘法满足交换律，我们还得到图 6.18(b) 所示的等价关系。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-210.jpg?height=331&width=984&top_left_y=1977&top_left_x=502)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-210.jpg?height=331&width=984&top_left_y=1977&top_left_x=502){width="400"}
+
 
 图 6.18：涉及频率响应与 LTI 系统串联互联的等价关系。(a) 第一种等价关系，(b) 第二种等价关系。
 
@@ -2231,7 +2249,8 @@ $$
 
 因此，我们得到图 6.19 所示的等价关系。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-211.jpg?height=182&width=814&top_left_y=297&top_left_x=713)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-211.jpg?height=182&width=814&top_left_y=297&top_left_x=713){width="400"}
+
 
 图 6.19：涉及频率响应与 LTI 系统并联互联的等价关系。
 
@@ -2367,7 +2386,8 @@ $$
 
 其中 $\omega_{c 1}$ 和 $\omega_{c 2}$ 为截止频率。该频率响应的示意图见图 6.20(c)。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-214.jpg?height=1497&width=866&top_left_y=597&top_left_x=572)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-214.jpg?height=1497&width=866&top_left_y=597&top_left_x=572){width="400"}
+
 
 图 6.20：滤波器的频率响应示意图。(a) 理想低通滤波器，(b) 理想高通滤波器，(c) 理想带通滤波器。
 
@@ -2422,7 +2442,8 @@ $$
 
 频率响应 $H$ 如图 6.21(c) 所示。由于 $Y(\omega)=H(\omega) X(\omega)$ 且当 $|\omega|<\omega_{a}-\omega_{b}$ 或 $|\omega|>\omega_{a}+\omega_{b}$ 时 $H(\omega)=0$，因此 $Y$ 仅包含 $X$ 中位于频率范围 $\omega_{a}-\omega_{b} \leq |\omega| \leq \omega_{a}+\omega_{b}$ 的频率分量。换句话说，$X$ 的中间频率分量被保留。因此，该系统表示一个带通滤波器。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-216.jpg?height=1304&width=1089&top_left_y=696&top_left_x=459)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-216.jpg?height=1304&width=1089&top_left_y=696&top_left_x=459){width="400"}
+
 
 图 6.21：本例中各系统的频率响应。(a) 第一个系统，(b) 第二个系统，(c) 第三个系统。
 
@@ -2491,7 +2512,8 @@ $$
 
 因此，输出信号 $y(t)$ 为输入信号经过 300 Hz 理想低通滤波后的结果，只保留频率小于等于 300 Hz 的分量。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-218.jpg?height=1171&width=1514&top_left_y=742&top_left_x=245)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-218.jpg?height=1171&width=1514&top_left_y=742&top_left_x=245){width="400"}
+
 
 图 6.22：低通滤波例的频谱。(a) 输入 $x$ 的频谱，(b) 系统的频率响应，(c) 输出 $y$ 的频谱。
 
@@ -2553,7 +2575,8 @@ $$
 
 因此，输出信号 $y(t)$ 为输入信号经过带通滤波后，只保留频率在 $3 \leq |\omega| \leq 5$ 的成分，即仅剩余 $\cos(4 t)$ 分量。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-219.jpg?height=917&width=1514&top_left_y=286&top_left_x=372)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-219.jpg?height=917&width=1514&top_left_y=286&top_left_x=372){width="400"}
+
 
 图 6.23：带通滤波例的频谱。(a) 输入 $x$ 的频谱，(b) 系统的频率响应，(c) 输出 $y$ 的频谱。
 
@@ -2587,7 +2610,8 @@ $$
 
 均衡在许多应用中都有使用。在实际通信系统中，均衡用于消除或最小化信号通过（非理想）通信信道时引入的失真。在音频应用中，均衡可用于增强或减弱某些频率范围的声音。例如，在立体声音频输出中，我们常常希望增强低音（即强调低频）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-220.jpg?height=168&width=1416&top_left_y=289&top_left_x=262)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-220.jpg?height=168&width=1416&top_left_y=289&top_left_x=262){width="400"}
+
 
 图6.24：均衡示例。(a) 原系统。(b) 带均衡的新系统。
 
@@ -2599,7 +2623,8 @@ $$
 
 不幸的是，该信道具有衰减高频的缺点。求一个均衡器的频率响应 $G$，使其与通信信道串联后得到一个理想（即无失真）的信道。带均衡的新系统如图6.25所示，其中 $g$ 和 $h$ 分别表示 $G$ 和 $H$ 的逆傅里叶变换。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-220.jpg?height=88&width=692&top_left_y=564&top_left_x=651)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-220.jpg?height=88&width=692&top_left_y=564&top_left_x=651){width="400"}
+
 
 图6.25：使用均衡的示例系统。
 
@@ -2618,7 +2643,8 @@ $$
 傅里叶变换的一个重要应用是电路分析。本节将讨论这一具体应用。  
 许多电气网络的基本构件是电阻器、电感器和电容器。下面我们将简要介绍这些电路元件。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-221.jpg?height=250&width=1411&top_left_y=294&top_left_x=416)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-221.jpg?height=250&width=1411&top_left_y=294&top_left_x=416){width="400"}
+  
 图6.26：基本电气元件。(a) 电阻器，(b) 电感器，(c) 电容器。
 
 **电阻器** 是一种阻碍电流流动的电路元件。图6.26(a)给出了其原理图表示，其满足关系式：
@@ -2673,7 +2699,8 @@ $$
 (c) 判断该系统最接近哪种类型的频率选择性滤波器。  
 (d) 当 $v_{0}(t)=e^{-t /(R C)} u(t)$ 时，求 $v_{1}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-222.jpg?height=301&width=490&top_left_y=294&top_left_x=748)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-222.jpg?height=301&width=490&top_left_y=294&top_left_x=748){width="400"}
+  
 图6.27：简单 RC 网络。
 
 **解答**。  
@@ -2781,11 +2808,13 @@ $$
 
 考虑图6.28所示的通信系统。下面我们将详细分析该系统的行为。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-224.jpg?height=252&width=817&top_left_y=694&top_left_x=591)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-224.jpg?height=252&width=817&top_left_y=694&top_left_x=591){width="400"}
+
 
 图6.28：简单通信系统。(a) 发射器，(b) 接收器。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-224.jpg?height=741&width=1543&top_left_y=1172&top_left_x=243)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-224.jpg?height=741&width=1543&top_left_y=1172&top_left_x=243){width="400"}
+
 
 图6.29：用复正弦波调制的频谱。(a) 发射器输入的频谱。(b) 发射器使用的复正弦波频谱。(c) 接收器使用的复正弦波频谱。(d) 发射信号的频谱。(e) 接收器输出的频谱。
 
@@ -2908,7 +2937,8 @@ h(t)=\frac{2 \omega_{c 0}}{\pi} \operatorname{sinc}\left(\omega_{c 0} t\right) .
 \end{equation*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-226.jpg?height=257&width=1084&top_left_y=316&top_left_x=478)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-226.jpg?height=257&width=1084&top_left_y=316&top_left_x=478){width="400"}
+
 
 图6.30：DSB/SC 幅度调制系统。(a) 发射器，(b) 接收器。
 
@@ -2965,7 +2995,8 @@ $$
 
 在上述简化过程中，由于 $H(\omega)=2 \operatorname{rect}\left(\frac{\omega}{2 \omega_{c 0}}\right)$ 且满足条件 (6.42)，因此可以得到 $H(\omega) X(\omega)=2 X(\omega)$，$H(\omega) X\left(\omega-2 \omega_{c}\right)=0$，$H(\omega) X\left(\omega+2 \omega_{c}\right)=0$。$\hat{X}$ 与 $X$ 的关系可参见图6.31(a)和(f)。因此，$\hat{X}=X$，即 $\hat{x}=x$，成功在接收器端恢复了原始信号 $x$。该系统实现了在传输前将 $x$ 移至不同频率范围，并在接收端恢复 $x$，正是我们所期望的效果。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-228.jpg?height=1522&width=1565&top_left_y=310&top_left_x=216)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-228.jpg?height=1522&width=1565&top_left_y=310&top_left_x=216){width="400"}
+
 
 图6.31：DSB/SC 幅度调制信号频谱。(a) 发射器输入频谱。(b) 发射器和接收器使用的正弦信号频谱。(c) 接收器滤波器频率响应。(d) 发射信号频谱。(e) 接收器乘法器输出频谱。(f) 接收器输出频谱。
 
@@ -2973,7 +3004,8 @@ $$
 
 通过对 DSB/SC AM 系统进行小幅修改，我们可以将系统的带宽需求减半。得到的系统称为**单边带/载波抑制（SSB/SC）幅度调制系统**。该改进系统如图6.32所示。图6.32(a)中的发射器包含一个标注了冲激响应 $g$ 的 LTI 子系统。同样，图6.32(b)中的接收器包含一个标注了冲激响应 $h$ 的 LTI 子系统。设 $X, Y, Q, V, \hat{X}, C, G$ 和 $H$ 分别为 $x, y, q, v, \hat{x}, c, g$ 和 $h$ 的傅里叶变换。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-228.jpg?height=261&width=1255&top_left_y=2120&top_left_x=380)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-228.jpg?height=261&width=1255&top_left_y=2120&top_left_x=380){width="400"}
+
 
 图6.32：SSB/SC 幅度调制系统。(a) 发射器，(b) 接收器。
 
@@ -3024,7 +3056,8 @@ $$
 
 图6.33 描述了信号通过系统时所经历的变换。可以看到，接收器的输出等于发射器的输入。对该通信系统的详细分析留作读者练习。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-230.jpg?height=1819&width=1630&top_left_y=372&top_left_x=178)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-230.jpg?height=1819&width=1630&top_left_y=372&top_left_x=178){width="400"}
+
 
 图6.33：SSB/SC 幅度调制信号频谱。(a) 发射器输入频谱。(b) 发射器和接收器使用的正弦信号频谱。(c) 发射器滤波器频率响应。(d) 接收器滤波器频率响应。(e) 发射器乘法器输出频谱。(f) 发射信号频谱。(g) 接收器乘法器输出频谱。(h) 接收器输出频谱。
 
@@ -3040,11 +3073,13 @@ y(n)=x(T n) \quad \text { 对所有整数 } n, \tag{6.47}
 $$
 其中 $T$ 是一个正实数。术语上，$T$ 被称为**采样周期**，而 $\omega_{s}=\frac{2 \pi}{T}$ 被称为（角）**采样频率**。像公式 (6.47) 描述的系统被称为理想连续-离散时间（C/D）转换器，如图 6.34 所示。周期采样的一个例子见图 6.35。图 6.35(a) 显示了待采样的函数 $x$，图 6.35(b) 显示了以采样周期 $T=10$ 对 $x$ 进行采样得到的序列 $y$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-231.jpg?height=130&width=463&top_left_y=297&top_left_x=891)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-231.jpg?height=130&width=463&top_left_y=297&top_left_x=891){width="400"}
+
 
 **图 6.34：** 输入函数 $x$ 和输出序列 $y$ 的理想 C/D 转换器。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-231.jpg?height=506&width=1406&top_left_y=524&top_left_x=416)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-231.jpg?height=506&width=1406&top_left_y=524&top_left_x=416){width="400"}
+
 
 **图 6.35：** 周期采样示例。(a) 待采样函数 $x$，(b) 以采样周期 10 对 $x$ 进行采样得到的序列 $y$。
 
@@ -3059,7 +3094,8 @@ $$
 $$
 其中 $\mathcal{H}$ 是将序列映射为函数的算子。$\mathcal{H}$ 的具体形式取决于所采用的插值方案。虽然插值有多种实现方式，但在后续章节中我们将重点讨论一种称为**带限插值**的方案。插值过程由称为理想离散-连续时间（D/C）转换器的系统执行，如图 6.36 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-231.jpg?height=131&width=463&top_left_y=1169&top_left_x=891)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-231.jpg?height=131&width=463&top_left_y=1169&top_left_x=891){width="400"}
+
 
 **图 6.36：** 输入序列 $y$ 和输出函数 $\hat{x}$ 的理想 D/C 转换器。
 
@@ -3089,11 +3125,13 @@ p(t)=\sum_{k=-\infty}^{\infty} \delta(t-k T) .
 $$
 然后，我们取 $s$ 中连续冲激的权重，形成样本序列 $y$。采样频率为 $\omega_{s}=\frac{2 \pi}{T}$。术语上，$p$ 被称为**采样函数**。从图中可以看出，信号 $s$ 和 $y$ 虽然密切相关，但存在一些关键差异。冲激列 $s$ 是一个函数（即连续时间信号），除了在 $T$ 的整数倍（即采样点）处，其值为零；而 $y$ 是一个序列（即离散时间信号），仅在整数上定义，其值对应 $s$ 中连续冲激的权重。采样过程中涉及的各种信号如图 6.38 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-232.jpg?height=328&width=739&top_left_y=294&top_left_x=626)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-232.jpg?height=328&width=739&top_left_y=294&top_left_x=626){width="400"}
+
 
 **图 6.37：** 输入函数 $x$ 和输出序列 $y$ 的理想 C/D 转换器模型。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-233.jpg?height=1159&width=1549&top_left_y=724&top_left_x=348)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-233.jpg?height=1159&width=1549&top_left_y=724&top_left_x=348){width="400"}
+
 
 **图 6.38：** 采样过程中各信号示例，采样周期为 $T$。 (a) 待采样函数 $x$；(b) 采样函数 $p$；(c) 冲激调制函数 $s$；(d) 采样得到的序列 $y$。
 
@@ -3143,7 +3181,8 @@ $$
 
 再考虑 $S$ 中的 $X$ 副本重叠的情况。在这种情况下，原函数 $X$ 中的多个频率被映射到 $S$ 的同一频率。这种现象称为**混叠（aliasing）**。显然，混叠导致 $S$ 的各个周期形状与原频谱 $X$ 不同。当发生混叠时，无法从 $S$ 中辨识原频谱 $X$，因此无法从 $s$ 恢复原函数 $x$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-235.jpg?height=1260&width=1111&top_left_y=394&top_left_x=570)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-235.jpg?height=1260&width=1111&top_left_y=394&top_left_x=570){width="400"}
+
 
 **图 6.39：** 冲激列采样对频谱的影响。(a) 待采样函数 $x$ 的频谱；(b) 无混叠情况下 $s$ 的频谱；(c) 有混叠情况下 $s$ 的频谱。
 
@@ -3151,7 +3190,8 @@ $$
 
 插值允许我们从序列（即离散时间信号）构造函数（即连续时间信号）。该过程本质上用于确定函数在采样点之间的取值。除非在非常特殊的情况下，否则通常无法从样本精确重现函数。尽管存在多种插值方案，我们将在稍后重点讨论其中的一种。插值过程可以用简单的理想 D/C 转换器系统建模，如图 6.40 所示。这种特定类型的插值称为**带限插值**。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-235.jpg?height=304&width=836&top_left_y=1993&top_left_x=702)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-235.jpg?height=304&width=836&top_left_y=1993&top_left_x=702){width="400"}
+
 
 **图 6.40：** 输入序列 $y$ 和输出函数 $\hat{x}$ 的理想 D/C 转换器模型。
 
@@ -3205,7 +3245,8 @@ $$
 
 **例 6.42**：设 $x$ 为连续时间音频信号，其傅里叶变换为 $X$。假设 $|X(\omega)|=0$ 对所有 $|\omega| \geq 44100 \pi$。求允许从其样本精确恢复 $x$ 的最大采样周期 $T$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-237.jpg?height=404&width=1355&top_left_y=291&top_left_x=453)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-237.jpg?height=404&width=1355&top_left_y=291&top_left_x=453){width="400"}
+
 
 **图 6.41：** 函数 $x$ 的频谱。
 
@@ -3282,7 +3323,8 @@ T & <\frac{2 \pi}{\omega_{s}} \\
 $$
 由于假设 $\omega_{c} \gg \omega_{a}$，此新采样周期大于本例 (a) 部分计算的采样周期。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-238.jpg?height=428&width=833&top_left_y=302&top_left_x=586)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-238.jpg?height=428&width=833&top_left_y=302&top_left_x=586){width="400"}
+
 
 **图 6.42：** 函数 $x_{1}$ 的频谱。
 
@@ -3322,7 +3364,8 @@ $$
 
 6.5 求下列每个周期函数 $x$ 的傅里叶变换 $X$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-239.jpg?height=436&width=652&top_left_y=1999&top_left_x=834)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-239.jpg?height=436&width=652&top_left_y=1999&top_left_x=834){width="400"}
+
 
 6.6 设 $X$ 为 $x$ 的傅里叶变换。证明：  
 (a) 若 $x$ 为偶函数，则 $X(\omega)=2 \int_{0}^{\infty} x(t) \cos (\omega t) d t$；  
@@ -3362,7 +3405,8 @@ $$
 
 6.17 考虑下图所示的 LTI 电阻-电感 (RL) 网络，输入为 $v_{0}$，输出为 $v_{1}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-241.jpg?height=285&width=477&top_left_y=626&top_left_x=923)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-241.jpg?height=285&width=477&top_left_y=626&top_left_x=923){width="400"}
+
 
 (a) 求系统的频率响应 $H$。  
 (b) 求系统的幅度响应和相位响应。  
@@ -3372,7 +3416,8 @@ $$
 
 6.18 考虑下图所示的 LTI 系统，输入为 $v_{0}$，输出为 $v_{1}$，其中 $R=1, C=\frac{1}{1000}, L=\frac{1}{1000}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-241.jpg?height=295&width=674&top_left_y=1410&top_left_x=826)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-241.jpg?height=295&width=674&top_left_y=1410&top_left_x=826){width="400"}
+
 
 (a) 求系统的频率响应 $H$。  
 (b) 使用计算机绘制系统的幅度响应和相位响应。  
@@ -3380,14 +3425,16 @@ $$
 
 6.19 对每个 LTI 电路，求描述电路的微分方程，求电路的频率响应 $H$，并判定该电路最接近的频率选择型滤波器类型。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-241.jpg?height=363&width=1460&top_left_y=2090&top_left_x=434)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-241.jpg?height=363&width=1460&top_left_y=2090&top_left_x=434){width="400"}
+
 
 6.20 设 $x$ 为实函数，其傅里叶变换 $X$ 满足 $X(\omega)=0$ 对 $|\omega|>\omega_{b}$。利用幅度调制生成函数 $y(t)=x(t) \sin \left(\omega_{c} t\right)$，其中 $\omega_{c} \gg \omega_{b}$。为了恢复原函数 $x$，拟采用下图所示系统，该系统包含冲激响应为 $h$ 的 LTI 子系统。设 $Y, V, \hat{X}$ 和 $H$ 分别为 $y, v, \hat{x}$ 和 $h$ 的傅里叶变换。系统满足
 $$
 H(\omega)= \begin{cases}2 & |\omega|<\omega_{b} \\ 0 & \text { otherwise } .\end{cases}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-242.jpg?height=182&width=579&top_left_y=696&top_left_x=794)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-242.jpg?height=182&width=579&top_left_y=696&top_left_x=794){width="400"}
+
 
 (a) 求 $Y$ 用 $X$ 表示的表达式，求 $\hat{X}$ 用 $V$ 表示的表达式，求 $\hat{X}$ 用 $X$ 表示的表达式。  
 (b) 比较 $\hat{x}$ 与 $x$，并评论该系统的实用性。
@@ -3397,10 +3444,12 @@ $$
 **简答**：$\tilde{x}(t)=\cos (\theta) x(t)$
 6.22 在讨论 DSB/SC 幅度调制时，我们看到如下图 A 所示的系统形式通常很有用。然而，在实际应用中，该系统所需的乘法单元并不总是容易实现。因此，我们有时采用如下图 B 所示的系统。在第二种系统中，我们先将正弦载波与调制信号 $x$ 相加，然后将结果传递到非线性平方器中（即 $v_{2}(t)=v_{1}^{2}(t)$）。该系统还包含一个具有冲激响应 $h$ 的 LTI 子系统。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-242.jpg?height=165&width=301&top_left_y=1837&top_left_x=405)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-242.jpg?height=165&width=301&top_left_y=1837&top_left_x=405){width="400"}
+
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-242.jpg?height=190&width=857&top_left_y=1823&top_left_x=813)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-242.jpg?height=190&width=857&top_left_y=1823&top_left_x=813){width="400"}
+
 (b)
 
 设 $X, V_{1}, V_{2}$ 和 $H$ 分别为 $x, v_{1}, v_{2}$ 和 $h$ 的傅里叶变换。假设 $X(\omega)=0$ 当 $|\omega|>\omega_{b}$（即 $x$ 是带限信号）。  
@@ -3417,10 +3466,12 @@ H(\omega)=-j \operatorname{sgn} \omega .
 $$
 设 $X, Y, V_{1}, V_{2}$ 和 $V_{3}$ 分别为 $x, y, v_{1}, v_{2}$ 和 $v_{3}$ 的傅里叶变换。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-243.jpg?height=441&width=662&top_left_y=591&top_left_x=551)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-243.jpg?height=441&width=662&top_left_y=591&top_left_x=551){width="400"}
+
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-243.jpg?height=309&width=479&top_left_y=659&top_left_x=1296)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-243.jpg?height=309&width=479&top_left_y=659&top_left_x=1296){width="400"}
+
 (b)
 
 (a) 假设 $X(\omega)=0$ 对 $|\omega|>\omega_{b}$，且 $\omega_{b} \ll \omega_{c}$。求 $V_{1}, V_{2}, V_{3}$ 和 $Y$ 关于 $X$ 的表达式。
@@ -3437,10 +3488,12 @@ G(\omega)= \begin{cases}2 & |\omega| \leq 100 \pi \\ 0 & \text { 否则 }\end{ca
 $$
 设 $X, \hat{X}, Y$ 和 $Q$ 分别为 $x, \hat{x}, y$ 和 $q$ 的傅里叶变换。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-243.jpg?height=190&width=654&top_left_y=1796&top_left_x=478)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-243.jpg?height=190&width=654&top_left_y=1796&top_left_x=478){width="400"}
+
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-243.jpg?height=312&width=490&top_left_y=1734&top_left_x=1372)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-243.jpg?height=312&width=490&top_left_y=1734&top_left_x=1372){width="400"}
+
 (b)
 
 (a) 假设 $X(\omega)=0$ 对 $|\omega|>100 \pi$。求 $Y, Q$ 和 $\hat{X}$ 关于 $X$ 的表达式。
@@ -3462,13 +3515,16 @@ $$
 
 (c) 假设 $X=X_{2}$，其中 $X_{2}$ 如图 C 所示。利用(a)部分的结果，绘制 $S$ 和 $Y$，并说明系统输入 $x$ 与输出 $y$ 之间的关系（如有）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-244.jpg?height=180&width=590&top_left_y=780&top_left_x=702)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-244.jpg?height=180&width=590&top_left_y=780&top_left_x=702){width="400"}
+
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-244.jpg?height=330&width=365&top_left_y=1002&top_left_x=416)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-244.jpg?height=330&width=365&top_left_y=1002&top_left_x=416){width="400"}
+
 (b)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-244.jpg?height=333&width=522&top_left_y=999&top_left_x=1148)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-244.jpg?height=333&width=522&top_left_y=999&top_left_x=1148){width="400"}
+
 (c)
 
 ---
@@ -3579,7 +3635,8 @@ $e^{-a|t|} \stackrel{\mathrm{CTFT}}{\longleftrightarrow} \frac{2 a}{\omega^{2}+a
 
 6.106 求下列周期函数 $x$ 的傅里叶变换 $X$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-246.jpg?height=263&width=696&top_left_y=2163&top_left_x=680)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-246.jpg?height=263&width=696&top_left_y=2163&top_left_x=680){width="400"}
+  
 (a)
 
 **简答：**  
@@ -3587,19 +3644,24 @@ $e^{-a|t|} \stackrel{\mathrm{CTFT}}{\longleftrightarrow} \frac{2 a}{\omega^{2}+a
 
 6.107 对下列每个 $T$-周期函数 $x$，求其傅里叶变换 $X$。（部分积分公式见 F.4 节可能有帮助。）
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=247&width=679&top_left_y=545&top_left_x=421)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=247&width=679&top_left_y=545&top_left_x=421){width="400"}
+  
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=263&width=684&top_left_y=543&top_left_x=1237)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=263&width=684&top_left_y=543&top_left_x=1237){width="400"}
+  
 (b)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=274&width=684&top_left_y=918&top_left_x=421)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=274&width=684&top_left_y=918&top_left_x=421){width="400"}
+  
 (c)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=268&width=682&top_left_y=918&top_left_x=1237)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=268&width=682&top_left_y=918&top_left_x=1237){width="400"}
+  
 (d)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=263&width=679&top_left_y=1307&top_left_x=832)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-247.jpg?height=263&width=679&top_left_y=1307&top_left_x=832){width="400"}
+  
 (e)
 
 **简答：**  
@@ -3660,19 +3722,24 @@ $\pi / k$
 
 6.115 设 $x$ 的傅里叶变换为 $X$。对于下列每个频率/幅度谱，判断 $x$ 是否具有下列性质：实值、偶/奇、周期、有限持续时间、有限能量。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=212&width=380&top_left_y=461&top_left_x=480)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=212&width=380&top_left_y=461&top_left_x=480){width="400"}
+  
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=212&width=363&top_left_y=461&top_left_x=918)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=212&width=363&top_left_y=461&top_left_x=918){width="400"}
+  
 (b)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=212&width=363&top_left_y=461&top_left_x=1342)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=212&width=363&top_left_y=461&top_left_x=1342){width="400"}
+  
 (c)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=209&width=598&top_left_y=761&top_left_x=480)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=209&width=598&top_left_y=761&top_left_x=480){width="400"}
+  
 (d)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=207&width=601&top_left_y=761&top_left_x=1115)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-249.jpg?height=207&width=601&top_left_y=761&top_left_x=1115){width="400"}
+  
 (e)
 
 **简答：**  
@@ -3717,13 +3784,16 @@ $\pi / k$
 
 6.119 对于下列每个 LTI 电路，求描述电路的微分方程，求电路的频率响应 $H$，并判断该电路最接近哪种频率选择性滤波器。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-250.jpg?height=301&width=485&top_left_y=891&top_left_x=491)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-250.jpg?height=301&width=485&top_left_y=891&top_left_x=491){width="400"}
+  
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-250.jpg?height=296&width=479&top_left_y=896&top_left_x=1107)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-250.jpg?height=296&width=479&top_left_y=896&top_left_x=1107){width="400"}
+  
 (b)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-250.jpg?height=292&width=674&top_left_y=1267&top_left_x=702)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-250.jpg?height=292&width=674&top_left_y=1267&top_left_x=702){width="400"}
+  
 (c)
 
 **简答：**  

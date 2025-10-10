@@ -104,7 +104,8 @@ x(n)=\left\{\begin{array}{ll}
 \end{array} \quad \text { 和 } \quad h(n)=u(n+2)-u(n-5)\right.
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-046.jpg?height=1298&width=1284&top_left_y=702&top_left_x=351)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-046.jpg?height=1298&width=1284&top_left_y=702&top_left_x=351){width="400"}
+  
 图 9.1：例 9.1 的图像。分别绘制了 (a) $x(k)$，(b) $h(k)$，和 (c) $h(n-k)$ 关于 $k$ 的图像。
 
 **解答** 为了帮助直观理解卷积计算中涉及的各种情况，我们在图 9.2 中绘制了 $x(k)$、$h(k)$ 和 $h(n-k)$ 关于 $k$ 的图像。从这些图像可以推导出卷积计算中有五种情况：
@@ -209,15 +210,18 @@ x * h(n) & = \begin{cases}\sum_{k=0}^{n}\left(\frac{1}{2}\right)^{k} & n \geq 0 
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-049.jpg?height=1246&width=1278&top_left_y=370&top_left_x=478)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-049.jpg?height=1246&width=1278&top_left_y=370&top_left_x=478){width="400"}
+  
 图 9.2：例 9.2 的图像。分别绘制了 (a) $x(k)$，(b) $h(k)$，和 (c) $h(n-k)$ 关于 $k$ 的图像。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-049.jpg?height=476&width=1260&top_left_y=1845&top_left_x=483)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-049.jpg?height=476&width=1260&top_left_y=1845&top_left_x=483){width="400"}
+  
 图 9.3：例 9.2 的序列 $x * h$。
 
 表 9.1：例 9.3 的卷积计算
 
-![](https://cdn.mathpix.com/snip/images/X8jdLOZxMWJKv8wPppRSxH9O2-pmnfnbYATueRGxTso.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/X8jdLOZxMWJKv8wPppRSxH9O2-pmnfnbYATueRGxTso.original.fullsize.png){width="400"}
+
 
 通常，确定卷积计算中出现的各种情况可能有些棘手。在本例中，我们有两种情况：$n \geq 0$ 和 $n<0$。这些情况的原因可以通过观察 $x(k)$ 和 $h(n-k)$ 关于 $k$ 的图像更容易理解，如图 9.4 所示。利用等比数列求和公式，我们可以写作
 
@@ -252,12 +256,14 @@ $$
 
 由于卷积在研究线性时不变（LTI）系统中经常使用，因此了解其一些基本性质是非常重要的。下面，我们将考察其中的一些性质。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-051.jpg?height=1068&width=1278&top_left_y=348&top_left_x=478)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-051.jpg?height=1068&width=1278&top_left_y=348&top_left_x=478){width="400"}
+
 图 9.4：示例 9.4 的绘图。绘制了 (a) $x(k)$, (b) $h(k)$, 和 (c) $h(n-k)$ 关于 $k$ 的变化。
 
 表 9.2：示例 9.5 的卷积计算
 
-![](https://cdn.mathpix.com/snip/images/odSejA6se_fGKAkrepw7q84IMcSSJPj6ncz7U8lRaHk.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/odSejA6se_fGKAkrepw7q84IMcSSJPj6ncz7U8lRaHk.original.fullsize.png){width="400"}
+
 
 **定理 9.1（卷积的交换律）**。卷积是交换的。也就是说，对于任意两个序列 $x$ 和 $h$，
 $$
@@ -482,7 +488,8 @@ x * h(n)= \begin{cases}1 & n=0 \\ 3 & n=1 \\ 6 & n=2 \\ 9 & n=3 \\ 10 & n=4 \\ 9
 $$
 表 9.3：示例 9.7 的卷积计算
 
-![](https://cdn.mathpix.com/snip/images/3irho2TpfQ-EfNQrEwW6V6j8PxXBGs03C4dVm6PIRXU.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/3irho2TpfQ-EfNQrEwW6V6j8PxXBGs03C4dVm6PIRXU.original.fullsize.png){width="400"}
+
 
 ## 9.6 LTI 系统的单位阶跃响应
 
@@ -508,7 +515,8 @@ s(n) & =u * h(n) \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-058.jpg?height=85&width=339&top_left_y=307&top_left_x=826)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-058.jpg?height=85&width=339&top_left_y=307&top_left_x=826){width="400"}
+  
 图 9.5：离散时间 LTI 系统的方框图表示，输入为 $x$，输出为 $y$，冲激响应为 $h$。
 
 因此，$s$ 可以通过累加 $h$ 得到。对 $s$ 取一阶差分，我们得到：
@@ -553,10 +561,12 @@ y & =x *\left(h_{1} * h_{2}\right) \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-059.jpg?height=339&width=1060&top_left_y=291&top_left_x=591)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-059.jpg?height=339&width=1060&top_left_y=291&top_left_x=591){width="400"}
+  
 图 9.6：离散时间 LTI 系统串联互连的等价关系。(a) 第一种等价，(b) 第二种等价。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-059.jpg?height=199&width=882&top_left_y=769&top_left_x=680)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-059.jpg?height=199&width=882&top_left_y=769&top_left_x=680){width="400"}
+  
 图 9.7：离散时间 LTI 系统并联互连的等价关系。
 
 因此，交换两个 LTI 系统的位置不会改变输入 $x$ 与输出 $y$ 的整体系统行为。换句话说，我们得到了图 9.6(b) 所示的等价关系。
@@ -595,7 +605,8 @@ y & =v * h_{3} \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-060.jpg?height=341&width=784&top_left_y=294&top_left_x=605)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-060.jpg?height=341&width=784&top_left_y=294&top_left_x=605){width="400"}
+  
 图 9.8：系统互连示例。
 
 因此，整体系统的冲激响应 $h$ 为：
@@ -730,7 +741,8 @@ $$
 \Leftrightarrow \quad & x * h * h_{\mathrm{inv}} = x . \tag{9.13}
 \end{align*}
 $$
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-063.jpg?height=90&width=576&top_left_y=302&top_left_x=832)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-063.jpg?height=90&width=576&top_left_y=302&top_left_x=832){width="400"}
+  
 图 9.9：系统与其逆系统的串联系统。
 这一关系在图 9.9 中以示意图的形式表示。由于单位冲激序列是卷积的单位元，我们可以等价地将 (9.13) 重写为
 $$
@@ -788,7 +800,8 @@ $$
 $$
 由于 $A \neq 0$，序列 $h_{\text{inv}}$ 总是良好定义的。因此，$\mathcal{H}^{-1}$ 存在，从而 $\mathcal{H}$ 是可逆的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-064.jpg?height=239&width=523&top_left_y=307&top_left_x=734)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-064.jpg?height=239&width=523&top_left_y=307&top_left_x=734){width="400"}
+  
 图 9.10：输入为 $x$，输出为 $y$ 的反馈系统。
 
 例 9.14. 考虑图 9.10 所示的系统，其输入为 $x$，输出为 $y$。方框图中的每个子系统都是 LTI 系统，并标注了其冲激响应。利用逆系统的概念，将 $y$ 用 $x$ 表示出来。
@@ -1116,11 +1129,14 @@ $$
 
 9.2 对下列图中给出的每对序列 $x$ 和 $h$，计算 $x * h$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-071.jpg?height=412&width=1055&top_left_y=923&top_left_x=669)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-071.jpg?height=412&width=1055&top_left_y=923&top_left_x=669){width="400"}
+  
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-071.jpg?height=403&width=760&top_left_y=1410&top_left_x=551)  
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-071.jpg?height=403&width=520&top_left_y=1410&top_left_x=1342)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-071.jpg?height=403&width=760&top_left_y=1410&top_left_x=551){width="400"}
+  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-071.jpg?height=403&width=520&top_left_y=1410&top_left_x=1342){width="400"}
+  
 (b)
 
 9.3 证明对于任意序列 $x$，有 $x * v(n) = x(n - n_0)$，其中 $v(n) = \delta(n - n_0)$，$n_0$ 为任意整数常数。
@@ -1146,10 +1162,12 @@ $$
 即 $x$ 和 $h$ 为有限长度序列。确定在何种 $n$ 值下，卷积 $x * h(n)$ 必为零。
 
 9.8 考虑一个 LTI 系统，其对序列 $x_1(n) = u(n) - u(n-2)$ 的响应为序列 $y_1$。求系统对图中输入 $x_2$ 的响应 $y_2$，并用 $y_1$ 表示。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-072.jpg?height=403&width=766&top_left_y=875&top_left_x=653)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-072.jpg?height=403&width=766&top_left_y=875&top_left_x=653){width="400"}
+
 
 9.9 考虑下图所示系统，其中 $\mathcal{H}$ 为 LTI 系统，$\mathcal{G}$ 为 $\mathcal{H}$ 的已知逆系统。设 $y_1 = \mathcal{H} x_1$，$y_2 = \mathcal{H} x_2$。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-072.jpg?height=104&width=663&top_left_y=1504&top_left_x=707)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-072.jpg?height=104&width=663&top_left_y=1504&top_left_x=707){width="400"}
+
 
 (a) 求系统 $\mathcal{G}$ 对输入 $y'(n) = a_1 y_1(n) + a_2 y_2(n)$ 的响应，其中 $a_1$ 与 $a_2$ 为复常数。  
 
@@ -1167,7 +1185,8 @@ $$
 
 (d) $\mathcal{H} x(n) = \sum_{k=n-1}^{n} x(k)$。
 9.11 考虑图示系统，其输入为 $x$，输出为 $y$。块图中每个系统都是 LTI 系统，并标注了其冲激响应。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-073.jpg?height=347&width=886&top_left_y=291&top_left_x=744)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-073.jpg?height=347&width=886&top_left_y=291&top_left_x=744){width="400"}
+
 
 (a) 用 $h_1, h_2, h_3$ 表示整体系统的冲激响应 $h$。  
 (b) 当
@@ -1177,7 +1196,8 @@ $$
 时，求整体系统的冲激响应 $h$。
 
 9.12 考虑下图所示系统，输入为 $x$，输出为 $y$。该系统由两个 LTI 系统串联而成，其冲激响应分别为 $h_1$ 和 $h_2$。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-073.jpg?height=101&width=571&top_left_y=988&top_left_x=880)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-073.jpg?height=101&width=571&top_left_y=988&top_left_x=880){width="400"}
+
 
 对于下列每对 $h_1$ 和 $h_2$，若输入 $x(n) = u(n)$，求输出 $y$。  
 (a) $h_1(n) = \delta(n)$，$h_2(n) = \delta(n)$；  

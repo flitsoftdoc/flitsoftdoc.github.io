@@ -364,7 +364,8 @@ $$
 
 为避免在引用未命名函数或序列时文字过于冗长，可使用点记号（dot notation），如第 2.1 节所介绍。再次考虑图 11.1 中的序列，将 $n$ 映射到 $e^{-|n / 10|}$。使用严格正确的记号，可以写作傅里叶变换为 $\mathcal{F}\left\{e^{-|\cdot / 10|}\right\}$。换句话说，我们可以通过使用中点符号（·）表示表达式指的是序列本身，而非序列的取值。点记号的使用示例见下文的例 11.6。点记号在希望采用严格、精确记号而不引入冗长文字时非常有用。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-122.jpg?height=658&width=871&top_left_y=291&top_left_x=564)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-122.jpg?height=658&width=871&top_left_y=291&top_left_x=564){width="400"}
+  
 图 11.1：$e^{-|n / 10|}$ 与 $n$ 的关系图。
 
 **例 11.6（点记号）**  
@@ -1661,7 +1662,8 @@ $$
 
 从定理 11.19，我们还可以得出一些重要结论。首先，周期序列的傅里叶变换是一系列冲激函数，位于基频 $\frac{2 \pi}{N}$ 的整数倍位置。每个冲激的权重是相应傅里叶级数系数的 $2 \pi$ 倍。其次，周期序列 $x$ 的傅里叶级数系数序列 $a$ 是通过在基频 $\frac{2 \pi}{N}$ 的整数倍处采样 $x_{N}$ 的傅里叶变换，并将得到的序列按 $\frac{1}{N}$ 缩放得到的。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-146.jpg?height=1019&width=801&top_left_y=286&top_left_x=591)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-146.jpg?height=1019&width=801&top_left_y=286&top_left_x=591){width="400"}
+  
 图 11.3：频谱。(a) $X_{1}$ 和 (b) $X_{2}$ 的频谱。  
 
 示例 11.21。设 $X_{1}$ 和 $X_{2}$ 分别为 $x_{1}$ 和 $x_{2}$ 的傅里叶变换。假设 $X_{1}$ 和 $X_{2}$ 如图 11.3(a) 和 (b) 所示。判断 $x_{1}$ 和 $x_{2}$ 是否为周期序列。  
@@ -1685,7 +1687,8 @@ y(n) & = \begin{cases}x(n) & n \in[0 \ldots 15] \\ 0 & \text { 否则 }\end{case
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-147.jpg?height=298&width=1136&top_left_y=305&top_left_x=545)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-147.jpg?height=298&width=1136&top_left_y=305&top_left_x=545){width="400"}
+  
 图 11.4：16 周期序列 $x$。  
 
 因此，我们有
@@ -1877,7 +1880,8 @@ $$
 $$
 y(n)=n v_{2}(n)
 $$
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-152.jpg?height=404&width=765&top_left_y=302&top_left_x=605)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-152.jpg?height=404&width=765&top_left_y=302&top_left_x=605){width="400"}
+  
 图 11.5：7 周期序列 $x$。
 
 其中
@@ -2132,10 +2136,12 @@ X(\Omega)=\frac{3}{5-4 \cos \Omega}, \quad \Omega \in(-\pi, \pi]
 $$
 在此情况下，$X$ 为实数，因此可以在单个图上绘制频谱 $X$，如图 11.7 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-158.jpg?height=885&width=1114&top_left_y=464&top_left_x=434)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-158.jpg?height=885&width=1114&top_left_y=464&top_left_x=434){width="400"}
+  
 图 11.6: 序列 $x$ 的频谱 $X$。 (a) 幅度谱，(b) 相位谱。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-158.jpg?height=392&width=1092&top_left_y=1784&top_left_x=582)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-158.jpg?height=392&width=1092&top_left_y=1784&top_left_x=582){width="400"}
+  
 图 11.7: 序列 $x$ 的频谱 $X$。
 
 例 11.30. 序列  
@@ -2186,10 +2192,12 @@ $$
 
 对于 $\Omega \in (-\pi, \pi]$，$|X(\Omega)|$ 在 $\Omega=0$ 处达到最大。因此，序列 $x$ 在频率 0 处包含最多信息。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-160.jpg?height=884&width=1109&top_left_y=289&top_left_x=437)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-160.jpg?height=884&width=1109&top_left_y=289&top_left_x=437){width="400"}
+  
 图 11.8: 序列 $x$ 的频谱 $X$。 (a) 幅度谱，(b) 相位谱。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-160.jpg?height=364&width=770&top_left_y=1316&top_left_x=603)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-160.jpg?height=364&width=770&top_left_y=1316&top_left_x=603){width="400"}
+  
 图 11.9: 一个序列 $x$ 的傅里叶变换 $X$ 示例，其带限于 $[-B, B]$ 频率区间。
 ## 11.11 序列的带宽
 
@@ -2279,10 +2287,12 @@ $$
 
 这一结果提供了观察 LTI 系统行为的另一种方式。也就是说，我们可以将系统视为在频域中作用于输入和输出序列的傅里叶变换。换句话说，该系统在频域中的行为类似于图 11.11 所示。在此情况下，时间域中的卷积操作被频域中的乘法操作取代。输出的频谱（即傅里叶变换）等于输入的频谱与冲激响应的频谱的乘积。从术语上讲，我们称 $H$ 为系统的**频率响应**。系统的行为完全由频率响应 $H$ 描述。如果我们知道输入，可以计算其傅里叶变换 $X$，然后得到输出的傅里叶变换 $Y$。利用逆傅里叶变换，可以进一步确定输出 $y$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-163.jpg?height=88&width=339&top_left_y=307&top_left_x=950)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-163.jpg?height=88&width=339&top_left_y=307&top_left_x=950){width="400"}
+  
 图 11.10: 输入为 $x$、输出为 $y$、冲激响应为 $h$ 的 LTI 系统的时域视图。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-163.jpg?height=98&width=347&top_left_y=510&top_left_x=945)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-163.jpg?height=98&width=347&top_left_y=510&top_left_x=945){width="400"}
+  
 图 11.11: 输入频谱 $X$、输出频谱 $Y$、频率响应 $H$ 的 LTI 系统频域视图。
 
 在最一般的情况下，频率响应 $H$ 是复值函数。因此，我们可以用幅度和幅角表示 $H$。我们称 $H$ 的幅度为系统的**幅度响应**，称 $H$ 的幅角为系统的**相位响应**。
@@ -2319,7 +2329,8 @@ H(\Omega) = \frac{\sin \left(\frac{11}{2} \Omega \right)}{\sin \left(\frac{1}{2}
 $$
 注意到 $H$ 为实数，因此我们可以在单一图上绘制频率响应 $H$，如图 11.12 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-164.jpg?height=593&width=1025&top_left_y=307&top_left_x=475)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-164.jpg?height=593&width=1025&top_left_y=307&top_left_x=475){width="400"}
+  
 图 11.12: 示例系统的频率响应。
 ### 11.13.1 展开相位
 
@@ -2342,7 +2353,8 @@ $\Theta$ 的图像如图 11.13(b) 所示。与图 11.13(a) 中存在众多不连
 $$
 \mathcal{H}\left\{e^{j \Omega n}\right\}(n) = H(\Omega) e^{j \Omega n}
 $$
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-165.jpg?height=477&width=1482&top_left_y=291&top_left_x=372)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-165.jpg?height=477&width=1482&top_left_y=291&top_left_x=372){width="400"}
+  
 图 11.13: 展开相位示例。（a）将相位限制在 $(-\pi, \pi]$ 区间内的相位函数；（b）对应的展开相位。
 
 （即 $e^{j \Omega n}$ 是 $\mathcal{H}$ 的特征序列，特征值为 $H(\Omega)$）。将 $H(\Omega)$ 表示为极坐标形式，可得  
@@ -2420,7 +2432,8 @@ H(\Omega) & = \mathcal{F}\{ h_1 * h_2 \}(\Omega) \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-167.jpg?height=82&width=876&top_left_y=294&top_left_x=683)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-167.jpg?height=82&width=876&top_left_y=294&top_left_x=683){width="400"}
+  
 图 11.14: 串联 LTI 系统的频率响应等价关系。
 
 **并联互连**
@@ -2438,7 +2451,8 @@ H(\Omega) & = \mathcal{F}\{ h_1 + h_2 \}(\Omega) \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-167.jpg?height=182&width=814&top_left_y=483&top_left_x=713)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-167.jpg?height=182&width=814&top_left_y=483&top_left_x=713){width="400"}
+  
 图 11.15: 并联 LTI 系统的频率响应等价关系。
 
 综上所述，通过傅里叶变换，LTI 系统的串联对应频率响应的乘法，并联对应频率响应的加法。
@@ -2694,7 +2708,8 @@ x(n)=\frac{1}{4}+\cos \left(\frac{4}{5} n\right)+\frac{2}{3} \cos \left(\frac{8}
 $$
 的响应 $y$。顺便指出，信号 $x$ 并非周期信号。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-174.jpg?height=1451&width=1054&top_left_y=605&top_left_x=467)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-174.jpg?height=1451&width=1054&top_left_y=605&top_left_x=467){width="400"}
+  
 图 11.18：低通滤波示例的频谱。(a) 输入信号 $x$ 的频谱 $X$。(b) 系统的频率响应 $H$。(c) 输出信号 $y$ 的频谱 $Y$。
 
 **解答。** 对 $x$ 进行傅里叶变换，得到  
@@ -2739,7 +2754,8 @@ y(n) &= \mathcal{F}^{-1}\Big\{\frac{2 \pi}{3} \delta\left(\Omega+\frac{8}{5}\rig
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-176.jpg?height=1454&width=1052&top_left_y=605&top_left_x=467)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-176.jpg?height=1454&width=1052&top_left_y=605&top_left_x=467){width="400"}
+  
 图 11.19：带通滤波示例的频谱。(a) 输入信号 $x$ 的频谱 $X$。(b) 系统的频率响应 $H$。(c) 输出信号 $y$ 的频谱 $Y$。
 ## 11.17 离散时间傅里叶变换与连续时间傅里叶级数的关系
 
@@ -2909,16 +2925,20 @@ X(\Omega) = e^{-j (3/2) \Omega} \left[\frac{\sin(2 \Omega)}{\sin(\Omega/2)}\righ
 $$
 显然，$x(n)=0$ 对于所有 $n \notin [0..3]$。因此，当 $N \ge 4$ 时，可以利用 $N$ 点 DFT 确定 $X$ 的采样点。序列 $x$ 的 $N$ 点 DFT 在 $N=4, 8, 16, 64$ 时分别绘制在图 11.20、11.21、11.22 和 11.23 中。为了展示 DFT 与傅里叶变换之间的关系，每个图中都叠加了傅里叶变换曲线。我们利用 $X$ 的 $2 \pi$ 周期性，将 $X$ 绘制在区间 $(-\pi, \pi]$ 上（而非 $[0, 2\pi)$）。从图中可以看出，随着 $N$ 增大，DFT 得到的采样频谱与实际频谱的吻合度更高。当然，增大 $N$ 的代价是计算和存储成本的增加。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-181.jpg?height=890&width=1178&top_left_y=372&top_left_x=524)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-181.jpg?height=890&width=1178&top_left_y=372&top_left_x=524){width="400"}
+  
 图 11.20：当 $N=4$ 时，DFT 得到的采样 DTFT。(a) 幅度谱 (b) 相位谱。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-181.jpg?height=890&width=1192&top_left_y=1396&top_left_x=521)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-181.jpg?height=890&width=1192&top_left_y=1396&top_left_x=521){width="400"}
+  
 图 11.21：当 $N=8$ 时，DFT 得到的采样 DTFT。(a) 幅度谱 (b) 相位谱。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-182.jpg?height=893&width=1195&top_left_y=372&top_left_x=394)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-182.jpg?height=893&width=1195&top_left_y=372&top_left_x=394){width="400"}
+  
 图 11.22：当 $N=16$ 时，DFT 得到的采样 DTFT。(a) 幅度谱 (b) 相位谱。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-182.jpg?height=890&width=1195&top_left_y=1396&top_left_x=394)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-182.jpg?height=890&width=1195&top_left_y=1396&top_left_x=394){width="400"}
+  
 图 11.23：当 $N=64$ 时，DFT 得到的采样 DTFT。(a) 幅度谱 (b) 相位谱。
 ## 11.20 练习题
 

@@ -63,7 +63,8 @@ z 变换算子 $z$ 与逆 z 变换算子 $z^{-1}$ 分别将序列映射为函数
 3. 若要表示由方程 $X(z)=z^{-1}$ 定义的函数 $X$ 的逆 z 变换（无需引入命名的函数 $X$），可写作：  
    $Z^{-1}\{(\cdot)^{-1}\}$。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-191.jpg?height=658&width=882&top_left_y=291&top_left_x=683)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-191.jpg?height=658&width=882&top_left_y=291&top_left_x=683){width="400"}
+  
 图 12.1：$e^{-|n/10|}$ 随 $n$ 的变化图。
 
 4. 若要表示由方程 $X(z)=z^{-1}$ 定义的函数 $X$ 的逆 z 变换在 $n-1$ 处的取值（无需引入命名的函数 $X$），可写作：  
@@ -328,7 +329,8 @@ $$
 
 ---
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-196.jpg?height=1206&width=1376&top_left_y=283&top_left_x=316)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-196.jpg?height=1206&width=1376&top_left_y=283&top_left_x=316){width="400"}
+  
 图 12.2：不同类型集合的示例。(a) 圆心为 0、半径为 $r$ 的圆盘；(b) 圆心为 0、内半径为 $r_{0}$、外半径为 $r_{1}$ 的环形区域；(c) 圆心为 0、半径为 $r$ 的圆的外部区域。
 ## 12.7 $\mathbf{z}$ 变换的收敛域
 
@@ -358,10 +360,12 @@ $$
 
 由于 ROC 是复平面中的一个点集，因此在处理 ROC 时，我们经常需要使用一些基本的集合运算。对于两个集合 $A$ 和 $B$，它们的交集记作 $A \cap B$，表示同时属于 $A$ 和 $B$ 的所有点的集合。集合交集的一个示例如图 12.3 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-197.jpg?height=1281&width=1419&top_left_y=702&top_left_x=410)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-197.jpg?height=1281&width=1419&top_left_y=702&top_left_x=410){width="400"}
+  
 图 12.3：集合交集示例。(a) 集合 $R_{1}$，(b) 集合 $R_{2}$，以及 (c) 它们的交集 $R_{1} \cap R_{2}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-198.jpg?height=735&width=1646&top_left_y=289&top_left_x=175)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-198.jpg?height=735&width=1646&top_left_y=289&top_left_x=175){width="400"}
+  
 图 12.4：集合与标量相乘的示例。(a) 集合 $R$；(b) 集合 $2R$。
 对于一个集合 $S$ 和一个复常数 $a$，定义 $a S$ 为
 
@@ -408,10 +412,12 @@ $$
 
 正如我们之前看到的，对于一个序列 $x$，其 $z$ 变换 $X$ 的完整描述不仅需要 $X$ 的代数表达式，还需要 $X$ 对应的收敛域（ROC）。两个不同的序列可能会有相同的 $z$ 变换代数式。在接下来的内容中，我们将考察各种不同类型序列对应的 $z$ 变换收敛域的一些约束条件。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-199.jpg?height=714&width=1578&top_left_y=283&top_left_x=332)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-199.jpg?height=714&width=1578&top_left_y=283&top_left_x=332){width="400"}
+  
 图 12.5：集合取倒数的示例。(a) 集合 $R$；(b) 集合 $R^{-1}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-199.jpg?height=460&width=1505&top_left_y=1088&top_left_x=370)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-199.jpg?height=460&width=1505&top_left_y=1088&top_left_x=370){width="400"}
+  
 图 12.6：一些作为 $z$ 变换 ROC 有效或无效的集合示例。
 可以证明，$z$变换的ROC具有以下性质：
 
@@ -439,22 +445,28 @@ $$
    (a) 如果 $x$ 是右侧的，$X$ 的ROC为复平面中以最大极点模为半径的圆外部区域（即最外极点的外部），可能包括$\infty$。
    (b) 如果 $x$ 是左侧的，$X$ 的ROC为复平面中以最小非零极点模为半径的圆内部区域，向内延伸到并可能包括0（即最内非零极点的内部区域）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-200.jpg?height=461&width=1511&top_left_y=291&top_left_x=243)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-200.jpg?height=461&width=1511&top_left_y=291&top_left_x=243){width="400"}
+
 **图 12.7**：有理 $z$ 变换ROC的有效或无效集合示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-200.jpg?height=463&width=1511&top_left_y=848&top_left_x=243)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-200.jpg?height=463&width=1511&top_left_y=848&top_left_x=243){width="400"}
+
 **图 12.8**：有限时长序列 $z$ 变换ROC的有效或无效集合示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-201.jpg?height=454&width=1505&top_left_y=370&top_left_x=370)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-201.jpg?height=454&width=1505&top_left_y=370&top_left_x=370){width="400"}
+
 **图 12.9**：右侧但不左侧序列 $z$ 变换ROC的有效或无效集合示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-201.jpg?height=457&width=1508&top_left_y=1102&top_left_x=367)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-201.jpg?height=457&width=1508&top_left_y=1102&top_left_x=367){width="400"}
+
 **图 12.10**：左侧但不右侧序列 $z$ 变换ROC的有效或无效集合示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-201.jpg?height=466&width=1511&top_left_y=1828&top_left_x=367)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-201.jpg?height=466&width=1511&top_left_y=1828&top_left_x=367){width="400"}
+
 **图 12.11**：双侧序列 $z$ 变换ROC的有效或无效集合示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-202.jpg?height=366&width=1539&top_left_y=291&top_left_x=226)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-202.jpg?height=366&width=1539&top_left_y=291&top_left_x=226){width="400"}
+
 **图 12.12**：左/右侧序列有理 $z$ 变换ROC的有效或无效集合示例。
 
 **表 12.1**：$x$ 的侧性与 $X=Z x$ ROC 的关系
@@ -486,7 +498,8 @@ $$
 
 求 $X$ 的所有可能 ROC，并指出对应序列 $x$ 是左侧但不右侧、右侧但不左侧、双侧还是有限时长。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-203.jpg?height=533&width=1114&top_left_y=291&top_left_x=564)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-203.jpg?height=533&width=1114&top_left_y=291&top_left_x=564){width="400"}
+
 **图 12.13**：不可能是 $z$ 变换有效 ROC 的集合示例。
 
 **解**：$X$ 的可能 ROC 由该函数的极点确定。因此，我们必须找到 $X$ 的极点。将分母因式分解，得到：
@@ -509,7 +522,8 @@ $z$ 变换具有许多重要性质。在接下来的各节中，我们将介绍�
 
 可以说，$z$ 变换最重要的性质是线性性质，其如下介绍。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-204.jpg?height=1428&width=1578&top_left_y=634&top_left_x=208)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-204.jpg?height=1428&width=1578&top_left_y=634&top_left_x=208){width="400"}
+
 **图 12.14**：示例 ROC。$X$ 的（a）第一个、（b）第二个、（c）第三个可能 ROC。
 
 **定理 12.1（线性性质）**：若 $x_{1}(n) \stackrel{ZT}{\longleftrightarrow} X_{1}(z)$，ROC 为 $R_1$，且 $x_{2}(n) \stackrel{ZT}{\longleftrightarrow} X_{2}(z)$，ROC 为 $R_2$，则
@@ -581,7 +595,8 @@ R_1 \cap R_2 &= \left\{|z|<|a^{-1}|\right\} \cap \{|z|>|a|\} \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-206.jpg?height=1322&width=1413&top_left_y=283&top_left_x=289)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-206.jpg?height=1322&width=1413&top_left_y=283&top_left_x=289){width="400"}
+
 **图 12.15**：线性性质示例的 ROC。（a）$X_1$ 的 ROC，（b）$X_2$ 的 ROC，（c）$X_1$ 和 $X_2$ ROC 的交集对应的 ROC，（d）$X$ 的 ROC。
 
 此外，$R$ 不可能大于该交集，因为 $X$ 在 $a$ 和 $a^{-1}$ 处有极点。因此，$R=R_1 \cap R_2$。各种 ROC 如图 12.15 所示。综上所述，我们有：
@@ -657,7 +672,8 @@ $$
 
 接下来介绍 $z$ 变换的平移性质（即时域移位性质），如下所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-208.jpg?height=1292&width=1430&top_left_y=678&top_left_x=283)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-208.jpg?height=1292&width=1430&top_left_y=678&top_left_x=283){width="400"}
+
 **图 12.16**：线性性质示例的 ROC。（a）$X_1$ 的 ROC，（b）$X_2$ 的 ROC，（c）$X_1$ 和 $X_2$ ROC 的交集对应的 ROC，（d）$X$ 的 ROC。
 
 **定理 12.2（平移性质/时间移位）**：若 $x(n) \stackrel{ZT}{\longleftrightarrow} X(z)$，ROC 为 $R$，则
@@ -769,7 +785,8 @@ Y(z) &= \sum_{n=-\infty}^{\infty} a^n x(n) z^{-n} \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-211.jpg?height=703&width=1474&top_left_y=286&top_left_x=391)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-211.jpg?height=703&width=1474&top_left_y=286&top_left_x=391){width="400"}
+
 **图 12.17**：复调制的 ROC。序列 $z$ 变换的 ROC（a）缩放前，（b）缩放后。
 
 现在确定 $Y$ 的 ROC $R'$. 由于 $X(z) = Y(a z)$，若 $X$ 在 $z$ 收敛，则 $Y$ 在 $a z$ 必收敛。因此 $R' = a R$。将 $a$ 表示为极坐标形式：
@@ -879,7 +896,8 @@ $$
 
 这就是 $z$ 变换的时域反转性质。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-213.jpg?height=703&width=1474&top_left_y=286&top_left_x=391)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-213.jpg?height=703&width=1474&top_left_y=286&top_left_x=391){width="400"}
+
 **图 12.18**：时域反转的 ROC。序列 $z$ 变换的 ROC（a）反转前，（b）反转后。
 
 **证明**：令 $y(n) = x(-n)$，并设 $Y$ 为 $y$ 的 $z$ 变换。由 $z$ 变换定义，有：
@@ -2143,7 +2161,8 @@ $$
 $$
 
 原文公式参见下图
-![](https://cdn.mathpix.com/snip/images/7mhVpqsW11NSfakLBxa5thtg4ZTOVPHh7So_KzrMtDU.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/7mhVpqsW11NSfakLBxa5thtg4ZTOVPHh7So_KzrMtDU.original.fullsize.png){width="400"}
+
 
 此时，可以观察到长除法产生的模式为：
 $$
@@ -2176,7 +2195,8 @@ $$
 
 进行多项式长除法的前几步，我们得到：
 
-![](https://cdn.mathpix.com/snip/images/lBlAkpinYonOJRPG0yrDIKyg2x0ESbeTYqH62uZLmUw.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/lBlAkpinYonOJRPG0yrDIKyg2x0ESbeTYqH62uZLmUw.original.fullsize.png){width="400"}
+
 
 此时，可以观察到长除法产生的模式为：
 $$
@@ -2195,10 +2215,12 @@ $$
 x(n)=-a^{n} u(-n-1)
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-237.jpg?height=101&width=352&top_left_y=318&top_left_x=524)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-237.jpg?height=101&width=352&top_left_y=318&top_left_x=524){width="400"}
+  
 图 12.19：LTI 系统的时域视图，输入为 $x$，输出为 $y$，系统脉冲响应为 $h$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-237.jpg?height=101&width=350&top_left_y=297&top_left_x=1366)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-237.jpg?height=101&width=350&top_left_y=297&top_left_x=1366){width="400"}
+  
 图 12.20：LTI 系统的 z 域视图，输入的 z 变换为 $X$，输出的 z 变换为 $Y$，系统函数为 $H$。
 
 
@@ -2240,10 +2262,12 @@ $$
 
 因此，我们得到如图 12.21 所示的等效关系。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-238.jpg?height=101&width=1157&top_left_y=297&top_left_x=416)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-238.jpg?height=101&width=1157&top_left_y=297&top_left_x=416){width="400"}
+
 图 12.21：涉及系统函数与 LTI 系统串联互连的等效关系。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-238.jpg?height=241&width=1085&top_left_y=506&top_left_x=453)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-238.jpg?height=241&width=1085&top_left_y=506&top_left_x=453){width="400"}
+
 图 12.22：涉及系统函数与 LTI 系统并联互连的等效关系。
 
 假设我们有两个 LTI 系统 $\mathcal{H}_{1}$ 和 $\mathcal{H}_{2}$，它们的系统函数分别为 $H_{1}$ 和 $H_{2}$，并且如图 12.22 左侧所示以并联方式连接。设 $h_{1}$ 和 $h_{2}$ 分别表示 $\mathcal{H}_{1}$ 和 $\mathcal{H}_{2}$ 的冲激响应。整个系统的冲激响应 $h$ 表示为：
@@ -2327,7 +2351,8 @@ $H$ 的 ROC 和极点如图 12.23(d) 所示。系统函数 $H$ 是有理且 prop
 
 证明：这里仅给出部分证明。特别地，我们将说明 $H$ 的 ROC 包含单位圆是 BIBO 稳定的必要条件。下面，设 $h$ 为 $H$ 的逆 z 变换（即 $h$ 是系统的冲激响应）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-240.jpg?height=1527&width=1627&top_left_y=564&top_left_x=181)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-240.jpg?height=1527&width=1627&top_left_y=564&top_left_x=181){width="400"}
+
 图 12.23：因果性示例中有理系统函数的极点与 ROC。分别对应(a)、(b)、(c) 和 (d) 的情况。
 
 假设系统是 BIBO 稳定的。根据定理 9.11，我们知道这意味着：
@@ -2390,7 +2415,8 @@ $$
 
 解答：显然，系统函数 $H$ 是有理函数，其极点为 $\frac{1}{4}$ 和 $\frac{1}{2}$。因此，ROC 只有三种可能：
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-242.jpg?height=768&width=884&top_left_y=294&top_left_x=583)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-242.jpg?height=768&width=884&top_left_y=294&top_left_x=583){width="400"}
+
 图 12.24：示例的 ROC。
 
 i) $|z|<\frac{1}{4}$，  
@@ -2415,7 +2441,8 @@ $$
 
 因此，$H$ 的极点为 $-\frac{1}{2}, -\frac{1}{3}, \frac{1}{3}, \frac{1}{2}$。这些极点如图 12.25 所示。由于系统是因果的，$H$ 的 ROC 必须是经过最外层（有限）极点的圆的外部。因此，ROC 为 $|z|>\frac{1}{2}$。此 ROC 在图 12.25 中以阴影区域表示。由于该 ROC 包含单位圆，系统是 BIBO 稳定的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-243.jpg?height=720&width=838&top_left_y=291&top_left_x=702)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-243.jpg?height=720&width=838&top_left_y=291&top_left_x=702){width="400"}
+
 图 12.25：系统函数的极点与 ROC。
 
 示例 12.35. 对于以下每个 LTI 系统的系统函数 $H$，确定对应系统 BIBO 稳定时的 ROC。
@@ -2452,7 +2479,8 @@ $$
 H(z)=\frac{z-1}{(z+2)(z-2)(z+2 j)(z-2 j)}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-244.jpg?height=1428&width=1578&top_left_y=283&top_left_x=208)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-244.jpg?height=1428&width=1578&top_left_y=283&top_left_x=208){width="400"}
+
 图 12.26：示例中系统函数 $H$ 的极点与 ROC，分别对应(a)、(b)、(c) 和 (d)。
 
 $H$ 的极点为 $-2, 2, -2j, 2j$，如图 12.26(c) 所示。由于 $H$ 是有理函数，ROC 必须由极点界定或向内延伸至原点，或向外延伸至无穷大。由于极点幅值相同（即 2），ROC 有两种可能：  
@@ -2663,7 +2691,8 @@ $$
 y(n)+a_{1} y(n-1)+a_{2} y(n-2)=b_{0} x(n)
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-248.jpg?height=239&width=533&top_left_y=294&top_left_x=726)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-248.jpg?height=239&width=533&top_left_y=294&top_left_x=726){width="400"}
+
 图 12.27：反馈系统。
 
 ## 12.15 稳定性分析
@@ -3372,7 +3401,8 @@ $$
 (a) 求整个系统的系统函数 $H$。  
 (b) 确定系统在什么取值的 $a$ 下是 BIBO 稳定的。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-262.jpg?height=263&width=544&top_left_y=1472&top_left_x=805)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-262.jpg?height=263&width=544&top_left_y=1472&top_left_x=805){width="400"}
+  
 
 ---
 
@@ -3380,7 +3410,8 @@ $$
 (a) 求系统 $\mathfrak{H}$ 的系统函数 $H$。  
 (b) 判断系统 $\mathfrak{H}$ 是否 BIBO 稳定。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-262.jpg?height=565&width=841&top_left_y=1926&top_left_x=659)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-262.jpg?height=565&width=841&top_left_y=1926&top_left_x=659){width="400"}
+  
 
 ---
 

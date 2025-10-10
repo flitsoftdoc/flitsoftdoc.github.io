@@ -56,7 +56,8 @@ $$
 
 为了避免在引用匿名函数时出现过于冗长的表达，可以使用第 2.1 节介绍的点符号（dot notation）。再考虑图 7.1 中的函数 $t \mapsto e^{-|t|}$。若采用严格正确的符号，我们可以写作 “$\mathcal{L}\left\{e^{-|\cdot|}\right\}$” 来表示该函数的拉普拉斯变换。换句话说，通过使用间隔点符号（详见第 2.1 节），我们可以明确表示这是一个函数（而不是函数值）。点符号的使用示例如例 7.1 所示。当需要在保持符号精确（严格正确）的同时避免冗长时，点符号往往非常有用。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-255.jpg?height=663&width=844&top_left_y=291&top_left_x=702)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-255.jpg?height=663&width=844&top_left_y=291&top_left_x=702){width="400"}
+
 
 图 7.1：$e^{-|t|}$ 关于 $t$ 的曲线。
 
@@ -218,7 +219,8 @@ $$
 
 函数 $X$ 的收敛区域如图 7.2(a) 和 (b) 所示，分别对应 $a>0$ 与 $a<0$ 的情况。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-258.jpg?height=566&width=1104&top_left_y=280&top_left_x=461)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-258.jpg?height=566&width=1104&top_left_y=280&top_left_x=461){width="400"}
+
 
 图 7.2：收敛区域的情况 (a) $a>0$ 和 (b) $a<0$。
 
@@ -270,7 +272,8 @@ $$
 
 函数 $X$ 的收敛区域如图 7.3(a) 和 (b) 所示，分别对应 $a>0$ 与 $a<0$ 的情况。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-259.jpg?height=563&width=1214&top_left_y=283&top_left_x=507)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-259.jpg?height=563&width=1214&top_left_y=283&top_left_x=507){width="400"}
+
 
 图 7.3：收敛区域的情况 (a) $a>0$ 和 (b) $a<0$。
 
@@ -367,10 +370,12 @@ $$
 
 由于 ROC 是一个集合（复平面上的点的集合），因此在处理 ROC 时，我们经常需要使用一些基本的集合运算。对于两个集合 $A$ 和 $B$，其交集记作 $A \cap B$，表示所有既属于 $A$ 又属于 $B$ 的点组成的集合。图 7.5 给出了集合交集的示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-261.jpg?height=1170&width=1233&top_left_y=740&top_left_x=502)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-261.jpg?height=1170&width=1233&top_left_y=740&top_left_x=502){width="400"}
+  
 图 7.4：LHP 与 RHP 的示例。(a) 当 $a<0$ 时的 LHP，(b) 当 $a>0$ 时的 LHP，(c) 当 $a<0$ 时的 RHP，(d) 当 $a>0$ 时的 RHP。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-262.jpg?height=1047&width=1278&top_left_y=823&top_left_x=370)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-262.jpg?height=1047&width=1278&top_left_y=823&top_left_x=370){width="400"}
+  
 图 7.5：集合交集的示例。(a) 集合 $R_{1}$，(b) 集合 $R_{2}$，以及 (c) 它们的交集 $R_{1} \cap R_{2}$。
 
 ---
@@ -389,7 +394,8 @@ $$
 $$
 的复数 $s$ 的集合（如图 7.6(b) 所示）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-263.jpg?height=517&width=1438&top_left_y=289&top_left_x=413)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-263.jpg?height=517&width=1438&top_left_y=289&top_left_x=413){width="400"}
+  
 图 7.6：集合加上一个标量的示例。(a) 集合 $R$。(b) 集合 $R+1$。
 
 ---
@@ -412,7 +418,8 @@ $$
 $$
 的复数 $s$ 的集合（如图 7.7(c) 所示）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-264.jpg?height=1578&width=958&top_left_y=305&top_left_x=572)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-264.jpg?height=1578&width=958&top_left_y=305&top_left_x=572){width="400"}
+  
 图 7.7：集合乘以标量的示例。(a) 集合 $R$。(b) 集合 $2 R$。(c) 集合 $-2 R$。
 
 ---
@@ -434,23 +441,28 @@ $$
 
 5. 如果函数 $x$ 是左边序列，并且直线 $\operatorname{Re}(s)=\sigma_{0}$ 属于其拉普拉斯变换 $X$ 的ROC，则所有满足 $\operatorname{Re}(s)<\sigma_{0}$ 的 $s$ 也必须在ROC内（即ROC包含一个以 $\operatorname{Re}(s)=\sigma_{0}$ 为边界的左半平面）。此外，如果 $x$ 是左边序列但不是右边序列，则 $X$ 的ROC为一个左半平面。图7.12展示了这种情况下可能作为有效或无效ROC的集合示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-264.jpg?height=392&width=1452&top_left_y=1999&top_left_x=264)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-264.jpg?height=392&width=1452&top_left_y=1999&top_left_x=264){width="400"}
+
 
 图7.8：作为拉普拉斯变换ROC的有效或无效集合示例。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-265.jpg?height=385&width=1446&top_left_y=302&top_left_x=394)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-265.jpg?height=385&width=1446&top_left_y=302&top_left_x=394){width="400"}
+
 
 图7.9：作为有理拉普拉斯变换ROC的有效或无效集合示例。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-265.jpg?height=393&width=1455&top_left_y=788&top_left_x=391)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-265.jpg?height=393&width=1455&top_left_y=788&top_left_x=391){width="400"}
+
 
 图7.10：作为有限时长函数拉普拉斯变换ROC的有效或无效集合示例。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-266.jpg?height=390&width=1457&top_left_y=297&top_left_x=264)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-266.jpg?height=390&width=1457&top_left_y=297&top_left_x=264){width="400"}
+
 
 图7.11：作为右边序列（但非左边序列）函数拉普拉斯变换ROC的有效或无效集合示例。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-266.jpg?height=390&width=1457&top_left_y=829&top_left_x=264)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-266.jpg?height=390&width=1457&top_left_y=829&top_left_x=264){width="400"}
+
 
 图7.12：作为左边序列（但非右边序列）函数拉普拉斯变换ROC的有效或无效集合示例。  
 
@@ -462,11 +474,13 @@ $$
 
 如果 $X$ 是有理函数，并且 $x$ 为左/右边序列，则可能作为 $X$ 的ROC的有效或无效集合示例见图7.14。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-266.jpg?height=387&width=1455&top_left_y=1977&top_left_x=264)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-266.jpg?height=387&width=1455&top_left_y=1977&top_left_x=264){width="400"}
+
 
 图7.13：作为双边序列函数拉普拉斯变换ROC的有效或无效集合示例。  
 
-![](https://cdn.mathpix.com/snip/images/tMI4wBqBZa6gXd-_YeGzE7u7E4k-k7zWqKWVLMo_JH0.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/tMI4wBqBZa6gXd-_YeGzE7u7E4k-k7zWqKWVLMo_JH0.original.fullsize.png){width="400"}
+
 
 图7.14：作为左/右边序列函数有理拉普拉斯变换ROC的有效或无效集合示例。  
 
@@ -480,7 +494,8 @@ $$
 | 是 | 否 | 左半平面 |
 | 是 | 是 | 整个复平面 |
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-267.jpg?height=365&width=887&top_left_y=1075&top_left_x=672)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-267.jpg?height=365&width=887&top_left_y=1075&top_left_x=672){width="400"}
+
 
 图7.15：不构成有效拉普拉斯变换ROC的集合示例。
 
@@ -505,7 +520,8 @@ iv) $\operatorname{Re}(s)>1$。
 
 这些ROC分别绘制在图7.16(a)、(b)、(c) 和 (d) 中。第一个ROC是左半平面，因此对应的 $x$ 必为左边序列但非右边序列。第二个ROC是垂直带状区域，因此对应的 $x$ 必为双边序列。第三个ROC同样是垂直带状区域，因此对应的 $x$ 必为双边序列。第四个ROC是右半平面，因此对应的 $x$ 必为右边序列但非左边序列。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-268.jpg?height=1071&width=1376&top_left_y=283&top_left_x=316)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-268.jpg?height=1071&width=1376&top_left_y=283&top_left_x=316){width="400"}
+
 
 图7.16：例子的ROC。(a) 第一个，(b) 第二个，(c) 第三个，(d) 第四个可能的ROC。
 
@@ -567,7 +583,8 @@ X(s) & =\mathcal{L}\left\{x_1+x_2\right\}(s) \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-270.jpg?height=1087&width=1214&top_left_y=283&top_left_x=399)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-270.jpg?height=1087&width=1214&top_left_y=283&top_left_x=399){width="400"}
+
 
 图7.17：线性性例子的ROC。(a) $X_{1}$ 的ROC，(b) $X_{2}$ 的ROC，(c) $X_{1}$ 与 $X_{2}$ ROC的交集，(d) $X$ 的ROC。
 
@@ -636,7 +653,8 @@ $$
 
 由于 $Y$ 与 $X$ 仅相差有限常数因子 $e^{-s t_{0}}$，因此 ROC 相同。由此证明了时域平移性质成立。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-272.jpg?height=1087&width=1209&top_left_y=783&top_left_x=402)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-272.jpg?height=1087&width=1209&top_left_y=783&top_left_x=402){width="400"}
+
 
 图7.18：线性性例子的ROC。(a) $X_{1}$ 的ROC，(b) $X_{2}$ 的ROC，(c) $X_{1}$ 与 $X_{2}$ ROC的交集，(d) $X$ 的ROC。
 
@@ -682,7 +700,8 @@ $$
 
 由于 $Y(s+s_{0})=X(s)$，$Y$ 在 $\lambda+s_{0}$ 收敛当且仅当 $X$ 在 $\lambda$ 收敛。拉普拉斯变换的收敛性仅依赖于 $s$ 的实部，因此 $Y$ 在 $\lambda+\operatorname{Re}(s_{0})$ 收敛当且仅当 $X$ 在 $\lambda$ 收敛。因此，$Y$ 的ROC就是 $X$ 的ROC 向右平移 $\operatorname{Re}(s_{0})$。由此证明了拉普拉斯域平移性质。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-274.jpg?height=581&width=1395&top_left_y=270&top_left_x=302)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-274.jpg?height=581&width=1395&top_left_y=270&top_left_x=302){width="400"}
+
 
 图7.19：拉普拉斯域平移的收敛域。(a) 平移前，(b) 平移后。
 
@@ -792,7 +811,8 @@ $$
 X(s)=\frac{-6}{(s+3)(s-3)}, \quad -3<\operatorname{Re}(s)<3
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-276.jpg?height=1163&width=1520&top_left_y=745&top_left_x=245)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-276.jpg?height=1163&width=1520&top_left_y=745&top_left_x=245){width="400"}
+
 
 图7.20：时域/拉普拉斯域缩放的收敛域。(a) 缩放前，(b) 缩放后 $a>0$，(c) 缩放后 $a<0$。
 
@@ -1440,7 +1460,8 @@ $$
 
 示例 7.25. 利用拉普拉斯变换表和拉普拉斯变换性质，求图 7.21 所示函数 $x$ 的拉普拉斯变换 $X$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-290.jpg?height=215&width=252&top_left_y=291&top_left_x=875)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-290.jpg?height=215&width=252&top_left_y=291&top_left_x=875){width="400"}
+
 
 图 7.21：拉普拉斯变换示例函数。
 
@@ -1517,7 +1538,8 @@ $$
 
 示例 7.26. 求图 7.22 所示函数 $x$ 的拉普拉斯变换 $X$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-291.jpg?height=325&width=345&top_left_y=297&top_left_x=950)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-291.jpg?height=325&width=345&top_left_y=297&top_left_x=950){width="400"}
+
 
 图 7.22：拉普拉斯变换示例函数。
 
@@ -1622,7 +1644,8 @@ x(t) & =\frac{2}{3}\left[-e^{2 t} u(-t)\right]-\frac{2}{3}\left[e^{-t} u(t)\righ
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-293.jpg?height=461&width=1492&top_left_y=291&top_left_x=370)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-293.jpg?height=461&width=1492&top_left_y=291&top_left_x=370){width="400"}
+
 
 **图 7.23**：有理表达式的极点及可能的 ROC：（a）$\frac{1}{s-2}$；（b）$\frac{1}{s+1}$。
 
@@ -1675,7 +1698,8 @@ x(t) & =3 e^{-t} u(t)-t e^{-t} u(t)-3 e^{-2 t} u(t) \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-294.jpg?height=461&width=1493&top_left_y=291&top_left_x=245)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-294.jpg?height=461&width=1493&top_left_y=291&top_left_x=245){width="400"}
+
 **图 7.24**：有理表达式的极点及可能的 ROC：（a）$\frac{1}{s+1}$ 和 $\frac{1}{(s+1)^{2}}$；（b）$\frac{1}{s+2}$。
 
 **例 7.29（非严格有理函数的拉普拉斯逆变换）** 找到以下函数的拉普拉斯逆变换 $x$：
@@ -1685,7 +1709,8 @@ $$
 
 **解** 首先注意，尽管 $X$ 是有理函数，但它不是严格有理函数。因此，需要通过多项式长除法将 $X$ 表示为多项式与严格有理函数之和。通过长除法，我们得到：
 
-![](https://cdn.mathpix.com/snip/images/goLJJFp6uVs8wpaPOHEpI7Pm6MGoEXWeBGTJYd88t9c.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/goLJJFp6uVs8wpaPOHEpI7Pm6MGoEXWeBGTJYd88t9c.original.fullsize.png){width="400"}
+
 
 换句话说，有：
 $$
@@ -1852,10 +1877,12 @@ $$
 
 量 $H$ 称为系统函数或系统传递函数。如果 $H$ 的 ROC 包含虚轴，则 $H(j \omega)$ 即为系统的频率响应。该系统可用拉普拉斯域标注的框图表示，如图 7.26 所示，其中系统由其系统函数 $H$ 标注。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-298.jpg?height=90&width=344&top_left_y=324&top_left_x=405)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-298.jpg?height=90&width=344&top_left_y=324&top_left_x=405){width="400"}
+  
 **图 7.25**：输入为 $x$、输出为 $y$、冲激响应为 $h$ 的 LTI 系统的时域视图。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-298.jpg?height=95&width=347&top_left_y=297&top_left_x=1242)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-298.jpg?height=95&width=347&top_left_y=297&top_left_x=1242){width="400"}
+  
 **图 7.26**：输入拉普拉斯变换 $X$、输出拉普拉斯变换 $Y$、系统函数 $H$ 的 LTI 系统拉普拉斯域视图。
 ## 7.12 LTI 系统的互连
 
@@ -1893,10 +1920,12 @@ $$
 
 因此，我们得到图 7.28 所示的等效关系。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-298.jpg?height=382&width=1322&top_left_y=578&top_left_x=332)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-298.jpg?height=382&width=1322&top_left_y=578&top_left_x=332){width="400"}
+  
 **图 7.27**：系统函数与 LTI 系统串联互连的等效关系。（a）第一等效关系；（b）第二等效关系。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-299.jpg?height=236&width=1081&top_left_y=297&top_left_x=578)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-299.jpg?height=236&width=1081&top_left_y=297&top_left_x=578){width="400"}
+  
 **图 7.28**：系统函数与 LTI 系统并联互连的等效关系。
 
 ## 7.13 系统函数与系统性质
@@ -1933,7 +1962,8 @@ h(t)=e^{-(t+1)} u(t+1)
 $$
 因此冲激响应 $h$ 不是因果的，系统也不是因果的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-300.jpg?height=560&width=1023&top_left_y=286&top_left_x=461)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-300.jpg?height=560&width=1023&top_left_y=286&top_left_x=461){width="400"}
+  
 **图 7.29**：因果性例子中有理系统函数的极点和 ROC。分别为（a）第一系统函数和（b）第二系统函数的情况。
 
 ### 7.13.2 BIBO 稳定性
@@ -2000,7 +2030,8 @@ $$
 
 为了系统 BIBO 稳定，$H$ 的 ROC 必须包含整个虚轴。因此，ROC 必须为 $\operatorname{Re}(s)>-1$。该 ROC 如图 7.30 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-302.jpg?height=495&width=577&top_left_y=551&top_left_x=718)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-302.jpg?height=495&width=577&top_left_y=551&top_left_x=718){width="400"}
+
 
 **图 7.30**：例子中系统的 ROC。
 
@@ -2016,7 +2047,8 @@ H(s)=\frac{1}{(s+2)(s+1-j)(s+1+j)}
 $$
 （利用二次公式可验证 $s^{2}+2 s+2=0$ 的根为 $s=-1 \pm j$）。因此，$H$ 的极点在 $-2$, $-1+j$ 和 $-1-j$。极点如图 7.31 所示。由于系统是因果的，且 $H$ 的所有极点位于左半平面，因此系统是 BIBO 稳定的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-302.jpg?height=496&width=641&top_left_y=1647&top_left_x=686)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-302.jpg?height=496&width=641&top_left_y=1647&top_left_x=686){width="400"}
+  
 **图 7.31**：系统函数的极点。
 
 **例 7.34** 对于下列每个 LTI 系统的系统函数 $H$，确定对应于 BIBO 稳定系统的 ROC。  
@@ -2048,7 +2080,8 @@ $$
 
 (d) $H$ 的极点在 $0$，如图 7.32(d) 所示。$H$ 为有理函数，无法在极点处收敛，因此 ROC 永远不能包含整个虚轴，因此该系统函数 $H$ 永远不可能对应于 BIBO 稳定系统。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-304.jpg?height=1081&width=1206&top_left_y=786&top_left_x=402)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-304.jpg?height=1081&width=1206&top_left_y=786&top_left_x=402){width="400"}
+  
 **图 7.32**：例子中系统函数 $H$ 的极点与 ROC 分别对应于 (a) 第一部分、(b) 第二部分、(c) 第三部分和 (d) 第四部分。
 ### 7.13.3 可逆性
 
@@ -2207,7 +2240,8 @@ $$
 
 拉普拉斯变换的一个应用是电路分析。在本节中，我们将讨论这一特定应用。许多电气网络的基本组成部分是电阻器、电感器和电容器。下面，我们将简要介绍每种电路元件。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-308.jpg?height=257&width=1418&top_left_y=289&top_left_x=285)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-308.jpg?height=257&width=1418&top_left_y=289&top_left_x=285){width="400"}
+
 
 图 7.33：基本电气元件。（a）电阻器，（b）电感器，（c）电容器。
 
@@ -2257,7 +2291,8 @@ $$
 
 示例 7.38（简单 RC 网络）。考虑图 7.34 所示的电阻-电容（RC）网络，其输入为 $v_{1}$，输出为 $v_{2}$。该系统为线性时不变（LTI）系统，可由常系数线性微分方程描述。问题如下：（a）求该系统的系统函数 $H$；（b）判断系统是否 BIBO 稳定；（c）判断该系统最接近哪种理想频率选择滤波器；（d）求系统的阶跃响应。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-309.jpg?height=298&width=485&top_left_y=294&top_left_x=872)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-309.jpg?height=298&width=485&top_left_y=294&top_left_x=872){width="400"}
+
 
 图 7.34：简单 RC 网络。
 
@@ -2384,7 +2419,8 @@ H_{1}(s)=\frac{1}{s^{2}+a s+(a-2)} \quad \text{和} \quad H_{2}(s)=-1
 $$
 其中 $a$ 为实常数。 (a) 求该（整体）系统的系统函数 $H$（包括 ROC）。 (b) 确定参数 $a$ 的取值范围，使系统 BIBO 稳定。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-311.jpg?height=244&width=536&top_left_y=291&top_left_x=850)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-311.jpg?height=244&width=536&top_left_y=291&top_left_x=850){width="400"}
+
 图 7.35：反馈系统。
 
 解答. (a) 根据系统图，我们可以写出
@@ -2441,7 +2477,8 @@ H_{1}(s)=\frac{1}{(s+1)(s+2)} \quad \text{和} \quad H_{2}(s)=a
 $$
 其中 $a$ 为实常数。 (a) 求该（整体）系统的系统函数 $H$。 (b) 确定参数 $a$ 的取值范围，使系统 BIBO 稳定。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-312.jpg?height=255&width=633&top_left_y=294&top_left_x=675)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-312.jpg?height=255&width=633&top_left_y=294&top_left_x=675){width="400"}
+
 
 图 7.36：反馈系统。
 
@@ -2526,7 +2563,8 @@ $$
 
 反馈控制系统的一般结构如图 7.37 所示。参考输入对应被控量的期望值，输出对应被控量的实际值（由传感器测量）。加法器的输出对应误差（即被控量的期望值与实际值之差）。同样，在控制应用中，目标是使输出随时间尽可能紧跟参考输入。换句话说，我们希望误差尽可能接近零。补偿器的责任就是确保这一目标实现。如果补偿器设计良好，误差将随时间保持接近零。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-314.jpg?height=349&width=1098&top_left_y=297&top_left_x=445)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-314.jpg?height=349&width=1098&top_left_y=297&top_left_x=445){width="400"}
+
 
 图 7.37：反馈控制系统。
 
@@ -2540,11 +2578,13 @@ P(s)=\frac{10}{s-1},
 $$
 如图 7.38 所示。可以很容易地确认，该系统不是 BIBO 稳定的，因为 $P$ 在 1 处有极点。（由于系统是因果的，$P$ 的 ROC 为右半平面 $\operatorname{Re}(s)>1$。显然，这一 ROC 不包含虚轴，因此系统不是 BIBO 稳定的。）下面我们考虑两种不同策略来稳定该不稳定系统，以及它们在实际中的适用性。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-315.jpg?height=101&width=350&top_left_y=297&top_left_x=945)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-315.jpg?height=101&width=350&top_left_y=297&top_left_x=945){width="400"}
+
 
 图 7.38：被控对象（Plant）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-315.jpg?height=488&width=784&top_left_y=499&top_left_x=724)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-315.jpg?height=488&width=784&top_left_y=499&top_left_x=724){width="400"}
+
 
 图 7.39：稳定不稳定被控对象的两种配置。(a) 简单级联系统，(b) 反馈控制系统。
 
@@ -2915,7 +2955,8 @@ y(t) & =\mathcal{L}_{\mathrm{u}}^{-1} Y(t) \\
 $$
 例 7.45（RC 网络）。考虑图 7.40 所示的电阻-电容（RC）网络，输入为 $v_{0}$，输出为 $v_{1}$。若 $R=100, C=\frac{1}{100}, v_{0}(t)=3 e^{-2 t} u(t)$，且 $v_{1}\left(0^{-}\right)=1$，求 $v_{1}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-324.jpg?height=298&width=496&top_left_y=294&top_left_x=745)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-324.jpg?height=298&width=496&top_left_y=294&top_left_x=745){width="400"}
+
 
 图 7.40：RC 网络。
 
@@ -3003,7 +3044,8 @@ v_{1}(t) & =\mathcal{L}_{\mathrm{u}}^{-1} V_{1}(t) \\
 $$
 例 7.46（RLC 网络）。考虑图 7.41 所示的电阻-电感-电容（RLC）网络，输入为 $v_{0}$，输出为 $v_{1}$。若 $R=2, L=1, C=1, v_{0}(t)=u(t), v_{1}\left(0^{-}\right)=0$，且 $v_{1}^{\prime}\left(0^{-}\right)=1$，求 $v_{1}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-325.jpg?height=296&width=671&top_left_y=302&top_left_x=780)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-325.jpg?height=296&width=671&top_left_y=302&top_left_x=780){width="400"}
+
 
 图 7.41：RLC 网络。
 
@@ -3116,10 +3158,12 @@ $$
 
 7.4 使用拉普拉斯变换的性质和拉普拉斯变换表，求下图所示函数 $x$ 的拉普拉斯变换 $X$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-327.jpg?height=249&width=371&top_left_y=1980&top_left_x=618)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-327.jpg?height=249&width=371&top_left_y=1980&top_left_x=618){width="400"}
+  
 (a)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-327.jpg?height=244&width=630&top_left_y=1988&top_left_x=1291)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-327.jpg?height=244&width=630&top_left_y=1988&top_left_x=1291){width="400"}
+  
 (b)
 
 7.5 对下列各情况，使用拉普拉斯变换的性质和拉普拉斯变换对照表，求函数 $y$ 的拉普拉斯变换 $Y$，并用函数 $x$ 的拉普拉斯变换 $X$ 表示，其中 $X$ 和 $Y$ 的 ROC 分别为 $R_X$ 和 $R_Y$。  
@@ -3185,17 +3229,20 @@ $$
 H_{1}(s)=\frac{1}{s-1} \quad \text { 和 } \quad H_{2}(s)=A
 $$
 其中 $A$ 为实常数。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-329.jpg?height=236&width=531&top_left_y=1399&top_left_x=899)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-329.jpg?height=236&width=531&top_left_y=1399&top_left_x=899){width="400"}
+  
 (a) 用 $H_{1}$ 和 $H_{2}$ 表示 $H$ 的表达式。  
 (b) 判断系统在 $A$ 取何值时是 BIBO 稳定的。
 
 7.16 下图显示一个系统 $\mathfrak{H}$，输入的拉普拉斯变换为 $X$，输出为 $Y$。图中每个子系统都是因果 LTI 系统，并标注了其系统函数，$a$ 为实常数。  
 (i) 求系统 $\mathcal{H}$ 的系统函数 $H$。  
 (ii) 判断系统 $\mathcal{H}$ 是否 BIBO 稳定。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-329.jpg?height=444&width=1481&top_left_y=2058&top_left_x=459)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-329.jpg?height=444&width=1481&top_left_y=2058&top_left_x=459){width="400"}
+
 
 7.17 考虑输入为 $v_{1}$、输出为 $v_{2}$ 的 LTI 电阻-电感 (RL) 网络，如下图所示。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-330.jpg?height=290&width=471&top_left_y=389&top_left_x=805)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-330.jpg?height=290&width=471&top_left_y=389&top_left_x=805){width="400"}
+  
 (a) 求系统函数 $H$。  
 (b) 判断系统是否 BIBO 稳定。  
 (c) 判断该系统最接近哪类理想频率选择性滤波器。  
@@ -3224,7 +3271,8 @@ $$
 (a) $\mathcal{D}^{2} y(t)+7 \mathcal{D} y(t)+12 y(t)=x(t)$，其中 $y\left(0^{-}\right)=-1$，$\mathcal{D} y\left(0^{-}\right)=0$，且 $x(t)=u(t)$。
 
 7.22 考虑下图所示的电阻-电容 (RC) 网络，其中 $R=1000$，$C=\frac{1}{1000}$。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-331.jpg?height=285&width=474&top_left_y=302&top_left_x=923)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-331.jpg?height=285&width=474&top_left_y=302&top_left_x=923){width="400"}
+  
 (a) 求输入 $v_{0}$ 与输出 $v_{1}$ 之间的微分方程。  
 (b) 若 $v_{1}\left(0^{-}\right)=2$，且 $v_{0}(t)=2 e^{-3 t}$，求 $v_{1}$。
 ### 7.19.2 带答案的练习题
@@ -3268,7 +3316,8 @@ $$
 (b) $X(s)=\frac{e^{s}-e^{-s}-s e^{s}-s e^{-s}}{s^{2}}$，适用于所有 $s \in \mathbb{C}$。
 
 7.104 使用拉普拉斯变换的性质和拉普拉斯变换表，求下列图示函数 $x$ 的拉普拉斯变换 $X$。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-332.jpg?height=663&width=1463&top_left_y=291&top_left_x=348)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-332.jpg?height=663&width=1463&top_left_y=291&top_left_x=348){width="400"}
+
 
 简答：  
 (a) $X(s)=\frac{e^{2 s}-e^{s}-e^{-s}+e^{-2 s}}{s^{2}}$，适用于所有 $s \in \mathbb{C}$；  
@@ -3350,7 +3399,8 @@ $$
 (c) $\mathcal{D}^{3} y(t)+6 \mathcal{D}^{2} y(t)+11 \mathcal{D} y(t)+6 y(t)=\mathcal{D}^{2} x(t)+x(t)$。
 
 7.112 考虑下图所示 LTI 系统 $\mathcal{H}$，输入和输出的拉普拉斯变换分别为 $X$ 和 $Y$。图中每个子系统都是 LTI 系统，并标注了其系统函数。求系统 $\mathcal{H}$ 的系统函数 $H$，用 $A, B, C$ 表示。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-334.jpg?height=338&width=747&top_left_y=778&top_left_x=707)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-334.jpg?height=338&width=747&top_left_y=778&top_left_x=707){width="400"}
+
 
 简答：  
 $H(s)=\frac{A(s)}{1-A(s)[B(s)+C(s)]}$。
@@ -3359,12 +3409,15 @@ $H(s)=\frac{A(s)}{1-A(s)[B(s)+C(s)]}$。
 (ii) 求电路的系统函数 $H$；  
 (iii) 判断电路是否 BIBO 稳定；  
 (iv) 判断电路最接近的理想频率选择滤波器类型。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-334.jpg?height=725&width=1495&top_left_y=1777&top_left_x=334)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-334.jpg?height=725&width=1495&top_left_y=1777&top_left_x=334){width="400"}
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-335.jpg?height=301&width=677&top_left_y=297&top_left_x=464)  
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-335.jpg?height=301&width=677&top_left_y=297&top_left_x=464){width="400"}
+  
 (e)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-335.jpg?height=287&width=671&top_left_y=305&top_left_x=1277)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-335.jpg?height=287&width=671&top_left_y=305&top_left_x=1277){width="400"}
+  
 (f)
 
 简答：  
@@ -3376,7 +3429,8 @@ $H(s)=\frac{A(s)}{1-A(s)[B(s)+C(s)]}$。
 (f) $\mathcal{D} v_{0}(t)=R C \mathcal{D}^{2} v_{1}(t)+\mathcal{D} v_{1}(t)+\frac{R}{L} v_{1}(t)$；$H(s)=\frac{L s}{R L C s^{2}+L s+R}$，适用于 $\operatorname{Re}(s)>\operatorname{Re}\left(\frac{-L+\sqrt{L^{2}-4 R^{2} L C}}{2 R L C}\right)$；BIBO 稳定；带通滤波器，通带中心 $\pm \frac{1}{\sqrt{L C}}$。
 
 7.114 考虑系统 $\mathcal{A}$，输入为 $X$，输出为 $Y$。图中每个子系统都是因果 LTI 系统，并标注了系统函数。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-335.jpg?height=249&width=630&top_left_y=1537&top_left_x=886)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-335.jpg?height=249&width=630&top_left_y=1537&top_left_x=886){width="400"}
+
 
 对于下列各情况，  
 (i) 求系统 $\mathcal{A}$ 的系统函数 $A$；  
@@ -3395,7 +3449,8 @@ $H(s)=\frac{A(s)}{1-A(s)[B(s)+C(s)]}$。
 7.115 考虑下图所示系统，输入为 $X$，输出为 $Y$。图中每个子系统都是因果 LTI 系统，并标注了系统函数；且 $P(s)=1/s$, $C(s)=a s+3$, $Q(s)=1$，$a$ 为实常数。  
 (a) 求系统 $\mathcal{H}$ 的系统函数 $H$；  
 (b) 判断系统 $\mathcal{H}$ BIBO 稳定的 $a$ 的取值范围。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-336.jpg?height=247&width=769&top_left_y=675&top_left_x=696)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-336.jpg?height=247&width=769&top_left_y=675&top_left_x=696){width="400"}
+
 
 简答：  
 (a) $H(s)=\frac{a s+3}{s+a s+3}$，适用于 $\operatorname{Re}(s)>\frac{-3}{a+1}$；  
@@ -3403,9 +3458,11 @@ $H(s)=\frac{A(s)}{1-A(s)[B(s)+C(s)]}$。
 7.116 下列各图显示系统 $\mathfrak{H}$，输入为 $X$ 的拉普拉斯变换，输出为 $Y$ 的拉普拉斯变换。图中每个子系统都是因果 LTI 系统，并标注了系统函数，$a$ 为实常数。  
 (i) 求系统 $\mathcal{H}$ 的系统函数 $H$；  
 (ii) 判断系统 $\mathcal{H}$ 是否 BIBO 稳定。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-336.jpg?height=1203&width=1565&top_left_y=1299&top_left_x=259)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-336.jpg?height=1203&width=1565&top_left_y=1299&top_left_x=259){width="400"}
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-337.jpg?height=230&width=568&top_left_y=297&top_left_x=875)  
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-337.jpg?height=230&width=568&top_left_y=297&top_left_x=875){width="400"}
+  
 (g)
 
 简答：

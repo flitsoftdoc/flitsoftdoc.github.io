@@ -37,13 +37,16 @@ $$
 
 为了说明时间反转的效果，图 8.2 给出了一个例子。对图 8.2(a) 中的序列 $x$ 进行时间反转变换，可以得到图 8.2(b) 中的序列。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-004.jpg?height=857&width=1560&top_left_y=478&top_left_x=218)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-004.jpg?height=857&width=1560&top_left_y=478&top_left_x=218){width="400"}
+  
 图 8.1：时间平移的例子。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-004.jpg?height=417&width=1406&top_left_y=1796&top_left_x=291)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-004.jpg?height=417&width=1406&top_left_y=1796&top_left_x=291){width="400"}
+  
 图 8.2：时间反转的例子。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-005.jpg?height=422&width=1546&top_left_y=286&top_left_x=348)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-005.jpg?height=422&width=1546&top_left_y=286&top_left_x=348){width="400"}
+  
 图 8.3：抽取的例子。(a) 原始序列 $x$。(b) 对 $x$ 进行 2 倍抽取后的结果。
 ### 8.2.3 抽取（Downsampling）
 
@@ -71,7 +74,8 @@ $$
 
 为了说明插值的效果，图 8.4 给出了一个例子。对图 8.4(a) 中的序列 $x$ 进行 2 倍插值，可以得到图 8.4(b) 中的序列。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-006.jpg?height=858&width=879&top_left_y=283&top_left_x=575)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-006.jpg?height=858&width=879&top_left_y=283&top_left_x=575){width="400"}
+  
 图 8.4：插值的例子。(a) 原始序列 $x$。(b) 对 $x$ 进行 2 倍插值后的结果。
 
 ### 8.2.5 组合自变量变换
@@ -372,10 +376,12 @@ $$
 
 则称序列 $x$ 为**左边序列（left sided）**。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-011.jpg?height=1241&width=1457&top_left_y=729&top_left_x=391)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-011.jpg?height=1241&width=1457&top_left_y=729&top_left_x=391){width="400"}
+  
 图 8.5：例 8.3 的序列。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-012.jpg?height=720&width=1579&top_left_y=283&top_left_x=199)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-012.jpg?height=720&width=1579&top_left_y=283&top_left_x=199){width="400"}
+  
 图 8.6：不同“单边”特性的序列示例。(a) 左边但非右边；(b) 右边但非左边；(c) 有限时长；(d) 双边。
 
 换句话说，该序列在某点的左侧才可能非零。  
@@ -512,7 +518,8 @@ $$
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-014.jpg?height=398&width=836&top_left_y=302&top_left_x=572)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-014.jpg?height=398&width=836&top_left_y=302&top_left_x=572){width="400"}
+  
 图 8.7：例 8.5 的序列 $x$
 
 结合 (8.9)，得到
@@ -575,7 +582,8 @@ $$
 
 与原序列相同（因为 $\cos$ 函数是 $2 \pi$ 周期的）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-015.jpg?height=560&width=1108&top_left_y=294&top_left_x=570)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-015.jpg?height=560&width=1108&top_left_y=294&top_left_x=570){width="400"}
+  
 图 8.8：实正弦序列示例。
 
 (8.10) 中的实正弦序列 $x$ 当且仅当 $\frac{\Omega}{2 \pi}$ 为有理数时是周期性的。在这种情况下，其基周期为形如 $\frac{2 \pi k}{|\Omega|}$ 的最小整数，其中 $k$ 为正整数。特别地，当 $\Omega=\frac{2 \pi \ell}{m}$ 且 $\ell, m$ 为整数时，可以证明 $x$ 的基周期为
@@ -610,7 +618,8 @@ $$
 
 是有理数，因此 $x$ 是周期序列。基周期 $N$ 是形如 $\frac{11}{2}k$ 的最小整数，其中 $k$ 为正整数。由此可得 $N=11$（对应 $k=2$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-016.jpg?height=1854&width=1590&top_left_y=378&top_left_x=199)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-016.jpg?height=1854&width=1590&top_left_y=378&top_left_x=199){width="400"}
+  
 图 8.9：实正弦序列频率增加的影响。绘制了 $x(n)=\cos (\Omega n)$ 在以下频率下的曲线：  
 (a) $\frac{0 \pi}{8}=0$；  
 (b) $\frac{1 \pi}{8}=\frac{\pi}{8}$；  
@@ -668,10 +677,12 @@ $$
 
 当 $\ell$ 和 $m$ 互质（即没有公因数）时，$N=\frac{m}{\operatorname{gcd}(\ell, m)}=\frac{m}{1}=m$。（该证明作为练习留给读者，见练习 8.6。）
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-018.jpg?height=1846&width=1627&top_left_y=375&top_left_x=181)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-018.jpg?height=1846&width=1627&top_left_y=375&top_left_x=181){width="400"}
+
 图 8.10：实指数序列示例。(a) $|a|>1, a>0\left[a=\frac{5}{4} ; c=1\right]$；(b) $|a|<1, a>0\left[a=\frac{4}{5} ; c=1\right]$；(c) $|a|=1, a>0[a=1 ; c=1]$；(d) $|a|>1, a<0\left[a=-\frac{5}{4} ; c=1\right]$；(e) $|a|<1, a<0\left[a=-\frac{4}{5} ; c=1\right]$；(f) $|a|=1, a<0[a=-1 ; c=1]$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-019.jpg?height=568&width=1547&top_left_y=286&top_left_x=345)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-019.jpg?height=568&width=1547&top_left_y=286&top_left_x=345){width="400"}
+
 图 8.11：复正弦序列 $x(n)=e^{j(2 \pi / 7) n}$ 的示例。(a) 实部，(b) 虚部。
 
 对于周期性复正弦序列，序列的频率通常被视为带符号量。换句话说，我们通常采用带符号频率的概念，如第 2.10.2 节所述。假设复正弦序列 $x$（见 (8.13)）是周期的，则 $x$ 的带符号频率为 $\Omega$。在大多数情况下，我们直接将带符号频率称为“频率”。通常这不会引起混淆，因为通常可以从上下文判断频率是作为带符号量还是无符号量处理。
@@ -708,7 +719,8 @@ $$
 N=\frac{6}{\operatorname{gcd}(6,1)}=\frac{6}{\operatorname{gcd}\left(2^{1} \cdot 3^{1}, 1\right)}=\frac{6}{1}=6 .
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-020.jpg?height=930&width=1500&top_left_y=283&top_left_x=243)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-020.jpg?height=930&width=1500&top_left_y=283&top_left_x=243){width="400"}
+
 图 8.12：复指数序列实部和虚部的各种行为模式。(a) $|a|>1$；(b) $|a|<1$；(c) $|a|=1$。
 #### 8.4.2.3 一般复指数序列
 
@@ -739,10 +751,12 @@ $$
 
 该结果由欧拉公式得出，本质上是对 (A.8) 的重新表述。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-021.jpg?height=225&width=641&top_left_y=297&top_left_x=805)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-021.jpg?height=225&width=641&top_left_y=297&top_left_x=805){width="400"}
+
 图 8.13：单位阶跃序列。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-021.jpg?height=191&width=987&top_left_y=642&top_left_x=632)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-021.jpg?height=191&width=987&top_left_y=642&top_left_x=632){width="400"}
+
 图 8.14：矩形序列。
 
 ### 8.4.4 单位阶跃序列
@@ -839,7 +853,8 @@ x(n) \delta\left(n-n_{0}\right)=x\left(n_{0}\right) \delta\left(n-n_{0}\right) .
 $$
 证明：证明基本上直接来自于单位冲激序列仅在单点非零这一事实。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-023.jpg?height=239&width=649&top_left_y=291&top_left_x=802)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-023.jpg?height=239&width=649&top_left_y=291&top_left_x=802){width="400"}
+  
 图 8.15：单位冲激序列。
 
 **定理 8.5（筛选性质）** 对于任意序列 $x$ 和任意整数常数 $n_{0}$，下列恒等式成立：
@@ -929,13 +944,16 @@ x \rightarrow y .
 $$
 注意，符号 " $\rightarrow$ " 与 " $=$ " 含义完全不同。例如，记法 $x \rightarrow y$ 并不意味着 $x=y$。符号 " $\rightarrow$ " 应读作“产生”（而非“等于”）。即，“ $x \rightarrow y$ ”应读作“输入 $x$ 产生输出 $y$ ”。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-025.jpg?height=1768&width=1281&top_left_y=310&top_left_x=478)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-025.jpg?height=1768&width=1281&top_left_y=310&top_left_x=478){width="400"}
+  
 图 8.16：使用单位阶跃序列表示分段线性序列。(a) 序列 $x$。(b)、(c) 和 (d) 三个序列，其和为 $x$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-025.jpg?height=139&width=415&top_left_y=2242&top_left_x=915)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-025.jpg?height=139&width=415&top_left_y=2242&top_left_x=915){width="400"}
+  
 图 8.17：系统的方框图。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-026.jpg?height=282&width=1241&top_left_y=286&top_left_x=367)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-026.jpg?height=282&width=1241&top_left_y=286&top_left_x=367){width="400"}
+  
 图 8.18：系统的互联。(a) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的串联互联。(b) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的并联互联。
 
 ### 8.6.1 方框图表示
@@ -1055,7 +1073,8 @@ $$
 
 为了证明一个系统是可逆的，我们只需找到其逆系统。若要证明系统不可逆，只需找到两个不同的输入导致相同输出即可。在实际应用中，可逆系统的优势在于其作用可以被撤销。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-029.jpg?height=209&width=1084&top_left_y=291&top_left_x=575)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-029.jpg?height=209&width=1084&top_left_y=291&top_left_x=575){width="400"}
+  
 图 8.19：等价系统（假设 $\mathcal{H}^{-1}$ 存在）。(a) 第一个系统，(b) 第二个系统。
 
 **例 8.19** 判断系统 $\mathcal{H}$ 是否可逆，其中
@@ -1203,7 +1222,8 @@ $$
 $$
 因此，对于有界输入 $x$，输出 $\mathcal{H} x$ 无界，系统不 BIBO 稳定。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-032.jpg?height=214&width=1085&top_left_y=289&top_left_x=453)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-032.jpg?height=214&width=1085&top_left_y=289&top_left_x=453){width="400"}
+  
 图 8.20：如果 $\mathcal{H}$ 是时间不变的（即 $\mathcal{H}$ 与 $\mathcal{S}_{n_{0}}$ 可交换），则系统等价。(a) 先时间平移 $n_{0}$ 再应用 $\mathcal{H}$（即 $y=\mathcal{H} \mathcal{S}_{n_{0}} x$）；(b) 先应用 $\mathcal{H}$ 再时间平移 $n_{0}$（即 $y=\mathcal{S}_{n_{0}} \mathcal{H}(x)$）。
 ### 8.7.5 时间不变性
 
@@ -1281,13 +1301,16 @@ $$
 $$
 \mathcal{H}(a x)=a \mathcal{H} x
 $$
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-034.jpg?height=290&width=1184&top_left_y=289&top_left_x=413)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-034.jpg?height=290&width=1184&top_left_y=289&top_left_x=413){width="400"}
+
 图 8.21：如果 $\mathcal{H}$ 是可加的（即 $\mathcal{H}$ 与加法可交换），则系统等效的示意图。(a) 先执行加法再应用 $\mathcal{H}$ 的系统（即 $y=\mathcal{H}\left(x_{1}+x_{2}\right)$）；(b) 先应用 $\mathcal{H}$ 再执行加法的系统（即 $y=\mathcal{H} x_{1}+\mathcal{H} x_{2}$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-034.jpg?height=214&width=1214&top_left_y=767&top_left_x=389)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-034.jpg?height=214&width=1214&top_left_y=767&top_left_x=389){width="400"}
+
 图 8.22：如果 $\mathcal{H}$ 是齐次的（即 $\mathcal{H}$ 与标量乘法可交换），则系统等效的示意图。(a) 先执行标量乘法再应用 $\mathcal{H}$ 的系统（即 $y=\mathcal{H}(a x)$）；(b) 先应用 $\mathcal{H}$ 再执行标量乘法的系统（即 $y=a \mathcal{H} x$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-034.jpg?height=306&width=1449&top_left_y=1156&top_left_x=264)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-034.jpg?height=306&width=1449&top_left_y=1156&top_left_x=264){width="400"}
+
 图 8.23：如果 $\mathcal{H}$ 是线性的（即 $\mathcal{H}$ 与线性组合可交换），则系统等效的示意图。(a) 先计算线性组合再应用 $\mathcal{H}$ 的系统（即 $y=\mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)$）；(b) 先应用 $\mathcal{H}$ 再计算线性组合的系统（即 $y=a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}$）。
 
 （即 $\mathcal{H}$ 与标量乘法可交换）。本质上，系统 $\mathcal{H}$ 的齐次性意味着图 8.22 中显示的两个系统是等效的。
@@ -1489,7 +1512,8 @@ $$
 (d) $y(n)=x(2 n-1)$；  
 (e) $y(n)=x(3 n+1)$；  
 (f) $y(n)=x(1-2 n)$。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-039.jpg?height=257&width=949&top_left_y=751&top_left_x=726)
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-039.jpg?height=257&width=949&top_left_y=751&top_left_x=726){width="400"}
+
 
 8.2 设序列 $x$ 和 $y$ 由关系 $y(n)=x(a n-b)$ 给出，其中 $a$ 和 $b$ 为整数，且 $a \geq 1$。  
 (a) 证明 $y$ 可以通过将 $x$ 时间平移 $b$ 单位后，再将得到的序列按 $a$ 倍下采样得到。  

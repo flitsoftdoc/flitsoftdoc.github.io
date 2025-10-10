@@ -36,13 +36,16 @@ $$
 
 为了说明时间反转的效果，图 3.2 给出了一个示例。将时间反转变换应用于图 3.2(a) 中的函数 $x$，可以得到图 3.2(b) 中的函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-032.jpg?height=901&width=1385&top_left_y=434&top_left_x=307)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-032.jpg?height=901&width=1385&top_left_y=434&top_left_x=307){width="400"}
+  
 图 3.1：时间平移的示例。(a) 函数 $x$；以及对 $x$ 施加平移变换后，移位 (b) +1 和 (c) -1 的结果。
 
-![](https://cdn.mathpix.com/snip/images/dxJjHuRK9pjAxIqejxoRbb9x_Nk_KRhxLPjgzCMTBFQ.original.fullsize.png)  
+![](https://cdn.mathpix.com/snip/images/dxJjHuRK9pjAxIqejxoRbb9x_Nk_KRhxLPjgzCMTBFQ.original.fullsize.png){width="400"}
+  
 图 3.2：时间反转的示例。(a) 函数 $x$；以及 (b) 对 $x$ 施加时间反转变换的结果。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-033.jpg?height=927&width=1546&top_left_y=286&top_left_x=348)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-033.jpg?height=927&width=1546&top_left_y=286&top_left_x=348){width="400"}
+  
 图 3.3：时间压缩/扩展的示例。(a) 函数 $x$；以及对 $x$ 施加压缩/扩展变换后，缩放因子分别为 (b) 2 和 (c) $\frac{1}{2}$ 的结果。
 ### 3.2.3 时间压缩/扩展（伸缩）
 
@@ -70,7 +73,8 @@ $$
 
 其中 $a$ 是非零实常数。换句话说，函数 $y$ 是通过在 $x(t)$ 的表达式中用 $at$ 替换 $t$ 得到的。量 $a$ 称为**缩放因子**。从几何角度来看，变换 (3.4) 与沿时间轴的压缩/扩展以及/或者关于原点的对称相关。若 $|a|<1$，则函数沿时间轴扩展（即拉伸）；若 $|a|>1$，则函数被压缩；若 $|a|=1$，则函数既不扩展也不压缩。最后，若 $a<0$，则函数关于原点对称。可以看到，时间缩放同时包含了时间压缩/扩展和时间反转作为特例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-034.jpg?height=933&width=1600&top_left_y=283&top_left_x=208)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-034.jpg?height=933&width=1600&top_left_y=283&top_left_x=208){width="400"}
+  
 图 3.4：时间缩放的示例。(a) 函数 $x$；以及对 $x$ 施加时间缩放变换后，缩放因子为 (b) 2、(c) $\frac{1}{2}$ 和 (d) -1 的结果。
 
 为了说明时间缩放的作用，图 3.4 给出了一个示例。通过对图 3.4(a) 中的函数 $x$ 应用时间缩放变换，可以得到图 3.4(b)、(c) 和 (d) 所示的函数。
@@ -93,7 +97,8 @@ $$
 1. 先将 $x$ 平移 $b$，再对结果进行时间缩放 $a$；
 2. 先将 $x$ 缩放 $a$，再对结果平移 $\frac{b}{a}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-035.jpg?height=782&width=1433&top_left_y=286&top_left_x=413)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-035.jpg?height=782&width=1433&top_left_y=286&top_left_x=413){width="400"}
+  
 图 3.5：时间平移与时间缩放组合变换的两种不同解释。(a) 原始函数。先平移再缩放的结果：(b) 中间结果，(c) 最终结果。先缩放再平移的结果：(d) 中间结果，(e) 最终结果。
 
 注意到，两种解释中的移位量不同（即 $b$ 与 $\frac{b}{a}$）。这是由于时间平移和时间缩放不可交换的事实所导致的。关于上述两种解释等价性的证明留作习题 3.3。
@@ -113,7 +118,8 @@ $$
 1. 将函数 $x$ 向右平移 $b$ 个单位；  
 2. 将横轴向左平移 $b$ 个单位。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-036.jpg?height=522&width=1385&top_left_y=286&top_left_x=307)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-036.jpg?height=522&width=1385&top_left_y=286&top_left_x=307){width="400"}
+  
 图 3.6：幅度平移的示例。(a) 函数 $x$；以及对 $x$ 施加幅度平移变换（平移量为 -2）后得到的结果。  
 
 在我们对自变量变换的研究中，我们只关注变换对函数的影响。如果不注意这一点，而是从坐标轴的角度来理解，那么关于自变量变换的许多方面将会变得难以理解。
@@ -145,7 +151,8 @@ $$
 
 为了说明幅度缩放的效果，图 3.7 给出了一个示例。通过对图 3.7(a) 中的函数 $x$ 施加幅度缩放变换，可以得到图 3.7(b)、(c) 和 (d) 所示的函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-037.jpg?height=1043&width=1371&top_left_y=805&top_left_x=437)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-037.jpg?height=1043&width=1371&top_left_y=805&top_left_x=437){width="400"}
+  
 图 3.7：幅度缩放的示例。(a) 函数 $x$；以及对 $x$ 施加幅度缩放变换后，缩放因子为 (b) 2、(c) $\frac{1}{2}$ 和 (d) -2 的结果。
 ### 3.3.3 幅度平移与缩放的结合
 
@@ -420,7 +427,8 @@ $$
 \lim_{t \to \pi/2} |\tan t| = \infty, \quad \text{且} \quad \lim_{|t| \to \infty} |p(t)| = \infty.
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-042.jpg?height=749&width=1217&top_left_y=286&top_left_x=413)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-042.jpg?height=749&width=1217&top_left_y=286&top_left_x=413){width="400"}
+  
 图 3.8：具有不同边界性质的函数示例。(a) 左边但非右边，(b) 右边但非左边，(c) 时限，(d) 双边。
 ### 3.4.5 信号的能量与功率
 
@@ -553,10 +561,12 @@ $$
 
 图 3.9 给出了 $x$ 的示意图。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-044.jpg?height=260&width=819&top_left_y=305&top_left_x=578)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-044.jpg?height=260&width=819&top_left_y=305&top_left_x=578){width="400"}
+  
 图 3.9：例 3.6 中的函数 $x$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-044.jpg?height=622&width=593&top_left_y=678&top_left_x=702)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-044.jpg?height=622&width=593&top_left_y=678&top_left_x=702){width="400"}
+  
 图 3.10：实正弦函数。
 ## 3.5 基本函数
 
@@ -584,7 +594,8 @@ $$
 
 其中 $A$ 和 $\lambda$ 为复常数。复指数函数在系统理论中具有基础性的重要性，同时也为表示许多其他类函数提供了方便的手段。复指数函数可以根据其参数 $A$ 和 $\lambda$ 的取值表现出多种不同的行为模式。以下内容将探讨复指数函数的一些特殊情况，以及一般情况。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-045.jpg?height=631&width=1573&top_left_y=280&top_left_x=337)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-045.jpg?height=631&width=1573&top_left_y=280&top_left_x=337){width="400"}
+
 图 3.11：实指数函数的情况 (a) $\lambda>0$，(b) $\lambda=0$，以及 (c) $\lambda<0$。
 
 #### 3.5.2.1 实指数函数
@@ -613,7 +624,8 @@ $$
 
 复正弦函数 $x(t)=e^{j \omega t}$ 在 $\omega$ 分别取 $2 \pi$ 和 $-2 \pi$ 时的图像如图 3.13(a) 和 (b) 所示。从这些图中可以看出，随着 $t$ 增加，$x(t)$ 描绘的曲线呈螺旋状。如果沿着 $t$ 轴方向向 $-\infty$ 直视该曲线，当 $\omega>0$ 时螺旋呈逆时针方向（即右手螺旋），当 $\omega<0$ 时螺旋呈顺时针方向（即左手螺旋）。注意，虽然这两种复正弦函数的振荡速率相同，但它们并不是通过平移（即时间平移）或反射（即时间反转）得到的版本。左手螺旋和右手螺旋在本质上是不同的形状，一个无法通过平移和/或反射变为另一个。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-046.jpg?height=698&width=1330&top_left_y=289&top_left_x=329)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-046.jpg?height=698&width=1330&top_left_y=289&top_left_x=329){width="400"}
+
 图 3.12：复正弦函数。(a) 实部和 (b) 虚部。
 
 如图 3.13 所示，复正弦函数 $x(t)=e^{j \omega t}$ 在 $\omega>0$ 和 $\omega<0$ 时的行为本质上不同。因此，在处理复正弦函数时，通常使用带符号的频率（如前文第 2.10.2 节所介绍）。也就是说，我们通常将 $\omega$ 称为复正弦函数的频率。这是带符号频率的一个应用实例（因为 $\omega$ 显然是带符号的量）。旋转的正方向（即 $\omega>0$）对应右手螺旋，而旋转的负方向（即 $\omega<0$）对应左手螺旋。
@@ -638,10 +650,12 @@ $$
 
 可以看到，$\operatorname{Re}[x(t)]$ 和 $\operatorname{Im}[x(t)]$ 形式相似。它们都是实指数函数与实正弦函数的乘积。根据 $\sigma$ 的取值，$x$ 会表现出三种不同的行为模式。如果 $\sigma=0$，$\operatorname{Re}(x)$ 和 $\operatorname{Im}(x)$ 是实正弦函数。如果 $\sigma>0$，$\operatorname{Re}(x)$ 和 $\operatorname{Im}(x)$ 都是实正弦函数与增长型实指数函数的乘积。如果 $\sigma<0$，$\operatorname{Re}(x)$ 和 $\operatorname{Im}(x)$ 都是实正弦函数与衰减型实指数函数的乘积。图 3.14 展示了 $\operatorname{Re}(x)$ 的这三种情况。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-047.jpg?height=1565&width=1031&top_left_y=570&top_left_x=607)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-047.jpg?height=1565&width=1031&top_left_y=570&top_left_x=607){width="400"}
+
 图 3.13：复正弦函数 $x(t)=e^{j \omega t}$，(a) $\omega=2 \pi$，(b) $\omega=-2 \pi$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-048.jpg?height=590&width=1579&top_left_y=283&top_left_x=210)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-048.jpg?height=590&width=1579&top_left_y=283&top_left_x=210){width="400"}
+
 图 3.14：一般复指数函数的实部，(a) $\sigma>0$，(b) $\sigma=0$，(c) $\sigma<0$。
 
 ### 3.5.3 复指数函数与实正弦函数的关系
@@ -676,13 +690,16 @@ $$
 
 该函数的图像如图 3.16 所示。从 (3.19) 可以看出，符号函数仅用于计算一个数的符号。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=390&width=663&top_left_y=294&top_left_x=788)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=390&width=663&top_left_y=294&top_left_x=788){width="400"}
+
 图 3.15：单位阶跃函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=330&width=630&top_left_y=813&top_left_x=810)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=330&width=630&top_left_y=813&top_left_x=810){width="400"}
+
 图 3.16：符号函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=309&width=314&top_left_y=1264&top_left_x=967)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=309&width=314&top_left_y=1264&top_left_x=967){width="400"}
+
 图 3.17：矩形函数。
 ### 3.5.6 矩形函数
 
@@ -700,10 +717,12 @@ $$
 **解答**  
 我们选择提取 $x(t)$ 在 $-\frac{T}{2}<t \leq \frac{T}{2}$ 区间内的周期。为了提取这个周期，我们需要将 $x$ 与一个在该区间为 1、其他区间为 0 的函数相乘。这样的函数就是 $v(t)=\operatorname{rect}\left(\frac{1}{T} t\right)$，如图 3.18(b) 所示。将 $v$ 与 $x$ 相乘得到的函数如图 3.18(c) 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-050.jpg?height=1049&width=1039&top_left_y=802&top_left_x=434)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-050.jpg?height=1049&width=1039&top_left_y=802&top_left_x=434){width="400"}
+
 图 3.18：使用矩形函数提取周期函数 $x$ 的一个周期。(a) 函数 $x$。(b) 时间缩放后的矩形函数 $v$。(c) $x$ 与 $v$ 的乘积。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-051.jpg?height=317&width=317&top_left_y=297&top_left_x=967)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-051.jpg?height=317&width=317&top_left_y=297&top_left_x=967){width="400"}
+
 图 3.19：三角函数。
 
 ### 3.5.7 指示函数
@@ -797,10 +816,12 @@ $$
 
 在图形上，delta 函数表示如图 3.20 所示。由于该函数在原点处取无限值，我们无法绘制其真实数值，因此用一条竖直箭头表示该无限值，同时标示脉冲强度。在图 3.21 中，我们绘制了经过缩放和平移的 delta 函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=532)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=532){width="400"}
+
 图 3.20：Delta 函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=1342)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=1342){width="400"}
+
 图 3.21：缩放和平移后的 delta 函数。
 
 实际上，$\delta$ 函数可以视为一列函数的极限，该序列中的函数是逐渐变窄且变高的脉冲，并且每个脉冲的积分均为 1。通过这种方式观察 $\delta$，可以更深入地理解该函数。以下，我们将考虑将 $\delta$ 函数表示为一列矩形脉冲的极限。
@@ -817,7 +838,8 @@ $$
 \delta(t)=\lim _{\varepsilon \rightarrow 0} g_{\varepsilon}(t) .
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=327&width=466&top_left_y=724&top_left_x=891)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=327&width=466&top_left_y=724&top_left_x=891){width="400"}
+
 图 3.22：矩形脉冲函数 $g_{\varepsilon}$。
 
 为了帮助可视化这一极限过程，图 3.24 显示了 $g_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。从图中可以直观地确认，当 $\varepsilon \rightarrow 0$ 时，$g_{\varepsilon} \rightarrow \delta$。因此，$\delta$ 可视为矩形脉冲的极限情况，其中脉冲宽度趋于无穷小，脉冲高度趋于无限大，同时保证所得函数的积分保持为 1。
@@ -838,7 +860,8 @@ $$
 这一结果称为等价性质，如图 3.25 所示。  
 **证明**：该证明直接来源于 delta 函数仅在单一点非零的事实。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-054.jpg?height=536&width=1133&top_left_y=302&top_left_x=421)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-054.jpg?height=536&width=1133&top_left_y=302&top_left_x=421){width="400"}
+
 图 3.23：$g_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
 
 **定理 3.4（抽取性质）**  
@@ -890,7 +913,8 @@ $$
 \int_{-\infty}^{\infty} d_{\varepsilon}(t) d t=1
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-055.jpg?height=536&width=1133&top_left_y=302&top_left_x=545)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-055.jpg?height=536&width=1133&top_left_y=302&top_left_x=545){width="400"}
+
 图 3.24：$d_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
 
 因此，$\delta$ 函数可以视为 $d_{\varepsilon}$ 的极限情况。特别地，有
@@ -933,7 +957,8 @@ $$
 
 如后续将看到的，$\delta$ 的等价性质、抽取性质、缩放性质及偶性都是非常有用的。最后，由 $\delta$ 的定义可知，在不包含原点的任意区间上积分该函数，其值为零。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-056.jpg?height=366&width=1519&top_left_y=286&top_left_x=240)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-056.jpg?height=366&width=1519&top_left_y=286&top_left_x=240){width="400"}
+
 图 3.25：等价性质的图示。(a) 函数 $x$；(b) 平移后的 delta 函数；(c) 两者的乘积。
 
 **例 3.9（抽取性质示例）**  
@@ -1045,7 +1070,8 @@ $$
 x(t)=u(t-a)-u(t-b)=\begin{cases}1 & a \le t < b \\ 0 & \text{otherwise}\end{cases}.
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-058.jpg?height=420&width=1362&top_left_y=283&top_left_x=316)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-058.jpg?height=420&width=1362&top_left_y=283&top_left_x=316){width="400"}
+
 
 Figure 3.26: Representing the rectangular function using unit-step functions. (a) A shifted unit-step function, (b) another shifted unit-step function, and (c) their difference (which is the rectangular function).
 
@@ -1103,7 +1129,8 @@ x(t)= \begin{cases}1 & 0 \leq t<1 \\ (t-2)^{2} & 1 \leq t<3 \\ 4-t & 3 \leq t<4 
 $$
 求一个适用于所有 $t$ 的单一表达式（使用单位阶跃函数表示）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-059.jpg?height=612&width=860&top_left_y=291&top_left_x=691)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-059.jpg?height=612&width=860&top_left_y=291&top_left_x=691){width="400"}
+  
 图 3.27：使用单位阶跃函数表示分段线性函数。(a) 函数 $x$；(b)、(c) 和 (d) 三个函数，它们的和为 $x$。
 
 **解答**：$x$ 的图像如图 3.28(a) 所示。我们分别考虑分段函数的每一段：
@@ -1158,10 +1185,12 @@ x(t) & =\sum_{k=-\infty}^{\infty} v(t-2 k) \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=620&width=936&top_left_y=286&top_left_x=529)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=620&width=936&top_left_y=286&top_left_x=529){width="400"}
+  
 图 3.28：使用单位阶跃函数表示分段多项式函数。(a) 函数 $x$；(b)、(c) 和 (d) 三个函数，其和为 $x$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=315&width=1090&top_left_y=1042&top_left_x=375)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=315&width=1090&top_left_y=1042&top_left_x=375){width="400"}
+  
 图 3.29：使用单位阶跃函数表示周期函数。(a) 周期函数 $x$；(b) 一个由 $x$ 的单个周期组成的函数 $\nu$。
 
 因此，我们得到了一个适用于所有 $t$ 的 $x$ 的单一表达式。
@@ -1184,10 +1213,12 @@ x \rightarrow y。
 $$
 注意，符号“$\rightarrow$”和“$=$”的意义完全不同。例如，符号 $x \rightarrow y$ 并不意味着 $x=y$。符号“$\rightarrow$”应读作“产生”（而非“等于”）。也就是说，“$x \rightarrow y$”应理解为“输入 $x$ 产生输出 $y$”。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=133&width=412&top_left_y=302&top_left_x=915)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=133&width=412&top_left_y=302&top_left_x=915){width="400"}
+  
 图 3.30：系统的框图。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=282&width=1238&top_left_y=534&top_left_x=497)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=282&width=1238&top_left_y=534&top_left_x=497){width="400"}
+  
 图 3.31：系统的互连。(a) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的串联互连；(b) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的并联互连。
 
 ### 3.7.1 框图表示
@@ -1317,7 +1348,8 @@ $$
 
 **解答**。对于任意 $x$ 和任意实常数 $t_{0}$，$\mathcal{H} x\left(t_{0}\right)$ 仅依赖于 $t=t_{0}$ 和 $t=-t_{0}$ 时的 $x(t)$。假设 $t_{0}=-1$。在这种情况下，$\mathcal{H} x\left(t_{0}\right)$（即 $\mathcal{H} x(-1)$）依赖于 $t=1$ 时的 $x(t)$，但 $t=1>t_{0}$。因此，该系统**不是因果系统**。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-064.jpg?height=214&width=1087&top_left_y=289&top_left_x=456)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-064.jpg?height=214&width=1087&top_left_y=289&top_left_x=456){width="400"}
+  
 图 3.32：等效系统（假设 $\mathfrak{H}^{-1}$ 存在）。(a) 第一系统；(b) 第二系统。
 
 ### 3.8.3 可逆性
@@ -1493,7 +1525,8 @@ $$
 
 简而言之，时间不变系统的行为随时间不发生变化。实际上，与时间可变系统相比，时间不变系统更易于设计和分析，因为其行为不会随时间变化。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-067.jpg?height=209&width=1084&top_left_y=291&top_left_x=583)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-067.jpg?height=209&width=1084&top_left_y=291&top_left_x=583){width="400"}
+  
 图 3.33：如果 $\mathcal{H}$ 是时间不变的（即 $\mathcal{H}$ 与 $\mathcal{S}_{t_{0}}$ 可交换），两个系统是等价的。(a) 先将输入平移 $t_{0}$ 再施加 $\mathcal{H}$（即 $y=\mathcal{H} \mathcal{S}_{t_{0}} x$）；(b) 先施加 $\mathcal{H}$ 再平移 $t_{0}$（即 $y=\mathcal{S}_{t_{0}} \mathcal{H}(x)$）。
 
 **例 3.32**  
@@ -1582,10 +1615,12 @@ $$
 $$
 则称系统 $\mathcal{H}$ 为齐次的（即 $\mathcal{H}$ 与标量乘法可交换）。本质上，系统 $\mathcal{H}$ 的齐次性意味着图 3.35 所示的两个系统是等价的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=304&width=1209&top_left_y=283&top_left_x=529)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=304&width=1209&top_left_y=283&top_left_x=529){width="400"}
+  
 图 3.34：如果 $\mathcal{H}$ 是加法性的（即 $\mathcal{H}$ 与加法可交换），两个系统是等价的。(a) 先执行加法再施加 $\mathcal{H}$（即 $y=\mathcal{H}\left(x_{1}+x_{2}\right)$）；(b) 先施加 $\mathcal{H}$ 再执行加法（即 $y=\mathcal{H} x_{1}+\mathcal{H}(x_{2})$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=219&width=1217&top_left_y=759&top_left_x=518)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=219&width=1217&top_left_y=759&top_left_x=518){width="400"}
+  
 图 3.35：如果 $\mathcal{H}$ 是齐次的（即 $\mathcal{H}$ 与标量乘法可交换），两个系统是等价的。(a) 先进行标量乘法再施加 $\mathcal{H}$（即 $y=\mathcal{H}(a x)$）；(b) 先施加 $\mathcal{H}$ 再进行标量乘法（即 $y=a \mathcal{H} x$）。
 
 加法性和齐次性可以合并为一个性质，即叠加性。特别地，如果对于所有函数 $x_{1}$ 和 $x_{2}$ 以及所有复常数 $a_{1}$ 和 $a_{2}$，系统 $\mathcal{H}$ 满足：
@@ -1594,7 +1629,8 @@ $$
 $$
 则称系统 $\mathcal{H}$ 具有叠加性（即 $\mathcal{H}$ 与线性组合可交换）。如果一个系统既是加法性的又是齐次的（或等价地满足叠加性），则称其为线性系统。本质上，系统 $\mathcal{H}$ 的线性意味着图 3.36 所示的两个系统是等价的。要证明一个系统是线性的，可以证明它同时具有加法性和齐次性，或者直接证明它满足叠加性。实际上，线性系统相比非线性系统更易于设计和分析。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-070.jpg?height=307&width=1452&top_left_y=280&top_left_x=267)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-070.jpg?height=307&width=1452&top_left_y=280&top_left_x=267){width="400"}
+  
 图 3.36：如果 $\mathcal{H}$ 是线性的（即 $\mathcal{H}$ 与线性组合可交换），两个系统是等价的。(a) 先计算线性组合再施加 $\mathcal{H}$（即 $y=\mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)$）；(b) 先施加 $\mathcal{H}$ 再计算线性组合（即 $y=a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}$）。
 
 **例 3.36**  
@@ -1954,7 +1990,8 @@ $$
 (i) $\displaystyle \int_{t-2}^{t-1} (\tau - 1)^2 \delta(\tau - 3) d\tau$。
 
 **3.21** 假设我们有下图所示的函数 $x$。使用单位阶跃函数（unit-step functions）来找到一个在所有 $t$ 上都有效的 $x(t)$ 的单一表达式。
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-077.jpg?height=388&width=601&top_left_y=2101&top_left_x=864)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-077.jpg?height=388&width=601&top_left_y=2101&top_left_x=864){width="400"}
+
 
 **3.22** 对下列给出的每个函数 $x$，求一个 $x$ 的单一表达式（即不涉及多个分段情况的表达式）。在 $x$ 的表达式中，将类似的单位阶跃函数项组合在一起。
 
@@ -1963,7 +2000,8 @@ $$
 (c) $x(t) = \begin{cases} 4t+4 & -1 \le t < -\frac{1}{2} \\ 4 t^2 & -\frac{1}{2} \le t < \frac{1}{2} \\ -4 t + 4 & \frac{1}{2} \le t < 1 \\ 0 & \text{otherwise} \end{cases}$
 
 **3.23 **对下图所示的系统，用输入 $x$ 以及变换 $\mathcal{H}_{1}, \mathcal{H}_{2}, \ldots, \mathcal{H}_{5}$ 表示输出 $y$。
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-078.jpg?height=333&width=1017&top_left_y=1302&top_left_x=572)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-078.jpg?height=333&width=1017&top_left_y=1302&top_left_x=572){width="400"}
+
 
 
 3.24 判断下列系统 $\mathcal{H}$ 是否为无记忆系统（memoryless）。  
@@ -2255,5 +2293,6 @@ $$
 [提示：使用匿名函数。]  
 
 3.203 编写一个名为 `plot_even_odd_parts` 的函数，输入参数 `func` 和 `range`，其中 `func` 是一个函数，`range` 为包含上下界的二元素向量。该函数应在 3×1 网格中绘制函数 `func` 及其偶函数和奇函数部分。使用 `fplot` 进行绘图。例如，调用 `plot_even_odd_parts(@exp, [-4 4])` 会绘制指数函数及其偶、奇部分，如下图所示：  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-086.jpg?height=628&width=798&top_left_y=359&top_left_x=675)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-086.jpg?height=628&width=798&top_left_y=359&top_left_x=675){width="400"}
+
 

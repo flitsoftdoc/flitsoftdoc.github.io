@@ -141,7 +141,8 @@ $$
 
 卷积结果 $x * h$ 绘制在图4.1(i)中。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-090.jpg?height=1944&width=1427&top_left_y=334&top_left_x=243)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-090.jpg?height=1944&width=1427&top_left_y=334&top_left_x=243){width="400"}
+  
 **图4.1** 卷积 $x * h$ 的计算过程。(a) 函数 $x$；(b) 函数 $h$；(c) $h(-\tau)$ 与 (d) $h(t-\tau)$ 关于 $\tau$ 的图像；(e)–(h) 为卷积积分中乘积函数在 $t<-1$、$-1 \leq t<0$、$0 \leq t<1$ 和 $t \geq 1$ 时的情况；(i) 卷积结果 $x * h$。
 
 **例 4.2** 计算卷积 $x * h$，其中
@@ -204,7 +205,8 @@ $$
 
 卷积结果 $x * h$ 绘制如图 4.2(i)。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-092.jpg?height=1992&width=1439&top_left_y=310&top_left_x=326)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-092.jpg?height=1992&width=1439&top_left_y=310&top_left_x=326){width="400"}
+
 
 图 4.2：卷积 $x * h$ 的计算过程。(a) 函数 $x$；(b) 函数 $h$；(c) $h(-\tau)$ 与 (d) $h(t-\tau)$ 关于 $\tau$ 的图像；卷积积分中乘积函数对应的情况： (e) $t<0$，(f) $0 \leq t<1$，(g) $1 \leq t<2$，(h) $t \geq 2$；(i) 卷积结果 $x * h$。
 
@@ -280,7 +282,8 @@ $$
 
 卷积结果 $x * h$ 绘制如图 4.3(j)。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-094.jpg?height=1940&width=1495&top_left_y=332&top_left_x=283)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-094.jpg?height=1940&width=1495&top_left_y=332&top_left_x=283){width="400"}
+
 
 图 4.3：卷积 $x * h$ 的计算过程。(a) 函数 $x$；(b) 函数 $h$；(c) $h(-\tau)$ 与 (d) $h(t-\tau)$ 关于 $\tau$ 的图像；卷积积分中乘积函数对应的情况： (e) $t<0$，(f) $0 \leq t<1$，(g) $1 \leq t<2$，(h) $2 \leq t<3$，(i) $t \geq 3$；(j) 卷积结果 $x * h$。
 
@@ -339,7 +342,8 @@ $$
 
 注意如上所示，不借助图形直接计算卷积在某些步骤上容易出错，即使卷积的函数较为简单。若对某些步骤感到不够清晰，建议画图辅助卷积计算。例如使用如图4.4 所示的图形，通常可以使上述卷积更易于正确计算。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-096.jpg?height=1033&width=1371&top_left_y=807&top_left_x=267)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-096.jpg?height=1033&width=1371&top_left_y=807&top_left_x=267){width="400"}
+
 
 **图4.4** 卷积 $x * h$ 的计算过程。(a) 函数 $x$；(b) 函数 $h$；(c) $h(-\tau)$ 与 (d) $h(t-\tau)$ 关于 $\tau$ 的图像；(e) 与 (f) 分别为卷积积分中乘积函数在 $t<0$ 与 $t>0$ 时的情况。
 ## 4.3 卷积的性质
@@ -695,7 +699,8 @@ $$
 
 卷积结果 $x * h$ 如图 4.5(i) 所示。系统对给定输入的响应 $y$ 就是 $x * h$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-102.jpg?height=1987&width=1439&top_left_y=313&top_left_x=326)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-102.jpg?height=1987&width=1439&top_left_y=313&top_left_x=326){width="400"}
+
 
 **图 4.5：** 卷积 $x * h$ 的计算过程。(a) 函数 $x$；(b) 函数 $h$；(c) $h(-\tau)$ 与 (d) $h(t-\tau)$ 关于 $\tau$ 的图像；(e) $t<0$，(f) $0 \leq t<1$，(g) $1 \leq t<2$，(h) $t \geq 2$ 时卷积积分中的乘积对应函数；以及 (i) 卷积结果 $x * h$。
 
@@ -748,7 +753,8 @@ $$
 
 在实际应用中，常常将连续时间 LTI 系统用方框图表示会更为方便。由于 LTI 系统完全由其冲激响应表征，因此在方框图中我们通常用系统的冲激响应来标注该系统。也就是说，我们可以将输入为 $x$、输出为 $y$、冲激响应为 $h$ 的 LTI 系统表示为图 4.6 所示的形式。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-103.jpg?height=85&width=339&top_left_y=307&top_left_x=950)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-103.jpg?height=85&width=339&top_left_y=307&top_left_x=950){width="400"}
+
 
 **图 4.6：** 连续时间 LTI 系统的方框图表示，输入为 $x$，输出为 $y$，冲激响应为 $h$。
 
@@ -756,7 +762,8 @@ $$
 
 假设我们有一个输入为 $x$、输出为 $y$、冲激响应为 $h$ 的 LTI 系统。我们知道 $x$ 与 $y$ 的关系为 $y=x * h$。换句话说，该系统可以看作执行卷积运算。利用前面介绍的卷积性质，我们可以推导出系列和并联互连系统的冲激响应之间的一些等效关系。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-104.jpg?height=379&width=1314&top_left_y=286&top_left_x=340)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-104.jpg?height=379&width=1314&top_left_y=286&top_left_x=340){width="400"}
+
 
 **图 4.7：** 连续时间 LTI 系统系列互连的等效关系。(a) 第一种等效关系，(b) 第二种等效关系。
 
@@ -806,7 +813,8 @@ $$
 
 因此，两个 LTI 系统的并联互连表现为一个冲激响应为 $h_{1}+h_{2}$ 的单一 LTI 系统。也就是说，如图 4.8 所示的等效关系成立。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-105.jpg?height=230&width=1076&top_left_y=305&top_left_x=583)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-105.jpg?height=230&width=1076&top_left_y=305&top_left_x=583){width="400"}
+
 
 **图 4.8：** 连续时间 LTI 系统并联互连的等效关系。
 
@@ -823,7 +831,8 @@ v(t) & =x(t)+x * h_{1}(t)+x * h_{2}(t) \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-105.jpg?height=336&width=777&top_left_y=640&top_left_x=734)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-105.jpg?height=336&width=777&top_left_y=640&top_left_x=734){width="400"}
+
 
 **图 4.9：** 系统互连示例。
 
@@ -1016,7 +1025,8 @@ $$
 
 **解。** 根据 $\delta$ 的定义，可知 $h(t)=0$，除非 $t=-t_{0}$。由于 $-t_{0}<0$，因此该系统不是因果的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-108.jpg?height=90&width=579&top_left_y=302&top_left_x=707)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-108.jpg?height=90&width=579&top_left_y=302&top_left_x=707){width="400"}
+
 
 **图 4.10：** 系统与其逆系统的串联。
 
@@ -1125,7 +1135,8 @@ $$
 
 **例 4.13**：考虑图 4.11 所示的系统，其输入为 $x$，输出为 $y$。方框图中的每个子系统都是 LTI 系统，并标注了其冲激响应。利用逆系统的概念，将 $y$ 用 $x$ 表示出来。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-109.jpg?height=239&width=522&top_left_y=307&top_left_x=859)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-109.jpg?height=239&width=522&top_left_y=307&top_left_x=859){width="400"}
+
 
 图 4.11：具有输入 $x$ 和输出 $y$ 的反馈系统。
 
@@ -1555,8 +1566,10 @@ $$
 
 4.1 使用图示法，对于下列图中给出的每对函数 $x$ 和 $h$，直接计算 $x * h$。（不要通过计算 $h * x$ 再利用卷积的交换律间接求 $x * h$。）
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-117.jpg?height=1908&width=1082&top_left_y=594&top_left_x=683)  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-118.jpg?height=914&width=1046&top_left_y=270&top_left_x=524)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-117.jpg?height=1908&width=1082&top_left_y=594&top_left_x=683){width="400"}
+  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-118.jpg?height=914&width=1046&top_left_y=270&top_left_x=524){width="400"}
+
 
 4.2 对于下列每对函数 $x$ 和 $h$，计算 $x * h$。  
 (a) $x(t)=e^{a t} u(-t)$ 且 $h(t)=e^{-a t} u(t)$，其中 $a$ 为严格正实常数；  
@@ -1602,10 +1615,12 @@ $$
 
 4.9 考虑一个 LTI 系统，其对函数 $x_{1}(t)=u(t)-u(t-1)$ 的响应为 $y_{1}$。确定系统对图中所示输入 $x_{2}$ 的响应 $y_{2}$，并用 $y_{1}$ 表示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-119.jpg?height=636&width=598&top_left_y=1523&top_left_x=918)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-119.jpg?height=636&width=598&top_left_y=1523&top_left_x=918){width="400"}
+
 4.10 考虑下图所示的系统，其中 $\mathcal{H}$ 是 LTI 系统，$\mathcal{G}$ 已知为 $\mathcal{H}$ 的逆系统。设 $y_{1}=\mathcal{H} x_{1}$，$y_{2}=\mathcal{H} x_{2}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-119.jpg?height=91&width=660&top_left_y=2398&top_left_x=834)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-119.jpg?height=91&width=660&top_left_y=2398&top_left_x=834){width="400"}
+
 
 (a) 确定系统 $\mathcal{G}$ 对输入 $y^{\prime}(t)=a_{1} y_{1}(t)+a_{2} y_{2}(t)$ 的响应，其中 $a_{1}$ 和 $a_{2}$ 为复常数。  
 (b) 确定系统 $\mathcal{G}$ 对输入 $y_{1}^{\prime}(t)=y_{1}\left(t-t_{0}\right)$ 的响应，其中 $t_{0}$ 为实常数。  
@@ -1619,7 +1634,8 @@ $$
 
 4.12 考虑下图所示的系统，其输入为 $x$，输出为 $y$。图中每个系统都是 LTI 系统，并标有其冲激响应。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-120.jpg?height=336&width=882&top_left_y=1110&top_left_x=621)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-120.jpg?height=336&width=882&top_left_y=1110&top_left_x=621){width="400"}
+
 
 (a) 用 $h_{1}, h_{2}, h_{3}$ 表示整体系统的冲激响应 $h$；  
 (b) 在特定情况下，确定冲激响应 $h$，其中
@@ -1630,7 +1646,8 @@ $$
 
 4.13 考虑下图所示的系统，其输入为 $x$，输出为 $y$。该系统由两个 LTI 系统串联组成，其冲激响应分别为 $h_{1}$ 和 $h_{2}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-120.jpg?height=96&width=563&top_left_y=1804&top_left_x=759)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-120.jpg?height=96&width=563&top_left_y=1804&top_left_x=759){width="400"}
+
 
 对于下列每对 $h_{1}$ 和 $h_{2}$，求输入 $x(t)=u(t)$ 时的输出 $y$。  
 (a) $h_{1}(t)=\delta(t)$ 且 $h_{2}(t)=\delta(t)$；  
@@ -1762,11 +1779,14 @@ $$
 
 4.104 设 $\mathcal{H}$ 表示对应于 LTI 系统的算子，$x_{1}, x_{2}, y_{1}, y_{2}$ 为函数，满足 $y_{1}=\mathcal{H} x_{1}$，$y_{2}=\mathcal{H} x_{2}$。对于下列每对 $x_{1}$ 和 $x_{2}$，求 $y_{2}$ 用 $y_{1}$ 表示。  
 
-![](https://cdn.mathpix.com/snip/images/v2B6dal8ZatdYVmCQGNs0H5yxLeLFu6hNFNkzi3l19s.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/v2B6dal8ZatdYVmCQGNs0H5yxLeLFu6hNFNkzi3l19s.original.fullsize.png){width="400"}
 
-![](https://cdn.mathpix.com/snip/images/7NxeyBrJLOs7AF7px9kuQ7Nsb-8GWVxM2uwyXdmifIg.original.fullsize.png)
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-125.jpg?height=679&width=1470&top_left_y=289&top_left_x=467)
+![](https://cdn.mathpix.com/snip/images/7NxeyBrJLOs7AF7px9kuQ7Nsb-8GWVxM2uwyXdmifIg.original.fullsize.png){width="400"}
+
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-125.jpg?height=679&width=1470&top_left_y=289&top_left_x=467){width="400"}
+
 
 **简答**  
 (a) $y_{2}(t)=-2 y_{1}(t+1)+2 y_{1}(t-1)$；  

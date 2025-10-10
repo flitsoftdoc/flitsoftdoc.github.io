@@ -104,7 +104,8 @@ $$
 
 因此，$c_{0}$ 就是 $x$ 在一个周期内的平均值。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-129.jpg?height=463&width=1178&top_left_y=305&top_left_x=524)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-129.jpg?height=463&width=1178&top_left_y=305&top_left_x=524){width="400"}
+  
 图 5.1：周期方波
 
 **例 5.1（周期方波的傅里叶级数）**。求图 5.1 所示周期方波 $x$ 的傅里叶级数表示。
@@ -138,7 +139,8 @@ c_{k} & =\frac{1}{T}\left(\left.\left[\frac{-A}{j k \omega_{0}} e^{-j k \omega_{
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-130.jpg?height=295&width=676&top_left_y=294&top_left_x=659)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-130.jpg?height=295&width=676&top_left_y=294&top_left_x=659){width="400"}
+  
 图 5.2：周期冲激列。
 
 注意到 $e^{-j\pi}=-1$ 且 $e^{-j2\pi}=1$，因此
@@ -187,7 +189,8 @@ c_{k} & =\frac{1}{T} \int_{T} x(t) e^{-j k \omega_{0} t} d t \\
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-131.jpg?height=363&width=817&top_left_y=297&top_left_x=713)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-131.jpg?height=363&width=817&top_left_y=297&top_left_x=713){width="400"}
+  
 图 5.3：周期冲激列。
 
 利用单位冲激函数的筛检性质，上式可简化为
@@ -393,7 +396,8 @@ $$
 $$
 则称其在单周期内具有有限能量。对于这样的函数，我们有以下重要结果。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-135.jpg?height=328&width=817&top_left_y=297&top_left_x=715)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-135.jpg?height=328&width=817&top_left_y=297&top_left_x=715){width="400"}
+
 
 图 5.4：周期函数 $x$。
 
@@ -489,10 +493,12 @@ $$
 x(t)=\sum_{k=-\infty}^{\infty} a_{k} e^{j k \omega_{0} t} \quad \text{且} \quad y(t)=\sum_{k=-\infty}^{\infty} b_{k} e^{j k \omega_{0} t}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-137.jpg?height=1778&width=1371&top_left_y=416&top_left_x=434)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-137.jpg?height=1778&width=1371&top_left_y=416&top_left_x=434){width="400"}
+
 **图 5.5**：违反狄利克雷条件的函数示例。（a）在单个周期上不可绝对积分的函数。（b）在单个周期上有无限多个极大值和极小值的函数。（c）在单个周期上具有无限多个不连续点的函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-138.jpg?height=1211&width=1560&top_left_y=726&top_left_x=218)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-138.jpg?height=1211&width=1560&top_left_y=726&top_left_x=218){width="400"}
+
 **图 5.6**：吉布斯现象。周期方波在截断至第 $N$ 个谐波分量后的傅里叶级数，分别为 (a) $N=3$，(b) $N=7$，(c) $N=11$，(d) $N=101$。
 
 现在，我们求 $A x + B y$ 的傅里叶级数。我们有：
@@ -1087,10 +1093,12 @@ $$
 \end{aligned}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-150.jpg?height=1335&width=1157&top_left_y=640&top_left_x=413)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-150.jpg?height=1335&width=1157&top_left_y=640&top_left_x=413){width="400"}
+  
 图 5.7: 函数 $x$ 的傅里叶级数近似。(a) 函数 $x$。(b) 选择傅里叶系数幅值最大的 4 项所得的近似。(c) 选择傅里叶系数幅值最小的 4 项（非零项）所得的近似。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-151.jpg?height=1114&width=804&top_left_y=286&top_left_x=715)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-151.jpg?height=1114&width=804&top_left_y=286&top_left_x=715){width="400"}
+  
 图 5.8: 周期方波的频谱。(a) 幅度谱 (b) 相位谱。
 
 函数 $x$ 的幅度谱和相位谱分别如图 5.8(a) 和 (b) 所示。注意，幅度谱是偶函数，而相位谱是奇函数。这符合预期，因为 $x$ 为实函数。由于 $\left|c_{k}\right|$ 在 $k=-1$ 和 $k=1$ 时最大，因此函数 $x$ 在频率 $-\omega_{0}$ 和 $\omega_{0}$ 处信息量最大。
@@ -1110,7 +1118,8 @@ $$
 
 在定理 4.12 中，我们已经知道复指数函数是 LTI 系统的本征函数。由于复正弦函数是复指数函数的特例，因此复正弦函数也是 LTI 系统的本征函数。换句话说，我们有如下结论。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-152.jpg?height=414&width=1390&top_left_y=283&top_left_x=291)  
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-152.jpg?height=414&width=1390&top_left_y=283&top_left_x=291){width="400"}
+  
 图 5.9: 周期冲激序列的频谱。(a) 幅度谱 (b) 相位谱。
 
 **推论 5.1.** 对于任意 LTI 系统 $\mathcal{H}$，其冲激响应为 $h$，并且输入为形式 $x(t)=e^{j \omega t}$ 的函数（其中 $\omega$ 为任意实常数，即 $x$ 为任意复正弦函数），有
@@ -1238,7 +1247,8 @@ $$
 
 其中通带的边界为 $\omega_{c 1}$ 和 $\omega_{c 2}$。该频率响应的图示如图 5.10(c) 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-155.jpg?height=1501&width=867&top_left_y=595&top_left_x=695)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-155.jpg?height=1501&width=867&top_left_y=595&top_left_x=695){width="400"}
+
 
 图 5.10：（a）理想低通滤波器、（b）理想高通滤波器、（c）理想带通滤波器的频率响应。
 
@@ -1313,7 +1323,8 @@ $$
 
 (c) 最后，我们在图 5.11(a) 和 (b) 中分别绘制了 $x$ 和 $y$ 的频谱。频率响应 $H$ 叠加在 $x$ 的频谱图上以作说明。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-157.jpg?height=920&width=696&top_left_y=891&top_left_x=780)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-157.jpg?height=920&width=696&top_left_y=891&top_left_x=780){width="400"}
+
 
 图 5.11：（a）输入函数 $x$ 的频谱和（b）输出函数 $y$ 的频谱。
 
@@ -1327,9 +1338,11 @@ $$
 (c) $x(t)=|\sin (2 \pi t)|$。[提示：$\int e^{a x} \sin (b x) d x=\frac{e^{a x}[a \sin (b x)-b \cos (b x)]}{a^{2}+b^{2}}+C$，其中 $a$ 为任意复数，$b$ 为非零实数。]
 
 **5.2 **对下列图中所示的周期函数，求相应的傅里叶级数系数序列。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-158.jpg?height=1311&width=1284&top_left_y=1188&top_left_x=440)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-158.jpg?height=1311&width=1284&top_left_y=1188&top_left_x=440){width="400"}
 
-![](https://cdn.mathpix.com/snip/images/c6mA_ekvQpTjy7T_91VurGvoblzoRIxzBSfUG9sFYh4.original.fullsize.png)
+
+![](https://cdn.mathpix.com/snip/images/c6mA_ekvQpTjy7T_91VurGvoblzoRIxzBSfUG9sFYh4.original.fullsize.png){width="400"}
+
 
 **5.3 **求下列每个周期函数 $x$ 的傅里叶级数系数序列 $c$，基本周期为 $T$。  
 (a) $x(t)=2 \delta(t-3)+2 \delta(t-5)+\delta(t-7)-\delta(t-9)+3 \delta(t-12)$，$T=16$；尽可能用 sin 和 cos 表示 $c$；  
@@ -1360,7 +1373,8 @@ $$
 (b) $x'=\operatorname{Re}(x)$。
 
 **5.9** 求图中所示周期函数 $x$ 的傅里叶级数系数序列 $c$，并绘制 $x$ 的频谱，包括前五个谐波。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-160.jpg?height=233&width=579&top_left_y=294&top_left_x=751)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-160.jpg?height=233&width=579&top_left_y=294&top_left_x=751){width="400"}
+
 
 **5.10** 考虑一个 LTI 系统，其频率响应为
 $$
@@ -1420,9 +1434,11 @@ $$
 (m) $c_{k}=\frac{3}{4}$。
 
 5.103 对下列图中所示的 $T$ 周期函数 $x$，求傅里叶级数系数序列 $c$。  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-161.jpg?height=738&width=1527&top_left_y=1764&top_left_x=410)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-161.jpg?height=738&width=1527&top_left_y=1764&top_left_x=410){width="400"}
 
-![](https://cdn.mathpix.com/snip/images/2TqKLk6LEP-AHooL7rq46WHXNDUv9Cpdlguy4X2f7Y4.original.fullsize.png)
+
+![](https://cdn.mathpix.com/snip/images/2TqKLk6LEP-AHooL7rq46WHXNDUv9Cpdlguy4X2f7Y4.original.fullsize.png){width="400"}
+
 
 简答。  
 (a) $c_{k}= \begin{cases}\frac{A}{2} & k=0 \\ \frac{j A}{2 \pi k} & \text {其他情况} \end{cases}$；  
