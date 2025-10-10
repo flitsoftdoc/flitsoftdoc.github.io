@@ -1073,7 +1073,8 @@ $$
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-058.jpg?height=420&width=1362&top_left_y=283&top_left_x=316){width="400"}
 
 
-Figure 3.26: Representing the rectangular function using unit-step functions. (a) A shifted unit-step function, (b) another shifted unit-step function, and (c) their difference (which is the rectangular function).
+图3.26：用单位阶跃函数表示矩形函数。(a) 一个移位的单位阶跃函数，(b) 另一个移位的单位阶跃函数，(c) 它们的差（即矩形函数）。
+
 
 ---
 
