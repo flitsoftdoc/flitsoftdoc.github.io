@@ -1752,6 +1752,7 @@ $$
 由于 $\mathcal{H}\left(x_{1}+x_{2}\right)=\mathcal{H} x_{1}+\mathcal{H} x_{2}$ 对所有 $x_{1}$ 和 $x_{2}$ 成立，因此系统具有加法性。
 
 其次，考虑齐次性。设 $a$ 为任意复常数: 
+
 $$
 \begin{aligned}
 a \mathcal{H} x(t) & = a \int_{-\infty}^{t} x(\tau) d \tau, \\ 
@@ -1760,6 +1761,7 @@ a \mathcal{H} x(t) & = a \int_{-\infty}^{t} x(\tau) d \tau, \\
 & = a \int_{-\infty}^{t} x(\tau) d \tau
 \end{aligned}
 $$
+
 由于 $\mathcal{H}(a x)=a \mathcal{H} x$ 对所有 $x$ 和 $a$ 成立，因此系统具有齐次性。
 
 最后，考虑线性。由于系统同时具有加法性和齐次性，因此系统是线性的。
