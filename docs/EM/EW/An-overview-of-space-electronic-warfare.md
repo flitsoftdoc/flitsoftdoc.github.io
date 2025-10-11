@@ -40,7 +40,7 @@
 
 图1展示了空间领域的复杂性及其承载的多样化需求。左侧为民用空间应用，右侧为军事应用。
 
-![](https ://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-06.jpg?height=736&width=1791&top_left_y=758&top_left_x=96){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-06.jpg?height=736&width=1791&top_left_y=758&top_left_x=96){width="400"}
  
 
 ---
