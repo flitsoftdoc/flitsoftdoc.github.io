@@ -40,7 +40,8 @@
 
 图1展示了空间领域的复杂性及其承载的多样化需求。左侧为民用空间应用，右侧为军事应用。
 
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-06.jpg?height=736&width=1791&top_left_y=758&top_left_x=96)
+![](https ://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-06.jpg?height=736&width=1791&top_left_y=758&top_left_x=96){width="400"}
+ 
 
 ---
 
@@ -77,10 +78,14 @@
 
 图2：不同卫星轨道的示意图  
 来源：美国国防情报局（US Defense Intelligence Agency）[1]  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=545&width=771&top_left_y=220&top_left_x=551)
 
-图3：地球覆盖范围与卫星轨道关系  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=273&width=938&top_left_y=968&top_left_x=551)
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=545&width=771&top_left_y=220&top_left_x=551){width="400"}
+ 
+
+图3：地球覆盖范围与卫星轨道关系
+  
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=273&width=938&top_left_y=968&top_left_x=551){width="400"}
+ 
 
 ---
 
@@ -101,7 +106,9 @@
 用户段由卫星服务的最终用户或消费者组成，可位于陆地、海洋或空中。用户设备通过与卫星通信执行诸如通信、成像、定位和授时等功能。
 
 图4：卫星生态系统的各个组成部分  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-09.jpg?height=768&width=1338&top_left_y=220&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-09.jpg?height=768&width=1338&top_left_y=220&top_left_x=549){width="400"}
+ 
 
 
 ## 3 空间电子战的定义
@@ -110,7 +117,9 @@
 电子战属于电磁频谱（Electromagnetic Spectrum, EMS）范围内的作战形式，其核心是通过军事手段运用电磁能量，以防止或削弱敌方对电磁频谱的有效使用，同时保障友方的使用。
 
 图5：电磁频谱中的电磁作战  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-10.jpg?height=857&width=1185&top_left_y=616&top_left_x=551)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-10.jpg?height=857&width=1185&top_left_y=616&top_left_x=551){width="400"}
+ 
 
 电子战跨越四个作战领域：
 
@@ -122,7 +131,9 @@
 如图5所示。另一种从军事角度展示的电子战领域见图6，其刻意强调了当今电磁频谱作战（Electromagnetic Spectrum Operations, EMSO）的复杂性。通过EMSO实现主导权是决定军事行动成败的关键因素之一。
 
 图6：当今军事环境中的电子战  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-11.jpg?height=722&width=1185&top_left_y=220&top_left_x=551)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-11.jpg?height=722&width=1185&top_left_y=220&top_left_x=551){width="400"}
+ 
 
 电子战由三个主要部分构成：
 
@@ -177,7 +188,9 @@
 上行干扰需要较高射频功率，以足够幅度抵达卫星转发器，从而产生混淆效果。该比率被称为干扰信号比（Jammer-to-Signal Ratio, J/S）。上行干扰会使所有接收者的信号质量下降，这种效果有时并非预期。此外，所有干扰行为都具有高可见性（在射频频谱中），可能导致对方进行测向定位与动能反制。
 
 图7：上行干扰  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-12.jpg?height=456&width=819&top_left_y=2029&top_left_x=543)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-12.jpg?height=456&width=819&top_left_y=2029&top_left_x=543){width="400"}
+ 
 
 ---
 
@@ -188,7 +201,9 @@
 下行干扰要求干扰源与目标接收机保持视距（Line of Sight, LOS），在战区环境中可能存在困难。同样，干扰器的高射频可见性会导致其被敌方测向与定位，从而引发动能反制。
 
 图8：下行干扰  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-13.jpg?height=456&width=819&top_left_y=702&top_left_x=546)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-13.jpg?height=456&width=819&top_left_y=702&top_left_x=546){width="400"}
+ 
 
 ---
 
@@ -200,7 +215,9 @@
 光学链路干扰难度更高，因为敌方卫星的光学干扰装置必须与目标光束在空间上高度对齐。由于光束极为狭窄且定向性强，实施有效干扰非常困难。此外，将敌方卫星及时定位到干扰位置在操作上也具有相当挑战性。
 
 图9：星间干扰  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-13.jpg?height=582&width=859&top_left_y=1897&top_left_x=546)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-13.jpg?height=582&width=859&top_left_y=1897&top_left_x=546){width="400"}
+ 
 
 ---
 
@@ -211,7 +228,9 @@ TT&C信号通常不属于通信载荷部分，且常使用独立频率。与载�
 由于TT&C链路一般加密，欺骗其信号的难度更高。地面干扰TT&C链路需保持与操作中心的视距（LOS），所需功率较低；而针对卫星的TT&C干扰需与卫星保持LOS并具更高功率。
 
 图10：TT&C 干扰  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-14.jpg?height=499&width=685&top_left_y=855&top_left_x=551)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-14.jpg?height=499&width=685&top_left_y=855&top_left_x=551){width="400"}
+ 
 
 ---
 
@@ -228,7 +247,9 @@ TT&C信号通常不属于通信载荷部分，且常使用独立频率。与载�
 
 图11：太空基反卫星（A-SAT）作战  
 来源：美国国防情报局（US Defense Intelligence Agency）[1]  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-15.jpg?height=760&width=879&top_left_y=220&top_left_x=551)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-15.jpg?height=760&width=879&top_left_y=220&top_left_x=551){width="400"}
+ 
 
 ---
 
@@ -259,7 +280,9 @@ TT&C信号通常不属于通信载荷部分，且常使用独立频率。与载�
 
 来源：[4]  
 图12：FY-1C 碎片轨道  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-16.jpg?height=604&width=881&top_left_y=928&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-16.jpg?height=604&width=881&top_left_y=928&top_left_x=549){width="400"}
+ 
 
 ---
 
@@ -272,7 +295,9 @@ NAVWAR最常应用于全球导航卫星系统（GNSS），包括GPS、GLONASS、
 例如，2017年6月，黑海区域约有20艘船只报告GPS异常，其位置显示与实际相差数英里，疑似遭受欺骗攻击。研究者还发现，俄罗斯总统府与莫斯科克里姆林宫周边常出现GNSS信号异常，推测俄方在总统出现地区实施GNSS欺骗，这也常波及附近GNSS用户。此外，北约演习期间，挪威领海内的GNSS异常导致两艘舰船相撞；而在叙利亚的俄军GNSS欺骗干扰了距约212公里外的以色列特拉维夫本·古里安机场的飞行运行。
 
 图13：俄罗斯黑海地区的欺骗活动  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-17.jpg?height=520&width=889&top_left_y=215&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-17.jpg?height=520&width=889&top_left_y=215&top_left_x=549){width="400"}
+ 
 
 
 #### 4.5.6 GNSS 干扰的形式
@@ -349,16 +374,24 @@ GNSS欺骗攻击试图通过广播虚假的GNSS信号来欺骗接收机，这些
 应对干扰的最佳方法之一是限制干扰信号对接收天线的影响。传统方式是使用定向天线，即在特定方向上具有高增益的天线。例如，Yagi天线（见图15）即为典型的定向天线，其辐射方向图如图14所示。另一种常见的高定向性天线是抛物面天线（parabolic dish, 图17），常用于卫星通信。其辐射方向图（图16）具有主瓣（major lobe）沿传播方向，并伴有若干较小的副瓣。通过这种反射结构，可实现极窄波束。
 
 图14：Yagi天线辐射方向图  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-20.jpg?height=744&width=1255&top_left_y=990&top_left_x=543)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-20.jpg?height=744&width=1255&top_left_y=990&top_left_x=543){width="400"}
+ 
 
 图15：Yagi天线  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-20.jpg?height=216&width=714&top_left_y=1962&top_left_x=554)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-20.jpg?height=216&width=714&top_left_y=1962&top_left_x=554){width="400"}
+ 
 
 图16：抛物面天线辐射方向图  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-21.jpg?height=302&width=1222&top_left_y=196&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-21.jpg?height=302&width=1222&top_left_y=196&top_left_x=549){width="400"}
+ 
 
 图17：抛物面天线工作原理  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-21.jpg?height=480&width=585&top_left_y=667&top_left_x=554)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-21.jpg?height=480&width=585&top_left_y=667&top_left_x=554){width="400"}
+ 
 
 **定向天线的优点：**
 
@@ -467,10 +500,14 @@ R\&S ${ }^{®}$ GSASLP支持移动卫星通信（mobile satcom）场景的路线
 - 大型卫星调制解调器数据库（SCPC、Mesh、DTH、军用CDMA/DSSS）
 
 图18：卫星链路规划器天线覆盖图可视化  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-24.jpg?height=548&width=1031&top_left_y=349&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-24.jpg?height=548&width=1031&top_left_y=349&top_left_x=549){width="400"}
+ 
 
 图19：非线性化行波管放大器（Traveling Wave Tube Amplifier, TWTA）在单载波与多载波模式下的输入/输出回退（IBO/OBO）曲线及增益关系  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-24.jpg?height=542&width=1034&top_left_y=1103&top_left_x=546)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-24.jpg?height=542&width=1034&top_left_y=1103&top_left_x=546){width="400"}
+ 
 
 > ${ }^{1)}$ IBO/OBO表示转发器输入回退/输出回退（Input/Output Back-Off）  
 > ${ }^{2)}$ TWTA表示行波管放大器（Traveling Wave Tube Amplifier）
@@ -517,7 +554,9 @@ R\&S ${ }^{®}$ GSACSM可执行载波内载波检测任务，这是现代VSAT系
 - 支持低带宽低延迟远程监测连接  
 
 图20：信号检测与识别  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-25.jpg?height=575&width=891&top_left_y=1326&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-25.jpg?height=575&width=891&top_left_y=1326&top_left_x=549){width="400"}
+ 
 
 ---
 
@@ -542,7 +581,9 @@ R\&S ${ }^{®}$ **MSR4** 是一款硬件监测接收机（hardware monitoring re
 其核心是具备认知能力的软件定义无线电（Software Defined Radio, SDR），可独立运行通信监测服务器（CSM server），无需额外计算硬件。
 
 图21：R\&S ${ }^{®}$ MSR4 多用途卫星接收机  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-26.jpg?height=216&width=1333&top_left_y=570&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-26.jpg?height=216&width=1333&top_left_y=570&top_left_x=549){width="400"}
+ 
 
 ---
 
@@ -562,7 +603,9 @@ R\&S ${ }^{®}$ **FSW** 是高性能频谱分析仪的典型代表。
 FSW具有极宽的动态范围，可跟踪微弱信号，并内置前置选择器（preselector）以抑制带外信号。
 
 图22：R\&S ${ }^{®}$ FSW 信号与频谱分析仪  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-26.jpg?height=571&width=897&top_left_y=1682&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-26.jpg?height=571&width=897&top_left_y=1682&top_left_x=549){width="400"}
+ 
 
 ---
 
@@ -622,7 +665,9 @@ R\&S ${ }^{®}$ **SMW200A** 是高性能VSG的代表，具备以下特性：
 - 支持多种关键MIMO模式（$3×3, 4×4, 8×4, 4×8, 4×2×2$）
 
 图23：R\&S ${ }^{®}$ SMW200A 矢量信号发生器  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-28.jpg?height=456&width=887&top_left_y=180&top_left_x=551)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-28.jpg?height=456&width=887&top_left_y=180&top_left_x=551){width="400"}
+ 
 
 ---
 
@@ -633,17 +678,23 @@ RTSA通过专用FPGA处理器实现，每秒执行超过2,343,750次快速傅里
 R\&S ${ }^{®}$ FSW可在最短460纳秒事件持续时间下实现100%截获概率（Probability of Intercept, POI）。
 
 图24：R\&S ${ }^{®}$ FSW短时信号持续显示（Persistence Display）  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-28.jpg?height=558&width=883&top_left_y=1017&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-28.jpg?height=558&width=883&top_left_y=1017&top_left_x=549){width="400"}
+ 
 
 由于此类信号具有高度瞬态特征，FSW提供两种专用触发机制以实现捕获：  
 - **频率掩模触发（Frequency Mask Trigger）：** 设定频率–幅度上下掩模，超出掩模的信号将被捕获。  
 - **概率掩模触发（Probability Mask Trigger）：** 最多可应用于4个区域，当信号概率超过阈值时触发。
 
 图25：频率掩模触发  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-28.jpg?height=561&width=884&top_left_y=2034&top_left_x=551)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-28.jpg?height=561&width=884&top_left_y=2034&top_left_x=551){width="400"}
+ 
 
 图26：概率掩模触发  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-29.jpg?height=553&width=876&top_left_y=177&top_left_x=554)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-29.jpg?height=553&width=876&top_left_y=177&top_left_x=554){width="400"}
+ 
 
 ---
 
@@ -655,7 +706,9 @@ R\&S ${ }^{®}$ FSW可在最短460纳秒事件持续时间下实现100%截获概
 Rohde & Schwarz功率计还可直接测量多载波信号的总功率，这在卫星通信应用中尤为实用。
 
 图27：卫星通信中的功率传感器应用  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-29.jpg?height=446&width=1228&top_left_y=1369&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-29.jpg?height=446&width=1228&top_left_y=1369&top_left_x=549){width="400"}
+ 
 
 ---
 
@@ -675,10 +728,14 @@ Rohde & Schwarz功率计还可直接测量多载波信号的总功率，这在�
 - 便携轻量：2.5 kg（5.5磅）
 
 图28：R\&S ${ }^{®}$ Spectrum Rider FPH 手持频谱分析仪  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-30.jpg?height=636&width=658&top_left_y=928&top_left_x=540)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-30.jpg?height=636&width=658&top_left_y=928&top_left_x=540){width="400"}
+ 
 
 图29：R\&S ${ }^{®}$ Spectrum Rider FPH 显示地理参考干扰图像  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-30.jpg?height=537&width=886&top_left_y=1727&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-30.jpg?height=537&width=886&top_left_y=1727&top_left_x=549){width="400"}
+ 
 
 ---
 
@@ -694,10 +751,14 @@ ZoomOut软件可使操作员在时间、频率与幅度维度上观察RF频谱�
 R\&S ${ }^{®}$ IRAPS™支持1 GHz端到端记录与回放，录制时间最长可达6小时。
 
 图30：R\&S ${ }^{®}$ IRAPS™ 系统配置  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-31.jpg?height=505&width=886&top_left_y=882&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-31.jpg?height=505&width=886&top_left_y=882&top_left_x=549){width="400"}
+ 
 
 图31：ZoomOut软件捕获线性调频（chirp）信号  
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-31.jpg?height=563&width=881&top_left_y=1550&top_left_x=549)
+
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-31.jpg?height=563&width=881&top_left_y=1550&top_left_x=549){width="400"}
+ 
 
 
 ## 7 结论（Conclusion）
