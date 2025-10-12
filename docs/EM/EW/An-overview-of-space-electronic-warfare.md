@@ -79,12 +79,12 @@
 图2：不同卫星轨道的示意图  
 来源：美国国防情报局（US Defense Intelligence Agency）[1]  
 
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=545&width=771&top_left_y=220&top_left_x=551){width="500"}
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=545&width=771&top_left_y=220&top_left_x=551){width="600"}
  
 
 图3：地球覆盖范围与卫星轨道关系
   
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=273&width=938&top_left_y=968&top_left_x=551){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=273&width=938&top_left_y=968&top_left_x=551){width="500"}
  
 
 ---
@@ -107,7 +107,7 @@
 
 图4：卫星生态系统的各个组成部分  
 
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-09.jpg?height=768&width=1338&top_left_y=220&top_left_x=549){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-09.jpg?height=768&width=1338&top_left_y=220&top_left_x=549){width="700"}
  
 
 
