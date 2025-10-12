@@ -446,10 +446,7 @@ GNSS欺骗攻击试图通过广播虚假的GNSS信号来欺骗接收机，这些
 
 ### 6.1 卫星链路规划（Satellite Link Planning）
 
-卫星链路规划可用于理解卫星通信链路（satcom link）的整体预算，以及评估干扰的潜在影响和所需的干扰功率。  
-R&S ${ }^{®}$ **GSASLP卫星链路规划器（satellite link planner）**是一款卫星通信分析与优化软件解决方案，涵盖现代卫星通信的所有方面。R&S ${ }^{®}$ GSASLP支持卫星系统设计、传输规划和转发器（transponder）使用优化等主要环节。  
-它能够精确建模天气条件与大气效应，同时涵盖透明载荷（transparent payload）中所有相关卫星通信频段（如C、X、Ku、Ka等）上的射频传输损伤。  
-例如，由互调（intermodulation）与功率窃取（power robbing）引起的主要信号损伤，均可被精确建模并与厂商数据及在轨测试验证结果进行比对。
+卫星链路规划可用于理解卫星通信链路（satcom link）的整体预算，以及评估干扰的潜在影响和所需的干扰功率。 R&S ${ }^{®}$ **GSASLP卫星链路规划器（satellite link planner）**是一款卫星通信分析与优化软件解决方案，涵盖现代卫星通信的所有方面。R&S ${ }^{®}$ GSASLP支持卫星系统设计、传输规划和转发器（transponder）使用优化等主要环节。 它能够精确建模天气条件与大气效应，同时涵盖透明载荷（transparent payload）中所有相关卫星通信频段（如C、X、Ku、Ka等）上的射频传输损伤。 例如，由互调（intermodulation）与功率窃取（power robbing）引起的主要信号损伤，均可被精确建模并与厂商数据及在轨测试验证结果进行比对。
 
 ---
 
