@@ -447,7 +447,7 @@ GNSS欺骗攻击试图通过广播虚假的GNSS信号来欺骗接收机，这些
 ### 6.1 卫星链路规划（Satellite Link Planning）
 
 卫星链路规划可用于理解卫星通信链路（satcom link）的整体预算，以及评估干扰的潜在影响和所需的干扰功率。  
-R\&S ${ }^{®}$ **GSASLP卫星链路规划器（satellite link planner）**是一款卫星通信分析与优化软件解决方案，涵盖现代卫星通信的所有方面。R\&S ${ }^{®}$ GSASLP支持卫星系统设计、传输规划和转发器（transponder）使用优化等主要环节。  
+R&S ${ }^{®}$ **GSASLP卫星链路规划器（satellite link planner）**是一款卫星通信分析与优化软件解决方案，涵盖现代卫星通信的所有方面。R&S ${ }^{®}$ GSASLP支持卫星系统设计、传输规划和转发器（transponder）使用优化等主要环节。  
 它能够精确建模天气条件与大气效应，同时涵盖透明载荷（transparent payload）中所有相关卫星通信频段（如C、X、Ku、Ka等）上的射频传输损伤。  
 例如，由互调（intermodulation）与功率窃取（power robbing）引起的主要信号损伤，均可被精确建模并与厂商数据及在轨测试验证结果进行比对。
 
@@ -455,26 +455,26 @@ R\&S ${ }^{®}$ **GSASLP卫星链路规划器（satellite link planner）**是�
 
 #### 6.1.1 链路预算计算与优化（Link Budget Calculation and Optimization）
 
-R\&S ${ }^{®}$ GSASLP可帮助工程师仿真并建模转发器失真对卫星载波的影响，从而量化专用信号失真在任务规划或载荷设计中造成的载噪比（C/N）损失或容量退化。  
+R&S ${ }^{®}$ GSASLP可帮助工程师仿真并建模转发器失真对卫星载波的影响，从而量化专用信号失真在任务规划或载荷设计中造成的载噪比（C/N）损失或容量退化。  
 该工具的链路预算计算基于一系列国际公认方法与国际电信联盟（ITU）的推荐标准。
 
 ---
 
 #### 6.1.2 卫星网络规划与优化（Satellite Network Planning and Optimization）
 
-使用R\&S ${ }^{®}$ GSASLP的系统可对地面站进行参数建模，例如发射与接收天线增益、最大等效全向辐射功率（Effective Isotropic Radiated Power, EIRP）及输出功率。  
+使用R&S ${ }^{®}$ GSASLP的系统可对地面站进行参数建模，例如发射与接收天线增益、最大等效全向辐射功率（Effective Isotropic Radiated Power, EIRP）及输出功率。  
 此外，用户还可通过管理可用卫星、转发器及其覆盖范围，对空间段进行建模。  
-R\&S ${ }^{®}$ GSASLP内置庞大的卫星与覆盖数据库，极大简化用户工作。
+R&S ${ }^{®}$ GSASLP内置庞大的卫星与覆盖数据库，极大简化用户工作。
 
 ---
 
 #### 6.1.3 路线规划与卫星载荷优化（Route Planning and Satellite Payload Optimization）
 
-R\&S ${ }^{®}$ GSASLP支持移动卫星通信（mobile satcom）场景的路线规划。根据既定路线和数据速率需求，软件可依据数据速率要求、转发器波束覆盖整个路径的能力及目标频段（C、X、Ku、Ka）等标准搜索最优转发器。
+R&S ${ }^{®}$ GSASLP支持移动卫星通信（mobile satcom）场景的路线规划。根据既定路线和数据速率需求，软件可依据数据速率要求、转发器波束覆盖整个路径的能力及目标频段（C、X、Ku、Ka）等标准搜索最优转发器。
 
 ---
 
-#### 6.1.4 R\&S ${ }^{®}$ GSASLP主要功能（Key Features）
+#### 6.1.4 R&S ${ }^{®}$ GSASLP主要功能（Key Features）
 
 - 复杂多载波场景的链路预算分析  
 - 转发器射频损伤建模（互调、功率窃取、增益压缩）  
@@ -508,33 +508,33 @@ R\&S ${ }^{®}$ GSASLP支持移动卫星通信（mobile satcom）场景的路线
 
 ### 6.2 通信系统监测（Communications System Monitoring）
 
-R\&S ${ }^{®}$ **GSACSM通信系统监测软件（communications system monitoring）**是一款用于远程频谱监测与信号分析的卫星监控软件（satmon）。  
+R&S ${ }^{®}$ **GSACSM通信系统监测软件（communications system monitoring）**是一款用于远程频谱监测与信号分析的卫星监控软件（satmon）。  
 它结合了传统频谱分析仪功能、陷波系统及先进信号检测与识别算法。现代化的自适应图形界面（GUI）便于实现干扰识别或卫星转发器分析等应用。
 
 ---
 
 ##### 6.2.1 远程频谱监测（Remote Spectrum Monitoring）
 
-R\&S ${ }^{®}$ GSACSM可通过远程连接与频谱分析仪通信，支持用户在全球范围内访问设备。  
+R&S ${ }^{®}$ GSACSM可通过远程连接与频谱分析仪通信，支持用户在全球范围内访问设备。  
 可同时监测单个或多个设备，并允许多用户同时监控同一设备。系统支持独立应用模式与服务器/客户端架构。
 
 ---
 
 ##### 6.2.2 卫星转发器监测（Satellite Transponder Monitoring）
 
-R\&S ${ }^{®}$ GSACSM可自主扫描转发器信号并识别载波（如DVB-S、DVB-S2、DVB-CID）。  
+R&S ${ }^{®}$ GSACSM可自主扫描转发器信号并识别载波（如DVB-S、DVB-S2、DVB-CID）。  
 通过持续扫描与分析信号，可提取符号率、调制方式、前向纠错率（FEC）、载噪比（C/N）及频率偏移等详细信息，并识别干扰信号。
 
 ---
 
 ##### 6.2.3 载波内载波检测（Carrier-in-Carrier Detection, CiC）
 
-R\&S ${ }^{®}$ GSACSM可执行载波内载波检测任务，这是现代VSAT系统的重要特性之一。  
+R&S ${ }^{®}$ GSACSM可执行载波内载波检测任务，这是现代VSAT系统的重要特性之一。  
 支持配对载波多址（Paired Carrier Multiple Access, PCMA）检测、信号识别及下层信号分析。
 
 ---
 
-**R\&S ${ }^{®}$ GSACSM主要功能：**
+**R&S ${ }^{®}$ GSACSM主要功能：**
 
 - 多通道功率测量、历史记录与告警捕获  
 - 传统软件频谱分析功能  
@@ -552,27 +552,27 @@ R\&S ${ }^{®}$ GSACSM可执行载波内载波检测任务，这是现代VSAT系
 
 ---
 
-**R\&S ${ }^{®}$ GSACSM支持的Rohde & Schwarz监测设备包括：**
+**R&S ${ }^{®}$ GSACSM支持的Rohde & Schwarz监测设备包括：**
 
-- R\&S ${ }^{®}$ TSME6超紧凑测试扫描仪  
-- R\&S ${ }^{®}$ NRQ6选择性功率传感器  
-- R\&S ${ }^{®}$ FPS/FSW/FSV/FSVA信号与频谱分析仪  
-- R\&S ${ }^{®}$ FPL1000信号与频谱分析仪  
-- R\&S ${ }^{®}$ ESMD/ESME宽带监测接收机  
-- R\&S ${ }^{®}$ MSR200宽带接收机  
-- R\&S ${ }^{®}$ EM200数字紧凑型接收机  
-- R\&S ${ }^{®}$ MSR4多用途卫星接收机  
+- R&S ${ }^{®}$ TSME6超紧凑测试扫描仪  
+- R&S ${ }^{®}$ NRQ6选择性功率传感器  
+- R&S ${ }^{®}$ FPS/FSW/FSV/FSVA信号与频谱分析仪  
+- R&S ${ }^{®}$ FPL1000信号与频谱分析仪  
+- R&S ${ }^{®}$ ESMD/ESME宽带监测接收机  
+- R&S ${ }^{®}$ MSR200宽带接收机  
+- R&S ${ }^{®}$ EM200数字紧凑型接收机  
+- R&S ${ }^{®}$ MSR4多用途卫星接收机  
 
 
 
-### 6.3 R\&S ${ }^{®}$ MSR4 多用途卫星接收机（Multipurpose Satellite Receiver）
+### 6.3 R&S ${ }^{®}$ MSR4 多用途卫星接收机（Multipurpose Satellite Receiver）
 
-R\&S ${ }^{®}$ **MSR4** 是一款硬件监测接收机（hardware monitoring receiver），可提供4个接收通道，频率范围为500 MHz至3 GHz，每个输入通道具有200 MHz的I/Q带宽。  
-此外，R\&S ${ }^{®}$ MSR4 还配备2个发射通道，频率范围900 MHz至2.5 GHz，用于信号回放。  
+R&S ${ }^{®}$ **MSR4** 是一款硬件监测接收机（hardware monitoring receiver），可提供4个接收通道，频率范围为500 MHz至3 GHz，每个输入通道具有200 MHz的I/Q带宽。  
+此外，R&S ${ }^{®}$ MSR4 还配备2个发射通道，频率范围900 MHz至2.5 GHz，用于信号回放。  
 该设备设计用于与外部上变频器（upconverter）和下变频器（downconverter）协同工作，结构紧凑，仅占用1个机架单元（1 RU）高度。  
 其核心是具备认知能力的软件定义无线电（Software Defined Radio, SDR），可独立运行通信监测服务器（CSM server），无需额外计算硬件。
 
-图21：R\&S ${ }^{®}$ MSR4 多用途卫星接收机  
+图21：R&S ${ }^{®}$ MSR4 多用途卫星接收机  
 
 ![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-26.jpg?height=216&width=1333&top_left_y=570&top_left_x=549){width="400"}
  
@@ -590,11 +590,11 @@ R\&S ${ }^{®}$ **MSR4** 是一款硬件监测接收机（hardware monitoring re
 - 通过流式接口记录目标信号  
 - 自动化监测上行与下行链路  
 
-R\&S ${ }^{®}$ **FSW** 是高性能频谱分析仪的典型代表。  
+R&S ${ }^{®}$ **FSW** 是高性能频谱分析仪的典型代表。  
 它支持高达8.3 GHz的内部I/Q分析带宽、800 MHz的实时带宽与1 GHz的流式带宽，调谐中心频率范围为9 kHz至90 GHz。  
 FSW具有极宽的动态范围，可跟踪微弱信号，并内置前置选择器（preselector）以抑制带外信号。
 
-图22：R\&S ${ }^{®}$ FSW 信号与频谱分析仪  
+图22：R&S ${ }^{®}$ FSW 信号与频谱分析仪  
 
 ![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-26.jpg?height=571&width=897&top_left_y=1682&top_left_x=549){width="400"}
  
@@ -603,7 +603,7 @@ FSW具有极宽的动态范围，可跟踪微弱信号，并内置前置选择�
 
 #### 6.4.1 调制分析（Modulation Analysis）
 
-R\&S ${ }^{®}$ **FSW-K70矢量信号分析选件（Vector Signal Analysis, VSA）**专为R\&S ${ }^{®}$ FSW设计，用于分析数字调制单载波信号（digitally modulated single carrier）至比特级别。  
+R&S ${ }^{®}$ **FSW-K70矢量信号分析选件（Vector Signal Analysis, VSA）**专为R&S ${ }^{®}$ FSW设计，用于分析数字调制单载波信号（digitally modulated single carrier）至比特级别。  
 其清晰的操作结构简化了测量流程，即使在多种分析工具下仍易于操作。  
 FSW-K70选件支持最长64,000符号的分析长度，信号分析带宽可达8.3 GHz。
 
@@ -622,7 +622,7 @@ FSW-K70选件支持最长64,000符号的分析长度，信号分析带宽可达8
 
 #### 6.4.2 卫星通信链路监测（Monitoring of Satellite Communications Links）
 
-结合R\&S ${ }^{®}$ FSW，R\&S ${ }^{®}$ **FSW-K70M多调制分析选件（multi-modulation analysis option）**与R\&S ${ }^{®}$ **FSW-K70P误码率测量选件（BER PRBS measurements option）**可用于验证卫星通信链路的完整性。
+结合R&S ${ }^{®}$ FSW，R&S ${ }^{®}$ **FSW-K70M多调制分析选件（multi-modulation analysis option）**与R&S ${ }^{®}$ **FSW-K70P误码率测量选件（BER PRBS measurements option）**可用于验证卫星通信链路的完整性。
 
 ##### DVB-S2X调制分析（DVB-S2X Modulation Analysis）
 
@@ -630,7 +630,7 @@ FSW-K70M选件支持对DVB-S2X信号的分析，能检测帧起始、解调信�
 
 ##### 非编码误码率（Uncoded Bit Error Rate）
 
-R\&S ${ }^{®}$ **FSW-K70P**误码率（Bit Error Rate, BER）伪随机二进制序列（Pseudo Random Binary Sequence, PRBS）测量选件是FSW-K70选件的扩展，  
+R&S ${ }^{®}$ **FSW-K70P**误码率（Bit Error Rate, BER）伪随机二进制序列（Pseudo Random Binary Sequence, PRBS）测量选件是FSW-K70选件的扩展，  
 可测量PRBS数据的原始BER（最高至PRBS23）。此外，它还支持基于用户自定义比特序列的BER测量。
 
 ---
@@ -646,7 +646,7 @@ VSG在空间电子战（space EW）中的主要用途包括：
 - 生成非标准波形以支持专有调制方案研究与验证  
 - 多通道RF信号生成，实现合法信号与干扰信号共存  
 
-R\&S ${ }^{®}$ **SMW200A** 是高性能VSG的代表，具备以下特性：
+R&S ${ }^{®}$ **SMW200A** 是高性能VSG的代表，具备以下特性：
 
 - 频率范围：100 kHz至67 GHz  
 - 可选双射频通道（100 kHz至44 GHz）  
@@ -656,7 +656,7 @@ R\&S ${ }^{®}$ **SMW200A** 是高性能VSG的代表，具备以下特性：
 - 可选集成衰落模拟器（fading simulator），带宽达800 MHz  
 - 支持多种关键MIMO模式（$3×3, 4×4, 8×4, 4×8, 4×2×2$）
 
-图23：R\&S ${ }^{®}$ SMW200A 矢量信号发生器  
+图23：R&S ${ }^{®}$ SMW200A 矢量信号发生器  
 
 ![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-28.jpg?height=456&width=887&top_left_y=180&top_left_x=551){width="400"}
  
@@ -667,9 +667,9 @@ R\&S ${ }^{®}$ **SMW200A** 是高性能VSG的代表，具备以下特性：
 
 捕获短时干扰事件需要具备**实时频谱分析（Real-Time Spectrum Analysis, RTSA）**能力的频谱分析仪。  
 RTSA通过专用FPGA处理器实现，每秒执行超过2,343,750次快速傅里叶变换（FFT），用于触发并可视化瞬态信号。  
-R\&S ${ }^{®}$ FSW可在最短460纳秒事件持续时间下实现100%截获概率（Probability of Intercept, POI）。
+R&S ${ }^{®}$ FSW可在最短460纳秒事件持续时间下实现100%截获概率（Probability of Intercept, POI）。
 
-图24：R\&S ${ }^{®}$ FSW短时信号持续显示（Persistence Display）  
+图24：R&S ${ }^{®}$ FSW短时信号持续显示（Persistence Display）  
 
 ![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-28.jpg?height=558&width=883&top_left_y=1017&top_left_x=549){width="400"}
  
@@ -708,9 +708,9 @@ Rohde & Schwarz功率计还可直接测量多载波信号的总功率，这在�
 
 手持式干扰追踪用于定位干扰源位置，无论其为故意干扰（如电子压制）还是意外干扰（如错误发射的射频源）。  
 便携式接收机与定向手持天线为现场操作员提供轻便灵活的干扰定位解决方案。  
-便携式测向仪可在短时发射情况下执行方位测量。干扰追踪系统的核心是手持频谱分析仪，例如R\&S ${ }^{®}$ **Spectrum Rider FPH**。
+便携式测向仪可在短时发射情况下执行方位测量。干扰追踪系统的核心是手持频谱分析仪，例如R&S ${ }^{®}$ **Spectrum Rider FPH**。
 
-**R\&S ${ }^{®}$ Spectrum Rider FPH主要特性：**
+**R&S ${ }^{®}$ Spectrum Rider FPH主要特性：**
 
 - 频率范围：5 kHz–44 GHz  
 - 电池续航时间：6小时  
@@ -719,12 +719,12 @@ Rohde & Schwarz功率计还可直接测量多载波信号的总功率，这在�
 - 配备高性能宽带定向天线  
 - 便携轻量：2.5 kg（5.5磅）
 
-图28：R\&S ${ }^{®}$ Spectrum Rider FPH 手持频谱分析仪  
+图28：R&S ${ }^{®}$ Spectrum Rider FPH 手持频谱分析仪  
 
 ![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-30.jpg?height=636&width=658&top_left_y=928&top_left_x=540){width="400"}
  
 
-图29：R\&S ${ }^{®}$ Spectrum Rider FPH 显示地理参考干扰图像  
+图29：R&S ${ }^{®}$ Spectrum Rider FPH 显示地理参考干扰图像  
 
 ![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-30.jpg?height=537&width=886&top_left_y=1727&top_left_x=549){width="400"}
  
@@ -733,16 +733,16 @@ Rohde & Schwarz功率计还可直接测量多载波信号的总功率，这在�
 
 ### 6.9 射频记录、分析与回放（RF Recording, Analysis and Playback）
 
-R\&S ${ }^{®}$ **IRAPS™集成记录、分析与回放系统（Integrated Record, Analysis and Playback System）**是一种基于商用现货设备（Commercial Off-The-Shelf, COTS）的高带宽射频记录与回放解决方案。  
+R&S ${ }^{®}$ **IRAPS™集成记录、分析与回放系统（Integrated Record, Analysis and Playback System）**是一种基于商用现货设备（Commercial Off-The-Shelf, COTS）的高带宽射频记录与回放解决方案。  
 IRAPS™可用于捕获长时间射频事件并在受控环境下回放，也可配置为在卫星通信系统（satcom system）的上行、下行与测控链路（TT&C）中触发并记录异常事件。  
 此外，该系统还能捕获、记录与分析系统间交互，例如干扰机与卫星链路之间的相互作用。
 
-IRAPS™系统由R\&S ${ }^{®}$ FSW频谱分析仪、R\&S ${ }^{®}$ SMW矢量信号发生器及SigPro处理系统组成。  
+IRAPS™系统由R&S ${ }^{®}$ FSW频谱分析仪、R&S ${ }^{®}$ SMW矢量信号发生器及SigPro处理系统组成。  
 SigPro运行记录、回放与分析软件，即ZoomOut。  
 ZoomOut软件可使操作员在时间、频率与幅度维度上观察RF频谱的每个采样点。  
-R\&S ${ }^{®}$ IRAPS™支持1 GHz端到端记录与回放，录制时间最长可达6小时。
+R&S ${ }^{®}$ IRAPS™支持1 GHz端到端记录与回放，录制时间最长可达6小时。
 
-图30：R\&S ${ }^{®}$ IRAPS™ 系统配置  
+图30：R&S ${ }^{®}$ IRAPS™ 系统配置  
 
 ![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-31.jpg?height=505&width=886&top_left_y=882&top_left_x=549){width="400"}
  
