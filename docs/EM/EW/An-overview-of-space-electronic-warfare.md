@@ -79,12 +79,12 @@
 图2：不同卫星轨道的示意图  
 来源：美国国防情报局（US Defense Intelligence Agency）[1]  
 
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=545&width=771&top_left_y=220&top_left_x=551){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=545&width=771&top_left_y=220&top_left_x=551){width="500"}
  
 
 图3：地球覆盖范围与卫星轨道关系
   
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=273&width=938&top_left_y=968&top_left_x=551){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-08.jpg?height=273&width=938&top_left_y=968&top_left_x=551){width="600"}
  
 
 ---
@@ -113,12 +113,11 @@
 
 ## 3 空间电子战的定义
 
-北约（NATO）将电子战/电磁战（Electronic/Electromagnetic Warfare, EW）定义为：“一种利用电磁能量（无论主动或被动）以提供态势感知（situational awareness）并产生进攻与防御效果的军事行动。”  
-电子战属于电磁频谱（Electromagnetic Spectrum, EMS）范围内的作战形式，其核心是通过军事手段运用电磁能量，以防止或削弱敌方对电磁频谱的有效使用，同时保障友方的使用。
+北约（NATO）将电子战/电磁战（Electronic/Electromagnetic Warfare, EW）定义为：“一种利用电磁能量（无论主动或被动）以提供态势感知（situational awareness）并产生进攻与防御效果的军事行动。”  电子战属于电磁频谱（Electromagnetic Spectrum, EMS）范围内的作战形式，其核心是通过军事手段运用电磁能量，以防止或削弱敌方对电磁频谱的有效使用，同时保障友方的使用。
 
 图5：电磁频谱中的电磁作战  
 
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-10.jpg?height=857&width=1185&top_left_y=616&top_left_x=551){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-10.jpg?height=857&width=1185&top_left_y=616&top_left_x=551){width="600"}
  
 
 电子战跨越四个作战领域：
@@ -132,7 +131,7 @@
 
 图6：当今军事环境中的电子战  
 
-![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-11.jpg?height=722&width=1185&top_left_y=220&top_left_x=551){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_11_36d2f0ed18d7bea7f356g-11.jpg?height=722&width=1185&top_left_y=220&top_left_x=551){width="700"}
  
 
 电子战由三个主要部分构成：
