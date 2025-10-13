@@ -36,15 +36,15 @@ $$
 
 为了说明时间反转的效果，图 3.2 给出了一个示例。将时间反转变换应用于图 3.2(a) 中的函数 $x$，可以得到图 3.2(b) 中的函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-032.jpg?height=901&width=1385&top_left_y=434&top_left_x=307){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-032.jpg?height=901&width=1385&top_left_y=434&top_left_x=307){width="600"}
   
 图 3.1：时间平移的示例。(a) 函数 $x$；以及对 $x$ 施加平移变换后，移位 (b) +1 和 (c) -1 的结果。
 
-![](https://cdn.mathpix.com/snip/images/dxJjHuRK9pjAxIqejxoRbb9x_Nk_KRhxLPjgzCMTBFQ.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/dxJjHuRK9pjAxIqejxoRbb9x_Nk_KRhxLPjgzCMTBFQ.original.fullsize.png){width="600"}
   
 图 3.2：时间反转的示例。(a) 函数 $x$；以及 (b) 对 $x$ 施加时间反转变换的结果。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-033.jpg?height=927&width=1546&top_left_y=286&top_left_x=348){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-033.jpg?height=927&width=1546&top_left_y=286&top_left_x=348){width="600"}
   
 图 3.3：时间压缩/扩展的示例。(a) 函数 $x$；以及对 $x$ 施加压缩/扩展变换后，缩放因子分别为 (b) 2 和 (c) $\frac{1}{2}$ 的结果。
 ### 3.2.3 时间压缩/扩展（伸缩）
@@ -75,7 +75,7 @@ $$
 
 其中 $a$ 是非零实常数。换句话说，函数 $y$ 是通过在 $x(t)$ 的表达式中用 $at$ 替换 $t$ 得到的。量 $a$ 称为**缩放因子**。从几何角度来看，变换 (3.4) 与沿时间轴的压缩/扩展以及/或者关于原点的对称相关。若 $|a|<1$，则函数沿时间轴扩展（即拉伸）；若 $|a|>1$，则函数被压缩；若 $|a|=1$，则函数既不扩展也不压缩。最后，若 $a<0$，则函数关于原点对称。可以看到，时间缩放同时包含了时间压缩/扩展和时间反转作为特例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-034.jpg?height=933&width=1600&top_left_y=283&top_left_x=208){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-034.jpg?height=933&width=1600&top_left_y=283&top_left_x=208){width="600"}
   
 图 3.4：时间缩放的示例。(a) 函数 $x$；以及对 $x$ 施加时间缩放变换后，缩放因子为 (b) 2、(c) $\frac{1}{2}$ 和 (d) -1 的结果。
 
@@ -100,7 +100,7 @@ $$
 1. 先将 $x$ 平移 $b$，再对结果进行时间缩放 $a$；
 2. 先将 $x$ 缩放 $a$，再对结果平移 $\frac{b}{a}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-035.jpg?height=782&width=1433&top_left_y=286&top_left_x=413){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-035.jpg?height=782&width=1433&top_left_y=286&top_left_x=413){width="600"}
   
 图 3.5：时间平移与时间缩放组合变换的两种不同解释。(a) 原始函数。先平移再缩放的结果：(b) 中间结果，(c) 最终结果。先缩放再平移的结果：(d) 中间结果，(e) 最终结果。
 
@@ -121,7 +121,7 @@ $$
 1. 将函数 $x$ 向右平移 $b$ 个单位；  
 2. 将横轴向左平移 $b$ 个单位。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-036.jpg?height=522&width=1385&top_left_y=286&top_left_x=307){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-036.jpg?height=522&width=1385&top_left_y=286&top_left_x=307){width="600"}
   
 图 3.6：幅度平移的示例。(a) 函数 $x$；以及对 $x$ 施加幅度平移变换（平移量为 -2）后得到的结果。  
 
@@ -156,7 +156,7 @@ $$
 
 为了说明幅度缩放的效果，图 3.7 给出了一个示例。通过对图 3.7(a) 中的函数 $x$ 施加幅度缩放变换，可以得到图 3.7(b)、(c) 和 (d) 所示的函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-037.jpg?height=1043&width=1371&top_left_y=805&top_left_x=437){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-037.jpg?height=1043&width=1371&top_left_y=805&top_left_x=437){width="600"}
   
 图 3.7：幅度缩放的示例。(a) 函数 $x$；以及对 $x$ 施加幅度缩放变换后，缩放因子为 (b) 2、(c) $\frac{1}{2}$ 和 (d) -2 的结果。
 ### 3.3.3 幅度平移与缩放的结合
@@ -307,8 +307,7 @@ $$
 引入最小公倍数的概念后，我们就可以讨论两个周期函数的和是否仍然是周期函数。下面的定理对此有重要启示。
 
 **定理 3.2 （周期函数的和）**  
-设 $x_{1}$ 和 $x_{2}$ 是两个（连续的）周期函数，其周期分别为 $T_{1}$ 和 $T_{2}$。则 $x=x_{1}+x_{2}$ 是周期函数，当且仅当比值 $T_{1}/T_{2}$ 是有理数（即两个整数的商）。若 $x$ 是周期函数，且 $T_{1}/T_{2}=q/r$，其中 $q$ 和 $r$ 是互素整数，则 $x$ 的周期 $
-T=\operatorname{lcm}(T_{1},T_{2})=rT_{1}=qT_{2}. $
+设 $x_{1}$ 和 $x_{2}$ 是两个（连续的）周期函数，其周期分别为 $T_{1}$ 和 $T_{2}$。则 $x=x_{1}+x_{2}$ 是周期函数，当且仅当比值 $T_{1}/T_{2}$ 是有理数（即两个整数的商）。若 $x$ 是周期函数，且 $T_{1}/T_{2}=q/r$，其中 $q$ 和 $r$ 是互素整数，则 $x$ 的周期 $T=\operatorname{lcm}(T_{1},T_{2})=rT_{1}=qT_{2}. $
 
 
 **证明。** 我们仅给出部分证明。假设 $x$ 是周期函数，需证明它的周期为 $T$。由于 $x$ 是周期函数，所以 $T=\operatorname{lcm}(T_{1},T_{2})$ 必然存在。因为 $T$ 是 $T_{1}$ 和 $T_{2}$ 的整数倍，所以可写作 $T=k_{1}T_{1}=k_{2}T_{2}$，其中 $k_{1}$ 和 $k_{2}$ 为正整数。于是有
@@ -461,7 +460,7 @@ $$
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-042.jpg?height=749&width=1217&top_left_y=286&top_left_x=413){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-042.jpg?height=749&width=1217&top_left_y=286&top_left_x=413){width="600"}
   
 图 3.8：具有不同边界性质的函数示例。(a) 左边但非右边，(b) 右边但非左边，(c) 时限，(d) 双边。
 ### 3.4.5 信号的能量与功率
@@ -612,7 +611,7 @@ $$
   
 图 3.9：例 3.6 中的函数 $x$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-044.jpg?height=622&width=593&top_left_y=678&top_left_x=702){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-044.jpg?height=622&width=593&top_left_y=678&top_left_x=702){width="300"}
   
 图 3.10：实正弦函数。
 ## 3.5 基本函数
@@ -643,7 +642,7 @@ $$
 
 其中 $A$ 和 $\lambda$ 为复常数。复指数函数在系统理论中具有基础性的重要性，同时也为表示许多其他类函数提供了方便的手段。复指数函数可以根据其参数 $A$ 和 $\lambda$ 的取值表现出多种不同的行为模式。以下内容将探讨复指数函数的一些特殊情况，以及一般情况。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-045.jpg?height=631&width=1573&top_left_y=280&top_left_x=337){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-045.jpg?height=631&width=1573&top_left_y=280&top_left_x=337){width="600"}
 
 图 3.11：实指数函数的情况 (a) $\lambda>0$，(b) $\lambda=0$，以及 (c) $\lambda<0$。
 
@@ -675,7 +674,7 @@ $$
 
 复正弦函数 $x(t)=e^{j \omega t}$ 在 $\omega$ 分别取 $2 \pi$ 和 $-2 \pi$ 时的图像如图 3.13(a) 和 (b) 所示。从这些图中可以看出，随着 $t$ 增加，$x(t)$ 描绘的曲线呈螺旋状。如果沿着 $t$ 轴方向向 $-\infty$ 直视该曲线，当 $\omega>0$ 时螺旋呈逆时针方向（即右手螺旋），当 $\omega<0$ 时螺旋呈顺时针方向（即左手螺旋）。注意，虽然这两种复正弦函数的振荡速率相同，但它们并不是通过平移（即时间平移）或反射（即时间反转）得到的版本。左手螺旋和右手螺旋在本质上是不同的形状，一个无法通过平移和/或反射变为另一个。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-046.jpg?height=698&width=1330&top_left_y=289&top_left_x=329){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-046.jpg?height=698&width=1330&top_left_y=289&top_left_x=329){width="500"}
 
 图 3.12：复正弦函数。(a) 实部和 (b) 虚部。
 
@@ -707,7 +706,7 @@ $$
 
 图 3.13：复正弦函数 $x(t)=e^{j \omega t}$，(a) $\omega=2 \pi$，(b) $\omega=-2 \pi$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-048.jpg?height=590&width=1579&top_left_y=283&top_left_x=210){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-048.jpg?height=590&width=1579&top_left_y=283&top_left_x=210){width="600"}
 
 图 3.14：一般复指数函数的实部，(a) $\sigma>0$，(b) $\sigma=0$，(c) $\sigma<0$。
 
@@ -754,7 +753,7 @@ $$
 
 图 3.16：符号函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=309&width=314&top_left_y=1264&top_left_x=967){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=309&width=314&top_left_y=1264&top_left_x=967){width="300"}
 
 图 3.17：矩形函数。
 ### 3.5.6 矩形函数
@@ -774,11 +773,11 @@ $$
 **解答**  
 我们选择提取 $x(t)$ 在 $-\frac{T}{2}<t \leq \frac{T}{2}$ 区间内的周期。为了提取这个周期，我们需要将 $x$ 与一个在该区间为 1、其他区间为 0 的函数相乘。这样的函数就是 $v(t)=\operatorname{rect}\left(\frac{1}{T} t\right)$，如图 3.18(b) 所示。将 $v$ 与 $x$ 相乘得到的函数如图 3.18(c) 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-050.jpg?height=1049&width=1039&top_left_y=802&top_left_x=434){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-050.jpg?height=1049&width=1039&top_left_y=802&top_left_x=434){width="500"}
 
 图 3.18：使用矩形函数提取周期函数 $x$ 的一个周期。(a) 函数 $x$。(b) 时间缩放后的矩形函数 $v$。(c) $x$ 与 $v$ 的乘积。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-051.jpg?height=317&width=317&top_left_y=297&top_left_x=967){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-051.jpg?height=317&width=317&top_left_y=297&top_left_x=967){width="300"}
 
 图 3.19：三角函数。
 
@@ -883,11 +882,11 @@ $$
 
 在图形上，delta 函数表示如图 3.20 所示。由于该函数在原点处取无限值，我们无法绘制其真实数值，因此用一条竖直箭头表示该无限值，同时标示脉冲强度。在图 3.21 中，我们绘制了经过缩放和平移的 delta 函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=532){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=532){width="300"}
 
 图 3.20：Delta 函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=1342){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=1342){width="300"}
 
 图 3.21：缩放和平移后的 delta 函数。
 
