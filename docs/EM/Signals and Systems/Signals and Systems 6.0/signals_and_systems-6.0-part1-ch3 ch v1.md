@@ -1240,7 +1240,7 @@ $$
 
 **解答**：$x$ 的图像如图 3.28(a) 所示。我们分别考虑分段函数的每一段：
 
-- 第一段（$0 \leq t<1$）可表示为：
+第一段（$0 \leq t<1$）可表示为：
 
 $$
 v_{1}(t)=u(t)-u(t-1) .
@@ -1249,8 +1249,7 @@ $$
 
 该函数绘制如图 3.28(b)。
 
-- 第二段（$1 \leq t<3$）可表示为：
-- 
+第二段（$1 \leq t<3$）可表示为：
 
 $$
 v_{2}(t)=(t-2)^{2}[u(t-1)-u(t-3)]=\left(t^{2}-4 t+4\right)[u(t-1)-u(t-3)] .
@@ -1259,13 +1258,11 @@ $$
 
 该函数绘制如图 3.28(c)。
 
-- 第三段（$3 \leq t<4$）可表示为：
-- 
-
+第三段（$3 \leq t<4$）可表示为：
+ 
 $$
 v_{3}(t)=(4-t)[u(t-3)-u(t-4)] .
 $$
-
 
 该函数绘制如图 3.28(d)。
 
@@ -1315,7 +1312,7 @@ $$
   
 图 3.28：使用单位阶跃函数表示分段多项式函数。(a) 函数 $x$；(b)、(c) 和 (d) 三个函数，其和为 $x$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=315&width=1090&top_left_y=1042&top_left_x=375){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=315&width=1090&top_left_y=1042&top_left_x=375){width="600"}
   
 图 3.29：使用单位阶跃函数表示周期函数。(a) 周期函数 $x$；(b) 一个由 $x$ 的单个周期组成的函数 $\nu$。
 
@@ -1346,11 +1343,11 @@ $$
 
 注意，符号“$\rightarrow$”和“$=$”的意义完全不同。例如，符号 $x \rightarrow y$ 并不意味着 $x=y$。符号“$\rightarrow$”应读作“产生”（而非“等于”）。也就是说，“$x \rightarrow y$”应理解为“输入 $x$ 产生输出 $y$”。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=133&width=412&top_left_y=302&top_left_x=915){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=133&width=412&top_left_y=302&top_left_x=915){width="300"}
   
 图 3.30：系统的框图。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=282&width=1238&top_left_y=534&top_left_x=497){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=282&width=1238&top_left_y=534&top_left_x=497){width="600"}
   
 图 3.31：系统的互连。(a) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的串联互连；(b) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的并联互连。
 
