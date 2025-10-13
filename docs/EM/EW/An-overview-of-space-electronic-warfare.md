@@ -764,7 +764,7 @@ R&S ${ }^{®}$ IRAPS™支持1 GHz端到端记录与回放，录制时间最长�
 
 
 
-## Rohde \& Schwarz（罗德与施瓦茨）
+## Rohde & Schwarz（罗德与施瓦茨）
 
 罗德与施瓦茨（Rohde & Schwarz）技术集团是全球推动“更安全与更互联世界”愿景的先驱之一，  
 其领先的测试与测量（test & measurement）、技术系统（technology systems）、网络与网络安全（networks & cybersecurity）解决方案为全球用户提供了坚实支持。  
