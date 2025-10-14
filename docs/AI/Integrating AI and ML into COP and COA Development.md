@@ -306,6 +306,32 @@ COA通常与规划的艺术相联系，它是一个综合性解决方案，通�
 ![](https://cdn.mathpix.com/cropped/2025_10_13_9077afaf6cef4b2382b4g-035.jpg?height=599&width=1263&top_left_y=244&top_left_x=244)
 图1-5. AI的部分分类体系
 
+人工智能（Artificial Intelligence, AI）
+├─ 机器学习（Machine Learning, ML）
+│  ├─ 深度学习（Deep Learning, DL）
+│  │  ├─ 前馈神经网络（Feedforward Neural Networks, FNN）
+│  │  ├─ 卷积神经网络（Convolutional Neural Nets, CNN）
+│  │  ├─ 循环神经网络（Recurrent Neural Networks, RNN）
+│  │  ├─ 生成对抗网络（Generative Adversarial Networks, GAN）
+│  │  └─ 生成式预训练变换模型（Generative Pretrained Transformer, GPT）
+│  ├─ 监督学习（Supervised）
+│  └─ 无监督学习（Unsupervised）
+├─ 专家系统（Expert Systems）
+├─ 自然语言处理（Natural Language Processing, NLP）
+│  ├─ 内容抽取（Content Extraction）
+│  ├─ 分类（Classification）
+│  ├─ 机器翻译（Machine Translation）
+│  ├─ 问答（Question Answering）
+│  └─ 文本生成（Text Generation）
+├─ 视觉（Vision）
+│  ├─ 图像识别（Image Recognition）
+│  └─ 机器视觉（Machine Vision）
+├─ 语音（Speech）
+│  ├─ 语音转文本（Speech to Text）
+│  └─ 文本转语音（Text to Speech）
+├─ 规划（Planning）
+└─ 机器人学（Robotics）
+
 为生成预测结果，模型将输入拆分为语言标记（token），这些标记可以是完整单词，也可以是词缀或词根。每个标记通过一个向量（vector）表示——即一组数值，代表该标记在n维空间中的位置，用以描述该标记与其他标记的关系及其在特定提示（prompt）下被关联的概率。图1-6展示了特定语言标记之间的关系——例如“business（商业）”、“strategy（战略）”、“military（军事）”与“COA（行动方案）”。在此例中，“strategy”、“military”与“COA”彼此关联更紧密，而与“business”的相关性较低，这表明在仅包含“strategy”的提示中，这三个词更有可能同时出现在输出中。尽管大多数人类可以直观地想象三维向量空间中的位置，但超过三维的空间则难以可视化；而计算机没有这一限制。GPT的向量规模极大，通常包含数百甚至上千个维度。${ }^{46}$ 向量维度越多，模型可建立的关联也越丰富。例如，GPT-3为每个标记（可能代表词的一部分或整体）分配一个12,288维的向量（即12,288个数值）以编码其语义。${ }^{47}$ 借助海量数据，通过神经网络变换器，模型能够在12,288维空间中根据标记的邻近位置建立关联，并利用复杂的向量数学建立更深层次的联系，例如在响应提示时将“military”与“strategy”关联起来。${ }^{48}$
 
 ![](https://cdn.mathpix.com/cropped/2025_10_13_9077afaf6cef4b2382b4g-036.jpg?height=687&width=1263&top_left_y=244&top_left_x=244)
