@@ -929,7 +929,7 @@ $$
 这一结果称为等价性质，如图 3.25 所示。  
 **证明**：该证明直接来源于 delta 函数仅在单一点非零的事实。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-054.jpg?height=536&width=1133&top_left_y=302&top_left_x=421){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-054.jpg?height=536&width=1133&top_left_y=302&top_left_x=421){width="600"}
 
 图 3.23：$g_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
 
@@ -990,7 +990,7 @@ $$
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-055.jpg?height=536&width=1133&top_left_y=302&top_left_x=545){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-055.jpg?height=536&width=1133&top_left_y=302&top_left_x=545){width="600"}
 
 图 3.24：$d_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
 
@@ -1038,7 +1038,7 @@ $$
 
 如后续将看到的，$\delta$ 的等价性质、抽取性质、缩放性质及偶性都是非常有用的。最后，由 $\delta$ 的定义可知，在不包含原点的任意区间上积分该函数，其值为零。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-056.jpg?height=366&width=1519&top_left_y=286&top_left_x=240){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-056.jpg?height=366&width=1519&top_left_y=286&top_left_x=240){width="600"}
 
 图 3.25：等价性质的图示。(a) 函数 $x$；(b) 平移后的 delta 函数；(c) 两者的乘积。
 
@@ -1166,7 +1166,7 @@ x(t)=u(t-a)-u(t-b)=\begin{cases}1 & a \le t < b \\ 0 & \text{otherwise}\end{case
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-058.jpg?height=420&width=1362&top_left_y=283&top_left_x=316){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-058.jpg?height=420&width=1362&top_left_y=283&top_left_x=316){width="600"}
 
 
 图3.26：用单位阶跃函数表示矩形函数。(a) 一个移位的单位阶跃函数，(b) 另一个移位的单位阶跃函数，(c) 它们的差（即矩形函数）。
@@ -1500,7 +1500,7 @@ $$
 
 **解答**。对于任意 $x$ 和任意实常数 $t_{0}$，$\mathcal{H} x\left(t_{0}\right)$ 仅依赖于 $t=t_{0}$ 和 $t=-t_{0}$ 时的 $x(t)$。假设 $t_{0}=-1$。在这种情况下，$\mathcal{H} x\left(t_{0}\right)$（即 $\mathcal{H} x(-1)$）依赖于 $t=1$ 时的 $x(t)$，但 $t=1>t_{0}$。因此，该系统**不是因果系统**。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-064.jpg?height=214&width=1087&top_left_y=289&top_left_x=456){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-064.jpg?height=214&width=1087&top_left_y=289&top_left_x=456){width="600"}
   
 图 3.32：等效系统（假设 $\mathfrak{H}^{-1}$ 存在）。(a) 第一系统；(b) 第二系统。
 
@@ -1722,7 +1722,7 @@ $$
 
 简而言之，时间不变系统的行为随时间不发生变化。实际上，与时间可变系统相比，时间不变系统更易于设计和分析，因为其行为不会随时间变化。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-067.jpg?height=209&width=1084&top_left_y=291&top_left_x=583){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-067.jpg?height=209&width=1084&top_left_y=291&top_left_x=583){width="600"}
   
 图 3.33：如果 $\mathcal{H}$ 是时间不变的（即 $\mathcal{H}$ 与 $\mathcal{S}_{t_{0}}$ 可交换），两个系统是等价的。(a) 先将输入平移 $t_{0}$ 再施加 $\mathcal{H}$（即 $y=\mathcal{H} \mathcal{S}_{t_{0}} x$）；(b) 先施加 $\mathcal{H}$ 再平移 $t_{0}$（即 $y=\mathcal{S}_{t_{0}} \mathcal{H}(x)$）。
 
@@ -1828,11 +1828,11 @@ $$
 
 则称系统 $\mathcal{H}$ 为齐次的（即 $\mathcal{H}$ 与标量乘法可交换）。本质上，系统 $\mathcal{H}$ 的齐次性意味着图 3.35 所示的两个系统是等价的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=304&width=1209&top_left_y=283&top_left_x=529){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=304&width=1209&top_left_y=283&top_left_x=529){width="600"}
   
 图 3.34：如果 $\mathcal{H}$ 是加法性的（即 $\mathcal{H}$ 与加法可交换），两个系统是等价的。(a) 先执行加法再施加 $\mathcal{H}$（即 $y=\mathcal{H}\left(x_{1}+x_{2}\right)$）；(b) 先施加 $\mathcal{H}$ 再执行加法（即 $y=\mathcal{H} x_{1}+\mathcal{H}(x_{2})$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=219&width=1217&top_left_y=759&top_left_x=518){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=219&width=1217&top_left_y=759&top_left_x=518){width="600"}
   
 图 3.35：如果 $\mathcal{H}$ 是齐次的（即 $\mathcal{H}$ 与标量乘法可交换），两个系统是等价的。(a) 先进行标量乘法再施加 $\mathcal{H}$（即 $y=\mathcal{H}(a x)$）；(b) 先施加 $\mathcal{H}$ 再进行标量乘法（即 $y=a \mathcal{H} x$）。
 
@@ -1844,7 +1844,7 @@ $$
 
 则称系统 $\mathcal{H}$ 具有叠加性（即 $\mathcal{H}$ 与线性组合可交换）。如果一个系统既是加法性的又是齐次的（或等价地满足叠加性），则称其为线性系统。本质上，系统 $\mathcal{H}$ 的线性意味着图 3.36 所示的两个系统是等价的。要证明一个系统是线性的，可以证明它同时具有加法性和齐次性，或者直接证明它满足叠加性。实际上，线性系统相比非线性系统更易于设计和分析。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-070.jpg?height=307&width=1452&top_left_y=280&top_left_x=267){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-070.jpg?height=307&width=1452&top_left_y=280&top_left_x=267){width="600"}
   
 图 3.36：如果 $\mathcal{H}$ 是线性的（即 $\mathcal{H}$ 与线性组合可交换），两个系统是等价的。(a) 先计算线性组合再施加 $\mathcal{H}$（即 $y=\mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)$）；(b) 先施加 $\mathcal{H}$ 再计算线性组合（即 $y=a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}$）。
 
