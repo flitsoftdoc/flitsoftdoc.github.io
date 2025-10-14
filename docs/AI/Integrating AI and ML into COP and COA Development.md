@@ -10,6 +10,8 @@ Christopher John Hickey
 战略研究院  
 美国陆军战争学院  
 
+![](https://cdn.mathpix.com/snip/images/TDgbJ-BMOXYZwHhZAdXwP4ZPxVFK3e7fQw_MGYVHovA.original.fullsize.png){width="200"}
+
 本出版物中所表达的观点仅代表作者个人观点，并不一定反映美国陆军部、国防部或美国政府的官方政策或立场。战略研究院与美国陆军战争学院出版社的作者在不泄露机密信息、不危及行动安全或不歪曲官方政策的前提下，享有充分的学术自由。这种学术自由使他们能够从新的、甚至具争议性的视角出发，推动关键议题的讨论。本出版物经批准公开发布，传播不受限制。
 
 ISBN 1-58487-865-7  
