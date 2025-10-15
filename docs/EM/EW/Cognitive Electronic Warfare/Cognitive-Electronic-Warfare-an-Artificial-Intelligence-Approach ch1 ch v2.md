@@ -225,33 +225,63 @@ AI将促成何种期望的作战效果？是否存在可用于构建机器学习
 ## References
 
 [1] Mitola, J., III, "Cognitive Radio for Flexible Multimedia Communications," in International Workshop on Mobile Multimedia Communications, IEEE, 1999.
+
 [2] Haykin, S., "Cognitive Radar: A Way of the Future," IEEE Signal Processing Magazine, Vol. 23, No. 1, 2006.
+
 [3] Kline, R., "Cybernetics, Automata Studies, and the Dartmouth Conference on Artificial Intelligence," IEEE Annals of the History of Computing, Vol. 33, No. 4, 2011.
+
 [4] Horne, C., M. Ritchie, and H. Griffiths, "Proposed Ontology for Cognitive Radar Systems," IET Radar, Sonar and Navigation, Vol. 12, No. 12, 2018.
+
 [5] Boyd, J., Destruction and Creation, Unpublished essay, 1976. Online: http://www.goalsys. com/books/documents/DESTRUCTION_AND_ CREATION.pdf.
+
 [6] US Air Force, Curtis E. Lemay Center for Doctrine Development and Education, Annex 3-51: Electromagnetic warfare and electromagnetic spectrum operations, Downloaded 2020-0123, 2019. Online: https://tinyurl. com/ew-emso-pdf.
+
 [7] De Martino, A., Introduction to Modern EW Systems, Norwood, MA: Artech House, 2013.
+
 [8] Poisel, R., Information Warfare and Electronic Warfare Systems, Norwood, MA: Artech House, 2013.
+
 [9] Chairman of the Joint Chiefs of Staff, Joint publication 3-13.1: Electronic warfare, 2012. Online: https://fas.org/irp/doddir/ dod/jp3-13-1.pdf.
+
 [10] Avionics Department, "Electronic Warfare and radar systems engineering handbook," Naval Air Warfare Center Weapons Division, Tech. Rep. NAWCWD TP 8347, 2013.
+
 [11] Haykin, S., Cognitive Dynamic Systems: Perception-action Cycle, Radar, and Radio, Cambridge University Press, 2012.
+
 [12] Boksiner, J., Electronic Warfare (EW) S\&T Community of Interest (CoI), 2018. Online: https://tinyurl.com/ew-coi-2018.
+
 [13] Haigh, K. Z., et al., "Rethinking Networking Architectures for Cognitive Control," in Microsoft Research Cognitive Wireless Networking Summit, 2008.
+
 [14] Malone, T., and K. Crowston, "The Interdisciplinary Study of Coordination," ACM Computing Surveys, Vol. 26, No. 1, 1994.
+
 [15] Modi, P., et al., "ADOPT: Asynchronous Distributed Constraint Optimization with Quality Guarantees," Artificial Intelligence, Vol. 161, No. 1-2, 2005.
+
 [16] Zhang, X., V. Lesser, and S. Abdallah, "Efficient Management of Multi-Linked Negotiation Based on a Formalized Model," Autonomous Agents and Multi-Agent Systems, Vol. 10, No. 2, 2005.
+
 [17] Thampi, S., Introduction to Distributed Systems, 2009. Online: https://arxiv.org/ abs/0911.4395.
+
 [18] Troxel, G., et al., "Enabling Open-Source Cognitively-Controlled Collaboration Among Software-Defined Radio Nodes," Computer Networks, Vol. 52, No. 4, 2008.
+
 [19] Haigh, K. Z., O. Olofinboba, and C. Y. Tang, "Designing an Implementable User-Oriented Objective Function for MANETs," in International Conference on Networking, Sensing and Control, IEEE, 2007.
+
 [20] Nguyen, V. T., F. Villain, and Y. Le Guillou, "Cognitive radio RF: Overview and challenges," VLSI Design, Vol. 2012, 2012.
+
 [21] Mitola, J., and G. Q. Maguire, "Cognitive Radio: Making Software Radios More Personal," IEEE Personal Communications, Vol. 6, No. 4, 1999.
+
 [22] Haykin, S., "Cognitive Radio: Brain-Empowered Wireless Communications," IEEE Journal on Selected Areas in Communications, Vol. 23, No. 2, 2005.
+
 [23] Trigui, E., M. Esseghir, and L. M. Boulahia, "On Using Multi-agent Systems in Cognitive Radio Networks: A Survey," International Journal of Wireless \& Mobile Networks, Vol. 4, No. 6, 2012.
+
 [24] Rizk, Y., M. Awad, and E. W. Tunstel, "Decision Making in Multi-agent Systems: A Survey," IEEE Transactions on Cognitive and Developmental Systems, Vol. 10, No. 3, 2018.
+
 [25] Dorri, A., S. S. Kanhere, and R. Jurdak, "Multiagent Systems: A Survey," IEEE Access, Vol. 6, 2018.
+
 [26] Tang, H., and S. Watson, "Cognitive Radio Networks for Tactical Wireless Communications," Defence Research and Development Canada-Ottawa Research Centre, Ottawa, Tech. Rep., 2014.
+
 [27] Haigh, K. Z., "AI Technologies for Tactical Edge Networks," in MobiHoc Workshop on Tactical Mobile Ad Hoc Networking, Keynote, 2011.
+
 [28] Cabric, D., "Cognitive Radios: System Design Perspective," Technical Report No. UCB/ EECS-2007-156, Ph.D. dissertation, Electrical Engineering and Computer Sciences, University of California at Berkeley, 2007.
+
 [29] Guerci, J., Cognitive Radar: The Knowledge-Aided Fully Adaptive Approach, Norwood, MA: Artech House, 2010.
+
 [30] Haigh, K. Z., et al., "Parallel Learning and Decision Making for a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.
+
 [31] Üstün, B., W. Melssen, and L. Buydens, "Facilitating the Application of Support Vector Regression by Using a Universal Pearson VII Function-Based Kernel," Chemometrics and Intelligent Laboratory Systems, Vol. 81, No. 1, 2006.
