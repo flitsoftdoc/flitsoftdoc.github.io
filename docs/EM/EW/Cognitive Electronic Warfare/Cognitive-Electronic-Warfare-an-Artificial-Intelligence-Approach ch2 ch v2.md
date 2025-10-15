@@ -59,12 +59,12 @@
 
 有多种可视化工具可用于理解不同环境之间的差异。图2.2展示了观察数据的四种不同方式，每种方式因目的不同而各有用处：柱状图使用每个可观测量的均值，以快速提供整体直观印象（gestalt sense）；箱线图展示数值的分布情况；散点图则显示每次环境观测中各可观测量的详细分布。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-039.jpg?height=616&width=1001&top_left_y=149&top_left_x=250){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-039.jpg?height=616&width=1001&top_left_y=149&top_left_x=250){width="600"}
 
 
 **图2.1** 可观测量是使系统能够做出决策的特征；这些可观测量有助于表征不同类型的干扰机（jammer）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-040.jpg?height=1264&width=1187&top_left_y=145&top_left_x=160){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-040.jpg?height=1264&width=1187&top_left_y=145&top_left_x=160){width="600"}
 
 
 **图2.2** 可视化环境观测数据的四种不同方式：(a) 显示非NaN值均值的柱状图；(b) 展示数值分布的箱须图（box-and-whiskers plot）；(c) 在极坐标轴上绘制的柱状图；(d) 在极坐标轴上的散点图。这些可视化方式均基于相同的底层可观测数据。（图7.3对箱线图进行解释。）
@@ -82,7 +82,7 @@
 
 标准机器学习库通常无法复用已用于其他目的的计算结果，且需要针对嵌入式环境进行重新实现。K均值聚类（K-means clustering）计算效率高，适用于嵌入式领域［8］；此外，也可利用已知的标签作为初始聚类中心（cluster seeds）。如果系统已维护样本之间的距离（例如，用于支持支持向量机（SVM）训练或保持数据集多样性），那么层次聚类（hierarchical clustering）方法也同样适用。最终的聚类数量可由可用内存大小或簇间距离决定。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-041.jpg?height=1763&width=999&top_left_y=147&top_left_x=252){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-041.jpg?height=1763&width=999&top_left_y=147&top_left_x=252){width="600"}
 
 
 **图2.3** 树状图用于可视化各项目之间的相似程度。每个环境由箱线图中所示的多个特征进行描述。(a) 树状图，其中横轴表示环境之间的距离；(b) 环境16；(c) 环境06；(d) 环境21。（图7.3对箱线图进行解释。）
@@ -180,7 +180,7 @@ Haigh 等人［1］探讨了四种潜在的度量指标：(1) 多种异构业务
 
 度量指标的值应进行归一化（normalized），以确保大数值与小数值在相同尺度上被评估。指标可采用线性尺度或对数尺度（如分贝 dB）进行测量，归一化方法应根据所选尺度相应调整。权重用于控制各指标的相对重要性。在最大化效用（utility）时，效能类指标应赋予正权重，而成本类指标则应赋予负权重。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-046.jpg?height=397&width=1100&top_left_y=1601&top_left_x=197){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-046.jpg?height=397&width=1100&top_left_y=1601&top_left_x=197){width="600"}
 
 
 **图 2.4** 权重可以以不同方式调整度量指标的值，并且可能随任务阶段而变化（例如，辐射源处于搜索、捕获或跟踪模式时）。
@@ -220,7 +220,7 @@ $$
 
 其中，\(w_{1}(\cdot)\) 为单位阶跃函数（unit step function），\( w_{2} > 0 \) 为一个参数，用于刻画抖动约束的“软度”（即对抖动的容忍程度）。图2.5展示了该函数对应的效用值。需要注意的是，对 \( m_1 \) 和 \( m_2 \) 的估计仍可能分别依赖于学习得到的模型 \(f_{1}(o, s)\) 和 \(f_{2}(o, s)\)。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-051.jpg?height=955&width=1060&top_left_y=149&top_left_x=235){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-051.jpg?height=955&width=1060&top_left_y=149&top_left_x=235){width="600"}
 
 图2.5 该服务质量（QoS）指标结合了时延的硬性截止约束与抖动的软性约束 [1]；此处我们取 \( w_{2} = 0.3 \)。
 

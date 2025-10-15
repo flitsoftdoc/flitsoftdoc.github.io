@@ -23,12 +23,12 @@
 
 认知系统（Cognitive System），或称智能体（Intelligent Agent），能够感知其所处环境，并采取行动以实现其目标，如图1.1所示。它能在更高层次上进行推理与理解，处理符号化和概念性信息，从而在复杂情境中做出准确决策。认知系统具备上下文感知能力（context awareness），能够应对不确定性，并自主进行判断。它们具有迭代性和交互性，并能从自身经验中学习。图1.2展示了认知循环（cognition loop）及其三个核心概念：
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=414&width=581&top_left_y=147&top_left_x=459){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=414&width=581&top_left_y=147&top_left_x=459){width="600"}
 
 
 **图1.1** 认知系统感知环境、对态势进行推理，并采取行动以达成目标。它通过与环境的交互进行学习。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=503&width=497&top_left_y=737&top_left_x=500){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=503&width=497&top_left_y=737&top_left_x=500){width="600"}
 
 
 **图1.2** 认知系统迭代地进行态势评估、规划并决策其行动，并从经验中学习。
@@ -40,7 +40,7 @@
 
 图1.3展示了上述三项功能，用以体现认知能力的逐级提升。一个简单的传统电子战（EW）系统利用电子支援（ES）识别已知信号，并基于信号库查表选择响应措施。每增加一项AI能力，系统的整体认知水平就相应提高。该布局也为评估和比较电子战系统能力提供了一种方法。霍恩（Horne）等人提出了一种认知映射方法，按记忆（memory）、前瞻能力（forethought）和算法复杂度（algorithmic sophistication）对DM组件进行细分[4]。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-019.jpg?height=678&width=1020&top_left_y=1329&top_left_x=237){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-019.jpg?height=678&width=1020&top_left_y=1329&top_left_x=237){width="600"}
 
 
 **图1.3** 根据图1.2所阐述的概念，各项AI功能共同促成认知能力的逐级提升。
@@ -82,7 +82,7 @@
 | 执行监控（Execution Monitoring） | 电子战毁伤评估（Electronic Warfare Battle Damage Assessment） |
 | 学习（Learning）                | 电子战重编程（Electronic Warfare Reprogramming）（涉及数据与软件） |
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-022.jpg?height=656&width=1159&top_left_y=149&top_left_x=166){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-022.jpg?height=656&width=1159&top_left_y=149&top_left_x=166){width="600"}
 
 
 **图1.4** AI的态势评估、决策与学习能力适用于所有电子战功能。
@@ -124,7 +124,7 @@
 
 > ¹ 另一种方案是为多个节点配备一个统一的认知控制器；虽然可减少协同问题，但会显著增加通信开销与延迟，且智能控制易受网络分区（network partitions）影响。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-026.jpg?height=421&width=1027&top_left_y=149&top_left_x=237){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-026.jpg?height=421&width=1027&top_left_y=149&top_left_x=237){width="600"}
 
 **图1.5** 在设计分布式认知电子战系统时，必须避免陷入彼得·多伊奇（Peter Deutsch）与詹姆斯·高斯林（James Gosling）于1994年提出的分布式计算八大经典谬误[17]。在电子战环境中，这些谬误尤为突出。
 
@@ -178,7 +178,7 @@ AI方法与传统方法应在同一平台上共存，各自承担与其优势相
 
 我们可以依据1.3节中所述的任一领域特性来评估一个问题是否适合采用AI。其中最具指示意义的是问题的**分布式程度**、**复杂性**和**动态性**。图1.6展示了这些维度，标示出决定何时传统方法已足够、何时必须采用基于AI方法的关键属性。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-029.jpg?height=667&width=1137&top_left_y=1287&top_left_x=180){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-029.jpg?height=667&width=1137&top_left_y=1287&top_left_x=180){width="600"}
 
 **图1.6** 问题领域的特性决定了AI是有用还是必需的。图1.3则将这些AI功能置于认知层级中，以展示认知能力的递进。
 
