@@ -1,6 +1,6 @@
 # Cognitive Electronic Warfare
 
-## an-Artificial-Intelligence-Approach
+## An Artificial Intelligence Approach
 
 ## 认知电子战 —— 一种人工智能方法
 
