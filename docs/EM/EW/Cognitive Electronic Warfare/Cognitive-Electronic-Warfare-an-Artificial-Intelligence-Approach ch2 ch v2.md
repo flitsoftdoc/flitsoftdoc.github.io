@@ -1,4 +1,4 @@
-# 2 目标函数（Objective Function）
+# 2 目标函数
 
 电子战（Electronic Warfare, EW）决策管理（Decision Management, DM）的挑战在于构建一种认知控制器，使其能够在高度动态的环境中自动维持近似最优的配置。每个DM问题都包含以下组成部分：
 
