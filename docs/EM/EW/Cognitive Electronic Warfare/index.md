@@ -1,4 +1,4 @@
-# Cognitive Electronic Warfare）
+# Cognitive Electronic Warfare
 
 ## 认知电子战 - 一种人工智能方法
 
@@ -30,7 +30,7 @@
 - **审慎性（Deliberative）**（目标导向）
 - **变革性（Transformative）**（自学习）
 
-![Article content](https://media.licdn.com/dms/image/v2/D5612AQEdRR4-Fpff4A/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1705343140483?e=1761782400&v=beta&t=smNNccZraTDlmtF-8K9lRrpV5nnFoz7aLJTj9GjueS4)
+![Article content](https://media.licdn.com/dms/image/v2/D5612AQEdRR4-Fpff4A/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1705343140483?e=1761782400&v=beta&t=smNNccZraTDlmtF-8K9lRrpV5nnFoz7aLJTj9GjueS4){width="500"}
 
 图1：认知系统是迭代的、交互的、审慎的和变革的。
 
@@ -40,7 +40,7 @@
 
 ![Article content](https://media.licdn.com/dms/image/v2/D5612AQFo_HqmIsGfwA/article-inline_image-shrink_1500_2232/B56ZUpCeRaHQAY-/0/1740150269747?e=1761782400&v=beta&t=HbIgyAAvVMenGZYLyuj6rDza7sFhaIG8_Enfqh1nxB4)
 
-图2：认知电子战系统通过引入电磁频谱知识来扩展认知系统。来源 [1]。
+图2：认知电子战系统通过引入电磁频谱知识来扩展认知系统。
 
 认知系统与AI增强系统的关键区别在于：认知系统**在部署后仍能学习**。
 
