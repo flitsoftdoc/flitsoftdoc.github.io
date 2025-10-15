@@ -308,14 +308,25 @@ v_{n k}(t) & =\left(w_{n k}(t), m_{n k}(t)\right) \\
 ## References
 
 [1] Haigh, K. Z., O. Olofinboba, and C. Y. Tang, "Designing an Implementable User-Oriented Objective Function for MANETs," in International Conference on Networking, Sensing and Control, IEEE, 2007.
+
 [2] Jouini, W., C. Moy, and J. Palicot, "Decision Making For Cognitive Radio Equipment: Analysis of the First 10 years of Exploration," EURASIP Journal on Wireless Communications and Networking, No. 26, 2012.
+
 [3] Arrow, K., "Decision Theory and Operations Research," Operations Research, Vol. 5, No. 6, 1957.
+
 [4] Roth, E., et al., "Designing Collaborative Planning Systems: Putting Joint Cognitive Systems Principles to Practice," in Cognitive Systems Engineering: A Future for a Changing World, Ashgate Publishing, 2017, Ch. 14.
+
 [5] Box, G., "Robustness in the Strategy of Scientific Model Building," in Robustness in Statistics, Academic Press, 1979.
+
 [6] Rokach, L., and O. Maimon, "Clustering Methods," in Data Mining and Knowledge Discovery Handbook, Springer, 2005.
+
 [7] Bair, E., "Semi-Supervised Clustering Methods," Wiley Interdisciplinary Reviews. Computational Statistics, Vol. 5, No. 5, 2013.
+
 [8] MacQueen, J., "Methods for Classification and Analysis of Multivariate Observations," in Berkeley Symposium on Mathematical Statistics and Probability, 1967.
+
 [9] Haigh, K. Z., S. Varadarajan, and C. Y. Tang, "Automatic Learning-Based MANET CrossLayer Parameter Configuration," in Workshop on Wireless Ad Hoc and Sensor Networks, IEEE, 2006.
+
 [10] Mostafa, S., M. Ahmad, and A. Mustapha, "Adjustable Autonomy: A Systematic Literature Review," Artificial Intelligence Review, No. 51, 2019.
+
 [11] US Army Headquarters, "Targeting," Department of the Army, Tech. Rep. ATP 3-60, 2015.
+
 [12] Moallemi, C., and B. Van Roy, "Consensus Propagation," Transactions on Information Theory, Vol. 52, No. 11, 2006.
