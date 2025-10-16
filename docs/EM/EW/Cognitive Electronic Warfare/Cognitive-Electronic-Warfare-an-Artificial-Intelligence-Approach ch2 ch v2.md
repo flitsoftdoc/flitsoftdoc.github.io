@@ -230,7 +230,7 @@ $$
 
 /// note | Callout 2.1 形式化问题定义
 
-形式化问题定义**：真实的效用函数（utility function）$\mathcal{U}$ 必须加以简化，以便在实践中可优化。
+形式化问题定义：真实的效用函数（utility function）$\mathcal{U}$ 必须加以简化，以便在实践中可优化。
 
 考虑一个包含 $N$ 个异构节点的电子战（Electronic Warfare, EW）系统。每个节点 $n \in N$ 具有以下内容：
 
