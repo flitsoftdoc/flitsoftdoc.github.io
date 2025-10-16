@@ -38,7 +38,7 @@ Department of Aeronautics and Astronautics, MIT
 | NSGA-II | 非支配排序遗传算法II（Non-dominated sorted genetic algorithm II） |
 | OISL | 光学星间链路（Optical Inter-satellite links） |
 | RHCP | 右旋圆极化（Right-handed circular polarization） |
-| TT\&C | 遥测、测控与指令（Telemetry, Tracking and Command） |
+| TT&C | 遥测、测控与指令（Telemetry, Tracking and Command） |
 
 ## 1. 引言
 
@@ -119,7 +119,7 @@ SpaceX的Ku+Ka频段星座 [19] 包含4,425颗卫星，这些卫星将分布在�
 
 每颗卫星均搭载先进的数字通信载荷，其中包含**相控阵天线（phased array）**，可实现每个波束的独立转向与成形。用户终端的最低仰角为$40^{\circ}$，单颗卫星的总吞吐量预计在17至23 Gbps之间，具体取决于用户终端特性。此外，卫星还配备**光学星间链路（OISL, Optical Inter-Satellite Link）**，以确保连续通信、支持海上服务并减轻干扰影响。
 
-地面段由三类组成部分构成：**测控站（TT\&C, Telemetry, Tracking and Command）**、网关天线和用户终端。其中，TT\&C站点数量较少，分布于全球范围，其天线口径为5米。网关与用户终端均采用**相控阵技术（phased array technology）**。SpaceX计划在全球范围内部署大量网关天线，这些天线将分布于靠近或与互联网互联节点（Internet peering points）共址的地点。
+地面段由三类组成部分构成：**测控站（TT&C, Telemetry, Tracking and Command）**、网关天线和用户终端。其中，TT&C站点数量较少，分布于全球范围，其天线口径为5米。网关与用户终端均采用**相控阵技术（phased array technology）**。SpaceX计划在全球范围内部署大量网关天线，这些天线将分布于靠近或与互联网互联节点（Internet peering points）共址的地点。
 
 SpaceX系统使用Ku频段进行用户通信，使用Ka频段进行网关通信。具体而言，$10.7–12.7\ \mathrm{GHz}$与$14.0–14.5\ \mathrm{GHz}$频段分别用于用户下行与上行通信；$17.8–19.3\ \mathrm{GHz}$与$27.5–30.0\ \mathrm{GHz}$频段分别用于网关下行与上行通信。
 
@@ -373,7 +373,7 @@ $$
 
 最终系统总吞吐量的计算方式依据星座是否具备卫星间链路（Inter-Satellite Links, ISL）而异：
 
-- **若不具备 ISL**：每颗卫星的吞吐量 $\left(\mathrm{TH}_{\text {sat }}\right)$ 按如下公式计算，其中 $\mathrm{d}_{\text {sat }}$ 为用户需求，$\sum_{i=0}^{N} R_{b_{\text {sat }}}^{G S}$ 表示N个性能最优地面站的数据速率之和。每种轨道位置和大气条件组合形成一个“场景”，共采样约1440万个样本。最终系统总前向容量通过对所有卫星的吞吐量求和得到。
+ **若不具备 ISL**：每颗卫星的吞吐量 $\left(\mathrm{TH}_{\text {sat }}\right)$ 按如下公式计算，其中 $\mathrm{d}_{\text {sat }}$ 为用户需求，$\sum_{i=0}^{N} R_{b_{\text {sat }}}^{G S}$ 表示N个性能最优地面站的数据速率之和。每种轨道位置和大气条件组合形成一个“场景”，共采样约1440万个样本。最终系统总前向容量通过对所有卫星的吞吐量求和得到。
 
 $$
 \begin{equation*}
@@ -381,7 +381,7 @@ $$
 \end{equation*}
 $$
 
-- **若具备 ISL**：则采用如下四步流程进行计算：
+**若具备 ISL**：则采用如下四步流程进行计算：
 
 1. 计算在所有可用馈送网关（feeder gateway）支持下的系统总前向容量；
 2. 对这些总容量求累积分布函数（CDF），将所有馈送网关容量总和排序；
@@ -563,7 +563,7 @@ SpaceX与Telesat将采用具有高度灵活性的数字有效载荷，既可用�
 ## References
 
 [1] Ashford, E.W., 2004. Non-Geo systems-where have all the satellites gone? Acta Astronautica, 55(3-9), pp.649-657.
-[2] Christensen, C. and Beard, S., 2001. Iridium: failures \& successes. Acta Astronautica, 48(5-12), pp.817-825.
+[2] Christensen, C. and Beard, S., 2001. Iridium: failures & successes. Acta Astronautica, 48(5-12), pp.817-825.
 [3] Sturza, M.A., 1995, February. The Teledesic Satellite System: Overview and design trades. In Proceedings of the Annual Wireless Symposium (pp. 402-409).
 [4] Patterson, D.P., 1998, March. Teledesic: a global broadband network. In Aerospace Conference, 1998 IEEE (Vol. 4, pp. 547-552). IEEE.
 [5] Leopold, R.J., 1992, November. The Iridium communications systems. In Singapore ICCS/ ISITA'92.'Communications on the Move' (pp. 451455). IEEE.
