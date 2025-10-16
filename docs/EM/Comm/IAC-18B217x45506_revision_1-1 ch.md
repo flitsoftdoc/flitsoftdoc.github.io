@@ -157,7 +157,7 @@ SpaceX系统使用Ku频段进行用户通信，使用Ka频段进行网关通信�
 
 图5展示了三种系统的频率分配情况。对于每个系统及频段，图中上方的线代表**右旋圆极化（RHCP, Right-Handed Circular Polarization）**，下方的线代表**左旋圆极化（LHCP, Left-Handed Circular Polarization）**。表2则比较了各系统在不同链路类型与频段下的波束数量、单波束带宽、总分配带宽以及频率复用因子（reuse factor）。每颗卫星的总带宽通过“波束带宽 × 频率复用因子”计算得出，该值依据单星数据速率估算。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-05.jpg?height=484&width=1627&top_left_y=2016&top_left_x=241){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-05.jpg?height=484&width=1627&top_left_y=2016&top_left_x=241){width="700"}
 
 图5. 三种卫星系统的频段分配。
 
@@ -180,7 +180,7 @@ Telesat的星座虽卫星较少，但其灵活的数字载荷设计可实现**�
 
 **表3：三种系统波束特性比较**
 
-![](https://cdn.mathpix.com/snip/images/yy5VD0BKBEGYxr4tW-gZthN4vr9F-NyDNJjrouBau6E.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/yy5VD0BKBEGYxr4tW-gZthN4vr9F-NyDNJjrouBau6E.original.fullsize.png){width="700"}
 
 
 在系统架构上，OneWeb采用**弯管式架构（bent-pipe architecture）**，其中16个用户下行信道各映射至一个Ka频段网关上行信道，返回方向同理。而SpaceX与Telesat的架构均具备**板载解调、路由与再调制能力（on-board demodulation, routing and re-modulation）**，可有效实现用户链路与网关链路的解耦。此设计带来以下优势：
@@ -196,7 +196,7 @@ c) 可通过频段选择降低干扰。
 
 由于三种系统所搭载的卫星载荷存在显著差异，各卫星波束在能力、形状及覆盖范围方面也存在明显不同。表3总结了三种系统的波束主要特性。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-06.jpg?height=388&width=749&top_left_y=1572&top_left_x=265){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-06.jpg?height=388&width=749&top_left_y=1572&top_left_x=265){width="700"}
 
 图6. (A) 三种系统中卫星飞越西班牙时的观测视场（Field of Regard）；(B) 卫星飞越纽约时的单个波束覆盖投影（由卫星视角所见）。
 
@@ -213,7 +213,7 @@ SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeabl
 
 **表4：OneWeb与SpaceX系统的发射特性**
 
-![](https://cdn.mathpix.com/snip/images/pg7Po9nBBkdGgF1_AVB5W_MTmVCOdEhR9ea9XyBhLE0.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/pg7Po9nBBkdGgF1_AVB5W_MTmVCOdEhR9ea9XyBhLE0.original.fullsize.png){width="500"}
 
 
 *注：数据为作者基于运载火箭载重与体积约束的估算。
@@ -259,7 +259,7 @@ SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeabl
 第3.4节讲述地面段优化方法；  
 第3.5节说明系统吞吐量的统计估算方法。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-07.jpg?height=408&width=790&top_left_y=1295&top_left_x=1092){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-07.jpg?height=408&width=790&top_left_y=1295&top_left_x=1092){width="500"}
 
 图7. 用于确定地面段位置并估算系统总吞吐量的方法概览。
 
@@ -424,7 +424,7 @@ $$
 
 需注意的是，实现对需求区的100%覆盖并不意味着可达最大系统容量，因为部分地面站可能因仰角过低而通信性能较差。反之，覆盖区域未达100%并不意味着系统吞吐量受限，因为卫星可通过ISL在星座内进行数据转发。因此，图11展示了三套系统中系统总吞吐量与地面站数量之间的关系。图中，实线表示平均值（随时间变化），阴影区域表示四分位带（即系统在25%-75%时间段内的吞吐范围）。Telesat与SpaceX分别考虑了5/10/20 Gbps的ISL数据速率，用橙色、绿色与蓝色表示；紫红色曲线代表无ISL配置。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-12.jpg?height=378&width=1663&top_left_y=227&top_left_x=238){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-12.jpg?height=378&width=1663&top_left_y=227&top_left_x=238){width="700"}
   
 图11. 系统总前向容量 vs 地面站位置数量：a) Telesat，b) SpaceX，c) OneWeb；d) 若OneWeb支持光学ISL（OISL）所达容量。括号内为每站点最多网关天线数。
 
@@ -446,7 +446,7 @@ $N_{G S}$：地面站数量。括号内为每站点最多网关天线数。$\dag
 - **波束早期饱和**：由于OneWeb缺乏动态资源分配能力，部分波束在整颗卫星未饱和前已被用尽，造成需求丢失；
 - **缺乏ISL链路**：没有ISL使得OneWeb卫星在地面站数量较少时难以将数据下传。从表7可知，若添加ISL，则在地面站数量为30、50和65的情况下，其系统总容量将分别比无ISL情形高出约10%、6%与1%。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-12.jpg?height=353&width=1245&top_left_y=2092&top_left_x=439){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-12.jpg?height=353&width=1245&top_left_y=2092&top_left_x=439){width="700"}
   
 图12. 系统总吞吐量 vs 网关天线数量：a) OneWeb，b) Telesat，c) SpaceX。
 
@@ -470,7 +470,7 @@ $N_{G S}$：地面站数量。括号内为每站点最多网关天线数。$\dag
 - 对Telesat而言，系统容量主要受网关天线数量驱动（在横轴方向吞吐量变化较小）；
 - 而对OneWeb，其吞吐量同时受天线数量与地面站位置数量影响。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-13.jpg?height=310&width=798&top_left_y=1485&top_left_x=1092){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-13.jpg?height=310&width=798&top_left_y=1485&top_left_x=1092){width="500"}
   
 图13. 系统容量 vs 地面站数量与网关天线数量：a) Telesat；b) OneWeb。
 
@@ -563,34 +563,63 @@ SpaceX与Telesat将采用具有高度灵活性的数字有效载荷，既可用�
 ## References
 
 [1] Ashford, E.W., 2004. Non-Geo systems-where have all the satellites gone? Acta Astronautica, 55(3-9), pp.649-657.
+
 [2] Christensen, C. and Beard, S., 2001. Iridium: failures & successes. Acta Astronautica, 48(5-12), pp.817-825.
+
 [3] Sturza, M.A., 1995, February. The Teledesic Satellite System: Overview and design trades. In Proceedings of the Annual Wireless Symposium (pp. 402-409).
+
 [4] Patterson, D.P., 1998, March. Teledesic: a global broadband network. In Aerospace Conference, 1998 IEEE (Vol. 4, pp. 547-552). IEEE.
+
 [5] Leopold, R.J., 1992, November. The Iridium communications systems. In Singapore ICCS/ ISITA'92.'Communications on the Move' (pp. 451455). IEEE.
+
 [6] Leopold, R.J., 1991, June. Low-earth orbit global cellular communications network. In Communications, 1991. ICC'91, Conference Record. IEEE International Conference on (pp. 1108-1111). IEEE.
+
 [7] Wiedeman, R., Salmasi, A. and Rouffet, D., 1992, September. Globalstar-Mobile communications where ever you are. In 14th International Communication Satellite Systems Conference and Exhibit (p. 1912).
+
 [8] Comparetto, G. and Hulkower, N., 1994. Global mobile satellite communications-A review of three contenders. In 15th International Communications Satellite Systems Conference and Exhibit (p. 1138).
+
 [9] Dumont, P., 1996. Low earth orbit mobile communication satellite systems: A two-year history since WARC-92. Acta Astronautica, 38(1), pp.69-73.
+
 [10] Evans, J.V., 1997. Satellite systems for personal communications. IEEE Antennas and Propagation Magazine, 39(3), pp.7-20.
+
 [11] Evans, J.V., 1998, March. Proposed US global satellite systems operating at Ka-band. In Aerospace Conference, 1998 IEEE (Vol. 4, pp. 525-537). IEEE.
+
 [12] Evans, J.V., 2000. The proposed Ku-band non geostationary communication satellite systems. Acta Astronautica, 47(2-9), pp.171-182.
+
 [13] Shaw, G.B., Miller, D.W. and Hastings, D.E., 1999. The generalized information network analysis methodology for distributed satellite systems (Doctoral dissertation, Massachusetts Institute of Technology, Dept. of Aeronautics and Astronautics).
+
 [14] Le May, S., Gehly, S., Carter, B.A. and Flegel, S., 2018. Space debris collision probability analysis for proposed global broadband constellations. Acta Astronautica.
+
 [15] Foreman, V.L., Siddiqi, A. and De Weck, O., 2017. Large Satellite Constellation Orbital Debris Impacts: Case Studies of OneWeb and SpaceX Proposals. In AIAA SPACE and Astronautics Forum and Exposition (p. 5200).
+
 [16] McLain, C. and King, J., 2017. Future Ku-Band Mobility Satellites. In 35th AIAA International Communications Satellite Systems Conference (p. 5412).
+
 [17] Telesat Canada, Telesat Ka-band NGSO constellation FCC filing SAT-PDR-20161115-00108, Available at http://licensing.fcc.gov/myibfs/forwardtopublictabacti
 on.do?file_number=SATPDR2016111500108 (2018/09/12).
+
 [18] WorldVu Satellites Limited, OneWeb Ka-band NGSO constellation FCC filing SAT-LOI-20160428-00041, Available at http://licensing.fcc.gov/myibfs/forwardtopublictabaction. do?file_number=SATLOI2016042800041 (2018/09/12).
+
 [19] Space Exploration Holdings, LLC, SpaceX Ka-band NGSO constellation FCC filing SAT-LOA-2016111500118, Available at http://licensing.fcc.gov/myibfs/forwardtopublictabacti on.do?file_number=SATLOA2016111500118 (2018/09/12).
+
 [20] WorldVu Satellites Limited, OneWeb Ka-band NGSO constellation expansion FCC filing SAT-MOD-20180319-00022, Available at http://licensing.fcc.gov/myibfs/forwardtopublictabaction. do?file_number=SATMOD2018031900022 (2018/09/12).
+
 [21] Hanson, W.A. ed., 2016. In their own words: OneWeb's Internet constellation as described in their FCC form 312 Application. New Space, 4(3), pp.153-167.
+
 [22] The Wall Street Journal, SoftBank to invest around $\$ 500$ million more in OneWeb satellite-Internet venture, Available at https://www.wsj.com/articles/ softbank-to-invest-around-500-million-more-in-oneweb-satellite-internet-venture-1512990003 (2018/09/12).
+
 [23] The New York Times, Google and Fidelity Put \$1 billion into SpaceX, Available at https://www.nytimes.com/2015/01/21/technology/google-makes-1-billion-investment-in-spacex.html (09/12/2018)
+
 [24] del Portillo, I., 2017, ITU-Rpy: A python implementation of the ITU-R P. Recommendations to compute atmospheric attenuation in slant and horizontal paths, GitHub, Available at https://github.com/iportillo/ITU-Rpy/
+
 [25] ITU, 2017, Propagation data and prediction methods required for the design of earth-space telecommunication systems, Recommendation ITU-R 618-13.
+
 [26] Digital Video Broadcasting (DVB), 2014, Second generation framing structure, channel coding and modulation systems for broadcasting; Part2: DVB-SE extensions (DBVS2X), Tech. Rep., 6.
+
 [27] C. CIESIN, 2005, Gridded population of the world version 4 (GPWv4): population density grids, Palisades, Socioeconomic Data and Applications Center (SEDAC), Columbia University.
+
 [28] del Portillo, I., Cameron, B. and Crawley, E., 2018, March. Ground segment architectures for large LEO constellations with feeder links in EHF-bands. In 2018 IEEE Aerospace Conference (pp. 1-14). IEEE.
+
 [29] Selva, D., Cameron, B. and Crawley, E., 2016. Patterns in system architecture decisions. Systems Engineering, 19(6), pp.477-497.
+
 [30] Deb K., Pratap A., Agarwal S., and Meyarivan T., 2002, A fast and elitist multiobjective genetic algorithm: NSGAII, Evolutionary Computation, IEEE Transactions on, vol. 6, no. 2, pp. 182-197.
 
