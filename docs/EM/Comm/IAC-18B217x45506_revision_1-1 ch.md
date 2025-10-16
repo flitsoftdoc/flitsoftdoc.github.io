@@ -1,4 +1,6 @@
-# 三种近地轨道卫星星座系统用于全球宽带通信的技术比较
+# 三种LEO通信星座的技术比较
+
+## A Technical Comparison of Three Low Earth Orbit Satellite Constellation Systems to Provide Global Broadband 
 
 Inigo del Portillo，Bruce G. Cameron，Edward F. Crawley 
 
