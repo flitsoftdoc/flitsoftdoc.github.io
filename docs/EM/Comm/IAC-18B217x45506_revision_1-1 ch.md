@@ -82,7 +82,8 @@ Department of Aeronautics and Astronautics, MIT
 
 Telesat的Ka频段星座 [17] 至少包括117颗卫星，分布于两组轨道：第一组为**极轨道（Polar Orbits）**，共6个圆形轨道平面，轨道高度为$1,000\ \mathrm{km}$，倾角$99.5^{\circ}$，每个平面至少12颗卫星；第二组为**倾斜轨道（Inclined Orbits）**，共5个圆形轨道平面，轨道高度$1,200\ \mathrm{km}$，倾角$37.4^{\circ}$，每个平面至少10颗卫星。极轨道提供全球覆盖，而倾斜轨道主要聚焦于人口密集区域。图1展示了Telesat星座，其中红色为极轨道卫星视场，蓝色为倾斜轨道卫星视场。用户的最低仰角为20°。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-03.jpg?height=506&width=524&top_left_y=1216&top_left_x=379)
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-03.jpg?height=506&width=524&top_left_y=1216&top_left_x=379){width="400"}
+
 图1. Telesat系统星座分布图。蓝色为倾斜轨道，红色为极轨道。
 
 相邻卫星之间（无论同轨道平面、相邻轨道平面或两组轨道间）通过**光学星间链路（OISL, Optical Inter-Satellite Link）**通信。借助交叉链路，用户即使在与网关不同时可见的情况下，也可接入系统。
@@ -97,7 +98,8 @@ Telesat星座下行使用Ka频段低端（17.8–20.2 GHz）共1.8 GHz带宽，�
 
 OneWeb的Ku+Ka频段星座 [18] 包含720颗卫星，分布在18个圆形轨道平面上，轨道高度$1,200\ \mathrm{km}$，倾角$87^{\circ}$。图2展示了OneWeb星座的轨道分布。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-03.jpg?height=497&width=500&top_left_y=1333&top_left_x=1238)
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-03.jpg?height=497&width=500&top_left_y=1333&top_left_x=1238){width="400"}
+
 图2. OneWeb系统星座分布图。
 
 每颗卫星采用**弯管式载荷（bent-pipe payload）**，配置16个相同的、不可转向的高椭圆用户波束。这些波束的覆盖确保任何用户均可在仰角大于55°的条件下与至少一颗卫星保持视距通信。此外，每颗卫星配备两副云台式可转向网关天线，其中一副为活动天线，另一副用于备份与切换。每个用户波束对应Ku频段单通道，并与Ka频段通道相映射。返回方向通道带宽为125 MHz，前向方向通道带宽为250 MHz。
@@ -111,7 +113,8 @@ OneWeb系统在用户通信中使用Ku频段，在网关通信中使用Ka频段�
 
 SpaceX的Ku+Ka频段星座 [19] 包含4,425颗卫星，这些卫星将分布在多组轨道上。核心星座将首先部署，由1,600颗卫星组成，均匀分布在32个轨道平面上，轨道高度为$1,150\ \mathrm{km}$，倾角$53^{\circ}$（蓝色）。其余2,825颗卫星将在第二阶段部署，具体分布如下：32个轨道平面，每个平面50颗卫星，轨道高度$1,110\ \mathrm{km}$，倾角$53.8^{\circ}$（橙色）；8个轨道平面，每个平面50颗卫星，轨道高度$1,130\ \mathrm{km}$，倾角$74^{\circ}$（洋红色）；5个轨道平面，每个平面75颗卫星，轨道高度$1,275\ \mathrm{km}$，倾角$81^{\circ}$（黑色）；6个轨道平面，每个平面75颗卫星，轨道高度$1,325\ \mathrm{km}$，倾角$70^{\circ}$（黄色）。图3展示了SpaceX大型星座的轨道分布。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-04.jpg?height=486&width=483&top_left_y=1642&top_left_x=398)
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-04.jpg?height=486&width=483&top_left_y=1642&top_left_x=398){width="400"}
+
 图3. SpaceX系统星座分布图。不同颜色代表不同组轨道。
 
 每颗卫星均搭载先进的数字通信载荷，其中包含**相控阵天线（phased array）**，可实现每个波束的独立转向与成形。用户终端的最低仰角为$40^{\circ}$，单颗卫星的总吞吐量预计在17至23 Gbps之间，具体取决于用户终端特性。此外，卫星还配备**光学星间链路（OISL, Optical Inter-Satellite Link）**，以确保连续通信、支持海上服务并减轻干扰影响。
@@ -144,7 +147,8 @@ SpaceX系统使用Ku频段进行用户通信，使用Ka频段进行网关通信�
 
 这些轨道布局的差异，再加上星座卫星总数差异较大，使得在任意地理位置处的**视距内卫星数量（LoS, Line of Sight）**平均值存在显著差异。为部分弥补这一劣势，卫星数量最少的Telesat系统选择以较低的最小仰角（$20^{\circ}$）运行，而SpaceX与OneWeb的最小仰角分别为$40^{\circ}$与$55^{\circ}$。较低仰角虽可提升可见卫星数量，但也可能导致更频繁的链路遮挡（如树叶、建筑物阻挡）及因大气衰减导致的通信中断。图4展示了基于FCC备案中最小仰角假设的，不同纬度下平均视距内卫星数量。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-05.jpg?height=464&width=750&top_left_y=1512&top_left_x=262)
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-05.jpg?height=464&width=750&top_left_y=1512&top_left_x=262){width="400"}
+
 图4. 不同纬度下视距内卫星数量。
 
 即便Telesat星座的卫星数量显著少于OneWeb，其在纬度范围$\pm60^{\circ}$内（全球人口最密集区域）的视距卫星数量反而更高。这是因为Telesat的最小仰角明显小于OneWeb（$20^{\circ}$ 对 $55^{\circ}$）。此外，当SpaceX系统全部部署完成后，地球上最密集的人口区域内可同时观测到超过20颗卫星。
@@ -153,7 +157,8 @@ SpaceX系统使用Ku频段进行用户通信，使用Ka频段进行网关通信�
 
 图5展示了三种系统的频率分配情况。对于每个系统及频段，图中上方的线代表**右旋圆极化（RHCP, Right-Handed Circular Polarization）**，下方的线代表**左旋圆极化（LHCP, Left-Handed Circular Polarization）**。表2则比较了各系统在不同链路类型与频段下的波束数量、单波束带宽、总分配带宽以及频率复用因子（reuse factor）。每颗卫星的总带宽通过“波束带宽 × 频率复用因子”计算得出，该值依据单星数据速率估算。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-05.jpg?height=484&width=1627&top_left_y=2016&top_left_x=241)
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-05.jpg?height=484&width=1627&top_left_y=2016&top_left_x=241){width="400"}
+
 图5. 三种卫星系统的频段分配。
 
 另一方面，Telesat系统仅使用Ka频段，因此**卫星-用户链路与卫星-地面链路需共享同一带宽**。得益于其数字载荷的灵活性，Telesat系统能够动态分配功率与带宽，以在用户与网关波束之间进行干扰抑制和资源优化。
@@ -175,7 +180,8 @@ Telesat的星座虽卫星较少，但其灵活的数字载荷设计可实现**�
 
 **表3：三种系统波束特性比较**
 
-![](https://cdn.mathpix.com/snip/images/yy5VD0BKBEGYxr4tW-gZthN4vr9F-NyDNJjrouBau6E.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/yy5VD0BKBEGYxr4tW-gZthN4vr9F-NyDNJjrouBau6E.original.fullsize.png){width="400"}
+
 
 在系统架构上，OneWeb采用**弯管式架构（bent-pipe architecture）**，其中16个用户下行信道各映射至一个Ka频段网关上行信道，返回方向同理。而SpaceX与Telesat的架构均具备**板载解调、路由与再调制能力（on-board demodulation, routing and re-modulation）**，可有效实现用户链路与网关链路的解耦。此设计带来以下优势：
 
@@ -190,7 +196,8 @@ c) 可通过频段选择降低干扰。
 
 由于三种系统所搭载的卫星载荷存在显著差异，各卫星波束在能力、形状及覆盖范围方面也存在明显不同。表3总结了三种系统的波束主要特性。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-06.jpg?height=388&width=749&top_left_y=1572&top_left_x=265)
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-06.jpg?height=388&width=749&top_left_y=1572&top_left_x=265){width="400"}
+
 图6. (A) 三种系统中卫星飞越西班牙时的观测视场（Field of Regard）；(B) 卫星飞越纽约时的单个波束覆盖投影（由卫星视角所见）。
 
 SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeable and steerable beams）**，而OneWeb仅采用固定波束。SpaceX与Telesat系统的波束形状为圆形，而OneWeb系统的波束为高度椭圆形。图6-A比较了三种系统的观测视场，图6-B显示了各系统波束的–3 dB覆盖轮廓。可见不同系统在单星与单波束覆盖面积上差异显著：  
@@ -206,7 +213,8 @@ SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeabl
 
 **表4：OneWeb与SpaceX系统的发射特性**
 
-![](https://cdn.mathpix.com/snip/images/pg7Po9nBBkdGgF1_AVB5W_MTmVCOdEhR9ea9XyBhLE0.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/pg7Po9nBBkdGgF1_AVB5W_MTmVCOdEhR9ea9XyBhLE0.original.fullsize.png){width="400"}
+
 
 *注：数据为作者基于运载火箭载重与体积约束的估算。
 
@@ -251,7 +259,8 @@ SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeabl
 第3.4节讲述地面段优化方法；  
 第3.5节说明系统吞吐量的统计估算方法。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-07.jpg?height=408&width=790&top_left_y=1295&top_left_x=1092)
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-07.jpg?height=408&width=790&top_left_y=1295&top_left_x=1092){width="400"}
+
 图7. 用于确定地面段位置并估算系统总吞吐量的方法概览。
 
 ### 3.1 大气模型（Atmospheric Models）
@@ -265,7 +274,8 @@ SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeabl
 
 例如，图8展示了波士顿地区在不同频段下的总大气衰减。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-08.jpg?height=478&width=743&top_left_y=393&top_left_x=1095)
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-08.jpg?height=478&width=743&top_left_y=393&top_left_x=1095){width="400"}
+
 图8. 波士顿地区不同频段的大气衰减CDF（左图为对数刻度）。
 
 ### 3.2 链路预算模型（Link Budget Model）
@@ -277,7 +287,8 @@ SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeabl
 **表5：三种系统上行链路（Ka频段上段）波束链路预算**  
 （考虑不同距离与仰角，99.5%可用性条件下的大气衰减值）
 
-![](https://cdn.mathpix.com/snip/images/bBVghEqZaXnlQInx0v7i0P70eJWJoate0vl8VAb_LTU.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/bBVghEqZaXnlQInx0v7i0P70eJWJoate0vl8VAb_LTU.original.fullsize.png){width="400"}
+
 
 \* 数据取自FCC备案文件，其余参数通过链路预算公式估算。  
 Tx表示发射参数，Rx表示接收参数，$\mathrm{G}/\mathrm{T}$为天线的增益噪声温度比（gain-to-noise temperature factor）。
@@ -287,7 +298,8 @@ Tx表示发射参数，Rx表示接收参数，$\mathrm{G}/\mathrm{T}$为天线�
 **表6：三种系统用户下行链路波束链路预算**  
 （在波束边缘计算，99%可用性条件下的大气衰减）
 
-![](https://cdn.mathpix.com/snip/images/U0Jjab8CfkDX_PY0q28z92ZZ7K14RCJjxwPurdCX3hk.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/U0Jjab8CfkDX_PY0q28z92ZZ7K14RCJjxwPurdCX3hk.original.fullsize.png){width="400"}
+
 
 此外，假设**固态高功率放大器（HPA, High Power Amplifier）**的输出后退功率（Output Back-Off）等于对应MODCOD的峰均功率比（PAPR, Peak-to-Average Power Ratio，即99.9百分位功率与平均功率之比），以避免饱和失真。
 
@@ -308,7 +320,8 @@ d_{s a t}=\min \left(\mathrm{pop} \cdot 0.1 \cdot 300 k b p s / n_{F O V}, \math
 \end{equation*}
 $$
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-09.jpg?height=448&width=755&top_left_y=482&top_left_x=1108)  
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-09.jpg?height=448&width=755&top_left_y=482&top_left_x=1108){width="400"}
+  
 图9. 不同轨道位置的用户需求数据速率。
 
 图9显示了OneWeb星座的需求数据速率。高需求区域以亮色显示，低需求区域为暗色，无需求区域则不着色。
@@ -403,14 +416,16 @@ $$
 
 本节展示两方面的结果：(a) 每个系统的地面段需求；(b) 总系统吞吐量分析。如第3.3节所述，该吞吐量结果对应的是前向方向上最大可销售容量的上限估计。在以下结果中，我们使用“地面站”指代部署一个或多个馈送天线的站点，“网关天线”指的是实际安装在站点上的抛物面天线。值得注意的是，每个地面站的网关天线数量受到限制，因为不同天线之间必须保持最小角度间隔以避免干扰。根据三套系统在FCC文件中披露的最小角间距数据，每个站点的最大天线数量可设为50（前提是高度协调运行以避免干扰）。更为现实的设定是每站点最多30副天线。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-11.jpg?height=405&width=771&top_left_y=753&top_left_x=1100)  
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-11.jpg?height=405&width=771&top_left_y=753&top_left_x=1100){width="400"}
+  
 图10. 地面站位置数量 vs 覆盖需求区域的比例。
 
 图10展示了三套系统中，地面站位置数量与其覆盖的用户需求区域之间的帕累托前沿关系。可见，OneWeb系统需要61个地面站以实现全面覆盖；而Telesat与SpaceX系统即使部署所有地面站也无法实现对全部需求区域的覆盖。这是由于其卫星视场（FoR）较大，即便某轨位下卫星FoR内有人口，其仰角可能过低而无法在95%时间内完成链路建立。然而，Telesat与SpaceX无需实现100%覆盖，因为其ISL可以将数据转发至处于覆盖区内的卫星。
 
 需注意的是，实现对需求区的100%覆盖并不意味着可达最大系统容量，因为部分地面站可能因仰角过低而通信性能较差。反之，覆盖区域未达100%并不意味着系统吞吐量受限，因为卫星可通过ISL在星座内进行数据转发。因此，图11展示了三套系统中系统总吞吐量与地面站数量之间的关系。图中，实线表示平均值（随时间变化），阴影区域表示四分位带（即系统在25%-75%时间段内的吞吐范围）。Telesat与SpaceX分别考虑了5/10/20 Gbps的ISL数据速率，用橙色、绿色与蓝色表示；紫红色曲线代表无ISL配置。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-12.jpg?height=378&width=1663&top_left_y=227&top_left_x=238)  
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-12.jpg?height=378&width=1663&top_left_y=227&top_left_x=238){width="400"}
+  
 图11. 系统总前向容量 vs 地面站位置数量：a) Telesat，b) SpaceX，c) OneWeb；d) 若OneWeb支持光学ISL（OISL）所达容量。括号内为每站点最多网关天线数。
 
 从图中可以看出，OneWeb、Telesat 和 SpaceX 星座的最大总系统吞吐量分别为 1.56 Tbps、2.66 Tbps 和 23.7 Tbps。此外，SpaceX 是最受益于 ISL 的系统，同时也是为了达到最大容量所需地面站数量最多的系统（共123个），这与其庞大的星座规模有关。值得注意的是，尽管OneWeb的最大容量较低，但其所需地面站数量（71）却高于Telesat（42）。图11(d)展示了如果OneWeb添加ISL后（每星配置4条ISL，其中2条轨道面内，2条跨面），其地面段需求显著下降。即使ISL数据速率仅为5 Gbps，系统也能仅用27个地面站实现最优性能。
@@ -419,7 +434,8 @@ $$
 
 表7：不同地面站/网关配置下的系统总吞吐量估计（Tbps）
 
-![](https://cdn.mathpix.com/snip/images/HPYt5J8_kLqKBbgNKqU-3uumI7XfipwMGJLWvRDwN5M.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/HPYt5J8_kLqKBbgNKqU-3uumI7XfipwMGJLWvRDwN5M.original.fullsize.png){width="400"}
+
 
 $N_{G S}$：地面站数量。括号内为每站点最多网关天线数。$\dagger$ 为假设性场景（因OneWeb系统无ISL）。
 
@@ -430,14 +446,16 @@ $N_{G S}$：地面站数量。括号内为每站点最多网关天线数。$\dag
 - **波束早期饱和**：由于OneWeb缺乏动态资源分配能力，部分波束在整颗卫星未饱和前已被用尽，造成需求丢失；
 - **缺乏ISL链路**：没有ISL使得OneWeb卫星在地面站数量较少时难以将数据下传。从表7可知，若添加ISL，则在地面站数量为30、50和65的情况下，其系统总容量将分别比无ISL情形高出约10%、6%与1%。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-12.jpg?height=353&width=1245&top_left_y=2092&top_left_x=439)  
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-12.jpg?height=353&width=1245&top_left_y=2092&top_left_x=439){width="400"}
+  
 图12. 系统总吞吐量 vs 网关天线数量：a) OneWeb，b) Telesat，c) SpaceX。
 
 如前所述，OneWeb系统的主要性能瓶颈在于卫星至用户的下行链路，这也是其整体性能偏低的根本原因。表8展示了各星座在前向链路方向上，平均及峰值每颗卫星的数据速率，分别考虑网关至卫星与卫星至用户的链路。Telesat与SpaceX均配备数字有效载荷（支持解调与再调制），因此这两部分链路可独立评估。三者间的平均数据速率差异显著：Telesat由于使用双网关天线，其卫星平均速率接近36 Gbps；SpaceX约为20 Gbps（FCC报告中为17-23 Gbps [19]）；OneWeb为8.8 Gbps（此前报告为每星8 Gbps）。这种差异主要源于系统瓶颈不同：Telesat与SpaceX受限于网关上行链路，而OneWeb受限于用户下行链路。前两者大部分时间可采用最高效MODCOD（256APSK），而OneWeb的用户链路最多支持32-APSK。
 
 表8：每颗卫星最大与平均数据速率估计
 
-![](https://cdn.mathpix.com/snip/images/5ok35bz6wuR64j3FJaB1NDHtBWOnxheO0RErlgxXqs8.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/5ok35bz6wuR64j3FJaB1NDHtBWOnxheO0RErlgxXqs8.original.fullsize.png){width="400"}
+
 
 
 如果我们参考图12中展示的“网关天线数量 vs 吞吐量”分析，可以观察到，为支持最大系统总吞吐量，三大星座所需的网关天线数量分别为：SpaceX为3,500（假设ISL数据率为20 Gbps）、Telesat为220（ISL为10 Gbps）、OneWeb为800。正如预期，这一数量高度依赖于卫星数量。从图中可以得出两个主要结论：
@@ -452,7 +470,8 @@ $N_{G S}$：地面站数量。括号内为每站点最多网关天线数。$\dag
 - 对Telesat而言，系统容量主要受网关天线数量驱动（在横轴方向吞吐量变化较小）；
 - 而对OneWeb，其吞吐量同时受天线数量与地面站位置数量影响。
 
-![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-13.jpg?height=310&width=798&top_left_y=1485&top_left_x=1092)  
+![](https://cdn.mathpix.com/cropped/2025_10_16_145aa8e48df725b6322ag-13.jpg?height=310&width=798&top_left_y=1485&top_left_x=1092){width="400"}
+  
 图13. 系统容量 vs 地面站数量与网关天线数量：a) Telesat；b) OneWeb。
 
 最后，表9汇总了本文中展示的主要结果。比较这三套系统的效率（即每颗卫星的平均吞吐量 vs 最大吞吐量）颇具意义。从这一角度来看，Telesat的效率最高：每颗卫星平均22.74 Gbps，占其最大单星速率的 $58.8\%$；SpaceX与OneWeb分别为5.36 Gbps和2.17 Gbps（占最大值的 $25.1\%$ 和 $21.7\%$）。Telesat之所以具有更高效率，主要得益于两个架构性设计决策：
@@ -468,7 +487,8 @@ $N_{G S}$：地面站数量。括号内为每站点最多网关天线数。$\dag
 
 表9：三套系统结果汇总
 
-![](https://cdn.mathpix.com/snip/images/S6i65V6Ov2Y2eVYawmlNiOpqgEK0tGmJdS6HJWhlwQ0.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/S6i65V6Ov2Y2eVYawmlNiOpqgEK0tGmJdS6HJWhlwQ0.original.fullsize.png){width="400"}
+
 
 ---
 
