@@ -17,7 +17,7 @@ PATRIOT: The Cornerstone of Western Air \& Missile Defense
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-05.jpg?height=2700&width=2078&top_left_y=116&top_left_x=0){width="200"}
 
-
+<!-- more -->
 MIM-104“爱国者”是美国陆军空中与导弹防御（Air and Missile Defense, AMD）的主力系统。该系统于1980年代中期服役，用于替代陆军的MIM-23“HAWK”导弹与Nike Hercules导弹系统。
 
 爱国者的主要任务是防御敌方航空器、巡航导弹和部分弹道导弹。虽然其主要面向对抗依靠空气作为助燃介质推进的目标（Air Breathing Threats, ABTs），但其对战术弹道导弹（Tactical Ballistic Missiles, TBMs）的拦截能力也构成了对陆军末段高空区域防御系统（THAAD）提供的“上层防御”的有效补充。
