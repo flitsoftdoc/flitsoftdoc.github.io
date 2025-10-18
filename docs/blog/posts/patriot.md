@@ -285,7 +285,7 @@ PAC-3导弹的第三个变体是PAC-3导弹段增强型（Missile Segment Enhanc
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-09.jpg?height=1398&width=1835&top_left_y=116&top_left_x=2183)
 
-### 不足之处
+## 不足之处
 
 尽管“爱国者”是西方最先进的防空与导弹防御系统之一，但它仍存在若干限制与不足。
 

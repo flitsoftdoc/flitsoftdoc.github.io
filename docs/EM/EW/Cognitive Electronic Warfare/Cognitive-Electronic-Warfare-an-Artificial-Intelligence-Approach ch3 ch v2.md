@@ -1,4 +1,4 @@
-# 3 机器学习入门（Machine Learning Primer）
+# 3 机器学习入门
 
 人工智能（Artificial Intelligence, AI）是计算机科学中的一个领域，融合了数学、工程学和神经科学。图3.1展示了AI众多子领域中的一部分。机器学习（Machine Learning, ML）只是AI的众多子领域之一，而人工神经网络（Artificial Neural Networks, ANNs）则是机器学习中众多技术家族之一。
 
@@ -194,66 +194,129 @@ AI 包含众多子领域，涵盖态势评估（situation assessment）和决策
 ## References
 
 [1] Russell, S., and P. Norvig, Artificial Intelligence: A Modern Approach, Pearson Education, 2015.
+
 [2] Burkov, A., The Hundred-Page Machine Learning Book, Andriy Burkov, 2019.
+
 [3] Hastie, T., R. Tibshirani, and J. Friedman, The Elements of Statistical Learning, Springer, 2009.
+
 [4] Vink, J., and G. de Haan, "Comparison of Machine Learning Techniques for Target Detection," Artificial Intelligence Review, Vol. 43, No. 1, 2015.
+
 [5] Kulin, M., et al., "End-to-End Learning from Spectrum Data," IEEE Access, Vol. 6, 2018.
+
 [6] Cristianini, N., and J. Shawe-Taylor, An Introduction to Support Vector Machines and other Kernel-based Learning Methods, Cambridge University Press, 2000.
+
 [7] Schölkopf, B., and A. Smola, Learning with Kernels: Support Vector Machines, Regularization, Optimization, and Beyond, MIT Press, 2002.
+
 [8] Support vector machines, Accessed: 2020-03-21. Online: https:// scikit-learn.org/stable/modules/svm.html.
+
 [9] Üstün, B., W. Melssen, and L. Buydens, "Facilitating the Application of Support Vector Regression by Using a Universal Pearson VII Function-Based Kernel," Chemometrics and Intelligent Laboratory Systems, Vol. 81, No. 1, 2006.
+
 [10] McCulloch, W., and W. Pitts, "A Logical Calculus of Ideas Immanent in Nervous Activity," Bulletin of Mathematical Biophysics, Vol. 5, No. 4, 1943.
+
 [11] Rosenblatt, F., "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain," Psychological Review, Vol. 65, 1958.
+
 [12] Werbos, P., Beyond Regression: New Tools for Prediction and Analysis in the Behavioral Sciences, Harvard University, 1975.
+
 [13] LeCun, Y., Y. Bengio, and G. Hinton, "Deep Learning," Nature, Vol. 521, 2015.
+
 [14] Goodfellow, I., Y. Bengio, and A. Courville, Deep Learning, MIT Press, 2016.
+
 [15] LeCun, Y., et al., "Gradient-Based Learning Applied to Document Recognition," Proceedings of the IEEE, Vol. 86, No. 11, 1998.
+
 [16] Khan, A., et al., "A Survey of the Recent Architectures of Deep Convolutional Neural Networks," Artificial Intelligence Review, Vol. 53, 2020.
+
 [17] Rumelhart, D., et al., "Schemata and Sequential Thought Processes in PDP Models," Parallel Distributed Processing: Explorations in the Microstructures of Cognition, Vol. 2, 1986.
+
 [18] Miljanovic, M., "Comparative Analysis of Recurrent and Finite Impulse Response Neural Networks in Time Series Prediction," Indian Journal of Computer Science and Engineering, Vol. 3, No. 1, 2012.
+
 [19] Baevski, A., et al., wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations, 2020. Online: https://arxiv.org/abs/2006.11477.
+
 [20] Kingma, D., and M. Welling, "An Introduction to Variational Autoencoders," Foundations and Trends in Machine Learning, Vol. 12, No. 4, 2019.
+
 [21] Chicco, D., "Siamese Neural Networks: An Overview," in Artificial Neural Networks, Springer, 2020.
+
 [22] Amini, A., et al., "Deep Evidential Regression," in NeurIPS, 2020.
+
 [23] Culurciello, E., Analysis of Deep Neural Networks, Accessed 2020-10-06, 2018. Online: https://tinyurl.com/medium-anns.
+
 [24] Culurciello, E., Neural Network Architectures, Accessed 2020-10-06, 2017. Online: https:// tinyurl.com/tds-anns-2018.
+
 [25] Canziani, A., A. Paszke, and E. Culurciello, "An Analysis of Deep Neural Network Models for Practical Applications," in CVPR, IEEE, 2016.
+
 [26] Majumder, U., E. Blasch, and D. Garren, Deep Learning for Radar and Communications Automatic Target Recognition, Norwood, MA: Artech House, 2020.
+
 [27] Bauer, E., and R. Kohavi, "An Empirical Comparison of Voting Classification Algorithms: Bagging, Boosting, and Variants," Machine Learning, Vol. 36, 1999.
+
 [28] Sagi, O., and L. Rokach, "Ensemble Learning: A Survey," Data Mining and Knowledge Discovery, Vol. 8, No. 4, 2018.
+
 [29] Ardabili, S., A. Mosavi, and A. Várkonyi-Kóczy, "Advances in Machine Learning Modeling Reviewing Hybrid and Ensemble Methods," in Engineering for Sustainable Future, InterAcademia, 2020.
+
 [30] Dogan, A., and D. Birant, "A Weighted Majority Voting Ensemble Approach for Classification," in Computer Science and Engineering, 2019.
+
 [31] Abbasi, M., et al., "Toward Adversarial Robustness by Diversity in an Ensemble of Specialized Deep Neural Networks," in Canadian Conference on AI, 2020.
+
 [32] Tramèr, F., et al., "Ensemble Adversarial Training: Attacks and Defenses," in ICLR, 2018.
+
 [33] Aha, D., "Integrating Machine Learning with Knowledge-Based Systems," in New Zealand International Two-Stream Conference on Artificial Neural Networks and Expert Systems, 1993.
+
 [34] Mao, J., et al., "The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences from Natural Supervision," in ICLR, 2019.
+
 [35] Haigh, K. Z. ,S. Varadarajan, and C. Y. Tang, "Automatic Learning-Based MANET CrossLayer Parameter Configuration," in Workshop on Wireless Ad hoc and Sensor Networks, IEEE, 2006.
+
 [36] Towell, G., and J. Shavlik, "Knowledge-Based Artificial Neural Networks," Artificial Intelligence, Vol. 70, No. 1, 1994.
+
 [37] T. Yu, S. Simoff, and D. Stokes, "Incorporating Prior Domain Knowledge into a Kernel Based Feature Selection Algorithm," in Pacific-Asia Conference on Knowledge Discovery and Data Mining, 2007.
+
 [38] Muralidhar, N., et al., "Incorporating Prior Domain Knowledge into Deep Neural Networks," in International Conference on Big Data, 2018.
+
 [39] Agrell, C., et al., "Pitfalls of Machine Learning for Tail Events in High Risk Environments," in Safety and Reliability—Safe Societies in a Changing World, 2018.
+
 [40] d'Avila Garcez, A., et al., "Neural-Symbolic Computing: An Effective Methodology for Principled Integration of Machine Learning and Reasoning," Journal of Applied Logics, Vol. 6, No. 4, 2019.
+
 [41] Workshop Series on Neural-Symbolic Integration, Accessed 2020-07-23. Online: http://www. neural-symbolic.org/.
+
 [42] Haigh, K. Z., et al., "Parallel Learning and Decision Making for a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.
+
 [43] Mattei, E., et al., "Feature Learning for Enhanced Security in the Internet of Things," in Global Conference on Signal and Information Processing, IEEE, 2019.
+
 [44] Robyns, P., et al., "Physical-Layer Fingerprinting of LoRa Devices Using Supervised and Zero-Shot Learning," in Conference on Security and Privacy in Wireless and Mobile Networks, 2017.
+
 [45] Tokmakov, P., Y.-X. Wang, and M. Hébert, "Learning Compositional Representations For Few-Shot Recognition," in CVPR, IEEE, 2019.
+
 [46] Wang, W., et al., "A Survey of Zero-Shot Learning: Settings, Methods, and Applications," ACM Transactions on Intelligent Systems and Technology, Vol. 10, No. 12, 2019.
+
 [47] Geng, C., S.-J. Huang, and S. Chen, "Recent Advances in Open Set Recognition: A Survey," IEEE Transactions on Pattern Analysis and Machine Intelligence, 2020.
+
 [48] Cao, A., Y. Luo, and D. Klabjan, Open-Set Recognition with Gaussian Mixture Variational Autoencoders, 2020. Online: https://arxiv.org/abs/2006.02003.
+
 [49] Brazdil, P., and C. Giraud-Carrier, "Meta Learning and Algorithm Selection: Progress, State of the Art and Introduction to the 2018 Special Issue," Machine Learning, Vol. 107, 2018.
+
 [50] Schaul, T., and J. Schmidhuber, Metalearning, Scholarpedia, 2010. doi:10.4249/ scholarpedia. 4650.
+
 [51] Finn, C., P. Abbeel, and S. Levine, Model-agnostic Meta-Learning for Fast Adaptation of Deep Networks, 2017. Online: https://arxiv.org/ abs/1703.03400.
+
 [52] Hospedales, T., et al., Meta-Learning in Neural Networks: A Survey, 2020. Online: https:// arxiv.org/abs/2004.05439.
+
 [53] Principe, J., et al., "Learning from Examples with Information Theoretic Criteria," VLSI Signal Processing-Systems for Signal, Image, and Video Technology, Vol. 26, 2000.
+
 [54] Santurkar, S., et al., How Does Batch Normalization Help Optimization? 2019. Online: https://arxiv.org/abs/1805.11604.
+
 [55] Barbu, A., and S.-C. Zhu, Monte Carlo Methods, Springer, 2020.
+
 [56] Chaudhari, P., et al., "Entropy-SGD: Biasing Gradient Descent into Wide Valleys," in ICLR, 2017.
+
 [57] Page, S., The Many Model Thinker, Hachette, 2018.
+
 [58] Wolpert, D., "The Lack of A Priori Distinctions Between Learning Algorithms," Neural Computation, 1996.
+
 [59] Rizk, H., A. Shokry, and M. Youssef, Effectiveness of Data Augmentation in Cellular-Based Localization Using Deep Learning, 2019. Online: https://arxiv.org/abs/1906.08171.
+
 [60] Shi, Y., et al., "Deep Learning for RF Signal Classification in Unknown and Dynamic Spectrum Environments," in International Symposium on Dynamic Spectrum Access Networks, IEEE, 2019.
+
 [61] Shorten, C., and T. Khoshgoftaar, "A Survey on Image Data Augmentation for Deep Learning," Big Data, Vol. 6, No. 60, 2019.
+
 [62] Sinha, R., et al., "Data Augmentation Schemes for Deep Learning in an Indoor Positioning Application," Electronics, Vol. 8, No. 554, 2019.
+
 [63] Xie, F., et al., "Data Augmentation for Radio Frequency Fingerprinting via Pseudo-Random Integration," IEEE Transactions on Emerging Topics in Computational Intelligence, Vol. 4, No. 3, 2020.
+
 [64] Lim, T.-S., W.-Y. Loh, and Y.-S. Shih, "A Comparison of Prediction Accuracy, Complexity, and Training Time of Thirty-Three Old and New Classification Algorithms," Machine Learning, Vol. 40, 2000.
