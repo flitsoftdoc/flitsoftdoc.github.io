@@ -201,6 +201,7 @@ c) 可通过频段选择降低干扰。
 图6. (A) 三种系统中卫星飞越西班牙时的观测视场（Field of Regard）；(B) 卫星飞越纽约时的单个波束覆盖投影（由卫星视角所见）。
 
 SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeable and steerable beams）**，而OneWeb仅采用固定波束。SpaceX与Telesat系统的波束形状为圆形，而OneWeb系统的波束为高度椭圆形。图6-A比较了三种系统的观测视场，图6-B显示了各系统波束的–3 dB覆盖轮廓。可见不同系统在单星与单波束覆盖面积上差异显著：  
+
 - OneWeb单波束覆盖面积约为$75,000\ \mathrm{km^2}$；  
 - SpaceX单波束覆盖面积约为$2,800\ \mathrm{km^2}$；  
 - Telesat的可变形波束覆盖范围可动态调节，在$960\ \mathrm{km^2}$（图6-B中Telesat最小值）至$246,000\ \mathrm{km^2}$（图6-B中Telesat最大值）之间。
@@ -233,6 +234,7 @@ SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeabl
 在融资与卫星制造策略方面，三家公司采取了不同路径。
 
 **OneWeb**建立了股权合作体系，其主要股东包括：Qualcomm（20.17%）、软银（SoftBank, 19.98%）与空中客车（Airbus, 13.34%）等 [21]。各合作方在系统设计中承担不同角色：  
+
 - Airbus负责卫星制造；  
 - Qualcomm提供用户终端基站；  
 - Hughes Network Systems提供网关设备。  
@@ -269,6 +271,7 @@ SpaceX与Telesat的卫星均具备**可独立成形与可转向波束（shapeabl
 
 本研究实现了国际电信联盟（**ITU, International Telecommunication Union**）的斜路径大气衰减模型 [24]，遵循建议书**ITU-R P.618-13** [25]的指导方针，综合考虑气体吸收、云层、水汽闪烁和降雨等影响。这些建议给出了各种衰减因素在超过特定时间百分比下的值，即形成大气衰减贡献的**累积分布函数（CDF, Cumulative Distribution Function）**。  
 具体而言：  
+
 - **ITU-R P.676-11** 与 **ITU-R P.840-7** 用于计算气体与云层衰减；  
 - **ITU-R P.837-6**、**ITU-R P.838-3**、**ITU-R P.839-4** 提供了降雨率、雨衰减系数及雨层高度的全球分布图。  
 
