@@ -9,7 +9,7 @@ slug: Patriot
 
 # “爱国者”：西方空天导弹防御的基石
 
-PATRIOT: The Cornerstone of Western Air \& Missile Defense
+PATRIOT: The Cornerstone of Western Air & Missile Defense
 
 2022年2月24日，俄罗斯发动了自二战以来欧洲最大、最致命的战争。它动用了其弹道导弹与巡航导弹武器库，打击乌克兰的目标，包括空军基地、电厂及其他民用基础设施。由于防空形势不断恶化以及乌克兰SA-10库存有限，美国于2022年12月宣布向乌克兰转移一套“爱国者”（Patriot）导弹系统。在与美国密切磋商后，德国和荷兰也于2023年1月宣布，将分别向乌克兰提供一套爱国者系统。
 
@@ -42,7 +42,7 @@ MIM-104“爱国者”是美国陆军空中与导弹防御（Air and Missile Def
 雷达系统（RS）可以是AN/MPQ-53或升级后的AN/MPQ-65雷达。目前，大多数（如果不是全部）美军连队已换装为AN/MPQ-65。该多功能雷达是整个连的“眼睛”，负责探测与跟踪来袭的ABT与TBM目标，并引导爱国者导弹进行拦截。雷达的搜索视野为120度，探测距离约为180至200公里。
 
 发射装置（LS）即导弹发射器，主要有三种型号：
-  
+
 - M901：可搭载PAC-1与PAC-2导弹  
 - M902：可搭载PAC-1、PAC-2与PAC-3 CRI导弹  
 - M903：可搭载以上所有型号及新型PAC-3 MSE导弹  
@@ -77,7 +77,7 @@ LS通常有三种部署方式，分别用于对抗不同威胁类型：本地发
 
 在本地LS部署方式中，LS部署于RS前方，距离在130米至1,200米之间，适合拦截弹道导弹与空中威胁。常见的“Lazy W”阵型即属此类（图3）。
 
-![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=829&width=823&top_left_y=1866&top_left_x=2246)  
+![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=829&width=823&top_left_y=1866&top_left_x=2246){width="400"} 
 图3. “Lazy W”发射阵型
 
 
@@ -88,7 +88,7 @@ RL-3部署中，LS可远至30公里，适用于TBM防御。该模式中，LS集�
 此外还有其他阵型，例如2019年Aramco袭击后考虑的“Flying V”阵型。驻日爱国者部队还尝试“加权式”部署，即将LS部署至STL区域内，以提升对多方向威胁的覆盖能力（见图4）。
 
 
-![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=829&width=840&top_left_y=1866&top_left_x=3147)  
+![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=829&width=840&top_left_y=1866&top_left_x=3147){width="400"} 
 图4. “Flying V”发射阵型
 
 
@@ -107,7 +107,7 @@ RL-3部署中，LS可远至30公里，适用于TBM防御。该模式中，LS集�
 
 因此，部署在LD处的初始连队可为前出连队提供保护，该方式被称为“掩护跃进”（Bounding Overwatch）或“跳跃前进”（Leapfrogging）。一旦前沿连队部署完毕并投入运行，LD连队则前移至下一前沿阵地，以此类推直至任务完成（见图5）。
 
-![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-03.jpg?height=829&width=861&top_left_y=674&top_left_x=2193)  
+![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-03.jpg?height=829&width=861&top_left_y=674&top_left_x=2193){width="400"} 
 图5. “跳跃前进”部署法
 
 
@@ -115,8 +115,8 @@ RL-3部署中，LS可远至30公里，适用于TBM防御。该模式中，LS集�
 
 防御部署中，爱国者连可采取多种阵型，取决于威胁类型与资源可用性，主要阵型包括：收敛型主目标线（Convergent PTLs）、平行型PTLs与发散型PTLs（见图6–8）。
 
-![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-03.jpg?height=2580&width=871&top_left_y=126&top_left_x=3132)  
-图6–8. 连队部署阵型示意
+![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-03.jpg?height=2580&width=871&top_left_y=126&top_left_x=3132){width="400"} 
+图6–8. 连级部署阵型示意
 
 在对抗ABT与TBM威胁时，最佳部署方式为收敛型PTL阵型。该阵型可实现火力互为支援、纵深防御及有效交叠，但牺牲了一定的覆盖范围。当任务需要更大覆盖面积、兵力不足以支持收敛阵型、或存在多方向攻击威胁时，可采用平行或发散型PTL部署。
 
@@ -178,7 +178,7 @@ QRP之后启动的为“爱国者先进能力三”（PAC-3）三阶段计划，
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-05.jpg?height=1035&width=1841&top_left_y=1776&top_left_x=2183)  
 
-美国陆军图像
+图像来源：US Army
 
 此外，导弹的可编程只读存储器也被修改以支持更高的TVM数据速率。
 
@@ -215,7 +215,7 @@ PAC-2 是爱国者系统的中远程主力导弹，主要用于对抗空中呼�
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-07.jpg?height=686&width=1641&top_left_y=142&top_left_x=189)
 
-FM 3-01.11
+来源：FM 3-01.11
 
 该导弹全长5.2米，直径0.41米，翼展0.92米，重量915千克。导弹前端为由熔融二氧化硅陶瓷制成的雷达罩（Radome），内含一具直径30.5厘米的可转向单脉冲天线（Monopulse Antenna）。其后为末段制导组件，包括接收机、发射机及天线控制单元。
 
@@ -246,7 +246,8 @@ MFC根据导引处理单元（Guidance Processor Unit, GPU）计算的指令点�
 GPU是导弹的大脑，负责使用IMU与搜索器数据生成制导指令，控制ACM与尾部的气动机动系统（Aerodynamic Maneuvering System, AMS）。
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-07.jpg?height=914&width=1493&top_left_y=1834&top_left_x=2362)  
-BMDO, 1997
+
+来源：BMDO, 1997
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-08.jpg?height=2716&width=4019&top_left_y=100&top_left_x=110)
 
@@ -288,7 +289,7 @@ PAC-3导弹的第三个变体是PAC-3导弹段增强型（Missile Segment Enhanc
 
 另一个特殊的不足在于天线桅杆组（Antenna Mast Group, AMG）的严苛部署要求：横向坡度不能超过10度，纵向坡度不能超过0.5度。这使得部署时间变得复杂，可能需要1.5小时至2.5小时之间。如果与通信中继组（Command Relay Group, CRG）结合使用，部署需要四人小组，后续运行只需两人小组。
 
-![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-10.jpg?height=834&width=850&top_left_y=564&top_left_x=1075)
+![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-10.jpg?height=834&width=850&top_left_y=564&top_left_x=1075){width="400"}
 
 图9. “鹰”式与“爱国者”系统覆盖区域
 
@@ -309,15 +310,15 @@ AN/MPQ-65将由尚未命名的下层空天防御传感器（Lower Tier Air and M
 
 Barbera, R. S. (1994). The Patriot Missile System: A Review and Analysis of its Acquisition Process ADA292073.
 
-Brown, K. N., \& Barnes, R. S. (1998). Patriot Advanced Capability-Three (PAC-3) The First Deployable Hit-to-Kill Technology ADA356652.
+Brown, K. N., & Barnes, R. S. (1998). Patriot Advanced Capability-Three (PAC-3) The First Deployable Hit-to-Kill Technology ADA356652.
 
-Cullen, T., \& Foss, C. (1992). Jane's LandBased Air Defence 1992-93. Jane's Information Group.
+Cullen, T., & Foss, C. (1992). Jane's LandBased Air Defence 1992-93. Jane's Information Group.
 (2020). FM 3-01 Air and Missile Defense Operations. Army Publishing Directorate. (2000). FM 3-01.87 Patriot Tactics, Techniques, and Procedures. Army Publishing Directorate.
 (1997). FM 44-85 Patriot Battalion and Battery Operations. Army Publishing Directorate.
 
-Foss, C., \& O'Halloran, J. C. (2003). Jane's Land-Based Air Defence 2002-2003. Jane’s Information Group.
+Foss, C., & O'Halloran, J. C. (2003). Jane's Land-Based Air Defence 2002-2003. Jane’s Information Group.
 
-Nesline, M., Linz, J., Kenger, M., \& Cook, F. (1996). Integration of the PAC-3 Missile Segment into the Patriot Air Defense System ADA319953. Annual AIAA / BMDO Technology Conference.
+Nesline, M., Linz, J., Kenger, M., & Cook, F. (1996). Integration of the PAC-3 Missile Segment into the Patriot Air Defense System ADA319953. Annual AIAA / BMDO Technology Conference.
 
 O’Reilly, Patrick; Walters, Ed. (1996). The Patriot PAC-3 Missile Program - An Affordable Integration Approach ADA319957. Annual AIAA / BMDO Technology Conference.
 
