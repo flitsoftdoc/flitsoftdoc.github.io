@@ -34,7 +34,8 @@ MIM-104“爱国者”是美国陆军空中与导弹防御（Air and Missile Def
 
 在连一级，爱国者系统包含五大核心装备：连级指挥所（Battery Command Post, BCP）、交战控制站（Engagement Control Station, ECS）、雷达系统（Radar Set, RS）、发射装置（Launcher Station, LS）、天线桅杆组（Antenna Mast Group, AMG）与电力装置（Electric Power Plant, EPP）（见图1）。
 
-![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=1151&width=1625&top_left_y=110&top_left_x=221)  
+![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=1151&width=1625&top_left_y=110&top_left_x=221)
+
 图1. 爱国者系统的五大核心设备组件
 
 
@@ -71,13 +72,15 @@ AN/MSQ-132型交战控制站（ECS）是爱国者连的“中枢大脑”，连�
 
 LS通常有三种部署方式，分别用于对抗不同威胁类型：本地发射阵位（Local Launchers）、远程发射第1阶段（RL-1）、远程发射第3阶段（RL-3）（见图2）。
 
-![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-03.jpg?height=1166&width=1841&top_left_y=105&top_left_x=110)  
+![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-03.jpg?height=1166&width=1841&top_left_y=105&top_left_x=110)
+
 图2. 爱国者系统的发射装置部署选项
 
 
 在本地LS部署方式中，LS部署于RS前方，距离在130米至1,200米之间，适合拦截弹道导弹与空中威胁。常见的“Lazy W”阵型即属此类（图3）。
 
-![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=829&width=823&top_left_y=1866&top_left_x=2246){width="400"} 
+![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=829&width=823&top_left_y=1866&top_left_x=2246){width="400"}
+
 图3. “Lazy W”发射阵型
 
 
@@ -89,6 +92,7 @@ RL-3部署中，LS可远至30公里，适用于TBM防御。该模式中，LS集�
 
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-02.jpg?height=829&width=840&top_left_y=1866&top_left_x=3147){width="400"} 
+
 图4. “Flying V”发射阵型
 
 
@@ -108,6 +112,7 @@ RL-3部署中，LS可远至30公里，适用于TBM防御。该模式中，LS集�
 因此，部署在LD处的初始连队可为前出连队提供保护，该方式被称为“掩护跃进”（Bounding Overwatch）或“跳跃前进”（Leapfrogging）。一旦前沿连队部署完毕并投入运行，LD连队则前移至下一前沿阵地，以此类推直至任务完成（见图5）。
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-03.jpg?height=829&width=861&top_left_y=674&top_left_x=2193){width="400"} 
+
 图5. “跳跃前进”部署法
 
 
@@ -116,6 +121,7 @@ RL-3部署中，LS可远至30公里，适用于TBM防御。该模式中，LS集�
 防御部署中，爱国者连可采取多种阵型，取决于威胁类型与资源可用性，主要阵型包括：收敛型主目标线（Convergent PTLs）、平行型PTLs与发散型PTLs（见图6–8）。
 
 ![](https://cdn.mathpix.com/cropped/2025_10_17_994b2f7e8b40d8c35315g-03.jpg?height=2580&width=871&top_left_y=126&top_left_x=3132){width="400"} 
+
 图6–8. 连级部署阵型示意
 
 在对抗ABT与TBM威胁时，最佳部署方式为收敛型PTL阵型。该阵型可实现火力互为支援、纵深防御及有效交叠，但牺牲了一定的覆盖范围。当任务需要更大覆盖面积、兵力不足以支持收敛阵型、或存在多方向攻击威胁时，可采用平行或发散型PTL部署。
