@@ -1,6 +1,6 @@
 ---
 date: 2025-10-18
-categories: [Notes]
+categories: [Analysis]
 tags: [Defence]   # 若启用 tags 插件
 slug: Patriot
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
