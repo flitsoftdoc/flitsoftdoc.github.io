@@ -1,4 +1,4 @@
-# 第9章 离散时间线性时不变系统
+# 第九章 离散时间线性时不变系统
 
 ## 9.1 引言
 
@@ -115,8 +115,7 @@ x(n)=\left\{\begin{array}{ll}
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-046.jpg?height=1298&width=1284&top_left_y=702&top_left_x=351){width="400"}
-  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-046.jpg?height=1298&width=1284&top_left_y=702&top_left_x=351)  
 图 9.1：例 9.1 的图像。分别绘制了 (a) $x(k)$，(b) $h(k)$，和 (c) $h(n-k)$ 关于 $k$ 的图像。
 
 **解答** 为了帮助直观理解卷积计算中涉及的各种情况，我们在图 9.2 中绘制了 $x(k)$、$h(k)$ 和 $h(n-k)$ 关于 $k$ 的图像。从这些图像可以推导出卷积计算中有五种情况：
@@ -166,9 +165,10 @@ $$
 
 $$
 \begin{aligned}
-x * h(n) & =\sum_{k=n-4}^{4}(1)(1)+\sum_{k=5}^{n+2}\left(\frac{3}{4}\right)^{k-4}(1) \\
-& =8-n+\sum_{k=0}^{n-3}\left(\frac{3}{4}\right)\left(\frac{3}{4}\right)^{k} = 8-n+\frac{3}{4} \frac{\left(\frac{3}{4}\right)^{n-2}-1}{\frac{3}{4}-1} \\
-& =8-n-4\left(\frac{3}{4}\right)\left[\left(\frac{3}{4}\right)^{n-2}-1\right] = 12-\frac{16}{3}\left(\frac{3}{4}\right)^{n}-n
+x * h(n) & =\sum_{k=n-4}^4(1)(1)+\sum_{k=5}^{n+2}\left(\frac{3}{4}\right)^{k-4}(1)=8-n+\sum_{k=5}^{n+2}\left(\frac{3}{4}\right)^{k-4} \\
+& =8-n+\sum_{k=0}^{n-3}\left(\frac{3}{4}\right)^{k+5-4}=8-n+\sum_{k=0}^{n-3}\left(\frac{3}{4}\right)\left(\frac{3}{4}\right)^k=8-n+\frac{3}{4} \frac{\left(\frac{3}{4}\right)^{n-2}-1}{\frac{3}{4}-1} \\
+& =8-n-4\left(\frac{3}{4}\right)\left[\left(\frac{3}{4}\right)^{n-2}-1\right]=8-n-\left[3\left(\frac{3}{4}\right)^{n-2}-4\right]=12-n-3\left(\frac{3}{4}\right)^{n-2} \\
+& =12-\frac{16}{3}\left(\frac{3}{4}\right)^n-n .
 \end{aligned}
 $$
 
@@ -177,8 +177,10 @@ $$
 
 $$
 \begin{aligned}
-x * h(n) & =\sum_{k=n-4}^{n+2}\left(\frac{3}{4}\right)^{k-4}(1) = \sum_{k=0}^{6}\left(\frac{3}{4}\right)^{n-8}\left(\frac{3}{4}\right)^{k} = \left(\frac{3}{4}\right)^{n-8} \frac{\left(\frac{3}{4}\right)^{7}-1}{\frac{3}{4}-1} \\
-& =\frac{227152}{6561}\left(\frac{3}{4}\right)^{n}
+x * h(n) & =\sum_{k=n-4}^{n+2}\left(\frac{3}{4}\right)^{k-4}(1)=\sum_{k=n-4}^{n+2}\left(\frac{3}{4}\right)^{k-4} \\
+& =\sum_{k=0}^6\left(\frac{3}{4}\right)^{k+n-4-4}=\sum_{k=0}^6\left(\frac{3}{4}\right)^{n-8}\left(\frac{3}{4}\right)^k=\left(\frac{3}{4}\right)^{n-8} \frac{\left(\frac{3}{4}\right)^7-1}{\frac{3}{4}-1} \\
+& =-4\left(\frac{3}{4}\right)^{n-8}\left[\left(\frac{3}{4}\right)^7-1\right]=\frac{14197}{4096}\left(\frac{3}{4}\right)^{n-8} \\
+& =\frac{227152}{6561}\left(\frac{3}{4}\right)^n .
 \end{aligned}
 $$
 
@@ -233,18 +235,15 @@ x * h(n) & = \begin{cases}\sum_{k=0}^{n}\left(\frac{1}{2}\right)^{k} & n \geq 0 
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-049.jpg?height=1246&width=1278&top_left_y=370&top_left_x=478){width="400"}
-  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-049.jpg?height=1246&width=1278&top_left_y=370&top_left_x=478)  
 图 9.2：例 9.2 的图像。分别绘制了 (a) $x(k)$，(b) $h(k)$，和 (c) $h(n-k)$ 关于 $k$ 的图像。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-049.jpg?height=476&width=1260&top_left_y=1845&top_left_x=483){width="400"}
-  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-049.jpg?height=476&width=1260&top_left_y=1845&top_left_x=483)  
 图 9.3：例 9.2 的序列 $x * h$。
 
 表 9.1：例 9.3 的卷积计算
 
-![](https://cdn.mathpix.com/snip/images/X8jdLOZxMWJKv8wPppRSxH9O2-pmnfnbYATueRGxTso.original.fullsize.png){width="400"}
-
+![](https://cdn.mathpix.com/snip/images/X8jdLOZxMWJKv8wPppRSxH9O2-pmnfnbYATueRGxTso.original.fullsize.png)
 
 通常，确定卷积计算中出现的各种情况可能有些棘手。在本例中，我们有两种情况：$n \geq 0$ 和 $n<0$。这些情况的原因可以通过观察 $x(k)$ 和 $h(n-k)$ 关于 $k$ 的图像更容易理解，如图 9.4 所示。利用等比数列求和公式，我们可以写作
 
@@ -285,14 +284,12 @@ $$
 
 由于卷积在研究线性时不变（LTI）系统中经常使用，因此了解其一些基本性质是非常重要的。下面，我们将考察其中的一些性质。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-051.jpg?height=1068&width=1278&top_left_y=348&top_left_x=478){width="400"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-051.jpg?height=1068&width=1278&top_left_y=348&top_left_x=478)
 图 9.4：示例 9.4 的绘图。绘制了 (a) $x(k)$, (b) $h(k)$, 和 (c) $h(n-k)$ 关于 $k$ 的变化。
 
 表 9.2：示例 9.5 的卷积计算
 
-![](https://cdn.mathpix.com/snip/images/odSejA6se_fGKAkrepw7q84IMcSSJPj6ncz7U8lRaHk.original.fullsize.png){width="400"}
-
+![](https://cdn.mathpix.com/snip/images/odSejA6se_fGKAkrepw7q84IMcSSJPj6ncz7U8lRaHk.original.fullsize.png)
 
 **定理 9.1（卷积的交换律）**。卷积是交换的。也就是说，对于任意两个序列 $x$ 和 $h$，
 
@@ -618,8 +615,7 @@ $$
 
 表 9.3：示例 9.7 的卷积计算
 
-![](https://cdn.mathpix.com/snip/images/3irho2TpfQ-EfNQrEwW6V6j8PxXBGs03C4dVm6PIRXU.original.fullsize.png){width="400"}
-
+![](https://cdn.mathpix.com/snip/images/3irho2TpfQ-EfNQrEwW6V6j8PxXBGs03C4dVm6PIRXU.original.fullsize.png)
 
 ## 9.6 LTI 系统的单位阶跃响应
 
@@ -653,8 +649,7 @@ s(n) & =u * h(n) \\
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-058.jpg?height=85&width=339&top_left_y=307&top_left_x=826){width="400"}
-  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-058.jpg?height=85&width=339&top_left_y=307&top_left_x=826)  
 图 9.5：离散时间 LTI 系统的方框图表示，输入为 $x$，输出为 $y$，冲激响应为 $h$。
 
 因此，$s$ 可以通过累加 $h$ 得到。对 $s$ 取一阶差分，我们得到：
@@ -713,12 +708,10 @@ y & =x *\left(h_{1} * h_{2}\right) \\
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-059.jpg?height=339&width=1060&top_left_y=291&top_left_x=591){width="400"}
-  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-059.jpg?height=339&width=1060&top_left_y=291&top_left_x=591)  
 图 9.6：离散时间 LTI 系统串联互连的等价关系。(a) 第一种等价，(b) 第二种等价。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-059.jpg?height=199&width=882&top_left_y=769&top_left_x=680){width="400"}
-  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-059.jpg?height=199&width=882&top_left_y=769&top_left_x=680)  
 图 9.7：离散时间 LTI 系统并联互连的等价关系。
 
 因此，交换两个 LTI 系统的位置不会改变输入 $x$ 与输出 $y$ 的整体系统行为。换句话说，我们得到了图 9.6(b) 所示的等价关系。
@@ -771,8 +764,7 @@ y & =v * h_{3} \\
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-060.jpg?height=341&width=784&top_left_y=294&top_left_x=605){width="400"}
-  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-060.jpg?height=341&width=784&top_left_y=294&top_left_x=605)  
 图 9.8：系统互连示例。
 
 因此，整体系统的冲激响应 $h$ 为：
