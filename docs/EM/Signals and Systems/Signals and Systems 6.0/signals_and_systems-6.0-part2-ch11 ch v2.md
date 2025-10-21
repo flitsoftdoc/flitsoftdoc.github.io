@@ -862,7 +862,7 @@ $$
 因此，时域反转性质成立。
 
 **例 11.12**  
-利用傅里叶变换的性质以及
+利用傅里叶变换的性质以及如下已知关系：
 
 $$
 a^{n} u(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{e^{j \Omega}}{e^{j \Omega}-a},
@@ -872,55 +872,50 @@ $$
 求序列
 
 $$
-x(n) = a^{|n|}
+x(n)=a^{|n|}
 $$
 
 
-的傅里叶变换 $X(\Omega)$。
+的傅里叶变换 $X$。
 
-**解**  
-首先，将 $x(n)$ 重写为：
-
-$$
-x(n) = a^{n} u(n) + a^{-n} u(-n) - \delta(n)
-$$
-
-
-对两边取傅里叶变换，得到：
+**解**：  
+首先将 $x(n)$ 重写为
 
 $$
-X(\Omega) = \mathcal{F}\{a^{n} u(n) + a^{-n} u(-n) - \delta(n)\}(\Omega)
+x(n)=a^{n} u(n)+a^{-n} u(-n)-\delta(n).
 $$
 
 
-利用线性性质，可得：
+对等式两边取傅里叶变换，得到
 
 $$
-X(\Omega) = \mathcal{F}\{a^{n} u(n)\}(\Omega) + \mathcal{F}\{a^{-n} u(-n)\}(\Omega) - \mathcal{F}\{\delta(n)\}(\Omega)
-$$
-
-
-利用时域反转性质：
-
-$$
-X(\Omega) = \mathcal{F}\{a^{n} u(n)\}(\Omega) + \mathcal{F}\{a^{n} u(n)\}(-\Omega) - 1
+X(\Omega)=\mathcal{F}\left\{a^{n} u(n)+a^{-n} u(-n)-\delta(n)\right\}(\Omega).
 $$
 
 
-代入已知傅里叶变换对：
+利用傅里叶变换的线性性质，可将上式改写为
 
 $$
-\mathcal{F}\{a^{n} u(n)\}(\Omega) = \frac{e^{j \Omega}}{e^{j \Omega} - a}, \quad \mathcal{F}\{\delta(n)\} = 1
+X(\Omega)=\mathcal{F}\left\{a^{n} u(n)\right\}(\Omega)+\mathcal{F}\left\{a^{-n} u(-n)\right\}(\Omega)-\mathcal{F} \delta(\Omega).
 $$
 
 
-计算得到：
+再利用傅里叶变换的时域反转性质，有
+
+$$
+X(\Omega)=\mathcal{F}\left\{a^{n} u(n)\right\}(\Omega)+\mathcal{F}\left\{a^{n} u(n)\right\}(-\Omega)-\mathcal{F} \delta(\Omega).
+$$
+
+
+根据给定的傅里叶变换对以及 $\mathcal{F}\{\delta(n)\}(\Omega)=1$，可得
 
 $$
 \begin{aligned}
-X(\Omega) & = \frac{e^{j \Omega}}{e^{j \Omega} - a} + \frac{e^{-j \Omega}}{e^{-j \Omega} - a} - 1 \\
-& = \frac{1 - a^2}{1 - a (e^{j \Omega} + e^{-j \Omega}) + a^2} \\
-& = \frac{1 - a^2}{1 - 2 a \cos \Omega + a^2}
+X(\Omega) & =\frac{e^{j \Omega}}{e^{j \Omega}-a}+\frac{e^{-j \Omega}}{e^{-j \Omega}-a}-1 \\
+& =\frac{e^{j \Omega}\left(e^{-j \Omega}-a\right)+e^{-j \Omega}\left(e^{j \Omega}-a\right)+\left(e^{j \Omega}-a\right)\left(e^{-j \Omega}-a\right)}{\left(e^{j \Omega}-a\right)\left(e^{-j \Omega}-a\right)} \\
+& =\frac{1-a e^{j \Omega}+1-a e^{-j \Omega}-\left(1-a e^{j \Omega}-a e^{-j \Omega}+a^{2}\right)}{1-a e^{j \Omega}-a e^{-j \Omega}+a^{2}} \\
+& =\frac{1-a^{2}}{1-a\left(e^{j \Omega}+e^{-j \Omega}\right)+a^{2}} \\
+& =\frac{1-a^{2}}{1-2 a \cos \Omega+a^{2}}.
 \end{aligned}
 $$
 
@@ -1059,34 +1054,42 @@ X(\Omega) = \mathcal{F}\Big\{\frac{1}{4} \operatorname{sinc}\Big(\frac{\pi}{4} n
 $$
 
 
-根据下采样性质，有：
+现在我们考虑 $Y$。根据傅里叶变换的降采样性质，有
 
 $$
 \begin{aligned}
-Y(\Omega) & = \frac{1}{2} \sum_{\ell=0}^{1} X\Big[\frac{1}{2} (\Omega - 2 \pi \ell)\Big] \\
-& = \frac{1}{2} X\Big(\frac{1}{2} \Omega\Big) + \frac{1}{2} X\Big[\frac{1}{2} (\Omega - 2 \pi)\Big]
+Y(\Omega) & =\frac{1}{2} \sum_{\ell=0}^{1} X\left[\frac{1}{2}(\Omega-2 \pi \ell)\right] \\
+& =\frac{1}{2} X\left(\frac{1}{2} \Omega\right)+\frac{1}{2} X\left[\frac{1}{2}(\Omega-2 \pi)\right].
 \end{aligned}
 $$
 
 
-将 $X(\Omega)$ 代入：
+将上面求得的 $X$ 的表达式代入上式中的 $Y$，可得
 
 $$
 \begin{aligned}
-Y(\Omega) & = \frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\Big[\frac{2}{\pi} \big(\frac{1}{2} \Omega - 2 \pi k\big)\Big] + \frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\Big[\frac{2}{\pi} \big(\frac{1}{2} (\Omega - 2 \pi) - 2 \pi k\big)\Big] \\
-& = \frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\Big[\frac{1}{\pi} (\Omega - 4 \pi k)\Big] + \frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\Big[\frac{1}{\pi} (\Omega - 2 \pi (2k+1))\Big]
+Y(\Omega) & =\frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{2}{\pi}\left(\frac{1}{2} \Omega-2 \pi k\right)\right]+\frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{2}{\pi}\left(\left[\frac{1}{2}(\Omega-2 \pi)\right]-2 \pi k\right)\right] \\
+& =\frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{2}{\pi}\left(\frac{1}{2}\right)(\Omega-4 \pi k)\right]+\frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{2}{\pi}\left(\frac{1}{2}\right)([(\Omega-2 \pi)]-4 \pi k)\right] \\
+& =\frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{\pi}(\Omega-4 \pi k)\right]+\frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{\pi}([(\Omega-2 \pi)]-4 \pi k)\right] \\
+& =\frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{\pi}(\Omega-4 \pi k)\right]+\frac{1}{2} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{\pi}(\Omega-2 \pi(2 k+1))\right].
 \end{aligned}
 $$
 
 
-注意，右侧两个求和都是 $4 \pi$ 周期函数。考虑 $\Omega \in (-\pi, \pi]$，此区间内只有第一个求和的 $k=0$ 项非零，第二个求和项均为零。因此简化为：
+注意，上式右边的两个求和项均为 $4\pi$-周期函数。考虑 $\Omega \in (-\pi, \pi]$ 区间。在此区间内，第一个求和式中仅有 $k=0$ 的项非零，而第二个求和式中所有项均为零。因此，可将 $Y$ 的上述表达式简化为
 
 $$
-Y(\Omega) = \frac{1}{2} \operatorname{rect}\Big(\frac{1}{\pi} \Omega\Big), \quad \Omega \in (-\pi, \pi]
+Y(\Omega)=\frac{1}{2} \operatorname{rect}\left(\frac{1}{\pi} \Omega\right) \quad \text{对于} \ \Omega \in (-\pi, \pi].
 $$
 
 
-为了更直观地理解两个无限求和如何坍缩为单项，可以参考图 11.2。图中显示了 $X$ 的谱，以及 $Y_0$ 与 $Y_1$ 的单周期情况。最终 $Y = Y_0 + Y_1$ 仅在 $(-\pi, \pi]$ 内有一个矩形脉冲。
+为了直观理解这两个无穷求和如何坍缩为单一非零项，一些图形会很有帮助。频谱 $X$ 如图 11.2(a) 所示。上述两个 $4\pi$-周期函数分别记为 $Y_0$ 和 $Y_1$，使得 $Y = Y_0 + Y_1$。图 11.2(b) 和 (c) 分别展示了 $Y_0$ 和 $Y_1$ 各自一个完整周期的波形。可以观察到，在 $Y_0$ 和 $Y_1$ 这两个 $4\pi$-周期函数的所有矩形脉冲中，仅有 $Y_0$ 中的一个脉冲落在区间 $(-\pi, \pi]$ 内。频谱 $Y = Y_0 + Y_1$ 如图 11.2(d) 所示。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-132.jpg?height=1657&width=1179&top_left_y=499&top_left_x=405){width="400"}
+
+
+Figure 11.2: Spectra for downsampling example. (a) Spectrum $X$ of $x$. (b) First summation $Y_{0}$ in expression for $Y$. (c) Second summation $Y_{1}$ in expression for $Y$. (d) Spectrum $Y$ of $y$.
+
 ### 11.7.9 卷积（Convolution）
 
 傅里叶变换的另一个重要性质是卷积性质，如下所示。
@@ -1123,55 +1126,54 @@ $$
 
 $$
 \begin{aligned}
-Y(\Omega) & = \sum_{\lambda=-\infty}^{\infty} \sum_{k=-\infty}^{\infty} x_1(k) x_2(\lambda) e^{-j \Omega (\lambda + k)} \\
-& = \sum_{k=-\infty}^{\infty} x_1(k) e^{-j \Omega k} \sum_{\lambda=-\infty}^{\infty} x_2(\lambda) e^{-j \Omega \lambda} \\
-& = X_1(\Omega) X_2(\Omega)
+Y(\Omega) & =\sum_{\lambda=-\infty}^{\infty} \sum_{k=-\infty}^{\infty} x_{1}(k) x_{2}(\lambda) e^{-j \Omega(\lambda+k)} \\
+& =\sum_{\lambda=-\infty}^{\infty} \sum_{k=-\infty}^{\infty} x_{1}(k) x_{2}(\lambda) e^{-j \Omega \lambda} e^{-j \Omega k} \\
+& =\sum_{k=-\infty}^{\infty} \sum_{\lambda=-\infty}^{\infty} x_{1}(k) x_{2}(\lambda) e^{-j \Omega \lambda} e^{-j \Omega k} \\
+& =\left[\sum_{k=-\infty}^{\infty} x_{1}(k) e^{-j \Omega k}\right]\left[\sum_{\lambda=-\infty}^{\infty} x_{2}(\lambda) e^{-j \Omega \lambda}\right] \\
+& =X_{1}(\Omega) X_{2}(\Omega)
 \end{aligned}
 $$
 
 
-因此，时间域卷积在傅里叶域中对应乘法。
+因此，我们已证明时域卷积性质成立。
 
-卷积性质在实际中非常重要，因为它可以将卷积运算转换为简单的乘法，从而避免直接处理复杂的卷积运算。这在分析 LTI 系统时尤为有用。
+傅里叶变换的卷积性质具有重要的实际意义。由于傅里叶变换能有效地将卷积运算转换为乘法运算，因此可利用傅里叶变换来避免直接处理卷积操作。这一点在解决涉及线性时不变（LTI）系统的问题时尤为有用，因为这类问题几乎不可避免地涉及卷积（原因在于 LTI 系统本质上执行的是卷积运算）。
 
-**例 11.15（卷积性质应用）**  
+**例 11.15（卷积性质）**  
 求序列
 
 $$
-x(n) = x_1 * x_2(n)
+x(n)=x_{1} * x_{2}(n)
 $$
 
 
-的傅里叶变换，其中
+的傅里叶变换 $X$，其中
 
 $$
-x_1(n) = a^n u(n), \quad x_2(n) = a^{|n|}, \quad |a|<1.
+x_{1}(n)=a^{n} u(n), \quad x_{2}(n)=a^{|n|},
 $$
 
 
-**解**  
-利用卷积性质：
+且 $a$ 为满足 $|a|<1$ 的复常数。
+
+**解**：  
+我们有
 
 $$
 \begin{aligned}
-X(\Omega) & = \mathcal{F}\{x_1 * x_2\}(\Omega) \\
-& = \mathcal{F}\{x_1\}(\Omega) \cdot \mathcal{F}\{x_2\}(\Omega)
+X(\Omega) & =\mathcal{F}\left\{x_{1} * x_{2}\right\}(\Omega) \\
+& =\mathcal{F} x_{1}(\Omega) \cdot \mathcal{F} x_{2}(\Omega).
 \end{aligned}
 $$
 
 
-根据表 11.2 中的傅里叶变换对：
+利用表 11.2 中的傅里叶变换对，可得
 
 $$
-\mathcal{F}\{x_1\}(\Omega) = \frac{e^{j \Omega}}{e^{j \Omega} - a}, \quad
-\mathcal{F}\{x_2\}(\Omega) = \frac{1 - a^2}{1 - 2 a \cos \Omega + a^2}
-$$
-
-
-因此：
-
-$$
-X(\Omega) = \frac{e^{j \Omega}(1 - a^2)}{(e^{j \Omega} - a)(1 - 2 a \cos \Omega + a^2)}
+\begin{aligned}
+X(\Omega) & =\left(\frac{e^{j \Omega}}{e^{j \Omega}-a}\right)\left(\frac{1-a^{2}}{1-2 a \cos \Omega+a^{2}}\right) \\
+& =\frac{e^{j \Omega}\left(1-a^{2}\right)}{\left(e^{j \Omega}-a\right)\left(1-2 a \cos \Omega+a^{2}\right)}.
+\end{aligned}
 $$
 
 
@@ -1179,109 +1181,150 @@ $$
 
 傅里叶变换的另一个重要性质是乘法性质，如下所示。
 
-**定理 11.12（乘法）**  
-如果
+**定理 11.12（相乘性质）**：若 $x_{1}(n) \stackrel{DTFT}{\longleftrightarrow} X_{1}(\Omega)$ 且 $x_{2}(n) \stackrel{DTFT}{\longleftrightarrow} X_{2}(\Omega)$，则
 
 $$
-x_1(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} X_1(\Omega), \quad x_2(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} X_2(\Omega),
-$$
-
-
-则有：
-
-$$
-x_1(n) x_2(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{1}{2\pi} \int_{2\pi} X_1(\theta) X_2(\Omega - \theta) \, d\theta.
+x_{1}(n) x_{2}(n) \stackrel{DTFT}{\longleftrightarrow} \frac{1}{2 \pi} \int_{2 \pi} X_{1}(\theta) X_{2}(\Omega-\theta) \, d\theta
 $$
 
 
-这就是傅里叶变换的乘法性质。
+这被称为傅里叶变换的相乘性质。
 
-**证明**  
-设 $y(n) = x_1(n) x_2(n)$，其傅里叶变换为 $Y(\Omega)$：
-
-$$
-Y(\Omega) = \sum_{n=-\infty}^{\infty} x_1(n) x_2(n) e^{-j \Omega n}.
-$$
-
-
-将 $x_1(n)$ 用其傅里叶逆变换表示：
+**证明**：为证明上述性质，我们按如下步骤进行。令 $y(n) = x_{1}(n) x_{2}(n)$，并令 $Y$ 表示 $y$ 的傅里叶变换。我们有
 
 $$
-x_1(n) = \frac{1}{2\pi} \int_{2\pi} X_1(\lambda) e^{j \lambda n} d\lambda
+Y(\Omega) = \sum_{n=-\infty}^{\infty} x_{1}(n) x_{2}(n) e^{-j \Omega n}
 $$
 
 
-代入上式：
+将 $x_{1}(n)$ 用 $X_{1}$ 的傅里叶逆变换公式表示，可得
 
 $$
-Y(\Omega) = \sum_{n=-\infty}^{\infty} x_2(n) \left[ \frac{1}{2\pi} \int_{2\pi} X_1(\lambda) e^{j \lambda n} d\lambda \right] e^{-j \Omega n}.
+Y(\Omega) = \sum_{n=-\infty}^{\infty} x_{2}(n) \left[ \frac{1}{2 \pi} \int_{2 \pi} X_{1}(\lambda) e^{j \lambda n} \, d\lambda \right] e^{-j \Omega n}
 $$
 
 
-交换积分与求和顺序：
+交换积分与求和的顺序，得到
 
 $$
 \begin{aligned}
-Y(\Omega) &= \frac{1}{2\pi} \int_{2\pi} X_1(\lambda) \sum_{n=-\infty}^{\infty} x_2(n) e^{-j(\Omega - \lambda) n} d\lambda \\
-&= \frac{1}{2\pi} \int_{2\pi} X_1(\lambda) X_2(\Omega - \lambda) d\lambda.
+Y(\Omega) & =\frac{1}{2 \pi} \int_{2 \pi} X_{1}(\lambda) \sum_{n=-\infty}^{\infty} x_{2}(n) e^{j \lambda n} d \lambda e^{-j \Omega n} \\
+& =\frac{1}{2 \pi} \int_{2 \pi} X_{1}(\lambda)\left[\sum_{n=-\infty}^{\infty} x_{2}(n) e^{j \lambda n} e^{-j \Omega n}\right] d \lambda \\
+& =\frac{1}{2 \pi} \int_{2 \pi} X_{1}(\lambda)\left[\sum_{n=-\infty}^{\infty} x_{2}(n) e^{-j(\Omega-\lambda) n}\right] d \lambda \\
+& =\frac{1}{2 \pi} \int_{2 \pi} X_{1}(\lambda) X_{2}(\Omega-\lambda) d \lambda
 \end{aligned}
 $$
 
 
-因此，乘法性质成立。由此可见，傅里叶变换将时域的乘法变为频域的卷积。
+因此，我们证明了相乘性质成立。
+
+由前述定理中的相乘性质可知，傅里叶变换实际上将时域中的乘法运算转换为频域中的卷积运算。由于卷积运算比乘法运算复杂得多，我们通常倾向于避免以引入额外卷积运算的方式使用该性质。
 
 ---
 
-**例 11.16（应用乘法性质）**  
-已知傅里叶变换对：
+**例 11.16**：利用傅里叶变换对
 
 $$
-\frac{B}{\pi} \operatorname{sinc}(B n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{2B}[\Omega - 2\pi k]\right), \quad 0 < B < \pi.
+\frac{B}{\pi} \operatorname{sinc}(B n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{2 B}[\Omega-2 \pi k]\right) \quad \text{其中 } 0<B<\pi,
 $$
 
 
 求序列
 
 $$
-x(n) = \frac{B}{2\pi} \operatorname{sinc}^2\left(\frac{B}{2} n\right)
+x(n)=\frac{B}{2 \pi} \operatorname{sinc}^{2}\left(\frac{B}{2} n\right)
 $$
 
 
-的傅里叶变换。
+的傅里叶变换 $X$，其中 $B$ 为满足 $0<B<\frac{\pi}{2}$ 的实常数。
 
-**解**  
-将 $B/2$ 代入原傅里叶变换对：
-
-$$
-\frac{B}{2\pi} \operatorname{sinc}\left(\frac{B}{2} n\right) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\Omega - 2\pi k]\right).
-$$
-
-
-由乘法性质：
+**解**：已知傅里叶变换对
 
 $$
-X(\Omega) = \frac{B}{2\pi} \left[ \frac{2\pi}{B} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\theta - 2\pi k]\right) \circledast \frac{2\pi}{B} \sum_{\ell=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\Omega - \theta - 2\pi \ell]\right) \right].
+\frac{B}{\pi} \operatorname{sinc}(B n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{2 B}[\Omega-2 \pi k]\right).
 $$
 
 
-考虑 $[-\pi, \pi]$ 区间，并利用矩形函数卷积性质：
+在此变换对中将 $B$ 替换为 $B/2$，可得
 
 $$
-\operatorname{rect}\left(\frac{1}{B} \cdot\right) * \operatorname{rect}\left(\frac{1}{B} \cdot\right) = B \operatorname{tri}\left(\frac{1}{2B} \cdot\right),
-$$
-
-
-得到：
-
-$$
-X(\Omega) = \operatorname{tri}\left(\frac{1}{2B} \Omega\right).
+\frac{B}{2 \pi} \operatorname{sinc}\left(\frac{B}{2} n\right) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\Omega-2 \pi k]\right).
 $$
 
 
-由于周期性：
+因此，根据傅里叶变换的线性性质，可推得
 
 $$
-x(n) = \frac{B}{2\pi} \operatorname{sinc}^2\left(\frac{B}{2} n\right) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \sum_{k=-\infty}^{\infty} \operatorname{tri}\left(\frac{1}{2B}[\Omega - 2\pi k]\right), \quad 0 < B < \frac{\pi}{2}.
+\operatorname{sinc}\left(\frac{B}{2} n\right) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{2 \pi}{B} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\Omega-2 \pi k]\right).
+$$
+
+
+对 $x$ 取傅里叶变换，我们有
+
+$$
+\begin{aligned}
+X(\Omega) & =\mathcal{F}\left\{\frac{B}{2 \pi} \operatorname{sinc}^{2}\left(\frac{B}{2} n\right)\right\}(\Omega) \\
+& =\frac{B}{2 \pi} \mathcal{F}\left\{\operatorname{sinc}^{2}\left(\frac{B}{2} n\right)\right\}(\Omega)
+\end{aligned}
+$$
+
+
+利用傅里叶变换的相乘性质，并选择区间 $[-\pi, \pi]$ 作为积分区间，可得
+
+$$
+\begin{aligned}
+X(\Omega) & =\frac{B}{2 \pi}\left(\frac{1}{2 \pi}\left[\mathcal{F}\left\{\operatorname{sinc}\left(\frac{B}{2} n\right)\right\} \circledast \mathcal{F}\left\{\operatorname{sinc}\left(\frac{B}{2} n\right)\right\}\right](\Omega)\right) \\
+& =\frac{B}{4 \pi^{2}} \int_{-\pi}^{\pi}\left(\frac{2 \pi}{B} \sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\theta-2 \pi k]\right)\right)\left(\frac{2 \pi}{B} \sum_{\ell=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\Omega-\theta-2 \pi \ell]\right)\right) d \theta \\
+& =\frac{1}{B} \int_{-\pi}^{\pi}\left(\sum_{k=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\theta-2 \pi k]\right)\right)\left(\sum_{\ell=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\Omega-\theta-2 \pi \ell]\right)\right) d \theta
+\end{aligned}
+$$
+
+
+由于当 $\theta \in [-\pi, \pi]$ 时，左侧求和式在 $k \neq 0$ 时为零，因此可将上式改写为
+
+$$
+X(\Omega)=\frac{1}{B} \int_{-\pi}^{\pi} \operatorname{rect}\left(\frac{1}{B} \theta\right)\left(\sum_{\ell=-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B}[\Omega-\theta-2 \pi \ell]\right)\right) d \theta
+$$
+
+
+由于当 $\theta \in [-\pi, \pi]$ 时，$\operatorname{rect}\left(\frac{1}{B} \theta\right)$ 与右侧求和式中的项在 $\ell \neq 0$ 时永远不会同时非零，因此可将上式改写为
+
+$$
+X(\Omega)=\frac{1}{B} \int_{-\pi}^{\pi} \operatorname{rect}\left(\frac{1}{B} \theta\right) \operatorname{rect}\left(\frac{1}{B}[\Omega-\theta]\right) d \theta
+$$
+
+
+注意到被积函数中的因子 $\operatorname{rect}\left(\frac{1}{B} \theta\right)$ 在积分区间之外处处为零，因此可将上式进一步改写为
+
+$$
+\begin{aligned}
+X(\Omega) & =\frac{1}{B} \int_{-\infty}^{\infty} \operatorname{rect}\left(\frac{1}{B} \theta\right) \operatorname{rect}\left(\frac{1}{B}[\Omega-\theta]\right) d \theta \\
+& =\frac{1}{B}\left\{\operatorname{rect}\left[\frac{1}{B}(\cdot)\right] * \operatorname{rect}\left[\frac{1}{B}(\cdot)\right]\right\}(\Omega)
+\end{aligned}
+$$
+
+
+可以证明：$\operatorname{rect}\left[\frac{1}{B}(\cdot)\right] * \operatorname{rect}\left[\frac{1}{B}(\cdot)\right] = B \operatorname{tri}\left[\frac{1}{2 B}(\cdot)\right]$。（该结论的证明留作读者练习，见习题 4.102(b)。）利用这一事实，可得
+
+$$
+\begin{aligned}
+X(\Omega) & =\frac{1}{B}\left[B \operatorname{tri}\left(\frac{1}{2 B} \Omega\right)\right] \\
+& =\operatorname{tri}\left(\frac{1}{2 B} \Omega\right)
+\end{aligned}
+$$
+
+
+因此，对所有 $\Omega$，有
+
+$$
+X(\Omega)=\sum_{k=-\infty}^{\infty} \operatorname{tri}\left(\frac{1}{2 B}[\Omega-2 \pi k]\right)
+$$
+
+
+于是我们得到
+
+$$
+\frac{B}{2 \pi} \operatorname{sinc}^{2}\left(\frac{B}{2} n\right) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \sum_{k=-\infty}^{\infty} \operatorname{tri}\left(\frac{1}{2 B}[\Omega-2 \pi k]\right) \quad \text{其中 } 0<B<\frac{\pi}{2}.
 $$
 
 
@@ -1289,124 +1332,114 @@ $$
 
 傅里叶变换的另一个重要性质是频域微分性质，如下所示。
 
-**定理 11.13（频域微分）**  
-如果
+**定理 11.13**（频域微分性质）：若 $x(n) \stackrel{DTFT}{\longleftrightarrow} X(\Omega)$，则
 
 $$
-x(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} X(\Omega),
-$$
-
-
-则有：
-
-$$
-n x(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} j \frac{d}{d\Omega} X(\Omega).
+n x(n) \stackrel{DTFT}{\longleftrightarrow} j \frac{d}{d \Omega} X(\Omega).
 $$
 
 
-这就是傅里叶变换的频域微分性质。
+这被称为傅里叶变换的频域微分性质。
 
-**证明**  
-设 $y(n) = n x(n)$，其傅里叶变换为 $Y(\Omega)$：
-
-$$
-Y(\Omega) = \sum_{n=-\infty}^{\infty} n x(n) e^{-j \Omega n} = \sum_{n=-\infty}^{\infty} x(n) \big(n e^{-j \Omega n}\big).
-$$
-
-
-利用 $n e^{-j \Omega n} = j \frac{d}{d\Omega} e^{-j \Omega n}$，得到：
+**证明**：为证明上述性质，我们按如下步骤进行。令 $y(n) = n x(n)$，并令 $Y$ 表示 $y$ 的傅里叶变换。根据傅里叶变换的定义，有
 
 $$
 \begin{aligned}
-Y(\Omega) &= \sum_{n=-\infty}^{\infty} x(n) \left[ j \frac{d}{d\Omega} e^{-j \Omega n} \right] \\
-&= j \frac{d}{d\Omega} \sum_{n=-\infty}^{\infty} x(n) e^{-j \Omega n} \\
-&= j \frac{d}{d\Omega} X(\Omega).
+Y(\Omega) & = \sum_{n=-\infty}^{\infty} n x(n) e^{-j \Omega n} \\
+& = \sum_{n=-\infty}^{\infty} x(n) \left( n e^{-j \Omega n} \right)
 \end{aligned}
 $$
 
 
-因此，频域微分性质成立。
-
----
-
-**例 11.17（应用频域微分性质）**  
-已知傅里叶变换对：
-
-$$
-a^n u(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{e^{j\Omega}}{e^{j\Omega}-a}, \quad |a|<1.
-$$
-
-
-求序列
-
-$$
-x(n) = n a^n u(n)
-$$
-
-
-的傅里叶变换。
-
-**解**  
-设 $v_1(n) = a^n u(n)$，则 $x(n) = n v_1(n)$。由频域微分性质：
-
-$$
-X(\Omega) = j \frac{d}{d\Omega} V_1(\Omega) = j \frac{d}{d\Omega} \left( \frac{e^{j\Omega}}{e^{j\Omega}-a} \right).
-$$
-
-
-对分数求导：
+利用恒等式 $n e^{-j \Omega n} = \frac{d}{d \Omega} \left( j e^{-j \Omega n} \right)$，可将上式改写为
 
 $$
 \begin{aligned}
-X(\Omega) &= j \left[ \frac{j e^{j\Omega} (e^{j\Omega}-a) - j e^{2 j\Omega}}{(e^{j\Omega}-a)^2} \right] \\
-&= \frac{a e^{j\Omega}}{(e^{j\Omega}-a)^2}.
+Y(\Omega) & = \sum_{n=-\infty}^{\infty} x(n) \frac{d}{d \Omega} \left( j e^{-j \Omega n} \right) \\
+& = j \frac{d}{d \Omega} \sum_{n=-\infty}^{\infty} x(n) e^{-j \Omega n} \\
+& = j \frac{d}{d \Omega} X(\Omega)
 \end{aligned}
 $$
 
 
-因此：
-
-$$
-n a^n u(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{a e^{j\Omega}}{(e^{j\Omega}-a)^2}, \quad |a|<1.
-$$
-
-
-### 11.7.12 差分（Differencing）
-
-傅里叶变换的另一个重要性质是差分性质，如下所示。
-
-**定理 11.14（差分）**  
-如果
-
-$$
-x(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} X(\Omega),
-$$
-
-
-则有：
-
-$$
-x(n) - x(n-1) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \left(1 - e^{-j\Omega}\right) X(\Omega).
-$$
-
-
-这就是傅里叶变换的差分性质。
-
-**证明**  
-该结果可以直接由傅里叶变换的线性性质与平移性质得到。具体地：
-
-$$
-\mathcal{F}\{x(n)-x(n-1)\} = \mathcal{F}\{x(n)\} - \mathcal{F}\{x(n-1)\} = X(\Omega) - e^{-j\Omega} X(\Omega) = (1 - e^{-j\Omega}) X(\Omega).
-$$
-
+因此，我们证明了频域微分性质成立。（另一种方法是直接对式 (11.6) 两边关于 $\Omega$ 求导，即可得到所需结果。）
 
 ---
 
-**例 11.18（应用差分性质）**  
-已知傅里叶变换对：
+例 11.17（频域微分性质）：利用傅里叶变换对
 
 $$
-a^{|n|}, \ |a|<1 \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{1-a^2}{1-2 a \cos \Omega + a^2}.
+a^{n} u(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{e^{j \Omega}}{e^{j \Omega}-a} \quad \text{其中 } |a|<1,
+$$
+
+
+并结合傅里叶变换的性质，求序列
+
+$$
+x(n)=n a^{n} u(n)
+$$
+
+
+的傅里叶变换 $X$。
+
+**解**：令 $v_{1}(n) = a^{n} u(n)$，则
+
+$$
+x(n) = n v_{1}(n).
+$$
+
+
+由给定的傅里叶变换对可知，
+
+$$
+V_{1}(\Omega) = \frac{e^{j \Omega}}{e^{j \Omega} - a}.
+$$
+
+
+为方便起见，以下用撇号（′）表示对 $\Omega$ 的导数。利用频域微分性质对 $x$ 取傅里叶变换，可得
+
+$$
+\begin{aligned}
+X(\Omega) & = j V_{1}'(\Omega) \\
+& = j \frac{d}{d \Omega}\left[ \frac{e^{j \Omega}}{e^{j \Omega} - a} \right] \\
+& = j \frac{d}{d \Omega}\left[ e^{j \Omega} \left( e^{j \Omega} - a \right)^{-1} \right] \\
+& = j \left[ \left( j e^{j \Omega} \right) \left( e^{j \Omega} - a \right)^{-1} + e^{j \Omega} \cdot (-1) \left( e^{j \Omega} - a \right)^{-2} \cdot \left( j e^{j \Omega} \right) \right] \\
+& = -\frac{e^{j \Omega}}{e^{j \Omega} - a} + \frac{e^{j 2 \Omega}}{\left( e^{j \Omega} - a \right)^{2}} \\
+& = \frac{ -e^{j \Omega} \left( e^{j \Omega} - a \right) + e^{j 2 \Omega} }{ \left( e^{j \Omega} - a \right)^{2} } \\
+& = \frac{ -e^{j 2 \Omega} + a e^{j \Omega} + e^{j 2 \Omega} }{ \left( e^{j \Omega} - a \right)^{2} } \\
+& = \frac{ a e^{j \Omega} }{ \left( e^{j \Omega} - a \right)^{2} }.
+\end{aligned}
+$$
+
+
+因此，我们得出结论：
+
+$$
+n a^{n} u(n) \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{a e^{j \Omega}}{\left( e^{j \Omega} - a \right)^{2}} \quad \text{其中 } |a| < 1.
+$$
+
+
+### 11.7.12 差分
+
+接下来要介绍的傅里叶变换性质是差分性质，如下所述。
+
+**定理 11.14（差分性质）**：若 $x(n) \stackrel{DTFT}{\longleftrightarrow} X(\Omega)$，则
+
+$$
+x(n) - x(n-1) \stackrel{DTFT}{\longleftrightarrow} \left(1 - e^{-j \Omega}\right) X(\Omega)
+$$
+
+
+这被称为傅里叶变换的差分性质。
+
+**证明**：该定理的结果可直接由傅里叶变换的线性性质和平移（时移）性质得出。
+
+---
+
+**例 11.18**（差分性质）：已知傅里叶变换对
+
+$$
+a^{|n|},\ |a|<1 \stackrel{\mathrm{DTFT}}{\longleftrightarrow} \frac{1-a^{2}}{1-2 a \cos \Omega + a^{2}},
 $$
 
 
@@ -1417,20 +1450,19 @@ x(n) = a^{|n|} - a^{|n-1|}
 $$
 
 
-的傅里叶变换。
+的傅里叶变换 $X$，其中 $a$ 为满足 $|a| < 1$ 的复常数。
 
-**解**  
-由差分性质：
+**解**：根据差分性质，有
 
 $$
-X(\Omega) = \left(1 - e^{-j\Omega}\right) \frac{1-a^2}{1-2 a \cos \Omega + a^2}.
+X(\Omega) = \frac{\left(1 - e^{-j \Omega}\right)\left(1 - a^{2}\right)}{1 - 2 a \cos \Omega + a^{2}}.
 $$
 
 
 ### 11.7.13 累积
 
 接下来介绍傅里叶变换的一个性质，即累积性质，如下所示。  
-定理 11.15（累积）。若 $x(n) \stackrel{D T F T}{\longleftrightarrow} X(\Omega)$，则有
+**定理 11.15**（累积）。若 $x(n) \stackrel{D T F T}{\longleftrightarrow} X(\Omega)$，则有
 
 $$
 \sum_{k=-\infty}^{n} x(k) \stackrel{D T F T}{\longleftrightarrow} \frac{e^{j \Omega}}{e^{j \Omega}-1} X(\Omega)+\pi X(0) \sum_{k=-\infty}^{\infty} \delta(\Omega-2 \pi k) .
@@ -1438,7 +1470,7 @@ $$
 
 
 这就是傅里叶变换的累积性质。  
-证明。为了证明上述性质，我们按如下步骤进行。令 $y(n)=\sum_{k=-\infty}^{n} x(k)$，并令 $Y$ 表示 $y$ 的傅里叶变换。首先，我们注意到
+**证明**：为了证明上述性质，我们按如下步骤进行。令 $y(n)=\sum_{k=-\infty}^{n} x(k)$，并令 $Y$ 表示 $y$ 的傅里叶变换。首先，我们注意到
 
 $$
 y(n)=x * u(n)
@@ -1485,7 +1517,7 @@ $$
 
 由此，我们证明了累积性质成立。  
 
-示例 11.19（累积性质）。求序列
+**例 11.19**（累积性质）。求序列
 
 $$
 x(n)=u(n)
@@ -1494,7 +1526,7 @@ $$
 
 的傅里叶变换 $X$。  
 
-解。首先，我们注意到
+**解**：首先，我们注意到
 
 $$
 x(n)=\sum_{k=-\infty}^{n} \delta(k)
@@ -1512,11 +1544,11 @@ X(\Omega) & =\frac{e^{j \Omega}}{e^{j \Omega}-1} \mathcal{F} \delta(\Omega)+\pi 
 $$
 
 
-### 11.7.14 帕塞瓦尔关系
+### 11.7.14 帕塞瓦尔(Parseval)关系
 
 接下来介绍傅里叶变换的一个性质，与信号能量相关，称为帕塞瓦尔关系。  
 
-定理 11.16（帕塞瓦尔关系）。若 $x(n) \stackrel{D T F T}{\longleftrightarrow} X(\Omega)$，则有
+**定理 11.16**（帕塞瓦尔关系）。若 $x(n) \stackrel{D T F T}{\longleftrightarrow} X(\Omega)$，则有
 
 $$
 \begin{equation*}
@@ -1526,7 +1558,7 @@ $$
 
 
 这就是帕塞瓦尔关系。  
-证明。为了证明上述性质，我们按如下步骤进行。我们从 (11.8) 左边的表达式出发。根据复数的性质，有
+**证明**：为了证明上述性质，我们按如下步骤进行。我们从 (11.8) 左边的表达式出发。根据复数的性质，有
 
 $$
 \sum_{n=-\infty}^{\infty}|x(n)|^{2}=\sum_{n=-\infty}^{\infty} x^{*}(n) x(n)
@@ -1556,7 +1588,7 @@ $$
 
 由于能量在工程应用中通常具有重要意义，因此知道傅里叶变换在一定比例因子下保持能量是非常有用的。例如，如果我们在傅里叶域中求解问题，就不必返回时域来计算能量，因为可以直接在傅里叶域中利用帕塞瓦尔关系进行计算。  
 
-示例 11.20。求序列
+**例 11.20**：求序列
 
 $$
 x(n)=\operatorname{sinc}\left(\frac{1}{2} n\right)
@@ -1607,7 +1639,7 @@ $$
 
 傅里叶变换保持对称性。换句话说，我们有如下结果。  
 
-定理 11.17（偶/奇对称性）。对于傅里叶变换为 $X$ 的序列 $x$，下列命题成立：
+**定理 11.17**（偶/奇对称性）。对于傅里叶变换为 $X$ 的序列 $x$，下列命题成立：
 
 - 当且仅当 $X$ 为偶函数时，$x$ 为偶函数；  
 - 当且仅当 $X$ 为奇函数时，$x$ 为奇函数。
@@ -1676,7 +1708,7 @@ $$
 
 事实证明，实值序列的傅里叶变换具有特殊结构，如下定理所示。  
 
-定理 11.18（实值序列）。当且仅当序列 $x$ 为实值序列时，其傅里叶变换 $X$ 满足
+**定理 11.18**（实值序列）。当且仅当序列 $x$ 为实值序列时，其傅里叶变换 $X$ 满足
 
 $$
 X(\Omega)=X^{*}(-\Omega), \quad \text{对所有 } \Omega
@@ -1685,7 +1717,7 @@ $$
 
 （即 $X$ 是共轭对称的）。  
 
-证明。由傅里叶变换的定义，有
+**证明**：由傅里叶变换的定义，有
 
 $$
 \begin{equation*}
@@ -1781,7 +1813,7 @@ $$
 
 利用第 11.3 节中简要讨论的广义傅里叶变换，傅里叶变换也可以应用于周期序列。特别地，周期序列的傅里叶变换可以使用以下结果来计算。  
 
-定理 11.19（周期序列的傅里叶变换）。设 $x$ 为 $N$ 周期序列，其对应的傅里叶级数系数序列为 $a$。令 $x_{N}$ 表示序列
+**定理 11.19**（周期序列的傅里叶变换）。设 $x$ 为 $N$ 周期序列，其对应的傅里叶级数系数序列为 $a$。令 $x_{N}$ 表示序列
 
 $$
 x_{N}(n)= \begin{cases}x(n) & n \in[0 \ldots N-1] \\ 0 & \text { 否则 }\end{cases}
@@ -1914,7 +1946,7 @@ $$
   
 图 11.3：频谱。(a) $X_{1}$ 和 (b) $X_{2}$ 的频谱。  
 
-示例 11.21。设 $X_{1}$ 和 $X_{2}$ 分别为 $x_{1}$ 和 $x_{2}$ 的傅里叶变换。假设 $X_{1}$ 和 $X_{2}$ 如图 11.3(a) 和 (b) 所示。判断 $x_{1}$ 和 $x_{2}$ 是否为周期序列。  
+**例 11.21**：设 $X_{1}$ 和 $X_{2}$ 分别为 $x_{1}$ 和 $x_{2}$ 的傅里叶变换。假设 $X_{1}$ 和 $X_{2}$ 如图 11.3(a) 和 (b) 所示。判断 $x_{1}$ 和 $x_{2}$ 是否为周期序列。  
 
 解。我们知道，$N$ 周期序列 $x$ 的傅里叶变换 $X$ 必须具有形式
 
@@ -1925,7 +1957,7 @@ $$
 
 其中 $\{\alpha_{k}\}$ 为复常数。频谱 $X_{1}$ 确实具有此形式，$N=16$，即冲激位于频率 $\frac{2 \pi}{16}=\frac{\pi}{8}$ 的整数倍处。因此，$x_{1}$ 必为 16 周期。频谱 $X_{2}$ 不具有所需形式，因此 $x_{2}$ 不是周期序列。  
 
-示例 11.22。考虑图 11.4 所示的 $N$ 周期序列 $x$，其中 $N=16$。利用傅里叶变换，求 $x$ 的傅里叶级数表示。  
+**例 11.22**：考虑图 11.4 所示的 $N$ 周期序列 $x$，其中 $N=16$。利用傅里叶变换，求 $x$ 的傅里叶级数表示。  
 
 解。定义序列 $y$ 为 $x$ 的截断/窗函数版本：
 
@@ -2038,6 +2070,8 @@ $$
 $$
 \begin{aligned}
 V_{1}(\Omega) & =\frac{1-\left(\frac{1}{2}\right)^{2}}{1-2\left(\frac{1}{2}\right) \cos \Omega+\left(\frac{1}{2}\right)^{2}} \\
+& =\frac{\frac{3}{4}}{1-\cos \Omega+\frac{1}{4}} \\
+& =\frac{3}{4-4 \cos \Omega+1} \\
 & =\frac{3}{5-4 \cos \Omega} \\
 & =3(5-4 \cos \Omega)^{-1}
 \end{aligned}
@@ -2080,9 +2114,8 @@ $$
 
 
 ---
-例11.24
 
-利用傅里叶变换对表及傅里叶变换的性质，求序列的傅里叶变换 $X$，其中 $a$ 是满足 $|a|<1$ 的复常数。
+**例11.24** ：利用傅里叶变换对表及傅里叶变换的性质，求序列的傅里叶变换 $X$，其中 $a$ 是满足 $|a|<1$ 的复常数。
 
 $$
 x(n)=(n+1) a^{n} u(n)
@@ -2147,7 +2180,7 @@ X(\Omega) & =j\left[\frac{-j a e^{j \Omega}}{\left(e^{j \Omega}-a\right)^{2}}\ri
 $$
 
 
-例 11.25. 考虑图 11.5 所示的 $N$ 周期序列 $x$，其中 $N=7$。求 $x$ 的傅里叶变换 $X$。
+**例 11.25**. 考虑图 11.5 所示的 $N$ 周期序列 $x$，其中 $N=7$。求 $x$ 的傅里叶变换 $X$。
 
 **解：** 在下面的推导中，我们将使用撇号表示导数。首先，注意到 $x$ 可表示为
 
@@ -2288,7 +2321,7 @@ a_{k}= \begin{cases}\dfrac{j(-1)^{k}}{2 \sin \left(\tfrac{\pi}{7} k\right)} & \d
 $$
 
 
-例 11.26. 设 $x$ 和 $y$ 为两个序列，它们满足关系：
+**例 11.26**. 设 $x$ 和 $y$ 为两个序列，它们满足关系：
 
 $$
 y(n)=\sum_{k=-\infty}^{n} e^{-j 3 k} x(-k)
@@ -2340,7 +2373,7 @@ Y(\Omega) & =\frac{e^{j \Omega}}{e^{j \Omega}-1} V_{2}(\Omega)+\pi V_{2}(0) \sum
 $$
 
 
-例 11.27. 设 $x$ 和 $y$ 为两个序列，它们满足关系  
+**例 11.27**. 设 $x$ 和 $y$ 为两个序列，它们满足关系  
 
 $$
 y(n)=x(n) \cos \left(\Omega_{0} n\right)
@@ -2349,7 +2382,7 @@ $$
 
 其中 $\Omega_{0}$ 是非零实常数。设 $X$ 和 $Y$ 分别为 $x$ 和 $y$ 的傅里叶变换。求 $Y$ 关于 $X$ 的表达式。
 
-解答。实质上，我们需要对给定方程的两边进行傅里叶变换。有两种不同的方法可以实现：一种是利用傅里叶变换的乘法性质，另一种是利用调制性质。我们将依次使用这两种方法解题，以说明两种方法所需的工作量并不相同。这个例子的启示是：当一个问题有多种解法时，应始终选择更简单的方法，这样可以节省时间并降低出错的可能性。
+**解**：实质上，我们需要对给定方程的两边进行傅里叶变换。有两种不同的方法可以实现：一种是利用傅里叶变换的乘法性质，另一种是利用调制性质。我们将依次使用这两种方法解题，以说明两种方法所需的工作量并不相同。这个例子的启示是：当一个问题有多种解法时，应始终选择更简单的方法，这样可以节省时间并降低出错的可能性。
 
 **第一种解法（使用较繁琐的方法）**。我们使用基于傅里叶变换乘法性质的方法。对给定方程两边取傅里叶变换，可得  
 
@@ -2387,7 +2420,7 @@ Y(\Omega) & =\frac{1}{2} \int_{-\pi}^{\pi^{-}} X(\theta) \sum_{k=-\infty}^{\inft
 $$
 
 
-在上述两个积分中，左侧积分的求和在区间 $[-\pi, \pi)$ 内仅有一项非零，记为 $k=k^{\prime}$；右侧积分的求和在同一区间仅有一项非零，记为 $\ell=\ell^{\prime}$。因此可以将 $Y$ 表示为  
+考虑上述等式右边的两个积分。在最左侧的积分中，求和式在积分区间 $[-\pi, \pi)$ 内仅有一项非零，记该项对应的索引为 $k = k^{\prime}$。类似地，在最右侧的积分中，求和式在积分区间 $[-\pi, \pi)$ 内也仅有一项非零，记该项对应的索引为 $\ell = \ell^{\prime}$。于是，我们可以将上述关于 $Y$ 的等式重写为
 
 $$
 Y(\Omega)=\frac{1}{2}\left[\int_{-\pi}^{\pi} X(\theta) \delta\left[\theta-(\Omega-\Omega_{0}-2 \pi k^{\prime})\right] d \theta + \int_{-\pi}^{\pi} X(\theta) \delta\left[\theta-(\Omega+\Omega_{0}-2 \pi \ell^{\prime})\right] d \theta\right]
@@ -2487,7 +2520,7 @@ $$
 
 （即 $X$ 的幅度为偶函数，幅角为奇函数。）（见 (11.11a) 和 (11.11b)）由于实值序列频谱的对称性，处理此类序列时通常忽略负频率。而对于复值但非实值的序列，频谱不具有上述对称性，因此负频率也变得重要。
 
-例 11.28. 求并绘制序列  
+**例 11.28**. 求并绘制序列  
 
 $$
 x(n)=u(n)-u(n-16)
@@ -2495,7 +2528,7 @@ $$
 
 
 的频谱。  
-解答。根据表 11.2，序列 $x$ 的傅里叶变换为  
+**解**：根据表 11.2，序列 $x$ 的傅里叶变换为  
 
 $$
 X(\Omega)=e^{-j(15 / 2) \Omega}\left[\frac{\sin (8 \Omega)}{\sin \left(\frac{1}{2} \Omega\right)}\right], \quad \Omega \in(-\pi, \pi]
@@ -2518,7 +2551,7 @@ $$
 
 幅度谱和相位谱分别如图 11.6(a) 和 (b) 所示。
 
-例 11.29. 求并绘制序列  
+**例 11.29**. 求并绘制序列  
 
 $$
 x(n)=\left(\frac{1}{2}\right)^{|n|}
@@ -2526,7 +2559,7 @@ $$
 
 
 的频谱。  
-解答。根据表 11.2，序列 $x$ 的傅里叶变换为  
+**解**：根据表 11.2，序列 $x$ 的傅里叶变换为  
 
 $$
 X(\Omega)=\frac{3}{5-4 \cos \Omega}, \quad \Omega \in(-\pi, \pi]
@@ -2543,7 +2576,7 @@ $$
   
 图 11.7: 序列 $x$ 的频谱 $X$。
 
-例 11.30. 序列  
+**例 11.30**. 序列  
 
 $$
 x(n)=\left(\frac{1}{2}\right)^{n} u(n)
@@ -2560,9 +2593,7 @@ $$
 (a) 求并绘制 $x$ 的幅度谱和相位谱。  
 (b) 确定序列 $x$ 在区间 $(-\pi, \pi]$ 内在哪个频率（或哪些频率）包含最多信息。
 
-解答。  
-
-**(a) 幅度谱与相位谱**  
+**解**：**(a) 幅度谱与相位谱**  
 
 首先，求幅度谱 $|X(\Omega)|$。由 $X(\Omega)$ 的表达式，有  
 
@@ -2609,9 +2640,7 @@ $$
 图 11.9: 一个序列 $x$ 的傅里叶变换 $X$ 示例，其带限于 $[-B, B]$ 频率区间。
 ## 11.11 序列的带宽
 
-序列的频谱非零的频率范围通常是关注的重点。这类似于第 6.11 节中连续时间信号（即函数）所引入的带宽概念。由于离散时间信号（即序列）的频谱总是 $2 \pi$ 周期的，当我们讨论序列的带宽时，只考虑长度为 $2 \pi$ 的一个区间内的频谱。具体来说，我们通常考虑以原点为中心的区间（长度为 $2 \pi$），例如 $(-\pi, \pi]$。
-
-当序列 $x$ 的傅里叶变换 $X$ 在 $(-\pi, \pi]$ 中的所有频率 $\Omega$ 上都为零，除了某个区间 $I$ 时，我们称 $x$ 的频率带限于 $I$。此外，我们将序列 $x$ 的带宽定义为 $(-\pi, \pi]$ 区间内 $X$ 非零部分的长度。例如，图 11.9 所示傅里叶变换 $X$ 的序列 $x$ 的频率带限于 $[-B, B]$，其带宽为 $B - (-B) = 2B$。有时在处理实序列时，会忽略负频率。由于本例中 $x$ 为实序列（因为 $X$ 是共轭对称的），我们可以选择忽略负频率，这样 $x$ 的带宽就被认为是 $[0, B]$ 区间，其带宽为 $B - 0 = B$。
+序列的频谱非零的频率范围通常是关注的重点。这类似于第 6.11 节中连续时间信号（即函数）所引入的带宽概念。由于离散时间信号（即序列）的频谱总是 $2 \pi$ 周期的，当我们讨论序列的带宽时，只考虑长度为 $2 \pi$ 的一个区间内的频谱。具体来说，我们通常考虑以原点为中心的区间（长度为 $2 \pi$），例如 $(-\pi, \pi]$。当序列 $x$ 的傅里叶变换 $X$ 在 $(-\pi, \pi]$ 中的所有频率 $\Omega$ 上都为零，除了某个区间 $I$ 时，我们称 $x$ 的频率带限于 $I$。此外，我们将序列 $x$ 的带宽定义为 $(-\pi, \pi]$ 区间内 $X$ 非零部分的长度。例如，图 11.9 所示傅里叶变换 $X$ 的序列 $x$ 的频率带限于 $[-B, B]$，其带宽为 $B - (-B) = 2B$。有时在处理实序列时，会忽略负频率。由于本例中 $x$ 为实序列（因为 $X$ 是共轭对称的），我们可以选择忽略负频率，这样 $x$ 的带宽就被认为是 $[0, B]$ 区间，其带宽为 $B - 0 = B$。
 ## 11.12 能量密度谱
 
 假设我们有一个有限能量为 $E$ 的序列 $x$，其傅里叶变换为 $X$。根据定义，序列 $x$ 的能量为  
@@ -2788,7 +2817,7 @@ $$
 
 下面给出一个说明展开相位概念的例子。
 
-例 11.33（展开相位）。考虑一个 LTI 系统，其频率响应为  
+**例 11.33**（展开相位）。考虑一个 LTI 系统，其频率响应为  
 
 $$
 H(\Omega) = e^{j 3 \Omega}
@@ -2947,245 +2976,261 @@ $$
 图 11.15: 并联 LTI 系统的频率响应等价关系。
 
 综上所述，通过傅里叶变换，LTI 系统的串联对应频率响应的乘法，并联对应频率响应的加法。
-## 11.15 LTI 系统与差分方程
 
-许多实际中有用的 LTI 系统可以用 **N 阶常系数线性差分方程**表示。假设系统的输入为 $x$，输出为 $y$，则系统的输入-输出关系可表示为  
+## 11.15 线性时不变系统与差分方程
 
-$$
-\sum_{k=0}^{N} b_k \, y(n-k) = \sum_{k=0}^{M} a_k \, x(n-k), \quad (M \le N)
-$$
-
-
-设 $X$ 和 $Y$ 分别为 $x$ 和 $y$ 的傅里叶变换，对两边取傅里叶变换并利用线性与差分性质，有  
+许多具有实际意义的线性时不变（LTI）系统可以用一个具有常系数的 $N$ 阶线性差分方程来表示。假设我们有一个这样的系统，其输入为 $x$，输出为 $y$。那么，该系统的输入-输出行为由如下形式的方程给出：
 
 $$
-\sum_{k=0}^{N} b_k e^{-j \Omega k} Y(\Omega) = \sum_{k=0}^{M} a_k e^{-j \Omega k} X(\Omega)
+\sum_{k=0}^{N} b_{k} y(n-k)=\sum_{k=0}^{M} a_{k} x(n-k)
 $$
 
 
-从而得到系统的频率响应  
+（其中 $M \leq N$）。令 $X$ 和 $Y$ 分别表示 $x$ 和 $y$ 的傅里叶变换。对上述方程两边取傅里叶变换，得到
 
 $$
-H(\Omega) = \frac{Y(\Omega)}{X(\Omega)} = \frac{\sum_{k=0}^{M} a_k e^{-j \Omega k}}{\sum_{k=0}^{N} b_k e^{-j \Omega k}}.
+\mathcal{F}\left\{\sum_{k=0}^{N} b_{k} y(n-k)\right\}(\Omega)=\mathcal{F}\left\{\sum_{k=0}^{M} a_{k} x(n-k)\right\}(\Omega) .
 $$
 
 
-注意，这里分子与分母都是 $e^{-j\Omega}$ 的多项式，因此 $H(\Omega)$ 是 $e^{-j \Omega}$ 的**有理函数**。这也是为什么有理函数在信号与系统分析中非常重要的原因之一。
+利用傅里叶变换的线性性质，可将上式改写为
+
+$$
+\sum_{k=0}^{N} b_{k} \mathcal{F}\{y(n-k)\}(\Omega)=\sum_{k=0}^{M} a_{k} \mathcal{F}\{x(n-k)\}(\Omega) .
+$$
+
+
+再利用傅里叶变换的时移性质，可进一步表示为
+
+$$
+\sum_{k=0}^{N} b_{k} e^{-j \Omega k} Y(\Omega)=\sum_{k=0}^{M} a_{k} e^{-j \Omega k} X(\Omega) .
+$$
+
+
+然后，提取公因子可得
+
+$$
+Y(\Omega) \sum_{k=0}^{N} b_{k} e^{-j \Omega k}=X(\Omega) \sum_{k=0}^{M} a_{k} e^{-j \Omega k}
+$$
+
+
+将该方程整理后，得到
+
+$$
+\frac{Y(\Omega)}{X(\Omega)}=\frac{\sum_{k=0}^{M} a_{k} e^{-j \Omega k}}{\sum_{k=0}^{N} b_{k} e^{-j \Omega k}}
+$$
+
+
+由于 $H(\Omega)=\frac{Y(\Omega)}{X(\Omega)}$，因此频率响应 $H$ 为
+
+$$
+H(\Omega)=\frac{\sum_{k=0}^{M} a_{k} e^{-j \Omega k}}{\sum_{k=0}^{N} b_{k} e^{-j \Omega k}}=\frac{\sum_{k=0}^{M} a_{k}\left(e^{-j \Omega}\right)^{k}}{\sum_{k=0}^{N} b_{k}\left(e^{-j \Omega}\right)^{k}}
+$$
+
+
+注意到 $H$ 的分子和分母都是变量 $e^{-j \Omega}$ 的多项式。因此，$H$ 是变量 $e^{-j \Omega}$ 的一个（真）有理函数。事实上，这正是有理函数在信号与系统研究中具有特殊重要性的一个原因。
 
 ---
 
-**例 11.35（差分方程 → 频率响应）**
-
-给定系统差分方程  
+**例 11.35**（由差分方程求频率响应）。一个输入为 $x$、输出为 $y$ 的 LTI 系统由以下差分方程表征：
 
 $$
-5y(n) + 2y(n-1) + 3y(n-2) = x(n) - 2x(n-1)
+5 y(n)+2 y(n-1)+3 y(n-2)=x(n)-2 x(n-1) .
 $$
 
 
-取傅里叶变换，得到  
+求该系统的频率响应 $H$。
+
+**解**：令 $X=\mathcal{F} x$，$Y=\mathcal{F} y$。对给定的差分方程两边取傅里叶变换，得到
 
 $$
-(5 + 2 e^{-j \Omega} + 3 e^{-j 2 \Omega}) Y(\Omega) = (1 - 2 e^{-j \Omega}) X(\Omega)
+5 Y(\Omega)+2 e^{-j \Omega} Y(\Omega)+3 e^{-j 2 \Omega} Y(\Omega)=X(\Omega)-2 e^{-j \Omega} X(\Omega)
 $$
 
 
-所以频率响应为  
+整理各项并提取公因子，得
 
 $$
-H(\Omega) = \frac{Y(\Omega)}{X(\Omega)} = \frac{1 - 2 e^{-j \Omega}}{5 + 2 e^{-j \Omega} + 3 e^{-j 2 \Omega}}
+\left(5+2 e^{-j \Omega}+3 e^{-j 2 \Omega}\right) Y(\Omega)=\left(1-2 e^{-j \Omega}\right) X(\Omega)
+$$
+
+
+将方程两边同时除以 $5+2 e^{-j \Omega}+3 e^{-j 2 \Omega}$ 和 $X(\Omega)$，得到
+
+$$
+\frac{Y(\Omega)}{X(\Omega)}=\frac{1-2 e^{-j \Omega}}{5+2 e^{-j \Omega}+3 e^{-j 2 \Omega}}
+$$
+
+
+由于 $H(\Omega)=\frac{Y(\Omega)}{X(\Omega)}$，因此
+
+$$
+H(\Omega)=\frac{1-2 e^{-j \Omega}}{5+2 e^{-j \Omega}+3 e^{-j 2 \Omega}}
 $$
 
 
 ---
 
-**例 11.36（频率响应 → 差分方程）**
-
-给定频率响应  
+**例 11.36**（由频率响应求差分方程）。一个输入为 $x$、输出为 $y$ 的 LTI 系统具有如下频率响应：
 
 $$
-H(\Omega) = \frac{e^{j 2 \Omega} - e^{j \Omega}}{e^{j 2 \Omega} - e^{j \Omega} + \frac{1}{4}}
+H(\Omega)=\frac{e^{j 2 \Omega}-e^{j \Omega}}{e^{j 2 \Omega}-e^{j \Omega}+\frac{1}{4}}
 $$
 
 
-根据 $H(\Omega) = Y(\Omega)/X(\Omega)$，整理得  
+求表征该系统的差分方程。
+
+**解**：令 $X=\mathcal{F} x$，$Y=\mathcal{F} y$。由于 $H(\Omega)=\frac{Y(\Omega)}{X(\Omega)}$，根据给定的频率响应 $H$，有
 
 $$
-e^{j 2 \Omega} Y(\Omega) - e^{j \Omega} Y(\Omega) + \frac{1}{4} Y(\Omega) = e^{j 2 \Omega} X(\Omega) - e^{j \Omega} X(\Omega)
-$$
-
-
-两边同时乘以 $e^{-j 2 \Omega}$，得到  
-
-$$
-Y(\Omega) - e^{-j \Omega} Y(\Omega) + \frac{1}{4} e^{-j 2 \Omega} Y(\Omega) = X(\Omega) - e^{-j \Omega} X(\Omega)
+\frac{Y(\Omega)}{X(\Omega)}=\frac{e^{j 2 \Omega}-e^{j \Omega}}{e^{j 2 \Omega}-e^{j \Omega}+\frac{1}{4}}
 $$
 
 
-取逆傅里叶变换得到差分方程  
+将方程两边同时乘以 $e^{j 2 \Omega}-e^{j \Omega}+\frac{1}{4}$ 和 $X(\Omega)$，得
 
 $$
-y(n) - y(n-1) + \frac{1}{4} y(n-2) = x(n) - x(n-1)
-$$
-
-
-## 11.16 滤波 (Filtering)
-
-在一些应用中，我们希望改变序列中频率分量的幅度或相位，或者完全去除某些频率分量。这个处理序列频率分量的过程称为 **滤波 (filtering)**，执行这种处理的系统称为 **滤波器 (filter)**。
-
-为了简化，我们只考虑 **LTI 滤波器**。如果滤波器是 LTI 的，那么它可以完全由其频率响应来描述。由于序列的频谱是 $2\pi$ 周期的，因此我们只需考虑长度为 $2\pi$ 的频率区间，通常选择以零为中心的区间 $(-\pi, \pi]$。在此区间中，靠近原点的频率为低频，靠近 $\pm \pi$ 的频率为高频。
-
----
-
-### 频率选择型滤波器
-
-频率选择型滤波器允许某些频率分量几乎不受失真地通过，同时显著衰减其他频率分量。常见类型包括：
-
-- **低通滤波器 (Lowpass)**  
-  允许低于截止频率 $\Omega_c$ 的频率通过，高于截止频率的频率被抑制。  
-  理想低通滤波器的频率响应为：
-
-$$
-  H(\Omega) = 
-  \begin{cases} 
-  1 & |\Omega| \in [0, \Omega_c] \\
-  0 & |\Omega| \in (\Omega_c, \pi]
-  \end{cases}
+e^{j 2 \Omega} Y(\Omega)-e^{j \Omega} Y(\Omega)+\frac{1}{4} Y(\Omega)=e^{j 2 \Omega} X(\Omega)-e^{j \Omega} X(\Omega)
 $$
 
 
-  图示见 Figure 11.16(a)。
-
-- **高通滤波器 (Highpass)**  
-  允许高于截止频率 $\Omega_c$ 的频率通过，低于截止频率的频率被抑制。  
-  理想高通滤波器的频率响应为：
+两边同乘以 $e^{-j 2 \Omega}$（使得 $e^{j \Omega}$ 的最高幂次为零），得到
 
 $$
-  H(\Omega) = 
-  \begin{cases} 
-  1 & |\Omega| \in [\Omega_c, \pi] \\
-  0 & |\Omega| \in [0, \Omega_c)
-  \end{cases}
+Y(\Omega)-e^{-j \Omega} Y(\Omega)+\frac{1}{4} e^{-j 2 \Omega} Y(\Omega)=X(\Omega)-e^{-j \Omega} X(\Omega)
 $$
 
 
-  图示见 Figure 11.16(b)。
-
-- **带通滤波器 (Bandpass)**  
-  仅允许介于两个截止频率 $\Omega_{c1}$ 和 $\Omega_{c2}$ 之间的频率通过，其余频率被抑制。  
-  理想带通滤波器的频率响应为：
+对该方程取傅里叶逆变换，得到
 
 $$
-  H(\Omega) = 
-  \begin{cases} 
-  1 & |\Omega| \in [\Omega_{c1}, \Omega_{c2}] \\
-  0 & |\Omega| \in [0, \Omega_{c1}) \cup (\Omega_{c2}, \pi]
-  \end{cases}
+y(n)-y(n-1)+\frac{1}{4} y(n-2)=x(n)-x(n-1) .
 $$
 
 
-  图示见 Figure 11.16(c)。
+## 11.16 滤波
 
----
+在某些应用中，我们希望改变一个序列各频率分量的幅度或相位，甚至可能完全消除某些频率分量。这种修改序列频率分量的过程称为**滤波**，而执行此类处理的系统则称为**滤波器**。
 
-> **图示说明**：
-> - (a) 理想低通滤波器频率响应
-> - (b) 理想高通滤波器频率响应
-> - (c) 理想带通滤波器频率响应
-### Example 11.37 (理想滤波器)
+为简便起见，此处仅考虑线性时不变（LTI）滤波器。若一个滤波器是 LTI 的，则其特性可完全由其频率响应来描述。由于序列的频谱具有 $2\pi$ 周期性，我们只需考虑长度为 $2\pi$ 的一个频率区间。通常，我们选择以原点为中心的区间，即 $(-\pi, \pi]$。在此区间内，靠近原点的频率称为**低频**，而靠近 $\pm\pi$ 的频率称为**高频**。
 
-对于以下每个 LTI 系统，其冲激响应 $h$ 给出如下，求系统的频率响应 $H$ 并绘制其图像，同时确定系统对应的频率选择型滤波器类型。
+滤波器有多种类型。其中一类重要的滤波器是**频率选择性滤波器**。这类滤波器允许某些频率分量几乎无失真地通过，同时显著衰减其他频率分量。几种基本的频率选择性滤波器包括：**低通**、**高通**和**带通**滤波器。
 
----
-
-#### (a) 低通滤波器
-
-**冲激响应：**
+一个**理想低通滤波器**会完全消除所有频率绝对值大于某一截止频率 $\Omega_c$ 的频率分量，而对剩余的频率分量不作任何改变。此类滤波器的频率响应具有如下形式：
 
 $$
-h(n) = \frac{\Omega_c}{\pi} \operatorname{sinc}(\Omega_c n), \quad 0<\Omega_c<\pi
+H(\Omega)= \begin{cases}
+1 & |\Omega| \in\left[0, \Omega_{c}\right] \\
+0 & |\Omega| \in\left(\Omega_{c}, \pi\right]
+\end{cases}
 $$
 
 
-**频率响应：**
+其中 $\Omega_{c}$ 为截止频率。该频率响应的示意图如图 11.16(a) 所示。
+
+一个**理想高通滤波器**会完全消除所有频率绝对值小于某一截止频率 $\Omega_c$ 的频率分量，而对剩余的频率分量不作任何改变。此类滤波器的频率响应具有如下形式：
+
+$$
+H(\Omega)= \begin{cases}
+1 & |\Omega| \in\left[\Omega_{c}, \pi\right] \\
+0 & |\Omega| \in\left[0, \Omega_{c}\right)
+\end{cases}
+$$
+
+
+其中 $\Omega_{c}$ 为截止频率。该频率响应的示意图如图 11.16(b) 所示。
+
+一个**理想带通滤波器**会完全消除所有频率绝对值不在两个截止频率之间的频率分量，而对剩余的频率分量不作任何改变。此类滤波器的频率响应具有如下形式：
+
+$$
+H(\Omega)= \begin{cases}
+1 & |\Omega| \in\left[\Omega_{c 1}, \Omega_{c 2}\right] \\
+0 & |\Omega| \in\left[0, \Omega_{c 1}\right) \cup\left(\Omega_{c 2}, \pi\right]
+\end{cases}
+$$
+
+
+其中 $\Omega_{c 1}$ 和 $\Omega_{c 2}$ 为两个截止频率。该频率响应的示意图如图 11.16(c) 所示。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-170.jpg?height=1117&width=965&top_left_y=788&top_left_x=521){width="400"}
+
+
+图 11.16：(a) 理想低通频率响应   (b) 理想高通频率响应   (c) 理想带通滤波器的频率响应。
+
+**例 11.37**（理想滤波器）。对于以下每个给定冲激响应 $h$ 的 LTI 系统，求出并绘制其频率响应 $H$，并指出该系统对应于哪一类频率选择性滤波器。
+
+(a) $h(n)=\dfrac{\Omega_{c}}{\pi} \operatorname{sinc}\left(\Omega_{c} n\right)$，其中 $\Omega_{c}$ 是区间 $(0, \pi)$ 内的一个实常数；
+
+(b) $h(n)=\delta(n)-\dfrac{\Omega_{c}}{\pi} \operatorname{sinc}\left(\Omega_{c} n\right)$，其中 $\Omega_{c}$ 是区间 $(0, \pi)$ 内的一个实常数；
+
+(c) $h(n)=\dfrac{2 \Omega_{b}}{\pi} \operatorname{sinc}\left(\Omega_{b} n\right) \cos \left(\Omega_{a} n\right)$，其中 $\Omega_{a}$ 和 $\Omega_{b}$ 是区间 $(0, \pi)$ 内的实常数。
+
+**解**：以下设系统的输入和输出分别为 $x$ 和 $y$，并令 $X$ 和 $Y$ 分别表示 $x$ 和 $y$ 的傅里叶变换。
+
+(a) 系统的频率响应 $H$ 即为其冲激响应 $h$ 的傅里叶变换。因此，
 
 $$
 \begin{aligned}
-H(\Omega) &= \mathcal{F}\left\{\frac{\Omega_c}{\pi} \operatorname{sinc}(\Omega_c n)\right\}(\Omega) \\
-&= \sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{2 \Omega_c} (\Omega - 2 \pi k)\right] \\
-&= \operatorname{rect}\left(\frac{\Omega}{2\Omega_c}\right), \quad |\Omega|\in(-\pi,\pi] \\
-&= 
-\begin{cases} 
-1 & |\Omega|\in[0,\Omega_c] \\
-0 & |\Omega|\in(\Omega_c, \pi]
+H(\Omega) & =\mathcal{F}\left\{\frac{\Omega_{c}}{\pi} \operatorname{sinc}\left(\Omega_{c} n\right)\right\}(\Omega) \\
+& =\sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{2 \Omega_{c}}(\Omega-2 \pi k)\right] \\
+& =\operatorname{rect}\left(\frac{1}{2 \Omega_{c}} \Omega\right) \quad \text{对于 }|\Omega| \in(-\pi, \pi] \\
+& = \begin{cases}
+1 & |\Omega| \in\left[0, \Omega_{c}\right] \\
+0 & |\Omega| \in\left(\Omega_{c}, \pi\right]
 \end{cases}
 \end{aligned}
 $$
 
 
-**结论：** 该系统允许低频分量通过，抑制高频分量，因此对应 **低通滤波器**。  
-**图示：** Figure 11.17(a)
+频率响应 $H$ 的图形如图 11.17(a) 所示。由于 $Y(\Omega)=H(\Omega) X(\Omega)$，且当 $|\Omega| \in\left(\Omega_{c}, \pi\right]$ 时 $H(\Omega)=0$，因此 $Y$ 仅包含 $X$ 中频率范围在 $|\Omega| \in\left[0, \Omega_{c}\right]$ 内的频率分量。换言之，只有 $X$ 中的低频分量被保留下来。因此，该系统对应于一个**低通滤波器**。
 
 ---
 
-#### (b) 高通滤波器
-
-**冲激响应：**
-
-$$
-h(n) = \delta(n) - \frac{\Omega_c}{\pi} \operatorname{sinc}(\Omega_c n)
-$$
-
-
-**频率响应：**
+(b) 系统的频率响应 $H$ 即为其冲激响应 $h$ 的傅里叶变换。因此，
 
 $$
 \begin{aligned}
-H(\Omega) &= \mathcal{F}\{\delta(n)\} - \mathcal{F}\left\{\frac{\Omega_c}{\pi}\operatorname{sinc}(\Omega_c n)\right\} \\
-&= 1 - \operatorname{rect}\left(\frac{\Omega}{2 \Omega_c}\right), \quad |\Omega|\in(-\pi, \pi] \\
-&= 
-\begin{cases} 
-0 & |\Omega|\in[0,\Omega_c) \\
-1 & |\Omega|\in[\Omega_c,\pi]
+H(\Omega) & =\mathcal{F}\left\{\delta(n)-\frac{\Omega_{c}}{\pi} \operatorname{sinc}\left(\Omega_{c} n\right)\right\}(\Omega) \\
+& =\mathcal{F} \delta(\Omega)-\mathcal{F}\left\{\frac{\Omega_{c}}{\pi} \operatorname{sinc}\left(\Omega_{c} n\right)\right\}(\Omega) \\
+& =1-\sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{2 \Omega_{c}}(\Omega-2 \pi k)\right] \\
+& =1-\operatorname{rect}\left(\frac{1}{2 \Omega_{c}} \Omega\right) \quad \text{对于 } \Omega \in(-\pi, \pi] \\
+& = \begin{cases}
+1 & |\Omega| \in\left[\Omega_{c}, \pi\right] \\
+0 & |\Omega| \in\left[0, \Omega_{c}\right)
 \end{cases}
 \end{aligned}
 $$
 
 
-**结论：** 该系统允许高频分量通过，抑制低频分量，因此对应 **高通滤波器**。  
-**图示：** Figure 11.17(b)
+频率响应 $H$ 的图形如图 11.17(b) 所示。由于 $Y(\Omega)=H(\Omega) X(\Omega)$，且当 $|\Omega| \in\left[0, \Omega_{c}\right)$ 时 $H(\Omega)=0$，因此 $Y$ 仅包含 $X$ 中频率范围在 $|\Omega| \in\left[\Omega_{c}, \pi\right]$ 内的频率分量。换言之，只有 $X$ 中的高频分量被保留下来。因此，该系统对应于一个**高通滤波器**。
 
 ---
-
-#### (c) 带通滤波器
-
-**冲激响应：**
-
-$$
-h(n) = \frac{2\Omega_b}{\pi} \operatorname{sinc}(\Omega_b n) \cos(\Omega_a n), \quad 0<\Omega_a,\Omega_b<\pi
-$$
-
-
-**频率响应：**
+(c) 系统的频率响应 $H$ 即为其冲激响应 $h$ 的傅里叶变换。因此，
 
 $$
 \begin{aligned}
-H(\Omega) &= \mathcal{F}\left\{\frac{2\Omega_b}{\pi} \operatorname{sinc}(\Omega_b n)\cos(\Omega_a n)\right\} \\
-&= \mathcal{F}\left\{\frac{\Omega_b}{\pi}\operatorname{sinc}(\Omega_b n) \left[e^{j \Omega_a n} + e^{-j \Omega_a n}\right]\right\} \\
-&= \operatorname{rect}\left(\frac{\Omega - \Omega_a}{2\Omega_b}\right) + \operatorname{rect}\left(\frac{\Omega + \Omega_a}{2\Omega_b}\right), \quad |\Omega| \in (-\pi, \pi] \\
-&= 
-\begin{cases} 
-1 & |\Omega| \in [\Omega_a - \Omega_b, \Omega_a + \Omega_b] \\
-0 & |\Omega| \in [0, \Omega_a - \Omega_b) \cup (\Omega_a + \Omega_b, \pi]
+H(\Omega) & =\mathcal{F}\left\{\frac{2 \Omega_{b}}{\pi} \operatorname{sinc}\left(\Omega_{b} n\right) \cos \left(\Omega_{a} n\right)\right\}(\Omega) \\
+& =\mathcal{F}\left\{\frac{\Omega_{b}}{\pi} \operatorname{sinc}\left(\Omega_{b} n\right)\left[2 \cos \left(\Omega_{a} n\right)\right]\right\}(\Omega) \\
+& =\mathcal{F}\left\{\frac{\Omega_{b}}{\pi} \operatorname{sinc}\left(\Omega_{b} n\right)\left[e^{j \Omega_{a} n}+e^{-j \Omega_{a} n}\right]\right\}(\Omega) \\
+& =\mathcal{F}\left\{\frac{\Omega_{b}}{\pi} e^{j \Omega_{a} n} \operatorname{sinc}\left(\Omega_{b} n\right)\right\}(\Omega)+\mathcal{F}\left\{\frac{\Omega_{b}}{\pi} e^{-j \Omega_{a} n} \operatorname{sinc}\left(\Omega_{b} n\right)\right\}(\Omega) \\
+& =\sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{2 \Omega_{b}}\left(\left[\Omega-\Omega_{a}\right]-2 \pi k\right)\right]+\sum_{k=-\infty}^{\infty} \operatorname{rect}\left[\frac{1}{2 \Omega_{b}}\left(\left[\Omega+\Omega_{a}\right]-2 \pi k\right)\right] \\
+& =\operatorname{rect}\left[\frac{1}{2 \Omega_{b}}\left(\Omega-\Omega_{a}\right)\right]+\operatorname{rect}\left[\frac{1}{2 \Omega_{b}}\left(\Omega+\Omega_{a}\right)\right] \quad \text{对于 } \Omega \in(-\pi, \pi] \\
+& = \begin{cases}
+1 & |\Omega| \in\left[\Omega_{a}-\Omega_{b}, \Omega_{a}+\Omega_{b}\right] \\
+0 & |\Omega| \in\left[0, \Omega_{a}-\Omega_{b}\right) \cup\left(\Omega_{a}+\Omega_{b}, \pi\right]
 \end{cases}
 \end{aligned}
 $$
 
 
-**结论：** 该系统仅允许中间频率通过，抑制低频和高频分量，因此对应 **带通滤波器**。  
-**图示：** Figure 11.17(c)
+频率响应 $H$ 的图形如图 11.17(c) 所示。由于 $Y(\Omega)=H(\Omega) X(\Omega)$，且当 $|\Omega| \in\left[0, \Omega_{a}-\Omega_{b}\right) \cup\left(\Omega_{a}+\Omega_{b}, \pi\right]$ 时 $H(\Omega)=0$，因此 $Y$ 仅包含 $X$ 中频率范围在 $|\Omega| \in\left[\Omega_{a}-\Omega_{b}, \Omega_{a}+\Omega_{b}\right]$ 内的频率分量。换言之，只有 $X$ 中的中频分量被保留下来。因此，该系统对应于一个**带通滤波器**。
 
-示例 11.38（低通滤波）。考虑一个脉冲响应为  
+![](https://cdn.mathpix.com/snip/images/mpa7U60HNoLkF0RZ4li6WCrQRnCk4x2tpg1VzVbw46c.original.fullsize.png){width="400"}
+
+
+图 11.17：例题中 (a) 第一个、(b) 第二个和 (c) 第三个系统的频率响应。
+
+**例 11.38**（低通滤波）。考虑一个脉冲响应为  
 
 $$
 h(n)=\frac{1}{3} \operatorname{sinc}\left(\frac{\pi}{3} n\right)
@@ -3248,7 +3293,13 @@ y(n) & =\mathcal{F}^{-1}\left\{\pi \delta(\Omega)+\frac{2 \pi}{3}\left[\delta\le
 $$
 
 
-示例 11.39（带通滤波）。考虑一个脉冲响应为  
+![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-174.jpg?height=1451&width=1054&top_left_y=605&top_left_x=467){width="400"}
+  
+
+图 11.18：低通滤波示例的频谱。(a) 输入信号 $x$ 的频谱 $X$。(b) 系统的频率响应 $H$。(c) 输出信号 $y$ 的频谱 $Y$。
+
+
+**例 11.39**（带通滤波）。考虑一个脉冲响应为  
 
 $$
 h(n)=\frac{8}{5 \pi} \operatorname{sinc}\left(\frac{4}{5} n\right) \cos \left(\frac{6}{5} n\right)
@@ -3264,11 +3315,7 @@ $$
 
 的响应 $y$。顺便指出，信号 $x$ 并非周期信号。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_bea866c53ced11a56081g-174.jpg?height=1451&width=1054&top_left_y=605&top_left_x=467){width="400"}
-  
-图 11.18：低通滤波示例的频谱。(a) 输入信号 $x$ 的频谱 $X$。(b) 系统的频率响应 $H$。(c) 输出信号 $y$ 的频谱 $Y$。
-
-**解答。** 对 $x$ 进行傅里叶变换，得到  
+**解** ：对 $x$ 进行傅里叶变换，得到  
 
 $$
 \begin{aligned}
@@ -3312,8 +3359,10 @@ $$
 
 $$
 \begin{aligned}
-y(n) &= \mathcal{F}^{-1}\Big\{\frac{2 \pi}{3} \delta\left(\Omega+\frac{8}{5}\right)+\pi \delta\left(\Omega+\frac{4}{5}\right)+\pi \delta\left(\Omega-\frac{4}{5}\right)+\frac{2 \pi}{3} \delta\left(\Omega-\frac{8}{5}\right)\Big\}(n) \\[1mm]
-&= \cos \left(\frac{4}{5} n\right)+\frac{2}{3} \cos \left(\frac{8}{5} n\right)
+y(n) & =\mathcal{F}^{-1}\left\{\frac{2 \pi}{3} \delta\left(\Omega+\frac{8}{5}\right)+\pi \delta\left(\Omega+\frac{4}{5}\right)+\pi \delta\left(\Omega-\frac{4}{5}\right)+\frac{2 \pi}{3} \delta\left(\Omega-\frac{8}{5}\right)\right\}(n) \\
+& =\mathcal{F}^{-1}\left\{\frac{2 \pi}{3} \delta\left(\Omega+\frac{8}{5}\right)+\frac{2 \pi}{3} \delta\left(\Omega-\frac{8}{5}\right)\right\}(n)+\mathcal{F}^{-1}\left\{\pi \delta\left(\Omega+\frac{4}{5}\right)+\pi \delta\left(\Omega-\frac{4}{5}\right)\right\}(n) \\
+& =\frac{2}{3} \mathcal{F}^{-1}\left\{\pi\left[\delta\left(\Omega+\frac{8}{5}\right)+\delta\left(\Omega-\frac{8}{5}\right)\right]\right\}(n)+\mathcal{F}^{-1}\left\{\pi\left[\delta\left(\Omega+\frac{4}{5}\right)+\delta\left(\Omega-\frac{4}{5}\right)\right]\right\}(n) \\
+& =\cos \left(\frac{4}{5} n\right)+\frac{2}{3} \cos \left(\frac{8}{5} n\right)
 \end{aligned}
 $$
 
@@ -3337,7 +3386,7 @@ $$
 
 $$
 \begin{gathered}
-y(t)=\sum_{k=-\infty}^{\infty} Y(k) e^{j k(2 \pi / T) t}, \quad
+y(t)=\sum_{k=-\infty}^{\infty} Y(k) e^{j k(2 \pi / T) t} \text { and } \\
 Y(n)=\frac{1}{T} \int_{T} y(t) e^{-j n(2 \pi / T) t} d t
 \end{gathered}
 $$
@@ -3364,7 +3413,7 @@ $$
 
 前述定理中的对偶关系在某些情况下非常有用。下面我们给出一个实例，利用该关系辅助计算 DTFT。
 
-**示例 11.40（sinc 序列的傅里叶变换）**。设 $B$ 为 $(0, \pi)$ 区间内的实常数。
+**例 11.40（sinc 序列的傅里叶变换）**。设 $B$ 为 $(0, \pi)$ 区间内的实常数。
 
 (a) 证明 $2 \pi$-周期函数  
 
@@ -3389,7 +3438,7 @@ $$
 
 的 DTFT $X$。
 
-**解答。**  
+**解：**  
 (a) 由傅里叶级数分析公式可得  
 
 $$
@@ -3407,11 +3456,14 @@ $$
 
 $$
 \begin{aligned}
-Y(k) &= \frac{j}{2 \pi k} \left[e^{-j B k} - e^{j B k}\right] \\[1mm]
-&= \frac{j}{2 \pi k} [ -2 j \sin(B k) ] \\[1mm]
-&= \frac{1}{\pi k} \sin(B k) \\[1mm]
-&= \frac{B}{\pi} \frac{\sin(B k)}{B k} \\[1mm]
-&= \frac{B}{\pi} \operatorname{sinc}(B k)
+Y(k) & =\left.\frac{1}{2 \pi}\left[\frac{1}{-j k} e^{-j k t}\right]\right|_{-B} ^{B} \\
+& =\left.\frac{j}{2 \pi k} e^{-j k t}\right|_{-B} ^{B} \\
+& =\frac{j}{2 \pi k}\left[e^{-j B k}-e^{j B k}\right] \\
+& =\frac{j}{2 \pi k}[2 j \sin (-B k)] \\
+& =-\frac{1}{\pi k} \sin (-B k) \\
+& =\frac{1}{\pi k} \sin (B k) \\
+& =\frac{B}{\pi}\left[\frac{\sin (B k)}{B k}\right] \\
+& =\frac{B}{\pi} \operatorname{sinc}(B k)
 \end{aligned}
 $$
 
@@ -3419,7 +3471,10 @@ $$
 对 $k=0$ 的情况，有  
 
 $$
-Y(0) = \frac{1}{2 \pi} (2 B) = \frac{B}{\pi}
+\begin{aligned}
+Y(k) & =\frac{1}{2 \pi}(2 B) \\
+& =\frac{B}{\pi}
+\end{aligned}
 $$
 
 
@@ -3532,7 +3587,7 @@ $$
 
 上述定理（即定理 11.22）具有非常重要的实际意义。如今大多数系统的核心都是数字计算机，而数字计算机本质上是离散时间系统，能够高效处理有限长度的序列，这些序列可以表示为有限大小的数字数组。相比之下，数字计算机在代数上（符号计算）处理连续函数则较为困难。因此，在实践中，通常使用 DFT 来计算 DTFT。DFT 用于获得 DTFT 的均匀采样点，然后可以利用插值技术为这些采样点之间的傅里叶变换赋值。在计算 $N$ 点 DFT 时，我们可以自由选择 $N$，从而选择足够细的采样网格，使插值得到的傅里叶变换近似足够精确以满足实际应用。
 
-**示例 11.41.** 考虑序列  
+**例 11.41.** 考虑序列  
 
 $$
 x(n) = u(n) - u(n-4)

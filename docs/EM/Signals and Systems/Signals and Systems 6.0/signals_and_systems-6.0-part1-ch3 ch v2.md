@@ -1,4 +1,6 @@
-# 第3章 连续时间信号与系统
+# 第一部分 连续时间信号与系统
+
+# 第三章 连续时间信号与系统
 
 ## 3.1 概述
 
@@ -18,9 +20,15 @@ y(t)=x(t-b) \tag{3.1}
 \end{equation*}
 $$
 
+
 其中 $b$ 是实常数。换句话说，函数 $y$ 是通过在 $x(t)$ 的表达式中用 $t-b$ 替换 $t$ 得到的。从几何上看，变换 (3.1) 将函数 $x$ 沿时间轴向左或向右平移，从而得到 $y$。若 $b>0$，则 $y$ 相对于 $x$ 向右平移（即在时间上延迟）；若 $b<0$，则 $y$ 相对于 $x$ 向左平移（即在时间上提前）。
 
 时间平移的效果如图 3.1 所示。通过对图 3.1(a) 所示的函数 $x$ 应用时间平移变换，可以得到图 3.1(b) 和 (c) 所示的函数。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-032.jpg?height=901&width=1385&top_left_y=434&top_left_x=307){width="400"}
+  
+
+图 3.1：时间平移的示例。(a) 函数 $x$；以及对 $x$ 施加平移变换后，移位 (b) +1 和 (c) -1 的结果。
 
 ### 3.2.2 时间反转（对称）
 
@@ -32,19 +40,16 @@ y(t)=x(-t) . \tag{3.2}
 \end{equation*}
 $$
 
+
 换句话说，函数 $y$ 是通过在 $x(t)$ 的表达式中用 $-t$ 替换 $t$ 得到的。从几何上看，变换 (3.2) 将函数 $x$ 关于原点对称，从而得到 $y$。
 
 为了说明时间反转的效果，图 3.2 给出了一个示例。将时间反转变换应用于图 3.2(a) 中的函数 $x$，可以得到图 3.2(b) 中的函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-032.jpg?height=901&width=1385&top_left_y=434&top_left_x=307){width="600"}
-  
-图 3.1：时间平移的示例。(a) 函数 $x$；以及对 $x$ 施加平移变换后，移位 (b) +1 和 (c) -1 的结果。
-
-![](https://cdn.mathpix.com/snip/images/dxJjHuRK9pjAxIqejxoRbb9x_Nk_KRhxLPjgzCMTBFQ.original.fullsize.png){width="600"}
+![](https://cdn.mathpix.com/snip/images/dxJjHuRK9pjAxIqejxoRbb9x_Nk_KRhxLPjgzCMTBFQ.original.fullsize.png){width="400"}
   
 图 3.2：时间反转的示例。(a) 函数 $x$；以及 (b) 对 $x$ 施加时间反转变换的结果。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-033.jpg?height=927&width=1546&top_left_y=286&top_left_x=348){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-033.jpg?height=927&width=1546&top_left_y=286&top_left_x=348){width="400"}
   
 图 3.3：时间压缩/扩展的示例。(a) 函数 $x$；以及对 $x$ 施加压缩/扩展变换后，缩放因子分别为 (b) 2 和 (c) $\frac{1}{2}$ 的结果。
 ### 3.2.3 时间压缩/扩展（伸缩）
@@ -75,7 +80,7 @@ $$
 
 其中 $a$ 是非零实常数。换句话说，函数 $y$ 是通过在 $x(t)$ 的表达式中用 $at$ 替换 $t$ 得到的。量 $a$ 称为**缩放因子**。从几何角度来看，变换 (3.4) 与沿时间轴的压缩/扩展以及/或者关于原点的对称相关。若 $|a|<1$，则函数沿时间轴扩展（即拉伸）；若 $|a|>1$，则函数被压缩；若 $|a|=1$，则函数既不扩展也不压缩。最后，若 $a<0$，则函数关于原点对称。可以看到，时间缩放同时包含了时间压缩/扩展和时间反转作为特例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-034.jpg?height=933&width=1600&top_left_y=283&top_left_x=208){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-034.jpg?height=933&width=1600&top_left_y=283&top_left_x=208){width="400"}
   
 图 3.4：时间缩放的示例。(a) 函数 $x$；以及对 $x$ 施加时间缩放变换后，缩放因子为 (b) 2、(c) $\frac{1}{2}$ 和 (d) -1 的结果。
 
@@ -100,7 +105,7 @@ $$
 1. 先将 $x$ 平移 $b$，再对结果进行时间缩放 $a$；
 2. 先将 $x$ 缩放 $a$，再对结果平移 $\frac{b}{a}$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-035.jpg?height=782&width=1433&top_left_y=286&top_left_x=413){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-035.jpg?height=782&width=1433&top_left_y=286&top_left_x=413){width="400"}
   
 图 3.5：时间平移与时间缩放组合变换的两种不同解释。(a) 原始函数。先平移再缩放的结果：(b) 中间结果，(c) 最终结果。先缩放再平移的结果：(d) 中间结果，(e) 最终结果。
 
@@ -121,7 +126,7 @@ $$
 1. 将函数 $x$ 向右平移 $b$ 个单位；  
 2. 将横轴向左平移 $b$ 个单位。  
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-036.jpg?height=522&width=1385&top_left_y=286&top_left_x=307){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-036.jpg?height=522&width=1385&top_left_y=286&top_left_x=307){width="400"}
   
 图 3.6：幅度平移的示例。(a) 函数 $x$；以及对 $x$ 施加幅度平移变换（平移量为 -2）后得到的结果。  
 
@@ -156,7 +161,7 @@ $$
 
 为了说明幅度缩放的效果，图 3.7 给出了一个示例。通过对图 3.7(a) 中的函数 $x$ 施加幅度缩放变换，可以得到图 3.7(b)、(c) 和 (d) 所示的函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-037.jpg?height=1043&width=1371&top_left_y=805&top_left_x=437){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-037.jpg?height=1043&width=1371&top_left_y=805&top_left_x=437){width="400"}
   
 图 3.7：幅度缩放的示例。(a) 函数 $x$；以及对 $x$ 施加幅度缩放变换后，缩放因子为 (b) 2、(c) $\frac{1}{2}$ 和 (d) -2 的结果。
 ### 3.3.3 幅度平移与缩放的结合
@@ -170,14 +175,8 @@ y(t)=a x(t)+b \tag{3.6}
 $$
 
 
-其中 $a$ 和 $b$ 是标量常数。可以证明，这一变换等价于先将 $x$ 按 $a$ 缩放，然后将所得函数平移 $b$。此外，由于 (3.6) 可以改写为
+其中 $a$ 和 $b$ 是标量常数。可以证明，这一变换等价于先将 $x$ 按 $a$ 缩放，然后将所得函数平移 $b$。此外，由于 (3.6) 可以改写为$$ y(t)=a\left[x(t)+\frac{b}{a}\right],$$因此，该变换也等价于先将 $x$ 平移 $\frac{b}{a}$，再将所得函数按 $a$ 缩放。
 
-$$
-y(t)=a\left[x(t)+\frac{b}{a}\right],
-$$
-
-
-因此，该变换也等价于先将 $x$ 平移 $\frac{b}{a}$，再将所得函数按 $a$ 缩放。
 ## 3.4 函数的性质
 
 函数可能具有许多有趣的性质。接下来，我们将更详细地研究对称性与周期性（前面已介绍过）。此外，我们还将介绍若干其他函数性质。这些性质在信号与系统的分析中非常有用。
@@ -307,7 +306,8 @@ $$
 引入最小公倍数的概念后，我们就可以讨论两个周期函数的和是否仍然是周期函数。下面的定理对此有重要启示。
 
 **定理 3.2 （周期函数的和）**  
-设 $x_{1}$ 和 $x_{2}$ 是两个（连续的）周期函数，其周期分别为 $T_{1}$ 和 $T_{2}$。则 $x=x_{1}+x_{2}$ 是周期函数，当且仅当比值 $T_{1}/T_{2}$ 是有理数（即两个整数的商）。若 $x$ 是周期函数，且 $T_{1}/T_{2}=q/r$，其中 $q$ 和 $r$ 是互素整数，则 $x$ 的周期 $T=\operatorname{lcm}(T_{1},T_{2})=rT_{1}=qT_{2}. $
+设 $x_{1}$ 和 $x_{2}$ 是两个（连续的）周期函数，其周期分别为 $T_{1}$ 和 $T_{2}$。则 $x=x_{1}+x_{2}$ 是周期函数，当且仅当比值 $T_{1}/T_{2}$ 是有理数（即两个整数的商）。若 $x$ 是周期函数，且 $T_{1}/T_{2}=q/r$，其中 $q$ 和 $r$ 是互素整数，则 $x$ 的周期 $
+T=\operatorname{lcm}(T_{1},T_{2})=rT_{1}=qT_{2}. $
 
 
 **证明。** 我们仅给出部分证明。假设 $x$ 是周期函数，需证明它的周期为 $T$。由于 $x$ 是周期函数，所以 $T=\operatorname{lcm}(T_{1},T_{2})$ 必然存在。因为 $T$ 是 $T_{1}$ 和 $T_{2}$ 的整数倍，所以可写作 $T=k_{1}T_{1}=k_{2}T_{2}$，其中 $k_{1}$ 和 $k_{2}$ 为正整数。于是有
@@ -437,6 +437,12 @@ $$
 则称 $x$ 为**反因果函数（anticausal function）**。反因果函数是左边函数的一种特殊情况。  
 
 需要注意的是，当“因果（causal）”和“反因果（anticausal）”用来描述函数时，它们与通常的因果关系（cause and effect）没有任何联系。从这个角度看，这样的命名或许并不是最恰当的。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-042.jpg?height=749&width=1217&top_left_y=286&top_left_x=413){width="400"}
+  
+
+图 3.8：具有不同边界性质的函数示例。(a) 左边但非右边，(b) 右边但非左边，(c) 时限，(d) 双边。
+
 ### 3.4.4 有界函数
 
 若存在某个（有限的）非负实常数 $A$，使得
@@ -460,9 +466,6 @@ $$
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-042.jpg?height=749&width=1217&top_left_y=286&top_left_x=413){width="600"}
-  
-图 3.8：具有不同边界性质的函数示例。(a) 左边但非右边，(b) 右边但非左边，(c) 时限，(d) 双边。
 ### 3.4.5 信号的能量与功率
 
 函数 $x$ 所含的**能量** $E$ 定义为
@@ -547,9 +550,10 @@ $$
 
 $$
 \begin{aligned}
-& v_1(t)=0 \text{ 对 } t<0 \\
-\Rightarrow & x(t-5)=0 \text{ 对 } t<0 \\
-\Rightarrow & x(t)=0 \text{ 对 } t<-5
+& v_{1}(t)=0 \text { for } t<0 \\
+\Rightarrow & x(t-5)=0 \text { for } t<0 \\
+\Rightarrow & x([t+5]-5)=0 \text { for }(t+5)<0 \\
+\Rightarrow & x(t)=0 \text { for } t<-5
 \end{aligned}
 $$
 
@@ -611,9 +615,6 @@ $$
   
 图 3.9：例 3.6 中的函数 $x$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-044.jpg?height=622&width=593&top_left_y=678&top_left_x=702){width="300"}
-  
-图 3.10：实正弦函数。
 ## 3.5 基本函数
 
 在信号与系统的研究中，有一些基本信号特别有用。以下内容将介绍其中对我们目的最有益的一些。
@@ -629,6 +630,11 @@ $$
 
 其中 $A, \omega$ 和 $\theta$ 为实常数。此类函数是周期性的，其基本周期为 $T=\frac{2 \pi}{|\omega|}$，其图像类似于图 3.10 所示。
 
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-044.jpg?height=622&width=593&top_left_y=678&top_left_x=702){width="400"}
+  
+
+图 3.10：实正弦函数。
+
 ### 3.5.2 复指数函数
 
 另一个重要的函数类是复指数函数。复指数函数 $x$ 的一般形式为
@@ -642,13 +648,15 @@ $$
 
 其中 $A$ 和 $\lambda$ 为复常数。复指数函数在系统理论中具有基础性的重要性，同时也为表示许多其他类函数提供了方便的手段。复指数函数可以根据其参数 $A$ 和 $\lambda$ 的取值表现出多种不同的行为模式。以下内容将探讨复指数函数的一些特殊情况，以及一般情况。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-045.jpg?height=631&width=1573&top_left_y=280&top_left_x=337){width="600"}
-
-图 3.11：实指数函数的情况 (a) $\lambda>0$，(b) $\lambda=0$，以及 (c) $\lambda<0$。
-
 #### 3.5.2.1 实指数函数
 
 首先考虑复指数函数的一个特殊情况——实指数函数。在实指数函数的情况下，我们将式 (3.16) 中的 $A$ 和 $\lambda$ 限制为实数。实指数函数可以根据 $\lambda$ 的取值表现出三种不同的行为模式，如图 3.11 所示。如果 $\lambda>0$，则 $x(t)$ 随着 $t$ 的增加呈指数增长（即增长型指数函数）。如果 $\lambda<0$，则 $x(t)$ 随着 $t$ 的增加呈指数衰减（即衰减型或阻尼型指数函数）。如果 $\lambda=0$，则 $x(t)$ 在所有 $t$ 上恒等于常数 $A$。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-045.jpg?height=631&width=1573&top_left_y=280&top_left_x=337){width="400"}
+
+
+图 3.11：实指数函数的情况 (a) $\lambda>0$，(b) $\lambda=0$，以及 (c) $\lambda<0$。
+
 #### 3.5.2.2 复正弦函数
 
 复指数函数的第二个特殊情况是复正弦函数。在复正弦函数的情况下，式 (3.16) 中的参数满足 $A$ 为复数且 $\lambda$ 为纯虚数（即 $\operatorname{Re}(\lambda)=0$）。为了方便，我们将 $A$ 用极坐标形式表示，将 $\lambda$ 用笛卡尔形式表示如下：
@@ -674,11 +682,18 @@ $$
 
 复正弦函数 $x(t)=e^{j \omega t}$ 在 $\omega$ 分别取 $2 \pi$ 和 $-2 \pi$ 时的图像如图 3.13(a) 和 (b) 所示。从这些图中可以看出，随着 $t$ 增加，$x(t)$ 描绘的曲线呈螺旋状。如果沿着 $t$ 轴方向向 $-\infty$ 直视该曲线，当 $\omega>0$ 时螺旋呈逆时针方向（即右手螺旋），当 $\omega<0$ 时螺旋呈顺时针方向（即左手螺旋）。注意，虽然这两种复正弦函数的振荡速率相同，但它们并不是通过平移（即时间平移）或反射（即时间反转）得到的版本。左手螺旋和右手螺旋在本质上是不同的形状，一个无法通过平移和/或反射变为另一个。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-046.jpg?height=698&width=1330&top_left_y=289&top_left_x=329){width="500"}
+如图 3.13 所示，复正弦函数 $x(t)=e^{j \omega t}$ 在 $\omega>0$ 和 $\omega<0$ 时的行为本质上不同。因此，在处理复正弦函数时，通常使用带符号的频率（如前文第 2.10.2 节所介绍）。也就是说，我们通常将 $\omega$ 称为复正弦函数的频率。这是带符号频率的一个应用实例（因为 $\omega$ 显然是带符号的量）。旋转的正方向（即 $\omega>0$）对应右手螺旋，而旋转的负方向（即 $\omega<0$）对应左手螺旋。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-046.jpg?height=698&width=1330&top_left_y=289&top_left_x=329){width="400"}
+
 
 图 3.12：复正弦函数。(a) 实部和 (b) 虚部。
 
-如图 3.13 所示，复正弦函数 $x(t)=e^{j \omega t}$ 在 $\omega>0$ 和 $\omega<0$ 时的行为本质上不同。因此，在处理复正弦函数时，通常使用带符号的频率（如前文第 2.10.2 节所介绍）。也就是说，我们通常将 $\omega$ 称为复正弦函数的频率。这是带符号频率的一个应用实例（因为 $\omega$ 显然是带符号的量）。旋转的正方向（即 $\omega>0$）对应右手螺旋，而旋转的负方向（即 $\omega<0$）对应左手螺旋。
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-047.jpg?height=1565&width=1031&top_left_y=570&top_left_x=607){width="400"}
+
+
+图 3.13：复正弦函数 $x(t)=e^{j \omega t}$，(a) $\omega=2 \pi$，(b) $\omega=-2 \pi$。
+
 #### 3.5.2.3 一般复指数函数
 
 最后，我们考虑一般复指数函数。也就是说，我们考虑式 (3.16) 的一般情况，其中 $A$ 和 $\lambda$ 都是复数。为了方便，我们将 $A$ 用极坐标形式表示，将 $\lambda$ 用笛卡尔形式表示如下：
@@ -702,11 +717,7 @@ $$
 
 可以看到，$\operatorname{Re}[x(t)]$ 和 $\operatorname{Im}[x(t)]$ 形式相似。它们都是实指数函数与实正弦函数的乘积。根据 $\sigma$ 的取值，$x$ 会表现出三种不同的行为模式。如果 $\sigma=0$，$\operatorname{Re}(x)$ 和 $\operatorname{Im}(x)$ 是实正弦函数。如果 $\sigma>0$，$\operatorname{Re}(x)$ 和 $\operatorname{Im}(x)$ 都是实正弦函数与增长型实指数函数的乘积。如果 $\sigma<0$，$\operatorname{Re}(x)$ 和 $\operatorname{Im}(x)$ 都是实正弦函数与衰减型实指数函数的乘积。图 3.14 展示了 $\operatorname{Re}(x)$ 的这三种情况。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-047.jpg?height=1565&width=1031&top_left_y=570&top_left_x=607){width="400"}
-
-图 3.13：复正弦函数 $x(t)=e^{j \omega t}$，(a) $\omega=2 \pi$，(b) $\omega=-2 \pi$。
-
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-048.jpg?height=590&width=1579&top_left_y=283&top_left_x=210){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-048.jpg?height=590&width=1579&top_left_y=283&top_left_x=210){width="400"}
 
 图 3.14：一般复指数函数的实部，(a) $\sigma>0$，(b) $\sigma=0$，(c) $\sigma<0$。
 
@@ -734,6 +745,11 @@ $$
 
 该函数的图像如图 3.15 所示。显然，$u$ 在原点处是不连续的。在这个不连续点，我们选择将 $u$ 定义为 1（即 $u(0)=1$）。然而，这一选择在某种程度上是任意的。也就是说，对于大多数实际应用，由于本书未涉及的技术原因，重要的是 $u(0)$ 是有限的，而不是其具体取值。因此，一些作者选择将 $u(0)$ 保留为未指定（但有限）的常数，而其他作者则选择为 $u(0)$ 赋予具体值。在选择具体值的情况下，最常用的值为 $0, \frac{1}{2}$ 和 $1$。显然，在本书中，作者选择使用 $u(0)=1$。
 
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=390&width=663&top_left_y=294&top_left_x=788){width="400"}
+
+
+图 3.15：单位阶跃函数。
+
 ### 3.5.5 符号函数
 
 另一个与单位阶跃函数密切相关的函数是所谓的符号函数。符号函数记作 sgn，定义为
@@ -745,17 +761,10 @@ $$
 
 该函数的图像如图 3.16 所示。从 (3.19) 可以看出，符号函数仅用于计算一个数的符号。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=390&width=663&top_left_y=294&top_left_x=788){width="400"}
-
-图 3.15：单位阶跃函数。
-
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=330&width=630&top_left_y=813&top_left_x=810){width="400"}
 
 图 3.16：符号函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=309&width=314&top_left_y=1264&top_left_x=967){width="300"}
-
-图 3.17：矩形函数。
 ### 3.5.6 矩形函数
 
 另一个有用的函数是矩形函数。矩形函数（也称为单位矩形脉冲函数）记作 rect，定义为
@@ -767,19 +776,19 @@ $$
 
 该函数的图像如图 3.17 所示。
 
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-049.jpg?height=309&width=314&top_left_y=1264&top_left_x=967){width="400"}
+
+
+图 3.17：矩形函数。
+
 **例 3.7（用矩形脉冲提取函数的一部分）**  
 使用矩形函数提取图 3.18(a) 所示函数 $x$ 的一个周期。
 
-**解答**  
-我们选择提取 $x(t)$ 在 $-\frac{T}{2}<t \leq \frac{T}{2}$ 区间内的周期。为了提取这个周期，我们需要将 $x$ 与一个在该区间为 1、其他区间为 0 的函数相乘。这样的函数就是 $v(t)=\operatorname{rect}\left(\frac{1}{T} t\right)$，如图 3.18(b) 所示。将 $v$ 与 $x$ 相乘得到的函数如图 3.18(c) 所示。
+**解** ：我们选择提取 $x(t)$ 在 $-\frac{T}{2}<t \leq \frac{T}{2}$ 区间内的周期。为了提取这个周期，我们需要将 $x$ 与一个在该区间为 1、其他区间为 0 的函数相乘。这样的函数就是 $v(t)=\operatorname{rect}\left(\frac{1}{T} t\right)$，如图 3.18(b) 所示。将 $v$ 与 $x$ 相乘得到的函数如图 3.18(c) 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-050.jpg?height=1049&width=1039&top_left_y=802&top_left_x=434){width="500"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-050.jpg?height=1049&width=1039&top_left_y=802&top_left_x=434){width="400"}
 
 图 3.18：使用矩形函数提取周期函数 $x$ 的一个周期。(a) 函数 $x$。(b) 时间缩放后的矩形函数 $v$。(c) $x$ 与 $v$ 的乘积。
-
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-051.jpg?height=317&width=317&top_left_y=297&top_left_x=967){width="300"}
-
-图 3.19：三角函数。
 
 ### 3.5.7 指示函数
 
@@ -790,8 +799,8 @@ $$
 $$
 
 
-**例 3.8**  
-一个在 $\mathbb{R}$ 上定义的矩形脉冲，幅值为 1，前沿在 $a$，后沿在 $b$，可以表示为 $\chi_{[a, b]}$。单位阶跃函数（在 $\mathbb{R}$ 上定义）表示为 $\chi_{[0, \infty)}$。单位矩形脉冲（在 $\mathbb{R}$ 上定义）表示为 $\chi_{[-1 / 2,1 / 2)}$。
+**例 3.8**  ：一个在 $\mathbb{R}$ 上定义的矩形脉冲，幅值为 1，前沿在 $a$，后沿在 $b$，可以表示为 $\chi_{[a, b]}$。单位阶跃函数（在 $\mathbb{R}$ 上定义）表示为 $\chi_{[0, \infty)}$。单位矩形脉冲（在 $\mathbb{R}$ 上定义）表示为 $\chi_{[-1 / 2,1 / 2)}$。
+
 ### 3.5.8 三角函数
 
 另一个有用的基本函数是三角函数（也称为单位三角脉冲函数），记作 tri，定义为
@@ -802,6 +811,11 @@ $$
 
 
 该函数的图像如图 3.19 所示。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-051.jpg?height=317&width=317&top_left_y=297&top_left_x=967){width="400"}
+
+
+图 3.19：三角函数。
 
 ### 3.5.9 基本正弦函数
 
@@ -882,11 +896,11 @@ $$
 
 在图形上，delta 函数表示如图 3.20 所示。由于该函数在原点处取无限值，我们无法绘制其真实数值，因此用一条竖直箭头表示该无限值，同时标示脉冲强度。在图 3.21 中，我们绘制了经过缩放和平移的 delta 函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=532){width="300"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=532){width="400"}
 
 图 3.20：Delta 函数。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=1342){width="300"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-053.jpg?height=311&width=374&top_left_y=297&top_left_x=1342){width="400"}
 
 图 3.21：缩放和平移后的 delta 函数。
 
@@ -912,6 +926,11 @@ $$
 
 为了帮助可视化这一极限过程，图 3.24 显示了 $g_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。从图中可以直观地确认，当 $\varepsilon \rightarrow 0$ 时，$g_{\varepsilon} \rightarrow \delta$。因此，$\delta$ 可视为矩形脉冲的极限情况，其中脉冲宽度趋于无穷小，脉冲高度趋于无限大，同时保证所得函数的积分保持为 1。
 
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-055.jpg?height=536&width=1133&top_left_y=302&top_left_x=545){width="400"}
+
+
+图 3.24：$d_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
+
 非正式地，也可以将 delta 函数 $\delta$ 看作单位阶跃函数 $u$ 的导数。然而严格来说，$u$ 在 0 处不连续，因此其导数在普通意义下不存在。更准确地说，$\delta$ 是 $u$ 的广义导数。广义导数本质上是导数概念的扩展，即使对于不连续函数也可以良好定义。
 
 delta 函数具有多个重要性质，这些性质直接来源于其在 (3.22) 中的定义。下面给出相关定理。
@@ -927,9 +946,15 @@ $$
 
 
 这一结果称为等价性质，如图 3.25 所示。  
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-056.jpg?height=366&width=1519&top_left_y=286&top_left_x=240){width="400"}
+
+
+图 3.25：等价性质的图示。(a) 函数 $x$；(b) 平移后的 delta 函数；(c) 两者的乘积。
+
 **证明**：该证明直接来源于 delta 函数仅在单一点非零的事实。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-054.jpg?height=536&width=1133&top_left_y=302&top_left_x=421){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-054.jpg?height=536&width=1133&top_left_y=302&top_left_x=421){width="400"}
 
 图 3.23：$g_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
 
@@ -990,10 +1015,6 @@ $$
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-055.jpg?height=536&width=1133&top_left_y=302&top_left_x=545){width="600"}
-
-图 3.24：$d_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
-
 因此，$\delta$ 函数可以视为 $d_{\varepsilon}$ 的极限情况。特别地，有
 
 $$
@@ -1037,10 +1058,6 @@ $$
 **证明**：由 $\delta$ 函数的定义可直接得出。
 
 如后续将看到的，$\delta$ 的等价性质、抽取性质、缩放性质及偶性都是非常有用的。最后，由 $\delta$ 的定义可知，在不包含原点的任意区间上积分该函数，其值为零。
-
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-056.jpg?height=366&width=1519&top_left_y=286&top_left_x=240){width="600"}
-
-图 3.25：等价性质的图示。(a) 函数 $x$；(b) 平移后的 delta 函数；(c) 两者的乘积。
 
 **例 3.9（抽取性质示例）**  
 计算积分
@@ -1158,7 +1175,13 @@ u\left(t+\frac{1}{2}\right)-u\left(t-\frac{1}{2}\right) & = \begin{cases}0-0 & t
 $$
 
 
-图 3.26 给出了图示。  
+图 3.26 给出了图示。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-058.jpg?height=420&width=1362&top_left_y=283&top_left_x=316){width="400"}
+
+
+Figure 3.26: Representing the rectangular function using unit-step functions. (a) A shifted unit-step function, (b) another shifted unit-step function, and (c) their difference (which is the rectangular function).
+
 推广到任意矩形脉冲：高度为 1，起始边 $a$，结束边 $b$：
 
 $$
@@ -1166,15 +1189,9 @@ x(t)=u(t-a)-u(t-b)=\begin{cases}1 & a \le t < b \\ 0 & \text{otherwise}\end{case
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-058.jpg?height=420&width=1362&top_left_y=283&top_left_x=316){width="600"}
-
-
-图3.26：用单位阶跃函数表示矩形函数。(a) 一个移位的单位阶跃函数，(b) 另一个移位的单位阶跃函数，(c) 它们的差（即矩形函数）。
-
-
 ---
 
-示例 3.13（分段线性函数）。考虑如下分段线性函数 $x$：
+**例 3.13**（分段线性函数）。考虑如下分段线性函数 $x$：
 
 $$
 x(t)= \begin{cases}t & 0 \leq t<1 \\ 1 & 1 \leq t<2 \\ 3-t & 2 \leq t<3 \\ 0 & \text { otherwise }\end{cases}
@@ -1183,28 +1200,41 @@ $$
 
 求一个适用于所有 $t$ 的单一表达式（使用单位阶跃函数表示）。
 
-**解答**：$x$ 的图像如图 3.27(a) 所示。我们分别考虑分段函数的每一段，第一段（$0 \leq t<1$）可表示为：
+**解答**：$x$ 的图像如图 3.27(a) 所示。我们分别考虑分段函数的每一段：
+
+- 第一段（$0 \leq t<1$）可表示为：
 
 $$
 v_{1}(t)=t[u(t)-u(t-1)] .
 $$
 
 
-该函数绘制如图 3.27(b)。第二段（$1 \leq t<2$）可表示为：
+该函数绘制如图 3.27(b)。
+
+- 第二段（$1 \leq t<2$）可表示为：
 
 $$
 v_{2}(t)=u(t-1)-u(t-2) .
 $$
 
 
-该函数绘制如图 3.27(c)。第三段（$2 \leq t<3$）可表示为：
+该函数绘制如图 3.27(c)。
+
+- 第三段（$2 \leq t<3$）可表示为：
 
 $$
 v_{3}(t)=(3-t)[u(t-2)-u(t-3)] .
 $$
 
 
-该函数绘制如图 3.27(d)。现在注意到 $x=v_{1}+v_{2}+v_{3} .$
+该函数绘制如图 3.27(d)。
+
+现在注意到：
+
+$$
+x=v_{1}+v_{2}+v_{3} .
+$$
+
 
 即：
 
@@ -1220,11 +1250,14 @@ $$
 
 因此，我们得到了一个适用于所有 $t$ 的单一表达式。
 
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-059.jpg?height=612&width=860&top_left_y=291&top_left_x=691){width="400"}
+  
 
+图 3.27：使用单位阶跃函数表示分段线性函数。(a) 函数 $x$；(b)、(c) 和 (d) 三个函数，它们的和为 $x$。
 
 ---
 
-示例 3.14（分段多项式函数）。考虑如下分段多项式函数 $x$：
+**例 3.14**（分段多项式函数）。考虑如下分段多项式函数 $x$：
 
 $$
 x(t)= \begin{cases}1 & 0 \leq t<1 \\ (t-2)^{2} & 1 \leq t<3 \\ 4-t & 3 \leq t<4 \\ 0 & \text { otherwise }\end{cases}
@@ -1233,13 +1266,14 @@ $$
 
 求一个适用于所有 $t$ 的单一表达式（使用单位阶跃函数表示）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-059.jpg?height=612&width=860&top_left_y=291&top_left_x=691){width="400"}
+**解**：$x$ 的图像如图 3.28(a) 所示。我们分别考虑分段函数的每一段：
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=620&width=936&top_left_y=286&top_left_x=529){width="400"}
   
-图 3.27：使用单位阶跃函数表示分段线性函数。(a) 函数 $x$；(b)、(c) 和 (d) 三个函数，它们的和为 $x$。
 
-**解答**：$x$ 的图像如图 3.28(a) 所示。我们分别考虑分段函数的每一段：
+图 3.28：使用单位阶跃函数表示分段多项式函数。(a) 函数 $x$；(b)、(c) 和 (d) 三个函数，其和为 $x$。
 
-第一段（$0 \leq t<1$）可表示为：
+- 第一段（$0 \leq t<1$）可表示为：
 
 $$
 v_{1}(t)=u(t)-u(t-1) .
@@ -1248,7 +1282,7 @@ $$
 
 该函数绘制如图 3.28(b)。
 
-第二段（$1 \leq t<3$）可表示为：
+- 第二段（$1 \leq t<3$）可表示为：
 
 $$
 v_{2}(t)=(t-2)^{2}[u(t-1)-u(t-3)]=\left(t^{2}-4 t+4\right)[u(t-1)-u(t-3)] .
@@ -1257,22 +1291,16 @@ $$
 
 该函数绘制如图 3.28(c)。
 
-第三段（$3 \leq t<4$）可表示为：
- 
+- 第三段（$3 \leq t<4$）可表示为：
+
 $$
 v_{3}(t)=(4-t)[u(t-3)-u(t-4)] .
 $$
 
+
 该函数绘制如图 3.28(d)。
 
-现在注意到：
-
-$$
-x=v_{1}+v_{2}+v_{3} .
-$$
-
-
-即：
+现在观察到： $$ x=v_{1}+v_{2}+v_{3} .$$ 即：
 
 $$
 \begin{aligned}
@@ -1288,7 +1316,7 @@ $$
 
 ---
 
-示例 3.15（周期函数）。考虑图 3.29(a) 所示的周期函数 $x$。求一个适用于所有 $t$ 的 $x(t)$ 的单一表达式（涉及单位阶跃函数）。
+**例 3.15**（周期函数）。考虑图 3.29(a) 所示的周期函数 $x$。求一个适用于所有 $t$ 的 $x(t)$ 的单一表达式（涉及单位阶跃函数）。
 
 **解答**。我们首先求 $x$ 的一个周期的表达式。将此表达式记为 $v$。则可以写为：
 
@@ -1307,11 +1335,7 @@ x(t) & =\sum_{k=-\infty}^{\infty} v(t-2 k) \\
 $$
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=620&width=936&top_left_y=286&top_left_x=529){width="400"}
-  
-图 3.28：使用单位阶跃函数表示分段多项式函数。(a) 函数 $x$；(b)、(c) 和 (d) 三个函数，其和为 $x$。
-
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=315&width=1090&top_left_y=1042&top_left_x=375){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-060.jpg?height=315&width=1090&top_left_y=1042&top_left_x=375){width="400"}
   
 图 3.29：使用单位阶跃函数表示周期函数。(a) 周期函数 $x$；(b) 一个由 $x$ 的单个周期组成的函数 $\nu$。
 
@@ -1334,25 +1358,24 @@ $$
 x \xrightarrow{\mathcal{H}} y。
 $$
 
+
 此外，如果上下文清楚，算子 $\mathcal{H}$ 常常可以省略，从而得到简化的表示法：
 
 $$
 x \rightarrow y。
 $$
 
+
 注意，符号“$\rightarrow$”和“$=$”的意义完全不同。例如，符号 $x \rightarrow y$ 并不意味着 $x=y$。符号“$\rightarrow$”应读作“产生”（而非“等于”）。也就是说，“$x \rightarrow y$”应理解为“输入 $x$ 产生输出 $y$”。
-
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=133&width=412&top_left_y=302&top_left_x=915){width="300"}
-  
-图 3.30：系统的框图。
-
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=282&width=1238&top_left_y=534&top_left_x=497){width="600"}
-  
-图 3.31：系统的互连。(a) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的串联互连；(b) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的并联互连。
 
 ### 3.7.1 框图表示
 
 假设我们有一个由算子 $\mathcal{H}$ 定义的系统，其输入为 $x$，输出为 $y$。通常，我们使用如图 3.30 所示的框图来表示这样的系统。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=133&width=412&top_left_y=302&top_left_x=915){width="400"}
+  
+
+图 3.30：系统的框图。
 
 ### 3.7.2 系统的互连
 
@@ -1362,13 +1385,20 @@ $$
 y = \mathcal{H}_2 \mathcal{H}_1 x . \tag{3.27}
 $$
 
+
 第二种互连方式，如图 3.31(b) 所示，称为并联互连。在此情况下，整体系统由下式定义：
 
 $$
 y = \mathcal{H}_1 x + \mathcal{H}_2 x . \tag{3.28}
 $$
 
+
 除非已知算子 $\mathcal{H}_1$ 和 $\mathcal{H}_2$ 的具体定义，否则 (3.27) 和 (3.28) 中的系统方程无法进一步简化。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-061.jpg?height=282&width=1238&top_left_y=534&top_left_x=497){width="400"}
+  
+
+图 3.31：系统的互连。(a) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的串联互连；(b) 系统 $\mathcal{H}_{1}$ 与 $\mathcal{H}_{2}$ 的并联互连。
 
 ## 3.8 系统的性质
 
@@ -1378,11 +1408,12 @@ $$
 
 如果对于每个实常数 $t_{0}$，系统 $\mathfrak{H}$ 的输出 $\mathfrak{H} x\left(t_{0}\right)$ 不依赖于某些 $t \neq t_{0}$ 时的输入 $x(t)$，则称该系统为**无记忆系统**。换句话说，无记忆系统的输出在任意时刻的值仅依赖于输入在同一时刻的值。一个不是无记忆的系统被称为**有记忆系统**。虽然无记忆系统结构简单，但其灵活性有限，因为当前输出值不能依赖输入的过去或未来值。
 
-**示例 3.16（理想放大器）**。判断系统 $\mathcal{H}$ 是否为无记忆系统，其中
+**例 3.16（理想放大器）**。判断系统 $\mathcal{H}$ 是否为无记忆系统，其中
 
 $$
 \mathcal{H} x(t)=A x(t)
 $$
+
 
 且 $A$ 是非零实常数。
 
@@ -1392,13 +1423,15 @@ $$
 \mathcal{H} x\left(t_{0}\right)=A x\left(t_{0}\right)
 $$
 
+
 因此，$\mathcal{H} x\left(t_{0}\right)$ 仅依赖 $t=t_{0}$ 时的 $x(t)$。所以，该系统是无记忆的。
 
-**示例 3.17（理想积分器）**。判断系统 $\mathcal{H}$ 是否为无记忆系统，其中
+**例 3.17（理想积分器）**。判断系统 $\mathcal{H}$ 是否为无记忆系统，其中
 
 $$
 \mathcal{H} x(t)=\int_{-\infty}^{t} x(\tau) d \tau
 $$
+
 
 **解答**。考虑在任意点 $t=t_{0}$ 计算 $\mathcal{H} x(t)$。我们有：
 
@@ -1406,13 +1439,15 @@ $$
 \mathcal{H} x\left(t_{0}\right)=\int_{-\infty}^{t_{0}} x(\tau) d \tau
 $$
 
+
 因此，$\mathcal{H} x\left(t_{0}\right)$ 依赖于 $-\infty < t \le t_{0}$ 时的 $x(t)$。所以 $\mathcal{H} x\left(t_{0}\right)$ 依赖于某些 $t \neq t_{0}$ 的 $x(t)$（例如 $t_{0}-1$）。因此，该系统是有记忆的（即不是无记忆系统）。
 
-**示例 3.18**。判断系统 $\mathcal{H}$ 是否为无记忆系统，其中
+**例 3.18**。判断系统 $\mathcal{H}$ 是否为无记忆系统，其中
 
 $$
 \mathcal{H} x(t)=e^{x(t)}
 $$
+
 
 **解答**。考虑在任意点 $t=t_{0}$ 计算 $\mathcal{H} x(t)$。我们有：
 
@@ -1420,19 +1455,22 @@ $$
 \mathcal{H} x\left(t_{0}\right)=e^{x\left(t_{0}\right)}
 $$
 
+
 因此，$\mathcal{H} x\left(t_{0}\right)$ 仅依赖 $t=t_{0}$ 时的 $x(t)$。所以，该系统是无记忆的。
 
-**示例 3.19**。判断系统 $\mathcal{H}$ 是否为无记忆系统，其中
+**例 3.19**。判断系统 $\mathcal{H}$ 是否为无记忆系统，其中
 
 $$
 \mathcal{H} x(t)=\operatorname{Odd}(x)(t)=\frac{1}{2}[x(t)-x(-t)]
 $$
+
 
 **解答**。考虑在任意点 $t=t_{0}$ 计算 $\mathcal{H} x(t)$。我们有：
 
 $$
 \mathcal{H} x\left(t_{0}\right)=\frac{1}{2}\left[x\left(t_{0}\right)-x\left(-t_{0}\right)\right]
 $$
+
 
 因此，对于任意 $x$ 和任意实数 $t_{0}$，$\mathcal{H} x\left(t_{0}\right)$ 依赖于 $x(t)$ 在 $t=t_{0}$ 和 $t=-t_{0}$ 的值。由于 $\mathcal{H} x\left(t_{0}\right)$ 依赖于某些 $t \neq t_{0}$ 的 $x(t)$，该系统是有记忆的（即不是无记忆系统）。
 
@@ -1450,12 +1488,14 @@ $$
 \mathcal{H} x(t) = \int_{-\infty}^{t} x(\tau) d\tau
 $$
 
+
 **解答**  
 对于任意 $t_0$：
 
 $$
 \mathcal{H} x(t_0) = \int_{-\infty}^{t_0} x(\tau) d\tau
 $$
+
 
 输出仅依赖于 $t \le t_0$ 的输入值，因此系统是因果的。
 
@@ -1466,12 +1506,14 @@ $$
 \mathcal{H} x(t) = \int_{t-1}^{t+1} x(\tau) d\tau
 $$
 
+
 **解答**  
 对于任意 $t_0$：
 
 $$
 \mathcal{H} x(t_0) = \int_{t_0-1}^{t_0+1} x(\tau) d\tau
 $$
+
 
 输出依赖于 $t_0-1 \le t \le t_0+1$ 的输入值，其中一些值大于 $t_0$（例如 $t_0+1$），因此系统不是因果的。
 
@@ -1482,12 +1524,14 @@ $$
 \mathcal{H} x(t) = (t+1) e^{x(t-1)}
 $$
 
+
 **解答**  
 对于任意 $t_0$：
 
 $$
 \mathcal{H} x(t_0) = (t_0+1) e^{x(t_0-1)}
 $$
+
 
 输出仅依赖于 $t=t_0-1 \le t_0$ 的输入值，因此系统是因果的。
 
@@ -1498,11 +1542,8 @@ $$
 \mathcal{H} x(t) = \operatorname{Odd}(x)(t) = \frac{1}{2}[x(t) - x(-t)]
 $$
 
-**解答**。对于任意 $x$ 和任意实常数 $t_{0}$，$\mathcal{H} x\left(t_{0}\right)$ 仅依赖于 $t=t_{0}$ 和 $t=-t_{0}$ 时的 $x(t)$。假设 $t_{0}=-1$。在这种情况下，$\mathcal{H} x\left(t_{0}\right)$（即 $\mathcal{H} x(-1)$）依赖于 $t=1$ 时的 $x(t)$，但 $t=1>t_{0}$。因此，该系统**不是因果系统**。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-064.jpg?height=214&width=1087&top_left_y=289&top_left_x=456){width="600"}
-  
-图 3.32：等效系统（假设 $\mathfrak{H}^{-1}$ 存在）。(a) 第一系统；(b) 第二系统。
+**解答**。对于任意 $x$ 和任意实常数 $t_{0}$，$\mathcal{H} x\left(t_{0}\right)$ 仅依赖于 $t=t_{0}$ 和 $t=-t_{0}$ 时的 $x(t)$。假设 $t_{0}=-1$。在这种情况下，$\mathcal{H} x\left(t_{0}\right)$（即 $\mathcal{H} x(-1)$）依赖于 $t=1$ 时的 $x(t)$，但 $t=1>t_{0}$。因此，该系统**不是因果系统**。
 
 ### 3.8.3 可逆性
 
@@ -1512,17 +1553,24 @@ $$
 \mathcal{G} \mathcal{H} x=x
 $$
 
+
 （即，由 $\mathfrak{H}$ 和 $\mathcal{G}$ 串联形成的系统，其输入与输出相等）。换句话说，$\mathcal{H}$ 的作用被 $\mathcal{G}$ 抵消。符号上，$\mathcal{H}$ 的逆系统记为 $\mathcal{H}^{-1}$。系统与其逆系统的关系如图 3.32 所示。由于 $\mathcal{H}$ 与 $\mathcal{H}^{-1}$ 的关系（即 $\mathcal{H}^{-1}$ 抵消 $\mathcal{H}$），图中的两个系统必须是等效的。
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-064.jpg?height=214&width=1087&top_left_y=289&top_left_x=456){width="400"}
+  
+
+图 3.32：等效系统（假设 $\mathfrak{H}^{-1}$ 存在）。(a) 第一系统；(b) 第二系统。
 
 如果一个系统 $\mathscr{H}$ 存在对应的逆系统（即其逆系统存在），则称该系统是可逆的。一个可逆系统必须满足其输入 $x$ 可以总是从输出 $\mathcal{H} x$ 唯一确定。由此定义可知，可逆系统对于任意两个不同的输入，总会产生不同的输出。
 
 要证明一个系统是可逆的，只需找到它的逆系统即可。要证明一个系统不可逆，只需找到该系统的两个不同输入导致相同输出即可。在实际应用中，可逆系统很有用，因为其作用可以被撤销。
 
-示例 3.24. 判定系统 $\mathcal{H}$ 是否可逆，其中
+**例 3.24**. 判定系统 $\mathcal{H}$ 是否可逆，其中
 
 $$
 \mathcal{H} x(t)=x\left(t-t_{0}\right)
 $$
+
 
 且 $t_{0}$ 为实常数。  
 解：设 $y=\mathcal{H} x$。将 $t+t_{0}$ 代入 $y(t)=x\left(t-t_{0}\right)$，得到
@@ -1534,11 +1582,13 @@ y\left(t+t_{0}\right) & =x\left(t+t_{0}-t_{0}\right) \\
 \end{aligned}
 $$
 
+
 因此，我们得出
 
 $$
 x(t)=y\left(t+t_{0}\right) .
 $$
+
 
 这正是逆系统 $\mathcal{H}^{-1}$ 的方程。具体地，我们有
 
@@ -1546,19 +1596,22 @@ $$
 x(t)=\mathcal{H}^{-1} y(t)
 $$
 
+
 其中
 
 $$
 \mathcal{H}^{-1} y(t)=y\left(t+t_{0}\right) .
 $$
 
+
 因此，我们找到了 $\mathcal{H}^{-1}$。所以系统 $\mathcal{H}$ 是可逆的。
 
-示例 3.25. 判定系统 $\mathcal{H}$ 是否可逆，其中
+**例 3.25**. 判定系统 $\mathcal{H}$ 是否可逆，其中
 
 $$
 \mathcal{H} x(t)=\sin [x(t)] .
 $$
+
 
 解：考虑输入形式为 $x(t)=2 \pi k$，其中 $k$ 为任意整数。该输入下的系统响应为
 
@@ -1570,13 +1623,15 @@ $$
 \end{aligned}
 $$
 
+
 因此，我们找到了无限多个不同输入（即 $x(t)=2 \pi k$，$k=0, \pm 1, \pm 2, \ldots$），它们都产生相同输出。因此，该系统不可逆。
 
-示例 3.26. 判定系统 $\mathcal{H}$ 是否可逆，其中
+**例 3.26**. 判定系统 $\mathcal{H}$ 是否可逆，其中
 
 $$
 \mathcal{H} x(t)=3 x(3 t+3)
 $$
+
 
 解：设 $y=\mathcal{H} x$。根据 $\mathcal{H}$ 的定义，可以写作
 
@@ -1588,6 +1643,7 @@ $$
 \end{aligned}
 $$
 
+
 换句话说，$\mathcal{H}^{-1}$ 为 $\mathcal{H}^{-1} y(t)=\frac{1}{3} y\left(\frac{1}{3} t-1\right)$。由于我们已经找到了 $\mathcal{H}^{-1}$，所以 $\mathcal{H}^{-1}$ 存在。因此系统 $\mathscr{H}$ 是可逆的。
 
 示例 3.27. 判定系统 $\mathcal{H}$ 是否可逆，其中
@@ -1596,11 +1652,13 @@ $$
 \mathcal{H} x(t)=\operatorname{Odd}(x)(t)=\frac{1}{2}[x(t)-x(-t)] .
 $$
 
+
 解：考虑输入 $x$ 形式为
 
 $$
 x(t)=\alpha
 $$
+
 
 其中 $\alpha$ 为实常数。系统响应为
 
@@ -1611,6 +1669,7 @@ $$
 & =0
 \end{aligned}
 $$
+
 
 因此，任何常数输入都会产生相同的零输出。这意味着不同输入可能产生相同输出。因此，该系统不可逆。
 
@@ -1631,6 +1690,7 @@ $$
 \mathcal{H} x(t)=x^{2}(t)
 $$
 
+
 **解答**  
 假设输入 $x$ 是有界的，即对所有 $t$：
 
@@ -1638,11 +1698,13 @@ $$
 |x(t)| \leq A
 $$
 
+
 其中 $A$ 是有限的实常数。对不等式两边平方，得到：
 
 $$
 |x(t)|^{2} \leq A^{2}
 $$
+
 
 交换左侧的不等式中的平方与绝对值运算顺序，可得：
 
@@ -1650,11 +1712,13 @@ $$
 \left|x^{2}(t)\right| \leq A^{2}
 $$
 
+
 由于 $\mathcal{H} x(t)=x^{2}(t)$，我们可以写成：
 
 $$
 |\mathcal{H} x(t)| \leq A^{2}
 $$
+
 
 由于 $A$ 有限，因此 $A^{2}$ 也是有限的。因此，$\mathcal{H} x$ 是有界的（即 $|\mathcal{H} x(t)| \leq A^{2}<\infty$ 对所有 $t$ 成立）。因此，该系统是 BIBO 稳定的。
 
@@ -1664,6 +1728,7 @@ $$
 $$
 \mathcal{H} x(t)=\int_{-\infty}^{t} x(\tau) d \tau
 $$
+
 
 **解答**  
 假设我们选择输入 $x=u$（其中 $u$ 表示单位阶跃函数）。显然，$u$ 是有界的（即 $|u(t)| \leq 1$ 对所有 $t$ 成立）。计算该输入的响应 $\mathcal{H} x$：
@@ -1677,6 +1742,7 @@ $$
 \end{aligned}
 $$
 
+
 然而，从结果可见，当 $t \rightarrow \infty$ 时，$\mathcal{H} x(t) \rightarrow \infty$。因此，对于有界输入 $x$，输出 $\mathcal{H} x$ 是无界的。因此，该系统不是 BIBO 稳定的。
 
 **例 3.30**  
@@ -1685,6 +1751,7 @@ $$
 $$
 \mathcal{H} x(t)=\operatorname{Odd}(x)(t)=\frac{1}{2}[x(t)-x(-t)] .
 $$
+
 
 **解答**  
 假设 $x$ 是有界的，则 $x(-t)$ 也是有界的。由于两个有界函数的差仍然是有界的，$x(t)-x(-t)$ 是有界的。将有界函数乘以有限常数仍然得到有界结果。因此，函数 $\frac{1}{2}[x(t)-x(-t)]$ 是有界的。因此，$\mathcal{H} x(t)$ 是有界的。由于有界输入必须产生有界输出，该系统是 BIBO 稳定的。
@@ -1695,6 +1762,7 @@ $$
 $$
 \mathcal{H} x(t)=\mathcal{D} x(t)
 $$
+
 
 且 $\mathcal{D}$ 表示求导算子。
 
@@ -1709,6 +1777,7 @@ $$
 \end{aligned}
 $$
 
+
 显然，$\mathcal{H} x$ 是无界的，因为 $|\mathcal{H} x(t)|$ 随着 $|t| \rightarrow \infty$ 无界增长。因此，对于某些有界输入，输出不是有界的。因此，该系统不是 BIBO 稳定的。
 ### 3.8.5 时间不变性
 
@@ -1718,11 +1787,12 @@ $$
 \mathcal{H} x\left(t-t_{0}\right)=\mathcal{H} x^{\prime}(t) \quad \text{对所有 } t \text{ 成立，其中 } x^{\prime}(t)=x\left(t-t_{0}\right)
 $$
 
+
 则称系统 $\mathcal{H}$ 为时间不变（TI）（或移位不变（SI））（即 $\mathcal{H}$ 与时间平移算子可交换）。换句话说，如果输入函数发生时间平移（提前或延迟），输出函数也会发生相同的时间平移，则系统是时间不变的。非时间不变系统称为时间可变（或移位可变）系统。实际上，时间不变意味着图 3.33 中的两个系统是等价的，其中 $\mathcal{S}_{t_{0}}$ 表示对函数施加 $t_{0}$ 的时间平移算子（即 $\mathcal{S}_{t_{0}} x(t)=x(t-t_{0})$）。
 
 简而言之，时间不变系统的行为随时间不发生变化。实际上，与时间可变系统相比，时间不变系统更易于设计和分析，因为其行为不会随时间变化。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-067.jpg?height=209&width=1084&top_left_y=291&top_left_x=583){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-067.jpg?height=209&width=1084&top_left_y=291&top_left_x=583){width="400"}
   
 图 3.33：如果 $\mathcal{H}$ 是时间不变的（即 $\mathcal{H}$ 与 $\mathcal{S}_{t_{0}}$ 可交换），两个系统是等价的。(a) 先将输入平移 $t_{0}$ 再施加 $\mathcal{H}$（即 $y=\mathcal{H} \mathcal{S}_{t_{0}} x$）；(b) 先施加 $\mathcal{H}$ 再平移 $t_{0}$（即 $y=\mathcal{S}_{t_{0}} \mathcal{H}(x)$）。
 
@@ -1732,6 +1802,7 @@ $$
 $$
 \mathcal{H} x(t)=\sin [x(t)] .
 $$
+
 
 **解答**  
 设 $x^{\prime}(t)=x\left(t-t_{0}\right)$，其中 $t_{0}$ 是任意实常数。根据 $\mathcal{H}$ 的定义，可以得到：
@@ -1744,6 +1815,7 @@ $$
 \end{aligned}
 $$
 
+
 由于 $\mathcal{H} x\left(t-t_{0}\right)=\mathcal{H} x^{\prime}(t)$ 对所有 $x$ 和 $t_{0}$ 成立，因此该系统是时间不变的。
 
 **例 3.33**  
@@ -1752,6 +1824,7 @@ $$
 $$
 \mathcal{H} x(t)=t x(t)
 $$
+
 
 **解答**  
 设 $x^{\prime}(t)=x\left(t-t_{0}\right)$，其中 $t_{0}$ 是任意实常数。根据 $\mathcal{H}$ 的定义：
@@ -1764,6 +1837,7 @@ $$
 \end{aligned}
 $$
 
+
 由于 $\mathcal{H} x\left(t-t_{0}\right)=\mathcal{H} x^{\prime}(t)$ 对所有 $x$ 和 $t_{0}$ 不成立，因此该系统不是时间不变的（即系统是时间可变的）。
 
 **例 3.34**  
@@ -1772,6 +1846,7 @@ $$
 $$
 \mathcal{H} x(t)=\sum_{k=-10}^{10} x(t-k)
 $$
+
 
 **解答**  
 设 $x^{\prime}(t)=x\left(t-t_{0}\right)$，其中 $t_{0}$ 是任意实常数。根据 $\mathcal{H}$ 的定义：
@@ -1785,6 +1860,7 @@ $$
 \end{aligned}
 $$
 
+
 由于 $\mathcal{H}\left(x\left(t-t_{0}\right)\right)=\mathcal{H} x^{\prime}(t)$ 对所有 $x$ 和 $t_{0}$ 成立，因此该系统是时间不变的。
 
 **例 3.35**  
@@ -1793,6 +1869,7 @@ $$
 $$
 \mathcal{H} x(t)=\operatorname{Odd}(x)(t)=\frac{1}{2}[x(t)-x(-t)] .
 $$
+
 
 **解答**  
 设 $x^{\prime}(t)=x\left(t-t_{0}\right)$，其中 $t_{0}$ 是任意实常数。根据 $\mathcal{H}$ 的定义：
@@ -1806,6 +1883,7 @@ $$
 \end{aligned}
 $$
 
+
 由于 $\mathcal{H} x\left(t-t_{0}\right)=\mathcal{H} x^{\prime}(t)$ 对所有 $x$ 和 $t_{0}$ 不成立，因此该系统不是时间不变的。
 
 ### 3.8.6 线性
@@ -1818,6 +1896,7 @@ $$
 \mathcal{H}\left(x_{1}+x_{2}\right)=\mathcal{H} x_{1}+\mathcal{H} x_{2}
 $$
 
+
 则称系统 $\mathcal{H}$ 为加法性的（即 $\mathcal{H}$ 与加法可交换）。本质上，系统 $\mathcal{H}$ 的加法性意味着图 3.34 所示的两个系统是等价的。
 
 如果对于每一个函数 $x$ 和每一个复常数 $a$，系统 $\mathcal{H}$ 满足：
@@ -1826,13 +1905,14 @@ $$
 \mathcal{H}(a x)=a \mathcal{H} x
 $$
 
+
 则称系统 $\mathcal{H}$ 为齐次的（即 $\mathcal{H}$ 与标量乘法可交换）。本质上，系统 $\mathcal{H}$ 的齐次性意味着图 3.35 所示的两个系统是等价的。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=304&width=1209&top_left_y=283&top_left_x=529){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=304&width=1209&top_left_y=283&top_left_x=529){width="400"}
   
 图 3.34：如果 $\mathcal{H}$ 是加法性的（即 $\mathcal{H}$ 与加法可交换），两个系统是等价的。(a) 先执行加法再施加 $\mathcal{H}$（即 $y=\mathcal{H}\left(x_{1}+x_{2}\right)$）；(b) 先施加 $\mathcal{H}$ 再执行加法（即 $y=\mathcal{H} x_{1}+\mathcal{H}(x_{2})$）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=219&width=1217&top_left_y=759&top_left_x=518){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-069.jpg?height=219&width=1217&top_left_y=759&top_left_x=518){width="400"}
   
 图 3.35：如果 $\mathcal{H}$ 是齐次的（即 $\mathcal{H}$ 与标量乘法可交换），两个系统是等价的。(a) 先进行标量乘法再施加 $\mathcal{H}$（即 $y=\mathcal{H}(a x)$）；(b) 先施加 $\mathcal{H}$ 再进行标量乘法（即 $y=a \mathcal{H} x$）。
 
@@ -1842,9 +1922,10 @@ $$
 \mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)=a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}
 $$
 
+
 则称系统 $\mathcal{H}$ 具有叠加性（即 $\mathcal{H}$ 与线性组合可交换）。如果一个系统既是加法性的又是齐次的（或等价地满足叠加性），则称其为线性系统。本质上，系统 $\mathcal{H}$ 的线性意味着图 3.36 所示的两个系统是等价的。要证明一个系统是线性的，可以证明它同时具有加法性和齐次性，或者直接证明它满足叠加性。实际上，线性系统相比非线性系统更易于设计和分析。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-070.jpg?height=307&width=1452&top_left_y=280&top_left_x=267){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-070.jpg?height=307&width=1452&top_left_y=280&top_left_x=267){width="400"}
   
 图 3.36：如果 $\mathcal{H}$ 是线性的（即 $\mathcal{H}$ 与线性组合可交换），两个系统是等价的。(a) 先计算线性组合再施加 $\mathcal{H}$（即 $y=\mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)$）；(b) 先施加 $\mathcal{H}$ 再计算线性组合（即 $y=a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}$）。
 
@@ -1854,6 +1935,7 @@ $$
 $$
 \mathcal{H} x(t)=t x(t) .
 $$
+
 
 **解答**  
 设 $x^{\prime}(t)=a_{1} x_{1}(t)+a_{2} x_{2}(t)$，其中 $x_{1}$ 和 $x_{2}$ 为任意函数，$a_{1}$ 和 $a_{2}$ 为任意复常数。根据 $\mathcal{H}$ 的定义：
@@ -1867,6 +1949,7 @@ a_{1} \mathcal{H} x_{1}(t)+a_{2} \mathcal{H} x_{2}(t) & =a_{1} t x_{1}(t)+a_{2} 
 \end{aligned}
 $$
 
+
 由于 $\mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)=a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}$ 对所有 $x_{1}, x_{2}, a_{1}, a_{2}$ 成立，因此系统满足叠加性，是线性的。
 
 **例 3.37**  
@@ -1875,6 +1958,7 @@ $$
 $$
 \mathcal{H} x(t)=|x(t)| .
 $$
+
 
 **解答**  
 设 $x^{\prime}(t)=a_{1} x_{1}(t)+a_{2} x_{2}(t)$，其中 $x_{1}$ 和 $x_{2}$ 为任意函数，$a_{1}$ 和 $a_{2}$ 为任意复常数。根据 $\mathcal{H}$ 的定义：
@@ -1887,17 +1971,20 @@ a_{1} \mathcal{H} x_{1}(t)+a_{2} \mathcal{H} x_{2}(t) & =a_{1}|x_{1}(t)|+a_{2}|x
 \end{aligned}
 $$
 
+
 根据三角不等式 (F.16)，$\mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)=a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}$ 并不总是成立。例如，取
 
 $$
 a_{1}=-1, \quad x_{1}(t)=1, \quad a_{2}=0, \quad x_{2}(t)=0,
 $$
 
+
 则
 
 $$
 a_{1} \mathcal{H} x_{1}(t)+a_{2} \mathcal{H} x_{2}(t)=-1, \quad \mathcal{H} x^{\prime}(t)=1
 $$
+
 
 因此，叠加性不成立，该系统不是线性的。
 
@@ -1908,17 +1995,20 @@ $$
 \mathcal{H} x(t)=\operatorname{Odd}(x)(t)=\frac{1}{2}[x(t)-x(-t)] .
 $$
 
+
 **解答**  
 设 $x^{\prime}(t)=a_{1} x_{1}(t)+a_{2} x_{2}(t)$，其中 $x_{1}$ 和 $x_{2}$ 为任意函数，$a_{1}$ 和 $a_{2}$ 为任意复常数。根据 $\mathcal{H}$ 的定义：
 
 $$
 \begin{aligned}
-a_{1} \mathcal{H} x_{1}(t)+a_{2} \mathcal{H} x_{2}(t) & =\frac{1}{2} a_{1}[x_{1}(t)-x_{1}(-t)] + \frac{1}{2} a_{2}[x_{2}(t)-x_{2}(-t)], \\ 
-\mathcal{H} x^{\prime}(t) & =\frac{1}{2}[x^{\prime}(t)-x^{\prime}(-t)] \\ 
-& =\frac{1}{2}[a_{1} x_{1}(t)+a_{2} x_{2}(t)- (a_{1} x_{1}(-t)+a_{2} x_{2}(-t))] \\ 
-& =\frac{1}{2} a_{1}[x_{1}(t)-x_{1}(-t)] + \frac{1}{2} a_{2}[x_{2}(t)-x_{2}(-t)]
+a_{1} \mathcal{H} x_{1}(t)+a_{2} \mathcal{H} x_{2}(t) & =\frac{1}{2} a_{1}\left[x_{1}(t)-x_{1}(-t)\right]+\frac{1}{2} a_{2}\left[x_{2}(t)-x_{2}(-t)\right] \quad \text { and } \\
+\mathcal{H} x^{\prime}(t) & =\frac{1}{2}\left[x^{\prime}(t)-x^{\prime}(-t)\right] \\
+& =\frac{1}{2}\left[a_{1} x_{1}(t)+a_{2} x_{2}(t)-\left[a_{1} x_{1}(-t)+a_{2} x_{2}(-t)\right]\right] \\
+& =\frac{1}{2}\left[a_{1} x_{1}(t)-a_{1} x_{1}(-t)+a_{2} x_{2}(t)-a_{2} x_{2}(-t)\right] \\
+& =\frac{1}{2} a_{1}\left[x_{1}(t)-x_{1}(-t)\right]+\frac{1}{2} a_{2}\left[x_{2}(t)-x_{2}(-t)\right]
 \end{aligned}
 $$
+
 
 由于 $\mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)=a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}$ 对所有 $x_{1}, x_{2}, a_{1}, a_{2}$ 成立，因此该系统是线性的。
 
@@ -1928,6 +2018,7 @@ $$
 $$
 \mathcal{H} x(t)=x(t) x(t-1) .
 $$
+
 
 **解答**  
 设 $x^{\prime}(t)=a_{1} x_{1}(t)+a_{2} x_{2}(t)$，其中 $x_{1}$ 和 $x_{2}$ 为任意函数，$a_{1}$ 和 $a_{2}$ 为任意复常数。根据 $\mathcal{H}$ 的定义：
@@ -1941,6 +2032,7 @@ a_{1} \mathcal{H} x_{1}(t)+a_{2} \mathcal{H} x_{2}(t) & =a_{1} x_{1}(t) x_{1}(t-
 \end{aligned}
 $$
 
+
 显然，$\mathcal{H}\left(a_{1} x_{1}+a_{2} x_{2}\right)$ 与 $a_{1} \mathcal{H} x_{1}+a_{2} \mathcal{H} x_{2}$ 表达式差异较大。对于许多 $a_{1}, a_{2}, x_{1}, x_{2}$ 的选择（如 $a_{1}=2, a_{2}=0, x_{1}(t)=1, x_{2}(t)=0$），两者不相等。因此，叠加性不成立，该系统不是线性的。
 
 **例 3.40（理想积分器）**  
@@ -1950,10 +2042,11 @@ $$
 \mathcal{H} x(t)=\int_{-\infty}^{t} x(\tau) d \tau
 $$
 
+
 判断该系统是否具有加法性和/或齐次性，并判断是否线性。
 
 **解答**  
-首先，考虑加法性。从 $\mathcal{H}$ 的定义出发: 
+首先，考虑加法性。从 $\mathcal{H}$ 的定义出发：
 
 $$
 \begin{aligned}
@@ -1964,9 +2057,10 @@ $$
 \end{aligned}
 $$
 
+
 由于 $\mathcal{H}\left(x_{1}+x_{2}\right)=\mathcal{H} x_{1}+\mathcal{H} x_{2}$ 对所有 $x_{1}$ 和 $x_{2}$ 成立，因此系统具有加法性。
 
-其次，考虑齐次性。设 $a$ 为任意复常数: 
+其次，考虑齐次性。设 $a$ 为任意复常数：
 
 $$
 \begin{aligned}
@@ -1977,16 +2071,18 @@ a \mathcal{H} x(t) & = a \int_{-\infty}^{t} x(\tau) d \tau, \\
 \end{aligned}
 $$
 
+
 由于 $\mathcal{H}(a x)=a \mathcal{H} x$ 对所有 $x$ 和 $a$ 成立，因此系统具有齐次性。
 
 最后，考虑线性。由于系统同时具有加法性和齐次性，因此系统是线性的。
 
 ---
-示例 3.41. 给定一个系统 $\mathfrak{H}$ 为
+**例 3.41**. 给定一个系统 $\mathfrak{H}$ 为
 
 $$
 \mathcal{H} x(t)=\operatorname{Re}[x(t)] .
 $$
+
 
 判定该系统是否具有可加性和/或齐次性，并判定该系统是否为线性系统。  
 
@@ -2001,6 +2097,7 @@ $$
 \end{aligned}
 $$
 
+
 由于对所有 $x_{1}$ 和 $x_{2}$ 都有 $\mathcal{H}\left(x_{1}+x_{2}\right)=\mathcal{H} x_{1}+\mathcal{H} x_{2}$，该系统是可加的。
 
 其次，检查齐次性属性是否满足。设 $a$ 为任意复常数。根据 $\mathcal{H}$ 的定义，有
@@ -2012,6 +2109,7 @@ a \mathcal{H} x(t) & =a \operatorname{Re}[x(t)], \quad \text {且} \\
 & =\operatorname{Re}[a x(t)].
 \end{aligned}
 $$
+
 
 为了使 $\mathcal{H}$ 齐次，必须对所有 $x$ 和所有复数 $a$ 满足 $a \mathcal{H} x(t)=\mathcal{H}(a x)(t)$。假设 $a=j$ 且 $x$ 非零（即 $x$ 不是函数 $x(t)=0$）。此时有
 
@@ -2026,6 +2124,7 @@ a \mathcal{H} x(t) & =j \operatorname{Re}[x(t)], \quad \text {且} \\
 \end{aligned}
 $$
 
+
 显然，$\mathcal{H}(a x)$ 与 $a \mathcal{H} x$ 不相等。因此，该系统不具有齐次性。
 
 最后，考虑线性属性。由于该系统不同时具备可加性和齐次性，因此它不是线性系统。
@@ -2039,6 +2138,7 @@ $$
 \mathcal{H} x = \lambda x
 $$
 
+
 的函数 $x$，其中 $\lambda$ 为某个复常数，称为特征值。换句话说，如果 $x$ 是 $\mathcal{H}$ 的特征函数，则 $\mathcal{H} x$ 是 $x$ 的一个标量倍（即某个常数乘以 $x$）。本质上，当系统的输入为其特征函数之一时，系统表现得像理想放大器（即执行幅度缩放）。特征函数性质的重要性不可低估。无论系统多么复杂，其对特征函数的行为都极为简单。我们经常可以利用这种简单性来降低解决涉及系统问题的复杂性。实际上，正如我们稍后将看到的，特征函数几乎构成了许多研究系统所使用的数学工具的基础。
 
 **例 3.42**  
@@ -2047,6 +2147,7 @@ $$
 $$
 \mathcal{H} x(t) = \mathcal{D}^{2} x(t),
 $$
+
 
 其中 $\mathcal{D}$ 表示微分算子。对于下列每个函数 $x$，判断其是否为 $\mathcal{H}$ 的特征函数，如果是，则求对应的特征值。  
 (a) $x(t)=\cos (2 t)$；  
@@ -2064,6 +2165,7 @@ $$
 \end{aligned}
 $$
 
+
 因此，$\mathcal{H} x$ 是 $x$ 的标量倍（标量倍为 -4）。所以，$x$ 是 $\mathcal{H}$ 的特征函数，特征值为 -4。
 
 (b) 令 $x(t) = t^3$。根据 $\mathcal{H}$ 的定义：
@@ -2077,6 +2179,7 @@ $$
 \end{aligned}
 $$
 
+
 由于 $\mathcal{H} x$ 不是 $x$ 的标量倍，因此 $x$ 不是 $\mathcal{H}$ 的特征函数。
 
 **例 3.43（理想放大器）**  
@@ -2085,6 +2188,7 @@ $$
 $$
 \mathcal{H} x(t) = a x(t),
 $$
+
 
 其中 $a$ 为复常数。显然，每个函数都是 $\mathcal{H}$ 的特征函数，特征值均为 $a$。
 ## 3.9 练习题
@@ -2118,6 +2222,7 @@ $$
 y(t) = x(a t - b),
 $$
 
+
 其中 $a$ 和 $b$ 为实常数，且 $a \neq 0$。  
 (a) 证明 $y$ 可通过先对 $x$ 平移 $b$ 单位时间，再对结果进行时间缩放 $a$ 单位得到。  
 (b) 证明 $y$ 也可通过先对 $x$ 进行时间缩放 $a$ 单位，再对结果平移 $\frac{b}{a}$ 单位得到。
@@ -2135,6 +2240,7 @@ $$
 $$
 x(t) = u(t+2) + u(t+1) + u(t) - 2 u(t-1) - u(t-2),
 $$
+
 
 求并绘制 $y(t) = x(-4 t - 1)$。
 
@@ -2159,6 +2265,7 @@ $$
 y(t) = \sum_{k=-\infty}^{\infty} x(t - T k),
 $$
 
+
 其中 $x$ 为任意函数，$T > 0$。证明 $y$ 是 $T$-周期的。
 
 **3.9** 判断下列函数 $x$ 是偶函数、奇函数，还是既非偶也非奇。  
@@ -2182,6 +2289,7 @@ $$
 \int_{-A}^{A} x(t) d t = 0
 $$
 
+
 其中 $A$ 为正实常数。
 
 **3.12** 证明，对于任意函数 $x$，
@@ -2189,6 +2297,7 @@ $$
 $$
 \int_{-\infty}^{\infty} x^{2}(t) d t = \int_{-\infty}^{\infty} x_{\mathrm{e}}^{2}(t) d t + \int_{-\infty}^{\infty} x_{\mathrm{o}}^{2}(t) d t
 $$
+
 
 其中 $x_{\mathrm{e}}$ 和 $x_{\mathrm{o}}$ 分别为 $x$ 的偶部分和奇部分。
 
@@ -2207,11 +2316,13 @@ $$
 \int_{0}^{T} x(t) d t = 2 \int_{0}^{T/2} x(t) d t
 $$
 
+
 (b) 如果函数 $x$ 是 $T$-周期且奇函数，则  
 
 $$
 \int_{0}^{T} x(t) d t = 0
 $$
+
 
 **3.16** 证明，唯一既是偶函数又是奇函数的函数是零函数（即 $x(t) = 0$ 对所有 $t$ 都成立）。
 
