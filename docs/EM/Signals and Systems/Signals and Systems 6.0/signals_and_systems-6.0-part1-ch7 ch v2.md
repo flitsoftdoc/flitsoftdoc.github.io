@@ -20,6 +20,7 @@ H(s)=\int_{-\infty}^{\infty} h(t) e^{-s t} d t \tag{7.1}
 \end{equation*}
 $$
 
+
 此前，我们称 $H$ 为系统函数。在本章中，我们将了解到 $H$ 实际上就是 $h$ 的拉普拉斯变换。也就是说，式 (7.1) 中的积分就是拉普拉斯变换的定义。当 $s=j \omega$，其中 $\omega$ 为实数（即 $s$ 是纯虚数）时，(7.1) 就成为了傅里叶变换积分（在第6章中讨论过）。根据之前的内容，我们知道 $H(j \omega)$ 是 LTI 系统的频率响应（即 $h$ 的傅里叶变换）。由于 (7.1) 将傅里叶变换作为一个特殊情况包含在内，拉普拉斯变换可以被视为（经典）傅里叶变换的推广。
 
 ## 7.3 拉普拉斯变换的定义
@@ -32,6 +33,7 @@ $$
 \end{equation*}
 $$
 
+
 类似地，$X$ 的拉普拉斯逆变换记作 $\mathcal{L}^{-1} X$ 或 $x$，其表达式为
 
 $$
@@ -40,11 +42,13 @@ $$
 \end{equation*}
 $$
 
+
 其中 $\sigma=\operatorname{Re}(s)$。我们称 $x$ 与 $X$ 为一对拉普拉斯变换对，并用下式表示这种关系：
 
 $$
 x(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} X(s) .
 $$
+
 
 从 (7.3) 可以看出，拉普拉斯逆变换的计算需要复轮积分（因为 $s$ 是一个复变量）。特别地，我们必须在复平面上沿垂直于实轴的直线 $s=\sigma$ 上进行积分。这样的复轮积分往往并不容易计算。因此，在实际应用中，我们通常不会直接通过 (7.3) 来计算拉普拉斯逆变换，而是借助其他方法（将在后文讨论）。
 
@@ -57,7 +61,6 @@ $$
 为了避免在引用匿名函数时出现过于冗长的表达，可以使用第 2.1 节介绍的点符号（dot notation）。再考虑图 7.1 中的函数 $t \mapsto e^{-|t|}$。若采用严格正确的符号，我们可以写作 “$\mathcal{L}\left\{e^{-|\cdot|}\right\}$” 来表示该函数的拉普拉斯变换。换句话说，通过使用间隔点符号（详见第 2.1 节），我们可以明确表示这是一个函数（而不是函数值）。点符号的使用示例如例 7.1 所示。当需要在保持符号精确（严格正确）的同时避免冗长时，点符号往往非常有用。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-255.jpg?height=663&width=844&top_left_y=291&top_left_x=702){width="400"}
-
 
 图 7.1：$e^{-|t|}$ 关于 $t$ 的曲线。
 
@@ -102,6 +105,7 @@ X(j \omega) & =\left.\left[\int_{-\infty}^{\infty} x(t) e^{-s t} d t\right]\righ
 \end{aligned}
 $$
 
+
 因此，傅里叶变换实际上就是拉普拉斯变换在 $s=j \omega$ 时的取值，前提是该表达式有定义（即积分收敛）。换句话说：
 
 $$
@@ -109,6 +113,7 @@ $$
 X(j \omega)=\mathcal{F} x(\omega) \tag{7.4}
 \end{equation*}
 $$
+
 
 顺便提一句，正是由于这种关系，$x$ 的傅里叶变换有时记作 $X(j \omega)$。在这种记号下，$X$ 实际上对应的是 $x$ 的拉普拉斯变换，而不是傅里叶变换（即 $X(j \omega)$ 表示的是拉普拉斯变换在虚轴上的取值）。
 
@@ -122,6 +127,7 @@ X(\sigma+j \omega) & =\int_{-\infty}^{\infty} x(t) e^{-(\sigma+j \omega) t} d t 
 \end{aligned}
 $$
 
+
 因此我们得到：
 
 $$
@@ -129,6 +135,7 @@ $$
 X(\sigma+j \omega)=\mathcal{F}\left\{e^{-\sigma t} x(t)\right\}(\omega) \tag{7.5}
 \end{equation*}
 $$
+
 
 由此可见，$x$ 的拉普拉斯变换可以看作 $x'(t)=e^{-\sigma t} x(t)$ 的（CT）傅里叶变换（即 $x$ 乘以一个实指数加权函数后的傅里叶变换）。由于乘上了实指数 $e^{-\sigma t}$，某些函数在傅里叶变换意义下不存在，而其拉普拉斯变换可能存在。
 
@@ -138,17 +145,20 @@ $$
 X(\sigma+j \omega)=\mathcal{F}\left\{e^{-\sigma t} x(t)\right\}(\omega),
 $$
 
+
 其中 $\sigma$ 的选择保证 $X(s)$ 在 $s=\sigma+j \omega$ 时收敛。对上述等式两边取傅里叶逆变换，得到：
 
 $$
 \mathcal{F}^{-1}\{X(\sigma+j \omega)\}(t)=e^{-\sigma t} x(t) .
 $$
 
+
 两边同时乘以 $e^{\sigma t}$，得到：
 
 $$
 x(t)=e^{\sigma t} \mathcal{F}^{-1}\{X(\sigma+j \omega)\}(t)
 $$
+
 
 由傅里叶逆变换的定义可知：
 
@@ -159,6 +169,7 @@ x(t) & =e^{\sigma t}\left[\frac{1}{2 \pi} \int_{-\infty}^{\infty} X(\sigma+j \om
 \end{aligned}
 $$
 
+
 由于 $s=\sigma+j \omega$，可得 $d s=j d \omega$，因此：
 
 $$
@@ -167,6 +178,7 @@ x(t) & =\frac{1}{2 \pi} \int_{\sigma-j \infty}^{\sigma+j \infty} X(s) e^{s t}\le
 & =\frac{1}{j 2 \pi} \int_{\sigma-j \infty}^{\sigma+j \infty} X(s) e^{s t} d s
 \end{aligned}
 $$
+
 
 由此我们推导出了 (7.3) 中的拉普拉斯逆变换公式。
 ## 7.6 拉普拉斯变换实例
@@ -178,6 +190,7 @@ $$
 $$
 x(t)=e^{-a t} u(t)
 $$
+
 
 其中 $a$ 为实常数。  
 **解：** 设 $s=\sigma+j \omega$，其中 $\sigma$ 和 $\omega$ 为实数。根据拉普拉斯变换的定义，有
@@ -191,6 +204,7 @@ X(s) & =\mathcal{L}\left\{e^{-a t} u(t)\right\}(s) \\
 \end{aligned}
 $$
 
+
 此时，我们代入 $s=\sigma+j \omega$，以便更容易判断上述表达式在何时收敛。得到
 
 $$
@@ -200,6 +214,7 @@ X(s) & =\left.\left[\left(-\frac{1}{\sigma+a+j \omega}\right) e^{-(\sigma+a+j \o
 & =\left(\frac{-1}{\sigma+a+j \omega}\right)\left[e^{-(\sigma+a) \infty} e^{-j \omega \infty}-1\right] .
 \end{aligned}
 $$
+
 
 由此可见，上述表达式仅在 $\sigma+a>0$ 时收敛（即 $\operatorname{Re}(s)>-a$）。在这种情况下，
 
@@ -211,11 +226,13 @@ X(s) & =\left(\frac{-1}{\sigma+a+j \omega}\right)[0-1] \\
 \end{aligned}
 $$
 
+
 因此有
 
 $$
 e^{-a t} u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+a} \quad \text { 当 } \operatorname{Re}(s)>-a .
 $$
+
 
 函数 $X$ 的收敛区域如图 7.2(a) 和 (b) 所示，分别对应 $a>0$ 与 $a<0$ 的情况。  
 
@@ -232,6 +249,7 @@ $$
 x(t)=-e^{-a t} u(-t),
 $$
 
+
 其中 $a$ 为实常数。  
 **解：** 设 $s=\sigma+j \omega$，其中 $\sigma$ 和 $\omega$ 为实数。根据拉普拉斯变换的定义，有
 
@@ -245,6 +263,7 @@ X(s) & =\mathcal{L}\left\{-e^{-a t} u(-t)\right\}(s) \\
 \end{aligned}
 $$
 
+
 为更容易判断收敛性，代入 $s=\sigma+j \omega$。得到
 
 $$
@@ -255,6 +274,7 @@ X(s) & =\left.\left[\left(\frac{1}{\sigma+a+j \omega}\right) e^{-(\sigma+a+j \om
 \end{aligned}
 $$
 
+
 由此可见，上述表达式仅在 $\sigma+a<0$ 时收敛（即 $\operatorname{Re}(s)<-a$）。在这种情况下，
 
 $$
@@ -264,11 +284,13 @@ X(s) & =\left(\frac{1}{\sigma+a+j \omega}\right)[1-0] \\
 \end{aligned}
 $$
 
+
 因此有
 
 $$
 -e^{-a t} u(-t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+a} \quad \text { 当 } \operatorname{Re}(s)<-a .
 $$
+
 
 函数 $X$ 的收敛区域如图 7.3(a) 和 (b) 所示，分别对应 $a>0$ 与 $a<0$ 的情况。  
 
@@ -289,6 +311,7 @@ $$
 x(t)=u(t) .
 $$
 
+
 **解：** 设 $s=\sigma+j \omega$，其中 $\sigma$ 和 $\omega$ 为实数。根据拉普拉斯变换的定义，有
 
 $$
@@ -300,6 +323,7 @@ X(s) & =\mathcal{L} u(s) \\
 \end{aligned}
 $$
 
+
 此时，代入 $s=\sigma+j \omega$，以便更清晰地看出收敛区域。得到
 
 $$
@@ -308,6 +332,7 @@ X(s) & =\left.\left[\left(-\frac{1}{\sigma+j \omega}\right) e^{-(\sigma+j \omega
 & =\left.\left[\left(-\frac{1}{\sigma+j \omega}\right) e^{-\sigma t} e^{-j \omega t}\right]\right|_{0} ^{\infty}
 \end{aligned}
 $$
+
 
 因此可见，上述表达式仅在 $\sigma>0$ 时收敛（即 $\operatorname{Re}(s)>0$）。在这种情况下，
 
@@ -319,11 +344,13 @@ X(s) & =\left(-\frac{1}{\sigma+j \omega}\right)[0-1] \\
 \end{aligned}
 $$
 
+
 因此有
 
 $$
 u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s} \quad \text { 当 } \operatorname{Re}(s)>0 .
 $$
+
 
 ---
 
@@ -332,6 +359,7 @@ $$
 $$
 x(t)=A \delta\left(t-t_{0}\right),
 $$
+
 
 其中 $A$ 和 $t_{0}$ 为任意实常数。  
 **解：** 根据拉普拉斯变换的定义，有
@@ -344,11 +372,13 @@ X(s) & =\mathcal{L}\left\{A \delta\left(t-t_{0}\right)\right\}(s) \\
 \end{aligned}
 $$
 
+
 利用 δ 函数的抽样性质，可将其化简为
 
 $$
 X(s)=A e^{-s t_{0}}
 $$
+
 
 因此有
 
@@ -356,16 +386,23 @@ $$
 A \delta\left(t-t_{0}\right) \stackrel{\mathrm{LT}}{\longleftrightarrow} A e^{-s t_{0}} \quad \text { 对所有 } s \text{ 均成立}.
 $$
 
+
 ## 7.7 拉普拉斯变换的收敛域
 
 在详细讨论拉普拉斯变换的收敛域（Region of Convergence, ROC）之前，我们需要先介绍一些关于复平面集合的术语。设 $R$ 为复平面上的一个集合。若集合 $R$ 包含所有满足
+
 $$
 \operatorname{Re}(s)<a,
 $$
+
+
 的复数 $s$（其中 $a$ 为实常数），则称 $R$ 为**左半平面（Left-Half Plane, LHP）**。若集合 $R$ 包含所有满足
+
 $$
 \operatorname{Re}(s)>a,
 $$
+
+
 的复数 $s$（其中 $a$ 为实常数），则称 $R$ 为**右半平面（Right-Half Plane, RHP）**。图 7.4 给出了 LHP 和 RHP 的示例。
 
 由于 ROC 是一个集合（复平面上的点的集合），因此在处理 ROC 时，我们经常需要使用一些基本的集合运算。对于两个集合 $A$ 和 $B$，其交集记作 $A \cap B$，表示所有既属于 $A$ 又属于 $B$ 的点组成的集合。图 7.5 给出了集合交集的示例。
@@ -381,17 +418,26 @@ $$
 ---
 
 对于集合 $S$ 与一个标量常数 $a$，$S+a$ 定义为
+
 $$
 S+a=\{z+a: z \in S\} .
 $$
+
+
 即 $S+a$ 表示将 $a$ 加到集合 $S$ 中每一个元素所形成的集合。例如，若 $R$ 为所有满足
+
 $$
 -1<\operatorname{Re}(s)<1,
 $$
+
+
 的复数 $s$ 的集合（如图 7.6(a) 所示），则 $R+1$ 为所有满足
+
 $$
 0<\operatorname{Re}(s)<2,
 $$
+
+
 的复数 $s$ 的集合（如图 7.6(b) 所示）。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-263.jpg?height=517&width=1438&top_left_y=289&top_left_x=413){width="400"}
@@ -401,21 +447,33 @@ $$
 ---
 
 对于集合 $S$ 与一个标量常数 $a$，$a S$ 定义为
+
 $$
 a S=\{a z: z \in S\} .
 $$
+
+
 即 $a S$ 表示将集合 $S$ 中每一个元素都乘以 $a$ 所形成的集合。例如，若 $R$ 为所有满足
+
 $$
 -1<\operatorname{Re}(s)<2,
 $$
+
+
 的复数 $s$ 的集合（如图 7.7(a) 所示），则 $2 R$ 为所有满足
+
 $$
 -2<\operatorname{Re}(s)<4,
 $$
+
+
 的复数 $s$ 的集合（如图 7.7(b) 所示）；而 $-2 R$ 为所有满足
+
 $$
 -4<\operatorname{Re}(s)<2,
 $$
+
+
 的复数 $s$ 的集合（如图 7.7(c) 所示）。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-264.jpg?height=1578&width=958&top_left_y=305&top_left_x=572){width="400"}
@@ -429,17 +487,25 @@ $$
 
 1. 拉普拉斯变换 $X$ 的ROC由复平面上与虚轴平行的带状区域组成。也就是说，如果 $s$ 在ROC内，那么 $s+j \omega$ 对所有实数 $\omega$ 也在ROC内。图7.8展示了一些可能作为有效或无效ROC的集合示例。  
 
-理由：函数 $x$ 的拉普拉斯变换 $X$ 实际上是 $x^{\prime}(t)=x(t) e^{-\operatorname{Re}(s) t}$ 的（连续时间）傅里叶变换。因此，当该傅里叶变换收敛时，$X$ 才收敛。由于傅里叶变换的收敛性只依赖于 $\operatorname{Re}(s)$，因此拉普拉斯变换的收敛性也仅依赖于 $\operatorname{Re}(s)$。
+> 论证：函数 $x$ 的拉普拉斯变换 $X$ 实际上是 $x^{\prime}(t)=x(t) e^{-\operatorname{Re}(s) t}$ 的（连续时间）傅里叶变换。因此，当该傅里叶变换收敛时，$X$ 才收敛。由于傅里叶变换的收敛性只依赖于 $\operatorname{Re}(s)$，因此拉普拉斯变换的收敛性也仅依赖于 $\operatorname{Re}(s)$。
 
 2. 如果拉普拉斯变换 $X$ 是有理函数，则ROC不包含任何极点，且ROC由极点所界定，或者向无穷延伸。图7.9展示了一些可能作为有理拉普拉斯变换的有效或无效ROC的集合示例。  
 
-部分理由： 由于 $X$ 是有理函数，它在极点处的值趋于无穷大，因此显然在极点处 $X$ 不收敛。因此，ROC不可能包含极点。
+> 部分论证： 由于 $X$ 是有理函数，它在极点处的值趋于无穷大，因此显然在极点处 $X$ 不收敛。因此，ROC不可能包含极点。
 
 3. 如果函数 $x$ 是有限时长的，并且其拉普拉斯变换 $X$ 在某个 $s$ 值处收敛，则 $X$ 在所有 $s$ 值处都收敛（即ROC是整个复平面）。图7.10展示了当 $x$ 为有限时长时，可能作为有效或无效ROC的集合示例。
 
 4. 如果函数 $x$ 是右边序列，并且直线 $\operatorname{Re}(s)=\sigma_{0}$ 属于其拉普拉斯变换 $X$ 的ROC，则所有满足 $\operatorname{Re}(s)>\sigma_{0}$ 的 $s$ 也必须在ROC内（即ROC包含一个以 $\operatorname{Re}(s)=\sigma_{0}$ 为边界的右半平面）。此外，如果 $x$ 是右边序列但不是左边序列，则 $X$ 的ROC为一个右半平面。图7.11展示了这种情况下可能作为有效或无效ROC的集合示例。
 
 5. 如果函数 $x$ 是左边序列，并且直线 $\operatorname{Re}(s)=\sigma_{0}$ 属于其拉普拉斯变换 $X$ 的ROC，则所有满足 $\operatorname{Re}(s)<\sigma_{0}$ 的 $s$ 也必须在ROC内（即ROC包含一个以 $\operatorname{Re}(s)=\sigma_{0}$ 为边界的左半平面）。此外，如果 $x$ 是左边序列但不是右边序列，则 $X$ 的ROC为一个左半平面。图7.12展示了这种情况下可能作为有效或无效ROC的集合示例。
+
+6. 如果函数 $x$ 是双边序列，并且直线 $\operatorname{Re}(s)=\sigma_{0}$ 属于其拉普拉斯变换 $X$ 的ROC，则ROC将在复平面上表现为一个包含该直线的带状区域。图7.13展示了这种情况下可能作为有效或无效ROC的集合示例。
+
+7. 如果函数 $x$ 的拉普拉斯变换 $X$ 是有理函数，则：
+   (a) 若 $x$ 是右边序列，则 $X$ 的ROC位于 $X$ 的最右极点的右侧（即该极点右侧的右半平面）。  
+   (b) 若 $x$ 是左边序列，则 $X$ 的ROC位于 $X$ 的最左极点的左侧（即该极点左侧的左半平面）。  
+
+    如果 $X$ 是有理函数，并且 $x$ 为左/右边序列，则可能作为 $X$ 的ROC的有效或无效集合示例见图7.14。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-264.jpg?height=392&width=1452&top_left_y=1999&top_left_x=264){width="400"}
 
@@ -464,15 +530,7 @@ $$
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-266.jpg?height=390&width=1457&top_left_y=829&top_left_x=264){width="400"}
 
 
-图7.12：作为左边序列（但非右边序列）函数拉普拉斯变换ROC的有效或无效集合示例。  
-
-6. 如果函数 $x$ 是双边序列，并且直线 $\operatorname{Re}(s)=\sigma_{0}$ 属于其拉普拉斯变换 $X$ 的ROC，则ROC将在复平面上表现为一个包含该直线的带状区域。图7.13展示了这种情况下可能作为有效或无效ROC的集合示例。
-
-7. 如果函数 $x$ 的拉普拉斯变换 $X$ 是有理函数，则：
-   (a) 若 $x$ 是右边序列，则 $X$ 的ROC位于 $X$ 的最右极点的右侧（即该极点右侧的右半平面）。  
-   (b) 若 $x$ 是左边序列，则 $X$ 的ROC位于 $X$ 的最左极点的左侧（即该极点左侧的左半平面）。  
-
-如果 $X$ 是有理函数，并且 $x$ 为左/右边序列，则可能作为 $X$ 的ROC的有效或无效集合示例见图7.14。
+图7.12：作为左边序列（但非右边序列）函数拉普拉斯变换ROC的有效或无效集合示例。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-266.jpg?height=387&width=1455&top_left_y=1977&top_left_x=264){width="400"}
 
@@ -483,6 +541,8 @@ $$
 
 
 图7.14：作为左/右边序列函数有理拉普拉斯变换ROC的有效或无效集合示例。  
+
+注意，上述某些性质是冗余的。例如，性质1、2和4可以推出性质7(a)。同样，性质1、2和5可以推出性质7(b)。此外，由于每个函数都可以归类为左边序列但非右边序列、右边序列但非左边序列、双边序列（即非左非右）或有限时长（即既是左边又是右边），因此可以由性质3、4、5和6推断出ROC只能是左半平面、右半平面、（单个）垂直带状区域、整个复平面或空集。特别地，$X$ 的ROC依赖于 $x$ 的左、右单边性，如表7.1所示。因此，ROC必须是连通区域。（若集合 $S$ 满足：对于任意两个元素 $a$ 和 $b$，存在一条从 $a$ 到 $b$ 的路径完全位于 $S$ 内，则称 $S$ 为连通集合。）也就是说，ROC不能由多个不相连的垂直带组成。例如，图7.15所示的集合不能作为有效ROC。
 
 表7.1：函数 $x$ 的单边性与 $X=\mathcal{L} x$ 的ROC之间的关系
 
@@ -499,18 +559,21 @@ $$
 
 图7.15：不构成有效拉普拉斯变换ROC的集合示例。
 
-注意，上述某些性质是冗余的。例如，性质1、2和4可以推出性质7(a)。同样，性质1、2和5可以推出性质7(b)。此外，由于每个函数都可以归类为左边序列但非右边序列、右边序列但非左边序列、双边序列（即非左非右）或有限时长（即既是左边又是右边），因此可以由性质3、4、5和6推断出ROC只能是左半平面、右半平面、（单个）垂直带状区域、整个复平面或空集。特别地，$X$ 的ROC依赖于 $x$ 的左、右单边性，如表7.1所示。因此，ROC必须是连通区域。（若集合 $S$ 满足：对于任意两个元素 $a$ 和 $b$，存在一条从 $a$ 到 $b$ 的路径完全位于 $S$ 内，则称 $S$ 为连通集合。）也就是说，ROC不能由多个不相连的垂直带组成。例如，图7.15所示的集合不能作为有效ROC。
-
 **例7.7** 函数 $x$ 的拉普拉斯变换 $X$ 具有代数表达式：
+
 $$
 X(s)=\frac{s+\frac{1}{2}}{\left(s^{2}+2 s+2\right)\left(s^{2}+s-2\right)} .
 $$
+
+
 确定 $X$ 的所有可能ROC，并指出每个ROC对应的函数 $x$ 是左边序列但非右边序列、右边序列但非左边序列、双边序列，还是有限时长。
 
 **解答**：与 $X$ 相关的可能ROC由该函数的极点决定。因此，首先需要求 $X$ 的极点。分解 $X$ 的分母，得到：
+
 $$
 X(s)=\frac{s+\frac{1}{2}}{(s+1-j)(s+1+j)(s+2)(s-1)} .
 $$
+
 
 因此，$X$ 的极点为 $-2,-1-j,-1+j$ 和 $1$。由于这些极点只有三个不同的实部（即 $-2,-1$ 和 $1$），所以有四种可能的ROC：
 i) $\operatorname{Re}(s)<-2$，  
@@ -534,12 +597,16 @@ iv) $\operatorname{Re}(s)>1$。
 可以说，拉普拉斯变换最重要的性质是线性性，具体如下所述。
 
 **定理7.1（线性性）** 如果 $x_{1}(t) \stackrel{L T}{\longleftrightarrow} X_{1}(s)$，ROC 为 $R_{1}$，且 $x_{2}(t) \stackrel{L T}{\longleftrightarrow} X_{2}(s)$，ROC 为 $R_{2}$，则
+
 $$
 a_{1} x_{1}(t)+a_{2} x_{2}(t) \stackrel{L T}{\longleftrightarrow} a_{1} X_{1}(s)+a_{2} X_{2}(s) \quad \text{ROC 为包含 } R_{1} \cap R_{2} \text{ 的区域,}
 $$
+
+
 其中 $a_{1}$ 和 $a_{2}$ 是任意复常数。  
 
 **证明**：设 $y(t)=a_{1} x_{1}(t)+a_{2} x_{2}(t)$，并记 $Y$ 为 $y$ 的拉普拉斯变换。根据拉普拉斯变换的定义并进行简单代数运算，可得：
+
 $$
 \begin{aligned}
 Y(s) & =\int_{-\infty}^{\infty}\left[a_{1} x_{1}(t)+a_{2} x_{2}(t)\right] e^{-s t} d t \\
@@ -548,20 +615,28 @@ Y(s) & =\int_{-\infty}^{\infty}\left[a_{1} x_{1}(t)+a_{2} x_{2}(t)\right] e^{-s 
 & =a_{1} X_{1}(s)+a_{2} X_{2}(s)
 \end{aligned}
 $$
+
+
 ROC $R$ 可由以下方式推导：如果 $X_{1}$ 和 $X_{2}$ 在某一点 $s=\lambda$ 收敛，则这两个函数的任意线性组合在 $s=\lambda$ 也必收敛。因此，ROC $R$ 必包含 $R_{1} \cap R_{2}$。由此证明了线性性成立。
 
 在上述定理中，注意结果的ROC可能大于 $R_{1} \cap R_{2}$。当 $X_{1}$ 和 $X_{2}$ 为有理函数时，这种情况仅在 $a_{1} X_{1}(s)+a_{2} X_{2}(s)$ 中发生极点-零点抵消时才会出现。
 
 **例7.8（拉普拉斯变换的线性性）** 求函数
+
 $$
 x=x_{1}+x_{2}
 $$
+
+
 的拉普拉斯变换 $X$，其中
+
 $$
 x_{1}(t)=e^{-t} u(t), \quad x_{2}(t)=e^{-t} u(t)-e^{-2 t} u(t)
 $$
 
+
 **解答**：利用表7.3中的拉普拉斯变换对，有
+
 $$
 \begin{aligned}
 X_{1}(s) & =\mathcal{L}\left\{e^{-t} u(t)\right\}(s) = \frac{1}{s+1}, \quad \operatorname{Re}(s)>-1, \\
@@ -572,7 +647,9 @@ X_{2}(s) & =\mathcal{L}\left\{e^{-t} u(t)-e^{-2 t} u(t)\right\}(s) \\
 \end{aligned}
 $$
 
+
 由 $X$ 的定义：
+
 $$
 \begin{aligned}
 X(s) & =\mathcal{L}\left\{x_1+x_2\right\}(s) \\
@@ -582,6 +659,7 @@ X(s) & =\mathcal{L}\left\{x_1+x_2\right\}(s) \\
 & =\frac{s+3}{(s+1)(s+2)}
 \end{aligned}
 $$
+
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-270.jpg?height=1087&width=1214&top_left_y=283&top_left_x=399){width="400"}
 
@@ -594,21 +672,31 @@ $$
 X(s)=\frac{s+3}{(s+1)(s+2)}, \quad \operatorname{Re}(s)>-1
 $$
 
+
 **例7.9（拉普拉斯变换的线性性与极点-零点抵消）** 求函数
+
 $$
 x=x_{1}-x_{2}
 $$
+
+
 的拉普拉斯变换 $X$，其中 $x_{1}$ 和 $x_{2}$ 定义同例7.8。
 
 **解答**：由前例可知
+
 $$
 X_1(s)=\frac{1}{s+1} \quad  \operatorname{Re}(s)>-1
 $$
+
+
+
 $$
 X_2(s)=\frac{1}{(s+1)(s+2)} \quad  \operatorname{Re}(s)>-1
 $$
 
+
 由 $X$ 的定义：
+
 $$
 \begin{aligned}
 X(s) & =\mathcal{L}\left\{x_1-x_2\right\}(s) \\
@@ -620,29 +708,38 @@ X(s) & =\mathcal{L}\left\{x_1-x_2\right\}(s) \\
 \end{aligned}
 $$
 
+
 现在，我们必须确定 $X$ 的收敛域（ROC）。我们知道，$X$ 的 ROC 至少必须包含 $X_{1}$ 和 $X_{2}$ 收敛域的交集。因此，ROC 必须包含 $\operatorname{Re}(s)>-1$。由于 $X$ 是有理函数，我们还知道 ROC 必须由极点界定或延伸至无穷大。$X$ 只有一个极点，该极点位于 $s=-2$，因此 ROC 必须包括 $-2<\operatorname{Re}(s)<-1$。因此，$X$ 的收敛域为 $\operatorname{Re}(s)>-2$。实际上，$s=-1$ 处的极点已被同一点的零点抵消。因此，$X$ 的 ROC 大于 $X_{1}$ 和 $X_{2}$ 收敛域的交集。各个收敛域如图 7.18 所示。综上所述，我们得到
 
 综上：
+
 $$
 X(s)=\frac{1}{s+2}, \quad \operatorname{Re}(s)>-2
 $$
+
 
 ### 7.8.2 时域平移
 
 接下来介绍拉普拉斯变换的另一个性质：**时域平移**，如下所示。
 
 **定理7.2（时域平移）** 如果 $x(t) \stackrel{L T}{\longleftrightarrow} X(s)$，ROC 为 $R$，则
+
 $$
 x\left(t-t_{0}\right) \stackrel{L T}{\longleftrightarrow} e^{-s t_{0}} X(s) \quad \text{ROC 仍为 } R,
 $$
+
+
 其中 $t_{0}$ 为任意实常数。
 
 **证明**：设 $y(t)=x(t-t_{0})$，并记 $Y$ 为 $y$ 的拉普拉斯变换。由拉普拉斯变换定义：
+
 $$
 Y(s)=\int_{-\infty}^{\infty} x\left(t-t_{0}\right) e^{-s t} d t
 $$
 
+
 现在进行变量替换：令 $\tau=t-t_{0}$，则 $t=\tau+t_{0}$，$d\tau=dt$。代入得：
+
 $$
 \begin{aligned}
 Y(s) & =\int_{-\infty}^{\infty} x(\tau) e^{-s(\tau+t_{0})} d\tau \\
@@ -650,6 +747,7 @@ Y(s) & =\int_{-\infty}^{\infty} x(\tau) e^{-s(\tau+t_{0})} d\tau \\
 & = e^{-s t_{0}} X(s)
 \end{aligned}
 $$
+
 
 由于 $Y$ 与 $X$ 仅相差有限常数因子 $e^{-s t_{0}}$，因此 ROC 相同。由此证明了时域平移性质成立。
 
@@ -659,37 +757,50 @@ $$
 图7.18：线性性例子的ROC。(a) $X_{1}$ 的ROC，(b) $X_{2}$ 的ROC，(c) $X_{1}$ 与 $X_{2}$ ROC的交集，(d) $X$ 的ROC。
 
 **例7.10（时域平移性质）** 求
+
 $$
 x(t)=u(t-1)
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解答**：由表7.3知
+
 $$
 u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s}, \quad \operatorname{Re}(s)>0
 $$
 
+
 利用时域平移性质：
+
 $$
 x(t)=u(t-1) \quad \longleftrightarrow \quad X(s)=e^{-s} \cdot \frac{1}{s}, \quad \operatorname{Re}(s)>0
 $$
 
+
 因此：
+
 $$
 X(s)=\frac{e^{-s}}{s}, \quad \operatorname{Re}(s)>0
 $$
+
 
 ### 7.8.3 拉普拉斯域平移
 
 接下来介绍拉普拉斯变换的另一个性质：**拉普拉斯域平移**，如下所示。
 
 **定理7.3（拉普拉斯域平移）** 如果 $x(t) \stackrel{L T}{\longleftrightarrow} X(s)$，ROC 为 $R$，则
+
 $$
 e^{s_{0} t} x(t) \stackrel{L T}{\longleftrightarrow} X\left(s-s_{0}\right), \quad \text{ROC 为 } R+\operatorname{Re}(s_{0}),
 $$
+
+
 其中 $s_{0}$ 为任意复常数。ROC示意见图7.19。
 
 **证明**：设 $y(t)=e^{s_{0} t} x(t)$，并记 $Y$ 为 $y$ 的拉普拉斯变换。根据拉普拉斯变换定义并进行代数运算：
+
 $$
 \begin{aligned}
 Y(s) & =\int_{-\infty}^{\infty} e^{s_{0} t} x(t) e^{-s t} dt \\
@@ -697,6 +808,7 @@ Y(s) & =\int_{-\infty}^{\infty} e^{s_{0} t} x(t) e^{-s t} dt \\
 & = X(s-s_{0})
 \end{aligned}
 $$
+
 
 由于 $Y(s+s_{0})=X(s)$，$Y$ 在 $\lambda+s_{0}$ 收敛当且仅当 $X$ 在 $\lambda$ 收敛。拉普拉斯变换的收敛性仅依赖于 $s$ 的实部，因此 $Y$ 在 $\lambda+\operatorname{Re}(s_{0})$ 收敛当且仅当 $X$ 在 $\lambda$ 收敛。因此，$Y$ 的ROC就是 $X$ 的ROC 向右平移 $\operatorname{Re}(s_{0})$。由此证明了拉普拉斯域平移性质。
 
@@ -706,55 +818,78 @@ $$
 图7.19：拉普拉斯域平移的收敛域。(a) 平移前，(b) 平移后。
 
 **例7.11（拉普拉斯域平移性质）** 仅利用拉普拉斯变换性质及变换对
+
 $$
 e^{-|t|} \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{2}{1-s^{2}}, \quad -1<\operatorname{Re}(s)<1
 $$
+
+
 求
+
 $$
 x(t)=e^{5 t} e^{-|t|}
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解答**：已知
+
 $$
 e^{-|t|} \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{2}{1-s^{2}}, \quad -1<\operatorname{Re}(s)<1
 $$
 
+
 利用拉普拉斯域平移性质：
+
 $$
 x(t)=e^{5 t} e^{-|t|} \stackrel{\mathrm{LT}}{\longleftrightarrow} X(s)=\frac{2}{1-(s-5)^{2}}, \quad -1+5<\operatorname{Re}(s)<1+5
 $$
 
+
 因此：
+
 $$
 X(s)=\frac{2}{1-(s-5)^{2}}, \quad 4<\operatorname{Re}(s)<6
 $$
 
+
 将 $X$ 写成因式分解形式：
+
 $$
 X(s)=\frac{2}{1-(s-5)^{2}}=\frac{2}{1-(s^2-10s+25)}=\frac{2}{-s^2+10s-24}=\frac{-2}{s^2-10s+24}=\frac{-2}{(s-6)(s-4)}
 $$
 
+
 因此：
+
 $$
 X(s)=\frac{-2}{(s-4)(s-6)}, \quad 4<\operatorname{Re}(s)<6
 $$
+
+
 ### 7.8.4 时域/拉普拉斯域缩放
 
 接下来介绍拉普拉斯变换的另一个性质：**时域/拉普拉斯域缩放**，如下所示。
 
 **定理7.4（时域/拉普拉斯域缩放）** 如果 $x(t) \stackrel{L T}{\longleftrightarrow} X(s)$，ROC 为 $R$，则
+
 $$
 x(a t) \stackrel{L T}{\longleftrightarrow} \frac{1}{|a|} X\left(\frac{s}{a}\right), \quad \text{ROC 为 } R_{1}=a R,
 $$
+
+
 其中 $a$ 为非零实常数。
 
 **证明**：设 $y(t)=x(a t)$，并记 $Y$ 为 $y$ 的拉普拉斯变换。由定义：
+
 $$
 Y(s)=\int_{-\infty}^{\infty} x(a t) e^{-s t} dt
 $$
 
+
 进行变量替换：令 $\tau = a t$，则 $t = \tau / a$，$d\tau = a \, dt$。代入积分并考虑积分限的变化：
+
 $$
 \begin{aligned}
 Y(s) & = \begin{cases}\int_{-\infty}^{\infty} x(\tau) e^{-s \tau / a} \frac{1}{a} d\tau & a>0 \\[2mm]
@@ -764,7 +899,9 @@ Y(s) & = \begin{cases}\int_{-\infty}^{\infty} x(\tau) e^{-s \tau / a} \frac{1}{a
 \end{aligned}
 $$
 
+
 合并 $a>0$ 和 $a<0$ 两种情况：
+
 $$
 \begin{aligned}
 Y(s) & = \frac{1}{|a|} \int_{-\infty}^{\infty} x(\tau) e^{-s \tau / a} d\tau \\
@@ -772,44 +909,61 @@ Y(s) & = \frac{1}{|a|} \int_{-\infty}^{\infty} x(\tau) e^{-s \tau / a} d\tau \\
 \end{aligned}
 $$
 
+
 由于 $|a| Y(a s) = X(s)$，$Y$ 在 $a\lambda$ 收敛当且仅当 $X$ 在 $\lambda$ 收敛。因此 $Y$ 的ROC为 $a R$。由此证明了缩放性质成立。
 
 时域缩放对拉普拉斯变换ROC的影响如图7.20所示。假设函数 $x$ 的拉普拉斯变换ROC如图7.20(a)所示，则函数 $y(t)=x(a t)$ 的拉普拉斯变换ROC在 $a>0$ 情况下如图7.20(b)，在 $a<0$ 情况下如图7.20(c)。
 
 **例7.12（时域缩放性质）** 利用拉普拉斯变换性质及变换对
+
 $$
 e^{-|t|} \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{2}{1-s^{2}}, \quad -1<\operatorname{Re}(s)<1
 $$
+
+
 求
+
 $$
 x(t)=e^{-|3 t|}
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解答**：由已知变换对：
+
 $$
 e^{-|t|} \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{2}{1-s^{2}}, \quad -1<\operatorname{Re}(s)<1
 $$
 
+
 利用时域缩放性质：
+
 $$
 x(t)=e^{-|3 t|} \longleftrightarrow X(s)=\frac{1}{|3|} \frac{2}{1-(s/3)^{2}}, \quad 3(-1)<\operatorname{Re}(s)<3(1)
 $$
 
+
 即：
+
 $$
 X(s)=\frac{2}{3 \left[1-(s/3)^{2}\right]}, \quad -3<\operatorname{Re}(s)<3
 $$
 
+
 化简：
+
 $$
 X(s)=\frac{2}{3 \left(1 - \frac{s^2}{9}\right)} = \frac{2 \cdot 9}{3 (9 - s^2)} = \frac{6}{9 - s^2} = \frac{-6}{(s+3)(s-3)}
 $$
 
+
 因此：
+
 $$
 X(s)=\frac{-6}{(s+3)(s-3)}, \quad -3<\operatorname{Re}(s)<3
 $$
+
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-276.jpg?height=1163&width=1520&top_left_y=745&top_left_x=245){width="400"}
 
@@ -821,11 +975,14 @@ $$
 接下来介绍拉普拉斯变换的另一个性质：**共轭性质**，如下所示。
 
 **定理7.5（共轭）** 如果 $x(t) \stackrel{L T}{\longleftrightarrow} X(s)$，ROC 为 $R$，则
+
 $$
 x^{*}(t) \stackrel{L T}{\longleftrightarrow} X^{*}(s^{*}), \quad \text{ROC 为 } R.
 $$
 
+
 **证明**：设 $y(t) = x^{*}(t)$，记 $Y$ 为 $y$ 的拉普拉斯变换，并令 $s = \sigma + j\omega$，其中 $\sigma$ 和 $\omega$ 为实数。由拉普拉斯变换定义及共轭性质：
+
 $$
 \begin{aligned}
 Y(s) & = \int_{-\infty}^{\infty} x^{*}(t) e^{-s t} dt \\
@@ -835,7 +992,9 @@ Y(s) & = \int_{-\infty}^{\infty} x^{*}(t) e^{-s t} dt \\
 \end{aligned}
 $$
 
+
 注意到 $\left(e^{-s t}\right)^{*} = e^{-s^{*} t}$，于是
+
 $$
 \begin{aligned}
 Y(s) & = \left[\int_{-\infty}^{\infty} x(t) e^{-s^{*} t} dt \right]^{*} \\
@@ -843,19 +1002,27 @@ Y(s) & = \left[\int_{-\infty}^{\infty} x(t) e^{-s^{*} t} dt \right]^{*} \\
 \end{aligned}
 $$
 
+
 我们按如下方式确定 $Y$ 的收敛域（ROC）。首先，我们注意到 $X(s)=Y^{*}\left(s^{*}\right)$。由于 $Y^{*}\left(s^{*}\right)=X(s)$，$Y$ 在 $\lambda$ 收敛当且仅当 $X$ 在 $\lambda^{*}$ 收敛。然而，我们知道收敛只取决于 $\lambda$ 的实部。因此，$Y$ 在 $\lambda$ 收敛当且仅当 $X$ 在 $\lambda$ 收敛。由此可得，$Y$ 的 ROC 必须与 $X$ 的 ROC 完全相同。因此，我们证明了共轭性质成立。
 
 **例7.13（共轭性质）** 利用拉普拉斯变换性质及变换对
+
 $$
 e^{(-1-j)t} u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+1+j}, \quad \operatorname{Re}(s)>-1
 $$
+
+
 求
+
 $$
 x(t) = e^{(-1+j) t} u(t)
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解答**首先，令 $v(t)=e^{(-1-j) t} u(t)$（即，$v$ 是其拉普拉斯变换在上面拉普拉斯变换对中给出的函数），并令 $V$ 表示 $v$ 的拉普拉斯变换。首先，我们确定 $x$ 与 $v$ 之间的关系。我们有
+
 $$
 \begin{aligned}
 x(t) & = \left( \left( e^{(-1+j) t} u(t) \right)^{*} \right)^{*} \\
@@ -864,32 +1031,49 @@ x(t) & = \left( \left( e^{(-1+j) t} u(t) \right)^{*} \right)^{*} \\
 & = v^{*}(t)
 \end{aligned}
 $$
+
+
 因此 $x = v^{*}$。接下来求 $x$ 的拉普拉斯变换：
+
 $$
 v(t) = e^{(-1-j) t} u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} V(s) = \frac{1}{s+1+j}, \quad \operatorname{Re}(s)>-1
 $$
+
+
 利用共轭性质：
+
 $$
 x(t) = e^{(-1+j) t} u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} X(s) = \left( \frac{1}{s^{*}+1+j} \right)^{*}, \quad \operatorname{Re}(s)>-1
 $$
+
+
 对 $X$ 的代数表达式进行简化，我们得到
+
 $$
 X(s)=\left(\frac{1}{s^{*}+1+j}\right)^{*}=\frac{1^{*}}{\left(s^{*}+1+j\right)^{*}}=\frac{1}{s+1-j}
 $$
 
+
 因此结论为：
+
 $$
 X(s) = \frac{1}{s+1-j}, \quad \operatorname{Re}(s)>-1
 $$
+
+
 ### 7.8.6 时域卷积
 
 拉普拉斯变换的下一个要介绍的性质是时域卷积性质，如下所示。
 
 **定理 7.6（时域卷积）** 如果 $x_{1}(t) \stackrel{L T}{\longleftrightarrow} X_{1}(s)$ 的收敛域为 $R_1$，且 $x_{2}(t) \stackrel{L T}{\longleftrightarrow} X_{2}(s)$ 的收敛域为 $R_2$，则
+
 $$
 x_{1} * x_{2}(t) \stackrel{L T}{\longleftrightarrow} X_{1}(s) X_{2}(s) \quad \text{其收敛域 } R \text{ 包含 } R_1 \cap R_2 \text{。}
 $$
+
+
 **证明** 为证明上述性质，我们按如下步骤进行。设 $y(t)=x_{1} * x_{2}(t)$，并记 $Y$ 为 $y$ 的拉普拉斯变换。根据拉普拉斯变换和卷积的定义，有
+
 $$
 \begin{aligned}
 Y(s) & =\mathcal{L}\left\{\int_{-\infty}^{\infty} x_{1}(\tau) x_{2}(t-\tau) d \tau\right\}(s) \\
@@ -897,14 +1081,20 @@ Y(s) & =\mathcal{L}\left\{\int_{-\infty}^{\infty} x_{1}(\tau) x_{2}(t-\tau) d \t
 & =\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x_{1}(\tau) x_{2}(t-\tau) e^{-s t} d \tau d t
 \end{aligned}
 $$
+
+
 交换积分顺序，得到
+
 $$
 \begin{aligned}
 Y(s) & =\int_{-\infty}^{\infty} \int_{-\infty}^{\infty} x_{1}(\tau) x_{2}(t-\tau) e^{-s t} d t d \tau \\
 & =\int_{-\infty}^{\infty}\left[\int_{-\infty}^{\infty} x_{2}(t-\tau) e^{-s t} d t\right] x_{1}(\tau) d \tau
 \end{aligned}
 $$
+
+
 现在进行变量代换。令 $v=t-\tau$，则 $t=v+\tau$，$dv=dt$。应用变量代换并化简，得到
+
 $$
 \begin{aligned}
 Y(s) & =\int_{-\infty}^{\infty}\left[\int_{-\infty}^{\infty} x_{2}(v) e^{-s(v+\tau)} d v\right] x_{1}(\tau) d \tau \\
@@ -913,6 +1103,8 @@ Y(s) & =\int_{-\infty}^{\infty}\left[\int_{-\infty}^{\infty} x_{2}(v) e^{-s(v+\t
 & =X_{1}(s) X_{2}(s)
 \end{aligned}
 $$
+
+
 现在考虑 $Y$ 的收敛域 $R$。如果 $X_1$ 和 $X_2$ 在某个 $\lambda$ 收敛，则 $Y(s)=X_1(s) X_2(s)$ 也必然在 $\lambda$ 收敛。因此，$R$ 必须包含 $R_1$ 和 $R_2$ 的交集。由此，我们证明了时域卷积性质成立。
 
 在前述定理中，注意 $R$ 可以大于 $R_1 \cap R_2$。当 $X_1$ 和 $X_2$ 是有理函数时，只有在 $X_1(s) X_2(s)$ 的表达式中发生极点-零点抵消时，才可能出现这种情况。
@@ -920,15 +1112,21 @@ $$
 拉普拉斯变换的时域卷积性质具有重要的实际意义。由于拉普拉斯变换可以将卷积有效地转换为乘法，因此可以用拉普拉斯变换来避免直接处理卷积运算。这在处理连续时间（CT）LTI 系统时尤其有用，因为此类系统本质上涉及卷积运算。
 
 例 7.14（时域卷积性质）。求函数
+
 $$
 x(t)=x_{1} * x_{2}(t)
 $$
+
+
 的拉普拉斯变换 $X$，其中
+
 $$
 x_{1}(t)=\sin (3 t) u(t) \quad \text{和} \quad x_{2}(t)=t u(t)。
 $$
 
+
 解答。从表 7.3 中，我们得到
+
 $$
 \begin{gathered}
 x_{1}(t)=\sin (3 t) u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} X_{1}(s)=\frac{3}{s^{2}+9} \quad \text{当} \operatorname{Re}(s)>0, \\
@@ -936,40 +1134,60 @@ x_{2}(t)=t u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} X_{2}(s)=\frac{1}{s^
 \end{gathered}
 $$
 
+
 利用时域卷积性质，我们有
+
 $$
 x(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} X(s)=\left(\frac{3}{s^{2}+9}\right)\left(\frac{1}{s^{2}}\right) \quad \text{对于} \{\operatorname{Re}(s)>0\} \cap \{\operatorname{Re}(s)>0\}。
 $$
 
+
 $X$ 的收敛域（ROC）为 $\{\operatorname{Re}(s)>0\} \cap \{\operatorname{Re}(s)>0\}$（而不是其超集），因为不存在极点-零点抵消。简化 $X$ 的表达式，我们得到
+
 $$
 X(s)=\frac{3}{s^{2}\left(s^{2}+9\right)} \quad \text{当} \operatorname{Re}(s)>0。
 $$
+
 
 ### 7.8.7 时域微分
 
 拉普拉斯变换的下一个要介绍的性质是时域微分性质，如下所示。
 
 **定理 7.7（时域微分）** 如果 $x(t) \stackrel{L T}{\longleftrightarrow} X(s)$ 的收敛域为 $R$，则
+
 $$
 \frac{d x(t)}{d t} \stackrel{L T}{\longleftrightarrow} s X(s) \quad \text{其收敛域 } R' \text{ 包含 } R \text{。}
 $$
+
+
 **证明** 为证明上述性质，我们按如下步骤进行。设 $\mathcal{D}$ 表示微分算子，令 $y=\mathcal{D} x$，并记 $Y$ 为 $y$ 的拉普拉斯变换。根据拉普拉斯逆变换的定义，有
+
 $$
 x(t)=\frac{1}{2 \pi j} \int_{\sigma-j \infty}^{\sigma+j \infty} X(s) e^{s t} d s
 $$
+
+
 对该方程两边关于 $t$ 求导，得到
+
 $$
 y(t)=\frac{1}{2 \pi j} \int_{\sigma-j \infty}^{\sigma+j \infty} s X(s) e^{s t} d s
 $$
+
+
 注意，上式右边正是 $s X(s)$ 的拉普拉斯逆变换，因此可以写为
+
 $$
 y(t)=\mathcal{L}^{-1}\{s X(s)\}(t)
 $$
+
+
 对两边取拉普拉斯变换，得到
+
 $$
 Y(s)=s X(s)
 $$
+
+
 现在考虑 $Y(s)=s X(s)$ 的收敛域 $R'$。显然，如果 $X$ 在 $\lambda$ 收敛，则 $Y$ 也必须在 $\lambda$ 收敛。由于乘以 $s$ 可能会抵消 $X$ 中的一个极点，因此 $R'$ 可能比 $R$（即 $X$ 的收敛域）更大。因此，$R'$ 至少必须包含 $R$。由此，我们证明了时域微分性质成立。
 
 在前述定理中，注意 $R'$ 可以大于 $R$。当 $X$ 是有理函数时，只有在 $s X(s)$ 的表达式中发生极点-零点抵消时，才可能出现这种情况。
@@ -977,101 +1195,158 @@ $$
 拉普拉斯变换的时域微分性质具有重要的实际意义。由于拉普拉斯变换可以将微分有效地转换为乘法（乘以 $s$），因此可以用拉普拉斯变换来避免直接处理微分运算。这在处理微分方程和积分微分方程时尤其有用。
 
 **例 7.15（时域微分性质）** 求函数
+
 $$
 x(t)=\frac{d}{d t} \delta(t)
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解答** 根据表 7.3，有
+
 $$
 \boldsymbol{\delta}(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} 1, \quad \text{对所有 } s \text{成立。}
 $$
+
+
 利用时域微分性质，可得
+
 $$
 x(t)=\frac{d}{d t} \delta(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} X(s)=s \cdot 1, \quad \text{对所有 } s \text{成立。}
 $$
+
+
 因此，
+
 $$
 X(s)=s, \quad \text{对所有 } s \text{成立。}
 $$
+
+
 ### 7.8.8 拉普拉斯域微分
 
 拉普拉斯变换的下一个要介绍的性质是拉普拉斯域微分性质，如下所示。
 
 **定理 7.8（拉普拉斯域微分）** 如果 $x(t) \stackrel{L T}{\longleftrightarrow} X(s)$ 的收敛域为 $R$，则
+
 $$
 -t x(t) \stackrel{L T}{\longleftrightarrow} \frac{d}{d s} X(s) \quad \text{其收敛域为 } R。
 $$
+
+
 **证明** 为证明上述性质，我们按如下步骤进行。设 $y(t)=-t x(t)$，并记 $Y$ 为 $y$ 的拉普拉斯变换。根据拉普拉斯变换的定义，有
+
 $$
 X(s)=\int_{-\infty}^{\infty} x(t) e^{-s t} d t
 $$
+
+
 对上式两边关于 $s$ 求导，得到
+
 $$
 \begin{aligned}
 \frac{d}{d s} X(s) & =\int_{-\infty}^{\infty}-t x(t) e^{-s t} d t \\
 & =Y(s)
 \end{aligned}
 $$
+
+
 由此，我们证明了拉普拉斯域微分性质成立。
 
 **例 7.16（拉普拉斯域微分性质）** 仅利用拉普拉斯变换的性质及变换对
+
 $$
 e^{-2 t} u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+2}, \quad \operatorname{Re}(s)>-2
 $$
+
+
 求函数
+
 $$
 x(t)=t e^{-2 t} u(t)
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解答** 已知
+
 $$
 e^{-2 t} u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+2}, \quad \operatorname{Re}(s)>-2。
 $$
+
+
 利用拉普拉斯域微分性质和线性性质，可得
+
 $$
 x(t)=t e^{-2 t} u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} X(s)=-\frac{d}{d s}\left(\frac{1}{s+2}\right), \quad \operatorname{Re}(s)>-2。
 $$
+
+
 化简 $X$ 的代数表达式，得到
+
 $$
 X(s)=-\frac{d}{d s}\left(\frac{1}{s+2}\right)=-\frac{d}{d s}(s+2)^{-1}=(-1)(-1)(s+2)^{-2}=\frac{1}{(s+2)^{2}}
 $$
+
+
 因此，得到结论
+
 $$
 X(s)=\frac{1}{(s+2)^{2}}, \quad \operatorname{Re}(s)>-2。
 $$
+
+
 ### 7.8.9 时域积分
 
 拉普拉斯变换的下一个要介绍的性质是时域积分性质，如下所示。
 
 **定理 7.9（时域积分）** 如果 $x(t) \stackrel{L T}{\longleftrightarrow} X(s)$ 的收敛域为 $R$，则
+
 $$
 \int_{-\infty}^{t} x(\tau) d \tau \stackrel{L T}{\longleftrightarrow} \frac{1}{s} X(s) \quad \text{其收敛域 } R' \text{ 包含 } R \cap \{\operatorname{Re}(s)>0\}。
 $$
+
+
 **证明** 为证明上述性质，我们按如下步骤进行。设 
+
 $$
 y(t)=\int_{-\infty}^{t} x(\tau) d \tau,
 $$
+
+
 并记 $Y$ 和 $U$ 分别为 $y$ 和单位阶跃函数 $u$ 的拉普拉斯变换。首先，我们注意到
+
 $$
 y(t)=x * u(t)
 $$
+
+
 对该方程两边取拉普拉斯变换，得到
+
 $$
 Y(s)=\mathcal{L}\{x * u\}(s)
 $$
+
+
 根据拉普拉斯变换的时域卷积性质，有
+
 $$
 \begin{aligned}
 Y(s) & =\mathcal{L} x(s) \mathcal{L} u(s) \\
 & =X(s) U(s)
 \end{aligned}
 $$
+
+
 根据例 7.5，我们知道 $U(s)=\frac{1}{s}$，其收敛域为 $\operatorname{Re}(s)>0$。因此，
+
 $$
 Y(s)=\frac{1}{s} X(s)
 $$
+
+
 现在考虑 $Y$ 的收敛域 $R'$。显然，如果 $X$ 和 $U$ 在 $\lambda$ 收敛，则 $Y$ 也必须在 $\lambda$ 收敛。因此，$R'$ 必须包含 $X$ 和 $U$ 收敛域的交集。由于 $U$ 在 $\operatorname{Re}(s)>0$ 收敛，$R'$ 必须包含 $R \cap \{\operatorname{Re}(s)>0\}$。由此，我们证明了时域积分性质成立。
 
 在前述定理中，注意 $R'$ 可以大于 $R \cap \{\operatorname{Re}(s)>0\}$。当 $X$ 是有理函数时，只有在 $\frac{1}{s} X(s)$ 的表达式中发生极点-零点抵消时，才可能出现这种情况。
@@ -1079,73 +1354,116 @@ $$
 拉普拉斯变换的时域积分性质具有重要的实际意义。由于拉普拉斯变换可以将积分有效地转换为除法（除以 $s$），因此可以用拉普拉斯变换来避免直接处理积分运算。这在处理积分方程和积分微分方程时尤其有用。
 
 **例 7.17（时域积分性质）** 求函数
+
 $$
 x(t)=\int_{-\infty}^{t} e^{-2 \tau} \sin (\tau) u(\tau) d \tau
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解答** 根据表 7.3，有
+
 $$
 e^{-2 t} \sin (t) u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{(s+2)^{2}+1}, \quad \operatorname{Re}(s)>-2。
 $$
+
+
 利用时域积分性质，可得
+
 $$
 x(t)=\int_{-\infty}^{t} e^{-2 \tau} \sin (\tau) u(\tau) d \tau \stackrel{\mathrm{LT}}{\longleftrightarrow} X(s)=\frac{1}{s}\left[\frac{1}{(s+2)^{2}+1}\right], \quad \{\operatorname{Re}(s)>-2\} \cap \{\operatorname{Re}(s)>0\}
 $$
+
+
 由于不存在极点-零点抵消，$X$ 的收敛域为 $\{\operatorname{Re}(s)>-2\} \cap \{\operatorname{Re}(s)>0\}$。化简 $X$ 的代数表达式，得到
+
 $$
 X(s)=\frac{1}{s}\left[\frac{1}{(s+2)^{2}+1}\right]=\frac{1}{s}\left(\frac{1}{s^{2}+4 s+4+1}\right)=\frac{1}{s}\left(\frac{1}{s^{2}+4 s+5}\right)
 $$
+
+
 因此，
+
 $$
 X(s)=\frac{1}{s\left(s^{2}+4 s+5\right)}, \quad \operatorname{Re}(s)>0
 $$
+
+
 [注：$s^{2}+4 s+5=(s+2-j)(s+2+j)$。]
 ### 7.8.10 初值定理与终值定理
 
 拉普拉斯变换的下一个要介绍的性质是初值定理与终值定理，如下所示。
 
 **定理 7.10（初值定理）** 设 $x$ 是一个具有拉普拉斯变换 $X$ 的函数。如果 $x$ 是因果的且在原点不存在脉冲或高阶奇异点，则
+
 $$
 x\left(0^{+}\right)=\lim _{s \rightarrow \infty} s X(s)
 $$
+
+
 其中 $x\left(0^{+}\right)$ 表示 $x(t)$ 在 $t$ 从正方向趋近零时的极限。
 
 **证明** 为证明上述性质，首先将 $x$ 在 $0^{+}$ 处展开为泰勒级数：
+
 $$
 x(t)=\left[x\left(0^{+}\right)+x^{(1)}\left(0^{+}\right) t+\ldots+x^{(n)}\left(0^{+}\right) \frac{t^{n}}{n!}+\ldots\right] u(t)
 $$
+
+
 其中 $x^{(n)}$ 表示 $x$ 的第 $n$ 阶导数。对上述式子取拉普拉斯变换，并利用 $\mathcal{L}\{t^{n} u(t)\}(s)=\frac{n!}{s^{n+1}}$，得到
+
 $$
 X(s)=x\left(0^{+}\right) \frac{1}{s}+x^{(1)}\left(0^{+}\right) \frac{1}{s^{2}}+\ldots+x^{(n)}\left(0^{+}\right) \frac{1}{s^{n+1}}+\ldots
 $$
+
+
 两边乘以 $s$，得到
+
 $$
 s X(s)=x\left(0^{+}\right)+x^{(1)}\left(0^{+}\right) \frac{1}{s}+\ldots+x^{(n)}\left(0^{+}\right) \frac{1}{s^{n}}+\ldots
 $$
+
+
 取极限 $s \rightarrow \infty$，得到
+
 $$
 \lim _{s \rightarrow \infty} s X(s)=x\left(0^{+}\right)
 $$
+
+
 因此，初值定理成立。
 
 **定理 7.11（终值定理）** 设 $x$ 是一个具有拉普拉斯变换 $X$ 的函数。如果 $x$ 是因果的，且 $\lim_{t \to \infty} x(t)$ 存在有限值，则
+
 $$
 \lim _{t \rightarrow \infty} x(t)=\lim _{s \rightarrow 0} s X(s)
 $$
+
+
 **证明** 令 $x'$ 表示 $x$ 的导数。单边拉普拉斯变换的微分性质（在第 7.17 节中介绍）指出
+
 $$
 s \mathcal{L}_{\mathrm{u}} x(s)-x\left(0^{-}\right)=\mathcal{L}_{\mathrm{u}} x^{\prime}(s)
 $$
+
+
 由于 $x$ 是因果的，上式可改写为
+
 $$
 s \mathcal{L} x(s)-x\left(0^{-}\right)=\mathcal{L}_{\mathrm{u}} x^{\prime}(s)
 $$
+
+
 因此，
+
 $$
 s X(s)-x\left(0^{-}\right)=\int_{0^{-}}^{\infty} x^{\prime}(t) e^{-s t} d t
 $$
+
+
 对两边取极限 $s \rightarrow 0$，得到
+
 $$
 \begin{aligned}
 \lim _{s \rightarrow 0}\left[s X(s)-x\left(0^{-}\right)\right] & =\lim _{s \rightarrow 0} \int_{0^{-}}^{\infty} x^{\prime}(t) e^{-s t} d t \\
@@ -1154,17 +1472,26 @@ $$
 & =\lim _{t \rightarrow \infty} x(t)-x\left(0^{-}\right)
 \end{aligned}
 $$
+
+
 两边加上 $x\left(0^{-}\right)$，得到
+
 $$
 \lim _{s \rightarrow 0} s X(s)=\lim _{t \rightarrow \infty} x(t)
 $$
+
+
 **例 7.18（初值与终值定理）** 一个有界的因果函数 $x$ 在无穷远处有有限极限，其拉普拉斯变换为
+
 $$
 X(s)=\frac{2 s^{2}+3 s+2}{s^{3}+2 s^{2}+2 s}, \quad \operatorname{Re}(s)>0
 $$
+
+
 求 $x\left(0^{+}\right)$ 和 $\lim_{t \to \infty} x(t)$。
 
 **解答** 由于 $x$ 是因果的且在原点无奇异点，可以应用初值定理：
+
 $$
 \begin{aligned}
 x\left(0^{+}\right) & =\lim _{s \rightarrow \infty} s X(s) \\
@@ -1173,7 +1500,10 @@ x\left(0^{+}\right) & =\lim _{s \rightarrow \infty} s X(s) \\
 & =2
 \end{aligned}
 $$
+
+
 由于 $x$ 有界且因果，并且在无穷远处极限存在，可应用终值定理：
+
 $$
 \begin{aligned}
 \lim _{t \rightarrow \infty} x(t) & =\lim _{s \rightarrow 0} s X(s) \\
@@ -1182,10 +1512,15 @@ $$
 & =1
 \end{aligned}
 $$
+
+
 顺便提一下，$X$ 的拉普拉斯逆变换可得
+
 $$
 x(t)=\left[1+e^{-t} \cos t\right] u(t)
 $$
+
+
 如预期，上述计算得到的 $x\left(0^{+}\right)$ 和 $\lim_{t \to \infty} x(t)$ 与该公式一致。
 
 初值定理与终值定理在检验拉普拉斯变换计算错误时非常有用。例如，若我们需要计算函数 $x$ 的拉普拉斯变换 $X$，若计算中出现错误，则使用初值定理和终值定理通过 $X$ 得到的 $x(0)$ 和 $\lim_{t \to \infty} x(t)$ 结果通常会与直接使用 $x$ 得到的结果不一致，从而可以较容易地发现某些类型的错误。
@@ -1200,7 +1535,7 @@ $$
 | 线性 | $a_{1} x_{1}(t)+a_{2} x_{2}(t)$ | $a_{1} X_{1}(s)+a_{2} X_{2}(s)$ | 至少 $R_{1} \cap R_{2}$ |
 | 时移 | $x\left(t-t_{0}\right)$ | $e^{-s t_{0}} X(s)$ | $R$ |
 | 拉普拉斯域移位 | $e^{s_{0} t} x(t)$ | $X\left(s-s_{0}\right)$ | $R+\operatorname{Re}\left(s_{0}\right)$ |
-| 时域/拉普拉斯域缩放 | $x(a t)$ | $\frac{1}{\|a\|} X\left(\frac{s}{a}\right)$ | $a R$ |
+| 时域/拉普拉斯域缩放 | $x(a t)$ | $\frac{1}{|a|} X\left(\frac{s}{a}\right)$ | $a R$ |
 | 共轭 | $x^{*}(t)$ | $X^{*}\left(s^{*}\right)$ | $R$ |
 | 时域卷积 | $x_{1} * x_{2}(t)$ | $X_{1}(s) X_{2}(s)$ | 至少 $R_{1} \cap R_{2}$ |
 | 时域微分 | $\frac{d}{d t} x(t)$ | $s X(s)$ | 至少 $R$ |
@@ -1230,16 +1565,23 @@ $$
 | 13 | $e^{-a t} \sin \left(\omega_{0} t\right) u(t)$ | $\frac{\omega_{0}}{(s+a)^{2}+\omega_{0}^{2}}$ | $\operatorname{Re}(s)>-a$ |
 
 例 7.19. 利用拉普拉斯变换的性质和拉普拉斯变换对
+
 $$
 e^{-a|t|} \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{-2 a}{(s+a)(s-a)} \text {，适用于 } -a<\operatorname{Re}(s)<a
 $$
+
+
 求函数
+
 $$
 x(t)=e^{-5|3 t-7|}
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解**：我们首先将 $x$ 重新表示为以下形式：
+
 $$
 \begin{gathered}
 v_{1}(t)=e^{-5|t|} \\
@@ -1248,7 +1590,9 @@ x(t)=v_{2}(3 t)
 \end{gathered}
 $$
 
+
 以下记 $R_{V_{1}}, R_{V_{2}}$ 和 $R_{X}$ 分别为 $V_{1}, V_{2}$ 和 $X$ 的收敛域（ROC）。对上述三个方程进行拉普拉斯变换，得到：
+
 $$
 \begin{gathered}
 V_{1}(s)=\frac{-10}{(s+5)(s-5)}, \quad R_{V_{1}}=(-5<\operatorname{Re}(s)<5) \\
@@ -1257,7 +1601,9 @@ X(s)=\frac{1}{3} V_{2}(s / 3), \quad \text {且} \quad R_{X}=3 R_{V_{2}}
 \end{gathered}
 $$
 
+
 将上述方程合并，得到：
+
 $$
 \begin{aligned}
 X(s) & =\frac{1}{3} V_{2}(s / 3) \\
@@ -1270,18 +1616,25 @@ X(s) & =\frac{1}{3} V_{2}(s / 3) \\
 \end{aligned}
 $$
 
+
 因此，我们得到：
+
 $$
 X(s)=\frac{1}{3} e^{-7 s / 3} \frac{-10}{(s / 3+5)(s / 3-5)} \text {，适用于 } -15<\operatorname{Re}(s)<15
 $$
 
+
 例 7.20. 求函数
+
 $$
 x(t)=\left[e^{-t}+e^{-2 t}\right] u(t)
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解**：我们可以计算 $X$ 如下：
+
 $$
 \begin{aligned}
 X(s) & =\mathcal{L}\left\{\left[e^{-t}+e^{-2 t}\right] u(t)\right\}(s) \\
@@ -1292,33 +1645,49 @@ X(s) & =\mathcal{L}\left\{\left[e^{-t}+e^{-2 t}\right] u(t)\right\}(s) \\
 \end{aligned}
 $$
 
+
 因此，我们得到：
+
 $$
 X(s)=\frac{2 s+3}{(s+1)(s+2)} \text {，适用于 } \operatorname{Re}(s)>-1
 $$
+
+
 示例 7.21. 求函数
+
 $$
 x(t)=\left[e^{-2 t}+e^{-3 t}\right] u(t-1)
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解**：首先，我们将 $x$ 重写为
+
 $$
 x(t)=\left[e^{-2 t}+e^{-3 t}\right] v_{1}(t)
 $$
+
+
 其中
+
 $$
 v_{1}(t)=u(t-1)
 $$
 
+
 对上述方程进行拉普拉斯变换，得到：
+
 $$
 \begin{aligned}
 V_{1}(s) & =\mathcal{L}\{u(t-1)\}(s) \\
 & =e^{-s}\left(\frac{1}{s}\right) \quad \text {，适用于 } \operatorname{Re}(s)>0
 \end{aligned}
 $$
+
+
 以及
+
 $$
 \begin{aligned}
 X(s) & =\mathcal{L}\left\{\left[e^{-2 t}+e^{-3 t}\right] v_{1}(t)\right\}(s) \\
@@ -1326,7 +1695,9 @@ X(s) & =\mathcal{L}\left\{\left[e^{-2 t}+e^{-3 t}\right] v_{1}(t)\right\}(s) \\
 \end{aligned}
 $$
 
+
 接下来，将重点放在简化上述 $X$ 的表达式。设 $R_{V_{1}}$ 为 $V_{1}$ 的 ROC，则有：
+
 $$
 \begin{gathered}
 \mathcal{L}\left\{e^{-2 t} v_{1}(t)\right\}(s)=V_{1}(s+2) \quad \text {，适用于 } s \in R_{V_{1}}-2 \\
@@ -1334,7 +1705,9 @@ $$
 \end{gathered}
 $$
 
+
 因此：
+
 $$
 \begin{aligned}
 X(s) & =\mathcal{L}\left\{e^{-2 t} v_{1}(t)\right\}(s)+\mathcal{L}\left\{e^{-3 t} v_{1}(t)\right\}(s) \\
@@ -1342,7 +1715,9 @@ X(s) & =\mathcal{L}\left\{e^{-2 t} v_{1}(t)\right\}(s)+\mathcal{L}\left\{e^{-3 t
 \end{aligned}
 $$
 
+
 将 $V_{1}$ 的表达式代入，得到：
+
 $$
 \begin{aligned}
 X(s) & =e^{-(s+2)} \frac{1}{s+2}+e^{-(s+3)} \frac{1}{s+3} \\
@@ -1350,20 +1725,27 @@ X(s) & =e^{-(s+2)} \frac{1}{s+2}+e^{-(s+3)} \frac{1}{s+3} \\
 \end{aligned}
 $$
 
+
 因此：
+
 $$
 X(s)=e^{-(s+2)} \frac{1}{s+2}+e^{-(s+3)} \frac{1}{s+3} \quad \text {，适用于 } \operatorname{Re}(s)>-2
 $$
 
+
 ---
 
 例 7.22. 求函数
+
 $$
 x(t)=\delta(t)+u(t)
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解**：对 $x$ 进行拉普拉斯变换：
+
 $$
 \begin{aligned}
 X(s) & =\mathcal{L}\{\delta+u\}(s) \\
@@ -1371,7 +1753,9 @@ X(s) & =\mathcal{L}\{\delta+u\}(s) \\
 \end{aligned}
 $$
 
+
 根据表 7.3：
+
 $$
 \begin{array}{ll}
 \delta(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} 1 & \text {，适用于所有 } s \\
@@ -1379,7 +1763,9 @@ u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s} & \text {，适用�
 \end{array}
 $$
 
+
 代入上述结果，得到：
+
 $$
 \begin{aligned}
 X(s) & =1+\frac{1}{s} \quad \text {，适用于 } \operatorname{Re}(s)>0 \\
@@ -1387,25 +1773,34 @@ X(s) & =1+\frac{1}{s} \quad \text {，适用于 } \operatorname{Re}(s)>0 \\
 \end{aligned}
 $$
 
+
 因此：
+
 $$
 X(s)=\frac{s+1}{s} \quad \text {，适用于 } \operatorname{Re}(s)>0
 $$
 
+
 ---
 
 例 7.23. 求函数
+
 $$
 x(t)=t e^{-3|t|}
 $$
+
+
 的拉普拉斯变换 $X$。
 
 **解**：首先，将 $x$ 重写为：
+
 $$
 x(t)=t e^{3 t} u(-t)+t e^{-3 t} u(t)
 $$
 
+
 对 $x$ 进行拉普拉斯变换：
+
 $$
 \begin{aligned}
 X(s) & =\mathcal{L}\left\{t e^{3 t} u(-t)+t e^{-3 t} u(t)\right\}(s) \\
@@ -1417,26 +1812,39 @@ X(s) & =\mathcal{L}\left\{t e^{3 t} u(-t)+t e^{-3 t} u(t)\right\}(s) \\
 \end{aligned}
 $$
 
+
 因此：
+
 $$
 X(s)=\frac{-12 s}{(s+3)^{2}(s-3)^{2}} \quad \text {，适用于 } -3<\operatorname{Re}(s)<3
 $$
+
+
 例 7.24. 考虑函数
+
 $$
 y(t)=e^{-t}[x * x(t)]
 $$
+
+
 设 $X$ 和 $Y$ 分别为 $x$ 和 $y$ 的拉普拉斯变换。求 $Y$ 关于 $X$ 的表达式。
 
 **解**：首先，将 $y$ 重写为
+
 $$
 y(t)=e^{-t} v_{1}(t)
 $$
+
+
 其中
+
 $$
 v_{1}(t)=x * x(t)
 $$
 
+
 设 $V_{1}$ 为 $v_{1}$ 的拉普拉斯变换。记 $R_{X}, R_{Y}$ 和 $R_{V}$ 分别为 $X, Y$ 和 $V$ 的收敛域。对上述方程进行拉普拉斯变换，得到：
+
 $$
 \begin{aligned}
 V_{1}(s) & =\mathcal{L} v_{1}(s) \\
@@ -1448,13 +1856,16 @@ Y(s) & =\mathcal{L}\left\{e^{-t} v_{1}(t)\right\}(s) \\
 \end{aligned}
 $$
 
+
 将 $V_{1}$ 的表达式代入 $Y$，得到：
+
 $$
 \begin{aligned}
 Y(s) & =V_{1}(s+1) \\
 & =X^{2}(s+1) \quad \text {，适用于 } s \in R_{X}-1
 \end{aligned}
 $$
+
 
 ---
 
@@ -1466,21 +1877,31 @@ $$
 图 7.21：拉普拉斯变换示例函数。
 
 **第一种解法**（需较多微分运算）：首先用单位阶跃函数表示 $x$：
+
 $$
 \begin{aligned}
 x(t) & =t[u(t)-u(t-1)] \\
 & =t u(t)-t u(t-1)
 \end{aligned}
 $$
+
+
 对两边取拉普拉斯变换：
+
 $$
 X(s)=\mathcal{L}\{t u(t)\}(s)-\mathcal{L}\{t u(t-1)\}(s)
 $$
+
+
 我们有：
+
 $$
 \mathcal{L}\{t u(t)\}(s)=\frac{1}{s^{2}}
 $$
+
+
 以及
+
 $$
 \begin{aligned}
 \mathcal{L}\{t u(t-1)\}(s) & =-\mathcal{L}\{-t u(t-1)\}(s)=-\frac{d}{d s}\left(\frac{e^{-s}}{s}\right) \\
@@ -1489,7 +1910,10 @@ $$
 & =\frac{e^{-s}}{s}+\frac{e^{-s}}{s^{2}}
 \end{aligned}
 $$
+
+
 结合上述结果，得到：
+
 $$
 \begin{aligned}
 X(s) & =\frac{1}{s^{2}}-\left[\frac{e^{-s}}{s}+\frac{e^{-s}}{s^{2}}\right] \\
@@ -1497,29 +1921,41 @@ X(s) & =\frac{1}{s^{2}}-\left[\frac{e^{-s}}{s}+\frac{e^{-s}}{s^{2}}\right] \\
 & =\frac{1-s e^{-s}-e^{-s}}{s^{2}}
 \end{aligned}
 $$
+
+
 由于 $x$ 为有限持续时间函数，$X$ 的 ROC 为整个复平面。
 
 **第二种解法**（避免微分运算，简化计算）：同样用单位阶跃函数表示 $x$：
+
 $$
 \begin{aligned}
 x(t) & =t[u(t)-u(t-1)] \\
 & =t u(t)-t u(t-1)
 \end{aligned}
 $$
+
+
 为了简化拉普拉斯变换，重新写作：
+
 $$
 \begin{aligned}
 x(t) & =t u(t)-t u(t-1)+u(t-1)-u(t-1) \\
 & =t u(t)-(t-1) u(t-1)-u(t-1)
 \end{aligned}
 $$
+
+
 （此做法是为了计算 $(t-1) u(t-1)$ 的拉普拉斯变换，而非直接计算 $t u(t-1)$。）
 
 取拉普拉斯变换：
+
 $$
 X(s)=\mathcal{L}\{t u(t)\}(s)-\mathcal{L}\{(t-1) u(t-1)\}(s)-\mathcal{L}\{u(t-1)\}(s)
 $$
+
+
 我们有：
+
 $$
 \begin{aligned}
 \mathcal{L}\{t u(t)\}(s) & =\frac{1}{s^{2}}, \\
@@ -1527,13 +1963,18 @@ $$
 \mathcal{L}\{u(t-1)\}(s) & =e^{-s} \mathcal{L}\{u(t)\}(s) = \frac{e^{-s}}{s}
 \end{aligned}
 $$
+
+
 结合结果：
+
 $$
 \begin{aligned}
 X(s) & =\frac{1}{s^{2}}-\frac{e^{-s}}{s^{2}}-\frac{e^{-s}}{s} \\
 & =\frac{1-e^{-s}-s e^{-s}}{s^{2}}
 \end{aligned}
 $$
+
+
 由于 $x$ 为有限持续时间函数，$X$ 的 ROC 为整个复平面。
 
 示例 7.26. 求图 7.22 所示函数 $x$ 的拉普拉斯变换 $X$。
@@ -1544,6 +1985,7 @@ $$
 图 7.22：拉普拉斯变换示例函数。
 
 **第一种解法**（需较多微分运算）：首先用单位阶跃函数表示 $x$：
+
 $$
 \begin{aligned}
 x(t) & =(t+2)[u(t+1)-u(t)]+(-t+2)[u(t)-u(t-1)] \\
@@ -1552,7 +1994,9 @@ x(t) & =(t+2)[u(t+1)-u(t)]+(-t+2)[u(t)-u(t-1)] \\
 \end{aligned}
 $$
 
+
 对两边取拉普拉斯变换：
+
 $$
 \begin{aligned}
 X(s) & =-\mathcal{L}\{-t u(t+1)\}(s)+2 \mathcal{L}\{u(t+1)\}(s)+2 \mathcal{L}\{-t u(t)\}(s)-\mathcal{L}\{-t u(t-1)\}(s)-2 \mathcal{L}\{u(t-1)\}(s) \\
@@ -1563,14 +2007,18 @@ X(s) & =-\mathcal{L}\{-t u(t+1)\}(s)+2 \mathcal{L}\{u(t+1)\}(s)+2 \mathcal{L}\{-
 \end{aligned}
 $$
 
+
 由于 $x$ 为（有界且）有限持续时间函数，$X$ 的 ROC 为整个复平面。因此：
+
 $$
 X(s)=\frac{s e^{s}+e^{s}-2-s e^{-s}+e^{-s}}{s^{2}} \quad \text {，适用于所有 } s
 $$
 
+
 ---
 
 **第二种解法**（避免微分运算，简化计算）：可以重新排列 $x$ 的表达式：
+
 $$
 \begin{aligned}
 x(t) & =[t u(t+1)+u(t+1)-u(t+1)]+2 u(t+1)-2 t u(t)+[t u(t-1)-u(t-1)+u(t-1)]-2 u(t-1) \\
@@ -1578,7 +2026,9 @@ x(t) & =[t u(t+1)+u(t+1)-u(t+1)]+2 u(t+1)-2 t u(t)+[t u(t-1)-u(t-1)+u(t-1)]-2 u(
 \end{aligned}
 $$
 
+
 取拉普拉斯变换：
+
 $$
 \begin{aligned}
 X(s) & =e^{s} \mathcal{L}\{t u(t)\}(s)+\mathcal{L}\{u(t+1)\}(s)-2 \mathcal{L}\{t u(t)\}(s)+e^{-s} \mathcal{L}\{t u(t)\}(s)-\mathcal{L}\{u(t-1)\}(s) \\
@@ -1587,6 +2037,7 @@ X(s) & =e^{s} \mathcal{L}\{t u(t)\}(s)+\mathcal{L}\{u(t+1)\}(s)-2 \mathcal{L}\{t
 \end{aligned}
 $$
 
+
 使用此方法，$X$ 的表达式更易于简化。
 
 ## 7.10 拉普拉斯逆变换的求解
@@ -1594,21 +2045,28 @@ $$
 如前所述，在实际应用中，我们很少直接使用公式 (7.3) 来计算拉普拉斯逆变换。该公式需要进行轮廓积分，而轮廓积分通常并不容易计算。相反，我们采用函数的部分分式展开。通过这种方法，我们得到了一些较简单的函数，通常可以在表格中找到它们的拉普拉斯逆变换（例如表 7.3）。在下面的讨论中，我们假设读者已经熟悉部分分式展开。对于不熟悉部分分式展开的读者，附录 B 提供了相关教程。
 
 **例 7.27** 找到以下函数的拉普拉斯逆变换 $x$：
+
 $$
 X(s)=\frac{2}{s^{2}-s-2} \quad \text { 对 } -1<\operatorname{Re}(s)<2
 $$
 
+
 **解** 我们首先将 $X$ 重写为因式分解形式：
+
 $$
 X(s)=\frac{2}{(s+1)(s-2)}
 $$
 
+
 接着，我们对 $X$ 进行部分分式展开。我们知道 $X$ 可以展开为：
+
 $$
 X(s)=\frac{A_{1}}{s+1}+\frac{A_{2}}{s-2} .
 $$
 
+
 计算展开式的系数，得到：
+
 $$
 \begin{aligned}
 & A_{1}=\left.(s+1) X(s)\right|_{s=-1}=\left.\frac{2}{s-2}\right|_{s=-1}=-\frac{2}{3} \quad \text { 和 } \\
@@ -1616,19 +2074,25 @@ $$
 \end{aligned}
 $$
 
+
 因此，$X$ 的展开式为：
+
 $$
 X(s)=\frac{2}{3}\left(\frac{1}{s-2}\right)-\frac{2}{3}\left(\frac{1}{s+1}\right) .
 $$
 
+
 对该等式两边取拉普拉斯逆变换，我们得到：
+
 $$
 \begin{equation*}
 x(t)=\frac{2}{3} \mathcal{L}^{-1}\left\{\frac{1}{s-2}\right\}(t)-\frac{2}{3} \mathcal{L}^{-1}\left\{\frac{1}{s+1}\right\}(t) \tag{7.6}
 \end{equation*}
 $$
 
+
 此时，需要注意每个拉普拉斯变换都有一个对应的 ROC（收敛域），它是拉普拉斯变换的一个重要组成部分。因此，在计算函数的拉普拉斯逆变换时，必须使用该函数的正确 ROC。为了计算 (7.6) 中出现的两个逆变换，我们必须为两个表达式 $\frac{1}{s-2}$ 和 $\frac{1}{s+1}$ 分别指定 ROC。在这里需要小心，因为每个表达式可能有多个 ROC，而只有一个是正确的。每个表达式的可能 ROC 如图 7.23 所示。在每个表达式的情况下，正确的 ROC 是包含 $X$ 的 ROC 的那个（即 $-1<\operatorname{Re}(s)<2$）。利用表 7.3，我们有：
+
 $$
 \begin{aligned}
 -e^{2 t} u(-t) & \stackrel{\llcorner\mathrm{T}}{\longleftrightarrow} \frac{1}{s-2} \quad \text { 对 } \operatorname{Re}(s)<2 \quad \text { 和 } \\
@@ -1636,7 +2100,9 @@ e^{-t} u(t) & \stackrel{\llcorner\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+1}
 \end{aligned}
 $$
 
+
 将这些结果代入 (7.6)，得到：
+
 $$
 \begin{aligned}
 x(t) & =\frac{2}{3}\left[-e^{2 t} u(-t)\right]-\frac{2}{3}\left[e^{-t} u(t)\right] \\
@@ -1644,22 +2110,28 @@ x(t) & =\frac{2}{3}\left[-e^{2 t} u(-t)\right]-\frac{2}{3}\left[e^{-t} u(t)\righ
 \end{aligned}
 $$
 
+
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-293.jpg?height=461&width=1492&top_left_y=291&top_left_x=370){width="400"}
 
 
 **图 7.23**：有理表达式的极点及可能的 ROC：（a）$\frac{1}{s-2}$；（b）$\frac{1}{s+1}$。
 
 **例 7.28（具有重极点的有理函数）** 找到以下函数的拉普拉斯逆变换 $x$：
+
 $$
 X(s)=\frac{2 s+1}{(s+1)^{2}(s+2)} \quad \text { 对 } \operatorname{Re}(s)>-1
 $$
 
+
 **解** 首先，我们对 $X$ 进行部分分式展开。我们知道 $X$ 可以展开为：
+
 $$
 X(s)=\frac{A_{1,1}}{s+1}+\frac{A_{1,2}}{(s+1)^{2}}+\frac{A_{2,1}}{s+2} .
 $$
 
+
 计算展开式的系数，得到：
+
 $$
 \begin{aligned}
 A_{1,1} & =\left.\frac{1}{(2-1)!}\left[\left(\frac{d}{d s}\right)^{2-1}\left[(s+1)^{2} X(s)\right]\right]\right|_{s=-1}=\left.\frac{1}{1!}\left[\frac{d}{d s}\left[(s+1)^{2} X(s)\right]\right]\right|_{s=-1}=\left.\left[\frac{d}{d s}\left(\frac{2 s+1}{s+2}\right)\right]\right|_{s=-1} \\
@@ -1669,19 +2141,25 @@ A_{2,1} & =\left.(s+2) X(s)\right|_{s=-2}=\left.\frac{2 s+1}{(s+1)^{2}}\right|_{
 \end{aligned}
 $$
 
+
 因此，$X$ 的展开式为：
+
 $$
 X(s)=\frac{3}{s+1}-\frac{1}{(s+1)^{2}}-\frac{3}{s+2} .
 $$
 
+
 对该等式两边取拉普拉斯逆变换，得到：
+
 $$
 \begin{equation*}
 x(t)=3 \mathcal{L}^{-1}\left\{\frac{1}{s+1}\right\}(t)-\mathcal{L}^{-1}\left\{\frac{1}{(s+1)^{2}}\right\}(t)-3 \mathcal{L}^{-1}\left\{\frac{1}{s+2}\right\}(t) . \tag{7.7}
 \end{equation*}
 $$
 
+
 此时，需要注意每个拉普拉斯变换都有一个对应的 ROC（收敛域），它是拉普拉斯变换的重要组成部分。因此，在计算函数的拉普拉斯逆变换时，必须使用该函数的正确 ROC。为了计算 (7.7) 中出现的三个逆变换，我们必须为三个表达式 $\frac{1}{s+1}, \frac{1}{(s+1)^{2}}$ 和 $\frac{1}{s+2}$ 分别指定 ROC。在这里需要小心，因为每个表达式可能有多个 ROC，而只有一个是正确的。每个表达式的可能 ROC 如图 7.24 所示。在每个表达式的情况下，正确的 ROC 是包含 $X$ 的 ROC 的那个（即 $\operatorname{Re}(s)>-1$）。根据表 7.3，我们有：
+
 $$
 \begin{aligned}
 e^{-t} u(t) & \longleftrightarrow \frac{\mathrm{LT}}{s+1} \quad \text { 对 } \operatorname{Re}(s)>-1, \\
@@ -1690,7 +2168,9 @@ e^{-2 t} u(t) & \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+2} \quad 
 \end{aligned}
 $$
 
+
 将这些结果代入 (7.7)，得到：
+
 $$
 \begin{aligned}
 x(t) & =3 e^{-t} u(t)-t e^{-t} u(t)-3 e^{-2 t} u(t) \\
@@ -1698,14 +2178,17 @@ x(t) & =3 e^{-t} u(t)-t e^{-t} u(t)-3 e^{-2 t} u(t) \\
 \end{aligned}
 $$
 
+
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-294.jpg?height=461&width=1493&top_left_y=291&top_left_x=245){width="400"}
 
 **图 7.24**：有理表达式的极点及可能的 ROC：（a）$\frac{1}{s+1}$ 和 $\frac{1}{(s+1)^{2}}$；（b）$\frac{1}{s+2}$。
 
 **例 7.29（非严格有理函数的拉普拉斯逆变换）** 找到以下函数的拉普拉斯逆变换 $x$：
+
 $$
 X(s)=\frac{2 s^{2}+4 s+5}{(s+1)(s+2)} \quad \text { 对 } \operatorname{Re}(s)>-1
 $$
+
 
 **解** 首先注意，尽管 $X$ 是有理函数，但它不是严格有理函数。因此，需要通过多项式长除法将 $X$ 表示为多项式与严格有理函数之和。通过长除法，我们得到：
 
@@ -1713,25 +2196,35 @@ $$
 
 
 换句话说，有：
+
 $$
 X(s)=2+\frac{-2 s+1}{s^{2}+3 s+2}
 $$
 
+
 为方便起见，定义：
+
 $$
 V(s)=\frac{-2 s+1}{(s+1)(s+2)}
 $$
+
+
 于是：
+
 $$
 X(s)=2+V(s)
 $$
 
+
 注意 $V$ 是严格有理函数，因此可以对其进行部分分式展开。该展开形式为：
+
 $$
 V(s)=\frac{A_{1}}{s+1}+\frac{A_{2}}{s+2}
 $$
 
+
 计算展开系数，得到：
+
 $$
 \begin{aligned}
 A_{1} & =\left.(s+1) V(s)\right|_{s=-1} = \left.\frac{-2 s+1}{s+2}\right|_{s=-1} = 3, \\
@@ -1739,7 +2232,9 @@ A_{2} & =\left.(s+2) V(s)\right|_{s=-2} = \left.\frac{-2 s+1}{s+1}\right|_{s=-2}
 \end{aligned}
 $$
 
+
 因此：
+
 $$
 \begin{aligned}
 X(s) & =2+V(s) \\
@@ -1747,7 +2242,9 @@ X(s) & =2+V(s) \\
 \end{aligned}
 $$
 
+
 取拉普拉斯逆变换，得到：
+
 $$
 \begin{aligned}
 x(t) & =\mathcal{L}^{-1} X(t) \\
@@ -1755,7 +2252,9 @@ x(t) & =\mathcal{L}^{-1} X(t) \\
 \end{aligned}
 $$
 
+
 考虑 $X$ 的 ROC，可由表 7.3 得到：
+
 $$
 \begin{aligned}
 & \delta(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} 1, \\
@@ -1764,7 +2263,9 @@ $$
 \end{aligned}
 $$
 
+
 最终得到：
+
 $$
 \begin{aligned}
 x(t) & =2 \delta(t)+3 e^{-t} u(t)-5 e^{-2 t} u(t) \\
@@ -1772,24 +2273,32 @@ x(t) & =2 \delta(t)+3 e^{-t} u(t)-5 e^{-2 t} u(t) \\
 \end{aligned}
 $$
 
+
 **例 7.30** 找到所有可能的拉普拉斯逆变换：
+
 $$
 \begin{equation*}
 X(s)=\frac{1}{s^{2}+3 s+2} \tag{7.8}
 \end{equation*}
 $$
 
+
 **解** 首先将 $X$ 因式分解：
+
 $$
 X(s)=\frac{1}{(s+1)(s+2)}
 $$
 
+
 然后进行部分分式展开：
+
 $$
 X(s)=\frac{A_{1}}{s+1}+\frac{A_{2}}{s+2}
 $$
 
+
 计算系数：
+
 $$
 \begin{gathered}
 A_{1}=\left.(s+1) X(s)\right|_{s=-1}=\left.\frac{1}{s+2}\right|_{s=-1}=1, \\
@@ -1797,17 +2306,22 @@ A_{2}=\left.(s+2) X(s)\right|_{s=-2}=\left.\frac{1}{s+1}\right|_{s=-2}=-1
 \end{gathered}
 $$
 
+
 因此：
+
 $$
 X(s)=\frac{1}{s+1}-\frac{1}{s+2}
 $$
 
+
 取拉普拉斯逆变换：
+
 $$
 \begin{equation*}
 x(t)=\mathcal{L}^{-1}\left\{\frac{1}{s+1}\right\}(t)-\mathcal{L}^{-1}\left\{\frac{1}{s+2}\right\}(t) \tag{7.9}
 \end{equation*}
 $$
+
 
 对于该拉普拉斯变换 $X$，存在三种可能的 ROC：
 1) $\operatorname{Re}(s)<-2$，  
@@ -1818,6 +2332,7 @@ $$
 
 **情况 1：ROC $\operatorname{Re}(s)<-2$**  
 由表 7.3：
+
 $$
 \begin{gathered}
 -e^{-t} u(-t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+1} \quad \text { 对 } \operatorname{Re}(s)<-1, \\
@@ -1825,7 +2340,9 @@ $$
 \end{gathered}
 $$
 
+
 代入 (7.9)：
+
 $$
 \begin{aligned}
 x(t) & =-e^{-t} u(-t)+e^{-2 t} u(-t) \\
@@ -1833,8 +2350,10 @@ x(t) & =-e^{-t} u(-t)+e^{-2 t} u(-t) \\
 \end{aligned}
 $$
 
+
 **情况 2：ROC $-2<\operatorname{Re}(s)<-1$**  
 由表 7.3：
+
 $$
 \begin{gathered}
 -e^{-t} u(-t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+1} \quad \text { 对 } \operatorname{Re}(s)<-1, \\
@@ -1842,13 +2361,17 @@ e^{-2 t} u(t) \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+2} \quad \t
 \end{gathered}
 $$
 
+
 代入 (7.9)：
+
 $$
 x(t)=-e^{-t} u(-t)-e^{-2 t} u(t)
 $$
 
+
 **情况 3：ROC $\operatorname{Re}(s)>-1$**  
 由表 7.3：
+
 $$
 \begin{aligned}
 e^{-t} u(t) & \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+1} \quad \text { 对 } \operatorname{Re}(s)>-1, \\
@@ -1856,24 +2379,32 @@ e^{-2 t} u(t) & \stackrel{\mathrm{LT}}{\longleftrightarrow} \frac{1}{s+2} \quad 
 \end{aligned}
 $$
 
+
 代入 (7.9)：
+
 $$
 \begin{aligned}
 x(t) & =e^{-t} u(t)-e^{-2 t} u(t) \\
 & =\left(e^{-t}-e^{-2 t}\right) u(t)
 \end{aligned}
 $$
+
+
 ## 7.11 使用拉普拉斯变换表征 LTI 系统
 
 考虑一个输入为 $x$、输出为 $y$、冲激响应为 $h$ 的 LTI 系统，如图 7.25 所示。该系统由下列方程描述：
+
 $$
 y(t)=x * h(t)
 $$
 
+
 设 $X, Y$ 和 $H$ 分别为 $x, y$ 和 $h$ 的拉普拉斯变换。对上述方程两边取拉普拉斯变换，并利用拉普拉斯变换的时域卷积性质，可得：
+
 $$
 Y(s)=H(s) X(s)
 $$
+
 
 量 $H$ 称为系统函数或系统传递函数。如果 $H$ 的 ROC 包含虚轴，则 $H(j \omega)$ 即为系统的频率响应。该系统可用拉普拉斯域标注的框图表示，如图 7.26 所示，其中系统由其系统函数 $H$ 标注。
 
@@ -1889,11 +2420,14 @@ $$
 根据拉普拉斯变换的性质及系统函数的定义，我们可以推导出一些关于系统函数以及串联和并联互连系统的等效关系。
 
 假设有两个 LTI 系统 $\mathscr{H}_{1}$ 和 $\mathscr{H}_{2}$，其系统函数分别为 $H_{1}$ 和 $H_{2}$，它们按串联方式连接，如图 7.27(a) 左侧所示。设 $h_{1}$ 和 $h_{2}$ 分别为 $\mathcal{H}_{1}$ 和 $\mathcal{H}_{2}$ 的冲激响应。整个系统的冲激响应 $h$ 为：
+
 $$
 h(t)=h_{1} * h_{2}(t) .
 $$
 
+
 对该等式两边取拉普拉斯变换，得到：
+
 $$
 \begin{aligned}
 H(s) & =\mathcal{L}\left\{h_{1} * h_{2}\right\}(s) \\
@@ -1902,14 +2436,18 @@ H(s) & =\mathcal{L}\left\{h_{1} * h_{2}\right\}(s) \\
 \end{aligned}
 $$
 
+
 因此，我们得到图 7.27(a) 所示的等效关系。由于乘法可交换，还可以得到图 7.27(b) 所示的等效关系。
 
 假设有两个 LTI 系统 $\mathcal{H}_{1}$ 和 $\mathcal{H}_{2}$，其系统函数分别为 $H_{1}$ 和 $H_{2}$，它们按并联方式连接，如图 7.28 左侧所示。设 $h_{1}$ 和 $h_{2}$ 分别为 $\mathcal{H}_{1}$ 和 $\mathcal{H}_{2}$ 的冲激响应。整个系统的冲激响应 $h$ 为：
+
 $$
 h(t)=h_{1}(t)+h_{2}(t) .
 $$
 
+
 对该等式两边取拉普拉斯变换，得到：
+
 $$
 \begin{aligned}
 H(s) & =\mathcal{L}\left\{h_{1}+h_{2}\right\}(s) \\
@@ -1917,6 +2455,7 @@ H(s) & =\mathcal{L}\left\{h_{1}+h_{2}\right\}(s) \\
 & =H_{1}(s)+H_{2}(s)
 \end{aligned}
 $$
+
 
 因此，我们得到图 7.28 所示的等效关系。
 
@@ -1957,9 +2496,12 @@ $$
 (b) $H$ 的极点如图 7.29(b) 所示，ROC 用阴影区域表示。系统函数为有理函数，但 ROC 不是右半平面或整个复平面，因此系统不是因果的。  
 (c) 系统函数 $H$ 的 ROC 为左半平面，因此 $h$ 为左侧而非右侧函数，系统不是因果的。  
 (d) 系统函数 $H$ 的 ROC 为右半平面，但 $H$ 不是有理函数，因此不能仅根据系统函数的 ROC 得出结论。需要从冲激响应 $h$ 得出结论。对 $H$ 取逆拉普拉斯变换，得到：
+
 $$
 h(t)=e^{-(t+1)} u(t+1)
 $$
+
+
 因此冲激响应 $h$ 不是因果的，系统也不是因果的。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-300.jpg?height=560&width=1023&top_left_y=286&top_left_x=461){width="400"}
@@ -1975,37 +2517,50 @@ $$
 **证明** 我们仅给出部分证明，特别是说明 ROC 包含虚轴是 BIBO 稳定的必要条件。设 $h$ 为 $H$ 的逆拉普拉斯变换（即系统的冲激响应）。
 
 假设系统是 BIBO 稳定的。根据定理 4.11，我们知道：
+
 $$
 \int_{-\infty}^{\infty}|h(t)| d t<\infty
 $$
+
+
 （即 $h$ 是绝对可积的）。由 $H$ 的定义（在虚轴上）：
+
 $$
 \begin{equation*}
 H(j \omega)=\int_{-\infty}^{\infty} h(t) e^{-j \omega t} d t \tag{7.10}
 \end{equation*}
 $$
 
+
 回顾函数的可积性，如果函数绝对可积，则其积分收敛。也就是说，对于任意函数 $f$：
+
 $$
 \int_{-\infty}^{\infty} f(t) d t \text { 收敛当且仅当 } \int_{-\infty}^{\infty}|f(t)| d t \text { 收敛。 }
 $$
 
+
 由此和式 (7.10)，我们可以推得：
+
 $$
 \begin{equation*}
 H(j \omega)=\int_{-\infty}^{\infty} h(t) e^{-j \omega t} d t \text { 收敛当 } \int_{-\infty}^{\infty}\left|h(t) e^{-j \omega t}\right| d t \text { 收敛。 } \tag{7.11}
 \end{equation*}
 $$
 
+
 然而有：
+
 $$
 \int_{-\infty}^{\infty}\left|h(t) e^{-j \omega t}\right| d t=\int_{-\infty}^{\infty}|h(t)|\left|e^{-j \omega t}\right| d t=\int_{-\infty}^{\infty}|h(t)| d t
 $$
 
+
 因此 (7.11) 可改写为：
+
 $$
 H(j \omega) \text { 收敛当 } \int_{-\infty}^{\infty}|h(t)| d t \text { 收敛。 }
 $$
+
 
 对于 BIBO 稳定系统，上述条件总是满足（如上所述 $\int_{-\infty}^{\infty}|h(t)| d t$ 收敛）。因此，如果系统是 BIBO 稳定的，$H(j \omega)$ 必须对所有 $\omega$ 收敛（即 $H$ 的 ROC 必须包含虚轴）。由此可知，ROC 包含虚轴是 BIBO 稳定的必要条件。
 
@@ -2018,9 +2573,12 @@ $$
 由上述两个定理（即定理 7.14 和 7.15）可见，对于 LTI 系统，BIBO 稳定性的表征在拉普拉斯域（通过系统函数）比时域（通过冲激响应）更简单。因此，LTI 系统的稳定性分析通常使用拉普拉斯变换进行。
 
 **例 7.32** 一个 LTI 系统的系统函数为：
+
 $$
 H(s)=\frac{1}{(s+1)(s+2)}
 $$
+
+
 已知系统是 BIBO 稳定，确定 $H$ 的 ROC。
 
 **解** 显然，系统函数 $H$ 是有理函数，极点在 $-1$ 和 $-2$。因此，ROC 只有三种可能：
@@ -2036,15 +2594,21 @@ $$
 **图 7.30**：例子中系统的 ROC。
 
 **例 7.33** 一个因果 LTI 系统的系统函数为：
+
 $$
 H(s)=\frac{1}{(s+2)\left(s^{2}+2 s+2\right)}
 $$
+
+
 判断该系统是否 BIBO 稳定。
 
 **解** 首先，将 $H$ 分解为：
+
 $$
 H(s)=\frac{1}{(s+2)(s+1-j)(s+1+j)}
 $$
+
+
 （利用二次公式可验证 $s^{2}+2 s+2=0$ 的根为 $s=-1 \pm j$）。因此，$H$ 的极点在 $-2$, $-1+j$ 和 $-1-j$。极点如图 7.31 所示。由于系统是因果的，且 $H$ 的所有极点位于左半平面，因此系统是 BIBO 稳定的。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-302.jpg?height=496&width=641&top_left_y=1647&top_left_x=686){width="400"}
@@ -2088,50 +2652,71 @@ $$
 在本节中，我们讨论系统函数与可逆性之间的关系。第一个重要结果如下定理所示。
 
 **定理 7.16（LTI 系统的逆）** 设 $\mathcal{H}$ 为一个系统函数为 $H$ 的 LTI 系统。如果 $\mathcal{H}$ 的逆 $\mathcal{H}^{-1}$ 存在，则 $\mathcal{H}^{-1}$ 也是 LTI 系统，并且其系统函数 $H_{\text{inv}}$ 满足：
+
 $$
 \begin{equation*}
 H(s) H_{\text{inv}}(s)=1 \tag{7.12}
 \end{equation*}
 $$
 
+
 **证明** 设 $h$ 为 $H$ 的逆拉普拉斯变换。根据定理 4.9，我们知道，当且仅当存在另一 LTI 系统，其冲激响应为 $h_{\text{inv}}$ 并满足：
+
 $$
 h * h_{\mathrm{inv}} = \delta
 $$
+
+
 系统 $\mathcal{H}$ 可逆。设 $H_{\text{inv}}$ 为 $h_{\text{inv}}$ 的拉普拉斯变换。对上述等式两边取拉普拉斯变换，有：
+
 $$
 \mathcal{L}\{h * h_{\mathrm{inv}}\} = \mathcal{L} \delta
 $$
+
+
 根据拉普拉斯变换的时域卷积性质以及表 7.3（$\mathcal{L} \delta(s) = 1$），我们得到：
+
 $$
 H(s) H_{\text{inv}}(s) = 1
 $$
+
 
 由前述定理，我们得到下列结果。
 
 **定理 7.17（LTI 系统的可逆性）** 一个系统函数为 $H$ 的 LTI 系统 $\mathcal{H}$ 可逆，当且仅当存在函数 $H_{\text{inv}}$ 满足：
+
 $$
 H(s) H_{\text{inv}}(s) = 1
 $$
 
+
 **证明** 由定理 7.16 的结果可直接得出，注意 $\mathcal{H}$ 可逆等价于 $\mathcal{H}^{-1}$ 存在。
 
 由上述定理可知，一个系统函数为 $H$ 的 LTI 系统 $\mathscr{H}$ 有逆，当且仅当存在 (7.12) 的解 $H_{\text{inv}}$。如果逆系统存在，其系统函数为：
+
 $$
 H_{\text{inv}}(s) = \frac{1}{H(s)}
 $$
+
+
 由于不同系统可能具有相同的系统函数（但 ROC 不同），LTI 系统的逆系统不一定唯一。然而，在实际中，我们通常希望逆系统是稳定和/或因果的。因此，虽然可能存在多个逆系统，但我们通常只关注一个特定的逆系统（受稳定性和/或因果性的附加约束）。
 
 **例 7.35** 考虑系统函数为：
+
 $$
 H(s) = \frac{s+1}{s+2} \quad \text{对于 } \operatorname{Re}(s) > -2
 $$
+
+
 确定该系统的所有可能逆系统，并评论每个逆系统的 BIBO 稳定性。
 
 **解** 逆系统的系统函数 $H_{\mathrm{inv}}$ 为：
+
 $$
 H_{\mathrm{inv}}(s) = \frac{1}{H(s)} = \frac{s+2}{s+1}
 $$
+
+
 $H_{\text{inv}}$ 有两种可能的 ROC：
 1）$\operatorname{Re}(s)<-1$，  
 2）$\operatorname{Re}(s)>-1$。
@@ -2141,66 +2726,102 @@ $H_{\text{inv}}$ 有两种可能的 ROC：
 ## 7.14 LTI 系统与微分方程
 
 许多实际中的 LTI 系统可以用具有常系数的 $N$ 阶线性微分方程描述。对于输入 $x$ 和输出 $y$ 的系统，其特征方程可以写作：
+
 $$
 \begin{equation*}
 \sum_{k=0}^{N} b_{k}\left(\frac{d}{d t}\right)^{k} y(t) = \sum_{k=0}^{M} a_{k}\left(\frac{d}{d t}\right)^{k} x(t) \tag{7.13}
 \end{equation*}
 $$
+
+
 其中 $M \leq N$。设 $X$ 和 $Y$ 分别为 $x$ 和 $y$ 的拉普拉斯变换，$H$ 为系统函数。对上述方程两边取拉普拉斯变换，得到：
+
 $$
 \mathcal{L}\left\{\sum_{k=0}^{N} b_{k}\left(\frac{d}{d t}\right)^{k} y(t)\right\}(s) = \mathcal{L}\left\{\sum_{k=0}^{M} a_{k}\left(\frac{d}{d t}\right)^{k} x(t)\right\}(s)
 $$
+
+
 利用拉普拉斯变换的线性性质，可改写为：
+
 $$
 \sum_{k=0}^{N} b_{k} \mathcal{L}\left\{\left(\frac{d}{d t}\right)^{k} y(t)\right\}(s) = \sum_{k=0}^{M} a_{k} \mathcal{L}\left\{\left(\frac{d}{d t}\right)^{k} x(t)\right\}(s)
 $$
+
+
 利用拉普拉斯变换的时域微分性质，得到：
+
 $$
 \sum_{k=0}^{N} b_{k} s^{k} Y(s) = \sum_{k=0}^{M} a_{k} s^{k} X(s)
 $$
+
+
 提取 $Y(s)$ 得：
+
 $$
 Y(s) \sum_{k=0}^{N} b_{k} s^{k} = X(s) \sum_{k=0}^{M} a_{k} s^{k}
 $$
+
+
 两边同时除以 $X(s) \sum_{k=0}^{N} b_{k} s^{k}$，得到：
+
 $$
 \frac{Y(s)}{X(s)} = \frac{\sum_{k=0}^{M} a_{k} s^{k}}{\sum_{k=0}^{N} b_{k} s^{k}}
 $$
+
+
 由于 $H(s) = \frac{Y(s)}{X(s)}$，因此系统函数为：
+
 $$
 H(s) = \frac{\sum_{k=0}^{M} a_{k} s^{k}}{\sum_{k=0}^{N} b_{k} s^{k}}
 $$
+
+
 可见，对于此类系统（即由 (7.13) 形式方程描述的系统），系统函数总是有理函数，因此有理函数具有特别的重要性。
 
 **例 7.36（微分方程到系统函数）**  
 一个 LTI 系统的输入为 $x$，输出为 $y$，其微分方程为：
+
 $$
 y''(t) + \frac{D}{M} y'(t) + \frac{K}{M} y(t) = x(t),
 $$
+
+
 其中 $D, K, M$ 为正实常数，$'$ 表示微分。求该系统的系统函数 $H$。
 
 **解** 对微分方程取拉普拉斯变换，得到：
+
 $$
 s^{2} Y(s) + \frac{D}{M} s Y(s) + \frac{K}{M} Y(s) = X(s)
 $$
+
+
 整理并提取 $Y(s)$：
+
 $$
 \left(s^{2} + \frac{D}{M} s + \frac{K}{M}\right) Y(s) = X(s)
 $$
+
+
 两边同时除以 $\left(s^{2} + \frac{D}{M} s + \frac{K}{M}\right) X(s)$，得到：
+
 $$
 \frac{Y(s)}{X(s)} = \frac{1}{s^{2} + \frac{D}{M} s + \frac{K}{M}}
 $$
+
+
 因此，系统函数为：
+
 $$
 H(s) = \frac{1}{s^{2} + \frac{D}{M} s + \frac{K}{M}}
 $$
+
 
 **例 7.37**（从系统函数到微分方程）。一个输入为 $x$、输出为 $y$ 的线性时不变（LTI）系统，其系统函数为
 
 $$
 H(s)=\frac{s}{s+R / L}
 $$
+
 
 其中 $L$ 和 $R$ 为正实常数。求描述该系统的微分方程。
 
@@ -2213,6 +2834,7 @@ Y(s) & =H(s) X(s) \\
 \end{aligned}
 $$
 
+
 将该方程整理，可得
 
 $$
@@ -2221,6 +2843,7 @@ $$
 \Rightarrow \quad & s Y(s)+\frac{R}{L} Y(s)=s X(s)
 \end{aligned}
 $$
+
 
 对该方程两边取拉普拉斯逆变换（利用拉普拉斯变换的线性性和时间微分性质），得到
 
@@ -2231,11 +2854,14 @@ $$
 \end{aligned}
 $$
 
+
 因此，该系统由以下微分方程描述：
 
 $$
 \frac{d}{d t} y(t)+\frac{R}{L} y(t)=\frac{d}{d t} x(t)
 $$
+
+
 ## 7.15 电路分析
 
 拉普拉斯变换的一个应用是电路分析。在本节中，我们将讨论这一特定应用。许多电气网络的基本组成部分是电阻器、电感器和电容器。下面，我们将简要介绍每种电路元件。
@@ -2251,11 +2877,13 @@ $$
 v(t)=\operatorname{Ri}(t) \quad\left(\text { 或者等价地, } i(t)=\frac{1}{R} v(t)\right),
 $$
 
+
 其中 $R, v$ 和 $i$ 分别表示电阻器的电阻、两端电压和电流。注意，电阻 $R$ 是非负量（即 $R \geq 0$）。在拉普拉斯域中，上述关系变为
 
 $$
 V(s)=R I(s) \quad\left(\text { 或者等价地, } I(s)=\frac{1}{R} V(s)\right),
 $$
+
 
 其中 $V$ 和 $I$ 分别表示 $v$ 和 $i$ 的拉普拉斯变换。
 
@@ -2265,11 +2893,13 @@ $$
 v(t)=L \frac{d}{d t} i(t) \quad\left(\text { 或者等价地, } i(t)=\frac{1}{L} \int_{-\infty}^{t} v(\tau) d \tau\right)
 $$
 
+
 其中 $L, v$ 和 $i$ 分别表示电感器的电感、两端电压和电流。注意，电感 $L$ 是非负量（即 $L \geq 0$）。在拉普拉斯域中，上述关系变为
 
 $$
 V(s)=s L I(s) \quad\left(\text { 或者等价地, } I(s)=\frac{1}{s L} V(s)\right)
 $$
+
 
 其中 $V$ 和 $I$ 分别表示 $v$ 和 $i$ 的拉普拉斯变换。
 
@@ -2279,11 +2909,13 @@ $$
 v(t)=\frac{1}{C} \int_{-\infty}^{t} i(\tau) d \tau \quad\left(\text { 或者等价地, } i(t)=C \frac{d}{d t} v(t)\right)
 $$
 
+
 其中 $C, v$ 和 $i$ 分别表示电容器的电容、两端电压和电流。注意，电容 $C$ 是非负量（即 $C \geq 0$）。在拉普拉斯域中，上述关系变为
 
 $$
 V(s)=\frac{1}{s C} I(s) \quad(\text { 或者等价地, } I(s)=s C V(s))
 $$
+
 
 其中 $V$ 和 $I$ 分别表示 $v$ 和 $i$ 的拉普拉斯变换。
 
@@ -2306,6 +2938,7 @@ i(t)=C \frac{d}{d t} v_{2}(t) \tag{7.14b}
 \end{gather*}
 $$
 
+
 对 (7.14) 取拉普拉斯变换，得到
 
 $$
@@ -2314,6 +2947,7 @@ V_{1}(s)=R I(s)+V_{2}(s) \quad \text { 和 }  \tag{7.15a}\\
 I(s)=C s V_{2}(s) \tag{7.15b}
 \end{gather*}
 $$
+
 
 将 (7.15b) 代入 (7.15a) 并整理，可得
 
@@ -2326,6 +2960,7 @@ $$
 \end{aligned}
 $$
 
+
 因此，该系统的系统函数 $H$ 为
 
 $$
@@ -2336,11 +2971,13 @@ H(s)=\frac{1}{1+R C s} \\
 \end{gathered}
 $$
 
+
 由于该系统可物理实现，因此它必须是因果的。因此，$H$ 的 ROC 必须在右半平面。由此可推得 $H$ 的 ROC 为 $\operatorname{Re}(s)>-\frac{1}{R C}$。所以我们有
 
 $$
 H(s)=\frac{1}{1+R C s} \quad \text { 对 } \operatorname{Re}(s)>-\frac{1}{R C}
 $$
+
 
 (b) 由于电阻和电容均为严格正数，$R>0$ 且 $C>0$。因此，$-\frac{1}{R C}<0$。因此，ROC 包含虚轴，系统是 BIBO 稳定的。
 
@@ -2349,6 +2986,7 @@ $$
 $$
 \left|H_{F}(0)\right|=\left|\frac{1}{1+R C(0)}\right|=1 \quad \text { 和 } \quad \lim _{|\omega| \rightarrow \infty}\left|H_{F}(\omega)\right|=\lim _{|\omega| \rightarrow \infty}\left|\frac{1}{1+R C j \omega}\right|=0
 $$
+
 
 因此，该系统最接近理想低通滤波器。
 
@@ -2361,6 +2999,7 @@ V_{2}(s) & =H(s) V_{1}(s) \\
 \end{aligned}
 $$
 
+
 为了求阶跃响应，需要考虑单位阶跃函数作为输入，即 $v_{1}=u$，从而 $V_{1}(s)=\frac{1}{s}$。将该 $V_{1}$ 代入上式，得到
 
 $$
@@ -2370,11 +3009,13 @@ V_{2}(s) & =\left(\frac{1}{1+R C s}\right)\left(\frac{1}{s}\right) \\
 \end{aligned}
 $$
 
+
 接下来，需要对 $V_{2}$ 进行拉普拉斯逆变换以求 $v_{2}$。为简化计算，我们对 $V_{2}$ 进行部分分式展开。该展开形式为
 
 $$
 V_{2}(s)=\frac{A_{1}}{s}+\frac{A_{2}}{s+\frac{1}{R C}}
 $$
+
 
 求解展开系数，得到
 
@@ -2388,17 +3029,20 @@ A_{2} & =\left.\left(s+\frac{1}{R C}\right) V_{2}(s)\right|_{s=-\frac{1}{R C}} \
 \end{aligned}
 $$
 
+
 因此，$V_{2}$ 的部分分式展开为
 
 $$
 V_{2}(s)=\frac{1}{s}-\frac{1}{s+\frac{1}{R C}}
 $$
 
+
 对该方程两边取拉普拉斯逆变换，得到
 
 $$
 v_{2}(t)=\mathcal{L}^{-1}\left\{\frac{1}{s}\right\}(t)-\mathcal{L}^{-1}\left\{\frac{1}{s+\frac{1}{R C}}\right\}(t)
 $$
+
 
 利用表 7.3 及系统为因果系统（保证必要的 ROC），得到
 
@@ -2409,14 +3053,18 @@ v_{2}(t) & =u(t)-e^{-t /(R C)} u(t) \\
 \end{aligned}
 $$
 
+
 ## 7.16 稳定性分析
 
 如前所述，由于在拉普拉斯域中比在时域中更容易刻画 LTI 系统的 BIBO 稳定性，因此拉普拉斯域常被用于分析系统稳定性。下面，我们将更详细地讨论拉普拉斯变换在此方面的应用。
 
 示例 7.39. 考虑图 7.35 所示的系统，该系统的输入拉普拉斯变换为 $X$，输出拉普拉斯变换为 $Y$，由两个因果 LTI 系统连接而成，其系统函数分别标记为 $H_{1}$ 和 $H_{2}$。系统函数 $H_{1}$ 和 $H_{2}$ 为
+
 $$
 H_{1}(s)=\frac{1}{s^{2}+a s+(a-2)} \quad \text{和} \quad H_{2}(s)=-1
 $$
+
+
 其中 $a$ 为实常数。 (a) 求该（整体）系统的系统函数 $H$（包括 ROC）。 (b) 确定参数 $a$ 的取值范围，使系统 BIBO 稳定。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-311.jpg?height=244&width=536&top_left_y=291&top_left_x=850){width="400"}
@@ -2424,13 +3072,17 @@ $$
 图 7.35：反馈系统。
 
 解答. (a) 根据系统图，我们可以写出
+
 $$
 \begin{gathered}
 V(s)=X(s)+H_{2}(s) Y(s) \quad \text{和} \\ 
 Y(s)=H_{1}(s) V(s)
 \end{gathered}
 $$
+
+
 将这两个方程结合并化简，可得
+
 $$
 \begin{aligned}
 & Y(s)=H_{1}(s)\left[X(s)+H_{2}(s) Y(s)\right] \\
@@ -2439,11 +3091,17 @@ $$
 \Rightarrow & \frac{Y(s)}{X(s)}=\frac{H_{1}(s)}{1-H_{1}(s) H_{2}(s)}
 \end{aligned}
 $$
+
+
 由于 $H(s)=\frac{Y(s)}{X(s)}$，因此
+
 $$
 H(s)=\frac{H_{1}(s)}{1-H_{1}(s) H_{2}(s)}
 $$
+
+
 代入已知的 $H_{1}$ 和 $H_{2}$ 表达式，并化简，可得
+
 $$
 \begin{aligned}
 H(s) & =\frac{\left(\frac{1}{s^{2}+a s+(a-2)}\right)}{1+\left(\frac{1}{s^{2}+a s+(a-2)}\right)} \\
@@ -2451,7 +3109,10 @@ H(s) & =\frac{\left(\frac{1}{s^{2}+a s+(a-2)}\right)}{1+\left(\frac{1}{s^{2}+a s
 & =\frac{1}{s^{2}+a s+(a-1)}
 \end{aligned}
 $$
+
+
 (b) 为了评估系统的 BIBO 稳定性，我们需要知道系统函数 $H$ 的极点。使用二次公式分解 $H$ 的分母，解其根 $s$：
+
 $$
 \begin{aligned}
 s & =\frac{-a \pm \sqrt{a^{2}-4(a-1)}}{2} \\
@@ -2461,20 +3122,31 @@ s & =\frac{-a \pm \sqrt{a^{2}-4(a-1)}}{2} \\
 & =\{-1,1-a\}
 \end{aligned}
 $$
+
+
 因此，$s^{2}+a s+(a-1)=(s+1)(s+a-1)$。于是我们得到
+
 $$
 H(s)=\frac{1}{(s+1)(s+a-1)}
 $$
+
+
 由于系统是因果的，系统在且仅在所有极点严格位于虚轴左侧时 BIBO 稳定。系统有两个极点，一个在 -1，一个在 $1-a$。因此
+
 $$
 1-a<0 \Rightarrow a>1.
 $$
+
+
 因此，系统在且仅在 $a>1$ 时 BIBO 稳定。
 
 示例 7.40. 考虑图 7.36 所示的系统，该系统的输入拉普拉斯变换为 $X$，输出拉普拉斯变换为 $Y$，由两个因果 LTI 系统连接而成，其系统函数分别标记为 $H_{1}$ 和 $H_{2}$。系统函数 $H_{1}$ 和 $H_{2}$ 为
+
 $$
 H_{1}(s)=\frac{1}{(s+1)(s+2)} \quad \text{和} \quad H_{2}(s)=a
 $$
+
+
 其中 $a$ 为实常数。 (a) 求该（整体）系统的系统函数 $H$。 (b) 确定参数 $a$ 的取值范围，使系统 BIBO 稳定。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-312.jpg?height=255&width=633&top_left_y=294&top_left_x=675){width="400"}
@@ -2483,65 +3155,102 @@ $$
 图 7.36：反馈系统。
 
 解答. (a) 下文中，令 $V$ 表示方框图中加法器的输出。根据系统图，我们可以写出
+
 $$
 \begin{gathered}
 V(s)=X(s)-V(s) H_{1}(s) H_{2}(s) \Rightarrow \quad X(s)=\left[1+H_{1}(s) H_{2}(s)\right] V(s) \quad \text{和} \\
 Y(s)=V(s) H_{1}(s)
 \end{gathered}
 $$
+
+
 将这两个方程结合，可得
+
 $$
 H(s)=\frac{Y(s)}{X(s)}=\frac{H_{1}(s) V(s)}{\left[1+H_{1}(s) H_{2}(s)\right] V(s)}=\frac{H_{1}(s)}{1+H_{1}(s) H_{2}(s)}.
 $$
+
+
 代入已知的 $H_{1}$ 和 $H_{2}$ 并化简：
+
 $$
 H(s)=\frac{\frac{1}{(s+1)(s+2)}}{1+\left(\frac{1}{(s+1)(s+2)}\right)(a)}=\frac{1}{(s+1)(s+2)+a}=\frac{1}{s^{2}+3 s+a+2}
 $$
+
+
 将 $H$ 写成因式分解形式：
+
 $$
 H(s)=\frac{1}{\left(s-p_{1}\right)\left(s-p_{2}\right)},
 $$
+
+
 其中极点 $p_{1}$ 和 $p_{2}$ 待定。利用二次公式：
+
 $$
 p_{k}=\frac{-3 \pm \sqrt{3^{2}-4(a+2)}}{2}=-\frac{3}{2} \pm \frac{1}{2} \sqrt{9-4 a-8}=-\frac{3}{2} \pm \frac{1}{2} \sqrt{1-4 a}.
 $$
+
+
 因此，
+
 $$
 p_{1}=-\frac{3}{2}-\frac{1}{2} \sqrt{1-4 a} \quad \text{和} \quad p_{2}=-\frac{3}{2}+\frac{1}{2} \sqrt{1-4 a}.
 $$
+
+
 由于系统是因果的，$H$ 的 ROC $R_H$ 位于右侧最右极点的右半平面。即
+
 $$
 R_H=\left\{\operatorname{Re}(s)>\max \left\{\operatorname{Re}\left(p_{1}\right), \operatorname{Re}\left(p_{2}\right)\right\}\right\}.
 $$
+
+
 现在计算 $\operatorname{Re}(p_k)$。有两种情况：
 
 1. $1-4 a \leq 0$（即 $\operatorname{Re}(\sqrt{1-4 a})=0$），等价于 $4 a \geq 1 \Rightarrow a \geq \frac{1}{4}$；  
 2. $1-4 a>0$（即 $\operatorname{Re}(\sqrt{1-4 a})=\sqrt{1-4 a}$），等价于 $4 a<1 \Rightarrow a<\frac{1}{4}$。
 
 首先考虑 $1-4 a \leq 0$（即 $a \geq \frac{1}{4}$）。此时 $\operatorname{Re}(\sqrt{1-4 a})=0$，所以
+
 $$
 \operatorname{Re}\left(p_{1}\right)=\operatorname{Re}\left(p_{2}\right)=-\frac{3}{2}.
 $$
+
+
 再考虑 $1-4 a>0$（即 $a<\frac{1}{4}$）。此时 $\operatorname{Re}(\sqrt{1-4 a})=\sqrt{1-4 a}$，所以
+
 $$
 \operatorname{Re}\left(p_{1}\right)=-\frac{3}{2}-\frac{1}{2} \sqrt{1-4 a} \quad \text{和} \quad \operatorname{Re}\left(p_{2}\right)=-\frac{3}{2}+\frac{1}{2} \sqrt{1-4 a}.
 $$
+
+
 显然，$p_2$ 是最右极点。因此最右极点的实部为
+
 $$
 \operatorname{Re}\left(p_{2}\right)=-\frac{3}{2}+\frac{1}{2} \sqrt{1-4 a}.
 $$
+
+
 因此，$H$ 的 ROC 为
+
 $$
 R_H= \begin{cases}\operatorname{Re}(s)>-\frac{3}{2} & a \geq \frac{1}{4} \\ \operatorname{Re}(s)>-\frac{3}{2}+\frac{1}{2} \sqrt{1-4 a} & a<\frac{1}{4}\end{cases}
 $$
+
+
 (b) 为使系统 BIBO 稳定，$R_H$ 必须包含虚轴。首先考虑 $a \geq \frac{1}{4}$。此时 $R_H$ 包含虚轴，因此系统 BIBO 稳定。再考虑 $a<\frac{1}{4}$。此时，$R_H$ 包含虚轴的条件为
+
 $$
 \begin{aligned}
 -\frac{3}{2}+\frac{1}{2} \sqrt{1-4 a}<0 \quad \Rightarrow \quad \frac{1}{2} \sqrt{1-4 a}<\frac{3}{2} \quad \Rightarrow \quad \sqrt{1-4 a}<3 \quad \Rightarrow \\
 1-4 a<9 \quad \Rightarrow \quad 4 a>-8 \quad \Rightarrow \quad a>-2.
 \end{aligned}
 $$
+
+
 综合两种情况，系统 BIBO 稳定的条件为
+
 $$
 \begin{gathered}
 a \geq \frac{1}{4} \text{ 或 } \left(a<\frac{1}{4} \text{ 且 } a>-2\right) \quad \Rightarrow \\
@@ -2549,6 +3258,8 @@ a \geq \frac{1}{4} \text{ 或 } \left(-2<a<\frac{1}{4}\right) \quad \Rightarrow 
 a>-2.
 \end{gathered}
 $$
+
+
 因此，系统在且仅在 $a>-2$ 时 BIBO 稳定。
 
 ### 7.16.1 反馈控制系统
@@ -2573,9 +3284,12 @@ $$
 在引入反馈控制系统概念后，我们接下来考虑利用反馈控制系统稳定不稳定的被控对象。
 
 例 7.41（不稳定被控对象的稳定化）。考虑一个因果 LTI 系统，其输入拉普拉斯变换为 $X$，输出拉普拉斯变换为 $Y$，系统函数为
+
 $$
 P(s)=\frac{10}{s-1},
 $$
+
+
 如图 7.38 所示。可以很容易地确认，该系统不是 BIBO 稳定的，因为 $P$ 在 1 处有极点。（由于系统是因果的，$P$ 的 ROC 为右半平面 $\operatorname{Re}(s)>1$。显然，这一 ROC 不包含虚轴，因此系统不是 BIBO 稳定的。）下面我们考虑两种不同策略来稳定该不稳定系统，以及它们在实际中的适用性。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-315.jpg?height=101&width=350&top_left_y=297&top_left_x=945){width="400"}
@@ -2589,15 +3303,21 @@ $$
 图 7.39：稳定不稳定被控对象的两种配置。(a) 简单级联系统，(b) 反馈控制系统。
 
 (a) 通过极点-零点抵消稳定不稳定被控对象。假设图 7.38 中的系统与另一个因果 LTI 系统串联，系统函数为
+
 $$
 W(s)=\frac{s-1}{10(s+1)}
 $$
+
+
 以得到一个新的系统，其输入拉普拉斯变换为 $X$，输出拉普拉斯变换为 $Y$，如图 7.39(a) 所示。证明该新系统是 BIBO 稳定的。
 
 (b) 通过反馈稳定不稳定被控对象。假设现在图 7.38 中的系统与另外两个因果 LTI 系统互连，系统函数分别为 $C$ 和 $Q$，如图 7.39(b) 所示，以得到一个新的系统，其输入拉普拉斯变换为 $X$，输出拉普拉斯变换为 $Y$，系统函数为 $H$。此外，假设
+
 $$
 C(s)=\beta \quad \text{和} \quad Q(s)=1,
 $$
+
+
 其中 $\beta$ 为实常数。证明通过适当选择 $\beta$，得到的系统是 BIBO 稳定的。
 
 (c) 实际问题。本例的 (a) 和 (b) 部分考虑了两种不同的方案来稳定图 7.38 中的不稳定系统。事实证明，像 (a) 中的方案在实际中并不实用。请指出该方法的实际问题，并说明 (b) 中的方案是否存在相同的缺陷。
@@ -2605,6 +3325,7 @@ $$
 解答. 
 
 (a) 根据图 7.39(a) 的方框图，整体系统的系统函数 $H$ 为
+
 $$
 \begin{aligned}
 H(s) & =P(s) W(s) \\
@@ -2612,9 +3333,12 @@ H(s) & =P(s) W(s) \\
 & =\frac{1}{s+1}
 \end{aligned}
 $$
+
+
 由于系统是因果的，且 $H$ 是有理函数，$H$ 的 ROC 为 $\operatorname{Re}(s)>-1$。因为 ROC 包含虚轴，系统是 BIBO 稳定的。
 
 虽然本例的唯一目标是稳定不稳定被控对象，但值得注意的是，实际上该系统的阶跃响应也相当合理。回想在控制系统中，输出应跟踪输入。对于阶跃响应而言，输入为 $u$，我们希望输出至少能近似 $u$。阶跃响应 $s$ 为
+
 $$
 \begin{aligned}
 s(t) & =\mathcal{L}^{-1}\{U(s) H(s)\}(t) \\
@@ -2623,16 +3347,22 @@ s(t) & =\mathcal{L}^{-1}\{U(s) H(s)\}(t) \\
 & =\left(1-e^{-t}\right) u(t)
 \end{aligned}
 $$
+
+
 显然，$s$ 是对期望响应 $u$ 的一个较为粗略的近似。
 
 (b) 根据图 7.39(b) 的方框图，可写出
+
 $$
 \begin{gathered}
 R(s)=X(s)-Q(s) Y(s) \quad \text{和} \\
 Y(s)=C(s) P(s) R(s)
 \end{gathered}
 $$
+
+
 将这些方程结合（将第一式中 $R$ 的表达式代入第二式），得到
+
 $$
 \begin{aligned}
 & Y(s)=C(s) P(s)[X(s)-Q(s) Y(s)] \\
@@ -2641,11 +3371,17 @@ $$
 \Rightarrow \quad & \frac{Y(s)}{X(s)}=\frac{C(s) P(s)}{1+C(s) P(s) Q(s)}
 \end{aligned}
 $$
+
+
 因此
+
 $$
 H(s)=\frac{C(s) P(s)}{1+C(s) P(s) Q(s)}
 $$
+
+
 代入已知的 $P, C, Q$，得到
+
 $$
 \begin{aligned}
 H(s) & =\frac{\beta\left(\frac{10}{s-1}\right)}{1+\beta\left(\frac{10}{s-1}\right)(1)} \\
@@ -2653,9 +3389,12 @@ H(s) & =\frac{\beta\left(\frac{10}{s-1}\right)}{1+\beta\left(\frac{10}{s-1}\righ
 & =\frac{10 \beta}{s-(1-10 \beta)}
 \end{aligned}
 $$
+
+
 系统函数 $H$ 是有理函数，且有一个极点在 $1-10 \beta$。由于系统是因果的，ROC 必须为 $\operatorname{Re}(s)>1-10 \beta$ 的右半平面。为了使系统 BIBO 稳定，ROC 必须包含虚轴。因此，当 $1-10 \beta<0$ 时系统 BIBO 稳定，即 $10 \beta>1$，或 $\beta>\frac{1}{10}$。
 
 同样，虽然本例的唯一目标是稳定不稳定被控对象，但实际上该系统的阶跃响应也相当合理。（这并非偶然，在选择补偿器系统函数 $C$ 的形式时需要一定技巧。这个选择过程需要的控制系统知识超出本书范围。）阶跃响应 $s$ 为
+
 $$
 \begin{aligned}
 s(t) & =\mathcal{L}^{-1}\{U(s) H(s)\}(t) \\
@@ -2665,6 +3404,8 @@ s(t) & =\mathcal{L}^{-1}\{U(s) H(s)\}(t) \\
 & \approx u(t) \quad \text{当 } \beta 较大时
 \end{aligned}
 $$
+
+
 显然，随着 $\beta$ 增大，$s$ 对期望响应 $u$ 的近似更为准确。
 
 (c) (a) 中的方案依赖于极点-零点抵消来稳定不稳定被控对象。不幸的是，在实际中不可能实现精确的极点-零点抵消。简言之，这是一个近似问题。我们对系统的分析基于方程描述的理论模型，而这些理论模型仅是对实际系统的近似。这种近似性来源于多个因素，包括但不限于：
@@ -2681,14 +3422,18 @@ $$
 ## 7.17 单边拉普拉斯变换
 
 如前所述，拉普拉斯变换通常有两种形式，即双边（bilateral）和单边（unilateral）拉普拉斯变换。到目前为止，我们只考虑了双边拉普拉斯变换。现在，我们转向单边拉普拉斯变换。函数 $x$ 的单边拉普拉斯变换记作 $\mathcal{L}_{\mathrm{u}} x$ 或 $X$，定义为
+
 $$
 \begin{equation*}
 \mathcal{L}_{\mathrm{u}} x(s)=X(s)=\int_{0^{-}}^{\infty} x(t) e^{-s t} d t \tag{7.16}
 \end{equation*}
 $$
+
+
 单边拉普拉斯变换的逆变换定义与双边情况相同，即公式 (7.3)。
 
 比较单边和双边拉普拉斯变换的定义（分别由 (7.16) 和 (7.2) 给出），可以看到这两种定义的唯一区别在于积分下限。由于定义的相似性，它们之间存在一个重要关系，如下所示。考虑任意函数 $x$ 的 $x u$ 的双边拉普拉斯变换，我们有
+
 $$
 \begin{aligned}
 \mathcal{L}\{x u\}(s) & =\int_{-\infty}^{\infty} x(t) u(t) e^{-s t} d t \\
@@ -2696,9 +3441,12 @@ $$
 & =\mathcal{L}_{\mathrm{u}} x(s)
 \end{aligned}
 $$
+
+
 换句话说，函数 $x$ 的单边拉普拉斯变换实际上就是函数 $x u$ 的双边拉普拉斯变换。由于 $\mathcal{L}_{\mathrm{u}} x=\mathcal{L}\{x u\}$，且 $x u$ 总是右侧信号，与之关联的 ROC 总是右半平面（或整个复平面）。因此，在使用单边拉普拉斯变换时，我们通常不显式标注 ROC。
 
 本章前面已经说明，双边拉普拉斯变换是可逆的。即如果函数 $x$ 的双边拉普拉斯变换为 $X=\mathcal{L} x$，则 $\mathcal{L}^{-1} X=x$。现在我们考虑单边拉普拉斯变换的可逆性。为此，我们必须考虑 $\mathcal{L}_{u}^{-1} \mathcal{L}_{u} x$。由于 $\mathcal{L}_{u} x=\mathcal{L}\{x u\}$，且单边和双边拉普拉斯变换的逆变换公式相同，我们可以写出
+
 $$
 \begin{aligned}
 \mathcal{L}_{\mathrm{u}}^{-1} \mathcal{L}_{\mathrm{u}} x(t) & =\mathcal{L}_{\mathrm{u}}^{-1}\{\mathcal{L}\{x u\}\}(t) \\
@@ -2707,6 +3455,8 @@ $$
 & = \begin{cases}x(t) & t \geq 0 \\ 0 & t<0\end{cases}
 \end{aligned}
 $$
+
+
 因此，仅当 $x$ 是因果函数时，$\mathcal{L}_{\mathrm{u}}^{-1} \mathcal{L}_{\mathrm{u}} x=x$。换句话说，单边拉普拉斯变换仅对因果函数可逆。对于非因果函数，我们只能恢复 $t \geq 0$ 时的 $x(t)$。本质上，单边拉普拉斯变换舍弃了 $t<0$ 时函数 $x$ 的信息，因此无法通过逆单边拉普拉斯变换恢复。
 
 由于单边和双边拉普拉斯变换关系密切，它们在性质上有一些相似之处。然而，由于定义不同，在某些情况下它们的性质会有所不同，通常差异较为微妙。单边拉普拉斯变换的性质总结如表 7.4 所示。
@@ -2766,6 +3516,7 @@ $$
 y^{\prime}(t)+3 y(t)=x(t),
 $$
 
+
 其中撇号表示导数。如果 $x(t)=e^{-t} u(t)$ 且 $y\left(0^{-}\right)=1$，求 $y$。  
 
 **解答**：我们首先对给定微分方程的两边取单边拉普拉斯变换，得到
@@ -2779,11 +3530,13 @@ $$
 \end{aligned}
 $$
 
+
 由于 $x(t)=e^{-t} u(t)$，我们有
 
 $$
 X(s)=\mathcal{L}_{\mathrm{u}}\left\{e^{-t}\right\}(s)=\frac{1}{s+1}
 $$
+
 
 将 $X(s)$ 的表达式及给定初值条件（即 $y\left(0^{-}\right)=1$）代入上式 $Y(s)$ 中，得到
 
@@ -2791,11 +3544,13 @@ $$
 Y(s)=\frac{\left(\frac{1}{s+1}\right)+1}{s+3}=\frac{\left(\frac{s+2}{s+1}\right)}{s+3}=\frac{s+2}{(s+1)(s+3)}
 $$
 
+
 现在，我们对 $Y$ 进行部分分式展开。展开形式为
 
 $$
 Y(s)=\frac{A_{1}}{s+1}+\frac{A_{2}}{s+3}
 $$
+
 
 计算展开系数，得到
 
@@ -2810,11 +3565,13 @@ A_{2} & =\left.(s+3) Y(s)\right|_{s=-3} \\
 \end{aligned}
 $$
 
+
 因此，我们可以将 $Y$ 重写为
 
 $$
 Y(s)=\frac{1}{2}\left(\frac{1}{s+1}\right)+\frac{1}{2}\left(\frac{1}{s+3}\right)
 $$
+
 
 对 $Y$ 取单边拉普拉斯逆变换，得到
 
@@ -2826,11 +3583,13 @@ y(t) & =\mathcal{L}_{\mathrm{u}}^{-1} Y(t) \\
 \end{aligned}
 $$
 
+
 示例 7.43（二阶导数的单边拉普拉斯变换）。求 $y$ 的单边拉普拉斯变换 $Y$，并用 $x$ 的单边拉普拉斯变换 $X$ 表示，其中
 
 $$
 y(t)=x^{\prime \prime}(t)
 $$
+
 
 撇号表示导数（例如，$x^{\prime \prime}$ 是 $x$ 的二阶导数）。  
 
@@ -2842,6 +3601,7 @@ v(t)=x^{\prime}(t) \tag{7.17}
 \end{equation*}
 $$
 
+
 于是有
 
 $$
@@ -2849,6 +3609,7 @@ $$
 y(t)=v^{\prime}(t) \tag{7.18}
 \end{equation*}
 $$
+
 
 记 $V$ 为 $v$ 的单边拉普拉斯变换。对 (7.17) 取单边拉普拉斯变换（利用时域微分性质），得到
 
@@ -2859,6 +3620,7 @@ V(s) & =\mathcal{L}_{\mathrm{u}}\left\{x^{\prime}\right\}(s) \\
 \end{align*}
 $$
 
+
 对 (7.18) 取单边拉普拉斯变换（同样利用时域微分性质），得到
 
 $$
@@ -2867,6 +3629,7 @@ Y(s) & =\mathcal{L}_{\mathrm{u}}\left\{v^{\prime}\right\}(s) \\
 & =s V(s)-v\left(0^{-}\right) \tag{7.20}
 \end{align*}
 $$
+
 
 将 (7.19) 代入 (7.20)，得到
 
@@ -2877,17 +3640,20 @@ Y(s) & =s\left[s X(s)-x\left(0^{-}\right)\right]-v\left(0^{-}\right) \\
 \end{aligned}
 $$
 
+
 因此，有
 
 $$
 Y(s)=s^{2} X(s)-s x\left(0^{-}\right)-x^{\prime}\left(0^{-}\right)
 $$
 
+
 例 7.44. 考虑因果增量线性时不变（TI）系统，输入为 $x$，输出为 $y$，其特性由微分方程描述：
 
 $$
 y^{\prime \prime}(t)+3 y^{\prime}(t)+2 y(t)=x(t)
 $$
+
 
 其中撇号表示导数。如果 $x(t)=5 u(t), y\left(0^{-}\right)=1$，且 $y^{\prime}\left(0^{-}\right)=-1$，求 $y$。  
 
@@ -2904,11 +3670,13 @@ $$
 \end{aligned}
 $$
 
+
 由于 $x(t)=5 u(t)$，我们有
 
 $$
 X(s)=\mathcal{L}_{\mathrm{u}}\{5 u(t)\}(s)=\frac{5}{s}
 $$
+
 
 将 $X(s)$ 及给定初值代入上式，得到
 
@@ -2916,11 +3684,13 @@ $$
 Y(s)=\frac{\left(\frac{5}{s}\right)+s-1+3}{s^{2}+3 s+2}=\frac{s^{2}+2 s+5}{s(s+1)(s+2)}
 $$
 
+
 现在，我们对 $Y$ 进行部分分式展开。展开形式为
 
 $$
 Y(s)=\frac{A_{1}}{s}+\frac{A_{2}}{s+1}+\frac{A_{3}}{s+2}
 $$
+
 
 计算展开系数，得到
 
@@ -2938,11 +3708,13 @@ A_{3} & =\left.(s+2) Y(s)\right|_{s=-2} \\
 \end{aligned}
 $$
 
+
 因此，我们可以将 $Y$ 重写为
 
 $$
 Y(s)=\frac{5 / 2}{s}-\frac{4}{s+1}+\frac{5 / 2}{s+2}
 $$
+
 
 对 $Y$ 取单边拉普拉斯逆变换，得到
 
@@ -2953,6 +3725,8 @@ y(t) & =\mathcal{L}_{\mathrm{u}}^{-1} Y(t) \\
 & =\frac{5}{2}-4 e^{-t}+\frac{5}{2} e^{-2 t} \quad \text { 对于 } t \geq 0
 \end{aligned}
 $$
+
+
 例 7.45（RC 网络）。考虑图 7.40 所示的电阻-电容（RC）网络，输入为 $v_{0}$，输出为 $v_{1}$。若 $R=100, C=\frac{1}{100}, v_{0}(t)=3 e^{-2 t} u(t)$，且 $v_{1}\left(0^{-}\right)=1$，求 $v_{1}$。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-324.jpg?height=298&width=496&top_left_y=294&top_left_x=745){width="400"}
@@ -2969,6 +3743,7 @@ i(t)=C \frac{d}{d t} v_{1}(t)
 \end{gathered}
 $$
 
+
 将上述两式结合，得到
 
 $$
@@ -2977,6 +3752,7 @@ v_{0}(t) & =R\left[C \frac{d}{d t} v_{1}(t)\right]+v_{1}(t) \\
 & =R C \frac{d}{d t} v_{1}(t)+v_{1}(t)
 \end{aligned}
 $$
+
 
 对该方程两边取单边拉普拉斯变换，得到
 
@@ -2991,11 +3767,13 @@ $$
 \end{array}
 $$
 
+
 由于 $v_{0}(t)=3 e^{-2 t} u(t)$，我们有
 
 $$
 V_{0}(s)=\frac{3}{s+2}
 $$
+
 
 将 $V_{0}(s)$ 代入上述 $V_{1}$ 表达式，得到
 
@@ -3007,11 +3785,13 @@ V_{1}(s) & =\frac{\left(\frac{3}{s+2}\right)+1}{s+1} \\
 \end{aligned}
 $$
 
+
 现在，对 $V_{1}$ 进行部分分式展开，形式为
 
 $$
 V_{1}(s)=\frac{A_{1}}{s+1}+\frac{A_{2}}{s+2}
 $$
+
 
 计算展开系数，得到
 
@@ -3026,11 +3806,13 @@ A_{2} & =\left.(s+2) V_{1}(s)\right|_{s=-2} \\
 \end{aligned}
 $$
 
+
 因此，$V_{1}$ 可写为
 
 $$
 V_{1}(s)=\frac{4}{s+1}-\frac{3}{s+2}
 $$
+
 
 对 $V_{1}$ 取单边拉普拉斯逆变换，得到
 
@@ -3042,6 +3824,8 @@ v_{1}(t) & =\mathcal{L}_{\mathrm{u}}^{-1} V_{1}(t) \\
 & =4 e^{-t}-3 e^{-2 t} \quad \text { 对于 } t \geq 0
 \end{aligned}
 $$
+
+
 例 7.46（RLC 网络）。考虑图 7.41 所示的电阻-电感-电容（RLC）网络，输入为 $v_{0}$，输出为 $v_{1}$。若 $R=2, L=1, C=1, v_{0}(t)=u(t), v_{1}\left(0^{-}\right)=0$，且 $v_{1}^{\prime}\left(0^{-}\right)=1$，求 $v_{1}$。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-325.jpg?height=296&width=671&top_left_y=302&top_left_x=780){width="400"}
@@ -3058,6 +3842,7 @@ v_{1}(t)=\frac{1}{C} \int_{-\infty}^{t} i(\tau) d \tau \Rightarrow i(t)=C \frac{
 \end{gathered}
 $$
 
+
 将上述方程结合，得到
 
 $$
@@ -3066,6 +3851,7 @@ v_{0}(t) & =R\left[C \frac{d}{d t} v_{1}(t)\right]+L \frac{d}{d t}\left[C \frac{
 & =R C \frac{d}{d t} v_{1}(t)+L C\left(\frac{d}{d t}\right)^{2} v_{1}(t)+v_{1}(t)
 \end{aligned}
 $$
+
 
 对该方程两边取单边拉普拉斯变换，得到
 
@@ -3079,6 +3865,7 @@ $$
 \end{array}
 $$
 
+
 由于 $v_{0}(t)=u(t)$，我们有 $V_{0}(s)=\frac{1}{s}$。将其代入上述 $V_{1}$ 表达式，得到
 
 $$
@@ -3089,11 +3876,13 @@ V_{1}(s) & =\frac{\left(\frac{1}{s}\right)+1}{s^{2}+2 s+1} \\
 \end{aligned}
 $$
 
+
 现在，对 $V_{1}$ 进行部分分式展开，形式为
 
 $$
 V_{1}(s)=\frac{A_{1}}{s}+\frac{A_{2}}{s+1}
 $$
+
 
 求得展开系数：
 
@@ -3108,11 +3897,13 @@ A_{2} & =\left.(s+1) V_{1}(s)\right|_{s=-1} \\
 \end{aligned}
 $$
 
+
 因此，$V_{1}$ 可写为
 
 $$
 V_{1}(s)=\frac{1}{s}-\frac{1}{s+1}
 $$
+
 
 对 $V_{1}$ 取单边拉普拉斯逆变换，得到
 
@@ -3122,6 +3913,7 @@ v_{1}(t) & =\mathcal{L}_{\mathrm{u}}^{-1}\left\{\frac{1}{s}\right\}(t)-\mathcal{
 & =1-e^{-t} \quad \text { 对于 } t \geq 0
 \end{aligned}
 $$
+
 
 ## 7.19 练习题
 
@@ -3144,17 +3936,25 @@ $$
 
 7.3 使用拉普拉斯变换的性质和拉普拉斯变换表，求下列函数 $x$ 的拉普拉斯变换 $X$。  
 (a) 
+
 $$
 x(t)= \begin{cases}t & 0 \leq t<1 \\ t-2 & 1 \leq t<2 \\ 0 & \text { 其他情况; }\end{cases}
 $$
+
+
 (b) 
+
 $$
 x(t)=\begin{cases}1+t & -1 \leq t<0 \\ 1-t & 0 \leq t<1 \\ 0 & \text { 其他情况; }\end{cases}
 $$
+
+
 (c) 
+
 $$
 x(t)= \begin{cases}t & 0 \leq t<1 \\ 1 & 1 \leq t<2 \\ t-1 & 2 \leq t<3 \\ 0 & \text { 其他情况. }\end{cases}
 $$
+
 
 7.4 使用拉普拉斯变换的性质和拉普拉斯变换表，求下图所示函数 $x$ 的拉普拉斯变换 $X$。
 
@@ -3175,16 +3975,22 @@ $$
 (f) $y(t)=e^{-j 5 t} x(t+3)$。
 
 7.6 一个因果函数 $x$ 的拉普拉斯变换为  
+
 $$
 X(s)=\frac{-2 s}{s^{2}+3 s+2}
 $$
+
+
 (a) 假设 $x$ 在 0 点没有奇点，求 $x\left(0^{+}\right)$。  
 (b) 假设 $\lim _{t \rightarrow \infty} x(t)$ 存在，求此极限值。
 
 7.7 函数 $x$ 的拉普拉斯变换为  
+
 $$
 X(s)=\frac{\left(s+\frac{1}{2}\right)\left(s-\frac{1}{2}\right)}{s(s+1)(s-1)}
 $$
+
+
 判断 $x$ 对于下列每个 ROC 是左侧信号但非右侧信号、右侧信号但非左侧信号、双侧信号还是有限时域信号。  
 (a) $\operatorname{Re}(s)<-1$；  
 (b) $-1<\operatorname{Re}(s)<0$；  
@@ -3192,15 +3998,21 @@ $$
 (d) $\operatorname{Re}(s)>1$。
 
 7.8 一个函数 $x$ 的拉普拉斯变换为  
+
 $$
 X(s)=\frac{s+\frac{1}{2}}{(s+1-j)(s+1+j)(s+2)}
 $$
+
+
 如果 $x$ 是 (a) 左侧信号（但非右侧信号）；(b) 右侧信号（但非左侧信号）；(c) 双侧信号；(d) 因果信号，绘出 $X$ 的 ROC。
 
 7.9 一个函数 $x$ 的拉普拉斯变换为  
+
 $$
 X(s)=\frac{s+\frac{1}{2}}{(s-1)(s+1-j)(s+1+j)(s+2)}
 $$
+
+
 判断 $x$ 有多少种不同的可能性。（不需要明确求出所有情况。）
 7.10 求下列函数 $X$ 的逆拉普拉斯变换 $x$。  
 (a) $X(s)=\frac{s-5}{s^{2}-1}$，适用于 $-1<\operatorname{Re}(s)<1$；  
@@ -3214,9 +4026,11 @@ $$
 (b) $X(s)=\frac{-3 s^{2}-6 s-2}{(s+1)^{2}(s+2)}$。
 
 7.12 求所有可能的逆拉普拉斯变换  
+
 $$
 H(s)=\frac{7 s-1}{s^{2}-1}=\frac{4}{s+1}+\frac{3}{s-1}
 $$
+
 
 7.13 对于输入为 $x$、输出为 $y$ 的 LTI 系统以及下列系统函数 $H$，求描述系统的微分方程。  
 (a) $H(s)=\frac{s+1}{s^{2}+2 s+2}$。
@@ -3225,9 +4039,12 @@ $$
 (a) $\mathcal{D}^{2} y(t)+4 \mathcal{D} y(t)+3 y(t)=2 \mathcal{D} x(t)+x(t)$。
 
 7.15 考虑输入为 $x$、输出为 $y$、系统函数为 $H$ 的 LTI 系统，如下图所示。假设系统 $\mathcal{H}_{1}$ 和 $\mathcal{H}_{2}$ 是因果 LTI 系统，分别具有系统函数  
+
 $$
 H_{1}(s)=\frac{1}{s-1} \quad \text { 和 } \quad H_{2}(s)=A
 $$
+
+
 其中 $A$ 为实常数。  
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-329.jpg?height=236&width=531&top_left_y=1399&top_left_x=899){width="400"}
   
@@ -3249,22 +4066,31 @@ $$
 (d) 求系统的阶跃响应 $g$。
 
 7.18 考虑系统函数为  
+
 $$
 H(s)=\frac{s^{2}+7 s+12}{s^{2}+3 s+12}
 $$
+
+
 的 LTI 系统。求该系统的所有可能逆系统。对于每个逆系统，指出其系统函数及对应 ROC，并说明该逆系统是否因果和/或稳定。（注：无需求逆系统的冲激响应。）
 
 7.19 考虑输入为 $x$、输出为 $y$ 的因果 LTI 系统，其微分方程为  
+
 $$
 \mathcal{D}^{2} y(t)-y(t)=\mathcal{D} x(t)+a x(t),
 $$
+
+
 其中 $a$ 为实常数，$\mathcal{D}$ 表示求导算子。求 $a$ 的取值范围，使系统 BIBO 稳定。
 
 7.20 在无线通信信道中，发射信号会沿多条不同长度的路径同时传播。因此，接收到的信号是原始信号的多个延迟和放大/衰减版本的叠加，从而导致信号失真，这通常称为多径问题。下面我们考虑此问题的一个简单实例。  
 考虑输入为 $x$、输出为 $y$ 的 LTI 通信信道。假设传输信号 $x$ 沿两条路径传播。在预期的直接路径上，信道有延迟 $T$（$T>0$）且增益为 1。在第二条（非预期间接）路径上，信号延迟 $T+\tau$ 且增益为 $a$（$\tau>0$）。因此，接收信号为  
+
 $$
 y(t)=x(t-T)+a x(t-T-\tau)
 $$
+
+
 求可串联在通信信道输出端的 LTI 系统，使得能够恢复（延迟的）信号 $x(t-T)$ 且无失真，并判断该系统是否可物理实现。
 
 7.21 对下列每个描述因果（增量线性 TI）系统的微分方程，求在给定初始条件下的输出 $y$。  
@@ -3303,13 +4129,18 @@ $$
 
 7.103 使用拉普拉斯变换的性质和拉普拉斯变换表，求下列函数 $x$ 的拉普拉斯变换 $X$。  
 (a) 
+
 $$
 x(t)=\begin{cases}t+1 & -1 \leq t<0 \\ (t-1)^{2} & 0 \leq t<1 \\ 0 & \text {其他情况;}\end{cases}
 $$
+
+
 (b) 
+
 $$
 x(t)= \begin{cases}t & -1 \leq t<1 \\ 0 & \text {其他情况.}\end{cases}
 $$
+
 
 简答：  
 (a) $X(s)=\frac{s e^{s}-3 s-2 e^{-s}+2}{s^{3}}$，适用于所有 $s \in \mathbb{C}$；  
@@ -3525,16 +4356,21 @@ $H(s)=\frac{A(s)}{1-A(s)[B(s)+C(s)]}$。
 ### 7.19.3 MATLAB 练习
 
 7.201 考虑一个因果 LTI 系统，其系统函数为
+
 $$
 H(s)=\frac{1}{-2 s^{7}-s^{6}-3 s^{5}+2 s^{3}+s-3}
 $$
+
+
 (a) 使用 MATLAB 求解并绘制 $H$ 的极点。  
 (b) 判断该系统是否 BIBO 稳定。
 
 7.202 考虑一个 LTI 系统，其系统函数为
+
 $$
 H(s)=\frac{1}{1.0000 s^{4}+2.6131 s^{3}+3.4142 s^{2}+2.6131 s+1.0000}
 $$
+
 
 （该系统对应一个截止频率为 $1 \mathrm{rad}/\mathrm{s}$ 的四阶巴特沃斯低通滤波器。）  
 绘制系统对以下输入 $x$ 的响应 $y$，在每种情况下，将 $y$ 绘制在区间 $[0,20]$ 内。  
