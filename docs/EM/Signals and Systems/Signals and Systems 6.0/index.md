@@ -83,6 +83,16 @@ Michael Adams<br>加拿大 不列颠哥伦比亚省 维多利亚市<br>2024年12
 
 - M. D. Adams，《信号与系统讲义幻灯片》（第6.0版，2024年12月），ISBN 978-1-990707-09-4（PDF）。可通过 Google Books、Google Play Books 及作者官网获取：https://www.ece.uvic.ca/~mdadams/sigsysbook
 
+<iframe
+  src="/assets/pdf/lecture_slides_for_signals_and_systems-6.0.pdf"
+  width="100%"
+  height="900"
+  style="border:1px solid #ccc;"
+>
+  此浏览器不支持 iframe，请  
+  <a href="/assets/pdf/lecture_slides_for_signals_and_systems-6.0">点击下载 PDF</a>
+</iframe>
+
 ## 教材网站
 
 本教材配套的网站地址为：
