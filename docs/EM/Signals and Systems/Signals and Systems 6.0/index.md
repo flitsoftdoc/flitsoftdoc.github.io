@@ -109,8 +109,9 @@ Michael Adams<br>加拿大 不列颠哥伦比亚省 维多利亚市<br>2024年12
 
 ## 作者简介
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-007.jpg?height=1078&width=812&top_left_y=751&top_left_x=307)  
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-007.jpg?height=1078&width=812&top_left_y=751&top_left_x=1123)
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-007.jpg?height=1078&width=812&top_left_y=751&top_left_x=307){width="500"}
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-007.jpg?height=1078&width=812&top_left_y=751&top_left_x=1123){width="500"}
 
 Michael Adams 于 1993 年获得加拿大滑铁卢大学计算机工程学士学位（B.A.Sc.），1998 年获得加拿大维多利亚大学电气工程硕士学位（M.A.Sc.），2002 年获得加拿大英属哥伦比亚大学电气工程博士学位（Ph.D.）。1993 至 1995 年间，他在加拿大渥太华的贝尔北方研究所（Bell-Northern Research）担任技术人员，开发用于光纤通信系统的实时软件。自 2003 年起，他加入加拿大维多利亚大学电气与计算机工程系，历任助理教授、现任副教授。
 
