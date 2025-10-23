@@ -9,11 +9,12 @@ slug: quantum-ergodicity
 
 该公司表示，其量子处理器在计算某一问题上比传统计算机更快，并对未来的科学应用持乐观态度。
 
-![谷歌量子计算机的冷却系统局部特写](https://media.nature.com/lw767/magazine-assets/d41586-025-03300-4/d41586-025-03300-4_51605212.jpg)
-
-谷歌量子计算设施中的低温恒温器（cryostat）部分。图片来源：Google Quantum AI
-
 谷歌研究人员再次提出实现了**量子优势**（quantum advantage）的新主张——即量子计算机在计算速度上能够显著优于经典计算机。
+
+![img](https://media.nature.com/w400/magazine-assets/d41586-025-03300-4/d41586-025-03300-4_50860416.jpg){width="200"}
+
+<!-- more -->
+
 
 这并非谷歌[首次提出类似主张](https://www.nature.com/articles/d41586-019-03213-z)。不过研究人员表示，他们最新的算法——名为“量子回声”（quantum echoes）——有望解决科学问题，包括推导分子的结构。理论上，该算法还可以在其他量子计算机上复现。
 
@@ -21,7 +22,7 @@ slug: quantum-ergodicity
 
 ![img](https://media.nature.com/w400/magazine-assets/d41586-025-03300-4/d41586-025-03300-4_51443686.jpg)
 
-[谷歌揭示量子计算如何超越当前最强超级计算机](https://www.nature.com/articles/d41586-024-04028-3)
+[谷歌揭示](https://www.nature.com/articles/d41586-024-04028-3) 量子计算如何超越当前最强超级计算机
 
 但一些研究人员对“量子优势”的说法仍持谨慎态度。该成果已于 10 月 22 日发表在 *Nature* 上[(https://www.nature.com/articles/d41586-025-03300-4#ref-CR1) (译文见后)。纽约大学的量子物理学家 Dries Sels 表示：“此类主张需要极高的证据门槛。”他指出，尽管该论文对多种经典算法进行了“严肃测试”，但尚无法证明不存在一个高效的经典算法。“就我个人而言，我不认为这足以支撑如此重大的宣称。”
 
@@ -35,7 +36,7 @@ slug: quantum-ergodicity
 
 该项实验[使用了谷歌的 Willow 芯片](https://www.nature.com/articles/d41586-024-04028-3)，芯片包含 105 个超导微电路，用以存储量子比特（qubit）信息，即量子版本的“比特”。
 
-![img](https://media.nature.com/w400/magazine-assets/d41586-025-03300-4/d41586-025-03300-4_50860416.jpg)
+
 
 [量子计算公司 D-Wave 也曾提出“量子优势”新主张](https://www.nature.com/articles/541447b)
 
@@ -44,6 +45,10 @@ slug: quantum-ergodicity
 在应用于分子的过程中，研究人员利用量子比特模拟原子核的“自旋”（spin）——使每个核像一个微小磁棒的量子性质。NMR 通过测量这些自旋的磁相互作用揭示分子结构，但当原子核相距过远时该技术将失效。通过量子比特模拟自旋，“量子回声”算法能够提取远距离的相互作用，提供超出传统 NMR 所能揭示的结构信息，O’Brien 表示。
 
 “目前这些演示仅限于相对较小的分子，但我们乐观地认为，这一思路未来可拓展至更大的系统——甚至可能包括蛋白质。”加州大学伯克利分校的量子化学家 Ashok Ajoy 表示。
+
+![谷歌量子计算机的冷却系统局部特写](https://media.nature.com/lw767/magazine-assets/d41586-025-03300-4/d41586-025-03300-4_51605212.jpg)
+
+谷歌量子计算设施中的低温恒温器（cryostat）部分。图片来源：Google Quantum AI
 
 ## 有争议的计算（Controversial calculations）
 
