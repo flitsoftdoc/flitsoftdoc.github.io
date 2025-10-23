@@ -1,5 +1,5 @@
 ---
-date: 2025-10-18
+date: 2025-10-23
 categories: [Notes]
 tags: [Quantum]   # 若启用 tags 插件
 slug: quantum-ergodicity 
