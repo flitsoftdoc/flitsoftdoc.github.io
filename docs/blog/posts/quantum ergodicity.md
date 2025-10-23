@@ -96,7 +96,8 @@ Google Quantum AI 及其合作团队*
 
 为理解多次时间反转如何恢复对量子动力学的敏感性，我们首先考虑在一个初始化于算符 $M \in \{X, Y, Z\}$ 的本征态下的量子比特 $q_{\mathrm{m}}$ 上测量泡利算符 $M$，其中该量子比特位于一个方形晶格中。时刻 $t$ 的测量等价于时间有序相关函数（time-ordered correlator, TOC）$\langle M(t) M\rangle$，其中 $M(t)=U^{\dagger}(t) M U(t)$ 表示在海森堡表象中演化的 $M$，$U$ 为多体幺正算符，$\langle\ldots\rangle$ 表示对初态的期望值。如先前实验所示${ }^{24-27}$，当 $U$ 呈遍历性时，$\langle M(t) M\rangle$ 将呈指数衰减。这源于量子信息从初始量子比特 $q_{\mathrm{m}}$ 的状态扩散到系统中指数庞大的希尔伯特空间中。
 
-![图1](https://cdn.mathpix.com/cropped/2025_10_23_94531eb1c4c1e21fbb9dg-2.jpg?height=694&width=900&top_left_y=160&top_left_x=128)  
+![图1](https://cdn.mathpix.com/cropped/2025_10_23_94531eb1c4c1e21fbb9dg-2.jpg?height=694&width=900&top_left_y=160&top_left_x=128){width="600"}
+
 图1｜OTOC 作为干涉仪。a，若动力学协议包含回声操作，海森堡表象为研究动力学的自然框架。b，OTOC 与 $\mathrm{OTOC}^{(2)}$ 可视作时间干涉仪，突出其聚焦特定细节并回声抵消无关动力学的能力。参数定义见正文。
 
 上述衰减可通过图2a所示的演化方式部分恢复。此处的动力学 $U$ 被嵌套回声序列 $U_{k}(t)=B(t)[M B(t)]^{k-1}$ 取代，其中 $B(t)=U^{\dagger}(t) B U(t)$ 为另一个作用于远离 $q_{\mathrm{m}}$ 的量子比特 $q_{\mathrm{b}}$ 的泡利算符 $B$ 的演化态，$k \geq 1$ 为整数。$U_{k}$ 的作用可理解为将 $M$ 注入的信息扩散、经 $B$ 修改、再反转回 $M$，并重复该过程 $k-1$ 次。由于 $U_{k}^{\dagger}(t)=U_{k}(t)$，期望值（记作 $\mathcal{C}^{(2k)}$）可写为：
@@ -158,7 +159,7 @@ $$
 
 图3｜$\mathrm{OTOC}^{(2)}$ 的量子干涉与经典模拟复杂性。**a，** 在海森堡表象中，$B(t)$ 随时间演化分支为多量子比特泡利串的叠加态。对于 $\mathcal{C}^{(2)}$（仅包含两个 $B(t)$ 副本），仅当最终的 $P_\alpha$ 与 $P_\beta$ 相同时才有贡献。对于 $\mathcal{C}^{(4)}$，当 $P_\alpha = P_\beta$ 且 $P_\gamma = P_\delta$ 时形成对角分量 $\mathcal{C}_{\text{diag}}^{(4)}$，否则形成非对角分量 $\mathcal{C}_{\text{off-diag}}^{(4)}$。**b，** 用于探测量子干涉的实验协议，在某一电路循环处插入随机泡利算符，从而改变泡利串系数的符号。**c，** 相对信号变化 $1 - \rho$ 随泡利插入循环位置的变化情况，其中 $\rho$ 为 50 个不同 40 量子比特电路（$t=22$ 循环）插入与未插入泡利算符的实验数据之间的皮尔逊相关系数。误差条表示从实验数据重采样估算的标准误差。插图显示第 11 循环的数据。**d，** 实验测得的 $\mathcal{C}^{(2)}$ 与 CMC 启发式算法精确模拟值的对比，基于 40 量子比特电路。CMC 的信噪比为 5.3，接近实验值 5.4。插图为 c-e 中实验用的电路结构示意图（红色为 $q_{\mathrm{m}}$，蓝色为 $q_{\mathrm{b}}$）。**e，** 同一组电路上实验测得的 $\mathcal{C}_{\text{off-diag}}^{(4)}$，以及精确与 CMC 模拟结果。$\mathcal{C}_{\text{off-diag}}^{(4)}$ 通过用非平均 $\mathcal{C}^{(4)}$ 减去泡利平均后的结果得到。实验信噪比为 3.9，而 CMC 仅为 1.1。误差条依据补充材料 II.F.3 与 II.F.4 节中的经验误差模型。Exp：实验；MC：蒙特卡洛；sim：模拟。
 
-![图4](https://cdn.mathpix.com/snip/images/kjE1VjfKl0c1eb5XdzrbvMJVje96sO3zFqweXbw-JCM.original.fullsize.png)
+![图4](https://cdn.mathpix.com/snip/images/kjE1VjfKl0c1eb5XdzrbvMJVje96sO3zFqweXbw-JCM.original.fullsize.png){width="500"}
 
 图4｜在经典计算困难区测量 $\mathrm{OTOC}^{(2)}$。**a，** 在 65 量子比特电路上测得的 $\mathcal{C}_{\text{off-diag}}^{(4)}$，$B$ 同时作用于三个不同量子比特。插图为量子比特结构。**b，** 不同系统规模（18 至 40 量子比特）下测得电路的实验信噪比。误差条为经验误差模型 95% 置信区间（补充材料 II.F.3 与 II.F.4 节）。**c，** 使用张量网络收缩（tensor-network contraction）在 Frontier 超级计算机上模拟图 a 中单个电路的 $\mathcal{C}_{\text{off-diag}}^{(4)}$ 所需的时间估计。估计通过在 20 台 Google Cloud 虚拟机（共计 1200 个 CPU）上运行特定优化算法${ }^{46-49}$，在最长 24 小时内得到。使用开源库 cotengra${ }^{47}$ 所得估计开销高出约 10 倍。TNCO 表示张量网络收缩。
 
@@ -168,7 +169,7 @@ $$
 
 
 
-![图5](/Users/zhiyu/Library/Application Support/typora-user-images/image-20251023180133605.png)
+![](https://cdn.mathpix.com/snip/images/i_L0gXC4i0f_5kBRdiJzeQ7LnNgL4aYaTC8Ftxj32DU.original.fullsize.png){width="500"}
 
 图5｜$\mathbf{OTOC}^{(2)}$ 在哈密顿量学习（Hamiltonian learning）中的应用。**a，** 应用 $\mathrm{OTOC}^{(2)}$ 进行哈密顿量学习的方案。将实际物理系统中测得的 $\mathrm{OTOC}^{(2)}$ 与在参数化哈密顿量下模拟得到的 $\mathrm{OTOC}^{(2)}$ 进行比较，并优化哈密顿量参数以最小化二者之间的差异。**b，** 单参数学习实验演示。图左下展示的 34 量子比特电路结构下，从 20 个电路实例中获得的、由经典模拟产生的一组 $\mathcal{C}_{\text{off-diag}}^{(4)}$ 值被作为“物理系统”数据。目标是学习某对量子比特之间双量子比特门 $U_{2Q}$ 的相位参数 $\xi/\pi = 0.6$（绿色条所示）。**c，** 量子处理器在三组电路实例下测得的 $\mathcal{C}_{\text{off-diag}}^{(4)}$ 随 $\xi$ 的变化曲线。蓝色线为对应经典模拟结果，三组数据均在目标 $\xi$ 值（虚线）处与模拟曲线交汇。**d，** 优化代价函数，表示量子处理器数据与经典模拟数据（共 20 个电路实例）之间的均方根差。代价函数在目标 $\xi$ 处达到全局最小值。
 
