@@ -54,7 +54,8 @@
 
 ## 认知电子战定义
 
-你认为认知电子战（Cognitive Electronic Warfare, CogEW）系统与基于人工智能（Artificial-Intelligence, AI）的电子战（EW）系统有什么区别吗？
+
+认知电子战（Cognitive Electronic Warfare, CogEW）系统与基于人工智能（Artificial-Intelligence, AI）的电子战（EW）系统有什么区别吗？
 
 电子战（Electronic Warfare, EW）是涉及电磁频谱（Electromagnetic Spectrum, EMS）的任何协调行动，包括无线电、雷达、红外、光电（可见光）、紫外、X射线和伽马射线频率。EW系统采取行动，有效利用电磁频谱，以实现保护、利用和管理频谱的目标。现代电子战的挑战已超出了传统方法能够解决的范围。将AI技术融入EW系统，是管理该复杂问题域及其快速时间尺度的唯一途径 。但问题是：一个使用*AI内部算法*的EW系统，与一个*认知*电子战系统有什么区别？
 
@@ -62,10 +63,12 @@
 
 认知系统感知其环境并采取行动以实现目标。它能够在更高层次上进行推理和理解，处理符号和概念信息，从而在复杂情境下做出准确决策。认知系统具有情境感知能力，能够处理不确定性，并能自主作出判断。
 
-> *“认知（Cognition）指的是动物获取、处理、存储并利用环境信息的机制。这包括感知、学习、记忆和决策。”* 
->
-> 来源：Sara Shettleworth, [**Cognition, Evolution, and Behavior**](https://global.oup.com/academic/product/cognition-evolution-and-behavior-9780195319842?cc=us&lang=en&) , Oxford University Press, Second edition, Dec 2009.  本书被认为是生命与行为科学领域的奠基性文献。
+/// note | 认知的定义
 
+认知（Cognition）指的是动物获取、处理、存储并利用环境信息的机制。这包括感知、学习、记忆和决策。 
+
+来源：Sara Shettleworth, [**Cognition, Evolution, and Behavior**](https://global.oup.com/academic/product/cognition-evolution-and-behavior-9780195319842?cc=us&lang=en&) , Oxford University Press, Second edition, Dec 2009.  本书被认为是生命与行为科学领域的奠基性文献。
+///
 
 图1 展示了这种认知循环。一个认知系统具备以下特征：
 
