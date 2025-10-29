@@ -28,7 +28,7 @@
 
 **图1.1** 认知系统感知环境、对态势进行推理，并采取行动以达成目标。它通过与环境的交互进行学习。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=503&width=497&top_left_y=737&top_left_x=500){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=503&width=497&top_left_y=737&top_left_x=500){width="300"}
 
 **图1.2** 认知系统迭代地进行态势评估、规划并决策其行动，并从经验中学习。
 
@@ -182,7 +182,7 @@ AI方法与传统方法应在同一平台上共存，各自承担与其优势相
 
 我们可以依据1.3节中所述的任一领域特性来评估一个问题是否适合采用AI。其中最具指示意义的是问题的**分布式程度**、**复杂性**和**动态性**。图1.6展示了这些维度，标示出决定何时传统方法已足够、何时必须采用基于AI方法的关键属性。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-029.jpg?height=667&width=1137&top_left_y=1287&top_left_x=180){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-029.jpg?height=667&width=1137&top_left_y=1287&top_left_x=180){width="500"}
 
 **图1.6** 问题领域的特性决定了AI是有用还是必需的。图1.3则将这些AI功能置于认知层级中，以展示认知能力的递进。
 
