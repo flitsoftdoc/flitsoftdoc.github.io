@@ -55,7 +55,7 @@ Howland 等人[1]将频谱态势感知（Spectrum Situation Awareness, SSA）定
 
 > ¹ 陆军RCO此后已更名为陆军快速能力与关键技术办公室（Army Rapid Capabilities and Critical Technologies Office, RCCTO）。
 
-算法4.1概述了构建雷达类别检测器所需的基本步骤：首先，从真实观测参数（ground truth-observed parameters）——包括占空比（duty cycle）、频率、脉冲重复间隔（pulse repetition interval）和脉冲宽度（pulse width）——生成一组辐射源描述词（Emitter Descriptor Words, EDWs）；然后为每个EDW分配其对应的类别。本例中训练的是朴素贝叶斯（naïve Bayes）算法，该算法计算每个可能类别的概率。根据贝叶斯定理，后验概率  $  P(y \mid x) $ 表示EDW为 $ x $ 的雷达实际属于类别 $ y $ 的概率，其计算公式为：$ P(y \mid x) = \frac{P(x \mid y) \times P(y)}{P(x)} $ ，其中，$P(x \mid y)$ 是在给定类别 $ y $ 下观测到EDW $ x $ 的似然度，$P(y)$ 是类别 $ y $ 的先验概率，$P(x)$ 是EDW $ x $ 的先验概率。所有模型类型的训练/测试流程均相同，而其他机器学习模型可能获得更高的准确率。
+算法4.1概述了构建雷达类别检测器所需的基本步骤：首先，从真实观测参数（ground truth-observed parameters）——包括占空比（duty cycle）、频率、脉冲重复间隔（pulse repetition interval）和脉冲宽度（pulse width）——生成一组辐射源描述词（Emitter Descriptor Words, EDWs）；然后为每个EDW分配其对应的类别。本例中训练的是朴素贝叶斯（naïve Bayes）算法，该算法计算每个可能类别的概率。根据贝叶斯定理，后验概率  $P(y \mid x)$ 表示EDW为 $x$ 的雷达实际属于类别 $y$ 的概率，其计算公式为：$P(y \mid x) = \frac{P(x \mid y) \times P(y)}{P(x)}$ ，其中，$P(x \mid y)$ 是在给定类别 $y$ 下观测到EDW $x$ 的似然度，$P(y)$ 是类别 $y$ 的先验概率，$P(x)$ 是EDW $x$ 的先验概率。所有模型类型的训练/测试流程均相同，而其他机器学习模型可能获得更高的准确率。
 
 图4.3说明了上述步骤在系统设计与运行阶段所处的位置。依据第10.4节所述的迭代验证流程，设计阶段需确定数据格式、开发模型并评估其性能。应始终尝试多种数据格式（及特征）和模型类型，以确定对当前问题最有效的方法——需综合考虑准确率、数据、目标和约束条件（见第3.6节）。当模型满足要求后，即可在运行阶段用于对新型雷达进行分类。图4.4展示了分类器在射频（RF）处理链中的位置。
 
