@@ -1,4 +1,4 @@
-# 2 目标函数
+# 2 目标函数（Objective Function）
 
 电子战（Electronic Warfare, EW）决策管理（Decision Management, DM）的挑战在于构建一种认知控制器，使其能够在高度动态的环境中自动维持近似最优的配置。每个DM问题都包含以下组成部分：
 
@@ -27,9 +27,9 @@
 | :------------------------ | :----------------------------------------------------------- |
 | $n \in N$                 | 节点集合 $N$ 中的节点 $n$                                    |
 | $t$                       | 时间戳                                                       |
-| $o_{n}$                   | 节点 $n$ 的可观测量；$o_{n}(t)$ 表示 $o_{n}$ 在时刻 $t$ 的取值。记 $\overline{o_{n}} \triangleq\left|o_{n}\right|$ |
+| $o_{n}$                   | 节点 $n$ 的可观测量；$o_{n}(t)$ 表示 $ o_{n}$ 在时刻 $t$ 的取值。记 $ \overline{o_{n}} \triangleq\left|o_{n}\right| $ |
 | $z$                       | 不可观测的上下文信息                                         |
-| $c_{n}$                   | 节点 $n$ 的可控量；$c_{n}(t)$ 表示 $c_{n}$ 在时刻 $t$ 的取值。记 $\overline{c_{n}} \triangleq\left|c_{n}\right|$ |
+| $c_{n}$                   | 节点 $n$ 的可控量；$c_{n}(t)$ 表示 $c_{n} $ 在时刻 $t$ 的取值。记 $ \overline{c_{n}} \triangleq\left|c_{n}\right| $ |
 | $m_{n}$                   | 节点 $n$ 的度量指标；记 $\overline{m_{n}} \triangleq\left|m_{n}\right|$ |
 | $w_{n}$                   | 与 $m_{n}$ 中各度量指标对应的权重；$\left|w_{n}\right|=\overline{m_{n}}$ |
 | $s_{n}$                   | 节点 $n$ 的策略；即可控量 $c_{n}$ 的组合                     |
@@ -59,13 +59,11 @@
 
 有多种可视化工具可用于理解不同环境之间的差异。图2.2展示了观察数据的四种不同方式，每种方式因目的不同而各有用处：柱状图使用每个可观测量的均值，以快速提供整体直观印象（gestalt sense）；箱线图展示数值的分布情况；散点图则显示每次环境观测中各可观测量的详细分布。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-039.jpg?height=616&width=1001&top_left_y=149&top_left_x=250){width="600"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-039.jpg?height=616&width=1001&top_left_y=149&top_left_x=250){width="400"}
 
 **图2.1** 可观测量是使系统能够做出决策的特征；这些可观测量有助于表征不同类型的干扰机（jammer）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-040.jpg?height=1264&width=1187&top_left_y=145&top_left_x=160){width="600"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-040.jpg?height=1264&width=1187&top_left_y=145&top_left_x=160){width="400"}
 
 **图2.2** 可视化环境观测数据的四种不同方式：(a) 显示非NaN值均值的柱状图；(b) 展示数值分布的箱须图（box-and-whiskers plot）；(c) 在极坐标轴上绘制的柱状图；(d) 在极坐标轴上的散点图。这些可视化方式均基于相同的底层可观测数据。（图7.3对箱线图进行解释。）
 
@@ -82,14 +80,13 @@
 
 标准机器学习库通常无法复用已用于其他目的的计算结果，且需要针对嵌入式环境进行重新实现。K均值聚类（K-means clustering）计算效率高，适用于嵌入式领域［8］；此外，也可利用已知的标签作为初始聚类中心（cluster seeds）。如果系统已维护样本之间的距离（例如，用于支持支持向量机（SVM）训练或保持数据集多样性），那么层次聚类（hierarchical clustering）方法也同样适用。最终的聚类数量可由可用内存大小或簇间距离决定。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-041.jpg?height=1763&width=999&top_left_y=147&top_left_x=252){width="600"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-041.jpg?height=1763&width=999&top_left_y=147&top_left_x=252){width="400"}
 
 **图2.3** 树状图用于可视化各项目之间的相似程度。每个环境由箱线图中所示的多个特征进行描述。(a) 树状图，其中横轴表示环境之间的距离；(b) 环境16；(c) 环境06；(d) 环境21。（图7.3对箱线图进行解释。）
 
-**算法 2.1 该 scikit-learn 代码绘制类似于图 2.3 的树状图，以展示射频（RF）环境之间的相似性。**
+算法 2.1  scikit-learn 代码绘制类似于图 2.3 的树状图，以展示射频（RF）环境之间的相似性。
 
-```python
+``` python
 import csv
 import numpy as np
 import pandas as pd
@@ -97,13 +94,13 @@ import matplotlib.pyplot as plt
 from scipy.cluster.hierarchy import dendrogram
 from scipy.cluster.hierarchy import linkage
 ####################
-# 加载数据集：列包括（Environ）标签和多个可观测量（obs）
+#加载数据集：列包括（Environ）标签和多个可观测量（obs）
 def getData():
     environs = pd.read_csv('radardata.csv')
     environs = environs.set_index('Environ')
     return environs
 ####################
-# 高效方法：将 NaN 替换为该环境/可观测量对应的均值（mu）
+#高效方法：将 NaN 替换为该环境/可观测量对应的均值（mu）
 def cleanNaNs(df):
     newDF = pd.DataFrame()
     environs = np.unique(df.index)
@@ -129,6 +126,7 @@ if __name__ == '__main__':
     fig.tight_layout()
     plt.savefig('dendrogram.pdf')
     plt.close()
+
 ```
 
 ## 2.2 用于改变行为的控制参数（Control Parameters）
@@ -180,8 +178,7 @@ Haigh 等人［1］探讨了四种潜在的度量指标：(1) 多种异构业务
 
 度量指标的值应进行归一化（normalized），以确保大数值与小数值在相同尺度上被评估。指标可采用线性尺度或对数尺度（如分贝 dB）进行测量，归一化方法应根据所选尺度相应调整。权重用于控制各指标的相对重要性。在最大化效用（utility）时，效能类指标应赋予正权重，而成本类指标则应赋予负权重。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-046.jpg?height=397&width=1100&top_left_y=1601&top_left_x=197){width="600"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-046.jpg?height=397&width=1100&top_left_y=1601&top_left_x=197){width="400"}
 
 **图 2.4** 权重可以以不同方式调整度量指标的值，并且可能随任务阶段而变化（例如，辐射源处于搜索、捕获或跟踪模式时）。
 
@@ -194,7 +191,7 @@ Haigh 等人［1］探讨了四种潜在的度量指标：(1) 多种异构业务
 
 ## 2.4 构建效用函数（Creating a Utility Function）
 
-在能够自主选择行动的系统中，效用函数（utility function）用于刻画各利益相关方的目标。效用函数的结构取决于系统的具体任务与能力。该函数以一种在作战上具有意义且在实践中可优化的方式，对各项指标进行组合。标注框2.1（Callout 2.1）给出了效用函数的形式化定义，并说明了如何对其进行简化，以便在实际中实现优化。
+在能够自主选择行动的系统中，效用函数（utility function）用于刻画各利益相关方的目标。效用函数的结构取决于系统的具体任务与能力。该函数以一种在作战上具有意义且在实践中可优化的方式，对各项指标进行组合。Callout 2.1给出了效用函数的形式化定义，并说明了如何对其进行简化，以便在实际中实现优化。
 
 通常，通信（comms）系统的效用函数比雷达系统的更为精细（nuanced），因为通信领域可获取的指标更多。联合优化（如电子防护/电子攻击（EP/EA）或通信/雷达联合优化）则进一步增加了复杂性。
 
@@ -220,73 +217,66 @@ $$
 
 其中，\(w_{1}(\cdot)\) 为单位阶跃函数（unit step function），\( w_{2} > 0 \) 为一个参数，用于刻画抖动约束的“软度”（即对抖动的容忍程度）。图2.5展示了该函数对应的效用值。需要注意的是，对 \( m_1 \) 和 \( m_2 \) 的估计仍可能分别依赖于学习得到的模型 \(f_{1}(o, s)\) 和 \(f_{2}(o, s)\)。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-051.jpg?height=955&width=1060&top_left_y=149&top_left_x=235){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-051.jpg?height=955&width=1060&top_left_y=149&top_left_x=235){width="400"}
 
 图2.5 该服务质量（QoS）指标结合了时延的硬性截止约束与抖动的软性约束 [1]；此处我们取 \( w_{2} = 0.3 \)。
 
-例如，电子支援（Electronic Support, ES）系统的截获概率（Probability-of-Intercept, POI）目标为 100%。实现 100% POI 的唯一方法是构建一种凝视型（staring）架构，对该频谱进行连续监视。无法提供连续监视的架构必须采用扫描模式，通过顺序调谐与驻留（dwelling），在辐射源发射信号且接收机恰好驻留在其频率上的时刻完成截获。在此情况下，一个简化的效用函数可表示为： $ \mathrm{POI} = f(\mathrm{RF}\text{ 环境可观测量}, \text{扫描速率}, \text{重访模式}, \text{驻留时间}, \ldots, \text{频率}) $ ，与大多数战场毁伤评估（Battle Damage Assessment, BDA）指标类似，POI 无法直接测量，必须通过 ES/BDA 功能进行推断。
+例如，电子支援（Electronic Support, ES）系统的截获概率（Probability-of-Intercept, POI）目标为 100%。实现 100% POI 的唯一方法是构建一种凝视型（staring）架构，对该频谱进行连续监视。无法提供连续监视的架构必须采用扫描模式，通过顺序调谐与驻留（dwelling），在辐射源发射信号且接收机恰好驻留在其频率上的时刻完成截获。在此情况下，一个简化的效用函数可表示为：
+
+$ \mathrm{POI} = f(\mathrm{RF}\text{ 环境可观测量},\ \text{扫描速率},\ \text{重访模式},\ \text{驻留时间},\ \ldots,\ \text{频率})  $ ，与大多数战场毁伤评估（Battle Damage Assessment, BDA）指标类似，POI 无法直接测量，必须通过 ES/BDA 功能进行推断。
 
 第 5.1.1 节描述了使用和优化多目标效用函数（multiobjective utility function）的不同方法。博弈论（Game Theory）（见第 6.2 节）可在效用函数之上增加一层概率模型，用于处理存在自私但理性个体的环境。
 
-/// note | Callout 2.1 形式化问题定义
-
-形式化问题定义：真实的效用函数（utility function）$\mathcal{U}$ 必须加以简化，以便在实践中可优化。
+/// note| Callout 2.1 形式化问题定义：真实的效用函数（utility function）$\mathcal{U}$ 必须加以简化，以便在实践中可优化。
 
 考虑一个包含 $N$ 个异构节点的电子战（Electronic Warfare, EW）系统。每个节点 $n \in N$ 具有以下内容：
 
- - 一组 $\overline{o_{n}}$ 个可观测特征（observable features），记为 $\mathbf{o}_{n} \triangleq\left(o_{n 1}, o_{n 2}, \ldots, o_{n o_{n}}\right)$。
- - 一组 $\overline{c_{n}}$ 个控制参数（control parameters），记为 $\mathbf{c}_{n} \triangleq\left(c_{n 1}, c_{n 2}, \ldots, c_{n c_{n}}\right)$。
+- 一组 $\overline{o_{n}}$ 个可观测特征（observable features），记为 $\mathbf{o}_{n} \triangleq\left(o_{n 1}, o_{n 2}, \ldots, o_{n o_{n}}\right)$。
+- 一组 $\overline{c_{n}}$ 个控制参数（control parameters），记为 $\mathbf{c}_{n} \triangleq\left(c_{n 1}, c_{n 2}, \ldots, c_{n c_{n}}\right)$。
 
- 将不可观测的上下文信息（unobservable contextual information）记为 $z$。  
- 为刻画随时间的变化，记 $\mathbf{c}_{\mathbf{n}}(t)$ 为控制参数 $c_{n}$ 在时刻 $t$ 的取值，对 $\mathbf{o}_{\mathbf{n}}$ 和 $\mathbf{z}$ 同理。
+将不可观测的上下文信息（unobservable contextual information）记为 $z$。  
+为刻画随时间的变化，记 $\mathbf{c}_{\mathbf{n}}(t)$ 为控制参数 $c_{n}$ 在时刻 $t$ 的取值，对 $\mathbf{o}_{\mathbf{n}}$ 和 $\mathbf{z}$ 同理。
 
- 与该系统相关联的是一个实值标量效用度量（utility measure）$\mathcal{U}(t)$，用于表征在时刻 $t$ 的全局、全网性能指标。该度量是自任务开始以来所有节点的控制参数、可观测特征和不可观测因素的函数 $\mathcal{F}$：
+与该系统相关联的是一个实值标量效用度量（utility measure）$\mathcal{U}(t)$，用于表征在时刻 $t$ 的全局、全网性能指标。该度量是自任务开始以来所有节点的控制参数、可观测特征和不可观测因素的函数 $\mathcal{F}$：
 
- 
 $$\mathcal{U}(t+1)=\mathcal{F}\left(\forall n \in N\left(\mathbf{o}_{n}(0), \ldots, \mathbf{o}_{n}(t), \mathbf{c}_{n}(0), \ldots, \mathbf{c}_{n}(t), z(0), \ldots, z(t)\right)\right)$$
 
- 目标是求解如下分布式优化问题：  
- 设计一种完全分布式的算法，使得每个节点 $n$ 仅利用其自身先前的可观测特征 $\mathbf{o}_{n}(0), \ldots, \mathbf{o}_{n}(t)$ 和控制参数值 $\mathbf{c}_{n}(0), \ldots, \mathbf{c}_{n}(t)$ 来确定其在时刻 $t$ 的控制参数 $\mathbf{c}_{n}(t)$，从而在每个时刻 $t$ 最大化（或最小化）$\mathcal{U}(t+1)$。
+目标是求解如下分布式优化问题：
+> 设计一种完全分布式的算法，使得每个节点 $n$ 仅利用其自身先前的可观测特征 $\mathbf{o}_{n}(0), \ldots, \mathbf{o}_{n}(t)$ 和控制参数值 $\mathbf{c}_{n}(0), \ldots, \mathbf{c}_{n}(t)$ 来确定其在时刻 $t$ 的控制参数 $\mathbf{c}_{n}(t)$，从而在每个时刻 $t$ 最大化（或最小化）$\mathcal{U}(t+1)$。*
 
- ${ }^{*}$ 优化目标可扩展为计算整个任务周期的效用，而非仅针对每个连续的瞬时时刻 $t$。
+${ }^{*}$ 优化目标可扩展为计算整个任务周期的效用，而非仅针对每个连续的瞬时时刻 $t$。
 
- 挑战在于，由于存在不可观测因素 $z$ 以及复杂的节点内（intra-node）与节点间（inter-node）交互，我们无法为 $\mathcal{F}$ 给出精确的解析表达式。因此，本书及相关工作中描述的算法通常通过使用局部的、无记忆（memory-less）的 $\mathcal{F}$ 近似来简化问题：每个节点使用 $\tilde{U}_{n}$ 来近似真实的效用 $\mathcal{U}$。
+挑战在于，由于存在不可观测因素 $z$ 以及复杂的节点内（intra-node）与节点间（inter-node）交互，我们无法为 $\mathcal{F}$ 给出精确的解析表达式。因此，本书及相关工作中描述的算法通常通过使用局部的、无记忆（memory-less）的 $\mathcal{F}$ 近似来简化问题：每个节点使用 $\tilde{U}_{n}$ 来近似真实的效用 $\mathcal{U}$。
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 \tilde{U}_{n}(t+1) & =\tilde{\mathcal{F}}_{n}\left(\mathbf{o}_{n}(t), \mathbf{c}_{n}(t)\right) \\
 \forall n \in N, \mathcal{U}(t) & \approx \tilde{U}_{n}(t)
-\end{aligned} 
-$$
+\end{aligned} $$
 
 本质上，节点 $n$ 假设历史决策（$\mathbf{c}_{n}(t^{\prime} < t)$）以及邻近节点（$n^{\prime} \neq n$）所作的决策，会隐式地体现在其当前可观测特征 $\mathbf{o}_{n}(t)$ 中。例如，若邻居节点 $n^{\prime}$ 提高了数据速率，节点 $n$ 将观测到拥塞程度的增加。当其他节点 $n^{\prime} \neq n$ 显式地将其先前的可观测特征或控制参数设置共享给节点 $n$（即 $\mathbf{o}_{n^{\prime} \neq n}(t^{\prime} < t)$ 或 $\mathbf{c}_{n^{\prime} \neq n}(t^{\prime} < t)$），这些值便成为 $\mathbf{o}_{n}(t)$ 中的附加特征。
 
 为配置各节点，在每个时间步 $t$，每个节点选择一个策略（strategy）$\mathbf{s}_{n}(t)$，该策略是控制参数 $\mathbf{c}_{n}(t)$ 的一种特定设置，旨在优化该效用曲面上的性能：
 
-
-$$
-\mathbf{s}_{n}(t)=\arg \max _{\mathbf{c}_{n}(t)} \tilde{\mathcal{F}}_{n}\left(\mathbf{o}_{n}(t), \mathbf{c}_{n}(t)\right) 
-$$
+$$\mathbf{s}_{n}(t)=\arg \max _{\mathbf{c}_{n}(t)} \tilde{\mathcal{F}}_{n}\left(\mathbf{o}_{n}(t), \mathbf{c}_{n}(t)\right) $$
 
 （或者，等价地使用 $\arg\min$。）在每个时间步，节点 $n$ 有 $\Pi_{\forall c_{n}} v_{c_{n}}$ 个候选策略，其中 $v_{c_{n}}$ 表示给定控制参数 $c_{n}$ 可取的值的数量。当控制参数为连续取值时，该数量变为无穷大。
 
 为支持在任务执行过程中动态调整系统行为，我们将 $\tilde{U}_{n}$ 表示为一组 $\overline{m_{n}}$ 个度量（metrics）$m_{n}$，从而允许用户在任务过程中调整相应的权重（weights）$w_{n}$。${ }^{\dagger}$ 因此，对于任意节点 $n \in N$，$\tilde{U}_{n}(t)$ 是其度量及其权重的函数，而每个度量本身又是该节点可观测特征与控制参数的函数：
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 m_{n k}(t+1) & =f_{n k}\left(\mathbf{o}_{n}(t), \mathbf{c}_{n}(t)\right) \\
 v_{n k}(t) & =\left(w_{n k}(t), m_{n k}(t)\right) \\
 \tilde{U}_{n}(t) & =g_{n}\left(v_{n 1}(t), v_{n 2}(t), \ldots, v_{n m_{n}}(t)\right)
-\end{aligned} 
-$$
+\end{aligned} $$
 
 ${ }^{\dagger}$ 权重不一定为标量值；对于某些度量，使用 lambda 函数可能更为合适。
 
 函数 $f_{n k}$ 是人工构建或通过经验学习得到的模型。在时刻 $t$，模型 $f_{n k}$ 利用可观测特征 $\mathbf{o}_{n}(t)$ 和控制参数 $\mathbf{c}_{n}(t)$ 预测下一时刻的度量值 $m_{n k}(t+1)$，从而使节点 $n$ 上的决策者能够选择最优的控制参数设置。
 
-在本书其他部分，我们通常无需如此详细的符号表示。因此，我们采用如下简写形式：$m_{k}=f_{k}(o, s)$，或更简洁地写作 $m=f(o, s)$。同理，$\tilde{U}\left(s_{i}\right)$ 是候选策略 $s_{i}$ 效用的简写。
+> 在本书其他部分，我们通常无需如此详细的符号表示。因此，我们采用如下简写形式：$m_{k}=f_{k}(o, s)$，或更简洁地写作 $m=f(o, s)$。同理，$\tilde{U}\left(s_{i}\right)$ 是候选策略 $s_{i}$ 效用的简写。
 
 与更常见的记法 $y=f(x)$ 不同，我们明确区分可观测特征（observables）与控制参数（controllables），以凸显系统进行决策的能力。这种记法类似于马尔可夫决策过程（Markov Decision Processes, MDPs）中的表示方式，其中奖励（reward）被表达为状态（state）和动作（action）的函数：$U=R(s, a)$（见第 6.1.3 节）。
+
 ///
 
 ## 2.5 效用函数设计考量（Utility Function Design Considerations）
@@ -312,6 +302,7 @@ ${ }^{\dagger}$ 权重不一定为标量值；对于某些度量，使用 lambda
 一个具备完全能力且高效的电子战（EW）系统，其核心基础在于一个能够衡量系统性能的效用函数（utility function），从而为任务选择优良的策略。该效用函数以数学上可优化的方式，融合了用户目标、任务需求以及环境约束。
 
 第 4 章介绍了电子支援（ES）及用于决策的可观测特征；目标函数的结构支持多种类型的可观测量，包括原始数值、基于物理模型导出的量，以及通过学习模型推断出的特征。第 5 章和第 6 章阐述了如何将目标函数应用于决策管理（DM）：包括如何利用优化与调度技术为电子防护（EP）和电子攻击（EA）选择策略，以及如何通过规划方法实现面向更长期的基于证据的决策管理（Evidence-Based Management, EBM DM）。
+
 ## References
 
 [1] Haigh, K. Z., O. Olofinboba, and C. Y. Tang, "Designing an Implementable User-Oriented Objective Function for MANETs," in International Conference on Networking, Sensing and Control, IEEE, 2007.

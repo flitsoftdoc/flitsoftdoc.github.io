@@ -15,6 +15,7 @@
 从人工智能（Artificial Intelligence, AI）的角度来看，电子防护（Electronic Protection, EP）与电子攻击（Electronic Attack, EA）的区别仅在于其目标：EP的目标是围绕己方系统定义的，而EA的目标则是针对敌方（adversary）定义的。同样，AI本身并不区分其解决方案是应用于雷达还是通信问题。因此，本书对EP/EA以及雷达/通信问题一视同仁，仅在问题领域确实影响数据或算法选择的少数情况下加以特别说明。
 
 本书所介绍的AI技术也可应用于其他相关领域，例如网络安全（Cybersecurity）、信息战（Information Warfare）、定位、导航与授时（Position, Navigation, and Timing, PNT）以及情报、侦察与监视（Intelligence, Surveillance, and Reconnaissance, ISR）。不过，本书并不直接探讨这些相关领域。
+
 ## 1.1 什么是认知系统？
 
 人工智能（Artificial Intelligence, AI）是试图模拟人类行为的计算机科学领域，于1956年在达特茅斯会议（Dartmouth Conference）[3]上正式确立为一门学科，其理论基础广泛汲取自认知心理学、数学、计算机科学、系统工程和语言学等多个领域。
@@ -23,13 +24,11 @@
 
 认知系统（Cognitive System），或称智能体（Intelligent Agent），能够感知其所处环境，并采取行动以实现其目标，如图1.1所示。它能在更高层次上进行推理与理解，处理符号化和概念性信息，从而在复杂情境中做出准确决策。认知系统具备上下文感知能力（context awareness），能够应对不确定性，并自主进行判断。它们具有迭代性和交互性，并能从自身经验中学习。图1.2展示了认知循环（cognition loop）及其三个核心概念：
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=414&width=581&top_left_y=147&top_left_x=459){width="600"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=414&width=581&top_left_y=147&top_left_x=459){width="400"}
 
 **图1.1** 认知系统感知环境、对态势进行推理，并采取行动以达成目标。它通过与环境的交互进行学习。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=503&width=497&top_left_y=737&top_left_x=500){width="600"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-018.jpg?height=503&width=497&top_left_y=737&top_left_x=500){width="400"}
 
 **图1.2** 认知系统迭代地进行态势评估、规划并决策其行动，并从经验中学习。
 
@@ -40,12 +39,12 @@
 
 图1.3展示了上述三项功能，用以体现认知能力的逐级提升。一个简单的传统电子战（EW）系统利用电子支援（ES）识别已知信号，并基于信号库查表选择响应措施。每增加一项AI能力，系统的整体认知水平就相应提高。该布局也为评估和比较电子战系统能力提供了一种方法。霍恩（Horne）等人提出了一种认知映射方法，按记忆（memory）、前瞻能力（forethought）和算法复杂度（algorithmic sophistication）对DM组件进行细分[4]。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-019.jpg?height=678&width=1020&top_left_y=1329&top_left_x=237){width="600"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-019.jpg?height=678&width=1020&top_left_y=1329&top_left_x=237){width="400"}
 
 **图1.3** 根据图1.2所阐述的概念，各项AI功能共同促成认知能力的逐级提升。
 
 认知循环（cognition loop）与军事环境中常用的“观察—判断—决策—行动”（Observe, Orient, Decide, and Act, OODA）环[5]相似。二者的关键区别在于：OODA环描述的是一个过程，而认知则发生在遵循该过程的人类身上。例如，由认知系统执行的态势评估（SA）可为人类操作员提供态势感知（situation awareness）输入。
+
 ## 1.2 电子战（Electronic Warfare, EW）简介
 
 电磁频谱作战（Electromagnetic Spectrum Operations, EMSO）是指为达成指挥官目标而协调开展的所有军事行动，旨在利用、攻击、防护和管理电磁环境。电磁电子战（EM EW）聚焦于如何通过电磁频谱（包括红外、光学和微波等波段）[6, 7]来控制频谱或对敌方实施攻击。本书所介绍的许多人工智能（AI）技术也可应用于网络空间及其他多域作战领域（例如信息战 [8]），但我们并不专门讨论这些相邻领域。
@@ -61,6 +60,7 @@
 - **电子攻击（Electronic Attack, EA）** 旨在剥夺敌方对其自身射频（RF）频谱的使用权。EA利用进攻性电磁能量，以降级或拒止敌方对频谱的访问，或通过传递误导性信息来欺骗敌方。
 
 > 拒止（Deny）、降级（Degrade）、扰乱（Disrupt）、欺骗（Deceive）、摧毁（Destroy）
+
 - **电子战作战管理（Electronic Battle Management, EBM）** 负责监督电磁频谱作战（EMSO）的各个方面，以提升任务效能，包括管理不断变化的任务优先级、协调作战效果，以及与任务指挥体系中的其他要素协同合作。其关键环节之一是与电子战军官（EW officer）互动并提供支持。
 - **电子战毁伤评估（Electronic Warfare Battle Damage Assessment, EW BDA）** 用于评估电子攻击（EA）的效果，并向操作员或系统提供反馈，以生成更具成效的攻击方案。EW BDA模块通常被整合进电子支援（ES）模块，或作为其组成部分。
 - **电子战重编程（EW Reprogramming）** 指对自卫系统、进攻性武器系统和情报收集系统进行更新调整。EW重编程活动可分为三大类：战术（tactics）、软件（software）和硬件（hardware），使指挥官能够及时应对敌方威胁系统的演变、修正系统缺陷，并根据特定战区或任务需求定制装备。
@@ -82,13 +82,14 @@
 | 执行监控（Execution Monitoring） | 电子战毁伤评估（Electronic Warfare Battle Damage Assessment） |
 | 学习（Learning）                | 电子战重编程（Electronic Warfare Reprogramming）（涉及数据与软件） |
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-022.jpg?height=656&width=1159&top_left_y=149&top_left_x=166){width="600"}
-
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-022.jpg?height=656&width=1159&top_left_y=149&top_left_x=166){width="400"}
 
 **图1.4** AI的态势评估、决策与学习能力适用于所有电子战功能。
+
 ## 1.3 从人工智能视角看电子战领域的挑战
 
 与任何其他智能系统一样，认知电子战（Cognitive Electronic Warfare, Cognitive EW）必须克服认知循环（cognition loop）中每个AI概念或阶段所面临的挑战。该领域本身难以理解，且决策空间庞大而复杂。用户需求又为系统增添了额外的复杂性。本书聚焦于解决美国国防部电子战兴趣共同体（EW Community of Interest）[12]所提出的两项关键挑战：(1) 认知/自适应（cognitive/adaptive）；(2) 分布式/协同（distributed/coordinated）。
+
 ### 1.3.1 用于电子支援与电子战毁伤评估的态势评估（Situation Assessment, SA）
 
 射频/电子战（RF/EW）领域的动态性与复杂性，为电子支援（Electronic Support, ES）和电子战毁伤评估（Electronic Warfare Battle Damage Assessment, EW BDA）中的态势评估带来了诸多挑战：
@@ -124,7 +125,7 @@
 
 > ¹ 另一种方案是为多个节点配备一个统一的认知控制器；虽然可减少协同问题，但会显著增加通信开销与延迟，且智能控制易受网络分区（network partitions）影响。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-026.jpg?height=421&width=1027&top_left_y=149&top_left_x=237){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-026.jpg?height=421&width=1027&top_left_y=149&top_left_x=237){width="400"}
 
 **图1.5** 在设计分布式认知电子战系统时，必须避免陷入彼得·多伊奇（Peter Deutsch）与詹姆斯·高斯林（James Gosling）于1994年提出的分布式计算八大经典谬误[17]。在电子战环境中，这些谬误尤为突出。
 
@@ -137,6 +138,7 @@
 - **受限的操作（Constrained Operations）**：所有认知电子战系统设计者都希望实现任务内实时机器学习（real-time, in-mission ML）。但从用户角度看，担忧在于系统可能习得不恰当的行为。因此，需求必须在约束系统涌现行为（emergent behavior）的同时，仍能有效应对新颖且意外的情境。
 
 归根结底，这些因素共同决定了人类利益相关者对AI系统在信息获取、态势评估（SA）和决策（DM）方面的信任程度。利益相关者既包括采办部门（acquisitions community）——他们要求系统性能“可验证”（verifiable）且“有保障”（guaranteed）；也包括一线人员——如电子战军官（Electronic Warfare Officers, EWOs）、机组人员、水兵和士兵——他们的生命依赖于系统所采取的务实行动。第5.1.1节讨论多目标优化，第6.3节探讨人机协同（human-machine team），第10章则介绍基于AI系统的验证与确认（verification and validation）机制。
+
 ### 1.3.4 认知无线电与电子战系统的关联
 
 认知无线电（Cognitive Radio, CR）网络在射频（RF）通信中实现了认知电子战（Cognitive EW）系统的电子防护（Electronic Protection, EP）目标。表1.2列出了认知无线电的一些潜在且广为人知的优势，这些优势可直接应用于认知电子战。
@@ -152,6 +154,7 @@
 认知无线电概念最初旨在提升射频频谱使用效率[20–22]。CR技术有望成为频谱管理领域的一项变革性力量。所有电磁频谱作战（EMSO）均可借鉴这些新颖的频谱管理方法和机会式频谱接入（opportunistic spectrum access）机制。此外，机会式频谱接入意味着CR引擎已具备一定程度的频谱态势感知（spectrum situational awareness），这也是智能电子战系统的重要组成部分。认知无线电网络还在探索异构无线电框架的管理，这一概念同样适用于多智能体、异构化的电子战系统[23–26]。第五代蜂窝网络（5G）也与电子战环境存在相似之处。专栏11.1概述了相关用例及部分认知方法。
 
 然而，已发表的大部分认知无线电研究聚焦于多址接入（multiaccess）问题，而非对抗环境下的频谱使用。此外，CR研究通常假设各实体为合作方且目标一致，而电子战场景本质上始终是对抗性的。第5章将介绍在对抗环境下进行优化的方法。
+
 ### 1.3.5 电子战系统设计问题
 
 认知电子战（Cognitive Electronic Warfare, Cognitive EW）系统设计必须提供态势评估（Situation Assessment, SA）、决策（Decision-Making, DM）和学习（Learning）能力。系统需求驱动了一系列关于应集成哪些组件、以及在系统设计过程中应提出哪些关键问题的决策[20, 27–29]：
@@ -162,6 +165,7 @@
 - **安全性（Security）**：何时需要对数据加密？如何制定策略以避免安全违规，尤其是在高度动态的环境与任务背景下？如何在不损害系统性能（尤其是精度与延迟）的前提下保护数据与模型？即使模型遭泄露，能否确保其无法被逆向工程？第8.3.5节探讨了部分安全问题。
 - **软件架构（Software Architectures）**：如何实现电子战系统的全局优化——既包括跨平台网络的全局优化，也包括单个节点内部各模块间的协同优化？第9.1节更详细地描述了软件架构设计。
 - **硬件设计（Hardware Design）**：如何设计便于认知控制的射频系统？能否有效设计可支持认知配置的多功能硬件系统？在平台尺寸、重量与功耗（Size, Weight, and Power, SWaP）约束下，可集成哪些内存与计算能力？鉴于并非所有数据均可记录，哪些数据压缩技术能有效最小化信息损失？第9.3节概述了部分硬件设计考量。
+
 ## 1.4 选择：人工智能还是传统方法？
 
 尽管媒体对人工智能（Artificial Intelligence, AI）大肆宣传，但AI并非适用于所有问题。与传统方法相比，AI解决方案通常更具鲁棒性（不易失效）、更强的可迁移性（可应用于不同问题），以及更好的可扩展性（scalability）。
@@ -178,7 +182,7 @@ AI方法与传统方法应在同一平台上共存，各自承担与其优势相
 
 我们可以依据1.3节中所述的任一领域特性来评估一个问题是否适合采用AI。其中最具指示意义的是问题的**分布式程度**、**复杂性**和**动态性**。图1.6展示了这些维度，标示出决定何时传统方法已足够、何时必须采用基于AI方法的关键属性。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-029.jpg?height=667&width=1137&top_left_y=1287&top_left_x=180){width="600"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-029.jpg?height=667&width=1137&top_left_y=1287&top_left_x=180){width="400"}
 
 **图1.6** 问题领域的特性决定了AI是有用还是必需的。图1.3则将这些AI功能置于认知层级中，以展示认知能力的递进。
 
@@ -194,12 +198,13 @@ AI方法与传统方法应在同一平台上共存，各自承担与其优势相
 > 关键经验是：**切勿在未充分理解问题的前提下，盲目选择解决方案**（即炫酷的AI技术）。
 
 AI将促成何种期望的作战效果？是否存在可用于构建机器学习解决方案的数据？问题本身的特性是否真正需要基于AI的解决方案？
+
 ## 1.5 读者指南
 
 本书各章按照图1.4所示的组件结构，系统阐述了构建完整认知电子战（Cognitive Electronic Warfare, Cognitive EW）系统所需的核心概念：
 
 - **第2章** 描述驱动决策（Decision-Making, DM）的目标函数（objective function）。
-- **第3章** 提供一份简明的机器学习（Machine Learning, ML）入门指南²，包括对算法权衡的讨论。
+- **第3章** 提供一份简明的机器学习（Machine Learning, ML）入门指南(short primer²)，包括对算法权衡的讨论。
 - **第4章** 阐述如何对电子支援（Electronic Support, ES）态势进行评估。
 - **第5章** 说明在时间受限和分布式环境下，如何为电子防护（EP）与电子攻击（EA）选择策略。
 - **第6章** 介绍电子战作战管理（Electronic Battle Management, EBM）及人机接口，涵盖规划相关内容，包括资源管理、不确定性处理以及对抗敌方行为。
@@ -210,6 +215,7 @@ AI将促成何种期望的作战效果？是否存在可用于构建机器学习
 - **第11章** 将全书经验总结为具体建议，指导读者如何着手构建认知电子战系统。
 
 > ² “primer”一词在此处指“入门读物”，发音为 /ˈprɪmər/（其中“i”发音同“sit”中的“i”）；而当其意为“底漆”（油漆底层）时，发音为 /ˈpraɪmər/（其中“i”发音同“five”中的“i”）。
+
 ## 1.6 结论
 
 构建认知电子战（Cognitive Electronic Warfare, Cognitive EW）系统，需要明确人工智能（AI）在何处、以何种方式发挥作用：**态势评估**（Situation Assessment, SA）用于电子支援（ES）并理解射频（RF）环境，**决策**（Decision-Making, DM）用于选择电子防护（EP）、电子攻击（EA）和电子战作战管理（EBM）行动，**机器学习**（Machine Learning, ML）则用于实现持续改进。
@@ -221,6 +227,7 @@ AI将促成何种期望的作战效果？是否存在可用于构建机器学习
 > 千里之行，始于足下。  
 > — 中国古谚，  
 > 《道德经》，老子，公元前6世纪
+
 
 ## References
 
