@@ -5,6 +5,10 @@
 > “AI” 并不等同于 “深度学习（Deep Learning, DL）。”  
 > $AI \supset ML \supset DL$。
 
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-057.jpg?height=579&width=1133&top_left_y=162&top_left_x=184){width="400"}
+
+**图3.1** 如同数学包含微积分、几何和代数一样，人工智能（AI）也包含多个子领域，如规划、机器学习（ML）和机器人学；而机器学习领域本身又包含多种技术。
+
 本书绝非一部关于人工智能的专著，而是选取了当前最直接适用于认知电子战（Cognitive Electronic Warfare, Cognitive EW）的AI技术进行介绍。《人工智能：一种现代方法》（*AI: A Modern Approach*）[1] 一书从构建完整智能体（intelligent agent）的视角出发，对人工智能概念进行了深入探讨。
 
 第5章和第6章讨论了规划（planning）、优化（optimization）、分布式人工智能（distributed AI）以及人因工程（human factors）等AI技术，因为这些内容在决策管理（Decision Management, DM）中构成一个逻辑单元。
@@ -13,15 +17,11 @@
 
 学习算法（learning algorithm）利用经验数据（empirical data）来学习对问题空间的模型。图3.2展示了构建机器学习模型的步骤。所有机器学习模型均遵循相同的基本流程进行训练与测试。算法4.1给出了实现该循环的一个代码示例。
 
-学习算法通常分为监督学习（supervised learning）和无监督学习（unsupervised learning）两类：在监督学习中，算法在训练时被提供真实标签（ground truth labels）$Y$；而在无监督学习中则不提供这些标签。监督学习器利用有限数量的样本 $(X, f(X))$，从输入空间 $X$ 到输出空间 $Y$ 构建一个函数 $f: X \rightarrow Y$。该模型 $f$ 用于逼近真实的输出空间 $\mathcal{F}$。无监督学习器仅使用输入数据 $X$ 来构建模型，以发现未标注数据中的隐藏模式。例如，一个监督式的调制分类器（modulation classifier）会尝试为射频（RF）环境中的每一次观测分配其真实的调制类型标签；而一个无监督的调制聚类（modulation-clustering）算法则在不知道真实标签的情况下将相似的观测分组，其输出 $Y$ 为每个观测对应的聚类编号。
-
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-057.jpg?height=579&width=1133&top_left_y=162&top_left_x=184){width="400"}
-
-**图3.1** 如同数学包含微积分、几何和代数一样，人工智能（AI）也包含多个子领域，如规划、机器学习（ML）和机器人学；而机器学习领域本身又包含多种技术。
-
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-057.jpg?height=508&width=511&top_left_y=927&top_left_x=494){width="400"}
 
 **图3.2** 所有机器学习模型均采用相同的基本流程进行训练和测试。
+
+学习算法通常分为监督学习（supervised learning）和无监督学习（unsupervised learning）两类：在监督学习中，算法在训练时被提供真实标签（ground truth labels）$Y$；而在无监督学习中则不提供这些标签。监督学习器利用有限数量的样本 $(X, f(X))$，从输入空间 $X$ 到输出空间 $Y$ 构建一个函数 $f: X \rightarrow Y$。该模型 $f$ 用于逼近真实的输出空间 $\mathcal{F}$。无监督学习器仅使用输入数据 $X$ 来构建模型，以发现未标注数据中的隐藏模式。例如，一个监督式的调制分类器（modulation classifier）会尝试为射频（RF）环境中的每一次观测分配其真实的调制类型标签；而一个无监督的调制聚类（modulation-clustering）算法则在不知道真实标签的情况下将相似的观测分组，其输出 $Y$ 为每个观测对应的聚类编号。
 
 半监督学习（semi-supervised learning）方法仅包含少量带标签样本和大量无标签样本。在强化学习（Reinforcement Learning, RL）方法中，学习器通过在环境中执行动作自行获取标签。强化学习构成了任务中学习（in-mission learning）的基础（见第7章）。
 
@@ -35,6 +35,7 @@
 | 回归（Regression）            | 估计一个数值（监督学习）                   | 第4.2节    |
 | 聚类（Clustering）            | 将相似的样本归为一组（无监督学习）         | 第2.1.1节  |
 | 异常检测（Outlier detection） | 识别与典型样本显著不同的实例（无监督学习） | 第4.4节    |
+
 ## 3.1 常见的机器学习算法（Common ML Algorithms）
 
 机器学习算法种类繁多；图3.1仅列举了其中在电子战（EW）中较为常用的一些。如需更深入的分析，可参考《百页机器学习书》（*The Hundred-page Machine Learning Book*）[2]，或更为深入的《统计学习基础》（*The Elements of Statistical Learning*）[3]。此外，Vink 与 de Haan [4] 在目标识别的背景下对各类机器学习算法提供了简要描述，而 Kulin 等人 [5] 则探讨了用于频谱学习（spectrum learning）的机器学习相关数学原理。
@@ -51,19 +52,17 @@ SVMs 在其决策函数中仅使用训练数据点的一个子集，这些点被
 
 SVMs 通过使用核函数（kernel functions）或“核技巧”（kernel tricks）[9]，能够高效地实现非线性分类。借助核技巧，非线性分类器可将输入映射到高维特征空间中。
 
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-059.jpg?height=618&width=849&top_left_y=1364&top_left_x=325){width="400"}
+
+**图3.3** 支持向量机（SVMs）能够在数据有限的情况下高效学习复杂函数。
+
 ### 3.1.2 人工神经网络（Artificial Neural Networks, ANNs）
 
 人工神经网络（ANNs）是一类受生物神经系统（如大脑）信息处理方式启发的算法。这些算法通过模拟神经元及其相互连接，来复现大脑的学习机制。ANNs 的概念起源可追溯至20世纪40年代 [10]；1958年，Rosenblatt 设计了感知机（perceptron），这是一种用于模式识别的算法 [11]。1975年，Werbos 提出的反向传播（back-propagation）算法 [12] 使得多层网络的实用化训练成为可能：该算法通过逐层向上传播误差项，并在每个节点处调整权重，从而实现网络参数的优化。
 
 ANNs 由输入层、隐藏层和输出层组成，如图3.4所示。网络的层数即指其深度（depth）。现代 ANNs 通常包含多个隐藏层，因此被称为深度学习（deep learning）、深度神经网络（deep neural networks）或简称为 DeepNets。DeepNets 能够发现人类难以手动提取或设计的复杂模式或潜在特征（latent features）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-059.jpg?height=618&width=849&top_left_y=1364&top_left_x=325){width="400"}
-
-
-**图3.3** 支持向量机（SVMs）能够在数据有限的情况下高效学习复杂函数。
-
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-060.jpg?height=368&width=1041&top_left_y=153&top_left_x=232){width="400"}
-
 
 **图3.4** 人工神经网络（ANNs）由输入层、隐藏层和输出层组成。网络的层数即为其深度。
 
@@ -107,11 +106,9 @@ ANNs 由输入层、隐藏层和输出层组成，如图3.4所示。网络的层
 
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-062.jpg?height=750&width=1106&top_left_y=1182&top_left_x=197){width="400"}
 
-
 **图3.6** 解析模型根据可观测量（observables）的 $\overline{\mathrm{o}_{n}}$ 维和可控变量（controllables）的 $\overline{\mathrm{C}_{n}}$ 维来估计性能曲面；经验模型则对预测进行细化。（引自 [35]。）
 
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-063.jpg?height=441&width=673&top_left_y=153&top_left_x=413){width="400"}
-
 
 **图3.7** 深度神经网络（DeepNets）能够从数据中识别潜在特征，而经典机器学习方法则依赖于传统的特征工程（feature engineering）。
 
@@ -136,7 +133,6 @@ ANNs 由输入层、隐藏层和输出层组成，如图3.4所示。网络的层
 模型的专长领域（domain of expertise）指明了模型应能良好捕捉的数据范围：当新观测值落在该领域内时，模型表现应优于其落在领域外的情况。例如，在图3.8中，训练数据分布在区间 $[-1.0, 1.0]$ 内，而取值 2.0 则超出了模型的专长领域。二次多项式模型在此范围外仍能良好泛化，而其他两个模型则随着偏离预期范围越远，误差迅速增大。理想情况下，模型应能自行计算其预测置信度（confidence）。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-064.jpg?height=421&width=1179&top_left_y=149&top_left_x=160){width="400"}
-
 
 **图3.8** 线性模型通常欠拟合；当特征数量远多于训练样本时，模型容易过拟合。（底层数据为 $y = x^{2} + \varepsilon$。）
 
@@ -180,7 +176,7 @@ ANNs 由输入层、隐藏层和输出层组成，如图3.4所示。网络的层
 | **决策树（Decision trees）**                   | 设计决策；情感分析                                           | 易于解释；对离散数据表现极佳                     | 特征过多时不稳定；对数值型数据表现较弱                       |
 | **因果模型（Causal models）**                  | 因果关系建模                                                 | 在无法实验时仍可发现模式                         | 难以控制不可观测特征的影响                                   |
 
-Lim 等人 [64] 使用训练时间和准确率等指标对33种算法进行了评估。更全面的评估指标列表见标注框10.2（Callout 10.2）。
+Lim 等人 [64] 使用训练时间和准确率等指标对33种算法进行了评估。更全面的评估指标列表见Callout 10.2。
 
 ## 3.7 结论（Conclusion）
 
@@ -190,6 +186,8 @@ Lim 等人 [64] 使用训练时间和准确率等指标对33种算法进行了�
 AI 包含众多子领域，涵盖态势评估（situation assessment）和决策管理（Decision Management, DM）等更广泛的概念。规划（planning）、优化（optimization）、数据融合（data fusion）和学习（learning）等技术支撑着机器视觉、自然语言处理（NLP）、机器人学和后勤物流等应用领域。
 
 关于人工智能，最关键的一点是：机器学习（ML）是 AI 内部的一个概念，而深度神经网络（DeepNets）则是 ML 中的一类技术。因此，AI 不等同于 ML，AI 也不等同于 DeepNets。机器学习远不止深度学习。深度神经网络在电子战（EW）问题中确有其适用场景，但不应仅仅因为 DeepNets 当前最受关注，就忽视或忽略经典机器学习方法以及其他 AI 方法。
+
+
 
 ## References
 
