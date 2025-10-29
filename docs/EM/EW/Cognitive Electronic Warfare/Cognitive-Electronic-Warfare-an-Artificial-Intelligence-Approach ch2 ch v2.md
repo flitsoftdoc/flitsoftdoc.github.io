@@ -63,7 +63,7 @@
 
 **图2.1** 可观测量是使系统能够做出决策的特征；这些可观测量有助于表征不同类型的干扰机（jammer）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-040.jpg?height=1264&width=1187&top_left_y=145&top_left_x=160){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-040.jpg?height=1264&width=1187&top_left_y=145&top_left_x=160){width="600"}
 
 **图2.2** 可视化环境观测数据的四种不同方式：(a) 显示非NaN值均值的柱状图；(b) 展示数值分布的箱须图（box-and-whiskers plot）；(c) 在极坐标轴上绘制的柱状图；(d) 在极坐标轴上的散点图。这些可视化方式均基于相同的底层可观测数据。（图7.3对箱线图进行解释。）
 
@@ -223,11 +223,13 @@ $$
 
 例如，电子支援（Electronic Support, ES）系统的截获概率（Probability-of-Intercept, POI）目标为 100%。实现 100% POI 的唯一方法是构建一种凝视型（staring）架构，对该频谱进行连续监视。无法提供连续监视的架构必须采用扫描模式，通过顺序调谐与驻留（dwelling），在辐射源发射信号且接收机恰好驻留在其频率上的时刻完成截获。在此情况下，一个简化的效用函数可表示为：
 
-$ \mathrm{POI} = f(\mathrm{RF}\text{ 环境可观测量},\ \text{扫描速率},\ \text{重访模式},\ \text{驻留时间},\ \ldots,\ \text{频率})  $ ，与大多数战场毁伤评估（Battle Damage Assessment, BDA）指标类似，POI 无法直接测量，必须通过 ES/BDA 功能进行推断。
+$\mathrm{POI} = f(\mathrm{RF}\text{ 环境可观测量},\ \text{扫描速率},\ \text{重访模式},\ \text{驻留时间},\ \ldots,\ \text{频率}) $ ，与大多数战场毁伤评估（Battle Damage Assessment, BDA）指标类似，POI 无法直接测量，必须通过 ES/BDA 功能进行推断。
 
 第 5.1.1 节描述了使用和优化多目标效用函数（multiobjective utility function）的不同方法。博弈论（Game Theory）（见第 6.2 节）可在效用函数之上增加一层概率模型，用于处理存在自私但理性个体的环境。
 
-/// note| Callout 2.1 形式化问题定义：真实的效用函数（utility function）$\mathcal{U}$ 必须加以简化，以便在实践中可优化。
+/// note| Callout 2.1 形式化问题定义
+
+真实的效用函数（utility function）$\mathcal{U}$ 必须加以简化，以便在实践中可优化。
 
 考虑一个包含 $N$ 个异构节点的电子战（Electronic Warfare, EW）系统。每个节点 $n \in N$ 具有以下内容：
 
@@ -297,7 +299,7 @@ ${ }^{\dagger}$ 权重不一定为标量值；对于某些度量，使用 lambda
 
 电子战（EW）条令中定义的目标可能需要调整或扩展，以纳入传统上未被考虑的概念。例如，削弱敌方决策管理（DM）能力，或导致其相关流程失效（如破坏敌方飞机航迹自动化系统，或通过增加人工干预需求，降低敌方操作员可独立管理的目标数量）。
 
-## 2.6 结论（Conclusion）
+## 2.6 结论
 
 一个具备完全能力且高效的电子战（EW）系统，其核心基础在于一个能够衡量系统性能的效用函数（utility function），从而为任务选择优良的策略。该效用函数以数学上可优化的方式，融合了用户目标、任务需求以及环境约束。
 
