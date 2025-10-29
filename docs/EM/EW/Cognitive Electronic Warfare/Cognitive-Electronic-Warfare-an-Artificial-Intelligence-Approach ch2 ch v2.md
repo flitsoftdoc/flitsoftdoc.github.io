@@ -27,11 +27,11 @@
 | :------------------------ | :----------------------------------------------------------- |
 | $n \in N$                 | 节点集合 $N$ 中的节点 $n$                                    |
 | $t$                       | 时间戳                                                       |
-| $o_{n}$                   | 节点 $n$ 的可观测量；$o_{n}(t)$ 表示 $o_{n}$ 在时刻 $t$ 的取值。记 $\overline{o_{n}} \triangleq\left|o_{n}\right|$ |
+| $o_{n}$                   | 节点 $n$ 的可观测量；$o_{n}(t)$ 表示 $o_{n}$ 在时刻 $t$ 的取值。记 $\overline{o_{n}} \triangleq \mid o_{n}\mid $ |
 | $z$                       | 不可观测的上下文信息                                         |
-| $c_{n}$                   | 节点 $n$ 的可控量；$c_{n}(t)$ 表示 $c_{n} $ 在时刻 $t$ 的取值。记 $\overline{c_{n}} \triangleq\left|c_{n}\right|$ |
-| $m_{n}$                   | 节点 $n$ 的度量指标；记 $\overline{m_{n}} \triangleq\left|m_{n}\right|$ |
-| $w_{n}$                   | 与 $m_{n}$ 中各度量指标对应的权重；$\left|w_{n}\right|=\overline{m_{n}}$ |
+| $c_{n}$                   | 节点 $n$ 的可控量；$c_{n}(t)$ 表示 $c_{n} $ 在时刻 $t$ 的取值。记 $\overline{c_{n}} \triangleq \mid c_{n}\mid $ |
+| $m_{n}$                   | 节点 $n$ 的度量指标；记 $\overline{m_{n}} \triangleq\mid m_{n}\mid $ |
+| $w_{n}$                   | 与 $m_{n}$ 中各度量指标对应的权重；$\mid w_{n}\mid =\overline{m_{n}}$ |
 | $s_{n}$                   | 节点 $n$ 的策略；即可控量 $c_{n}$ 的组合                     |
 | $\mathcal{U}$             | 真实效用函数，无对应的精确解析表达式                         |
 | $\tilde{U}_{n}$           | 节点 $n$ 对效用的局部估计                                    |
