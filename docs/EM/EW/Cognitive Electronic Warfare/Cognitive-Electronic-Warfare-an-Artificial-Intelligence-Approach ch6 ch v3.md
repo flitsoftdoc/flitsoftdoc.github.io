@@ -1,4 +1,4 @@
-# 6 电子战管理（Electronic Battle Management, EBM）
+# 6 电子战管理
 
 电子战管理（Electronic Battle Management, EBM）系统负责规划部署多少个平台、每个平台分配哪些资源，以及它们将部署在何处。该系统协调电磁频谱作战（Electromagnetic Spectrum Operations, EMSO）各领域内的活动，并统筹考虑后勤等更广泛的议题。电子战（Electronic Warfare, EW）计划应明确期望的电磁特征（electromagnetic profile）；确定任务、具体行动和所需资源；评估威胁；并满足相关政策的约束条件与目标[1]。影响计划制定的因素包括可用资产、期望达成的效果、部署限制（如高度、距离、时间或载荷）、频率去冲突（frequency deconfliction）、其他军种预期开展的电子战任务，以及身份认证要求[2]。图6.1展示了EBM系统的一些输入与输出，包括期望效果、平台限制、交战规则（rules of engagement）以及其他军种预期的电子战任务。
 
