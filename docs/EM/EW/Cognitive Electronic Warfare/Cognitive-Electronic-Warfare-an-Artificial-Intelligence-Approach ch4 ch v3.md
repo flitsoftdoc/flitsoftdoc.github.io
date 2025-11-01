@@ -63,7 +63,7 @@ Howland 等人[1]将频谱态势感知（Spectrum Situation Awareness, SSA）定
 
 图4.3 算法4.1中的每个步骤都必须在进入运行阶段前于设计阶段完成评估。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-078.jpg?height=408&width=1155&top_left_y=889&top_left_x=173){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-078.jpg?height=408&width=1155&top_left_y=889&top_left_x=173){width="500"}
 
 图4.4 雷达分类器位于通用射频（RF）处理链的最后一步。（其他人工智能技术可利用该信息进行更下游的分析。）
 
@@ -71,11 +71,13 @@ Howland 等人[1]将频谱态势感知（Spectrum Situation Awareness, SSA）定
 
 **步骤 1**：加载已知雷达的数据集。将数据集划分为训练集和测试集（比例约为 80% / 20%）*。
 
+```python
 from sklearn.model_selection import train_test_split
 radars = pandas.read_csv('radar-classes.csv')
 X = radars.drop(columns=['Class'])
 y = radars['Class']
 (xTrain, xTest), (yTrain, yTest) = train_test_split(X, y, test_size=0.20)
+```
 
 **步骤 2**：训练算法。选择一种分类算法，例如朴素贝叶斯（naïve Bayes），并在训练数据上训练模型。
 
@@ -85,16 +87,20 @@ trainedGNB = gnb.fit(xTrain, yTrain)
 
 **步骤 3**：验证结果。使用测试数据评估模型。通过混淆矩阵（confusion matrix）（见第 10.3.2 节）将预测类别与已知的测试类别进行比较。
 
+```python
 from sklearn.metrics import confusion_matrix
 yPred = trainedGNB.predict(xTest)
 accuracy = (yTest == yPred).sum() / len(yTest) * 100
 confMtx = confusion_matrix(yTest, yPred)
+```
 
 **步骤 4**：对新雷达进行分类并估计类别概率。本代码片段假设数据中不含“Class”列。开放式集分类（open-set classification）（见第 3.4 节）和消融试验（ablation trials）（见第 10.2 节）探讨了这一概念。
 
+```python
 newRadars = pandas.read_csv('newRadars.csv')
 yPred = trainedGNB.predict(newRadars)
 yProbs = trainedGNB.predict_proba(newRadars)
+```
 
 > \* 大多数机器学习算法要求数据中不含 NaN 值。因此，我们使用每个特征的非 NaN 均值来替换该特征中的 NaN 值（见算法 2.1）。在训练机器学习模型前进行 NaN 值替换时，切勿在完整数据集（即在划分训练集和测试集之前）上进行替换。正确的做法是先划分数据，再仅使用训练数据计算均值。
 
@@ -142,7 +148,7 @@ Chen 等人 [29] 利用聚类和无限隐马尔可夫随机场（infinite hidden
 
 数据融合技术可分为三个非互斥类别：(1) 数据关联（data association）、(2) 状态估计（state estimation）和 (3) 决策融合（decision fusion）[52]。联合实验室主任/数据融合信息组（Joint Directors of Laboratories/Data Fusion Information Group, JDL/DFIG）模型定义了如图4.6所示的七级数据融合层次 [54, 55]。每一级都扩展了数据广度与分析范围。JDL/DFIG模型的优势包括支持态势感知探索、用户反馈优化和任务管理 [54]。该模型还成功应用于数据融合过程的可视化、促进讨论与建立共识 [55]，以及系统级数据融合设计 [54, 56]。数据融合领域的最新进展由国际信息融合学会（International Society of Information Fusion, ISIF）在文献 [57] 中进行了综述。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-081.jpg?height=663&width=438&top_left_y=1357&top_left_x=531){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-081.jpg?height=663&width=438&top_left_y=1357&top_left_x=531){width="200"}
 
 图4.6 JDL/DFIG模型包含七个级别的数据融合。
 
@@ -289,140 +295,277 @@ CNNs 与支持向量机（SVMs）也已成功结合 [131–133]：先训练CNN�
 ## References
 
 [1] Howland, P., S. Farquhar, and B. Madahar, "Spectrum Situational Awareness Capability: The Military Need and Potential Implementation Issues," Defence Science and Technology Lab Malvern (United Kingdom), Tech. Rep., 2006.
+
 [2] Aghababaee, H., J. Amini, and Y. Tzeng, "Improving Change Detection Methods of SAR Images Using Fractals," Scientia Iranica, Vol. 20, No. 1, 2013.
+
 [3] Dudczyk, J., "Specific Emitter Identification Based on Fractal Features," in Fractal AnalysisApplications in Physics, Engineering and Technology, IntechOpen Limited, 2017.
+
 [4] L. Shen, Y.-S. Han, and S. Wang, "Research on Fractal Feature Extraction of Radar Signal Based On Wavelet Transform," in Advances in Intelligent Systems and Interactive Applications, 2017.
+
 [5] Brandfass, M., et al., "Towards Cognitive Radar via Knowledge Aided Processing for Airborne and Ground Based Radar Applications," in International Radar Symposium, 2019.
+
 [6] Katsilieris, F., and A. Charlish, "Knowledge Based Anomaly Detection for Ground Moving Targets," in Radar Conference, IEEE, 2018.
+
 [7] Zhang, Y., et al., "Path Loss Prediction Based on Machine Learning: Principle, Method, and Data Expansion," Applied Sciences, 2019.
-[8] Krishnamurthy, V., Adversarial Radar Inference. From Inverse Tracking to Inverse Reinforcement Learning of Cognitive Radar, 2020. Online: https://arxiv.org/abs/2002.10910.
+
+[8] Krishnamurthy, V., Adversarial Radar Inference. From Inverse Tracking to Inverse Reinforcement Learning of Cognitive Radar, 2020. Online: [https://arxiv.org/abs/2002.10910](https://arxiv.org/abs/2002.10910).
+
 [9] Haigh, K. Z., et al., "Modeling RF Interference Performance," in Collaborative Electronic Warfare Symposium, 2014.
-[10] Topal, O., S. Gecgel, and E. Eksioglu, Identification of Smart Jammers: Learning Based Approaches Using Wavelet Representation, 2019. Online: https://arxiv.org/abs/1901.09424.
+
+[10] Topal, O., S. Gecgel, and E. Eksioglu, Identification of Smart Jammers: Learning Based Approaches Using Wavelet Representation, 2019. Online: [https://arxiv.org/abs/1901.09424](https://arxiv.org/abs/1901.09424).
+
 [11] Zhang, G., W. Jin, and L. Hu, "Radar Emitter Signal Recognition Based on Support Vector Machines," in Control, Automation, Robotics and Vision Conference, IEEE, Vol. 2, 2004.
+
 [12] Zhang, G., H. Rong, and W. Jin, "Application of Support Vector Machine to Radar Emitter Signal Recognition," Journal of Southwest Jiaotong University, Vol. 41, No. 1, 2006.
+
 [13] Barshan, B., and B. Eravci, "Automatic Radar Antenna Scan Type Recognition in Electronic Warfare," Transactions on Aerospace and Electronic Systems, Vol. 48, No. 4, 2012.
+
 [14] Mustafa, H., and M. Doroslovacki, "Digital Modulation Recognition Using Support Vector Machine Classifier," in Asilomar Conference on Signals, Systems and Computers, IEEE, Vol. 2, 2004.
+
 [15] Park, C.-S., et al., "Automatic Modulation Recognition Using Support Vector Machine in Software Radio Applications," in International Conference on Advanced Communication Technology, IEEE, Vol. 1, 2007.
+
 [16] Li, X., et al., "Deep Learning Driven Wireless Communications and Mobile Computing," Wireless Communications and Mobile Computing, 2019.
+
 [17] Majumder, U., E. Blasch, and D. Garren, Deep Learning for Radar and Communications Automatic Target Recognition, Norwood, MA: Artech House, 2020.
+
 [18] O'Shea, T., J. Corgan, and T. Clancy, "Convolutional Radio Modulation Recognition Networks," in International Conference on Engineering Applications of Neural Networks, Springer, 2016.
+
 [19] O'Shea, T., T. Roy, and T. Clancy, "Over-the-Air Deep Learning Based Radio Signal Classification," IEEE Journal of Selected Topics in Signal Processing, Vol. 12, No. 1, 2018.
+
 [20] Shi, Y., et al., "Deep Learning for RF Signal Classification in Unknown and Dynamic Spectrum Environments," in International Symposium on Dynamic Spectrum Access Networks, IEEE, 2019.
+
 [21] Sun, J., et al., "Radar Emitter Classification Based on Unidimensional Convolutional Neural Network," IET Radar, Sonar and Navigation, Vol. 12, No. 8, 2018.
-[22] Notaro, P., et al., Radar Emitter Classification with Attribute-Specific Recurrent Neural Networks, 2019. Online: https://arxiv.org/abs/1911.07683.
+
+[22] Notaro, P., et al., Radar Emitter Classification with Attribute-Specific Recurrent Neural Networks, 2019. Online: [https://arxiv.org/abs/1911.07683](https://arxiv.org/abs/1911.07683).
+
 [23] Li, M., et al., "Generative Adversarial Networks-Based Semi-supervised Automatic Modulation Recognition for Cognitive Radio Networks," Sensors, 2018.
-[24] Shi, Y., K. Davaslioglu, and Y. Sagduyu, Generative Adversarial Network for Wireless Signal Spoofing, 2019. Online: https://arxiv. org/abs/1905.01008.
+
+[24] Shi, Y., K. Davaslioglu, and Y. Sagduyu, Generative Adversarial Network for Wireless Signal Spoofing, 2019. Online: [https://arxiv](https://arxiv). org/abs/1905.01008.
+
 [25] Urrego, B., "Army Signal Classification Challenge," in GNURadio Conference, 2018.
+
 [26] Logue, K., et al., "Expert RF Feature Extraction to Win the Army RCO AI Signal Classification Challenge," in Python in Science, 2019.
+
 [27] Vila, A., et al., "Deep and Ensemble Learning to Win the Army RCO AI Signal Classification Challenge," in Python in Science, 2019.
-[28] Xu, Q., et al., "Device Fingerprinting in Wireless Networks: Challenges and Opportunities," IEEE Communications Surveys \& Tutorials, Vol. 18, No. 1, 2016.
-[29] Chen, F., et al., On Passive Wireless Device Fingerprinting Using Infinite Hidden Markov Random Field, 2012. Online: https://tinyurl.com/chen2012fingerprint.
+
+[28] Xu, Q., et al., "Device Fingerprinting in Wireless Networks: Challenges and Opportunities," IEEE Communications Surveys & Tutorials, Vol. 18, No. 1, 2016.
+
+[29] Chen, F., et al., On Passive Wireless Device Fingerprinting Using Infinite Hidden Markov Random Field, 2012. Online: [https://tinyurl.com/chen2012fingerprint](https://tinyurl.com/chen2012fingerprint).
+
 [30] Nguyen, N., et al., "Device Fingerprinting to Enhance Wireless Security Using Nonparametric Bayesian Method," in INFOCOM, 2011.
+
 [31] Cain, L., et al., "Convolutional Neural Networks For Radar Emitter Classification," in Annual Computing and Communication Workshop and Conference, IEEE, 2018.
-[32] Sankhe, K., et al., "ORACLE: Optimized Radio clAssification Through Convolutional neuraL nEtworks," in INFOCOM, Dataset available at https://genesys-lab.org/oracle, 2019.
-[33] Youssef, K., et al., Machine Learning Approach to RF Transmitter Identification, 2017. Online: https://arxiv.org/abs/1711.01559.
+
+[32] Sankhe, K., et al., "ORACLE: Optimized Radio clAssification Through Convolutional neuraL nEtworks," in INFOCOM, Dataset available at [https://genesys-lab.org/oracle](https://genesys-lab.org/oracle), 2019.
+
+[33] Youssef, K., et al., Machine Learning Approach to RF Transmitter Identification, 2017. Online: [https://arxiv.org/abs/1711.01559](https://arxiv.org/abs/1711.01559).
+
 [34] Wong, L., et al., "Clustering Learned CNN Features from Raw I/Q data for Emitter Identification," in MILCOM, 2018.
+
 [35] Tong, J., et al., "Deep Learning for RF Fingerprinting: A Massive Experimental Study," Internet of Things (IoT) Magazine, 2020.
-[36] Restuccia, F., et al., DeepRadioID: Real-Time Channel-Resilient Optimization of Deep LearningBased Radio Fingerprinting Algorithms, 2019. Online: https://tinyurl.com/deepRadioID.
+
+[36] Restuccia, F., et al., DeepRadioID: Real-Time Channel-Resilient Optimization of Deep LearningBased Radio Fingerprinting Algorithms, 2019. Online: [https://tinyurl.com/deepRadioID](https://tinyurl.com/deepRadioID).
+
 [37] Haigh, K. Z., et al., "Parallel Learning and Decision Making for a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.
+
 [38] Baldo, N., et al., "A Neural Network Based Cognitive Controller for Dynamic Channel Selection," in ICC, IEEE, 2009.
+
 [39] Haigh, K. Z., S. Varadarajan, and C. Y. Tang, "Automatic Learning-Based MANET CrossLayer Parameter Configuration," in Workshop on Wireless Ad hoc and Sensor Networks, IEEE, 2006.
+
 [40] Katidiotis, A., K. Tsagkaris, and P. Demestichas, "Performance Evaluation of Artificial Neural Network-Based Learning Schemes for Cognitive Radio Systems," Computers and Electric Engineering, Vol. 36, No. 3, 2010.
+
 [41] Troxel, G., et al., "Adaptive Dynamic Radio Open-Source Intelligent Team (ADROIT): Cognitively-Controlled Collaboration Among SDR Nodes," in Workshop on Networking Technologies for Software Defined Radio (SDR) Networks, IEEE, 2006.
+
 [42] Haviluddin, A., et al., "Modelling of Network Traffic Usage Using Self-Organizing Maps Techniques," in International Conference on Science in Information Technology, 2016.
+
 [43] Qu, X., et al., "A Survey on the Development of Self-Organizing Maps for Unsupervised Intrusion Detection," Mobile Networks and Applications, 2019.
+
 [44] Demestichas, P., et al., "Enhancing Channel Estimation in Cognitive Radio Systems by Means of Bayesian Networks," Wireless Personal Communications, Vol. 49, 2009.
+
 [45] Selvi, E., et al., "On the Use of Markov Decision Processes in Cognitive Radar: An Application to Target Tracking," in Radar Conference, IEEE, 2018.
-[46] Thornton, C., et al., Experimental Analysis of Reinforcement Learning Techniques for Spectrum Sharing Radar, 2020. Online: https://arxiv.org/abs/2001.01799.
+
+[46] Thornton, C., et al., Experimental Analysis of Reinforcement Learning Techniques for Spectrum Sharing Radar, 2020. Online: [https://arxiv.org/abs/2001.01799](https://arxiv.org/abs/2001.01799).
+
 [47] Lee, G.-H., J. Jo, and C. Park, "Jamming Prediction for Radar Signals Using Machine Learning Methods," Security and Communication Networks, 2020.
-[48] English, D., C4ISRNET the Compass/Net Defense Blogs: How multiINT Enables Deciphering the Indecipherable, Accessed 2020-05-31, 2015. Online: https://tinyurl.com/c4isrnet.
+
+[48] English, D., C4ISRNET the Compass/Net Defense Blogs: How multiINT Enables Deciphering the Indecipherable, Accessed 2020-05-31, 2015. Online: [https://tinyurl.com/c4isrnet](https://tinyurl.com/c4isrnet).
+
 [49] Hall, D., and J. Llinas, "An Introduction to Multisensor Data Fusion," Proceedings of the IEEE, Vol. 85, No. 1, 1997.
+
 [50] F. White, "JDL, Data Fusion Lexicon," Technical Panel for C, vol. 3, 1991.
+
 [51] Khaleghi, B., et al., "Multisensor Data Fusion: A Review of the State-of-the-Art," Information Fusion, Vol. 14, No. 1, 2013.
+
 [52] Castanedo, F., "A Review of Data Fusion Techniques," The Scientific World Journal, Vol. 2013, 2013.
+
 [53] Dong, X., and F. Naumann, "Data Fusion: Resolving Data Conflicts for Integration," Proceedings of the VLDB Endowment, Vol. 2, No. 2, 2009.
+
 [54] Blasch, E., and D. Lambert, High-level Information Fusion Management and Systems Design, Norwood, MA: Artech House, 2012.
+
 [55] Liggins, M., II, D. Hall, and J. Llinas, Handbook of Multisensor Data Fusion: Theory and Practice (Second Edition), CRC Press, 2008.
+
 [56] Blasch, E., et al., "Revisiting the JDL Model for Information Exploitation," in FUSION, IEEE, 2013.
-[57] ISIF.org. (2020). "International society of information fusion." Accessed 2020-05-31, Online: http://isif.org/.
+
+[57] ISIF.org. (2020). "International society of information fusion." Accessed 2020-05-31, Online: [http://isif.org/](http://isif.org/).
+
 [58] Milisavljevic, N. (Ed.), Sensor and Data Fusion, In-Teh, 2009.
+
 [59] Walts, E., Data Fusion for C3I: A Tutorial, Argus Business, 1986.
+
 [60] Fabeck, G., and R. Mathar, "Kernel-Based Learning of Decision Fusion in Wireless Sensor Networks," in FUSION, IEEE, 2008.
+
 [61] Ansari, N., et al., "Adaptive Fusion by Reinforcement Learning for Distributed Detection Systems," IEEE Transactions on Aerospace and Electronic Systems, Vol. 32, No. 2, 1996.
+
 [62] Hossain, M., P. Atrey, and A. El Saddik, "Learning Multisensor Confidence Using a Reward-And-Punishment Mechanism," IEEE Transactions on Instrumentation and Measurement, Vol. 58, No. 5, 2009.
+
 [63] Stankovic, J., and T. He, "Energy Management in Sensor Networks," Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, Vol. 370, No. 1958, 2012.
+
 [64] Levashova, T., et al., "Situation Detection Based on Knowledge Fusion Patterns," in International Workshop on Ontologies and Information Systems, 2014.
+
 [65] 3GPP, "Study on NR Positioning Support (Release 16)," Standard 3GPP TSG RAN TR 38.855, 2019.
+
 [66] Bartoletti, S., et al., "5G Localization and Context-Awareness," in 5G Italy White eBook: from Research to Market, 2018.
+
 [67] Conti, A., et al., "Soft Information for Localization-of-Things," Proceedings of the IEEE, Vol. 107, No. 11, 2019.
+
 [68] Lau, B., et al., "A Survey of Data Fusion in Smart City Applications," Information Fusion, Vol. 52, 2019.
+
 [69] Witrisal, K., et al., "High-Accuracy Localization for Assisted Living: 5G Systems Will Turn Multipath Channels from Foe to Friend," IEEE Signal Processing Magazine, Vol. 33, No. 2, 2016.
+
 [70] Guerra, A., F. Guidi, and D. Dardari, "Single-Anchor Localization and Orientation Performance Limits Using Massive Arrays: MIMO vs. Beamforming," IEEE Transactions on Wireless Communications, Vol. 17, No. 8, 2018.
+
 [71] Wymeersch, H., et al., "5G mmWave Positioning for Vehicular Networks," IEEE Wireless Communications, Vol. 24, No. 6, 2017.
+
 [72] Win, M. Z., et al., "Network Operation Strategies for Efficient Localization and Navigation," Proceedings of the IEEE, Vol. 106, No. 7, 2018.
+
 [73] Campbell, M., and N. Ahmed, "Distributed Data Fusion: Neighbors, Rumors, and the Art of Collective Knowledge," IEEE Control Systems Magazine, Vol. 36, No. 4, 2016.
+
 [74] Lang, J., "Collective Decision Making Under Incomplete Knowledge: Possible and Necessary Solutions," in IJCAI, 2020.
+
 [75] Makarenko, A., et al., "Decentralised Data Fusion: A Graphical Model Approach," in FUSION, 2009.
+
 [76] Thompson, P., and H. Durrant-Whyte, "Decentralised Data Fusion in 2-Tree Sensor Networks," in FUSION, 2010.
+
 [77] Hall, D., et al. (Eds.), Distributed Data Fusion for Network-Centric Operations, CRC Press, 2012.
+
 [78] Chandola, V., A. Banerjee, and V. Kumar, "Anomaly Detection: A Survey," ACM Computing Surveys, Vol. 41, No. 3, 2009.
+
 [79] Edgeworth, F., "On Observations Relating to Several Quantities," Hermathena, Vol. 6, No. 13, 1887.
+
 [80] Song, X., et al., "Conditional Anomaly Detection," IEEE Transactions on Knowledge and Data Engineering, Vol. 19, No. 5, 2007.
+
 [81] Agyemang, M., K. Barker, and R. Alhajj, "A Comprehensive Survey of Numeric and Symbolic Outlier Mining Techniques," Intelligent Data Analysis, Vol. 10, No. 6, 2006.
+
 [82] Ahmed, M., A. N. Mahmood, and J. Hu, "A Survey of Network Anomaly Detection Techniques," Journal of Network and Computer Applications, Vol. 60, 2016.
+
 [83] Bakar, Z., et al., "A Comparative Study for Outlier Detection Techniques in Data Mining," in Conference on Cybernetics and Intelligent Systems, IEEE, 2006.
+
 [84] Beckman, R., and R. Cook, "Outlier.......... s," Technometrics, Vol. 25, No. 2, 1983.
+
 [85] Hodge, V., and J. Austin, "A Survey of Outlier Detection Methodologies," Artificial Intelligence Review, Vol. 22, No. 2, 2004.
+
 [86] Markou, M., and S. Singh, "Novelty Detection: A Review-Part 1: Statistical Approaches," Signal Processing, Vol. 83, No. 12, 2003.
+
 [87] Markou, M., and S. Singh, "Novelty Detection: A Review-Part 2: Neural Network Based Approaches," Signal Processing, Vol. 83, No. 12, 2003.
+
 [88] Patcha, A., and J.-M. Park, "An Overview of Anomaly Detection Techniques: Existing Solutions and Latest Technological Trends," Computer Networks, Vol. 51, No. 12, 2007.
+
 [89] Chawla, S., "Deep Learning Based Intrusion Detection System for Internet of Things," Ph.D. dissertation, University of Washington, 2017.
+
 [90] Yin, C., et al., "A Deep Learning Approach for Intrusion Detection Using Recurrent Neural Networks," IEEE Access, Vol. 5, 2017.
+
 [91] Bowman, B., "Anomaly Detection Using a Variational Autoencoder Neural Network with a Novel Objective Function And Gaussian Mixture Model Selection Technique," M.S. thesis, Naval Postgraduate School, 2019.
+
 [92] Rajasegarar, S., et al., "Centered Hyperspherical And Hyperellipsoidal One-Class Support Vector Machines for Anomaly Detection in Sensor Networks," IEEE Transactions on Information Forensics and Security, Vol. 5, No. 3, 2010.
+
 [93] Zhang, M., B. Xu, and J. Gong, "An Anomaly Detection Model Based on One-Class SVM to Detect Network Intrusions," in International Conference on Mobile Ad-hoc and Sensor Networks, IEEE, 2015.
+
 [94] Salman, T., et al., "Machine Learning for Anomaly Detection And Categorization in MultiCloud Environments," in International Conference on Cyber Security and Cloud Computing, IEEE, 2017.
+
 [95] Fiore, U., et al., "Network Anomaly Detection with the Restricted Boltzmann Machine," Neurocomputing, Vol. 122, 2013.
+
 [96] Pearl, J., Causality (Second Edition), Cambridge University Press, 2009.
+
 [97] Pearl, J. "An Introduction to Causal Inference," International Journal of Biostatistics, 2010.
-[98] Tople, S., A. Sharma, and A. Nori, Alleviating Privacy Attacks Via Causal Learning, 2020. Online: https://arxiv.org/abs/1909.12732.
+
+[98] Tople, S., A. Sharma, and A. Nori, Alleviating Privacy Attacks Via Causal Learning, 2020. Online: [https://arxiv.org/abs/1909.12732](https://arxiv.org/abs/1909.12732).
+
 [99] Ali, B., et al., "A Causal Factors Analysis of Aircraft Incidents Due to Radar Limitations: The Norway Case Study," Air Transport Management, Vol. 44-45, 2015.
+
 [100] Martin, T., and K. Chang, "A Causal Reasoning Approach to DSA Situational Awareness and Decision-Making," in FUSION, 2013.
+
 [101] Martin, T., and K. Chang, "Situational Awareness Uncertainty Impacts on Dynamic Spectrum Access Performance," in FUSION, 2014.
+
 [102] Martin, T., and K. Chang, "Development and Analysis of a Probabilistic Reasoning Methodology for Spectrum Situational Awareness and Parameter Estimation in Uncertain Environments," in FUSION, 2015.
+
 [103] Cousins, D., et al., "Understanding Encrypted Networks Through Signal and Systems Analysis of Traffic Timing," in IEEE Aerospace, Vol. 6, 2003.
+
 [104] Tilghman, P., and D. Rosenbluth, "Inferring Wireless Communications Links and Network Topology from Externals Using Granger Causality," in MILCOM, 2013.
+
 [105] Chen, Y., et al., "Analyzing Multiple Nonlinear Time Series with Extended Granger Causality," Physics Letters A, Vol. 324, No. 1, 2004.
+
 [106] Morris, K., "What Is Hysteresis?" Applied Mechanics Reviews, Vol. 64, 2011.
+
 [107] Deshmukh, R., et al., "Reactive Temporal Logic-Based Precursor Detection Algorithm for Terminal Airspace Operations," Vol. 28, No. 4, 2020.
-[108] Keren, S., R. Mirsky, and C. Geib, Plan, Activity, Behavior, and Intent Recognition Website, Accessed 2020-03-14. Online: http://www.planrec.org/.
+
+[108] Keren, S., R. Mirsky, and C. Geib, Plan, Activity, Behavior, and Intent Recognition Website, Accessed 2020-03-14. Online: [http://www.planrec.org/](http://www.planrec.org/).
+
 [109] Sukthankar, G., et al., Plan, Activity, and Intent Recognition, Elsevier, 2014.
+
 [110] Schmidt, C., N. Sridharan, and J. Goodson, "The Plan Recognition Problem: An Intersection of Psychology and Artificial Intelligence," Artificial Intelligence, Vol. 11, No. 1, 1978.
-[111] Keren, S.,R. Mirsky, and C. Geib, Plan Activity And Intent Recognition Tutorial, 2019. Online: http://www.planrec.org/Tutorial/Resources_files/pair-tutorial.pdf.
+
+[111] Keren, S.,R. Mirsky, and C. Geib, Plan Activity And Intent Recognition Tutorial, 2019. Online: [http://www.planrec.org/Tutorial/Resources_files/pair-tutorial.pdf](http://www.planrec.org/Tutorial/Resources_files/pair-tutorial.pdf).
+
 [112] Geib, C., and R. Goldman, "A Probabilistic Plan Recognition Algorithm Based on Plan Tree Grammars," Artificial Intelligence, Vol. 173, No. 11, 2009.
+
 [113] Geib, C., and R. Goldman, "Plan Recognition in Intrusion Detection Systems," in DARPA Information Survivability Conference and Exposition, Vol. 1, 2001.
+
 [114] Geib, C., "Delaying Commitment in Plan Recognition Using Combinatory Categorial Grammars," in IJCAI, 2009.
+
 [115] Fu, M., "AlphaGo and Monte Carlo Tree Search: The Simulation Optimization Perspective," in Winter Simulation Conference, 2016.
+
 [116] Latombe, G., E. Granger, and F. Dilkes, "Graphical EM for Online Learning of Grammatical Probabilities in Radar Electronic Support," Applied Soft Computing, Vol. 12, No. 8, 2012.
+
 [117] Wang, A., and V. Krishnamurthy, "Threat Estimation of Multifunction Radars: Modeling and Statistical Signal Processing of Stochastic Context Free Grammars," in International Conference on Acoustics, Speech and Signal Processing, IEEE, 2007.
+
 [118] Lisý, V., et al., "Game-Theoretic Approach to Adversarial Plan Recognition," in Frontiers in Artificial Intelligence and Applications, Vol. 242, 2012.
+
 [119] Le Guillarme, N., et al., "A Generative Game-Theoretic Framework for Adversarial Plan Recognition," in Workshop on Distributed and Multi-Agent Planning, 2015.
+
 [120] Braynov, S., "Adversarial Planning and Plan Recognition: Two Sides of the Same Coin," in Secure Knowledge Management Workshop, 2006.
+
 [121] Kong, C., C. Hadzer, and M. Mashor, "Radar Tracking System Using Neural Networks," International Journal of the Computer, the Internet and Management, 1998.
+
 [122] Ming, J., and B. Bhanu, "A Multistrategy Learning Approach for Target Model Recognition, Acquisition, and Refinement," in DARPA Image Understanding Workshop, 1990.
+
 [123] Rogers, S., et al., "Artificial Neural Networks for Automatic Target Recognition," in Society of Photo-Optical Instrumentation Engineers: Applications of Artificial Neural Networks, 1990.
+
 [124] Schmidlin, V., et al., "Multitarget Radar Tracking with Neural Networks," in IFAC Symposium on System Identification, Vol. 27, 1994.
+
 [125] Xiang, Y., et al., "Target Tracking via Recursive Bayesian State Estimation in Cognitive Radar Networks," Signal Processing, Vol. 155, 2018.
+
 [126] Gunturkun, U., "Toward the Development of Radar Scene Analyzer for Cognitive Radar," IEEE Journal of Oceanic Engineering, Vol. 35, No. 2, 2010.
+
 [127] Bilik, I., J. Tabrikian, and A. Cohen, "GMM-Based Target Classification for Ground Surveillance Doppler Radar," IEEE Transactions on Aerospace and Electronic Systems, Vol. 42, 2006.
+
 [128] Davis, B., and D. Blair, "Gaussian Mixture Measurement Modeling for Long-Range Radars," Defense Systems Information Analysis Center Journal, Vol. 4, No. 3, 2017.
+
 [129] Espindle. L., and M. Kochenderfer, "Classification of Primary Radar Tracks Using Gaussian Mixture Models," IET Radar, Sonar and Navigation, Vol. 3, No. 6, 2009.
+
 [130] Kristan, M., et al., "The Seventh Visual Object Tracking VOT2019 Challenge Results," in ICCCV workshops, 2019.
+
 [131] Ma, M., et al., "Ship Classification and Detection Based on CNN Using GF-3 SAR Images," Remote Sensing, Vol. 10, 2018.
+
 [132] Wagner, S., "SAR ATR by a Combination of Convolutional Neural Network and Support Vector Machines," IEEE Transactions on Aerospace and Electronic Systems, Vol. 52, No. 6, 2016.
+
 [133] Gao, F., et al., "Combining Deep Convolutional Neural Network and SVM to SAR Image Target Recognition," in International Conference on Internet of Things, IEEE, 2017.
+
 [134] Choi, J., et al., "Context-Aware Deep Feature Compression for High-Speed Visual Tracking," in CVPR, IEEE, 2018.
+
 [135] Sanna, A., and F. Lamberti, "Advances in Target Detection and Tracking in Forward-Looking Infrared (FLIR) Imagery," Sensors, Vol. 14, No. 11, 2014.
+
 [136] Yoon, S., T. Song, and T. Kim, "Automatic Target Recognition and Tracking in ForwardLooking Infrared Image Sequences with a Complex Background," International Journal of Control, Automation and Systems, Vol. 11, 2013.
+
 [137] Auslander, B., K. Gupta, and D. Aha, "Maritime Threat Detection Using Plan Recognition," in Conference on Technologies for Homeland Security, 2012.
+
 [138] Kozy, M., "Creation of a Cognitive Radar with Machine Learning: Simulation and Implementation," M.S. thesis, Virginia Polytechnic Institute, 2019.
