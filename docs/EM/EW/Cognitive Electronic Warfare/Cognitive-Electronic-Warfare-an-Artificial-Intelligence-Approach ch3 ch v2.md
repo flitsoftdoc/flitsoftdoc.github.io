@@ -5,7 +5,7 @@
 > “AI” 并不等同于 “深度学习（Deep Learning, DL）。”  
 > $AI \supset ML \supset DL$。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-057.jpg?height=579&width=1133&top_left_y=162&top_left_x=184){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-057.jpg?height=579&width=1133&top_left_y=162&top_left_x=184){width="500"}
 
 **图3.1** 如同数学包含微积分、几何和代数一样，人工智能（AI）也包含多个子领域，如规划、机器学习（ML）和机器人学；而机器学习领域本身又包含多种技术。
 
@@ -17,7 +17,7 @@
 
 学习算法（learning algorithm）利用经验数据（empirical data）来学习对问题空间的模型。图3.2展示了构建机器学习模型的步骤。所有机器学习模型均遵循相同的基本流程进行训练与测试。算法4.1给出了实现该循环的一个代码示例。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-057.jpg?height=508&width=511&top_left_y=927&top_left_x=494){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-057.jpg?height=508&width=511&top_left_y=927&top_left_x=494){width="300"}
 
 **图3.2** 所有机器学习模型均采用相同的基本流程进行训练和测试。
 
@@ -102,15 +102,17 @@ ANNs 由输入层、隐藏层和输出层组成，如图3.4所示。网络的层
 
 混合方法本质上对学习过程起到“引导启动”（bootstrap）的作用。图3.6展示了这一思想：解析模型（analytical model）提供一个初始框架或对结果的合理猜测，而经验数据（empirical data）则进一步优化预测，使其与实际观测经验相匹配。混合方法使学习器即使在无训练数据的情况下也能基本工作，并在经过真实世界训练后表现优异。图3.7示意了深度神经网络、经典机器学习和混合方法在不同数据量下的性能表现。
 
-第4.1.1节给出了一个将传统特征与深度神经网络模型相结合的示例。第7.3.3节描述了如何将用于提取潜在特征（latent features）的深度神经网络与支持向量机（SVM）结合，以实现快速的任务中学习（in-mission learning）。第6.3节则介绍了多种在模型设计中利用人类专家知识的方法。
-
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-062.jpg?height=750&width=1106&top_left_y=1182&top_left_x=197){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-062.jpg?height=750&width=1106&top_left_y=1182&top_left_x=197){width="600"}
 
 **图3.6** 解析模型根据可观测量（observables）的 $\overline{\mathrm{o}_{n}}$ 维和可控变量（controllables）的 $\overline{\mathrm{C}_{n}}$ 维来估计性能曲面；经验模型则对预测进行细化。（引自 [35]。）
 
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-063.jpg?height=441&width=673&top_left_y=153&top_left_x=413){width="400"}
 
 **图3.7** 深度神经网络（DeepNets）能够从数据中识别潜在特征，而经典机器学习方法则依赖于传统的特征工程（feature engineering）。
+
+
+第4.1.1节给出了一个将传统特征与深度神经网络模型相结合的示例。第7.3.3节描述了如何将用于提取潜在特征（latent features）的深度神经网络与支持向量机（SVM）结合，以实现快速的任务中学习（in-mission learning）。第6.3节则介绍了多种在模型设计中利用人类专家知识的方法。
+
 
 ## 3.4 开集分类（Open-Set Classification）
 
@@ -132,7 +134,7 @@ ANNs 由输入层、隐藏层和输出层组成，如图3.4所示。网络的层
 
 模型的专长领域（domain of expertise）指明了模型应能良好捕捉的数据范围：当新观测值落在该领域内时，模型表现应优于其落在领域外的情况。例如，在图3.8中，训练数据分布在区间 $[-1.0, 1.0]$ 内，而取值 2.0 则超出了模型的专长领域。二次多项式模型在此范围外仍能良好泛化，而其他两个模型则随着偏离预期范围越远，误差迅速增大。理想情况下，模型应能自行计算其预测置信度（confidence）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-064.jpg?height=421&width=1179&top_left_y=149&top_left_x=160){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-064.jpg?height=421&width=1179&top_left_y=149&top_left_x=160){width="600"}
 
 **图3.8** 线性模型通常欠拟合；当特征数量远多于训练样本时，模型容易过拟合。（底层数据为 $y = x^{2} + \varepsilon$。）
 
