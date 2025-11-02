@@ -288,7 +288,7 @@ $$
 
 为此，我们采用一种**改进的混淆矩阵**来衡量策略在不同环境下的性能表现。不同于传统以“环境 vs. 环境”构建的混淆矩阵，此处使用“**环境 vs. 策略**”（environments by strategies）的结构。
 
-态势判别器（Situation Discriminator, SD）为每个度量指标 $m_k$ 维护一个性能表 $\mathcal{P}^{m_k} \in \mathbb{J}^{a \times b}$，其中 $\mathbb{J}$ 为正整数集合，$a \ll \overline{o_n}$ 表示环境（environment）的数量，$b$ 表示策略 $\Pi_{\forall c} v_c$ 的数量。每个单元格 $\mathcal{P}_{i, j}^{m_k}$ 对应于在与可观测值 $\mathrm{o}_n$ 相关联的环境 $i$ 中，采用策略 $j=\mathrm{s}_n$ 时所观测到的度量指标 $m_k$ 的性能。第2.1.1节描述了如何根据所收集的可观测值（observables）计算一个环境。
+态势判别器（Situation Discriminator, SD）为每个度量指标 $m_k$ 维护一个性能表 $\mathcal{P}^{m_k} \in \mathbb{J}^{a \times b}$，其中 $\mathbb{J}$ 为正整数集合，$a \ll \overline{o_n}$ 表示环境（environment）的数量，$b$ 表示策略 $\Pi_{\forall c} v_c$ 的数量。每个单元格 $\mathcal{P}_{i, j}^{m_k}$ 对应于在与可观测值 $\mathrm{o}_n$ 相关联的环境 $i$ 中，采用策略 $j=\mathrm{s}_n$ 时所观测到的度量指标 $m_k$ 的性能。 ${}^2$  第2.1.1节描述了如何根据所收集的可观测值（observables）计算一个环境。
 
 > ${}^2$ 在某些情况下，更合适的做法是保留所有观测到的性能值列表，并通过概率分布或其他统计量来衡量其相对于最优性能的优劣程度。
 
