@@ -36,21 +36,21 @@ BBN SO 能够在面对先前未知的干扰和干扰条件时，学习如何优�
 
 SO 由一个快速响应引擎（Rapid Response Engine, RRE）和一个长期响应引擎（Long-Term Response Engine, LTRE）组成：RRE 负责制定策略决策，LTRE 则学习各策略性能的模型。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-157.jpg?height=550&width=972&top_left_y=740&top_left_x=272){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-157.jpg?height=550&width=972&top_left_y=740&top_left_x=272){width="500"}
 
 给定一组训练数据（可能为空），LTRE 为每个性能指标构建性能曲面模型：$m_{k}=f_{k}(o, s)$。SO 使用支持向量机（Support Vector Machines, SVMs）（见第3.1.1节）作为回归工具来估计性能（见第4.2节）。SO 选用 SVM 是因为其能够从少量训练样本中学习，并且可在资源受限的硬件上实现。由于该设备内存有限，LTRE 会管理数据多样性（见第8.3.2节）并遗忘旧样本（见第8.3.4节）。
 
 随后，RRE 利用这些 SVM 模型 $f_{k}$，在任务执行过程中依据算法 5.1 快速做出实时策略决策。
 
-SO 能够在资源受限的硬件上，仅凭少量样本（甚至在没有先验训练数据的情况下），实时学习如何缓解通信干扰。
+> SO 能够在资源受限的硬件上，仅凭少量样本（*甚至在没有先验训练数据的情况下*），实时学习如何缓解通信干扰。
 
 SO 已在多种干扰条件下进行了测试，包括分布式干扰和复杂干扰机（complex jammers），测试环境涵盖仿真、实验室模拟和外场试验。相关结果基于搭载硬实时操作系统（hard real-time operating system）的 PPC440 平台展示 [35]。
 
-在每个时间步，平台提供可观测量（observables）以及各性能指标 $m$ 的反馈。若 $m_{k}(t)$ 的估计性能与观测到的性能 $\hat{m}_{k}(t+\delta)$ 之间存在显著差异，* 则 RRE 会触发一次重训练事件，LTRE 将利用新增的训练数据重建 $m_{k}$ 对应的 SVM 模型。因此，SO 采用强化学习（Reinforcement Learning, RL）在任务相关的时间尺度上实现任务中学习（in-mission learning）。
+在每个时间步，平台提供可观测量（observables）以及各性能指标 $m$ 的反馈。若 $m_{k}(t)$ 的估计性能与观测到的性能 $\hat{m}_{k}(t+\delta)$ 之间存在显著差异 *， 则 RRE 会触发一次重训练事件，LTRE 将利用新增的训练数据重建 $m_{k}$ 对应的 SVM 模型。因此，SO 采用强化学习（Reinforcement Learning, RL）在任务相关的时间尺度上实现任务中学习（in-mission learning）。
 
 ${ }^{*}$ BBN SO 使用 $\delta=1$ 以获取即时反馈。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-158.jpg?height=509&width=1005&top_left_y=676&top_left_x=237){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-158.jpg?height=509&width=1005&top_left_y=676&top_left_x=237){width="500"}
 
 SO 对平台和问题领域保持中立（agnostic）。所有可观测量（observables）、可控量（controllables）和性能指标（metrics）均在配置 XML 文件中列出。可控量列出了其有效设置值，性能指标则列出了对应的权重和代价。因此，该学习与优化方法可迁移至其他平台、问题集和效用指标（utility metrics）。
 
@@ -70,16 +70,17 @@ BBN SO 属于自 2006 年起开展的面向射频（RF）系统的机器学习�
 
 图 7.2 展示了一种可能的 ML 架构。每个特征（例如模式或行为）可由人工编写的算法导出，也可通过 ML 方法（传统方法、深度网络（DeepNet）或混合方法）推断得出。多个分类器利用这些特征计算其局部的威胁模式估计值，再通过集成方法（ensemble method）（见第 3.2 节）选择最优的威胁模式。最后，变化检测（change detection）将当前模式与先前模式进行比较。算法 7.1 给出了对应的代码示例，其中使用 scikit-learn 构建了一个由不同分类器组成的集成模型：决策树（decision tree）、极端随机树（extra tree）、高斯朴素贝叶斯（Gaussian Naïve Bayes），以及两个使用不同 $k$ 值的 $k$ 近邻（$k$NN）模型。图 7.3 展示了实验结果。evalModel() 中的十折交叉验证（tenfold cross-validation）为每个模型生成 10 个得分，并以箱线图（box-and-whisker plot）形式呈现。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-159.jpg?height=282&width=1010&top_left_y=149&top_left_x=250){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-159.jpg?height=282&width=1010&top_left_y=149&top_left_x=250){width="600"}
 
 **图 7.2** 集成方法（Ensemble methods）可通过选择或组合多个假设来提高准确性。特征可以是人工生成的，也可以是通过学习获得的，任何机器学习（ML）方法均可作为中间分类器。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-159.jpg?height=684&width=1205&top_left_y=641&top_left_x=145){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-159.jpg?height=684&width=1205&top_left_y=641&top_left_x=145){width="500"}
 
 **图 7.3** 集成方法的准确率可高于独立模型。每个箱线图（boxplot）展示了对应模型的十折交叉验证得分。（a）$k$ 折交叉验证（$k$-fold cross-validation）训练 $k$ 个模型；每个模型使用数据集中不同的 $1/k$ 部分作为测试样本。（b）箱线图（box-and-whisker plot）展示数值的分布情况：中央箱体表示数据中间一半的范围（第一四分位数到第三四分位数），须线（whiskers）对应 1.5 倍四分位距（若数据服从正态分布，则覆盖约 99.3% 的数据）。离群值（outliers）以单独点的形式标出。
 
 /// note| 算法 7.1 集成方法（Ensemble methods）可获得比独立模型更高的准确率。scikit-learn 包含多种分类器和集成方法。
 
+```python
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import ExtraTreeClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -137,14 +138,18 @@ if __name__ == '__main__':
     fig = pyplot.figure()
     pyplot.boxplot(results, labels=names)
     fig.savefig('ensemble.png')
-
+```
 ///
 
 ## 7.2 任务中重规划（In-Mission Replanning）
 
-> 任何作战计划都无法确信地超越与敌方主力首次遭遇之后。
+
+> 任何作战计划在与敌方主力首次遭遇之后，都无法有任何确定的可行性。
+> 
 > ——赫尔穆特·冯·毛奇（Helmuth von Moltke）  
+> 
 > 《军事历史单行本》（Kriegsgechichtliche Einzelschriften，1880年）  
+> 
 > （常被误引为：“没有任何计划能在与敌人接触后依然有效。”）
 
 任务中重规划（In-mission replanning）确保即使在遭遇意外情况或任务目标发生变化时，计划仍保持可行性。新的优先级可能出现，资源也可能被意外耗尽。某些规划方法，例如条件规划（conditional planning）和马尔可夫决策过程（MDPs, Markov Decision Processes），会为预期结果预先纳入多种应对选项。
