@@ -260,7 +260,7 @@ $$
 
 在单一规划器内部，也可能有益于采用多层抽象进行推理，并在每次迭代中逐步提高时间分辨率。尽管这种方法比解耦式规划器更难设计，但由于所有依赖关系都是显式建模的，因此可能产生显著更优的解决方案。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-140.jpg?height=411&width=985&top_left_y=1604&top_left_x=259){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-140.jpg?height=411&width=985&top_left_y=1604&top_left_x=259){width="600"}
 
 图6.6 不同的时间需求驱动不同的架构选择。
 
@@ -288,7 +288,7 @@ $$
 
 通常，HMI将人类操作员的动作转换为机器的指令动作，再将机器的传感数据转换回人类操作员，如图6.7所示 [90]。在传统HMI中，这些转换过程是静态的，不会根据人类操作员、机器或环境的状态而变化。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-142.jpg?height=337&width=1080&top_left_y=1652&top_left_x=210){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-142.jpg?height=337&width=1080&top_left_y=1652&top_left_x=210){width="500"}
 
 图6.7 HMI在人与机器之间进行转换（改编自 [90]）。
 
@@ -309,7 +309,7 @@ $$
 
 电子战兵力管理（Electronic Battle Management, EBM）系统负责规划部署多少平台、每个平台分配哪些资源，以及它们将部署至何处。为实现所有这些目标，EBM系统可受益于多个支持人机协同（Human-Machine Teaming, HMT）的人机界面（HMI），并可能需要与图1.4所示EBM系统中每个概念模块建立交互节点。此外，设置一个覆盖全局的顶层HMI，为整个EBM系统提供端到端（end-to-end）能力，也可能大有裨益。在每一个基于HMT的HMI处，都必须建立信任关系。图6.8展示了认知电子战（cognitive EW）系统中EBM各组件潜在的HMI交互节点。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-143.jpg?height=430&width=1077&top_left_y=1524&top_left_x=213){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-143.jpg?height=430&width=1077&top_left_y=1524&top_left_x=213){width="600"}
 
 图6.8 任务前规划人员、电子战军官（EWOs）和系统设计人员在所有节点与系统交互；系统必须接受他们的指令与输入，跟踪其任务，学习其偏好，并解释自身的决策。
 
@@ -370,7 +370,6 @@ EWPMT 提供电子战任务规划、电子战目标定位和仿真能力，以�
 
 规划器必须同时应对行动不确定性与信息不确定性，管理时间与资源约束，并决定与团队成员通信的内容及时机。领域特定的启发式方法与元学习（metalearning）（见第5.1.3节）有助于优化搜索过程。博弈论方法（game-theoretic approaches）则有助于协调合作型团队管理并应对竞争性对手。
 
-## References
 
 ## References
 
