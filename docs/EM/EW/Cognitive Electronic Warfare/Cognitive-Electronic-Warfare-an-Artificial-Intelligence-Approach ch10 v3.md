@@ -14,7 +14,7 @@
 
 信任必须以安全性（safety）和安保性（security）[1]为基础，且信任程度取决于信任方所能容忍的风险水平，如图10.1所示。信任程度决定了他们将授予AI的权限大小。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-209.jpg?height=324&width=324&top_left_y=1138&top_left_x=588){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-209.jpg?height=324&width=324&top_left_y=1138&top_left_x=588){width="300"}
 
 图10.1 信任取决于安全性与安保性，并取决于可接受的风险水平。
 
@@ -28,11 +28,13 @@
 
 真实数据文件（Ground-Truth Data File, GTDF）包含所有已知数据，无论其生成方式如何；表10.1展示了一个来自真实通信电子防护（Electronic Protection, EP）系统的示例。根据AI模块的需求，GTDF可能包含原始I/Q采样数据、脉冲描述字（Pulse Descriptor Words, PDWs）或推断出的特征。GTDF涵盖所有已知真实条件的任务场景，包括任务、节点（友方、中立方和敌方）以及配置的所有组合。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-209.jpg?height=370&width=1029&top_left_y=1588&top_left_x=235){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-209.jpg?height=370&width=1029&top_left_y=1588&top_left_x=235){width="500"}
 
 图10.2 闭环场景驱动器确保认知决策引擎能对刺激做出正确响应：将可观测量（observables）$o$ 和度量指标（metrics）$m$ 发送给AI模块，后者据此计算出策略（strategy）$s$。
 
 **表10.1** 包含所有已知数据（仿真、模拟或真实世界）的真实数据文件（Ground-Truth Data File, GTDF）
+
+![](https://cdn.mathpix.com/snip/images/eMaATScG-avOQaQPDceCndKKKIrCi9QBLYtK8yzdNsM.original.fullsize.png)
 
 | ENV | SHo1 | SHo2 | elol | e1o2 | elo3 | elo4 | elo5 | elo6 | e201 | e2o2 | e2o3 | e204 | e205 | e206 | MT1 | MT2 | MT3 | MT4 | MT5 | m1 | m2 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -91,7 +93,7 @@
 
 图10.4展示了一个用于开发和测试多个AI模块的概念性架构。场景驱动器（Scenario Driver, SD）生成的数据格式与实际部署系统中接收到的数据格式一致。在对整个处理序列进行测试之前，每个模块都应独立完成单元测试（unit test）。当将模块集成到序列中时，应将其余模块替换为“全知”（omniscient）组件——即始终正确的组件。（例如，为测试态势感知（Situation Awareness, SA）模块，决策管理（Decision Management, DM）模块可简化为一组人工编写的规则，而毁伤效果评估（Battle Damage Assessment, BDA）模块则精确知晓所选电子对抗措施（Electronic Countermeasures, ECM）的实际效果。）对BDA和SA模块的评估应采用加权准确率（weighted accuracy）（参见第10.3.1节或第10.3.2.3节），而对DM模块的评估则采用充分性（adequacy）指标（参见第10.3.3.1节）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-212.jpg?height=280&width=904&top_left_y=1753&top_left_x=298){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-212.jpg?height=280&width=904&top_left_y=1753&top_left_x=298){width="500"}
 
 **图10.4** 场景驱动器（SD）可用于驱动多个AI模块的测试。
 
@@ -110,7 +112,7 @@
 
 图10.5展示了在开发BBN认知引擎（BBN SO）（参见例7.1 [3]）过程中收集的 $n$-choose-$k$ 测试结果。针对 $n=9$ 个环境中的每一个，SD 在所有可能的子集 $k \subseteq n$ 上训练SO，并在全部九个环境上进行测试。该图表共包含512次独立测试，涵盖从 $k=0$（无任何先验训练数据）到 $k=9$（在全部 $n=9$ 个环境上训练，但测试时SO不知道环境出现顺序）的各种情况。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-214.jpg?height=789&width=1154&top_left_y=145&top_left_x=169){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-214.jpg?height=789&width=1154&top_left_y=145&top_left_x=169){width="600"}
 
 **图10.5** BBN认知引擎（BBN SO）的 $n$-choose-$k$ 消融试验表明：随着SO先验训练数据中包含的环境条件减少，其性能呈现优雅降级（graceful degradation）。图中每个数据点对应一次实验的充分性（adequacy）结果（例如图10.8所示）；横轴 $x$ 表示 $k$，即训练数据集中包含的环境条件数量；纵轴 $y$ 表示根据第10.3.3.1节计算的充分性值。括号中的“(x)”数值表示针对9选k（9-choose-k）所执行的实验次数。（参见例7.1，[3]）
 
@@ -149,20 +151,22 @@ $$
 $$
 
 标准差 $\sigma$ 代表一种“基准学习器”的性能——该学习器对所有样本均以均值 $\mu$ 作为预测值。我们的目标是尽可能降低 nRMSE：  
+
 - nRMSE = 0.0 表示所有样本的预测均无误差；  
 - nRMSE > 1.0 则表明无需使用复杂的模型，因为直接使用均值作为预测反而效果更好。
 
 图10.6展示了一个简单示例，用于比较两个度量指标下不同模型的性能。
 
-较高的 nRMSE 表明模型难以准确拟合性能曲面（performance surface）。这一结果可帮助系统工程师识别和诊断系统性问题，例如缺失的可观测量（missing observables）、传感器故障（faulty sensors）、度量指标不可靠（unreliable metrics）或时间延迟（temporal latencies）等。
-
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-217.jpg?height=1294&width=822&top_left_y=143&top_left_x=338){width="400"}
 
 **图10.6** 为比较预测值范围不同的模型，必须将 RMSE 除以标准差进行归一化。（a）度量指标 $m_{1}$ 的取值范围为 458,365 至 537,068，均值 $\mu = 501,041$，标准差 $\sigma = 18,061$；RMSE 为 6,328，对应 nRMSE 为 0.350。（b）度量指标 $m_{2}$ 的取值范围为 5.7 至 13.6，均值 $\mu = 9.7$，标准差 $\sigma = 1.7$；RMSE 为 0.76，对应 nRMSE 为 0.442。（当所有预测值与真实值完全一致并落在灰色对角线上时，nRMSE = 0.0。）
 
+较高的 nRMSE 表明模型难以准确拟合性能曲面（performance surface）。这一结果可帮助系统工程师识别和诊断系统性问题，例如缺失的可观测量（missing observables）、传感器故障（faulty sensors）、度量指标不可靠（unreliable metrics）或时间延迟（temporal latencies）等。
+
 ### 10.3.2 分类与混淆矩阵（Classification and Confusion Matrices）
 
 分类算法通常通过混淆矩阵（confusion matrices）计算准确率（accuracy）进行评估，其结构如表10.2所示。矩阵的行对应已知的真实类别（observed classes），列对应模型预测的类别（predicted classes）。  
+
 - **真正例（True Positive, TP）** 和 **真负例（True Negative, TN）** 表示模型预测正确；  
 - **假正例（False Positive, FP）** 和 **假负例（False Negative, FN）** 表示模型预测错误。
 
@@ -343,7 +347,7 @@ Callout 10.1列出了开发高效AI系统所必需的任务清单。图10.10所�
 
 为将这些设计理念纳入正式的认证方法论，欧洲航空安全局（European Aviation Safety Agency）与Daedalean AG公司对传统的“V”型流程进行了扩展，以适用于认知系统。图10.11所示的学习保障“W”型流程（learning assurance “W”）纳入了针对学习系统的专门步骤：**数据全生命周期管理**（data life-cycle management）以及**模型训练与验证**（model training and verification）[6]，具体描述如下：
 
-/// note| 专栏10.1(Callout 10.1)  一个AI项目的五个步骤，用于指导并约束开发工作，确保仅执行必要且充分的行动。
+/// note| Callout(专栏) 10.1  一个AI项目的五个步骤，用于指导并约束开发工作，确保仅执行必要且充分的行动。
 
 1988年，Cohen和Howe [2] 提出了一个AI研究的五阶段模型，为每个阶段提供了评估指南。这些指南以详细的评估标准与技术形式呈现，说明了如何开展评估，至今仍然适用：
 
@@ -369,11 +373,11 @@ Callout 10.1列出了开发高效AI系统所必需的任务清单。图10.10所�
 
 **图10.10** 在设计阶段，验证原则适用于数据管理、模型开发和元学习（metalearning）的迭代过程。良好的设计验证可为运行阶段提供性能保障。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-226.jpg?height=603&width=1144&top_left_y=1217&top_left_x=177){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-226.jpg?height=603&width=1144&top_left_y=1217&top_left_x=177){width="700"}
 
 **图10.11** 面向学习系统的验证与确认（V&V）流程。（来源：[6]，经许可转载。）
 
-/// note| Callout 10.2)  准确性（Accuracy）是系统评估的主要指标，但其表现依赖于多种上下文因素和系统需求。
+/// note| Callout 10.2  准确性（Accuracy）是系统评估的主要指标，但其表现依赖于多种上下文因素和系统需求。
 
 - 准确性（Accuracy）：对环境、行为及因果事件模式的成功表征，以及电子防护/电子攻击（EP/EA）策略的高充分性（adequacy）。  
 - 可扩展性（Scalability）：可处理的辐射源（emitter）数量、策略数量、训练数据规模。  
@@ -402,7 +406,7 @@ Callout 10.1列出了开发高效AI系统所必需的任务清单。图10.10所�
 | 将模型视为白盒（white box） | 结合数学与实证概念 | 使用形式化方法获取最坏情况下的鲁棒性边界 |
 | - 对训练后的模型进行系统性测试<br> - 检查模型的内在与外在特征/行为 | - 识别训练模型的边界案例<br> - 评估预测的置信度<br> - 对抗性测试（Adversarial testing） | - 理论上判定在训练数据扰动下模型何时发生剧烈变化（例如，机器学习算法稳定性被破坏时） |
 
-![](https://cdn.mathpix.com/snip/images/78SmzD5D3oq01X54hBkvHR8ScR-U2M7_gYn1KR1bs3w.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/78SmzD5D3oq01X54hBkvHR8ScR-U2M7_gYn1KR1bs3w.original.fullsize.png){width="600"}
 
 **图10.12** 学习系统的验证方法包括实证、形式化及混合方法。
 
