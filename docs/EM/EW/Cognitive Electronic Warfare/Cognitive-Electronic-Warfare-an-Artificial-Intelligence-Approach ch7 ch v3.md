@@ -84,8 +84,7 @@ BBN SO 属于自 2006 年起开展的面向射频（RF）系统的机器学习�
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import ExtraTreeClassifier
 from sklearn.naive_bayes import GaussianNB
-from sklearn.neighbors import\
-  KNeighborsClassifier as KNN
+from sklearn.neighbors import KNeighborsClassifier as KNN
 from sklearn.ensemble import VotingClassifier
 import numpy as np
 from sklearn.datasets import make_classification
