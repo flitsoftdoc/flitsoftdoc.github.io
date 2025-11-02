@@ -17,7 +17,7 @@
 **图 5.1** EP 与 EA 位于一个连续谱系上，所选策略可同时有效服务于多个任务目标。
 
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-101.jpg?height=532&width=1115&top_left_y=514&top_left_x=193){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-101.jpg?height=532&width=1115&top_left_y=514&top_left_x=193){width="600"}
 
 **图 5.2** 决策制定器基于近期可观测特征 $o$ 和度量 $m$ 的性能反馈选择策略 $s$。可选的在线学习步骤根据经验数据更新性能模型。（基于例 7.1。）
 
