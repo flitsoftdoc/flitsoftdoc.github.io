@@ -126,7 +126,7 @@ $\quad\quad For$ 对每个度量 $m_{k}$：
 
 $\quad\quad  m_{k}=f_{k}\left(o, s_{i}\right) \quad$   // 估计的度量值 
 
-$\quad Compute \tilde{U}_{n}\left(s_{i}\right)$      // 估计的效用 
+$\quad Compute  \tilde{U}_{n}\left(s_{i}\right)$      // 估计的效用 
 
 $\quad P =$ 更新种群（更新个体位置或个体本身）
 
