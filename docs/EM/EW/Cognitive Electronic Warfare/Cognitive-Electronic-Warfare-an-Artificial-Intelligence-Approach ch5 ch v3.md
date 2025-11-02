@@ -180,7 +180,7 @@ Select  $s=\operatorname{argmax}_{s_{i} \in P}\left(\tilde{U}_{n}\left(s_{i}\rig
 
 元学习（Metalearning）可帮助优先搜索策略，首先聚焦于最重要的控制参数（controllables）——即对解质量贡献最大的那些参数。算法先在少量关键控制参数的选项中进行搜索，而对次要参数则采用默认值或上一时间步所选的值。只有在确定了关键参数的取值后，算法才会进一步搜索次要控制参数。这种方法类似于“学习如何规划”（learning how to plan）（见第 7.3 节）。例如，在通信干扰场景中，一个主要控制参数可能是用于产生干扰的合适占空比（duty cycle），而次要控制参数则包括干扰波形的具体细节，如频偏（frequency offsets）和特定的调制技术（modulation techniques）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-110.jpg?height=565&width=575&top_left_y=1417&top_left_x=465){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-110.jpg?height=565&width=575&top_left_y=1417&top_left_x=465){width="300"}
 
 **图 5.6** 元学习通过改变数据表示、优先化搜索顺序、调整超参数以及变换效用函数，以提升解的质量。
 
