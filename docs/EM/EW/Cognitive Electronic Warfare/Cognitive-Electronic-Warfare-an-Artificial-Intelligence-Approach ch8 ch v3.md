@@ -112,7 +112,8 @@
 | 切片（Slicing） | 训练后的权重（Trained weights） | 验证集群体（Validation population） |
 |  |  | 测试集群体（Test population） |
 |  |  | 结果（准确率、耗时等） |
->上表源自：［5］
+
+> 上表源自：［5］
 
 原始数据本身理想情况下应记录每个发射机与每个接收机的详细信息，包括时间同步传输（time-synchronous transmissions）等信息。这些细节使得分析移动性（mobility）、发射机与接收机链路（transmitter versus receiver chains）以及同时存在的信号（simultaneous signals）所产生的影响成为可能。
 
