@@ -2,9 +2,9 @@
 
 基于第1至8章中对态势感知（SA, Situational Awareness）和决策制定（DM, Decision Making）的深入理解，我们可以将图1.4中认知系统的组成部分重新绘制为如图9.1所示。模块化架构（modular architecture）为这些能力提供了基础支撑，使得不同技术能够提供不同的服务，并确保信息与控制流的一致性。本章简要探讨了软件与硬件架构方面的考虑，并提供了一份简短的开发者路线图。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-199.jpg?height=698&width=1019&top_left_y=151&top_left_x=241){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-199.jpg?height=698&width=1019&top_left_y=151&top_left_x=241){width="600"}
 
-图9.1 决策制定（DM）高度依赖于态势感知（SA）。
+**图9.1** 决策制定（DM）高度依赖于态势感知（SA）。
 
 ## 9.1 软件架构：进程间通信（Interprocess）
 
@@ -18,17 +18,17 @@
 
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-199.jpg?height=342&width=983&top_left_y=1001&top_left_x=259){width="400"}
 
-图9.2 在紧密耦合的传统API中添加或修改模块需要更新所有连接的模块，而基于代理（brokered）的API则不会影响其他模块。
+**图9.2** 在紧密耦合的传统API中添加或修改模块需要更新所有连接的模块，而基于代理（brokered）的API则不会影响其他模块。
 
 首个在射频（RF, Radio Frequency）领域提供此类能力的软件架构是ADROIT代理（ADROIT broker）[1]，其采用的抽象结构如图9.3所示。每个模块暴露其参数及其属性（尤其是读/写权限）。当模块发生变更（例如新增一个参数）时，只需调用 `exposeParameter(name, properties)` 来暴露该新参数，而无需为该参数新增一个API函数。ADROIT通过图9.4所示的具体模块实例化了该代理。ADROIT的开发人员还进行了若干详细案例演示，清晰展示了网络模块与认知层（cognitive layer）之间的关注点分离（separation of concerns）[1]。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-200.jpg?height=724&width=1097&top_left_y=149&top_left_x=202){width="400"}
 
-图9.3 ADROIT是首个通过代理支持认知控制（cognitive control）的网络架构。（引自[1]。）
+**图9.3** ADROIT是首个通过代理支持认知控制（cognitive control）的网络架构。（引自[1]。）
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-201.jpg?height=1686&width=1014&top_left_y=277&top_left_x=215){width="400"}
+![](https://cdn.mathpix.com/snip/images/54nMDM9MW4F8xnk2Lk_oCLNKxPOWKAYf79oeRLHGjIc.original.fullsize.png)
 
-图9.4 ADROIT利用代理为模块化网络协议栈（modular networking stack）提供认知控制。（引自[1]。）
+**图9.4** ADROIT利用代理为模块化网络协议栈（modular networking stack）提供认知控制。（引自[1]。）
 
 这种通用化、模块化方法的优势在于，它不限制认知（cognition）的具体形式，使设计人员能够根据问题选择合适的技术：
 
@@ -54,20 +54,20 @@ BBN SO（见例7.1）中使用的支持向量机（SVMs, Support Vector Machines
 
 该作战系统（SO, System Operator）的SVM模型源自WEKA [10]，该库在当时是可用的最快机器学习库之一，并同时提供Java和C/C++版本。为嵌入式系统移植该代码的工作包括：移除不必要的代码、扁平化或替换对象结构，以及评估数值表示方式 [11]。其中工作量最大的部分（远超其他任务）是将代码改写为多线程结构：使射频推理引擎（RRE, Radio Frequency Reasoning Engine）在硬实时（hard real-time）调度下运行，确保策略选择具有确定性的时序；而长期推理引擎（LTRE, Long-Term Reasoning Engine）则在计算资源可用时于后台线程中运行。图9.6展示了这种线程划分。经过优化后的嵌入式代码运行时间仅为原始C/C++基准代码的5%，其中基准代码已禁用了“易于剥离”（easy-to-ablate）的功能模块。原始的现成（off-the-shelf）Java代码则包含一些无法剥离的额外开销，例如线程间共享计算，其运行速度比嵌入式代码慢了1,000,000倍。若将RRE和LTRE置于不同进程中，运行时间可能还会再增加超过1,000倍，因为两个进程将重复计算共享值，且系统还需承担跨进程共享数据集所带来的额外开销。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-203.jpg?height=902&width=1137&top_left_y=158&top_left_x=180){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-203.jpg?height=902&width=1137&top_left_y=158&top_left_x=180){width="600"}
 
-图9.5 BBN SO利用线程在线程间共享数据以实现不同能力的协同。（例7.1，[9]。）
+**图9.5** BBN SO利用线程在线程间共享数据以实现不同能力的协同。（例7.1，[9]。）
 
 ![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-203.jpg?height=748&width=863&top_left_y=1226&top_left_x=309){width="400"}
 
-图9.6 RRE在硬实时调度下计算策略选择，而LTRE在计算资源可用时于后台线程中运行。（例7.1，[9]。）
+**图9.6** RRE在硬实时调度下计算策略选择，而LTRE在计算资源可用时于后台线程中运行。（例7.1，[9]。）
 
 ## 9.3 硬件选型（Hardware Choices）
 
 许多认知电子战（cognitive EW）解决方案将以软件（或固件）叠加层（overlay）的形式部署在现有遗留系统之上，在这种情况下，本节内容并不适用。但对于具备硬件选择自由度的系统而言，需权衡若干关键因素。
 
 > 客户正逐渐意识到，不存在一种“最佳”的硬件能够运行种类繁多的人工智能（AI）应用，因为AI本身并无单一类型。从数据中心到边缘再到终端设备，具体应用的约束条件决定了所需硬件的能力，这也再次凸显了构建更加多样化硬件组合（hardware portfolio）的必要性。
-
+>
 > ——Naveen Rao（英特尔），2018年 [12]
 
 对于电子战（EW）系统而言，通常最合适的硬件组合是中央处理器（CPU, Central Processing Unit）与现场可编程门阵列（FPGA, Field-Programmable Gate Array）的结合。Callout9.1强调了EW系统在硬件设计中的一些关键考量。
@@ -103,7 +103,7 @@ BBN SO（见例7.1）中使用的支持向量机（SVMs, Support Vector Machines
 | **GPU**（图形处理器） | - 专为执行大量相同并行操作（如矩阵运算）而设计<br> - 包含数千个相同的处理器核心 | - 供应商可靠<br> - 对深度神经网络（DeepNets）的软件支持最完善<br> - 功耗高<br> - 计算性能提升以高昂的内存传输开销为代价<br> - 不适用于硬实时任务<br> - 规格不透明（“黑盒”特性）<br> - 生命周期短于CPU或FPGA<br> - 安全功能集不够先进 |
 | **ASIC**（专用集成电路） | - 面向特定应用的集成电路（Application-Specific Integrated Circuit）<br> - 能效比（性能/功耗）最优的解决方案 | - 仅支持单一模式（专用AI处理）<br> - 因技术快速过时，寿命极短（<1年）<br> - 软件支持有限 |
 
-GPU不适用于电子战（EW）这一事实实际上并非损失：
+GPU不适用于电子战（EW）这一事实实际上并非是一种损失：
 
 > 电子战并非“大数据”（big-data）环境。
 
