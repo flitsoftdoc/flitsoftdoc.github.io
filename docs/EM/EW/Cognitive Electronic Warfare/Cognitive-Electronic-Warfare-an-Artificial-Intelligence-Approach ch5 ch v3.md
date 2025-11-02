@@ -228,10 +228,10 @@ Select  $s=\operatorname{argmax}_{s_{i} \in P}\left(\tilde{U}_{n}\left(s_{i}\rig
 
 | 类别 | 示例 |
 | :--- | :--- |
-| **通信**（Comms） | 采用局部搜索、模拟退火（SA）和蚁群优化（ACO）的卫星广播调度 [80]；面向低功耗终端操作的卫星调度 [81]；最小化发射能耗 [82]；长期演进（LTE）上行链路定时对齐与功率控制 [83]；多天线系统的用户调度 [84]；基于机器学习（ML）的鱼眼状态路由（Fish-eye State Routing, FSR）用于移动自组织网络（MANET）优化 [85]；基于模拟退火的自适应 MANET 路由算法 [86]；基于恢复微时隙（recovered minislots）的 MANET 传输调度协议 [87]；基于位置的广播 TDMA 调度用于 MANET [88]；认知无线电网络（CRN）中的频谱感知调度器 [89]；基于遗传算法（GA）的 CRN 调度算法 [90]；CRN 的实时启发式调度 [91]；CRN 的实时调度器 [92]；面向集中式 CRN 的多项式时间、节能型启发式调度器 [93]；分布式传感器网络调度 [94]；资源分配技术综述 [95]，其中方法包括克隆 GA、基于加权和法（Weighted-Sum Method, WSM）的分布估计算法（Estimation of Distribution Algorithm, EDA）用于绿色无线资源分配，以及 CEO 算法。 |
-| **雷达**（Radar） | 基于混合 GA 与启发式的相控阵任务调度 [96]；基于 ML 的有源电子扫描阵列（AESA）天线调度 [97]；多功能雷达网络的贪心与启发式调度 [98]；多功能相控阵雷达调度启发式方法 [99]；采用蒙特卡洛树搜索（Monte Carlo Tree Search）的多功能雷达 [100]。 |
-| **电子战**（EW） | 用于电子防护（EP）的 FSR 与功率控制 [85]；面向机载电子对抗（ECM）的部分可观测马尔可夫决策过程（POMDP） [101]；基于 ML 的周期性传感器调度用于电子支援（ES）[102]；基于博弈论的干扰资源与电子攻击（EA）策略优化方法 [103]；基于 POMDP 与决策树的风险驱动多传感器调度，用于目标威胁评估 [104]。 |
-| **通用框架**（General framework） | 基于知识工程的调度 [105]；面向网络化嵌入式系统的异构驱动任务调度与端到端同步调度算法 [106]；基于多项式时间启发式算法的效用累积型实时调度器 [107]；面向异构分布式系统的强化学习（RL）调度器 [108]；面向大规模资源调度的通用 ML 解决方案 [109]；采用深度强化学习（deep RL）的在线资源调度算法 [110]；用于组合优化问题启发式学习的 ML 方法 [111]；基于进化计算的调度方法 [112]；用于规划与调度的时序推理（temporal reasoning）[113]。 |
+| **通信**<br>（Comms） | 采用局部搜索、模拟退火（SA）和蚁群优化（ACO）的卫星广播调度 [80]；面向低功耗终端操作的卫星调度 [81]；最小化发射能耗 [82]；长期演进（LTE）上行链路定时对齐与功率控制 [83]；多天线系统的用户调度 [84]；基于机器学习（ML）的鱼眼状态路由（Fish-eye State Routing, FSR）用于移动自组织网络（MANET）优化 [85]；基于模拟退火的自适应 MANET 路由算法 [86]；基于恢复微时隙（recovered minislots）的 MANET 传输调度协议 [87]；基于位置的广播 TDMA 调度用于 MANET [88]；认知无线电网络（CRN）中的频谱感知调度器 [89]；基于遗传算法（GA）的 CRN 调度算法 [90]；CRN 的实时启发式调度 [91]；CRN 的实时调度器 [92]；面向集中式 CRN 的多项式时间、节能型启发式调度器 [93]；分布式传感器网络调度 [94]；资源分配技术综述 [95]，其中方法包括克隆 GA、基于加权和法（Weighted-Sum Method, WSM）的分布估计算法（Estimation of Distribution Algorithm, EDA）用于绿色无线资源分配，以及 CEO 算法。 |
+| **雷达**<br>（Radar） | 基于混合 GA 与启发式的相控阵任务调度 [96]；基于 ML 的有源电子扫描阵列（AESA）天线调度 [97]；多功能雷达网络的贪心与启发式调度 [98]；多功能相控阵雷达调度启发式方法 [99]；采用蒙特卡洛树搜索（Monte Carlo Tree Search）的多功能雷达 [100]。 |
+| **电子战**<br>（EW） | 用于电子防护（EP）的 FSR 与功率控制 [85]；面向机载电子对抗（ECM）的部分可观测马尔可夫决策过程（POMDP） [101]；基于 ML 的周期性传感器调度用于电子支援（ES）[102]；基于博弈论的干扰资源与电子攻击（EA）策略优化方法 [103]；基于 POMDP 与决策树的风险驱动多传感器调度，用于目标威胁评估 [104]。 |
+| **通用框架**<br>（General framework） | 基于知识工程的调度 [105]；面向网络化嵌入式系统的异构驱动任务调度与端到端同步调度算法 [106]；基于多项式时间启发式算法的效用累积型实时调度器 [107]；面向异构分布式系统的强化学习（RL）调度器 [108]；面向大规模资源调度的通用 ML 解决方案 [109]；采用深度强化学习（deep RL）的在线资源调度算法 [110]；用于组合优化问题启发式学习的 ML 方法 [111]；基于进化计算的调度方法 [112]；用于规划与调度的时序推理（temporal reasoning）[113]。 |
 
 ## 5.3 任意时间算法（Anytime Algorithms）
 
@@ -294,140 +294,278 @@ Zilberstein研究了元控制（Metacontrol）问题：即对多个任意时间�
 ## References
 
 [1] Arrow, K., "Decision Theory and Operations Research," Operations Research, Vol. 5, No. 6, 1957.
+
 [2] Russell, S., and P. Norvig, Artificial Intelligence: A Modern Approach, Pearson Education, 2015.
+
 [3] Chien, S., et al., "Automated Planning and Scheduling for Goal-Based Autonomous Spacecraft," Intelligent Systems, Vol. 13, No. 5, 1998.
+
 [4] R-Moreno, M., et al., "RFID Technology and AI Techniques for People Location, Orientation and Guiding," in International Conference on Industrial, Engineering and Other Applications of Applied Intelligent Systems, 2009.
+
 [5] Du, D., P. Pardalos, and W. Wu, "History of Optimization," in Encyclopedia of Optimization (C. Floudas and P. Pardalos, Eds.), Springer, 2009.
+
 [6] Ramzan, M., et al., "Multi-Objective Optimization for Spectrum Sharing in Cognitive Radio Networks: A Review," Pervasive and Mobile Computing, Vol. 41, 2017.
+
 [7] Cassady, P., Bayesian Analysis of Target Detection with Enhanced Receiver Operating Characteristic, 2019. Online: https://arxiv.org/abs/1903.08165.
+
 [8] Chalise, B., M. Amin, and B. Himed, "Performance Tradeoff in a Unified Passive Radar and Communications System," IEEE Signal Processing Letters, Vol. 24, No. 9, 2017.
+
 [9] Grossi, E., M. Lops, and L. Venturino, "A New Look at the Radar Detection Problem," Transactions on Signal Processing, Vol. 64, No. 22, 2016.
+
 [10] Chiriyath, A., et al., "Radar Waveform Optimization for Joint Radar Communications Performance," Electronics, Vol. 8, No. 12, 2019.
+
 [11] AlQerm, I., and B. Shihada, "Adaptive Multi-Objective Optimization Scheme for Cognitive Radio Resource Management," in GLOBECOM, IEEE, 2014.
-[12] Mitchell, A.. et al., "Cost Function Design for the Fully Adaptive Radar Framework," IET Radar, Sonar and Navigation, 2018.
+
+[12] Mitchell, A., et al., "Cost Function Design for the Fully Adaptive Radar Framework," IET Radar, Sonar and Navigation, 2018.
+
 [13] Haigh, K. Z., O. Olofinboba, and C. Y. Tang, "Designing an Implementable User-Oriented Objective Function for MANETs," in International Conference On Networking, Sensing and Control, IEEE, 2007.
+
 [14] Charlish, A., and F. Hoffman, "Cognitive Radar Management," in Novel Radar Techniques and Applications (R. Klemm, et al., Eds.), Scitech Publishing, 2017.
+
 [15] Haigh, K. Z., et al., "Parallel Learning and Decision Making For a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.
+
 [16] Zabinsky, Z. B., "Random Search Algorithms," in Wiley Encyclopedia of Operations Research and Management Science, 2011.
+
 [17] Simon, H., "A Behavioral Model of Rational Choice," Quarterly Journal of Economics, Vol. 69, No. 1, 1955.
+
 [18] Beheshti, Z., and S. Shamsuddin, "A Review of Population-Based Metaheuristic Algorithm," International Journal of Advances in Soft Computing and its Applications, Vol. 5, No. 1, 2013.
+
 [19] Jamil, M., and X.-S. Yang, "A Literature Survey of Benchmark Functions for Global Optimization Problems," International Journal of Mathematical Modelling and Numerical Optimisation, Vol. 4, No. 2, 2013.
+
 [20] Task Group SET-227, "Cognitive Radar," NATO Science and Technology, Tech. Rep. TR-SET-227, 2020.
+
 [21] Dorigo, M., "Optimization, Learning and Natural Algorithms," Ph.D. dissertation, Politecnico di Milano, Milan, Italy, 1992.
+
 [22] Katiyar, S., I. Nasiruddin, and A. Ansari, "Ant Colony Optimization: A Tutorial Review," in National Conference on Advances in Power and Control, 2015.
+
 [23] Almasoud, A., and A. Kama, "Multi-Objective Optimization for Many-to-Many Communication in Cognitive Radio Networks," in GLOBECOM, IEEE, 2015.
+
 [24] Zhang, Q., Q. He, and P. Zhang, "Topology Reconfiguration in Cognitive Radio Networks Using Ant Colony Optimization," in Vehicular Technology Conference, IEEE, 2012.
+
 [25] He, Q., and P. Zhang, "Dynamic Channel Assignment Using Ant Colony Optimization for Cognitive Radio Networks," in Vehicular Technology Conference, IEEE, 2012.
+
 [26] Waheed, M., and A. Cai, "Cognitive Radio Parameter Adaptation in Multicarrier Environment," in International Conference on Wireless and Mobile Communications, IEEE, 2009.
+
 [27] Karaboga, N., K. Güney, and A. Akdagli, "Null Steering of Linear Antenna Arrays with Use of Modified Touring Ant Colony Optimization Algorithm," International Journal of RF and Microwave Computer-Aided Engineering, Vol. 12, No. 4, 2002.
+
 [28] Ye, F., F. Che, and L. Gao, "Multiobjective Cognitive Cooperative Jamming DecisionMaking Method Based on Tabu Search-Artificial Bee Colony Algorithm," International Journal of Aerospace Engineering, 2018.
+
 [29] Kennedy, J., and R. Eberhart, "Particle Swarm Optimization," in International Conference on Neural Networks, Vol. 4, 1995.
+
 [30] Hafez, A., and M. El-latif, "New Radar Pulse Compression Codes by Particle Swarm Algorithm," in IEEE Aerospace Conference, 2012.
+
 [31] Li, B., "Particle Swarm Optimization for Radar Binary Phase Code Selection," in Radar Sensor Technology, 2018.
+
 [32] Reddy, B., and U. Kumari, "Performance Analysis of MIMO Radar Waveform Using Accelerated Particle Swarm Optimization Algorithm," Signal and Image Processing, Vol. 3, No. 4, 2012.
+
 [33] Praveena, A., and V. Narasimhulu, "Design of DFC Waveforms for MIMO Radar Using Accelerated Particle Swarm Optimization Algorithm," International Journal of Engineering Trends and Technology, Vol. 33, No. 2, 2016.
+
 [34] Holland, J., "Genetic Algorithms and Adaptation," in Adaptive Control of Ill-Defined Systems, Vol. 16, 1984.
+
 [35] Meadows, B., et al., "Evaluating the Seeding Genetic Algorithm," in Australasian Joint Conference on Artificial Intelligence, 2013.
+
 [36] Watson, T., and P. Messer, "Increasing Diversity in Genetic Algorithms," in Developments in Soft Computing, 2001.
+
 [37] Chuang, C.-Y., and S. Smith, "Diversity Allocation for Dynamic Optimization Using the Extended Compact Genetic Algorithm," in Congress on Evolutionary Computation, IEEE, 2013.
+
 [38] Hassan, R., et al., A Copmarison [sic] of Particle Swarm Optimization and the Genetic Algorithm, 2004. Online: https://tinyurl.com/pso-vs-ga.
+
 [39] Mehboob, U., et al., "Genetic Algorithms in Wireless Networking: Techniques, Applications, and Issues," Soft Computing, 2016.
+
 [40] Bartee, J., "Genetic Algorithms as a Tool for Phased Array Radar Design," M.S. thesis, Naval Postgraduate School, Monterey, California, 2002.
+
 [41] Capraro, C., et al., "Using Genetic Algorithms for Radar Waveform Selection," in IEEE Radar Conference, 2008.
+
 [42] Lellouch, G., A. K. Mishra, and M. Inggs, "Design of OFDM Radar Pulses Using Genetic Algorithm Based Techniques," IEEE Transactions on Aerospace and Electronic Systems, Vol. 52, No. 4, 2016.
+
 [43] Sen, S., G. Tang, and A. Nehorai, "Multiobjective Optimization of OFDM Radar Waveform for Target Detection," IEEE Transactions on Signal Processing, Vol. 59, No. 2, 2011.
+
 [44] Jouny, I., "Radar Target Identification Using Genetic Algorithms," in Automatic Target Recognition, 1998.
+
 [45] Smith-Martinez, B., A. Agah, and J. Stiles, "A Genetic Algorithm For Generating Radar Transmit Codes to Minimize the Target Profile Estimation Error," Journal of Intelligent Systems, Vol. 22, No. 4, 2013.
+
 [46] Zhou, C., F. Liu, and Q. Liu, "An Adaptive Transmitting Scheme for Interrupted Sampling Repeater Jamming Suppression," Sensors (Basel), Vol. 17, No. 11, 2017.
+
 [47] Kirkpatrick, S., C. Gelatt Jr., and M. Vecchi, "Optimization by Simulated Annealing," Science, Vol. 220, No. 4598, 1983.
+
 [48] Boopalan, N., A. Ramasamy, and F. Nagi, "Faulty Antenna Detection in a Linear Array Using Simulated Annealing Optimization," Indonesian Journal of Electrical Engineering and Computer Science, Vol. 19, No. 3, 2020.
+
 [49] Kaur, K., M. Rattan, and M. Patterh, "Optimization of Cognitive Radio System Using Simulated Annealing," Wireless Personal Communications, Vol. 71, 2013.
+
 [50] White, R., "Simulated Annealing Algorithm for Radar Cross-Section Estimation and Segmentation," in Applications of Artificial Neural Networks V, International Society for Optics and Photonics, Vol. 2243, 1994.
+
 [51] Liu, Z., et al., "Error Minimizing Jammer Localization Through Smart Estimation of Ambient Noise," in International Conference on Mobile Ad-Hoc and Sensor Systems, 2012.
+
 [52] Wang, Y., and S. Zhu, "Main-beam Range Deceptive Jamming Suppression with Simulated Annealing FDA-MIMO Radar," IEEE Sensors Journal, Vol. 20, No. 16, 2020.
+
 [53] Zhao, J., X. Guan, and X. Li, "Power Allocation Based on Genetic Simulated Annealing Algorithm in Cognitive Radio Networks," Chinese Journal of Electronics, Vol. 22, No. 1, 2012.
+
 [54] Yang, G., et al., "W-Band MIMO Radar Array Optimization and Improved Back-Projection Algorithm for Far-Field Imaging," in International Conference on Infrared, Millimeter, and Terahertz Waves, 2019.
-[55] Sayin, A., E. G. Hoare, and M. Antoniou, "Design and Verification of Reduced Redundancy Ultrasonic MIMO Arrays Using Simulated Annealing \& Genetic Algorithms," IEEE Sensors Journal, Vol. 20, No. 9, 2020.
+
+[55] Sayin, A., E. G. Hoare, and M. Antoniou, "Design and Verification of Reduced Redundancy Ultrasonic MIMO Arrays Using Simulated Annealing & Genetic Algorithms," IEEE Sensors Journal, Vol. 20, No. 9, 2020.
+
 [56] Liu, Y., et al., "A Self-Learning Method for Cognitive Engine Based on CBR and Simulated Annealing," in Advanced Materials and Engineering Materials, Vol. 457, 2012.
+
 [57] Rubinstein, R., and D. Kroese, The Cross-Entropy Method: A Unified Approach to Combinatorial Optimization, Monte-Carlo Simulation and Machine Learning, Springer, 2004.
-[58] de Boer, P.-T., et al., A Tutorial on the Cross-Entropy Method, 2003. http://web.mit.edu/6.454/ www/www_fall_2003/gew/CEtutorial.pdf.
+
+[58] de Boer, P.-T., et al., A Tutorial on the Cross-Entropy Method, 2003. http://web.mit.edu/6.454/www/www_fall_2003/gew/CEtutorial.pdf.
+
 [59] Amos, B., and D. Yarats, "The Differentiable Cross-Entropy Method," in ICML, 2020.
+
 [60] Joseph, A., and S. Bhatnagar, "Revisiting the Cross Entropy Method with Applications in Stochastic Global Optimization and Reinforcement Learning," in ICAI, 2016.
-[61] Kroese, D., K.-P. Hui, and S. Nariai, "Network Reliability Optimization via the CrossEntropy Method," IEEE Transactions on Reliability, Vol. 56, No. 2, 2007.
+
+[61] Kroese, D., K.-P. Hui, and S. Nariai, "Network Reliability Optimization via the Cross-Entropy Method," IEEE Transactions on Reliability, Vol. 56, No. 2, 2007.
+
 [62] Heegaard, P., B. Helvik, and O. Wittner, "The Cross Entropy Ant System for Network Path Management," Telektronikk, 2008.
+
 [63] Bian, L., "Parameters Analysis to Pattern Null Placement Based on the Cross Entropy Method," Physics Procedia, Vol. 24, No. B, 2012.
+
 [64] Naeem, M., A. S. Khwaja, A. Anpalagan, et al., "Green Cooperative Cognitive Radio: A Multiobjective Optimization Paradigm," IEEE Systems Journal, Vol. 10, No. 1, 2016.
+
 [65] Minvielle, P., et al., "Sparse Antenna Array Optimization with the Cross-Entropy Method," IEEE Transactions on Antennas and Propagation, Vol. 59, No. 8, 2011.
+
 [66] Heegaard, P., et al., Distributed Asynchronous Algorithm for Cross-Entropy-Based Combinatorial Optimization, 2003. Online: https://tinyurl.com/ce-ants-2003.
+
 [67] Helvik, B., and O. Wittner, "Using the Cross-Entropy Method to Guide/Govern Mobile Agent's Path Finding in Networks," in Workshop on Mobile Agents for Telecommunication Applications, 2001.
+
 [68] Maudsley, D., "A Theory of Meta-Learning and Principles of Facilitation: An Organismic Perspective," Ph.D. dissertation, University of Toronto, Ontario, Canada, 1979.
+
 [69] Vanschoren, J., "Meta-Learning," in Automated Machine Learning, Springer, 2019.
-[70] Rendell, L., R. Seshu, and D. Tcheng, "More Robust Concept Learning Using DynamicallyVariable Bias," in Workshop on Machine Learning, 1987.
+
+[70] Rendell, L., R. Seshu, and D. Tcheng, "More Robust Concept Learning Using Dynamically-Variable Bias," in Workshop on Machine Learning, 1987.
+
 [71] J. Schmidhuber, "Evolutionary Principles in Self-Referential Learning, or on Learning How to Learn: The Meta-Meta-... Hook," M.S. thesis, Technische Universität München, Munich, Germany, 1987.
+
 [72] Bengio, Y., S. Bengio, and J. Cloutier, "Learning a Synaptic Learning Rule," in IJCNN, Vol. ii, 1991.
+
 [73] Andrychowicz, M., et al., "Learning to Learn by Gradient Descent By Gradient Descent," in NeurIPS, 2016.
+
 [74] Rusu, A., et al., "Metalearning with Latent Embedding Optimization," in ICLR, 2019.
+
 [75] Zintgraf, L., et al., "Fast Context Adaptation via Metalearning," in ICLR, 2019.
+
 [76] Chen, Y., et al., "Learning to Learn Without Gradient Descent by Gradient Descent," in ICML, vol. 70, 2017.
+
 [77] Li, K., and J. Malik, "Learning to Optimize," in ICLR, 2017.
+
 [78] Vilalta, R., and Y. Drissi, "A Perspective View and Survey of Metalearning," Artificial Intelligence Review, Vol. 18, 2005.
+
 [79] Arpaci-Dusseau, R. H., and A. C. Arpaci-Dusseau, Operating systems: Three Easy Pieces, Arpaci-Dusseau Books, LLC, 2018.
+
 [80] Kilic, S., and O. Ozkan, "Modeling and Optimization Approaches for Satellite Broadcast Scheduling Problem," IEEE Transactions on Engineering Management, 2019.
+
 [81] Doron Rainish, D., and A. Freedman, Air Interface for Low Power Operation of a Satellite Terminal, 2015. Online: https://www.satixfy.com/vlnsr-implementation-for-mobile/.
+
 [82] El Gamal, A., et al., "Energy-Efficient Scheduling of Packet Transmissions Over Wireless Networks," in Computer and Communications Societies, IEEE, Vol. 3, 2002.
+
 [83] Dahlman, E., S. Parkvall, and J. Sköld, "Chapter 11: Uplink Physical Layer Processing," in $4 G$ LTE/LTE-Advanced for Mobile Broadband, Academic Press, 2011.
+
 [84] Pattanayak, P., and P. Kumar, "Computationally Efficient Scheduling Schemes for Multiple Antenna Systems Using Evolutionary Algorithms and Swarm Optimization," in Evolutionary Computation in Scheduling, 2020.
+
 [85] Grilo, A., et al., "Electronic Protection and Routing Optimization of MANETs Operating in an Electronic Warfare Environment," Ad Hoc Networks, Vol. 5, No. 7, 2007.
+
 [86] Kim, S., "Adaptive MANET Multipath Routing Algorithm Based on the Simulated Annealing Approach," The Scientific World Journal, 2014.
+
 [87] Bollapragada Subrahmanya, V., and H. Russell, "RMTS: A Novel Approach to Transmission Scheduling in Ad Hoc Networks by Salvaging Unused Slot Transmission Assignments," Wireless Communications and Mobile Computing, 2018.
+
 [88] Amouris, K., "Position-Based Broadcast TDMA Scheduling for Mobile Ad-Hoc Networks (MANETs) with Advantaged Nodes," in MILCOM, 2005.
+
 [89] Salih, S., M. Suliman, and A. Mohammed, "A Novel Spectrum Sensing Scheduler Algorithm for Cognitive Radio Networks," in International Conference on Computing, Electrical and Electronic Engineering, 2013.
+
 [90] Zhu, L., et al., "The Design of Scheduling Algorithm for Cognitive Radio Networks Based on Genetic Algorithm," in IEEE International Conference on Computational Intelligence Communication Technology, 2015.
+
 [91] Liang, J.-C., and J.-C. Chen, "Resource Allocation in Cognitive Radio Relay Networks," Selected Areas in Communications, Vol. 31, No. 3, 2013.
+
 [92] Sodagari, S., "Real-Time Scheduling for Cognitive Radio Networks," Systems Journal, Vol. 12, No. 3, 2017.
+
 [93] Bayhan, S., and F. Alagoz, "Scheduling in Centralized Cognitive Radio Networks for Energy Efficiency," Transactions on Vehicular Technology, Vol. 62, No. 2, 2013.
+
 [94] Zhang, W., et al., "Distributed Stochastic Search and Distributed Breakout: Properties, Comparison and Applications to Constraint Optimization Problems in Sensor Networks," Artificial Intelligence, Vol. 161, No. 1-2, 2005.
+
 [95] Ramzan, M., et al., "Multiobjective optimization for Spectrum Sharing in Cognitive Radio Networks: A Review," Pervasive and Mobile Computing, Vol. 41, 2017.
+
 [96] Zhang, H., et al., "A Hybrid Adaptively Genetic Algorithm for Task Scheduling Problem in the Phased Array Radar," European Journal of Operational Research, 2019.
+
 [97] Sahin, S., and T. Girici, "A Method for Optimal Scheduling of Active Electronically Scanned Array (AESA) Antennas," 2019.
+
 [98] Li, X., et al., "A Scheduling Method of Generalized Tasks for Multifunctional Radar Network," in International Conference on Control, Automation and Information Sciences, IEEE, 2019.
+
 [99] Orman, A., et al., "Scheduling for a Multifunction Phased Array Radar System," European Journal of Operational Research, Vol. 90, No. 1, 1996.
+
 [100] Shaghaghi, M., R. Adve, and Z. Ding, "Multifunction Cognitive Radar Task Scheduling Using Monte Carlo Tree Search and Policy Networks," IET Radar, Sonar and Navigation, Vol. 12, No. 12, 2018.
+
 [101] Song, H., et al., "A POMDP Approach for Scheduling the Usage of Airborne Electronic Countermeasures in Air Operations," Aerospace Science and Technology, Vol. 48, 2016.
+
 [102] Vaughan, I., and L. Clarkson, "Optimal Periodic Sensor Scheduling in Electronic Support," in Defence Applications of Signal Processing, 2005.
+
 [103] Ren, Y., et al., "A Novel Cognitive Jamming Architecture for Heterogeneous Cognitive Electronic Warfare Networks," in Information Science and Applications, Vol. 621, Springer, 2020.
+
 [104] Zhang, Y., and G. Shan, "A Risk-Based Multisensor Optimization Scheduling Method for Target Threat Assessment," Mathematical Problems in Engineering, 2019.
+
 [105] Rajpathak, D., "Intelligent Scheduling-A Literature Review," Knowledge Media Institute, The Open University (United Kingdom), Tech. Rep. KMI-TR-119, 2001.
+
 [106] Xie, G., R. Li, and K. Li, "Heterogeneity-Driven End-to-End Synchronized Scheduling for Precedence Constrained Tasks and Messages on Networked Embedded Systems," Journal of Parallel and Distributed Computing, Vol. 83, 2015.
+
 [107] Balli, U., et al., "Utility Accrual Real-Time Scheduling Under Variable Cost Functions," IEEE Transactions on Computers, Vol. 56, No. 03, 2007.
+
 [108] Orhean, A., F. Pop, and I. Raicu, "New Scheduling Approach Using Reinforcement Learning for Heterogeneous Distributed Systems," Journal of Parallel and Distributed Computing, Vol. 117, 2018.
+
 [109] Yang, R., et al., "Intelligent Resource Scheduling at Scale: A Machine Learning Perspective," in Symposium on Service-Oriented System Engineering, IEEE, 2018.
+
 [110] Ye, Y., et al., A New Approach for Resource Scheduling with Deep Reinforcement Learning, 2018. Online: https://arxiv.org/abs/1806.08122.
+
 [111] Mirshekarian, S., and D. Sormaz, "Machine Learning Approaches to Learning Heuristics for Combinatorial Optimization Problems," Procedia Manufacturing, Vol. 17, 2018.
+
 [112] Gandomi, A., et al. (Eds.), Evolutionary Computation in Scheduling, Wiley, 2020.
+
 [113] Barták, R., R. A. Morris, and K. B. Venable, "An Introduction to Constraint-Based Temporal Reasoning," Synthesis Lectures on Artificial Intelligence and Machine Learning, Vol. 8, No. 1, 2014.
+
 [114] Dean, T., and M. Boddy, "An Analysis of Time-Dependent Planning," in AAAI, 1988.
+
 [115] Horvitz, E., "Reasoning About Beliefs and Actions Under Computational Resource Constraints," in Workshop on Uncertainty in Artificial Intelligence, 1987.
+
 [116] Simon, H., "Rational Choice and the Structure of the Environment," Psychological Review, Vol. 63, No. 2, 1956.
+
 [117] Brooks, R., T. Arbel, and D. Precup, "Fast Image Alignment Using Anytime Algorithms," in IJCAI, 2007.
+
 [118] Kim, Y., M. Krainin, and V. Lesser, "Application of Max-Sum Algorithm to Radar Coordination and Scheduling," in Workshop on Distributed Constraint Reasoning, 2010.
+
 [119] Zilberstein, S., "Operational Rationality Through Compilation of Anytime Algorithms," Ph.D. dissertation, University of California, Berkeley, CA, 1993.
+
 [120] Zilberstein, S., "Using Anytime Algorithms In Intelligent Systems," AI Magazine, 1996.
+
 [121] Svegliato, J., K. H. Wray, and S. Zilberstein, "Meta-Level Control of Anytime Algorithms with Online Performance Prediction," in IJCAI, 2018.
+
 [122] Gagliolo, M., and J. Schmidhuber, "Learning Dynamic Algorithm Portfolios," Annals of Mathematics and Artificial Intelligence, Vol. 47, 2006.
+
 [123] López-Ibáñeza, M., and T. Stützlea, "Automatically Improving the Anytime Behaviour of Optimisation Algorithms," European Journal of Operational Research, Vol. 235, No. 3, 2014, Extended version at https://core.ac.uk/download/pdf/208141673.pdf.
+
 [124] Smith, S. F., et al., "Robust Allocation of RF Device Capacity for Distributed Spectrum Functions," Journal of Autonomous Agents and Multiagent Systems, Vol. 31, No. 3, 2017.
+
 [125] Gillen, M., et al., "Beyond Line-of-Sight Information Dissemination for Force Protection," in MILCOM, 2012.
+
 [126] Fioretto, F., E. Pontelli, and W. Yeoh, "Distributed Constraint Optimization Problems and Applications: A Survey," Journal of Artificial Intelligence Research, Vol. 61, No. 1, 2018.
+
 [127] Faltings, B., "Distributed Constraint Programming," in Handbook of Constraint Programming, Elsevier, 2006.
+
 [128] Shoham, Y., and K. Leyton-Brown, Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations, Cambridge University Press, 2009.
+
 [129] Moallemi, C., and B. Van Roy, "Consensus Propagation," Transactions on Information Theory, Vol. 52, No. 11, 2006.
+
 [130] Molzahn, D., et al., "A Survey of Distributed Optimization and Control Algorithms for Electric Power Systems," IEEE Transactions on Smart Grid, Vol. 8, No. 6, 2017.
+
 [131] Duffy, K., C. Bordenave, and D. Leith, "Decentralized Constraint Satisfaction," IEEE/ACM Transactions on Networking, Vol. 21, No. 4, 2013.
+
 [132] Di Lorenzo, P., and S. Barbarossa, "Distributed Resource Allocation in Cognitive Radio Systems Based on Social Foraging Swarms," in International Workshop on Signal Processing Advances in Wireless Communications, IEEE, 2010.
+
 [133] Zhang, W., et al., "Distributed Stochastic Search and Distributed Breakout: Properties, Comparison and Applications to Constraint Optimization Problems in Sensor Networks," Artificial Intelligence, Vol. 161, No. 1, 2005.
+
 [134] Stankovic, M., S. Stankovic, and K. Johansson, "Distributed Time Synchronization in Lossy Wireless Sensor Networks," in IFAC Workshop on Estimation and Control of Networked Systems, 2012.
+
 [135] Yan, H., et al., "Software Defined Radio Implementation of Carrier and Timing Synchronization for Distributed Arrays," in Aerospace Conference, 2019.
+
 [136] Kim, M., H. Kim, and S. Lee, "A Distributed Cooperative Localization Strategy in Vehicular-to-Vehicular Networks," Sensors, Vol. 20, No. 5, 2020.
+
 [137] Wolpert, D., "The Lack of a priori Distinctions Between Learning Algorithms," Neural Computation, 1996.
+
 [138] Wolpert, D., and W. Macready, "No Free Lunch Theorems for Optimization," Transactions on Evolutionary Computation, Vol. 1, No. 67, 1997.
+
