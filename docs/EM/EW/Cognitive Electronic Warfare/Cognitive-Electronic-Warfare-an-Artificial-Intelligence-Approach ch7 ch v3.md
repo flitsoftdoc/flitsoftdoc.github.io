@@ -158,7 +158,7 @@ if __name__ == '__main__':
 
 规划器可将应对意外情况的灵活性作为决策准则的一部分。此外，规划器还可预先规划通信机制，以应对任务目标的预期变化 [11]。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-161.jpg?height=512&width=1161&top_left_y=1426&top_left_x=169){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-161.jpg?height=512&width=1161&top_left_y=1426&top_left_x=169){width="600"}
 
 **图7.4** 任务中重规划必须适应意外情况：(a) 先验电子情报（ELINT, Electronic Intelligence）预计存在一部敌方雷达；(b) 任务中协同电子支援（ES, Electronic Support）探测到两部敌方雷达和一架空中无人机；(c) 任务中重规划随之调整，各节点成功压制敌方目标。
 
@@ -193,7 +193,7 @@ RL 可以更新动作描述，以准确反映环境中实际发生的情况—�
 
 图7.5 展示了一个任务中增量学习（in-mission incremental learning）的简化示例。在时刻 $t - \delta$，优化器利用先前学习到的模型 $f$，根据已知可观测量 $\mathbf{o}$ 估算每个候选策略 $s$ 的性能 $m$：$m = f\left(\mathbf{o}_{n}, \mathbf{c}_{n}\right) = f(\mathbf{o}, s)$。在选择并执行最优策略 $s = \operatorname{argmax}_{s_{i}} \tilde{U}_{n}\left(s_{j}\right)$ 后，系统观测该策略 $s_i$ 的实际性能。学习器将该结果加入数据集，更新模型 $f$，随后优化器开始使用更新后的函数 $f$。在图示中，若 $\mathbf{o}_{n}(t) \approx \mathbf{o}_{n}(t - \delta)$，则优化器会选择图中所示的最优策略。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-164.jpg?height=1086&width=1134&top_left_y=149&top_left_x=180){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-164.jpg?height=1086&width=1134&top_left_y=149&top_left_x=180){width="600"}
 
 **图7.5** 在时刻 $t - \delta$，贝叶斯信念网络（BBN, Bayesian Belief Network）智能体（SO, Smart Operator）（见例7.1，[35]）使用模型 $m_{k} = f_{k}(\mathbf{o}, s)$，基于（已知的）可观测量 $\mathbf{o}$ 和所有（候选）策略 $s$ 估算性能指标 $m_{k}$，并选择最优策略。学习器随后为下一次迭代更新 $f_{k}$。为简化图示，x 轴和 y 轴均为多维：x 轴涵盖所有可控变量（controllables）的所有取值，y 轴涵盖所有可观测量（observables）的所有取值。此外需注意，图中仅展示了给定 $\mathbf{o}_{t-\delta}$ 和 $\mathbf{o}_{t}$ 下的 $f_{k}$，但实际 $f_{k}$ 模型覆盖所有可能的可观测量取值及所有策略对应的性能指标 $m_{k}$。
 
@@ -207,13 +207,8 @@ RL 可以更新动作描述，以准确反映环境中实际发生的情况—�
 
 **表7.1** 决策者用于跟踪在射频（RF, Radio Frequency）环境中所用策略的稀疏矩阵示例
 
-| 环境 | 无取值 | 单一取值 |  |  |  | 二取值 |  |  |  |  | 三取值 |  |
-| ---: | :--- | :--- | :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-|  | $\mathbf{000}$ | $\mathbf{001}$ | $\mathbf{002}$ | $\mathbf{010}$ | $\mathbf{100}$ | $\mathbf{011}$ | $\mathbf{012}$ | $\mathbf{101}$ | $\mathbf{102}$ | $\mathbf{110}$ | $\mathbf{111}$ | $\mathbf{112}$ |
-| Env1 | $Y$ | $Y$ | $Y$ | $Y$ | $Y$ | $Y$ | — | — | — | $Y$ | — | — |
-| Env2 | $Y$ | $Y$ | $Y$ | $Y$ | $Y$ | — | — | $Y$ | — | $Y$ | — | — |
-| Env3 | $Y$ | $Y$ | $Y$ | $Y$ | $Y$ | — | — | $Y$ | $Y$ | — | — | — |
-| 未知 | — | — | — | — | — | — | — | — | — | — | — | — |
+![](https://cdn.mathpix.com/snip/images/j6E_AOHO0NVpQHOJ6lzrJxA7Wh_fiUn_iO3iPo0KR70.original.fullsize.png){width="600"}
+
 
 当前 RL 领域的大量研究均基于马尔可夫决策过程（MDP, Markov Decision Process），以至于 RL 几乎被视为 MDP 的同义词。但事实并非如此：MDP 可能是、也可能不是 RL 所采用的底层模型。
 
