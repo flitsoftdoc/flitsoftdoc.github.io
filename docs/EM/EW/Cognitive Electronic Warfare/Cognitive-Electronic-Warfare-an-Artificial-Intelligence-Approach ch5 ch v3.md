@@ -92,9 +92,9 @@ Ramzan 等人 [6] 对频谱共享中的多目标优化方法进行了综述。�
 
 对每个候选策略 $s_{i}$： // 节点 $n$ 的所有候选策略 
 
-    对每个度量 $m_{k}$：  // 估计的度量值 
+  对每个度量 $m_{k}$：  // 估计的度量值 
     
-     $m_{k}=f_{k}\left(o, s_{i}\right)$ 
+  $m_{k}=f_{k}\left(o, s_{i}\right)$ 
 
 根据所有度量 $m_{k}$ 计算 $\tilde{U}\left(s_{i}\right)$    // 估计的效用 
 
@@ -118,18 +118,19 @@ Ramzan 等人 [6] 对频谱共享中的多目标优化方法进行了综述。�
 
 $P =$ 为节点 $n$ 生成初始候选策略种群 
 
-对每次迭代： // 直至收敛或达到最大迭代次数 
+For 每次迭代： // 直至收敛或达到最大迭代次数 
 
-　对每个候选策略 $s_{i} \in P$：
+　For 每个候选策略 $s_{i} \in P$：
 
-　　对每个度量 $m_{k}$：
-   　     $$ m_{k}=f_{k}\left(o, s_{i}\right) \quad $$   // 估计的度量值 
+　　For 对每个度量 $m_{k}$： 
 
-    计算 $\tilde{U}_{n}\left(s_{i}\right)$      // 估计的效用 
+$\quad m_{k}=f_{k}\left(o, s_{i}\right) \quad $   // 估计的度量值 
 
-　$P =$ 更新种群（更新个体位置或个体本身）
+Compute $\tilde{U}_{n}\left(s_{i}\right)$      // 估计的效用 
 
-选择 $s=\operatorname{argmax}_{s_{i} \in P}\left(\tilde{U}_{n}\left(s_{i}\right)\right)$   // 最后一代种群中的最优策略
+$P =$ 更新种群（更新个体位置或个体本身）
+
+Select  $s=\operatorname{argmax}_{s_{i} \in P}\left(\tilde{U}_{n}\left(s_{i}\right)\right)$   // 最后一代种群中的最优策略
 
 ///
 
