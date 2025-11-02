@@ -2,7 +2,7 @@
 
 数据收集与管理或许是构建基于人工智能（Artificial Intelligence, AI）和机器学习（Machine Learning, ML）系统中最困难的部分。对于所有采用机器学习的系统而言，有一条经验法则：尽管数据收集与数据整理（curating the data）仅是数据生命周期（data lifecycle）中的两个步骤（见图8.1），但却占据了约80%的工作量。第4章讨论了从数据中生成推断（deductions）和推理（inferences）的相关步骤；本章则阐述如何从源头创建高质量数据，以及如何随时间推移持续维护数据质量。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-175.jpg?height=478&width=487&top_left_y=171&top_left_x=509){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-175.jpg?height=478&width=487&top_left_y=171&top_left_x=509){width="300"}
 
 图8.1 数据生命周期包括数据的收集与处理；通过迭代可提升数据在多种用途中的效用。
 
@@ -21,7 +21,7 @@
 
 元数据（metadata）用于记录数据的上下文；语义（semantics）用于确立数据中概念的含义；可追溯性（traceability）则为数据完整性（data integrity）提供结构支撑。这些概念共同确保了推理与数据管理（Data Management, DM）的准确性、实验的可复现性（experiment reproducibility），以及跨平台和跨时间的数据共享能力。此外，当数据需在不同安全等级或安全保证等级（security- or safety-assurance levels）之间流转时，这些概念也是关键要求：它们有助于判断是否适合对数据进行处理、是否应向用户授予访问权限，或系统是否满足认证（accreditation）要求。表8.1总结了美国国防部（DoD）将数据视为资产进行管理的观点。其目标支撑了数据访问、可用性与治理（stewardship）的宗旨，而元数据、语义和可追溯性构成了贯穿其中的共同主题。
 
-/// note| Callout 8.1）在开展实验时，应建立清晰的语义（semantics）并对所有内容进行充分标注。
+/// note| Callout 8.1 在开展实验时，应建立清晰的语义（semantics）并对所有内容进行充分标注。
 
 - 对所有数据添加元数据（metadata）标注，详细说明其采集方式，包括采集地点、实验类型和参与人员。
 - 确保合成数据（synthetic data）与真实数据（real data）具有相同的结构。
@@ -50,7 +50,7 @@
 
 从工程角度看，各模块必须提供可被其他模块直接使用的信息，包括数据融合（data fusion）、数据管理（DM）和用户界面（user interface）。图8.2突出了支撑互操作性与协同流程的关键概念。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-177.jpg?height=243&width=949&top_left_y=160&top_left_x=276){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-177.jpg?height=243&width=949&top_left_y=160&top_left_x=276){width="500"}
 
 **图 8.2** 为支持互操作性，态势评估（situation assessment）与数据管理（DM）模块应产出具有可操作性（actionable）、可叠加性（additive）、可审计性（auditable）和格式无关性（agnostic）的实用结果。（该概念最初为概率管理（probability management）提出［3］。）
 
@@ -87,7 +87,7 @@
 
 图8.3展示了一个基于空中交通管制雷达的概念性（notional）复杂示例。最终的空中交通管制显示界面整合了来自多个不同来源的信息，包括场面监视雷达（Surface-Movement Radar, SMR）、机场监视雷达（Airport Surveillance Radar, ASR）、机场周边的多点定位（multilateration）传感器、广播式自动相关监视（Automatic Dependent Surveillance-Broadcast, ADS-B）传感器，以及飞行计划数据。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-179.jpg?height=605&width=1189&top_left_y=1393&top_left_x=158){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-179.jpg?height=605&width=1189&top_left_y=1393&top_left_x=158){width="700"}
 
 **图 8.3** 多个组件构成的复杂网络，共同生成高质量航迹并保障整体空中交通安全。
 
@@ -124,7 +124,7 @@
 
 图8.4展示了一个基础的、单一的通用软件无线电外设（Universal Software Radio Peripheral, USRP）无线电设置，用以说明USRP硬件驱动（UHD）和基于FPGA的应用程序所处的位置。在服务器端，有多种方式可与UHD通信：使用原始C/C++编码性能最佳，但要求用户从头编写所有信号处理模块；而GNU Radio软件包（C/C++或Python）则更易于快速采用，但效率可能略低。在USRP端，可利用射频片上网络（RF Network on Chip, RFNoC）工具创建FPGA应用程序，以抽象部分基于FPGA的处理流程。UHD软件应用程序编程接口（Application Programming Interface, API）支持在所有USRP软件定义无线电（Software-Defined Radio, SDR）产品上进行应用开发［7］。采用通用软件API可提升代码可移植性（portability），使应用程序在必要时能无缝迁移到其他USRP SDR平台，同时通过保留和复用既有代码降低开发工作量，使开发者能专注于新算法的开发。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-181.jpg?height=594&width=1095&top_left_y=1342&top_left_x=204){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-181.jpg?height=594&width=1095&top_left_y=1342&top_left_x=204){width="600"}
 
 **图 8.4** 元数据应包含此USRP结构中硬件、固件（firmware）和软件的详细信息，包括版本号与序列号。
 
@@ -145,6 +145,7 @@ VITA-49是一种互补标准，用于通过数据传输链路发送射频样本�
 谷歌（Google）的开源协议缓冲区（Protocol Buffers, protobuf）用于序列化和共享结构化数据［19］。Protobuf以紧凑性著称，强调简洁性与性能（尤其适用于网络通信），并保持向后兼容性。然而，它并非自描述（self-describing）格式：数据的结构信息独立于数据本身。相比之下，简单对象访问协议（Simple Object Access Protocol, SOAP）［20, 21］是一种自描述（因此紧凑性较低）的数据格式。
 
 /// note| 算法 8.1 SigMF记录了关于数据采集、系统特性以及每个信号特征的信息。（示例由文献［15］中README文件的代码生成。）
+```JSON
 {
     "global": {
         "core:author":  "jane.doe@domain.org",
@@ -171,7 +172,7 @@ VITA-49是一种互补标准，用于通过数据传输链路发送射频样本�
         }
     ]
 }
-
+```
 ///
 
 ### 8.1.3 可追溯性（Traceability）
@@ -196,7 +197,7 @@ VITA-49是一种互补标准，用于通过数据传输链路发送射频样本�
 
 - **样本偏差或选择偏差（Sample or selection bias）**：当样本无法代表数据的底层分布时即发生此类偏差。该问题源于实验设计缺陷（如缺失关键样本）或环境因素导致部分样本遗漏。例如，由于大气波导（ducting）和地表波（surface-wave）效应，信号在陆地与海面上传播特性截然不同；实验与数据采集必须对此类因素进行补偿。
 
-  反馈回路（例如由强化学习（Reinforcement Learning, RL）所引发的）可能加剧选择偏差。例如，每次成功使用某电子对抗（Electronic Countermeasures, ECM）技术都会强化系统重复使用相同（或类似）技术的倾向，从而沿梯度方向陷入局部最优（local optimum）。若不主动采用主动学习（active learning）策略并维持数据多样性，系统可能被困于局部最优，永远无法发现全局最优解（global optimum）。
+     反馈回路（例如由强化学习（Reinforcement Learning, RL）所引发的）可能加剧选择偏差。例如，每次成功使用某电子对抗（Electronic Countermeasures, ECM）技术都会强化系统重复使用相同（或类似）技术的倾向，从而沿梯度方向陷入局部最优（local optimum）。若不主动采用主动学习（active learning）策略并维持数据多样性，系统可能被困于局部最优，永远无法发现全局最优解（global optimum）。
 
 - **类别偏差（Class bias）**：当数据过度偏向某些特定类别时即产生此类偏差。若数据能覆盖射频（RF）信号的各类形式（如频率、调制方式和协议），所训练出的模型就越有可能捕捉到射频信号的全部潜在特征（latent features），而非仅限于过于狭窄数据集中的特征。（针对特定类型射频信号的专用模型是合理的，但应明确标注其适用范围。）
 
@@ -204,12 +205,12 @@ VITA-49是一种互补标准，用于通过数据传输链路发送射频样本�
 
 - **测量偏差（Measurement bias）**：由校准错误、传感器偏差或空间配准错误（misregistration）、测量故障、样本误标（mislabeled examples）、变量缺失，或训练与推理阶段所采集数据不一致等因素引起。
 
-  例如，空间配准错误（spatial misregistration）会导致虚假的雷达航迹（false radar tracks）。
+     例如，空间配准错误（spatial misregistration）会导致虚假的雷达航迹（false radar tracks）。
   数字信号处理（Digital Signal Processing, DSP）中的重采样（resampling）也可能引发显著的测量偏差。若为满足DSP的计算或内存需求而对原始数据进行降采样（down-sampled），则可能丢失关键特征。同样，若数据抽取（decimating）过程违反奈奎斯特准则（Nyquist criteria），将产生混叠（aliasing），造成无法在后续处理中纠正的失真。
 
 - **回忆偏差（Recall bias）**：一种误标类型，指相似样本被赋予不同标签；在随时间演化的动态系统中，这是常见问题。领域可能发生变化，概念也可能发生漂移（concept drift）。
 
-  若系统组件被更换，标签的含义可能随之改变。例如，通过循环平稳性（cyclostationary）处理分离的信号，其特性与通过频率分离的信号截然不同。维护完整的元数据（metadata）可确保这些含义被正确解读。
+     若系统组件被更换，标签的含义可能随之改变。例如，通过循环平稳性（cyclostationary）处理分离的信号，其特性与通过频率分离的信号截然不同。维护完整的元数据（metadata）可确保这些含义被正确解读。
 
 - **观察者偏差或确认偏差（Observer or confirmation bias）**：标签基于预期结果而非实际结果。此类问题的常见原因是系统无法识别新颖样本（例如一种新型调制方式），而将其归类为最相似的已知样本。单一数据源同样会带来风险，即数据可能编码了该特定来源的伪影（artifacts），例如当数据仅由单台接收机采集时。
 
