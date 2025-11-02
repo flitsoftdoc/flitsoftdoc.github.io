@@ -371,124 +371,245 @@ EWPMT 提供电子战任务规划、电子战目标定位和仿真能力，以�
 
 ## References
 
+## References
+
 [1] Chairman of the Joint Chiefs of Staff, Joint publication 3-13.1: Electronic warfare, 2012. Online: https://fas.org/irp/doddir/dod/jp3-13-1.pdf.
+
 [2] US Air Force, Air Force Operational Doctrine: Electronic Warfare, Document 2-5.1, 2002. Online: https://tinyurl.com/af-ew-2002-pdf.
+
 [3] Haigh, K. Z., and M. Veloso, "Planning, Execution and Learning in a Robotic Agent," in AIPS, Summary of Haigh's Ph.D. thesis, 1998.
+
 [4] Siska, C., B. Press, and P. Lipinski, "Tactical Expert Mission Planner (TEMPLAR)," TRW Defense Systems, Tech. Rep. RADC-TR-89-328.
+
 [5] Miller, G., "Planning and Scheduling for the Hubble Space Telescope," in Robotic Telescopes, Vol. 79, 1995.
+
 [6] Adler, D., D. Taylor, and A. Patterson, "Twelve Years of Planning and Scheduling the Hubble Space Telescope: Process Improvements and the Related Observing Efficiency Gains," in Observatory Operations to Optimize Scientific Return III, International Society for Optics and Photonics, Vol. 4844, SPIE, 2002.
+
 [7] Benaskeur, A., E. Bossé, and D. Blodgett, "Combat Resource Allocation Planning in Naval Engagements," Defence R\&D Canada, Tech. Rep. DRDC Valcartier TR 2005-486, 2007.
+
 [8] Russell, S., and P. Norvig, Artificial Intelligence: A Modern Approach, Pearson Education, 2015.
+
 [9] Helmert, M., Understanding Planning Tasks: Domain Complexity and Heuristic Decomposition, Springer, 2008. (Revised version of Ph.D. thesis.)
+
 [10] Wilkins, D., Practical Planning, Morgan Kaufmann, 1998.
+
 [11] International Conference on Automated Planning and Scheduling Competitions. Accessed 2020-09-12. Online: https://www.icapsconference.org/competitions/.
+
 [12] Yuen, J., "Automated Cyber Red Teaming," Defence Science and Technology Organisation, Australia, Tech. Rep. DSTO-TN-1420, 2015.
+
 [13] Haslum, P., et al., An Introduction to the Planning Domain Definition Language, Morgan \& Claypool, 2019.
+
 [14] Korf, R., "Heuristic Evaluation Functions in Artificial Intelligence Search Algorithms," Minds and Machines, Vol. 5, 1995.
+
 [15] Liang, Y.-q., X.-s. Zhu, and M. Xie, "Improved Chromosome Encoding for Genetic-Algorithm-Based Assembly Sequence Planning," in International Conf. on Intelligent Computing and Integrated Systems, 2010.
+
 [16] Brie, A., and P. Morignot, "Genetic Planning Using Variable Length Chromosomes," In ICAPS, 2005.
+
 [17] Goodwin, M., O. Granmo, and J. Radianti, "Escape Planning in Realistic Fire Scenarios with Ant Colony Optimisation," Applied Intelligence, Vol. 42, 2015.
+
 [18] Erol, K., J. Hendler, and D. Nau, "HTN Planning: Complexity and Expressivity," in $A A A I$, 1994.
+
 [19] Erol, K., J. Hendler, and D. Nau, "Complexity Results for HTN Planning," Institute for Systems Research, Tech. Rep., 2003.
+
 [20] Georgievski, I., and M. Aiello, "HTN Planning: Overview, Comparison, and Beyond," Artificial Intelligence, Vol. 222, 2015.
+
 [21] Goldman, R. P., et al., "MACBeth: A Multiagent Constraint-Based Planner," in Digital Avionics Systems Conference, 2000.
+
 [22] Mitchell, S., "A Hybrid Architecture for Real-Time Mixed-Initiative Planning and Control," in AAAI, 1997.
+
 [23] Qi, C., and D. Wang, "Dynamic Aircraft Carrier Flight Deck Task Planning Based on HTN," IFAC-PapersOnLine, Vol. 49, No. 12, 2016, Manufacturing Modelling, Management and Control.
+
 [24] Kott, A., et al., Toward Practical Knowledge-Based Tools for Battle Planning and Scheduling, AAAI, 2002.
+
 [25] Ground, L., A. Kott, and R. Budd, "Coalition-Based Planning of Military Operations: Adversarial Reasoning Algorithms in an Integrated Decision Aid," CoRR, 2016.
+
 [26] Kott, A., et al., Decision Aids for Adversarial Planning in Military Operations: Algorithms, Tools, and Turing-Test-Like Experimental Validation, 2016. Online: https://arxiv.org/ abs/1601.06108.
+
 [27] Alford, R., U. Kuter, and D. Nau, "Translating HTNs to PDDL: A Small Amount Of Domain Knowledge Can Go a Long Way," in IJCAI, 2009.
+
 [28] Kuter, U., and D. Nau, "Using Domain-Configurable Search Control for Probabilistic Planning," AAAI, 2005.
+
 [29] Victoria, J., "Automated Hierarchical, Forward-Chaining Temporal Planner for Planetary Robots Exploring Unknown Environments," Ph.D. dissertation, Technical University of Darmstadt, Germany, 2016.
+
 [30] Andersen, M., T. Bolander, and M. Jensen, "Conditional Epistemic Planning," in Logics in Artificial Intelligence, 2012.
+
 [31] To, S., T. Son, and E. Pontelli, "Contingent Planning as AND/OR Forward Search with Disjunctive Representation," in ICAPS, 2011.
+
 [32] Blum, A., and J. Langford, "Probabilistic Planning in the Graph Plan Framework," in European Conference on Planning, 1999.
+
 [33] Majercik, S., and M. Littman, "Contingent Planning Under Uncertainty via Stochastic Satisfiability," in AAAI, 1999.
+
 [34] Ferraris, P., and E. Giunchiglia, "Planning as Satisfiability in Nondeterministic Domains," in AAAI, 2000.
+
 [35] Joshi, S., and R. Khardon, "Probabilistic Relational Planning with First Order Decision Diagrams," Artificial Intelligence Research, Vol. 41, 2011.
+
 [36] Mausam, W., and A. Kolobov, Planning with Markov Decision Processes: An AI Perspective, Morgan \& Claypool, 2012.
+
 [37] Sutton, R., and A. Barto, Reinforcement Learning: An Introduction, Bradford, 2018.
+
 [38] Littman, M., T. L. Dean, and L. P. Kaelbling, "On the Complexity of Solving Markov Decision Problems," in Uncertainty in AI, 1995.
+
 [39] Gupta, A., and S. Kalyanakrishnan, "Improved Strong Worst-Case Upper Bounds for MDP Planning," in IJCAI, 2017.
+
 [40] Jinnai, Y., et al., "Finding Options That Minimize Planning Time," in ICML, 2019.
+
 [41] McMahan, B., and G. Gordon, "Fast Exact Planning in Markov Decision Processes," in ICAPS, 2005.
+
 [42] Taleghan, M., et al., "PAC Optimal MDP Planning with Application to Invasive Species Management," Vol. 16, 2015.
+
 [43] Busoniu, L., et al., "Optimistic Planning for Sparsely Stochastic Systems," in Adaptive Dynamic Programming, 2011.
+
 [44] van Seijen, H., and R. Sutton, "Efficient Planning in MDPs by Small Backups," in ICML, 2013.
+
 [45] Zhang, J., M. Dridi, and A. Moudni, "A Stochastic Shortest-Path MDP Model with Dead Ends for Operating Rooms Planning," in International Conference on Automation and Computing, 2017.
+
 [46] Yoon, S., A. Fern, and R. Givan, "FF-Replan: A Baseline for Probabilistic Planning," in ICAPS, 2007.
+
 [47] Teichteil-Koenigsbuch, F., G. Infantes, and U. Kuter, "RFF: A Robust, FF-Based MDP Planning Algorithm for Generating Policies with Low Probability of Failure," in ICAPS, 2008.
+
 [48] Oliehoek, F., and C. Amato, A Concise Introduction to Decentralized POMDPs, Springer, 2016.
+
 [49] Bernstein, D., et al., "The Complexity of Decentralized Control of Markov Decision Processes," Mathematics of Operations Research, Vol. 27, No. 4, 2002.
+
 [50] Varakantham, P., et al., "Exploiting Coordination Locales in Distributed POMDPs via Social Model Shaping," in ICAPS, 2009.
+
 [51] Nair, R., et al., "Networked Distributed POMDPs: A Synthesis of Distributed Constraint Optimization and POMDPs," in AAAI, 2005.
+
 [52] Denoeux, T., "40 Years of Dempster-Shafer Theory," Approximate Reasoning, 2016.
+
 [53] Liu, L., and R. Yager, "Classic Works of the Dempster-Shafer Theory of Belief Functions: An Introduction," Studies in Fuzziness and Soft Computing, Vol. 219, 2008.
+
 [54] Nickravesh, M, "Evolution of Fuzzy Logic: From Intelligent Systems and Computation to Human Mind," in Forging New Frontiers: Fuzzy Pioneers I. Studies in Fuzziness and Soft Computing, Vol. 217, Springer, 2007.
+
 [55] Mogdil, S., and H. Prakken, "The ASPIC* Framework for Structured Argumentation: A Tutorial," Argument and Computation, Vol. 5, No. 1, 2014.
+
 [56] Collins, A., D. Magazzeni, and S. Parsons, "Towards an Argumentation-Based Approach to Explainable Planning," in Explainable Planning, 2019.
+
 [57] Mostafa, H., and V. Lesser, "Offline Planning For Communication by Exploiting Structured Interactions in Decentralized MDPs," in International Conference on Web Intelligence and Intelligent Agent Technology, 2009.
+
 [58] Mogali, J., S. Smith, and Z. Rubinstein, "Distributed Decoupling of Multiagent Simple Temporal Problems," in IJCAI, 2016.
+
 [59] Melo, F., and M. Veloso, "Decentralized MDPs with Sparse Interactions," Artificial Intelligence, Vol. 175, 2011.
+
 [60] Yordanova, V., "Intelligent Adaptive Underwater Sensor Networks," Ph.D. dissertation, University College London, London, UK, 2018.
+
 [61] Ren, P., et al., A Survey of Deep Active Learning, 2020. Online: https://arxiv.org/ abs/2009.00236.
+
 [62] Becker, R., V. Lesser, and S. Zilberstein, "Decentralized Markov Decision Processes with Event-Driven Interactions," in AAMAS, 2004.
+
 [63] Xuan, P., and V. Lesser, "Incorporating Uncertainty in Agent Commitments," in Agent Theories, Architectures, and Languages, 1999.
+
 [64] Klemm, R., et al. (Eds.), Novel Radar Techniques and Applications, Scitech Publishing, 2017.
+
 [65] Altman, E., Constrained Markov Decision Processes, Chapman Hall, 1999.
+
 [66] Dolgov, D., and E. Durfee, "Stationary Deterministic Policies for Constrained MDPs with Multiple Rewards, Costs, and Discount Factors," in IJCAI, 2005.
+
 [67] Muhammad, N., et al., "Resource Allocation Techniques in Cooperative Cognitive Radio Networks," Communications Surveys \& Tutorials, Vol. 16, No. 2, 2013.
+
 [68] Ramzan, M., et al., "Multiobjective Optimization for Spectrum Sharing in Cognitive Radio Networks: A Review," Pervasive and Mobile Computing, Vol. 41, 2017.
+
 [69] Jorswieck, E., and M. Butt, "Resource Allocation for Shared Spectrum Networks,"in Spectrum Sharing: The Next Frontier in Wireless Networks, Wiley, 2020.
+
 [70] Shoham, Y., and K. Leyton-Brown, Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations, Cambridge University Press, 2009.
+
 [71] Nisan, N., et al. (Eds.), Algorithmic Game Theory, New York: Cambridge University Press, 2007.
+
 [72] Saad, W., et al., "Coalitional Game Theory for Communication Networks: A Tutorial," IEEE Signal Processing Magazine, 2009.
+
 [73] MacKenzie, A., and L. DaSilva, Game Theory for Wireless Engineers, Morgan \& Claypool, 2006.
+
 [74] Han, Z., et al., Game Theory in Wireless and Communication Networks: Theory, Models, and Applications, Cambridge University Press, 2012, The course http://www2.egr.uh.edu/-zhan2/ game_theory_course/ contains slides based on the book.
+
 [75] Zayen, B., A. Hayar, and G. Noubir, "Game Theory-Based Resource Management Strategy for Cognitive Radio Networks," Multimedia Tools and Applications, Vol. 70, No. 3, 2013.
+
 [76] Mkiramweni, M., et al., "Game-Theoretic Approaches for Wireless Communications with Unmanned Aerial Vehicles," IEEE Wireless Communications, 2018.
+
 [77] Snyder, M., R. Sundaram, and M. Thakur, "A Game-Theoretic Framework for Bandwidth Attacks and Statistical Defenses," in Local Computer Networks, 2007.
+
 [78] Schramm, H., et al., "A Game Theoretic Model of Strategic Conflict in Cyberspace," Military Operations Research, Vol. 19, No. 1, 2014.
+
 [79] Kasmarik, K., et al., "A Survey of Game Theoretic Approaches to Modelling DecisionMaking in Information Warfare Scenarios," Future Internet, Vol. 8, 2016.
+
 [80] Liu, X., et al., "SPREAD: Foiling Smart Jammers Using Multilayer Agility," in INFOCOM, 2007.
+
 [81] Yang, D., et al., "Coping with a Smart Jammer in Wireless Networks: A Stackelberg Game Approach," IEEE Transactions on Wireless Communications, Vol. 12, No. 8, 2013.
+
 [82] Firouzbakht, K., G. Noubir, and M. Salehi, "Multicarrier Jamming Mitigation: A Proactive Game Theoretic Approach," in Proactive and Dynamic Network Defense, 2019.
+
 [83] Wang, H., et al., "Radar Waveform Strategy Based on Game Theory," Radio Engineering, Vol. 28, No. 4, 2019.
+
 [84] Li, K., B. Jiu, and H. Liu, "Game Theoretic Strategies Design for Monostatic Radar And Jammer Based on Mutual Information," IEEE Access, Vol. 7, 2019.
+
 [85] Zhang, X., et al., "Game Theory Design for Deceptive Jamming Suppression in Polarization MIMO Radar," IEEE Access, Vol. 7, 2019.
+
 [86] Wonderley, D., T. Selee, and V. Chakravarthy, "Game Theoretic Decision Support Framework for Electronic Warfare Applications," in Radar Conference, IEEE, 2016.
+
 [87] Mneimneh, S., et al., "A Game-Theoretic and Stochastic Survivability Mechanism Against Induced Attacks in Cognitive Radio Networks," Pervasive and Mobile Computing, Vol. 40, 2017.
+
 [88] Sundaram, R., et al., "Countering Smart Jammers: Nash Equilibria for Asymmetric Agility And Switching Costs," in Classified US Military Communications, 2013.
+
 [89] Blum, D., "Game-Theoretic Analysis of Electronic Warfare Tactics with Applications to the World War II Era," M.S. thesis, 2001.
+
 [90] Thanoon, M., "A System Development For Enhancement of Human-Machine Teaming," Ph.D. dissertation, Tennessee State University, 2019.
+
 [91] McDermott, P., et al., "Human-Machine Teaming Systems Engineering Guide," MITRE, Tech. Rep. AD1108020, 2018.
+
 [92] Urlings, P., and L. Jain, "Teaming Human and Machine," in Advances In Intelligent Systems For Defence, World Scientific, 2002.
+
 [93] Taylor, R., "Towards Intelligent Adaptive Human Autonomy Teaming," Defence Science and Technology Laboratory, UK, Tech. Rep. STOMP-HFM-300, 2018.
+
 [94] Smith, C., Ethical Artificial Intelligence (AI), 2020. doi: 10.1184/ R1/c.4953576.v1.
+
 [95] Overholt, J., and K. Kearns, Air Force Research Laboratory Autonomy Science \& Technology Strategy, 2014. Online: https://tinyurl.com/afrl-autonomy.
+
 [96] Haigh, K. Z., S. Varadarajan, and C. Y. Tang, "Automatic Learning-Based MANET CrossLayer Parameter Configuration," in Workshop on Wireless Ad hoc and Sensor Networks, IEEE, 2006.
+
 [97] Hilario, M., "An Overview of Strategies for Neurosymbolic Integration," in ConnectionistSymbolic Integration, Lawrence Erlbaum, 1997.
+
 [98] D'Avila Garcez, A., L. Lamb, and D. Gabbay, Neural-Symbolic Cognitive Reasoning, Springer, 2009.
+
 [99] Confalonieri, R., et al., "A Historical Perspective of Explainable Artificial Intelligence," WIREs Data Mining and Knowledge Discovery, Vol. 11, No. 1, 2021.
+
 [100] Mitola III, J., "Cognitive Radio: An Integrated Agent Architecture for Software Defined Radio," Ph.D. dissertation, Royal Institute of Technology (KTH), Kista, Sweden, 2000.
+
 [101] Berlemann, L., S. Mangold, and B. H. Walke, "Policy-Based Reasoning for Spectrum Sharing In Radio Networks," in Symposium on New Frontiers in Dynamic Spectrum Access Networks, 2005.
+
 [102] Gustavsson, P., et al., "Machine Interpretable Representation of Commander's Intent," in International Command and Control Research and Technology Symposium: C2 for Complex Endeavors, 2008.
+
 [103] Gustavsson, P., et al., "Formalizing Operations Intent and Effects for Network-Centric Applications," in International Conference on System Sciences, 2009.
+
 [104] Roth, E., et al., "Designing Collaborative Planning Systems: Putting Joint Cognitive Systems Principles to Practice," in Cognitive Systems Engineering: A Future for a Changing World, Ashgate Publishing, 2017, Ch. 14.
+
 [105] Haigh, K. Z., O. Olofinboba, and C. Y. Tang, "Designing an Implementable User-Oriented Objective Function for MANETs," in International Conference On Networking, Sensing and Control, IEEE, 2007.
+
 [106] Heilemann, F., and A. Schulte, "Interaction Concept for Mixed-Initiative Mission Planning on Multiple Delegation Levels in multi-UCAV Fighter Missions," in International Conference on Intelligent Human Systems Integration, Springer, 2019.
+
 [107] Irandoust, H., et al., "A Mixed-Initiative Advisory System for Threat Evaluation," in International Command and Control Research and Technology Symposium, 2010.
+
 [108] Parsons, S., et al., "Argument Schemes For Reasoning About Trust," Argument \& Computation, Vol. 5, No. 2-3, 2014.
+
 [109] Sarkadi, S., et al., "Modelling Deception Using Theory of Mind in Multiagent Systems," $A I$ Communications, Vol. 32, No. 4, 2019.
+
 [110] Miller, C., and R. Goldman, "Tasking Interfaces; Associates That Know Who's the Boss," in Human/Electronic Crew Conference, 1997.
+
 [111] Miller, C., et al., "The Playbook," in Human Factors and Ergonomics Society, 2005.
+
 [112] Pomerleau, M., "Here's What the Army is Saying about Its New Electronic Warfare Solution," C4ISRNet, 2018.
+
 [113] US Army, Electronic Warfare Planning and Management Tool (EWPMT), Accessed 2020-0919. Online: https://tinyurl.com/ewpmt-army.
+
 [114] Raytheon, Electronic Warfare Planning Management Tool (EWPMT), Accessed 2020-09-19. Online: https://tinyurl.com/ewpmt-rtn.
+
 [115] Mostafa, S., M. Ahmad, and A. Mustapha, "Adjustable Autonomy: A Systematic Literature Review," Artificial Intelligence Review, No. 51, 2019.
+
 [116] Fürnkranz, J., and E. Hüllermeier, Preference Learning, Springer Verlag, 2011.
+
 [117] Kostkova, P., G. Jawaheer, and P. Weller, "Modeling User Preferences In Recommender Systems," ACM Transactions on Interactive Intelligent Systems, Vol. 4, 2014.
+
 [118] Bantouna, A., et al., "An Overview of Learning Mechanisms for Cognitive Systems," Wireless Communications and Networking, No. 22, 2012.
+
 [119] Rehkopf, M., User Stories with Examples and Template. Accessed 2020-9-28. Online: https:// www.atlassian.com/agile/project-management/user-stories.
+
 [120] Mountain Goat Software, User stories. Accessed 2020-09-28. Online: https://www. mountaingoatsoftware.com/agile/user-stories.
 
