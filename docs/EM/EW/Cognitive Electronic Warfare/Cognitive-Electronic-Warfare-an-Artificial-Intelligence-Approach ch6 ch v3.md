@@ -96,7 +96,7 @@ HTN规划器在一个表示待解决问题的任务网络（task network）上�
 - **基本任务（Primitive tasks）**：可直接在状态中执行的动作，具有关联的前提条件和预期效果；
 - **复合任务（Compound tasks）**：说明如何通过基本任务实现目标。**方法（Method）**则描述如何将一个复合任务分解为部分有序的子任务（可以是基本任务或复合任务）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-132.jpg?height=671&width=1078&top_left_y=151&top_left_x=210){width="500"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-132.jpg?height=671&width=1078&top_left_y=151&top_left_x=210){width="600"}
 
 图6.4 HTN包含任务、其前提条件以及诸如顺序等关联约束。任务目标包含三个可能相互独立的任务：电子对抗措施（ECM）、压制敌方防空（Suppression of Enemy Air Defense, SEAD）或巡逻空域。SEAD方法被分解为三个有序任务：突入（ingress）、打击（strike）和撤离（egress）。（源自[21]。）
 
@@ -169,12 +169,12 @@ POMDP也是强化学习（Reinforcement Learning, RL）场景中最常用的表�
 
 | 因素（Factor） | 主动感知（Active Sensing） | 有意通信（Deliberate Communication） |
 | :--- | :--- | :--- |
-| **为何**（Why） | 提升信息质量 | 提升信息质量 |
-| **何人**（Who） | 协同感知（Collaborative sensing） | 与谁通信 |
-| **何事**（What） | 需采集的信息内容 | 需传输的信息内容；抽象层级 |
-| **何处**（Where） | 空间与频谱（Spatial and spectral） | 编队地理分布（Team geography） |
-| **何时**（When） | 感知调度（Sensing schedule） | 信息的关键性（Criticality of information） |
-| **如何**（How） | 使用何种传感器 | 隐式或显式交互（Implicit or explicit interactions） |
+| **Why** | 提升信息质量 | 提升信息质量 |
+| **Who** | 协同感知（Collaborative sensing） | 与谁通信 |
+| **What** | 需采集的信息内容 | 需传输的信息内容；抽象层级 |
+| **Where** | 空间与频谱（Spatial and spectral） | 编队地理分布（Team geography） |
+| **When** | 感知调度（Sensing schedule） | 信息的关键性（Criticality of information） |
+| **How** | 使用何种传感器 | 隐式或显式交互（Implicit or explicit interactions） |
 
 **表6.2 感知动作可获取环境中未知辐射源的相关信息**
 
