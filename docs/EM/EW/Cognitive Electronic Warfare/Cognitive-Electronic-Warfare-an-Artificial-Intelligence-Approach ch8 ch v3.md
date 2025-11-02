@@ -338,67 +338,132 @@ Sheeny 等人 [44] 提出了一种基于雷达信号实测特性的雷达数据�
 ## References
 
 [1] Cluzeau, J., et al., Concepts of Design Assurance For Neural Networks (CoDANN), European Union Aviation Safety Agency. Online: https://tinyurl.com/CoDANN-2020.
+
 [2] US DoD. (2020). "DoD data strategy." Accessed 2020-10-08, Online: https://tinyurl.com/ dod-data-strategy-2020.
+
 [3] Savage, S., and J. Thibault, "Towards a Simulation Network," in Winter Simulation Conference, 2015.
+
 [4] Gürbüz, S., et al., "An Overview of Cognitive Radar: Past, Present, and Future," IEEE Aerospace and Electronic Systems Magazine, Vol. 34, 2019.
+
 [5] Tong, J., et al., "Deep Learning for RF Fingerprinting: A Massive Experimental Study," Internet of Things (IoT) Magazine, 2020.
+
 [6] Youssef, K., et al., Machine Learning Approach to RF Transmitter Identification, 2017. Online: https://arxiv.org/abs/1711.01559.
+
 [7] Ettus Research. (2020). "UHD (USRP Hardware Driver)," Online: https://www.ettus.com/ sdr-software/uhd-usrp-hardwaredriver/.
+
 [8] Li, S., et al., Now Radios Can Understand Each Other: Modeling Language for Mobility, Wireless Innovation Forum. Ontology from May 08, 2014 on https://www.wirelessinnovation. org/reference-implementations/.
+
 [9] Li, S., et al., "An Implementation of Collaborative Adaptation of Cognitive Radio Parameters Using an Ontology and Policy Based Approach," Analog Integrated Circuits and Signal Processing, Vol. 69, No. 2-3, 2011.
+
 [10] Cooklev, T., and L. Stanchev, "A Comprehensive and Hierarchical Ontology for Wireless Systems," Wireless World Research Forum Meeting, Vol. 32, 2014.
+
 [11] Horne, C., M. Ritchie, and H. Griffiths, "Proposed Ontology for Cognitive Radar Systems," IET Radar, Sonar and Navigation, Vol. 12, 122018.
+
 [12] World Wide Web Consortium (W3C). (2020). "Web Ontology Language (OWL)." Accessed 2020-11-07, Online: https://www.w3.org/OWL/.
+
 [13] Musen, M., "The Protégé Project: A Look Back and a Look Forward," ACM SIG in AI, Vol. 1, No. 4, 2015.
+
 [14] Hilburn, B., et al., "SigMF: The Signal Metadata Format," in GNU Radio Conference, 2018.
+
 [15] GNU Radio Foundation. (2020). "Signal Metadata Format (SigMF)." Accessed 2020-1031, Online: https://github.com/gnuradio/SigMF.
+
 [16] Sankhe, K., et al., "ORACLE: Optimized Radio Classification Through Convolutional Neural Networks," in INFOCOM, Dataset available at https://genesys-lab.org/oracle, 2019.
+
 [17] Cooklev, T., R. Normoyle, and D. Clendenen, "The VITA 49 Analog RF-Digital Interface," IEEE Circuits and Systems Magazine, 2012.
+
 [18] VMEbus International Trade Association (VITA). (2020). "Vita: Open Standards." Accessed 2020-10-31, Online: https://www.vita.com/.
+
 [19] Google. (2020). "Protocol Buffers." Accessed 2020-11-07, Online: https://developers. google.com/protocol-buffers.
+
 [20] World Wide Web Consortium (W3C), SOAP, Accessed 2020-12-08, 2020. Online: https:// www.w3.org/TR/soap/.
+
 [21] Potti, P., "On the Design of Web Services: SOAP vs. REST," M.S. thesis, University of Northern Florida, 2011.
+
 [22] Quinlan, J., "The Effect of Noise on Concept Learning," in Machine Learning, An Artificial Intelligence Approach, Morgan Kaufmann, 1986.
+
 [23] Zhu, X., and X. Wu, "Class Noise vs. Attribute Noise: A Quantitative Study of Their Impacts," Artificial Intelligence Review, Vol. 22, 2004.
+
 [24] Haigh, K. Z., et al., "Parallel Learning and DM for a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.
+
 [25] Haigh, K. Z., et al., "Machine Learning for Embedded Systems: A Case Study," BBN Technologies, Tech. Rep. BBN-REPORT-8571, 2015.
+
 [26] Mirzasoleiman, B., J. Bilmes, and J. Leskovec, "Coresets for Data-Efficient Training of Machine Learning Models," in ICML, 2020.
+
 [27] Gong, Z., et al., "An End-to-End Joint Unsupervised Learning of Deep Model and PseudoClasses for Remote Sensing Scene Representation," in IJCNN, 2019.
+
 [28] Zhang, C., H. Kjellstrom, and S. Mandt, "Determinantal Point Processes for Mini-Batch Diversification," in Uncertainty in AI, 2017.
+
 [29] You, X., R. Wang, and D. Tao, "Diverse Expected Gradient Active Learning for Relative Attributes," IEEE Transactions on Image Processing, Vol. 23, No. 7, 2014.
+
 [30] Shi, L., and Y.-D. Shen, "Diversifying Convex Transductive Experimental Design for Active Learning," in IJCAI, 2016.
+
 [31] Zhang, Y., et al., "Energy-Entropy Competition and the Effectiveness of Stochastic Gradient Descent In Machine Learning," Molecular Physics, No. 16, 2018.
+
 [32] Gong, Z., P. Zhong, and W. Hu, "Diversity in Machine Learning," IEEE Access, Vol. 7, 2019.
+
 [33] Ren, P., et al., A Survey of Deep Active Learning, 2020. Online: https://arxiv.org/ abs/2009.00236.
+
 [34] Shorten, C., and T. Khoshgoftaar, "A Survey on Image Data Augmentation for Deep Learning," Journal Of Big Data, Vol. 6, No. 1, 2019.
+
 [35] Chung, Y., et al., Learning Unknown Examples for ML Model Generalization, 2019. Online: https://arxiv.org/abs/ 1808.08294.
+
 [36] Brownlee, J. (2018). "Train Neural Networks with Noise to Reduce Overfitting." Accessed 2020-11-22, Online: https://tinyurl.com/noise-and-overfitting.
+
 [37] Goodfellow, I., Y. Bengio, and A. Courville, Deep Learning, MIT Press, 2016.
+
 [38] Chen, T., et al., "Big Self-Supervised Models Are Strong Semisupervised Learners," in NeurIPS, 2020.
+
 [39] Sohn, K., et al., "FixMatch: Simplifying Semisupervised Learning with Consistency and Confidence," in NeurIPS, 2020.
+
 [40] Reed, R., and R. Marks II, Neural Smithing: Supervised Learning in Feedforward Artificial Neural Networks, Bradford Books, 1999.
+
 [41] Bishop, C., "Training with Noise Is Equivalent to Tikhonov Regularization," Neural Computation, Vol. 7, No. 1, 2008.
+
 [42] Mirzasoleiman, B., K. Cao, and J. Leskovec, "Coresets for Robust Training of Neural Networks Against Noisy Labels," in NeurIPS, 2020.
+
 [43] Soltani, N., et al., "More Is Better: Data Augmentation for Channel-Resilient RF Fingerprinting," IEEE Communications Magazine, Vol. 58, No. 10, 2020.
+
 [44] Sheeny, M., A. Wallace, and S. Wang, "RADIO: Parameterized Generative Radar Data Augmentation for Small Datasets," Applied Sciences, Vol. 10, No. 11, 2020.
+
 [45] Huang, L., et al., "Data Augmentation for Deep Learning-Based Radio Modulation Classification," IEEE Access, Vol. 8, 2020.
+
 [46] Yuan, X., et al., "Adversarial Examples: Attacks and Defenses for Deep Learning," IEEE Transactions on Neural Networks and Learning Systems, Vol. 30, No. 9, 2019.
+
 [47] Ren, K., et al., "Adversarial Attacks and Defenses in Deep Learning," Engineering, Vol. 6, No. 3, 2020.
+
 [48] Goodfellow, I., et al., "Generative Adversarial Nets," in NeurIPS, 2014.
+
 [49] Karras, T., et al., "Progressive Growing of GANs for Improved Quality, Stability, and Variation," in ICLR, 2018.
+
 [50] Li, M., et al., "Generative Adversarial Networks-Based Semisupervised Automatic Modulation Recognition for Cognitive Radio Networks," Sensors, 2018.
+
 [51] Davaslioglu, K., and Y. E. Sagduyu, "Generative Adversarial Learning for Spectrum Sensing," in ICC, 2018.
+
 [52] Majumder, U., E. Blasch, and D. Garren, Deep Learning for Radar and Communications Automatic Target Recognition, Norwood, MA: Artech House, 2020.
+
 [53] Shi, Y., K. Davaslioglu, and Y. Sagduyu, Generative Adversarial Network for Wireless Signal Spoofing, 2019. Online: https://arxiv.org/abs/1905.01008.
+
 [54] O'Shea, T., et al., "Physical Layer Communications System Design Over-the-Air Using Adversarial Networks," in European Signal Processing Conference, 2018.
-[55] Wood, A., et al., "Differential Privacy: A Primer for a Nontechnical Audience," Vanderbilt Journal of Entertainment \& Technology Law, Vol. 21, No. 1, 2018.
+
+[55] Wood, A., et al., "Differential Privacy: A Primer for a Nontechnical Audience," Vanderbilt Journal of Entertainment & Technology Law, Vol. 21, No. 1, 2018.
+
 [56] Dwork, C., and A. Roth, The Algorithmic Foundations of Differential Privacy, Now Publishers, 2014.
+
 [57] Bost, R., et al., Machine Learning Classification Over Encrypted Data, International Association for Cryptologic Research, 2014. Online: https://eprint.iacr.org/2014/331.pdf.
+
 [58] Dowlin, N., et al., "CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy," in ICML, 2016.
+
 [59] Tang, X., et al., When Homomorphic Cryptosystem Meets Differential Privacy: Training Machine Learning Classifier with Privacy Protection, 2018. Online: https://arxiv.org/abs/1812.02292.
+
 [60] Lou, Q., and L. Jiang, "SHE: A Fast and Accurate Deep Neural Network for Encrypted Data," In NeurIPS, 2019.
+
 [61] Catak, F., et al., "Practical Implementation of Privacy Preserving Clustering Methods Using a Partially Homomorphic Encryption Algorithm," Electronics, Vol. 9, 2020.
+
 [62] Kumbhar, H., and R. Srinivasa, "Machine Learning Techniques for Homomorphically Encrypted Data," In Applied Computer Vision And Image Processing, 2020.
+
 [63] Papernot, N., et al., "Semisupervised Knowledge Transfer for Deep Learning From Private Training Data," in ICLR, 2017.
+
 [64] Geyer, R., T. Klein, and M. Nabi, "Differentially Private Federated Learning: A Client Level Perspective," in NIPS Workshop Machine Learning on the Phone and Other Consumer Devices, 2017.
+
 [65] Haigh, K. Z., et al., "Rethinking Networking Architectures for Cognitive Control," in Microsoft Research Cognitive Wireless Networking Summit, 2008.
+

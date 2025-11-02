@@ -466,49 +466,93 @@ Maher 与 Orlando [31] 利用**基于本体的知识图谱**（ontology-based kn
 鉴于电子战（EW）固有的**交互性**与**对抗性**，认知系统必须在**闭环环境**中进行测试。系统需求应明确指出认知能力三维模型（图1.3）中哪些维度对任务至关重要，从而确保测试场景和所测特性能够切实满足任务目标。
 
 ## References
-
 [1] McLeod, S., "Maslow's Hierarchy of Needs," Simply Psychology, 2018.
+
 [2] Cohen, P., and A. Howe, "How Evaluation Guides AI Research: The Message Still Counts More Than the Medium," AI Magazine, Vol. 9, No. 4, 1988.
+
 [3] Haigh, K. Z., et al., "Parallel Learning and Decision Making for a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.
+
 [4] Youssef, K., et al., "Machine Learning Approach to RF Transmitter Identification," IEEE Journal of Radio Frequency Identification, Vol. 2, No. 4, 2018.
+
 [5] National Research Council, Assessing the Reliability of Complex Models, National Academies Press, 2012.
+
 [6] Cluzeau, J., et al., Concepts of Design Assurance For Neural Networks (CoDANN), European Union Aviation Safety Agency. Online: https://tinyurl.com/CoDANN-2020.
+
 [7] Software Considerations in Airborne Systems and Equipment Certification, RTCA DO-178C/ EUROCAE ED-12C Standard, Radio Technical Commission for Aeronautics (RTCA), 2011.
+
 [8] Sun, X., H. Khedr, and Y. Shoukry, "Formal Verification of Neural Network Controlled Autonomous Systems," in Hybrid Systems: Computation and Control, 2019.
+
 [9] Luckcuck, M., et al., "Formal Specification and Verification of Autonomous Robotic Systems: A Survey," ACM Comput. Surv., Vol. 52, No. 5, 2019.
+
 [10] Jacklin, S., et al., "Verification, Validation, and Certification Challenges for Adaptive FlightCritical Control System Software," in AIAA Guidance, Navigation, and Control Conference and Exhibit, 2004.
+
 [11] Lahiri, S. K., and C. Wang, Computer Aided Verification, Springer Nature, 2020, Vol. 12224.
+
 [12] Cofer, D., et al., "Run-Time Assurance for Learning-Enabled Systems," in NASA Formal Methods Symposium, Springer, 2020.
+
 [13] Liu, C., et al., Algorithms for Verifying Deep Neural Networks, 2019. Online: https://arxiv.org/ abs/1903.06758.
+
 [14] Bousquet, O., S. Boucheron, and G. Lugosi, "Introduction to Statistical Learning Theory," in Summer School on Machine Learning, Springer, 2003.
+
 [15] Kearns, M., U. Vazirani, and U. Vazirani, An Introduction to Computational Learning Theory, MIT Press, 1994.
+
 [16] Russell, S., and P. Norvig, Artificial Intelligence: A Modern Approach, Pearson Education, 2015.
-[17] Vapnik, V., and A. Chervonenkis, "On the Uniform Convergence of Relative Frequencies of Events to Their Probabilities," Theory Of Probability \& Its Applications, Vol. 16, No. 2, 1971.
+
+[17] Vapnik, V., and A. Chervonenkis, "On the Uniform Convergence of Relative Frequencies of Events to Their Probabilities," Theory Of Probability & Its Applications, Vol. 16, No. 2, 1971.
+
 [18] Vapnik, V., The Nature of Statistical Learning Theory (Second ed.), New York: SpringerVerlag, 2000.
+
 [19] Valiant, L., "A Theory of the Learnable," Communications of the ACM, Vol. 27, No. 11, 1984.
+
 [20] Shawe-Taylor, J., and R. Williamson, "A PAC Analysis of a Bayesian Estimator," in Computational Learning Theory, 1997.
+
 [21] McAllester, D., "Some PAC-Bayesian Theorems," Machine Learning, Vol. 37, No. 3, 1999.
+
 [22] McAllester, D., "PAC-Bayesian Model Averaging," in Computational Learning Theory, 1999.
+
 [23] Guedj, B., A Primer on PAC-Bayesian Learning, 2019. Online: https://arxiv.org/ abs/1901.05353.
+
 [24] Katz, G., et al., "The Marabou Framework for Verification and Analysis of Deep Neural Networks," in Computer Aided Verification, Springer, 2019.
+
 [25] Katz, G., et al., "Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks," in International Conference on Computer Aided Verification, Springer, 2017.
+
 [26] Huang, X., et al., "Safety Verification of Deep Neural Networks," Lecture Notes in Computer Science, 2017.
+
 [27] Balunovic, M., P. Bielik, and M. Vechev, "Learning to Solve SMT Formulas," in NeurIPS, 2018.
+
 [28] Gomes, C., et al., "Satisfiability Solvers," Foundations of Artificial Intelligence, Vol. 3, 2008.
+
 [29] Wang, S., et al., "Formal Security Analysis of Neural Networks Using Symbolic Intervals," in Conference on Security Symposium, USENIX Association, 2018.
+
 [30] Amini, A., et al., "Deep Evidential Regression," in NeurIPS, 2020.
-[31] Maher, M., and R. Orlando, "Solving the "Garbage In-Garbage Out" Data Issue Through Ontological Knowledge Graphs," Processus Group and Kord Technologies, Tech. Rep., 2019.
+
+[31] Maher, M., and R. Orlando, "Solving the 'Garbage In-Garbage Out' Data Issue Through Ontological Knowledge Graphs," Processus Group and Kord Technologies, Tech. Rep., 2019.
+
 [32] Katz, G., et al., "Towards Proving the Adversarial Robustness of Deep Neural Networks," in Formal Verification of Autonomous Vehicles, 2017.
+
 [33] Pei, K., et al., "Deepxplore: Automated Whitebox Testing of Deep Learning Systems," in Symposium on Operating Systems Principles, 2017.
+
 [34] Tian, Y., et al., "Deeptest: Automated Testing of Deep-Neural-Network-Driven Autonomous Cars," in International Conference on Software Engineering, 2018.
+
 [35] Dreossi, T., A. Donzé, and S. A. Seshia, "Compositional Falsification of Cyberphysical Systems with Machine Learning Components," in NASA Formal Methods Symposium, Springer, 2017.
+
 [36] Zhang, Z., et al., "Two-Layered Falsification of Hybrid Systems Guided by Monte Carlo Tree Search," IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, Vol. 37, No. 11, 2018.
-[37] Buhrman, H., D. García-Soriano, and A. Matsliah, "Learning Parities in the Mistake-Bound Model," Information processing letters, Vol. 111, No. 1, 2010.
+
+[37] Buhrman, H., D. García-Soriano, and A. Matsliah, "Learning Parities in the Mistake-Bound Model," Information Processing Letters, Vol. 111, No. 1, 2010.
+
 [38] Littlestone, N., "Learning Quickly When Irrelevant Attributes Abound: A New LinearThreshold Algorithm," Machine Learning, Vol. 2, No. 4, 1988.
+
 [39] Elboher, Y., J. Gottschlich, and G. Katz, "An Abstraction-Based Framework for Neural Network Verification," in International Conference on Computer Aided Verification, Springer, 2020.
+
 [40] Hinton, G., O. Vinyals, and J. Dean, Distilling the Knowledge in a Neural Network, 2015. Online: https://arxiv.org/abs/1503.02531.
+
 [41] Papernot, N., et al., "Semisupervised Knowledge Transfer for Deep Learning From Private Training Data," in ICLR, 2017.
-[42] Mishra, A., and D. Marr, Apprentice: Using knowledge Distillation Techniques to Improve LowPrecision Network Accuracy, 2017. Online: https://arxiv.org/abs/1711.05852.
+
+[42] Mishra, A., and D. Marr, Apprentice: Using Knowledge Distillation Techniques to Improve LowPrecision Network Accuracy, 2017. Online: https://arxiv.org/abs/1711.05852.
+
 [43] Singh, G., et al., "Fast and Effective Robustness Certification," in NeurIPS, 2018.
+
 [44] Blumer, A., et al., "Occam's Razor," Information Processing Letters, Vol. 24, No. 6, 1987.
+
 [45] Xiang, W., H.-D. Tran, and T. Johnson, "Output Reachable Set Estimation and Verification for Multilayer Neural Networks," IEEE Transactions on Neural Networks and Learning Systems, Vol. 29, No. 11, 2018.
+

@@ -155,47 +155,92 @@ MATLAB 的射频工具箱（RF Toolbox）[33] 是一种易于使用的信号生�
 ## References
 
 [1] Gannapathy, V., et al., "A Review on Various Types Of Software Defined Radios (SDRs) in Radio Communication," International Journal of Research in Engineering and Technology, Vol. 03, 2014.
+
 [2] Christiansen, J., G. Smith, and K. Olsen, "USRP Based Cognitive Radar Testbed," in IEEE Radar Conference, 2017.
+
 [3] Haigh, K. Z., et al., "Rethinking Networking Architectures for Cognitive Control," in Microsoft Research Cognitive Wireless Networking Summit, 2008.
+
 [4] Yao, M., et al., "Artificial Intelligence Defined 5G Radio Access Networks," IEEE Communications Magazine, Vol. 57, No. 3, 2019.
+
 [5] You, X., et al., "AI for 5G: Research Directions and Paradigms," Science China Information Sciences, Vol. 62, No. 2, 2019.
+
 [6] Li, R., et al., "Deep Reinforcement Learning for Resource Management in Network Slicing," IEEE Access, Vol. 6, 2018.
-[7] Bogale, T. E., X. Wang, and L. Le, Machine Intelligence Techniques for Next-Generation Con-text-Aware Wireless Networks, 2018. Online: https://arxiv.org/abs/1801.04223.
+
+[7] Bogale, T. E., X. Wang, and L. Le, Machine Intelligence Techniques for Next-Generation Context-Aware Wireless Networks, 2018. Online: https://arxiv.org/abs/1801.04223.
+
 [8] Wang, J., et al., "Distributed Optimization of Hierarchical Small Cell Networks: A GNEP Framework," IEEE Journal on Selected Areas in Communications, Vol. 35, No. 2, 2017.
+
 [9] Li, R., et al., "Intelligent 5G: When Cellular Networks Meet Artificial Intelligence," IEEE Wireless Communications, Vol. 24, No. 5, 2017.
+
 [10] Wang, X., X. Li, and V. Leung, "Artificial Intelligence-Based Techniques for Emerging Heterogeneous Network: State of the Arts, Opportunities, and Challenges," IEEE Access, Vol. 3, 2015.
-[11] Klaine, P., et al., "A Survey of Machine Learning Techniques Applied to Self-Organizing Cellular Networks," IEEE Communications Surveys Tutorials, vol. 19, no. 4, 2017.
+
+[11] Klaine, P., et al., "A Survey of Machine Learning Techniques Applied to Self-Organizing Cellular Networks," IEEE Communications Surveys Tutorials, Vol. 19, No. 4, 2017.
+
 [12] Pérez-Romero, J., et al., "Knowledge-Based 5G Radio Access Network Planning and Optimization," in International Symposium on Wireless Communication Systems, 2016.
+
 [13] Gómez-Andrades, A., et al., "Automatic Root Cause Analysis for LTE Networks Based on Unsupervised Techniques," IEEE Transactions on Vehicular Technology, Vol. 65, No. 4, 2016.
+
 [14] Tan, X., et al., Improving Massive MIMO Belief Propagation Detector with Deep Neural Network, 2018. Online: https://arxiv.org/abs/1804.01002.
+
 [15] Liang, F., C. Shen, and F. Wu, "An Iterative BP-CNN Architecture for Channel Decoding," IEEE Journal of Selected Topics in Signal Processing, Vol. 12, No. 1, 2018.
+
 [16] O'Shea, T., and J. Hoydis, "An Introduction to Deep Learning for the Physical Layer," IEEE Transactions on Cognitive Communications and Networking, Vol. 3, No. 4, 2017.
+
 [17] Task Group SET-227, "Cognitive Radar," NATO Science and Technology, Tech. Rep. TR-SET-227, 2020.
-[18] Scikit-learn: Machine Learning in Python, Accessed: 2020-03-22. Online: https://scikit-learn. org/stable/.
-[19] Abadi, M., et al., TensorFlow: Large-scale Machine Learning on Heterogeneous Systems, 2015. Online: https: //www.tensorflow.org/.
-[20] MathWorks, Statistics and Machine Learning Toolbox. Accessed: 2020-03-22. Online: https:// www.mathworks.com/products/statistics. html.
+
+[18] Scikit-learn: Machine Learning in Python, Accessed: 2020-03-22. Online: https://scikit-learn.org/stable/.
+
+[19] Abadi, M., et al., TensorFlow: Large-scale Machine Learning on Heterogeneous Systems, 2015. Online: https://www.tensorflow.org/.
+
+[20] MathWorks, Statistics and Machine Learning Toolbox. Accessed: 2020-03-22. Online: https://www.mathworks.com/products/statistics.html.
+
 [21] R Core Team, R: A Language and Environment for Statistical Computing, R Foundation for Statistical Computing, Vienna, Austria, 2013.
+
 [22] University of Waikato, NZ, WEKA: The Workbench for Machine Learning. Accessed: 2020-04-12. Online: https://www.cs.waikato.ac.nz/ml/weka/.
-[23] Géron, A., Hands-On Machine Learning with Scikit-Learn, Keras \& TensorFlow, O’Reilly, 2019.
+
+[23] Géron, A., Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow, O’Reilly, 2019.
+
 [24] Haigh, K. Z., et al., "Machine Learning for Embedded Systems: A Case Study," BBN Technologies, Tech. Rep. BBN-REPORT-8571, 2015.
+
 [25] Kaggle. Accessed: 2020-12-08, 2020. Online: https://www.kaggle.com/.
-[26] IEEE dataport. Accessed: 2020-12-08, 2020. Online: https://ieeedataport.org/.
-[27] Google dataset. Accessed: 2020-12-08, 2020. Online: https://datasetsearch.research.google. com/.
+
+[26] IEEE Dataport. Accessed: 2020-12-08, 2020. Online: https://ieeedataport.org/.
+
+[27] Google Dataset. Accessed: 2020-12-08, 2020. Online: https://datasetsearch.research.google.com/.
+
 [28] Hall, T., et al., "Reference Datasets for Training and Evaluating RF Signal Detection and Classification Models," in IEEE Globecom Workshops, 2019.
-[29] Illinois Data Bank, Dataset for: A Dual-Frequency Radar Retrieval of Snowfall Properties Using a Neural Network,' Accessed: 2020-12-08, 2020. doi: 10.13012/B2IDB-0791318_V1.
+
+[29] Illinois Data Bank, Dataset for: "A Dual-Frequency Radar Retrieval of Snowfall Properties Using a Neural Network," Accessed: 2020-12-08, 2020. doi: 10.13012/B2IDB-0791318_V1.
+
 [30] Sankhe, K., et al., "ORACLE: Optimized Radio Classification Through Convolutional Neural Networks," in INFOCOM, Dataset available at https://genesys-lab.org/oracle, 2019.
+
 [31] Flowers, B., Radio Frequency Machine Learning (RFML) in PyTorch. Accessed: 2020-12-08, 2020. Online: https://github.com/brysef/rfml.
-[32] Clark, B., W. McNamara, and T. Walton, "Winning the Invisible War: Gaining an Enduring U.S. advantage in the Electromagnetic Spectrum," Center for Strategic and Budgetary Assessments, Tech. Rep., 2019.
-[33] MathWorks, RF Toolbox. Accessed: 2020-12-13. Online: https://www.mathworks.com/ products/rftoolbox.html.
+
+[32] Clark, B., W. McNamara, and T. Walton, "Winning the Invisible War: Gaining an Enduring U.S. Advantage in the Electromagnetic Spectrum," Center for Strategic and Budgetary Assessments, Tech. Rep., 2019.
+
+[33] MathWorks, RF Toolbox. Accessed: 2020-12-13. Online: https://www.mathworks.com/products/rftoolbox.html.
+
 [34] Reddy, R., et al., "Simulation Architecture for Network Centric Sensors and Electronic Warfare Engagements," in Interservice/Industry Training, Simulation, and Education Conference, Software available as a MATLAB module: https://tinyurl.com/csir-sewes, 2018.
+
 [35] Oechslin, R., et al., "Cognitive Radar Experiments with CODIR," in International Conference on Radar Systems, 2017.
+
 [36] Smith, G., et al., "Experiments with Cognitive Radar," in Computational Advances in MultiSensor Adaptive Processing, 2015.
-[37] J.-J. DeLisle, Product Trends: Signal Generators Meet the Latest Standards Head-On. Accessed 2020-12-13, 2014. Online: https://tinyurl.com/signal-generators.
+
+[37] DeLisle, J.-J., "Product Trends: Signal Generators Meet the Latest Standards Head-On." Accessed 2020-12-13, 2014. Online: https://tinyurl.com/signal-generators.
+
 [38] Northrop Grumman, Combat Electromagnetic Environment Simulator (CEESIM). Accessed 2020-12-13, 2020. Online: https://tinyurl.com/ems-ceesim.
-[39] Raspberry Pi Foundation. Accessed 2020-12-13, 2020. Online: https://www.raspberrypi. org/.
-[40] Ettus Research. (2020). "USRP Software Defined Radio Device," Online: https://www. ettus.com/.
-[41] Intelligent Automation, Inc, RFnest. Accessed 2020-12-13, 2020. Online: https://www.i-a-i. com/product/rfnest/.
-[42] Naval Air Warfare Center Training Systems Division, Next-Generation Electronic Warfare Environment Generator (NEWEG). Accessed 2020-12-13, 2020. Online: https://tinyurl. com/navair-neweg.
-[43] Information Systems Laboratories, RFView: High-fidelity RF signals and system modeling. Accessed 2020-12-13, 2020. Online: https://rfview.islinc.com.
+
+[39] Raspberry Pi Foundation. Accessed 2020-12-13, 2020. Online: https://www.raspberrypi.org/.
+
+[40] Ettus Research. (2020). "USRP Software Defined Radio Device," Online: https://www.ettus.com/.
+
+[41] Intelligent Automation, Inc., RFnest. Accessed 2020-12-13, 2020. Online: https://www.i-a-i.com/product/rfnest/.
+
+[42] Naval Air Warfare Center Training Systems Division, Next-Generation Electronic Warfare Environment Generator (NEWEG). Accessed 2020-12-13, 2020. Online: https://tinyurl.com/navair-neweg.
+
+[43] Information Systems Laboratories, RFView: High-Fidelity RF Signals and System Modeling. Accessed 2020-12-13, 2020. Online: https://rfview.islinc.com.
+
 [44] Mercury Systems, Radar Environment Simulators. Accessed 2020-12-13, 2020. Online: https://tinyurl.com/mrcy-res.
-[45] Grayson, T., LinkedIn Post: \#DyNAMO. Accessed 2020-12-19. Online: https://tinyurl.com/ grayson-dynamo.
+
+[45] Grayson, T., LinkedIn Post: #DyNAMO. Accessed 2020-12-19. Online: https://tinyurl.com/grayson-dynamo.
+

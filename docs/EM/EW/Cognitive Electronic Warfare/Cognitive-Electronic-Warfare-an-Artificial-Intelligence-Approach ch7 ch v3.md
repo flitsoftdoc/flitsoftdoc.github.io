@@ -263,102 +263,201 @@ MDP 是表示不确定性最常用的方法（见第6.1.3节）。Q学习（Q-le
 ## References
 
 [1] Lee, G.-H., J. Jo, and C. H. Park, "Jamming Prediction For Radar Signals Using Machine Learning Methods," Security and Communication Networks, 2020.
+
 [2] Melvin, W., and J. Scheer, Principles of Modern Radar: Radar Applications, Scitech, 2013.
+
 [3] Aslan, M., "Emitter Identification Techniques in Electronic Warfare," M.S. thesis, Middle East Technical University, 2006.
+
 [4] Morgan, T., How Do the Different Radar Modes of a Modern Fighter Aircraft Work? Accessed 2021-02-02, 2016. Online: https://tinyurl.com/radarmodes.
+
 [5] Avionics Department, "Electronic Warfare and Radar Systems Engineering Handbook," Naval Air Warfare Center Weapons Division, Tech. Rep. NAWCWD TP 8347, 2013.
+
 [6] Chairman of the Joint Chiefs of Staff, Joint publication 3-09: Joint fire support, 2019. Online: https://fas.org/irp/doddir/dod/jp313-1.pdf.
+
 [7] Zhou, D., et al., "Battle Damage Assessment with Change Detection of SAR Images," in Chinese Control Conference, 2015.
+
 [8] Basseville, M., and I. Nikiforov, Detection of Abrupt Changes: Theory and Application, Prentice-Hall, 1993.
+
 [9] Choi, S., et al., "A Case Study: BDA Model For Standalone Radar System (Work-In-Progress)," International Conference on Software Security and Assurance, 2018.
+
 [10] DoD Army, Electronic Warfare Battle Damage Assessment. Accessed 2021-02-02, 2014. Online: https://www.sbir.gov/sbirsearch/detail/872931.
+
 [11] Yordanova, V., "Intelligent Adaptive Underwater Sensor Networks," Ph.D. dissertation, University College London, London, UK, 2018.
-[12] Benaskeur, A., E. Bossé, and D. Blodgett, "Combat Resource Allocation Planning In Naval Engagements," Defence R\&D Canada, Tech. Rep. DRDC Valcartier TR 2005-486, 2007.
+
+[12] Benaskeur, A., E. Bossé, and D. Blodgett, "Combat Resource Allocation Planning In Naval Engagements," Defence R&D Canada, Tech. Rep. DRDC Valcartier TR 2005-486, 2007.
+
 [13] Garrido, A., C. Guzman, and E. Onaindia, "Anytime Plan-Adaptation for Continuous Planning," in UK Planning and Scheduling Special Interest Group, 2010.
+
 [14] Cushing, W., and S. Kambhampati, "Replanning: A New Perspective," in ICAPS, 2005.
+
 [15] Haigh, K. Z., and M. Veloso, "Planning, Execution and Learning in a Robotic Agent," in AIPS, Summary of Haigh's Ph.D. thesis, 1998.
+
 [16] Nourbakhsh, I., "Interleaving Planning and Execution," in Interleaving Planning and Execution for Autonomous Robots, Vol. 385, 1997.
+
 [17] Komarnitsky, R., and G. Shani, "Computing Contingent Plans Using Online Replanning," in AAAI, 2016.
+
 [18] Brafman, R., and G. Shani, "Replanning in Domains with Partial Information and Sensing Actions," in Journal of Artificial Intelligence Research, Vol. 45, 2012.
+
 [19] Ayan, F., et al., "HOTRiDE: Hierarchical Ordered Task Replanning in Dynamic Environments," in Planning and Plan Execution for Real-World Systems, 2007.
+
 [20] Lesire, C., et al., "A Distributed Architecture for Supervision of Autonomous Multirobot Missions," Autonomous Robots, Vol. 40, 2016.
+
 [21] Höller, D., et al., "HTN Plan Repair Via Model Transformation," in Künstliche Intelligenz, 2020.
+
 [22] Chen, C., et al., "RPRS: a Reactive Plan Repair Strategy for Rapid Response to Plan Failures of Deep Space Missions," Acta Astronautica, Vol. 175, 2020.
+
 [23] Beal, J., et al., "Adaptive Task Reallocation for Airborne Sensor Sharing," in Foundations and Applications of Self* Systems, 2016.
+
 [24] Buckman, N., H.-L. Choi, and J. How, "Partial Replanning for Decentralized Dynamic Task Allocation," in Guidance, Navigation, and Control, 2019.
+
 [25] Gerevini, A., A. Saetti, and I. Serina, "Planning Through Stochastic Local Search And Temporal Action Graphs," AI Research, Vol. 20, 2003.
+
 [26] Fox, M., et al., "Plan Stability: Replanning Versus Plan Repair," in ICAPS, 2006.
+
 [27] Veloso, M., Planning and Learning by Analogical Reasoning, Springer Verlag, 1994.
+
 [28] van der Krogt, R., and M. de Weerdt, "Plan Repair as an Extension of Planning," in ICAPS, 2005.
+
 [29] Bidot, J., B. Schattenberg, and S. Biundo, "Plan Repair in hybrid planning," in Künstliche Intelligenz, 2008.
+
 [30] Marsh, G., "Distributed Operations," Air Force Research Labs, Tech. Rep. BAA-AFRL-RIK-2016-0003, 2015.
+
 [31] Sutton, R., and A. Barto, Reinforcement Learning: An Introduction, Bradford, 2018.
+
 [32] R. Sutton, A. Barto, and R. Williams, "Reinforcement Learning Is Direct Adaptive Optimal Control," IEEE Control Systems Magazine, Vol. 12, No. 2, 1992.
+
 [33] Ernst, D., et al., "Reinforcement Learning Versus Model Predictive Control: A Comparison on a Power System Problem," IEEE Transactions on Systems, Man, and Cybernetics, Vol. 39, No. 2, 2009.
+
 [34] Görges, D., "Relations Between Model Predictive Control and Reinforcement Learning," IFAC-PapersOnLine, Vol. 50, No. 1, 2017, IFAC World Congress.
+
 [35] Haigh, K. Z., et al., "Parallel Learning and Decision Making for a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.
+
 [36] Rzhetsky, A., et al., "Choosing Experiments to Accelerate Collective Discovery," National Academy of Sciences, 2015.
+
 [37] Jiménez, S., et al., "A Review of Machine Learning For Automated Planning," The Knowledge Engineering Review, Vol. 27, 2012.
+
 [38] Kotseruba, I., and J. Tsotsos, "A Review of 40 years of Cognitive Architecture Research: Focus on Perception, Attention, Learning and Applications," CoRR, 2016.
+
 [39] Nason, S., and J. Laird, "Soar-RL: Integrating Reinforcement Learning with SOAR," Cognitive Systems Research, Vol. 6, 2005.
+
 [40] T. de la Rosa and S. McIlraith, "Learning Domain Control Knowledge for TLPlan and Beyond," in ICAPS Workshop on Planning and Learning, 2011.
+
 [41] Minton, S., et al., "Acquiring Effective Search Control Rules: Explanation-Based Learning in the Prodigy System," in International Workshop on Machine Learning, 1987.
+
 [42] Yau, K.-L., et al., "Application of Reinforcement Learning in Cognitive Radio Networks: Models and Algorithms," The Scientific World Journal, 2014.
+
 [43] Troxel, G., et al., "Cognitive Adaptation for Teams in ADROIT," in GLOBECOM, Invited, IEEE, 2007.
+
 [44] Tsagkaris, K., A. Katidiotis, and P. Demestichas, "Neural Network-Based Learning Schemes for Cognitive Radio Systems," Computer Communications, No. 14, 2008.
+
 [45] Thornton, C., et al., Experimental Analysis of Reinforcement Learning Techniques for Spectrum Sharing Radar, 2020. Online: https://arxiv.org/abs/2001.01799.
+
 [46] Galindo-Serrano, A., and L. Giupponi, "Distributed Q-Learning for Aggregated Interference Control in Cognitive Radio Networks," Transactions on Vehicular Technology, Vol. 59, No. 4, 2010.
+
 [47] Kulin, M., et al., "End-to-End Learning from Spectrum Data," IEEE Access, Vol. 6, 2018.
+
 [48] Qu, Z., et al., "Radar Signal Intrapulse Modulation Recognition Based on Convolutional Neural Network and Deep Q-Learning Network," IEEE Access, Vol. 8, 2020.
-[49] Li, M., Y. Xu, and J. Hu, "A Q-Learning Based Sensing Task Selection Scheme for Cognitive Radio Networks," in International Conference on Wireless Communications \& Signal Processing, 2009.
+
+[49] Li, M., Y. Xu, and J. Hu, "A Q-Learning Based Sensing Task Selection Scheme for Cognitive Radio Networks," in International Conference on Wireless Communications & Signal Processing, 2009.
+
 [50] Qu, X., et al., "A Survey on the Development of Self-Organizing Maps for Unsupervised Intrusion Detection," Mobile Networks and Applications, 2019.
+
 [51] Haigh, K. Z., et al., "Machine Learning for Embedded Systems: A Case Study," BBN Technologies, Tech. Rep. BBN-REPORT-8571, 2015.
+
 [52] Haigh, K. Z., et al., "Optimizing Mitigation Strategies: Learning to Choose Communication Strategies to Mitigate Interference," in Classified US Military Communications, 2013.
-[53] Haigh, K. Z., S. Varadarajan, and C. Y. Tang, "Automatic Learning-Based MANET CrossLayer Parameter Configuration," in Workshop on Wireless Ad hoc and Sensor Networks, IEEE, 2006.
+
+[53] Haigh, K. Z., S. Varadarajan, and C. Y. Tang, "Automatic Learning-Based MANET Cross-Layer Parameter Configuration," in Workshop on Wireless Ad hoc and Sensor Networks, IEEE, 2006.
+
 [54] Haigh, K. Z., O. Olofinboba, and C. Y. Tang, "Designing an Implementable User-Oriented Objective Function for MANETs," in International Conference On Networking, Sensing and Control, IEEE, 2007.
+
 [55] Haigh, K. Z., et al., "Rethinking Networking Architectures for Cognitive Control," in Microsoft Research Cognitive Wireless Networking Summit, 2008.
+
 [56] Haigh, K. Z., "AI Technologies for Tactical Edge Networks," in MobiHoc Workshop on Tactical Mobile Ad Hoc Networking, Keynote, 2011.
+
 [57] Haigh, K. Z., et al., "Modeling RF Interference Performance," in Collaborative Electronic Warfare Symposium, 2014.
+
 [58] Haigh, K. Z., "Learning to Optimize a Network Overlay Router," in Learning Methods for Control of Communications Networks, 2017.
+
 [59] Ma, M., et al., "Ship Classification and Detection Based on CNN Using GF-3 SAR Images," Remote Sensing, Vol. 10, 2018.
+
 [60] Wagner, S., "SAR ATR by a Combination of Convolutional Neural Network and Support Vector Machines," IEEE Transactions on Aerospace and Electronic Systems, Vol. 52, No. 6, 2016.
+
 [61] Gao, F., et al., "Combining Deep Convolutional Neural Network and SVM to SAR Image Target Recognition," in International Conference on Internet of Things, IEEE, 2017.
+
 [62] Lattimore, T., and C. Szepesvari, Bandit Algorithms, Cambridge University Press, 2019.
+
 [63] Slívkins, A., Introduction to Multi-Armed Bandits, 1-2. 2019, Vol. 12.
+
 [64] Jouini, W., C. Moy, and J. Palicot, "On Decision Making for Dynamic Configuration Adaptation Problem in Cognitive Radio Equipments: A Multiarmed Bandit Based Approach," Karlsruhe Workshop on Software Radios, 2010.
+
 [65] Liu. K., and Q. Zhao, "Channel Probing for Opportunistic Access with Multichannel Sensing," Conference on Signals, Systems and Computers, 2008.
+
 [66] Lu, J., et al., "Dynamic Multi-arm Bandit Game Based Multiagents Spectrum Sharing Strategy Design," in Digital Avionics Systems Conference, 2017.
+
 [67] Li, H., J. Luo, and C. Liu, "Selfish Bandit-Based Cognitive Antijamming Strategy for Aeronautic Swarm Network in Presence of Multiple Jammer," IEEE Access, 2019.
+
 [68] Amuru, S., et al., "Jamming Bandits: A Novel Learning Method for Optimal Jamming," IEEE Transactions on Wireless Communications, Vol. 15, No. 4, 2016.
+
 [69] ZhuanSun, S., J. Yang, and H. Liu, "An Algorithm for Jamming Strategy Using OMP and MAB," EURASIP Journal on Wireless Communications and Networking, 2019.
+
 [70] Takeuchi, S., et al., "Dynamic Channel Selection in Wireless Communications via a Multiarmed Bandit Algorithm Using Laser Chaos Time Series," Scientific Reports, Vol. 10,
+
 [71] Jun, K.-S., and R. Nowak, "Anytime Exploration For Multiarmed Bandits Using Confidence Information," in ICML, 2016.
+
 [72] Kleinberg, R. D., "Anytime Algorithms for Multiarmed Bandit Problems," in Symposium on Discrete Algorithms, 2006.
+
 [73] Besson, L., and E. Kaufmann, What Doubling Tricks Can and Can't Do for Multiarmed Bandits, 2018. Online: https://tinyurl.com/doubling-mab.
+
 [74] Even-Dar, E., S. Mannor, and Y. Mansour, "Action Elimination and Stopping Conditions for the Multiarmed Bandit and Reinforcement Learning Problems," Machine Learning Research, 2006.
+
 [75] Besson, L., E. Kaufmann, and C. Moy, "Aggregation of Multiarmed Bandits Learning Algorithms for Opportunistic Spectrum Access," in Wireless Communications and Networking Conference, 2018.
+
 [76] Gagliolo, M., and J. Schmidhuber, "Learning Dynamic Algorithm Portfolios," Annals of Mathematics and Artificial Intelligence, Vol. 47, 2006.
+
 [77] Svegliato, J., K. H. Wray, and S. Zilberstein, "Meta-level Control of Anytime Algorithms with Online Performance Prediction," in IJCAI, 2018.
-[78] Melo, F., Convergence of Q-Learning: A Simple Proof, 2007. Online: https://tinyurl.com/ qlearn-proof.
+
+[78] Melo, F., Convergence of Q-Learning: A Simple Proof, 2007. Online: https://tinyurl.com/qlearn-proof.
+
 [79] Selvi, E., et al., "On the Use of Markov Decision Processes in Cognitive Radar: An Application to Target Tracking," in Radar Conference, IEEE, 2018.
+
 [80] Wu, Q., et al., "Reinforcement Learning-Based Antijamming in Networked UAV Radar Systems," Applied Science, Vol. 9, No. 23,
+
 [81] Alizadeh, P., "Elicitation and Planning in Markov Decision Processes with Unknown Rewards," Ph.D. dissertation, Sorbonne, Paris, 2016.
+
 [82] Regan, K., and C. Boutilier, "Regret-Based Reward Elicitation for Markov Decision Processes," in Uncertainty in AI, 2009.
+
 [83] Efroni, Y., S. Mannor, and M. Pirotta, Exploration-Exploitation in Constrained MDPs, 2020. Online: https://arxiv.org/abs/2003.02189.
+
 [84] Taleghan, M., and T. Dietterich, "Efficient Exploration for Constrained MDPs," in $A A A I$ Spring Symposium, 2018.
+
 [85] Tarbouriech, J., and A. Lazaric, "Active Exploration in Markov Decision Processes," in Artificial Intelligence and Statistics, 2019.
+
 [86] Vlassis, N., et al., "Bayesian Reinforcement Learning," in Reinforcement Learning. Adaptation, Learning, and Optimization, Vol. 12, Springer, 2012.
+
 [87] Ghavamzadeh, M., et al., "Bayesian Reinforcement Learning: A Survey," Foundations and Trendsfin Machine Learning, Vol. 8, No. 5-6, 2015.
+
 [88] Mnih, V., et al., "Human-Level Control Through Deep Reinforcement Learning," Nature, Vol. 518, 2015.
+
 [89] Lapan, M., Deep Reinforcement Learning Hands-On, Packt, 2018.
+
 [90] Maglogiannis, V., et al., "A Q-Learning Scheme for Fair Coexistence Between LTE and Wi-Fi in Unlicensed Spectrum," IEEE Access, Vol. 6, 2018.
+
 [91] Kozy, M., "Creation of a Cognitive Radar with Machine Learning: Simulation and Implementation," M.S. thesis, Virginia Polytechnic Institute, 2019.
+
 [92] Zhang, B., And W. Zhu, "DQN Based Decision-Making Method of Cognitive Jamming Against Multifunctional Radar," Systems Engineering and Electronics, Vol. 42, No. 4, 2020.
+
 [93] Kang, L., et al., "Reinforcement Learning Based Antijamming Frequency Hopping Strategies Design for Cognitive Radar," in Signal Processing, Communications and Computing, 2018.
+
 [94] Bi, Y., Y. Wu, and C. Hua, "Deep Reinforcement Learning Based Multiuser Antijamming Strategy," in ICC, 2019.
-[95] Ak, S., and S. Bru"ggenwirth, Avoiding Jammers: A Reinforcement Learning Approach, 2019. Online: https://arxiv.org/abs/1911.08874.
-[96] Huynh, N., et al., "Jam Me If You Can': Defeating Jammer with Deep Dueling Neural Network Architecture and Ambient Backscattering Augmented Communications," IEEE Journal on Selected Areas in Communications, 2019.
+
+[95] Ak, S., and S. Brüggenwirth, Avoiding Jammers: A Reinforcement Learning Approach, 2019. Online: https://arxiv.org/abs/1911.08874.
+
+[96] Huynh, N., et al., "'Jam Me If You Can': Defeating Jammer with Deep Dueling Neural Network Architecture and Ambient Backscattering Augmented Communications," IEEE Journal on Selected Areas in Communications, 2019.
+
 [97] Abuzainab, N., et al., "QoS and Jamming-Aware Wireless Networking Using Deep Reinforcement Learning," in MILCOM, 2019.
-[98] Erpek, T., Y. Sagduyu, and Y. Shi, "Deep Learning for Launching and Mitigating Wireless Jamming Attacks,"- IEEE Transactions on Cognitive Communications and Networking, Vol. 45, No. 1, 2018.
+
+[98] Erpek, T., Y. Sagduyu, and Y. Shi, "Deep Learning for Launching and Mitigating Wireless Jamming Attacks," IEEE Transactions on Cognitive Communications and Networking, Vol. 45, No. 1, 2018.
+
 [99] Li, Y., et al., "On the Performance of Deep Reinforcement Learning-Based Anti-Jamming Method Confronting Intelligent Jammer," Applied Sciences, Vol. 9, 2019.
-[100] Ren, P., et al., A Survey Of Deep Active Learning, 2020. Online: https://arxiv.org/ abs/2009.00236.
+
+[100] Ren, P., et al., A Survey Of Deep Active Learning, 2020. Online: https://arxiv.org/abs/2009.00236.

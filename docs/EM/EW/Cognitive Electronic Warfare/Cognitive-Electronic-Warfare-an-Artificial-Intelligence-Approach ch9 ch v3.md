@@ -122,16 +122,30 @@ GPU不适用于电子战（EW）这一事实实际上并非损失：
 ## References
 
 [1] Haigh, K. Z., et al., "Rethinking Networking Architectures for Cognitive Control," in Microsoft Research Cognitive Wireless Networking Summit, 2008.
+
 [2] Troxel, G., et al., "Enabling Open-Source Cognitively-Controlled Collaboration Among Software-Defined Radio Nodes," Computer Networks, Vol. 52, No. 4, 2008.
+
 [3] Blossom, E., "GNU Radio: Tools for Exploring the Radio Frequency Spectrum," Linux Journal, Vol. 2004, No. 122, 2004.
+
 [4] Casimiro, A., J. Kaiser, and P. Verissimo, "An Architectural Framework and a Middleware For Cooperating Smart Components," in Conference on Computing Frontiers, 2004.
+
 [5] Hiltunen, M., and R. Schlichting, "The Cactus Approach to Building Configurable Middleware Services," in Workshop on Dependable System Middleware and Group Communication, 2000.
+
 [6] Object Management Group, Data Distribution Service (DDS), version 1.0, 2004. Online: https://www.omg.org/spec/DDS/1.0.
+
 [7] Object Management Group, Data Distribution Service, DDS Portal. Accessed 2020-10-21, 2020. Online: https://www.omg.org/omg-dds-portal/.
+
 [8] Apache. (2020). "Kafka," Online: https://kafka.apache.org/.
+
 [9] Haigh, K. Z., et al., "Parallel Learning and Decision Making for a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.
+
 [10] University of Waikato, NZ, WEKA: The Workbench for Machine Learning. Accessed: 2020-04-12. Online: https://www.cs.waikato.ac.nz/ml/weka/.
+
 [11] Haigh, K. Z., et al., "Machine Learning for Embedded Systems: A Case Study," BBN Technologies, Tech. Rep. BBN-REPORT-8571, 2015.
+
 [12] Rao, N., Intel AI—The Tools for the Job, 2018. Online: https:// tinyurl.com/intel-hw-trades.
+
 [13] Yang, M., et al., "Avoiding Pitfalls When Using NVIDIA GPUs for Real-Time Tasks in Autonomous Systems," in Euromicro Conference on Real-Time Systems, 2018.
+
 [14] Maceina, T., and G. Manduchi, "Assessment of General Purpose GPU Systems in Real-Time Control," Vol. 64, No. 6, 2017.
+
