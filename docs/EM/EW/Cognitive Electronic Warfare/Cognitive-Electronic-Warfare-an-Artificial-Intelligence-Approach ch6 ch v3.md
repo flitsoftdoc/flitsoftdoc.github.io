@@ -13,7 +13,7 @@
 | 输出 |  |  |  |  |
 | 资产分配（Asset Allocations） | 频谱感知计划（Spectrum Sensing Plan） | 电子防护与电子攻击规划（EP and EA Planning） | 人机交互（Human interactions） | 互操作性（Interoperability） |
 
-![](https://cdn.mathpix.com/snip/images/toFqlTQpgb1cBxGfR2JwaIgRKyNZMhdTAgOm2sZkcao.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/toFqlTQpgb1cBxGfR2JwaIgRKyNZMhdTAgOm2sZkcao.original.fullsize.png){width="600"}
 
 图6.1 为支持深思熟虑的基于效果的管理（EBM）规划，输入包括对任务的相对静态描述，输出则包括高层级任务指派。（随着规划过程日益自动化，动态输入也将变得相关。）
 
@@ -22,6 +22,7 @@
 /// note| 例6.1 TEMPLAR生成空中任务指令（Air Tasking Orders）。
 
 战术专家任务规划器（Tactical Expert Mission Planner, TEMPLAR）
+
 TEMPLAR包含四个独立的规划模块：
 
 - 编组规划器（package planner）：在目标规划工作表（Target Planning Worksheets）上生成任务行。
@@ -29,7 +30,7 @@ TEMPLAR包含四个独立的规划模块：
 - 空对空加油规划器（air-air refueling planner）：在加油规划工作表（Refueling Planning Worksheets）上生成任务行。
 - 任务行规划器（mission line planner）：在已有任务行中填写任务编号、呼号、SIF代码及其他信息。
 
-——Siska、Press和Lipinski [4]
+—— *Siska、Press和Lipinski [4]*
 
 ///
 
@@ -47,11 +48,11 @@ TEMPLAR包含四个独立的规划模块：
 
 经典规划（Classical planning）以当前情境的描述（初始状态）、一组动作以及目标描述作为输入，输出一个从当前情境导向目标的动作序列。概率规划（Probabilistic planning）用于处理非确定性（nondeterministic）和部分可观测（partially observable）的环境。时序规划（Temporal planning）处理具有持续时间的动作，或允许多个动作并发执行；时序规划技术通常也处理资源问题，因为资源的使用本质上往往是时序性的（例如，某一资源在同一时刻最多只能被一个动作使用）。条件规划（Conditional planning），又称应急规划（contingent planning），生成包含条件分支的规划：它输出的不是一个简单的动作序列，而是一个应急计划（contingency plan），该计划根据对环境的感知动态选择动作，如图6.3所示。任务失败的后果越严重，提前准备应急方案就越重要[7]。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-129.jpg?height=597&width=1151&top_left_y=153&top_left_x=177){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-129.jpg?height=597&width=1151&top_left_y=153&top_left_x=177){width="600"}
 
 图6.2 不同的问题领域挑战在规划方法选择中需考虑不同因素（这些因素并非互斥）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-129.jpg?height=308&width=1132&top_left_y=1004&top_left_x=182){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-129.jpg?height=308&width=1132&top_left_y=1004&top_left_x=182){width="600"}
 
 图6.3 应急规划（contingent plan）根据预期结果生成带条件分支的动作。在诸如表5.1所示的音调干扰机（tone jammer）这类简单场景中，此类规划看起来类似于决策树或规则系统。
 
@@ -95,7 +96,7 @@ HTN规划器在一个表示待解决问题的任务网络（task network）上�
 - **基本任务（Primitive tasks）**：可直接在状态中执行的动作，具有关联的前提条件和预期效果；
 - **复合任务（Compound tasks）**：说明如何通过基本任务实现目标。**方法（Method）**则描述如何将一个复合任务分解为部分有序的子任务（可以是基本任务或复合任务）。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-132.jpg?height=671&width=1078&top_left_y=151&top_left_x=210){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-132.jpg?height=671&width=1078&top_left_y=151&top_left_x=210){width="500"}
 
 图6.4 HTN包含任务、其前提条件以及诸如顺序等关联约束。任务目标包含三个可能相互独立的任务：电子对抗措施（ECM）、压制敌方防空（Suppression of Enemy Air Defense, SEAD）或巡逻空域。SEAD方法被分解为三个有序任务：突入（ingress）、打击（strike）和撤离（egress）。（源自[21]。）
 
@@ -189,7 +190,7 @@ POMDP也是强化学习（Reinforcement Learning, RL）场景中最常用的表�
 
 当时间和带宽允许时，各节点可交换观测结果与决策，以改进或重新校准其对态势的理解。**数据融合**（data fusion）有助于消除歧义、降低模型中的不确定性，并加快对先前未知威胁的识别速度。例如，一组节点可融合各自对仅能短暂观测到的威胁的估计结果。图6.5展示了通信能力对综合防空系统（Integrated Air Defense System, IADS）任务规划的潜在影响：随着可用通信能力的增强，更多低优先级威胁得以被有效压制。
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-136.jpg?height=465&width=1007&top_left_y=1566&top_left_x=246){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-136.jpg?height=465&width=1007&top_left_y=1566&top_left_x=246){width="500"}
 
 图6.5 任务完成程度依赖于可用于协同的通信资源。
 
