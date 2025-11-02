@@ -81,9 +81,11 @@ y = radars['Class']
 
 **步骤 2**：训练算法。选择一种分类算法，例如朴素贝叶斯（naïve Bayes），并在训练数据上训练模型。
 
+```python
 from sklearn.naive_bayes import GaussianNB
 gnb = GaussianNB()
 trainedGNB = gnb.fit(xTrain, yTrain)
+```
 
 **步骤 3**：验证结果。使用测试数据评估模型。通过混淆矩阵（confusion matrix）（见第 10.3.2 节）将预测类别与已知的测试类别进行比较。
 
