@@ -120,15 +120,15 @@ $P =$ 为节点 $n$ 生成初始候选策略种群
 
 For 每次迭代： // 直至收敛或达到最大迭代次数 
 
-　For 每个候选策略 $s_{i} \in P$：
+$\quad For$ 每个候选策略 $s_{i} \in P$：
 
-　　For 对每个度量 $m_{k}$： 
+$\quad\quad For$ 对每个度量 $m_{k}$： 
 
-$\quad m_{k}=f_{k}\left(o, s_{i}\right) \quad$   // 估计的度量值 
+$\quad\quad  m_{k}=f_{k}\left(o, s_{i}\right) \quad$   // 估计的度量值 
 
-Compute $\tilde{U}_{n}\left(s_{i}\right)$      // 估计的效用 
+$\quad Compute \tilde{U}_{n}\left(s_{i}\right)$      // 估计的效用 
 
-$P =$ 更新种群（更新个体位置或个体本身）
+$\quad P =$ 更新种群（更新个体位置或个体本身）
 
 Select  $s=\operatorname{argmax}_{s_{i} \in P}\left(\tilde{U}_{n}\left(s_{i}\right)\right)$   // 最后一代种群中的最优策略
 
