@@ -124,7 +124,7 @@ For 每次迭代： // 直至收敛或达到最大迭代次数
 
 　　For 对每个度量 $m_{k}$： 
 
-$\quad m_{k}=f_{k}\left(o, s_{i}\right) \quad $   // 估计的度量值 
+$\quad m_{k}=f_{k}\left(o, s_{i}\right) \quad$   // 估计的度量值 
 
 Compute $\tilde{U}_{n}\left(s_{i}\right)$      // 估计的效用 
 
