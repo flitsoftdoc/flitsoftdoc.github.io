@@ -1,4 +1,4 @@
-# 11 入门指南：初步步骤
+# 11 入门指南
 
 > 构建一个认知电子战（Cognitive EW）系统并非许多人所认为的那样困难。
 
@@ -52,7 +52,7 @@
 | CW | 100 | 7240 | 6772 | 0.0147666 |
 | CW | 100 | 1570 | 9280 | 0.0107758 |
 
-![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-238.jpg?height=254&width=1124&top_left_y=913&top_left_x=188){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-238.jpg?height=254&width=1124&top_left_y=913&top_left_x=188){width="600"}
 
 **图11.1** 软件定义无线电（SDR）平台提供射频（RF）前端、CPU、FPGA，在某些情况下还包括专用集成电路（ASIC, Application-Specific Integrated Circuit）。
 
