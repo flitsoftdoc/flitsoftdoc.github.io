@@ -134,7 +134,7 @@ $$
 
 ## 2.4 问题中使用的平面与球面三角形示例（EXAMPLES OF PLANE AND SPHERICAL TRIANGLES USED IN PROBLEMS）
 
-图 2.7 展示了地球表面上的一个球面三角形。三角形的三个顶点分别是北极（点 A）、子载点（SVP）（点 B）以及地球表面一个接收机的位置（点 C）。子载点是位于卫星正下方的地球表面点。
+图 2.7 展示了地球表面上的一个球面三角形。三角形的三个顶点分别是北极（点 A）、子载点（sub-vehicle point, SVP）（点 B）以及地球表面一个接收机的位置（点 C）。子载点是位于卫星正下方的地球表面点。
 
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-024.jpg?height=618&width=1096&top_left_y=246&top_left_x=186){width="600"}
   
