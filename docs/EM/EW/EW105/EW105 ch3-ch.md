@@ -110,7 +110,7 @@ $$
 
 图 3.4 还显示了经度与纬度的定义。经线是大圆弧，也就是说，每条经线位于一个穿过地球中心的平面上。而纬线不是大圆，但纬度定义为从赤道起向北或向南到该纬线的夹角。
 
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-032.jpg?height=599&width=1006&top_left_y=1331&top_left_x=232){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-032.jpg?height=599&width=1006&top_left_y=1331&top_left_x=232){width="600"}
   
 图 3.4 子载点是从地球中心到卫星的连线与地球表面的交点。
 
