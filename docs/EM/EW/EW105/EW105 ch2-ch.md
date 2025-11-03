@@ -110,7 +110,7 @@ $$
 
 对于直角球面三角形，可以使用一组由纳皮尔规则（Napier's rules）推导出的简化球面三角函数公式。请注意图 2.6 中的五段圆盘包含了直角球面三角形中除了 $90^{\circ}$ 角以外的所有部分。还要注意，其中三部分前带有“co-”，这意味着在应用纳皮尔规则时，该部分的三角函数需转换为余函数（例如正弦变为余弦）。
 
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-023.jpg?height=455&width=460&top_left_y=246&top_left_x=536){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-023.jpg?height=455&width=460&top_left_y=246&top_left_x=536){width="300"}
   
 图 2.6 纳皮尔规则允许通过该五段圆盘简化直角球面三角形的公式。
 
