@@ -10,11 +10,11 @@
 
 首先，让我们回顾一些平面三角学知识。本书中讨论的许多问题将同时使用平面和球面三角关系。平面三角学研究位于平面内的三角形。如图2.1所示，三角形有三条边和三个角。边具有物理长度，而平面三角形的三个内角之和为$180^{\circ}$。通常的做法是用小写字母标记三角形的三条边，并用与该边相对的对应大写字母标记角。
 
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-018.jpg?height=550&width=566&top_left_y=248&top_left_x=452){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-018.jpg?height=550&width=566&top_left_y=248&top_left_x=452){width="300"}
 
 图2.1 平面三角形位于一个平面中。
 
-### 2.1.1 正弦定理（The Law of Sines）s
+### 2.1.1 正弦定理（The Law of Sines）
 
 在任意平面三角形中，三边与三个角之间的关系为：
 
@@ -48,7 +48,7 @@ $$
 
 如图2.2所示，直角平面三角形只是一个具有$90^{\circ}$角的平面三角形。
 
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-019.jpg?height=557&width=656&top_left_y=1379&top_left_x=439){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-019.jpg?height=557&width=656&top_left_y=1379&top_left_x=439){width="300"}
 
 图2.2 直角平面三角形有一个角为$90^{\circ}$。
 
@@ -56,7 +56,7 @@ $$
 
 **球面三角形（spherical triangle）**是基于一个单位球体（unit sphere）定义的，该球的半径为1，如图2.3所示。在导航问题中，该球体的原点（中心）位于地球中心；在视轴角问题中位于天线中心；在武器交战场景中位于飞机中心。此类应用有无数种，但对于每种应用，球心都被放置在一个能够使计算结果提供所需信息的位置。
 
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-020.jpg?height=622&width=1060&top_left_y=246&top_left_x=204){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-020.jpg?height=622&width=1060&top_left_y=246&top_left_x=204){width="500"}
 
 图2.3 球面三角学基于单位球中的几何关系。球体的原点（中心）是与所求解问题相关的点。
 
@@ -136,7 +136,7 @@ $$
 
 图 2.7 展示了地球表面上的一个球面三角形。三角形的三个顶点分别是北极（点 A）、子载点（SVP）（点 B）以及地球表面一个接收机的位置（点 C）。子载点是位于卫星正下方的地球表面点。
 
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-024.jpg?height=618&width=1096&top_left_y=246&top_left_x=186){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-024.jpg?height=618&width=1096&top_left_y=246&top_left_x=186){width="600"}
   
 图 2.7 此球面三角形由北极、子载点和接收机位置构成。
 
@@ -146,6 +146,6 @@ $$
 
 你将在后续章节中看到这两个三角形的应用。
 
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-025.jpg?height=765&width=858&top_left_y=246&top_left_x=333){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-025.jpg?height=765&width=858&top_left_y=246&top_left_x=333){width="300"}
   
 图 2.8 从卫星到地球表面接收机的传播距离可以通过卫星位置、接收机位置和地球中心构成的平面三角形来计算。
