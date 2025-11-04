@@ -793,14 +793,23 @@ Case 2的累积检测损失如图5.37所示。对于$Delta>1$，所有$P_d$下�
 # 参考文献
 
 [1] IEEE Standard 100, The Authoritative Dictionary of IEEE Standards Terms, 7th ed., New York: IEEE Press, 2000.  
+
 [2] Blake, L. V., "The Effective Number of Pulses Per Beamwidth for a Scanning Radar," Proc. IRE, Vol. 41, No. 6, June 1953, pp. 770-774.  
+
 [3] Blake, L. V., "Addendum to 'Pulses Per Beamwidth for Radar,'" Proc. IRE, Vol. 41, No. 12, December 1953, p. 1785.  
+
 [4] Blake, L. V., "Recent Advancements in Basic Radar Range Calculation," IRE Trans. on Military Electronics, Vol. MIL-5, No. 2, April 1961, pp. 154-164.  
+
 [5] Hall, W. M. and Barton, D. K., "Antenna Pattern Loss Factor for Scanning Radars," Proc. IEEE, Vol. 53, No. 9, September 1985, pp. 1257-1258.  
+
 [6] Hall, W. M., "Antenna Beam-Shape Factor in Scanning Radars," IEEE Trans. on Aerospace and Electronic Systems, Vol. AES-4, No. 3, May 1968, pp. 402-409.  
+
 [7] Barton, D. K. and Barton, W. F., Modern Radar System Analysis Software and User's Manual Version 2.0, Norwood, MA: Artech House, 1993.  
+
 [8] Barton, D. K., Radar System Analysis and Modeling, Norwood, MA: Artech House, 2005.  
+
 [9] Barton, D. K., Modern Radar System Analysis Software and User's Manual, Version 3.0, Norwood, MA: Artech House, 2005.  
+
 [10] Doviak, R. J. and Zrnic, D. S., Doppler Radar and Weather Observations, 2nd ed., New York: Academic Press, 1993.
 
 # Appendix 5A 分析近似波束形状损失
