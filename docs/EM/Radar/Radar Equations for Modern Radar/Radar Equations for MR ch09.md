@@ -81,7 +81,8 @@ $$
 图9.1展示了地基雷达从上述后四个区域观察杂波的几何关系（第一个区域仅适用于机载雷达）。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-331.jpg?height=324&width=1166&top_left_y=927&top_left_x=166){width="400"}
-  
+
+
 图9.1 地基雷达的表面杂波传播区域。
 
 近区与干涉区的分界出现在距离 $R_{1}$ 处，此时
@@ -140,7 +141,8 @@ $$
 虚线表示 $F_{c}$ 的近似值：
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-333.jpg?height=535&width=855&top_left_y=272&top_left_x=312){width="400"}
-  
+
+
 图9.2 杂波传播因子 $F_{c}^{\prime}$（实线）及其近似值（虚线），对应近区和干涉区。绘制条件：$\sigma_{h}=1 \mathrm{~m}, h_{r}=10 \mathrm{~m}, \lambda=0.03 \mathrm{~m}$，此时 $R_{1}=4.5 \mathrm{~km}, \psi_{c}=0.14^{\circ}$；$\lambda=0.23 \mathrm{~m}$，此时 $R_{1}=0.65 \mathrm{~km}, \psi_{c}=1.0^{\circ}$；且 $\rho_{0} \rho_{v}=1$。地平线距离 $R_{h}=21.5 \mathrm{~km}$。
 
 $$
@@ -175,7 +177,8 @@ $$
 图9.3展示了在图9.2条件下，超过 $R_{\delta}$ 后转为光滑球面衍射的影响。衍射项在中间区引起传播因子的轻微增加，随后在地平线附近及之后急剧下降。近区与干涉区的双段近似(9.11)及完整表达式(9.10)在地平线范围内通常足够，但在地平线之外会高估结果。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-334.jpg?height=537&width=854&top_left_y=802&top_left_x=309){width="400"}
-  
+
+
 图9.3 杂波方向图传播因子（实线）及近似值（虚线），适用于近区、干涉区、中间区与衍射区。绘制条件：$\sigma_{h}=1 \mathrm{~m}, h_{r}=10 \mathrm{~m}, \lambda=0.03 \mathrm{~m}$ 和 $\lambda=0.23 \mathrm{~m}$，且 $\rho_{0} \rho_{v}=1$。地平线距离 $R_{h}=21.5 \mathrm{~km}$。
 
 在某些情况下，天线旁瓣的表面杂波会造成干扰，而(9.1)中采用的(3.18)式面积 $A_{c}$ 并未体现这种干扰。旁瓣在天线孔径前向或后向半球内所覆盖的面积为：
@@ -240,46 +243,46 @@ $$
 
 - **天线扫描调制分量**  
   扫描中的雷达波束会用单程电压方向图函数（公式 (5.3)）调制回波，该函数在时间 $t$ 上变为双程功率函数：
-  
+
 $$
   \begin{equation*}
   f(t)=\exp \left(-8 \ln 2 \frac{\omega_{s}^{2} t^{2}}{\theta_{3}^{2}}\right) \tag{9.18}
   \end{equation*}
 $$
-  
+
+
   其中，$\omega_{s}$ 为扫描角速度（单位 $\mathrm{rad} / \mathrm{s}$），$\theta_{3}$ 为扫描坐标下的波束宽度（单位 rad），并假设采用高斯波束近似。转换到频率域并转化为速度谱后，得到一个高斯速度谱分量，其标准差为：
-  
+
 $$
   \begin{equation*}
   \sigma_{v a}=\frac{\sqrt{\ln 2} \omega_{s} \lambda}{2 \pi \theta_{3}}=0.133 \frac{\omega_{s} w}{K_{\theta}} \mathrm{m} / \mathrm{s} \tag{9.19}
   \end{equation*}
 $$
-  
+
+
   其中，$K_{\theta}=w \theta_{3} / \lambda \approx 1.2$ 为波束宽度常数（单位 rad），$w$ 为扫描平面内孔径宽度（单位 m）。因此，该速度展宽与机械扫描孔径边缘速度或电子扫描相移速率成正比。
 
-- **波束宽度分量**  
+- **波束宽度分量**
   相对于雷达的杂波平均速度 $v_{0}$ 会引入另一个展宽分量，其标准差为：${ }^{5}$
-  
+
 $$
   \begin{equation*}
   \sigma_{v \theta}=\frac{v_{0} \theta_{3}}{4 \sqrt{\ln 2}} \sin \beta=0.300 v_{0} \theta_{3} \sin \beta \mathrm{~m} / \mathrm{s} \tag{9.20}
   \end{equation*}
 $$
-  
+
+
   其中，$\beta$ 为波束轴与相对速度矢量的夹角。
 
 > ${ }^{5}$ Nathanson [6] 给出了相同的表达式，即 $0.42 v_{0} \theta_{2} \sin \beta$，其中 $\theta_{2}$ 为双程半功率波束宽度。
 
 当固有杂波谱为高斯分布时，总体速度展宽可表示为三个分量的均方根和：
 
-
-
 $$
 \begin{equation*}
 \sigma_{v}=\sqrt{\sigma_{v c}^{2}+\sigma_{v a}^{2}+\sigma_{v \theta}^{2}} \tag{9.21}
 \end{equation*}
 $$
-
 
 
 若地杂波频谱中包含零速度（直流）冲激，则它会展宽为一个高斯分量，其功率等于该冲激功率，展宽 $\sigma_{v 0}$ 为：
@@ -301,60 +304,60 @@ $$
 杂波可探测因子（见第 3.2.3 节）还会修正雷达方程，以考虑杂波电压概率密度函数偏离瑞利分布（对应于两路正交高斯分量）的情况。对海面和地面杂波的测量研究，特别是在低于由公式 (9.8) 定义的临界掠射角条件下，或在高空间分辨率（小 $A_{c}$）条件下进行的研究，发现其统计特性显著偏离高斯分布。用于描述表面杂波功率的分布族（概率密度函数）包括：
 
 - **Weibull 分布**：一种双参数分布，表达式为
-  
-$$
+
+  $$
   \begin{equation*}
   P(x)=\frac{x^{1 / a}}{a \alpha x} \exp \left(-\frac{x^{1 / a}}{\alpha}\right) ; \quad x \geq 0 \tag{9.23}
   \end{equation*}
-$$
-  
+  $$
+
   其中，$a$ 为展宽（或形状）参数，用于决定分布宽度${ }^{6}$，$\alpha$ 为尺度因子。其均值、中值及其比值为：
-  
-$$
-  \begin{gather*}
+
+  $$
+\begin{gather*}
   \bar{x}=\alpha^{a} \Gamma(1+a)  \tag{9.24}\\
   x_{50}=(\alpha \ln 2)^{a}  \tag{9.25}\\
   \frac{\bar{x}}{x_{50}}=\frac{\Gamma(1+a)}{(\ln 2)^{a}} \tag{9.26}
   \end{gather*}
-$$
-  
+  $$
+
   其中，$\Gamma$ 为伽玛函数。当 $a=1$ 时，该分布退化为指数分布（对应于瑞利电压分布），其均值为 $\bar{x}=\alpha$。在杂波应用中，$x$ 表示反射率与杂波传播因子的乘积 $\sigma^{0} F_{c}^{4}$。
-  
+
   > ${ }^{6}$ Weibull 展宽参数在后文中记为 $a_{w}$，此处为简洁起见记为 $a$。
 
 - **对数正态分布（Lognormal 分布）**：一种双参数分布，可以用自然对数、常用对数或分贝表示，其中分贝形式在描述雷达目标和杂波时最为方便：
   
-$$
+  $$
   \begin{equation*}
   P\left(x_{\mathrm{dB}}\right)=\frac{1}{\sqrt{2 \pi} \sigma_{\mathrm{dB}}} \exp \left[-\frac{\left(x_{\mathrm{dB}}-\mu_{\mathrm{dB}}\right)^{2}}{2 \sigma_{\mathrm{dB}}^{2}}\right] \tag{9.27}
   \end{equation*}
-$$
+  $$
   
    其中，若 $x$ 表示功率项，则 $x_{\mathrm{dB}}=10 \log x$，$\sigma_{\mathrm{dB}}$ 为标准差，$\mu_{\mathrm{dB}}$ 为 $x_{\mathrm{dB}}$ 的均值（也是其中值）。其均值与中值功率及其比值为：
   
-$$
+  $$
   \begin{gather*}
   \bar{X}=10^{0.1 \mu_{\mathrm{dB}}+(0.005 \ln 10) \sigma_{\mathrm{dB}}^{2}}  \tag{9.28}\\
   x_{50}=10^{0.1 \mu_{\mathrm{dB}}}  \tag{9.29}\\
   \frac{\bar{X}}{x_{50}}=10^{(0.005 \ln 10) \sigma_{\mathrm{dB}}^{2}} \tag{9.30}
   \end{gather*}
-$$
+  $$
   
   上式在分贝中可写为：
   
-$$
+  $$
   \begin{equation*}
   10 \log \left(\frac{x_{a v}}{x_{50}}\right)=(0.05 \ln 10) \sigma_{\mathrm{dB}}^{2}=0.12 \sigma_{\mathrm{dB}}^{2} \tag{9.31}
   \end{equation*}
-$$
+  $$
 
 - **K 分布**：一种双参数分布，用于描述杂波功率 $x$，其表达式为：
   
-$$
+  $$
   \begin{equation*}
   P(x)=\frac{2 b^{(v+1) / 2} x^{(v-1) / 2}}{\Gamma(v)} K_{v-1}(2 \sqrt{b v}) ; \quad x \geq 0 \tag{9.32}
   \end{equation*}
-$$
+  $$
   
   其中，$v$ 为形状参数，$b$ 为尺度参数，$K$ 为修正贝塞尔函数（或 $K$ 函数）。该分布的性质（主要应用于海杂波）在 [1, p. 279] 和 [6, p. 109] 中有详细描述。
 
@@ -363,7 +366,8 @@ $$
 Barton [2] 建立了 Weibull 和对数正态分布展宽因子随 $F_{c}^{\prime}$ 和分辨单元面积变化的模型，如图 9.4 所示。该模型揭示了掠射角减小对海杂波尖峰形成的重要影响。研究表明，即使分辨单元面积远大于 Schleher 标准所建议的 $5,000 \mathrm{~m}^{2}$，展宽因子也会显著增加。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-340.jpg?height=585&width=823&top_left_y=283&top_left_x=342){width="400"}
-  
+
+
 图 9.4 杂波概率密度函数展宽随不同分辨单元面积下平均传播因子的变化情况。
 
 ## 9.2 海杂波模型
@@ -381,20 +385,17 @@ p(h)=\frac{1}{\sqrt{2 \pi} \sigma_{h}} \exp \left(-\frac{h^{2}}{2 \sigma_{h}^{2}
 $$
 
 其中，$h$ 相对于平均海面测量，$\sigma_{h}$ 为标准差。Blake 列出了波高的另外三种度量：
-
 - $h_{a v}=2.6 \sigma_{h}$：平均波高；
 - $h_{1 / 3}=4 \sigma_{h}$：最大 $1/3$ 波浪的平均波高；
 - $h_{1 / 10}=5.2 \sigma_{h}$：最大 $1/10$ 波浪的平均波高。
 
 根据 Nathanson [8, p. 270] 的数据，可以推导出海面参数与局部风速之间的近似关系：
 
-
-
 $$
 \begin{align*}
-& v_{w} \approx 1+2 S S+\left(\frac{S S}{5.3}\right)^{6}  \tag{9.34}\\
+& v_{w} \approx 1+2 SS+\left(\frac{SS}{5.3}\right)^{6}  \tag{9.34}\\
 & \sigma_{h} \approx\left(\frac{v_{w}}{15}\right)^{2} \approx 0.01+\left(\frac{s}{7}\right)^{2}+\left(\frac{s}{7}\right)^{8}(\mathrm{~m})  \tag{9.35}\\
-& \beta_{0} \approx 0.055+0.007 S S \text { (rad) } \tag{9.36}
+& \beta_{0} \approx 0.055+0.007 SS \text { (rad) } \tag{9.36}
 \end{align*}
 $$
 
@@ -402,28 +403,27 @@ $$
 
 $$
 \begin{aligned}
-& v_{w}=\text { 风速 } \mathrm{m} / \mathrm{s} ; \\
-& \mathrm{SS}=\text { 蒲福海况等级. }
+& v_{w}=\text { 风速（m/s）} ; \\
+& \mathrm{SS}=\text { Douglas 海况等级。}
 \end{aligned}
 $$
-
-
 
 同样的公式也适用于蒲福风级 $K_{B}$，只需用 $K_{B}-1$ 替换 SS 即可。表 9.1 给出了海况 0 至 8 的结果。随着海况增大，坡度 $\beta_{0}$ 的增加较为缓慢，这是由于波长与波高都会随风速增加，但增长因子并不相同。
 
 表 9.1 海况 0 至 8 的海面参数
 
 | 海况 SS | 风级 $К_{B}$ | 风速 $v_{w}(\mathrm{~m} / \mathrm{s})$ | 均方根高度偏差 $\sigma_{h}(\mathrm{~m})$ | 坡度 $\beta_{0}$ (rad) |
-|:----- |:---------- |:------------------------------------ |:--------------------------------- |:-------------------- |
-| 0     | 1          | 1.5                                  | 0.01                              | 0.055                |
-| 1     | 2          | 2.6                                  | 0.03                              | 0.063                |
-| 2     | 3          | 4.6                                  | 0.10                              | 0.073                |
-| 3     | 4          | 6.7                                  | 0.24                              | 0.080                |
-| 4     | 5          | 8.2                                  | 0.38                              | 0.085                |
-| 5     | 6          | 10.8                                 | 0.57                              | 0.091                |
-| 6     | 7          | 13.9                                 | 0.91                              | 0.097                |
-| 7     | 8          | 19.0                                 | 1.65                              | 0.104                |
-| 8     | 9          | 28.8                                 | 2.50                              | 0.116                |
+| :------ | :----------- | :------------------------------------- | :--------------------------------------- | :--------------------- |
+| 0       | 1            | 1.5                                    | 0.01                                     | 0.055                  |
+| 1       | 2            | 2.6                                    | 0.03                                     | 0.063                  |
+| 2       | 3            | 4.6                                    | 0.10                                     | 0.073                  |
+| 3       | 4            | 6.7                                    | 0.24                                     | 0.080                  |
+| 4       | 5            | 8.2                                    | 0.38                                     | 0.085                  |
+| 5       | 6            | 10.8                                   | 0.57                                     | 0.091                  |
+| 6       | 7            | 13.9                                   | 0.91                                     | 0.097                  |
+| 7       | 8            | 19.0                                   | 1.65                                     | 0.104                  |
+| 8       | 9            | 28.8                                   | 2.50                                     | 0.116                  |
+
 
 ### 9.2.2 海杂波的反射率
 
@@ -434,8 +434,6 @@ $$
 10 \log \gamma=6 \mathrm{SS}-10 \log \lambda-58=6 K_{B}-10 \log \lambda-64 \mathrm{~dB} \tag{9.37}
 \end{equation*}
 $$
-
-
 
 该表达式表明，本征反射率因子 $\gamma$（因此对于特定掠射角的 $\sigma^{0}$）随 $\mathrm{SS}^{0.6}$ 和 $\lambda^{-1}$ 变化。Blake [3, p. 311] 认为，当代观点是将 $F_{c}{ }^{4}$ 包含在 $\sigma^{0}$ 中，因此“习惯上将 $\sigma^{0}$ 自身归因于频率依赖性，尽管实际上是干涉效应造成的。”正如我们在第 9.1.2 节中所述，将这两个项分离，并使用常数 $\gamma$ 模型，有助于更好地理解表面杂波测量与建模中的物理因素。
 
@@ -448,7 +446,8 @@ $$
 在干涉区，海杂波的 $\sigma^{0} F_{c}^{\prime 4}$ 值低至中间区和衍射区很少被关注，尽管第 9.1.2 节的传播因子模型仍然适用。然而，海面上的大气条件经常形成导波层，使得简单的衍射模型失效。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-342.jpg?height=706&width=983&top_left_y=1239&top_left_x=250){width="400"}
-  
+
+
 图 9.5 中等海况下的杂波反射率 $\sigma^{0} F_{c}^{\prime 4}$（海况 $4, \sigma_{h}=0.38 \mathrm{~m}, \beta_{0}=0.085 \mathrm{rad}$）。
 
 研究者们 [1, pp. 382-402] 已经探讨了 $\sigma^{0}$ 随极化和风向的变化，并提出了考虑这些因素的详细模型。这些变化通常较小，常常被风级或海况的不确定性所掩盖，因此在大多数建模和分析中无需考虑。Long [1, p. 353] 就海杂波指出：
@@ -461,13 +460,11 @@ $$
 
 当表面风速为 $v_{w}$ 时，海杂波在顺风方向具有一个平均速度，其大小依赖于极化。根据 [8, p. 292] 的数据，其近似表达式为：
 
-
-
 $$
 \begin{array}{ll}
-v_{0 H} \approx 0.75 \sqrt{v_{w}} & (\mathrm{H}-\mathrm{pol}) \\
-v_{0 V} \approx 0.14 v_{w} & (\mathrm{~V}-\mathrm{pol})  \tag{9.38}\\
-v_{0} \approx 0.38 v_{w}^{0.7} & (\text { average of both polarizations })
+v_{0 H} \approx 0.75 \sqrt{v_{w}} & (\mathrm{H}\text{-极化}) \\
+v_{0 V} \approx 0.14 v_{w} & (\mathrm{V}\text{-极化})  \tag{9.38}\\
+v_{0} \approx 0.38 v_{w}^{0.7} & (\text { 两种极化的平均值 })
 \end{array}
 $$
 
@@ -475,18 +472,17 @@ $$
 
 海杂波的频谱近似为高斯分布，其标准差为 [8, p. 286]：
 
-
-
 $$
 \begin{equation*}
-\sigma_{v c} \approx 0.11 v_{w} \quad \text { (both polarizations) } \tag{9.39}
+\sigma_{v c} \approx 0.11 v_{w} \quad \text {（两种极化）} \tag{9.39}
 \end{equation*}
 $$
 
 Blake [3, p. 320, Eq. (7.40)] 提出了一个近似公式，表明 $\sigma_{w}$ 与海况成正比。在 $v_{w}>12 \mathrm{~m} / \mathrm{s}$（即 $\mathrm{SS}>5$）时，该近似给出的数值低于公式 (9.39)，但线性关系与 Nathanson 数据（Blake 的数据来源）更加吻合。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-344.jpg?height=531&width=726&top_left_y=274&top_left_x=375){width="400"}
-  
+
+
 图 9.6 水平极化与垂直极化下的海杂波平均速度与标准差。
 
 当信号通过包络检波器时，公式 (9.39) 给出的标准差会增加 $\sqrt{2}$ 倍。本征速度展宽 $\sigma_{v c}$ 代入公式 (9.21)，即可得到用于公式 (9.17) 的总展宽 $\sigma_{\nu}$，适用于带扫描天线的运动雷达。
@@ -503,20 +499,21 @@ Blake [3, p. 320, Eq. (7.40)] 提出了一个近似公式，表明 $\sigma_{w}$ 
 
 表 9.2 陆地表面参数
 
-| 表面描述  | 内在反射率 $\gamma(\mathrm{dB})$ | 均方根高度偏差 $\sigma_{h}(\mathrm{~m})$ | 坡度 $\beta_{0}$ (rad) |
-|:----- |:--------------------------- |:--------------------------------- |:-------------------- |
-| 山地    | -5                          | 100                               | 0.1                  |
-| 城市    | -5                          | 10                                | 0.1                  |
-| 林地丘陵  | -10                         | 10                                | 0.05                 |
-| 起伏丘陵  | -12                         | 10                                | 0.05                 |
-| 农田、沙漠 | -15                         | 3                                 | 0.03                 |
-| 平原    | -20                         | 1                                 | 0.02                 |
-| 光滑表面  | -25                         | 0.3                               | 0.01                 |
+| 表面描述 | 内在反射率 $\gamma(\mathrm{dB})$ | 均方根高度偏差 $\sigma_{h}(\mathrm{~m})$ | 坡度 $\beta_{0}$ (rad) |
+| :--- | :--- | :--- | :--- |
+| 山地 | -5 | 100 | 0.1 |
+| 城市 | -5 | 10 | 0.1 |
+| 林地丘陵 | -10 | 10 | 0.05 |
+| 起伏丘陵 | -12 | 10 | 0.05 |
+| 农田、沙漠 | -15 | 3 | 0.03 |
+| 平原 | -20 | 1 | 0.02 |
+| 光滑表面 | -25 | 0.3 | 0.01 |
 
 测得的陆杂波数据与常数- $\gamma$ 模型的一致性如图 9.7 所示。在近区掠射角条件下，实测数据与模型的差异在 1 dB 以内。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-345.jpg?height=553&width=876&top_left_y=1335&top_left_x=309){width="400"}
-  
+
+
 图 9.7 实测 X 波段陆杂波反射率 $\sigma^{0}$（实线），与常数 $\gamma=-12 \mathrm{~dB}$ 模型（虚线）对比。实测数据改绘自 [10, p.103, 图 2.44]，横坐标为对数刻度的掠射角。
 
 ### 9.3.1 陆杂波的反射率
@@ -526,13 +523,15 @@ Blake [3, p. 320, Eq. (7.40)] 提出了一个近似公式，表明 $\sigma_{w}$ 
 一种一阶建模方法 [12] 假设表面均匀，每种地表类型对应一定的 $\sigma_{h}$ 和 $\gamma$（见表 9.2），并假设雷达天线安装在高于局部平均地表 $2 \sigma_{h}$ 的位置上。由此天线相对平均地表的高度为 $h_{r}^{\prime}=h_{r}+2 \sigma_{h}$。由此可得到一族 $\sigma^{0}$ 曲线（见图 9.8），可根据不同波长下的传播因子进行修正。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-346.jpg?height=774&width=1135&top_left_y=1138&top_left_x=175){width="400"}
-  
+
+
 图 9.8 陆杂波反射率与掠射角关系。此处传播因子的过渡距离 $R_{1}$ 基于 $\lambda=0.1 \mathrm{~m}, h_{r}=10 \mathrm{~m}$ 计算。
 
 对陆杂波的研究与测量受到复杂地形影响。杂波传播路径下的地形特性可能与待预测或测量的分辨单元的地形不同。例如，丘陵地貌既可能通过跨越相似丘陵地形的路径观测，也可能通过跨越平坦地面的路径观测，二者特性差异很大。因此必须将传播因子与观测单元的内在反射率区分开来。在陆杂波的一项重要研究 [10] 中，测量并统计分析了这两个因素的乘积 $\sigma^{0} F_{c}^{\prime 4}$，结果发现其与分辨单元处掠射角的相关性很弱，有时甚至为负。因此在该杂波模型中，掠射角被排除为影响因素。图 9.9 所示的简化波状地形模型直观地解释了缺乏相关性的原因。局部表面坡度在山顶与谷底为零（定义如此），在中间位置最大（虚线表示平均地表）。因此，$\sigma^{0}$ 在面向雷达的坡面中部最大，在山顶与谷底附近接近零，而在背向雷达的坡面则为零。然而，坡度最大的区域会被前方山峰遮挡。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-347.jpg?height=153&width=1053&top_left_y=1032&top_left_x=202){width="400"}
-  
+
+
 图 9.9 简单正弦波地形模型中的传播路径。
 
 在图 9.8 中，路径 A 和 B 以较大掠射角到达地表，但会受到前方山峰的刀口衍射影响，其双程传播因子约为 $F_{c}^{4} \approx -12 \mathrm{~dB}$。这一损耗即使在地表“可见”的情况下也存在。路径 C 的掠射角与 $\sigma^{0}$ 接近零，但其传播清晰度足以使 $F_{c}^{\prime 4} \rightarrow 0 \mathrm{~dB}$。衍射理论预测 $F$ 在有足够传播清晰度与被遮挡区域之间应呈连续变化，而非从 1 突降为 0。因此，对于“可见地形”，掠射角与 $\sigma^{0} F_{c}^{\prime 4}$ 之间不应有正相关。常数- $\gamma$ 模型并不预言在中区存在正相关，反而提示在某些地形条件下可能呈负相关。
@@ -548,7 +547,8 @@ Blake [3, p. 320, Eq. (7.40)] 提出了一个近似公式，表明 $\sigma_{w}$ 
 陆杂波的速度谱较窄，在有风条件下植被的谱被建模为高斯分布，且 $\sigma_{v}<0.5 \mathrm{~m} / \mathrm{s}$。然而，利用具有大动态范围的相干杂波测量系统所获得的高质量数据 [10, 第 6 章] 表明，实际谱呈指数型分布（图 9.10）。该图所绘各谱的总功率均已归一化为 1。在有风条件下，指数型谱的 $94 \%$ 功率落在 $\pm 0.5 \mathrm{~m} / \mathrm{s}$ 内，而高斯谱在 $\sigma_{v}=0.20 \mathrm{~m} / \mathrm{s}$ 时相应比例为 $95 \%$。两者的谱均未显示出幂律形式 $1 /\left[1+\left(f / f_{a}\right)^{n}\right]$ （$n=2$ 或 3）所预测的宽展功率。已有的杂波数据 [16] 出现此类谱，可解释为测量接收机存在非线性（如对数特性）所致。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-349.jpg?height=614&width=966&top_left_y=320&top_left_x=252){width="400"}
-  
+
+
 图 9.10 风吹树木在四种风况下的指数型谱（基于 [10, 表 6.1, p. 578] 的模型推导），并与 $\sigma_{v}=0.2 \mathrm{~m} / \mathrm{s}$ 的高斯谱比较。
 
 精确测量数据还显示出一个非波动（直流，DC）分量，其直流功率与交流功率之比 $r$ 可表示为 [10, p. 580, 式 (6.4)，已改写为米制单位]：
@@ -575,9 +575,9 @@ $$
 
 表 9.3 离散点杂波模型
 
-| 参数 | RRE [16] | Ward [17] | Mitre |  | 建议值 |
+| 参数 |  |  | Mitre |  |  |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-|  |  |  | Rural [18] | Metro [19] |  |
+|  | RRE [16] | Ward [17] | Rural [18] | Metro [19] | 建议值 |
 | RCS 密度（每 $\mathrm{km}^{3}$）： |  |  |  |  |  |
 | $\sigma_{c} F_{c}^{\prime}=10^{2} \mathrm{~m}^{2}$ | 3.5 | 1.8 |  |  | 2 |
 | $\sigma_{c} F_{c}^{\prime}=10^{3} \mathrm{~m}^{2}$ | 0.8 | 0.36 | 0.02 | 2 | 0.5 |
@@ -619,21 +619,16 @@ Blake 并未讨论由鸟类引起的杂波，然而它对海军和其他类型�
 体积杂波的雷达散射截面由分辨单元内杂波体积 $V_c$ 与散射粒子的体积反射率 $\eta_v$ 的乘积给出，单位为 $\mathrm{m^2/m^3}$：
 
 $$
-\begin{equation*}
-\sigma_{c}=V_{c} \eta_{v} \tag{9.41}
-\end{equation*}
+\sigma_c = V_c \eta_v \tag{9.41}
 $$
 
 当杂波在所有维度上都超出分辨单元时，其体积可表示为：
 
 $$
-\begin{equation*}
-V_{c}=\frac{R_{c} \theta_{a}}{L_{p}} \frac{R_{c} \theta_{e}}{L_{p}} \frac{\tau_{n} c}{2} \mathrm{~m}^{3} \tag{9.42}
-\end{equation*}
+V_c = \frac{R_c \theta_a}{L_p} \frac{R_c \theta_e}{L_p} \frac{\tau_n c}{2} \ \mathrm{m^3} \tag{9.42}
 $$
 
 其中：
-
 - $R_c$：雷达到杂波体的距离（米）  
 - $\theta_a, \theta_e$：方位和仰角半功率波束宽（弧度）  
 - $L_p$：波束形状损耗  
@@ -643,14 +638,15 @@ $$
 当仰角波束包含杂波下方的地面，或高于杂波上缘时，第二项需用仰角积分替代：
 
 $$
-\begin{align*}
-\sigma_{c} & =\frac{R_{c} \theta_{a}}{L_{p}} \frac{\tau_{n} c}{2} R_{c} \int_{0}^{\pi / 2} \eta_{v}\left(R_{c}, \theta\right) f^{4}\left(\theta-\theta_{b}\right) d \theta  \tag{9.43}\\
-& =\frac{R_{c} \theta_{a}}{L_{p}} \frac{\tau_{n} c}{2} \eta_{v}\left(R_{c}\right) \int_{0}^{h_{\max }} f^{4}\left(\frac{h-h_{r}}{R_{c}}-\frac{R_{c}}{2 k_{e} a_{e}}-\theta_{b}\right) d h
-\end{align*}
+\begin{align}
+\sigma_c &= \frac{R_c \theta_a}{L_p} \frac{\tau_n c}{2} R_c 
+\int_0^{\pi/2} \eta_v(R_c, \theta) \, f^4(\theta - \theta_b) \, d\theta \\
+&= \frac{R_c \theta_a}{L_p} \frac{\tau_n c}{2} \eta_v(R_c) 
+\int_0^{h_{\max}} f^4\Big(\frac{h-h_r}{R_c} - \frac{R_c}{2 k_e a_e} - \theta_b \Big) \, dh \tag{9.43}
+\end{align}
 $$
 
 其中：
-
 - $f(\cdot)$：天线单向仰角电压波束  
 - $\theta$：波束中的仰角  
 - $\theta_b$：波束轴的仰角  
@@ -697,7 +693,6 @@ $$
 $$
 
 其中：
-
 - $\sigma_{v c}$：气团内湍流引起的固有扩展；
 - $\sigma_{v a}$：雷达波束扫描引起的扩展；
 - $\sigma_{v s}$：仰角波束中风切变引起的扩展；
@@ -727,8 +722,6 @@ W(v)=\int_{0}^{h_{\max }}\left(v_{w}+k_{s h} h\right) f^{4}\left(\frac{h-h_{r}}{
 \end{equation*}
 $$
 
-
-
 输入谱的总功率：
 
 $$
@@ -736,8 +729,6 @@ $$
 C_{i}=\int_{-\infty}^{\infty} W(v) d v \tag{9.50}
 \end{equation*}
 $$
-
-
 
 谱的均值：
 
@@ -747,15 +738,13 @@ v_{0}=\frac{1}{C_{i}} \int_{-\infty}^{\infty} v W(v) d v \tag{9.51}
 \end{equation*}
 $$
 
-变量$\sigma_{v s}^{2}$：
+方差：
 
 $$
 \begin{equation*}
 \sigma_{v s}^{2}=\frac{1}{C_{i}} \int_{-\infty}^{\infty}\left(v-v_{0}\right)^{2} W(v) d v \tag{9.52}
 \end{equation*}
 $$
-
-
 
 方位波束展宽分量 $\sigma_{v b}$ 类似于 (9.20) 中的 $\sigma_{v\theta}$，应用于方位方向。粒子下落速度变化估算为：
 
@@ -766,7 +755,6 @@ $$
 $$
 
 雨时 $\theta$ 为仰角，雪时常数远小于 $1~\mathrm{m/s}$。
-
 体积杂波的平均速度为风速在波束轴上的投影：
 
 $$
@@ -775,10 +763,7 @@ v_{0 w}=-v_{w} \cos \left(A_{w}-A_{b}\right) \cos \theta \tag{9.54}
 \end{equation*}
 $$
 
-
-
 其中：
-
 - $v_w$：风速；
 - $A_w$：风向方位角；
 - $A_b$：波束轴方位；
@@ -808,16 +793,7 @@ $$
 \end{equation*}
 $$
 
-
-
-$$
-\begin{equation*}
-\sigma_{1}=\frac{\pi^{5}}{\lambda^{4}}\left|K_{w}\right|^{2} D^{6} \quad \mathrm{~m}^{2} \tag{9.56}
-\end{equation*}
-$$
-
 其中：
-
 - $D$：水滴直径 (m)；
 - $\lambda$：波长 (m)；
 - $K_w = \frac{m^2 - 1}{m^2 + 2}$，$m = n - j n \kappa$ 为水的复折射率。
@@ -826,8 +802,6 @@ $$
 
 雷达气象学定义降水反射率因子 $Z$ 为体积内 $D^6$ 的加权平均：
 
-
-
 $$
 \begin{equation*}
 Z=\frac{1}{\Delta V} \sum_{i} D_{i}^{6}=\int_{0}^{\infty} n(D) D^{6} d D \quad\left(\mathrm{~m}^{3}\right) \tag{9.57}
@@ -835,14 +809,11 @@ Z=\frac{1}{\Delta V} \sum_{i} D_{i}^{6}=\int_{0}^{\infty} n(D) D^{6} d D \quad\l
 $$
 
 其中：
-
 - $\Delta V$：体积元素 (m³)；
 - $D_i$：水滴直径 (m)；
 - $n(D)$：体积内直径为 $D$ 的水滴数。
 
 体积反射率为：
-
-
 
 $$
 \begin{equation*}
@@ -853,8 +824,6 @@ $$
 若不满足 Rayleigh 条件，可用等效反射率 $Z_e$ 代替 $Z$。$Z$ 通常以 $\mathrm{dB}(Z) = 10 \log Z~(\mathrm{mm^6/m^3})$ 表示。
 
 Marshall-Palmer 分布给出了 $Z$ 与降水率 $r_r$ (mm/h) 的关系：
-
-
 
 $$
 \begin{equation*}
@@ -870,10 +839,6 @@ $$
 \end{equation*}
 $$
 
-
-
-
-
 对雪（含水量速率 $r_s$ mm/h）：
 
 $$
@@ -882,11 +847,10 @@ $$
 \end{equation*}
 $$
 
-
-
 图 9.11 显示了不同波长下雨和雪的 (9.60) 与 (9.61) 的绘图。${ }^{9}$ 毫米波段的雨量数值已根据不满足雷利近似的雨滴尺寸进行了调整。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-359.jpg?height=884&width=979&top_left_y=441&top_left_x=248){width="400"}
+
 
 图 9.11 显示不同波长下雨和雪的体积反射率变化。毫米波段的雨滴取值已针对不满足 Rayleigh 条件的水滴进行调整。
 
@@ -904,13 +868,10 @@ $$
 \end{equation*}
 $$
 
-
-
-
-
 对于切割成在 $\lambda$ 处共振的箔条偶极子。最新的数据 [26, p. 420] 显示，现代铝化玻璃箔条在两倍频带宽内的雷达散射截面积（RCS）可达到公式 (9.62) 所给值的两倍以上，其中 $\lambda$ 取几何平均值。该带宽内的反射率如图 9.12 所示。当 $\lambda>0.3~\mathrm{m}$ 时，共振偶极子可能被称为“绳索”的长条替代，其单位重量 RCS 较低，但不易断裂。箔条下降缓慢，其运动倾向于随机化单个偶极子的方向，因此对雷达极化不太敏感，尽管在水平极化下响应更强，尤其是在部署后较长时间。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-360.jpg?height=669&width=924&top_left_y=1252&top_left_x=285){width="400"}
+
 
 图 9.12 一组箔条的雷达散射截面积。（来源：[26]。© 1999, Artech House，经许可转载。）
 
@@ -936,11 +897,7 @@ C_{o}=\int_{-\infty}^{\infty} W(v)\left[H^{\prime}(v)\right]^{2} d v \tag{9.64}
 \end{equation*}
 $$
 
-
-
 杂波改善因子定义为：
-
-
 
 $$
 \begin{equation*}
@@ -948,15 +905,11 @@ I_{m}=\frac{C_{i}}{C_{o}} \tag{9.65}
 \end{equation*}
 $$
 
-
-
 这些公式可应用于 MTI 和脉冲多普勒信号处理器。在特殊情况下，可对改善因子得到闭式表达式。通常，这些特例中的杂波谱为高斯分布，特征参数为标准差 $\sigma_\nu$ 和平均速度 $v_0$。
 
 ### 9.6.1 相干 MTI 改善因子 (Coherent MTI Improvement Factors)
 
 相干 MTI 系统指发送机在消除器使用的脉冲数范围内保持相干，或接收端的 COHO (coherent-on-receive) 与发送脉冲锁相的系统。使用二进制权值的 $m$ 延迟消除器的速度响应为：
-
-
 
 $$
 \begin{equation*}
@@ -966,8 +919,6 @@ $$
 
 其中基本盲速为：
 
-
-
 $$
 \begin{equation*}
 v_{b}=\frac{f_{r} \lambda}{2} \quad(\mathrm{~m} / \mathrm{s}) \tag{9.67}
@@ -975,8 +926,6 @@ v_{b}=\frac{f_{r} \lambda}{2} \quad(\mathrm{~m} / \mathrm{s}) \tag{9.67}
 $$
 
 消除器施加在 $m+1$ 个脉冲上的电压权值为：
-
-
 
 $$
 \begin{align*}
@@ -988,8 +937,6 @@ $$
 
 平均功率增益为：
 
-
-
 $$
 \begin{equation*}
 \bar{G}=\sum_{i} w_{i}^{2}=2,6,20 \text { for } m=1,2,3 \tag{9.69}
@@ -998,19 +945,13 @@ $$
 
 归一化响应为：
 
-
-
 $$
 \begin{equation*}
 H_{m}^{\prime}(v)=\frac{2^{m}}{\sqrt{\bar{G}}}\left|\sin \frac{\pi v}{v_{b}}\right|^{m} \tag{9.70}
 \end{equation*}
 $$
 
-
-
 对于高斯谱，相干 MTI 系统使用二进制权值时的性能可用杂波谱的标准差 $\sigma_v$、平均速度 $v_0$、级联消除器数 $m$ 以及调零速度 $v_{0 f}$ 表示。为消除对雷达波长 $\lambda$ 和脉冲重复频率 $f_r$ 的依赖，可将谱参数归一化为雷达波形的基本盲速 $v_b$：
-
-
 
 $$
 \begin{align*}
@@ -1018,8 +959,6 @@ $$
 & \sigma_{z}=\frac{2 \pi \sigma_{v}}{v_{b}}=\frac{4 \pi \sigma_{v}}{f_{r} \lambda} \tag{9.72}
 \end{align*}
 $$
-
-
 
 扫描引起的归一化杂波扩展为（见 9.19）：
 
@@ -1032,8 +971,6 @@ $$
 其中 $n = \theta_3 / \omega_s$ 是扫描波束宽度内的脉冲数。
 
 Raemer 给出的一、二、三脉冲消除器的 MTI 改善因子，可用归一化参数表示为：
-
-
 
 $$
 \begin{gather*}
@@ -1050,9 +987,6 @@ $$
 $v_{z f}$ 为归一化空速，除非对平均杂波速度进行自适应，否则为零。
 
 Blake 考虑了由杂波扩展引起的整体改善因子，同时考虑内部电路不稳定性、发射机不稳定性等限制：
-
-
-
 
 $$
 \begin{equation*}
@@ -1080,16 +1014,12 @@ $$
 在应用第 9.6.1 和 9.6.2 节的改善因子表达式时，需要考虑以下问题，它们超出了杂波谱和处理器速度响应模型的范畴：
 
 - **MTI 损耗**：MTI 处理的改善因子会被多种 MTI 损耗项稀释（见第 10.2.5 节）。这些损耗影响整个 MTI 处理的距离段，即使目标在无杂波区域也可能影响探测范围，除非处理仅应用于有杂波区域。
-
 - **CFAR 损耗**：未被消除的杂波可能需要使用恒虚警率 (CFAR) 检测，引入额外的损耗项（第 10.2.5 节）。
-
 - **多次回波杂波 (Multiple-time-around clutter)**：第 9.6.1 节的表达式假定在消除器使用的所有脉冲中保持杂波相干。如果存在多次回波杂波（来自波形的非模糊范围 $R_u = c / 2 f_r$ 之外的源），则在每次波形变化（如 PRF、射频或脉冲相位调制）或波束位置变化后，必须发送填充脉冲，使每个消除器脉冲中出现相同杂波。阶梯 PRF 或脉冲间频率捷变与 MTI 在存在多次回波杂波时不兼容；此外，Coherent-on-receive 技术在这种情况下无法使用。
-
 - **阶梯 PRF**：使用阶梯 PRF 会限制改善因子 [28, p. 2.44]。
-
 - **非线性**：MTI 消除器前的任何非线性会改变接收机输入的高斯谱，显著降低可实现的改善因子 [28, 29]。
-  
-  ### 9.6.4 脉冲多普勒处理 (Pulsed Doppler Processing)
+
+### 9.6.4 脉冲多普勒处理 (Pulsed Doppler Processing)
 
 在脉冲多普勒雷达中，在一个相干处理间隔 (CPI) 内发射 $n_c$ 个脉冲。处理器将 $n_p = n_c - n_f$ 个脉冲的回波（去掉前 $n_f$ 个填充脉冲，$n_f$ 为 $n_c$ 的某个分数）组合形成 $n_p$ 个滤波器。滤波器增益可以固定，也可以通过 CFAR 调整，以排除杂波频谱上的输出或将其降低到噪声水平。通常用杂波衰减 (Clutter Attenuation, CA) 描述脉冲多普勒滤波器性能。
 
@@ -1121,11 +1051,13 @@ $$
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-366.jpg?height=443&width=974&top_left_y=1469&top_left_x=248){width="400"}
 
+
 图 9.13 杂波谱（虚实线）与多普勒滤波器响应 $H(v)$，杂波扩展 $\sigma_{v}=1 \mathrm{~m/s}$，盲速 $v_{b}=60 \mathrm{~m/s}$，杂波衰减 CA=40 dB，对于 $n_{p}=16$ 脉冲（实线）和 8 脉冲（虚线）。
 
 在实际中，理想化的响应通常通过一组多普勒滤波器近似实现，如图 9.14 所示，其中包含显著杂波的若干滤波器被降敏（例如通过距离单元平均 CFAR），以形成深陷口。输入信号的加权使滤波器旁瓣低于抑制口的水平。敏感滤波器的响应包络形成目标检测区域，其中滤波器间的凹陷会引入小的滤波器跨越损失（见第 10.2.5 节）。盲口两侧过渡区的宽度约等于滤波器间隔 $v_{b} / n_{p}$，而单个滤波器的 $-6~\mathrm{dB}$ 宽度是该间隔的两倍。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-367.jpg?height=401&width=931&top_left_y=984&top_left_x=285){width="400"}
+
 
 图 9.14 由 16 点傅里叶变换滤波器组形成的多普勒响应。
 
@@ -1133,20 +1065,16 @@ $$
 
 每个盲速区间内具有可接受目标响应（高于 -6 dB）的速度分数为：
 
-
-
-
 $$
 \begin{equation*}
 F_{a}=1-\frac{2 \Delta_{t}+\Delta_{v}}{v_{b}}=1-\left(\frac{2}{n_{f}}+\frac{\Delta_{v}}{v_{b}}\right) \tag{9.83}
 \end{equation*}
 $$
 
-
-
 脉冲多普勒滤波器组中可获得的杂波衰减与盲速与允许低于 -6 dB 的速度响应分数的比值直接相关。图 9.15 显示了这种关系，对于杂波扩展 $\sigma_{v}=1~\mathrm{m/s}$，给出了两种盲速和 16 脉冲及 8 脉冲的情况。对于盲速与杂波扩展比相同的其他情况，这些曲线也可适用。
 
 ![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-368.jpg?height=515&width=968&top_left_y=815&top_left_x=248){width="400"}
+
 
 图 9.15 可获得的杂波衰减与速度响应低于 -6 dB 的分数关系。
 
@@ -1161,6 +1089,7 @@ $$
 杂波图的第二个功能是根据杂波背景的变化（尤其是陆地杂波）选择处理模式，以最大化目标检测概率。在仅包含热噪声的单元中，信号可以绕过多普勒处理，从而检测径向速度接近零或处于其他盲速的目标。由于沿雷达切线方向移动的目标从一个分辨单元进入下一个单元而不会显著影响存储在图中的平均值，因此它们不会被处理器抑制。杂波图取代了以前手动选择应用多普勒处理区域的做法（例如，MTI 的扇区门控或普通视频处理）。
 
 通过泛化映射过程，有可能使处理路径适应不同类型的杂波和其他干扰。利用干扰环境的近期历史，可以改善自适应处理的性能，否则这些处理将被迫依赖对随时间和空间坐标变化的干扰的即时响应。
+
 
 ## 9.7 杂波与信号处理总结 (SUMMARY OF CLUTTER AND SIGNAL PROCESSING)
 
@@ -1186,64 +1115,35 @@ $$
 
 通过使用多普勒处理，可以获得数十分贝的杂波改进因子，同时也会在基本盲速的倍数处引入盲速。支持多普勒处理需要多脉冲停留时间。
 
-## References
+# References
 
 1. Long, M. W., *Radar Reflectivity of Land and Sea*, 3rd ed., Norwood, MA: Artech House, 2001.  
-
 2. Barton, D. K., *Radar System Analysis and Modeling*, Norwood, MA: Artech House, 2005.  
-
 3. Blake, L. V., *Radar Range-Performance Analysis*, Lexington, MA: D. C. Heath, 1980; Dedham, MA: Artech House, 1986.  
-
 4. Goldstein, H., "The Fluctuations of Clutter Echoes," in *Propagation of Short Radio Waves*, Vol. 13, MIT Radiation Laboratory Series, New York: McGraw-Hill, 1951; Reprinted (CD ROM Edition), Norwood, MA: Artech House, 1999, pp. 550-587.  
-
 5. Barlow, E. J., "Doppler Radar," *Proc. IRE*, Vol. 37, No. 4, April 1949, pp. 340-355; Reprinted in *Radars*, Vol. 7, CW and Doppler Radar, D. K. Barton, ed., Dedham, MA: Artech House, 1978.  
-
 6. Ward, K. D., R. J. Tough, and Simon Watts, *Sea Clutter: Scattering, the K-Distribution and Radar Performance*, London: The Institution of Engineering and Technology, 2006.  
-
 7. Schleher, D. C., *MTI and Pulsed Doppler Radar*, 2nd ed., Norwood, MA: Artech House, 2010.  
-
 8. Nathanson, F. E., with J. P. Reilly and M. N. Cohen, *Radar Design Principles—Signal Processing and the Environment*, 2nd ed., New York: McGraw-Hill, 1991.  
-
 9. Trunk, G. V., "Radar Properties of Non-Rayleigh Sea Clutter," *IEEE Trans. on Aerospace and Electronic Systems*, Vol. AES-8, No. 2, March 1972, pp. 196-204; Reprinted in *Radars*, Vol. 5, Radar Clutter, D. K. Barton, ed., Dedham, MA: Artech House, 1975.  
-
 10. Billingsley, J. B., *Low-Angle Radar Land Clutter—Measurements and Empirical Models*, Norwich, NY: Wm. Andrew Publishing, 2002.  
-
 11. Ayasli, S., "Propagation Effects on Radar Ground Clutter," *IEEE Radar Conf.*, Los Angeles, CA, March 12-13, 1986, pp. 127-132.  
-
 12. Barton, D. K., "Land Clutter Models for Radar Design and Analysis," *Proc. IEEE*, Vol. 73, No. 2, February 1983, pp. 198-204.  
-
 13. Krason, H., and G. Randig, "Terrain Backscattering Characteristics at Low Grazing Angles for X- and S-band," *Proc. IEEE*, Vol. 54, No. 12, December 1966, pp. 1964-1965; Reprinted in *Radars*, Vol. 5, Radar Clutter, D. K. Barton, ed., Artech House, 1975, pp. 287-288.  
-
 14. Ayasli, S., "SEKE: A Computer Model for Low Altitude Radar Propagation Over Irregular Terrain," *IEEE Trans. AP*, Vol. 34, No. 8, August 1986, pp. 1013-1023.  
-
 15. Fishbein, W., S. W. Gravelein, and O. E. Rittenbach, "Clutter Attenuation Analysis," Technical Report ECOM-2808, U.S. Army Electronics Command, Ft. Monmouth, NJ, March 1967; Reprinted in *MTI Radar*, D. C. Schleher, ed., Dedham, MA: Artech House, 1978, pp. 331-354.  
-
 16. Edgar, A. K., Dodsworth, E. J., and Warden, M. P., "The Design of a Modern Surveillance Radar," IEE Conf. Pub. No. 105, Radar-73, October 1973, pp. 8-13; Reprinted in *Radars*, Vol. 5, Radar Clutter, D. K. Barton, ed., Artech House, 1975, pp. 51-56.  
-
 17. Ward, H. R., "A Model Environment for Search Radar Evaluation," *IEEE Eascon Record*, 1971, pp. 164-171; Reprinted in *Radars*, Vol. 5, Radar Clutter, D. K. Barton, ed., Artech House, 1975, pp. 43-50.  
-
 18. McEvoy, W. J., *Clutter Measurements Program: Operations in Western Massachusetts*, Mitre Corp. Rep. MTR-2074, March 1972, DDC Doc. AD742297.  
-
 19. McEvoy, W. J., *Clutter Measurements Program: Operations in the Metropolitan Boston Area*, Mitre Corp. Rep. MTR-2085, March 1972, DDC Doc. AD742298.  
-
 20. Vaughn, C. R., "Birds and Insects as Radar Targets—A Review," *Proc. IEEE*, Vol. 73, No. 2, February 1985, pp. 205-227.  
-
 21. Moon, J. R., "A Survey of Bird Flight Data Relevant to Radar Tracking Systems," IEE Radar-2002, Edinburgh, October 15-17, 2002, pp. 80-84.  
-
 22. Moon, J. R., "Effects of Birds on Radar Tracking Systems," IEE Radar-2002, Edinburgh, October 15-17, 2002, pp. 300-304.  
-
 23. Greving, G., and R. Mundt, "The Radar Cross Section and Wind Turbines—Definition and Effects of the Ground and Finite Distances," *Proc. 2011 International Radar Symposium*, September 7-9, 2011, pp. 803-808; *Microwaves, Radar and Remote Sensing Symposium 2011*, August 25-27, 2011, pp. 321-326.  
-
 24. Sekine, M., et al., "On Weibull Distributed Weather Clutter," *IEEE Trans. on Aerospace and Electronic Systems*, Vol. AES-15, No. 6, November 1979, pp. 824-830.  
-
 25. Doviak, R. J., and D. S. Zrnić, *Doppler Radar and Weather Observations*, New York: Academic Press, 1993.  
-
 26. Schleher, D. C., *Electronic Warfare in the Information Age*, Norwood, MA: Artech House, 1999.  
-
 27. Raemer, H. R., *Radar Systems Principles*, Boca Raton, FL: CRC Press, 1997.  
-
 28. Shrader, W. W., and V. Gregers-Hansen, "MTI Radar," in *Radar Handbook*, 3rd ed., M. I. Skolnik, ed., New York: McGraw-Hill, 2008, Chapter 2.  
-
 29. Ward, H. R., "The Effect of Bandpass Limiting on Noise with a Gaussian Spectrum," *Proc. IEEE*, Vol. 57, No. 11, November 1969, pp. 2089-2090.  
-
 30. Cartledge, L., and R. M. O'Donnell, *Description and Performance Evaluation of the Moving Target Detector*, MIT Lincoln Laboratory Project Report ATC-69, March 8, 1997.  

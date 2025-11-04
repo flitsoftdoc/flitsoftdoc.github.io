@@ -18,10 +18,10 @@ N_{0}=\frac{h f_{0}}{\exp \left(h f_{0} / k T\right)-1} \approx k T \tag{6.1}
 \end{equation*}
 $$
 
-其中：  
-$h=6.63 \times 10^{-34} \,\mathrm{W} \cdot \mathrm{s}^{2}$ 为普朗克常数；  
-$f_{0}=$ 频率 (Hz)；  
-$k=1.38 \times 10^{-23} \,\mathrm{W} \cdot \mathrm{s}$ 为玻尔兹曼常数。  
+其中：
+$h=6.63 \times 10^{-34} \,\mathrm{W} \cdot \mathrm{s}^{2}$ 为普朗克常数；
+$f_{0}=$ 频率 (Hz)；
+$k=1.38 \times 10^{-23} \,\mathrm{W} \cdot \mathrm{s}$ 为玻尔兹曼常数。
 
 公式 (6.1) 中的频率无关（白噪声）近似可通过对指数函数展开，并假设 $h f_{0} / k T \ll 1$，仅保留展开式的前两项得到：
 
@@ -59,6 +59,7 @@ E_{n}=\sqrt{N / R}=\sqrt{k T_{s} B_{n} G / R} \tag{6.5}
 $$
 
 在雷达性能分析中（区别于电路设计），通常为了简化讨论，将 $R=1$，从而可以直接用电压平方来表示功率。
+
 ### 6.1.2 噪声统计特性
 
 热噪声电压的概率密度函数 (pdf) 服从高斯分布 [3, p. 135, Eq. (4.8)]：
@@ -69,7 +70,7 @@ p\left(E_{n}\right)=\frac{1}{\sqrt{2 \pi} \sigma} \exp \left(-\frac{E_{n}^{2}}{2
 \end{equation*}
 $$
 
-其中 $\sigma$ 为噪声电压的均方根值 (rms)。${ }^{1}$ 平均电压为零。Blake 指出 [3, p. 135]，某些无线电电路引入的“准热噪声”在雷达接收机的通带内“几乎无法与热噪声区分”，因此可建模为热噪声。超宽带 (UWB) 雷达可能需要采用不同的噪声谱和统计处理方法。  
+其中 $\sigma$ 为噪声电压的均方根值 (rms)。${ }^{1}$ 平均电压为零。Blake 指出 [3, p. 135]，某些无线电电路引入的“准热噪声”在雷达接收机的通带内“几乎无法与热噪声区分”，因此可建模为热噪声。超宽带 (UWB) 雷达可能需要采用不同的噪声谱和统计处理方法。
 
 > ${ }^{1}$ 在 [3, Eq. (4.8)] 中，D. C. Heath 版存在排版错误，后续 Artech 版已修正：指数分母应为 $2 \sigma^{2}$ 而非 $2 \pi \sigma^{2}$。在计算 $E_{n}$ 的均方根值时，两版中积分下限均误写为 0，而正确应为 $-\infty$。但在计算视频噪声时，积分下限为 0 是正确的。  
 
@@ -100,7 +101,8 @@ $$
 
 这些数值用于计算检测的门限设置（见第4章）。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-217.jpg?height=267&width=1153&top_left_y=274&top_left_x=175){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-217.jpg?height=267&width=1153&top_left_y=274&top_left_x=175)  
+
 图 6.1 接收系统噪声源
 
 ## 6.2 雷达接收中的噪声源
@@ -145,7 +147,8 @@ $$
 
 天线及其环境对 $T_{a}$ 的贡献可以通过从天线端口向外观察来识别，即考虑施加到该端口的发射功率将如何分配到四个耗散负载上，并利用互易性原理将这种分配同样应用于输入噪声。在图 6.2 中，从右侧输入天线的功率为 1 W，被分成四部分。一个初始功率分配器将功率 $1 / L_{a}<1 \,\mathrm{W}$ 引导至天线辐射，而其余部分 $P_{a4}=1-1 / L_{a}$ 则作为天线内部的欧姆损耗 $L_{a}$ 消耗掉。辐射功率进一步被分为两个角域：一部分 $a_{s}$ 出现在指向地表（下半球）的波瓣中，而 $1-a_{s}$ 则指向天空（上半球）。直接向天空辐射的功率为 $P_{a1}=(1-a_{s})/L_{a}$，而指向地面的部分为 $a_{s}/L_{a}$。当雷达波束轴仰角为 $\theta_{b}>0$ 时，只有下部旁瓣，以及可能的主瓣下裙边，对 $a_{s}$ 有贡献。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-219.jpg?height=483&width=1150&top_left_y=276&top_left_x=175){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-219.jpg?height=483&width=1150&top_left_y=276&top_left_x=175)  
+
 图 6.2 施加到天线的发射功率分布
 
 对于具有表面反射系数 $\rho$ 的地表，到达地面的功率有一部分 $\rho^{2}$ 被向上反射至空中，而 $1-\rho^{2}$ 被吸收。被地表吸收的功率为 $P_{a3}=a_{s}(1-\rho^{2})/L_{a}$。向上的分量为 $P_{a2}=a_{s}\rho^{2}/L_{a}$，该部分功率与 $P_{a1}$ 一起出现在天线前方的天空中。$P_{a1}+P_{a2}$ 中有一部分 $1/L_{\alpha 1}$ 向外穿过银河进入宇宙空间，而另一部分 $1-1/L_{\alpha 1}$ 则被单程对流层衰减 $L_{\alpha 1}$ 吸收（见第7章）。因此，天空分量被分为消耗在对流层中的功率和进入外层空间的功率。电离层无需考虑，因为其在 300 MHz 以上频率下的衰减可以忽略不计。即使在 100 MHz 时，最大约 $1 \,\mathrm{dB}$ 的电离层损耗与银河噪声源相比，对噪声的贡献仍可忽略不计。
@@ -158,7 +161,8 @@ Blake 在 [3] 中从反射率 $\mathcal{R}$ 和发射率 $\mathcal{E}$ 的角度
 
 从左侧进入的四个噪声源与天线输出端口耦合，分别为：物理温度为 $T_{\alpha}$ 的对流层、温度为 $T_{c}$ 的宇宙、温度为 $T_{G}$ 的地表，以及温度为 $T_{p}$ 的天线自身损耗。这里的物理温度是指贡献噪声的分子温度，与由此产生的射频噪声温度不同。来自对流层和银河的温度分量相加形成天空噪声 $T_{a}^{\prime}$，该噪声以权重 $1-a_{s}$ 进入上半球的天线波瓣。进一步乘以 $1 / L_{a}$ 得到第一项噪声温度分量 $T_{a 1}$：
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-220.jpg?height=531&width=1162&top_left_y=272&top_left_x=166){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-220.jpg?height=531&width=1162&top_left_y=272&top_left_x=166)  
+
 图 6.3 天线热噪声分量的组合。输出端口的四个分量 $T_{a 1-4}$ 定义为形成 $T_{a}$ 的输出成分
 
 $$
@@ -241,7 +245,8 @@ $r=$ 距离，单位 km。
 
 对流层气体物理温度随 $h$ 的变化，可通过 1976 年美国标准大气模型 [4, p. 14-3] 描述（见第 7.1.2 节），如图 6.4 所示。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-222.jpg?height=518&width=698&top_left_y=810&top_left_x=395){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-222.jpg?height=518&width=698&top_left_y=810&top_left_x=395)  
+
 图 6.4 对流层物理温度 $T_{tr}$ 随高度的变化 [4, p. 14-3]
 
 路径上某一小段距离的噪声温度等于该段的对流层温度与衰减之积，其对天线噪声温度的贡献与该积成正比，并受到此前路径段衰减的影响。Blake 的分析基于此，得到了天线温度的表达式 [3, p. 165, Eq. (4.65)]：
@@ -263,11 +268,11 @@ k_{\alpha 1}\left(f_{0}, h\right)=0.5\left[\frac{P(h)}{P(0)} k_{\alpha O}\left(f
 \end{equation*}
 $$
 
-其中  
-$k_{\alpha O}=$ 氧气在海平面的双程衰减系数（见第 7.2.1 节）；  
-$k_{\alpha W}=$ 水汽在海平面的双程衰减系数（见第 7.2.1 节）；  
-$P=$ 气压；  
-$\rho_{w}=$ 水汽密度。  
+其中
+$k_{\alpha O}=$ 氧气在海平面的双程衰减系数（见第 7.2.1 节）；
+$k_{\alpha W}=$ 水汽在海平面的双程衰减系数（见第 7.2.1 节）；
+$P=$ 气压；
+$\rho_{w}=$ 水汽密度。
 
 大气压强 $P(h)$ 和水汽密度 $\rho_{w}(h)$ 的表达式见第 7.1.2 和 7.1.3 节。
 
@@ -283,7 +288,7 @@ $$
 
 #### 6.3.2.2 天气衰减导致的噪声温度
 
-公式 (6.21) 中的衰减系数 $k_{\alpha 1}$ 适用于晴空大气模型，其中包含水汽，但不考虑对流层路径中的降水或云层。若要准确估计雷达在降水条件下的性能，则需要使用适当的双程衰减系数：雨衰减系数 $k_{\alpha r}\left(f_{0}, h\right)$ 或雪衰减系数 $k_{\alpha s}\left(f_{0}, h\right)$，这些参数可由第 7.3.1 节或第 7.3.4 节的数据确定。相应的单程值为  
+公式 (6.21) 中的衰减系数 $k_{\alpha 1}$ 适用于晴空大气模型，其中包含水汽，但不考虑对流层路径中的降水或云层。若要准确估计雷达在降水条件下的性能，则需要使用适当的双程衰减系数：雨衰减系数 $k_{\alpha r}\left(f_{0}, h\right)$ 或雪衰减系数 $k_{\alpha s}\left(f_{0}, h\right)$，这些参数可由第 7.3.1 节或第 7.3.4 节的数据确定。相应的单程值为
 $k_{\alpha 1r,s}\left(f_{0}, h\right)=0.5 k_{\alpha r,s}\left(f_{0}, h\right)$（单位：$\mathrm{dB}/\mathrm{km}$），并应加到公式 (6.21) 的 $k_{\alpha 1}(r, \theta)$ 上。已知 $k_{\alpha r,s}$ 与高度 $h(r, \theta)$ 的关系，可以在天气体积以外将降水系数归零，从而允许对 $r^{\prime}$ 和 $r$ 进行积分。
 
 ---
@@ -306,10 +311,10 @@ T_{\mathrm{gal}}\left(f_{0}\right)=T_{0.1}\left(\frac{0.1}{f_{0}}\right)^{2.5} \
 \end{equation*}
 $$
 
-其中 $f_{0}$ 以 GHz 为单位。参考水平随方向变化，其范围如下：  
-$T_{0.1 \text{ max}}=18,650 \,\mathrm{K}$（银河中心）；  
-$T_{0.1 \text{ mid}}=3,050 \,\mathrm{K}$（银河平面其他位置）；  
-$T_{0.1 \text{ min}}=500 \,\mathrm{K}$（银河平面以外）。  
+其中 $f_{0}$ 以 GHz 为单位。参考水平随方向变化，其范围如下：
+$T_{0.1 \text{ max}}=18,650 \,\mathrm{K}$（银河中心）；
+$T_{0.1 \text{ mid}}=3,050 \,\mathrm{K}$（银河平面其他位置）；
+$T_{0.1 \text{ min}}=500 \,\mathrm{K}$（银河平面以外）。
 
 宇宙噪声的第二个分量是常数 $T_{\mathrm{sp}}=2.7 \,\mathrm{K}$，其贡献很小。
 
@@ -317,7 +322,8 @@ $T_{0.1 \text{ min}}=500 \,\mathrm{K}$（银河平面以外）。
 
 太阳的贡献则通过静日圆盘的噪声亮温 $T_{B}$ 计算，相关计算由 Blake 完成，如图 6.5 所示。地球上观测到的太阳圆盘角直径为 $0.5^{\circ}$，对应立体角 $\Omega_{s}=5.98 \times 10^{-5}$ 球面度。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-225.jpg?height=572&width=707&top_left_y=270&top_left_x=377){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-225.jpg?height=572&width=707&top_left_y=270&top_left_x=377)  
+
 图 6.5 静日圆盘的噪声亮温随频率的变化
 
 在天线增益方向图 $G(A, \theta)$ 下观测太阳时，其对天空噪声 $T_{a}^{\prime}$ 的贡献为：
@@ -335,7 +341,8 @@ $$
 
 由公式 (6.19) 给出的总天空温度 $T_{a}^{\prime}$，如图 6.6 所示，显示了其随频率变化的情况，对应不同的波束仰角。对于仰角波束宽度 $\theta_{e}>1^{\circ}$ 的情况，需要对主瓣范围内的仰角取加权平均，权重为天线在各角度的功率增益。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-226.jpg?height=775&width=1113&top_left_y=274&top_left_x=199){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-226.jpg?height=775&width=1113&top_left_y=274&top_left_x=199)
+
 图 6.6 总天空温度 $T_{a}^{\prime}$ 随频率变化的曲线，对应不同仰角 $\theta$。低雷达频段给出了三组结果，分别对应主瓣指向银河中心、银河系内任意点以及银河平面以外时的银河噪声贡献。
 
 ---
@@ -360,10 +367,11 @@ a_{s}=\int_{-\pi-\pi / 2}^{\pi} \int_{0}^{0} G\left(A, \theta-\theta_{b}\right) 
 \end{equation*}
 $$
 
-剩余比例 $1-a_{s}$ 对应上半球，$0<\theta \leq \pi / 2$。  
+剩余比例 $1-a_{s}$ 对应上半球，$0<\theta \leq \pi / 2$。
 图 6.7 给出了公式 (6.28) 应用于余弦加权照明孔径的方向图的结果，其波束宽度为 $2^{\circ}$，远旁瓣电平分别为 -5、-10 和 -15 dBi。曲线按波束宽度归一化，因此适用于大多数雷达天线。当对称波束的轴水平指向时，低空天线约有 $50\%$ 的功率照射到地表。若波束轴上仰一个波束宽度，则到达地表的功率比例将下降至由远旁瓣决定的水平，分别为 $13.5\%$、$5.2\%$ 和 $1.8\%$。若天线为前馈反射面天线，则大约一半的溢出功率也会加到地表分量上，使 $a_{s}$ 高于理论照明函数方向图计算的值。文献 [5, pp. 175-179] 讨论的超低旁瓣反射面天线旨在最大限度减少溢出和其他地表照射源，其结果接近 -15 dBi 远旁瓣曲线。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-227.jpg?height=578&width=853&top_left_y=1204&top_left_x=301){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-227.jpg?height=578&width=853&top_left_y=1204&top_left_x=301)
+
 图 6.7 天线功率在地表的分数 $a_{s}$ 随波束轴仰角变化的曲线，对应典型天线远旁瓣电平 $G_{\text {far}}=-5,-10,-15$ dBi。
 
 在荒地或海洋上运行的雷达，由于公式 (6.17) 中的反射系数 $\rho$ 接近 1，因此地表噪声温度较低。如第 8.3 节所述，镜面反射系数是三个因子的乘积：
@@ -374,10 +382,10 @@ $$
 \end{equation*}
 $$
 
-其中：  
-$\rho_{0}=$ 表面材料的菲涅耳反射系数；  
-$\rho_{s}=$ 粗糙表面的镜面散射因子；  
-$\rho_{v}=$ 表面植被因子。  
+其中：
+$\rho_{0}=$ 表面材料的菲涅耳反射系数；
+$\rho_{s}=$ 粗糙表面的镜面散射因子；
+$\rho_{v}=$ 表面植被因子。
 
 在将 (6.29) 应用于 (6.17) 时，只应包含因子 $\rho_{0}$ 和 $\rho_{v}$，因为当 $\rho_{s}<1$ 时所产生的漫散射会集中在上半球中镜射射线附近的狭窄锥体内，不太可能扩展到足以使显著功率再次到达地表。水平极化在大多数掠射角下的 $\rho_{0}$ 接近 1，因此比垂直极化时具有更少的地表吸收，导致更低的地表噪声温度。
 
@@ -407,7 +415,8 @@ $\rho_{v}=$ 表面植被因子。
 
 图 6.8 显示了导致失配天线噪声温度 $T_{a}$ 的各个分量。将辐射单元的阻抗与自由空间及与环行器相连的传输线阻抗匹配，可以最大化回波信号功率并最小化噪声温度。Brookner [6] 讨论了失配对反射面天线和阵列天线噪声温度的贡献。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-230.jpg?height=502&width=1045&top_left_y=318&top_left_x=228){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-230.jpg?height=502&width=1045&top_left_y=318&top_left_x=228)
+
 图 6.8 失配天线的噪声温度组成（改编自 [6]）。
 
 天线输出端的外部噪声温度 $T_{\mathrm{ext}}=T_{a1}+T_{a2}+T_{a3}$ 出现在公式 (6.17) 中，在图 6.8 中也以因子 $L_{a}$ 放大后出现在输入端。温度 $T_{a4}$ 来源于欧姆损耗 $L_{a}$，而 $T_{r}$ 与 $T_{e}$ 分别为接收线与接收机的噪声温度（见第 6.4 和 6.5 节）。物理温度 $T_{p}$ 对应接收线损耗 $L_{r}$ 与 $L_{t}$ 的温度。发射机端（在无发射脉冲时）的终端物理温度为 $T_{pt}$。这与 [6] 中的表示不同，后者将发射机视为物理温度为 $T_{p}$ 的电阻负载，未考虑更高发射机温度的可能性。此外，[6] 将天线损耗 $L_{a}$ 放在失配与辐射单元之间，而图 6.8 中则位于失配与天线输出端口之间。
@@ -575,7 +584,8 @@ $$
 
 雷达接收机通常由图 6.9 所示的各级组成。来自双工器和接收线的噪声输入功率通常在 -110 至 -115 dBm，对应于 50 欧姆电路中的几十分之一微伏。最小可检测信号电平可能接近此噪声电平。低噪声放大器（LNA）工作在载波频率 $f_{0}$，其设计噪声系数 $F_{n1} \approx 1 \,\mathrm{dB}$，增益 $G_{1}=15-20 \,\mathrm{dB}$。在混频器处经历约 $6 \,\mathrm{dB}$ 的损耗后，该放大器将输入噪声提升到高于混频器输出电路噪声的水平。中频（IF）放大级进一步将噪声电压提升至包络检波器输出端，超过模数转换器（A/D）的最低位电平，通常为几十分之一毫伏。接收机的总增益大约为 60 dB。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-235.jpg?height=329&width=1159&top_left_y=285&top_left_x=171){width="400"}  
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-235.jpg?height=329&width=1159&top_left_y=285&top_left_x=171)  
+
 图 6.9 典型雷达接收机中的各级。
 
 接收机噪声温度 $T_{e}$ 和噪声系数 $F_{n}$ 的计算可以通过考虑构成接收机的 $m$ 个电路中每一级的噪声温度 $T_{ej}$ 或噪声系数 $F_{nj}$ 来实现，其中 $j=1,2,\ldots,m$：
@@ -591,11 +601,7 @@ $$
 
 表 6.2 典型接收机电路说明
 
-![](https://cdn.mathpix.com/snip/images/jMMqn0vuBPpklDA6v2tb7yo4wGlGR66moKpXKgQA5HY.original.fullsize.png){width="700"}  
-
-（表中文字对照）
-
-| j <br> 电路描述 |                               | $F_{nj}$ |      | $T_{ej}(\mathrm{K})$ | $G_{j}$             |      | $T_{ej} \prod_{2}^{m} G_{j-1}^{-1}$ |
+| j   |   描述   | $F_{nj}$ |      | $T_{ej}(\mathrm{K})$ | $G_{j}$             |      | $T_{ej} \prod_{2}^{m} G_{j-1}^{-1}$ |
 | :-------------- | :---------------------------- | :------- | :--- | :------------------- | :------------------ | :--- | :---------------------------------- |
 |                 |                               | 比值     | dB   |                      | 比值                | dB   |                                     |
 | 1               | LNA                           | 1.26     | 1.0  | 75.09                | 100                 | 20.0 | 75.09                               |
@@ -609,10 +615,10 @@ $$
 
 ---
 
-不同电路的噪声系数和增益计算如下：  
-- **无源电路**：$F_{nj}=L_{j}=1/G_{j}$；  
-- **混频器**：$F_{nj}=r L_{j}=r/G_{j}$，其中 $r$ 为噪声温度比 [9, p. 33]，通常 $1.2-2.0 \,(=2 \pm 1 \,\mathrm{dB})$；  
-- **放大器**：$F_{nj}$ 和 $G_{j}$ 如表中所给。  
+不同电路的噪声系数和增益计算如下：
+- **无源电路**：$F_{nj}=L_{j}=1/G_{j}$；
+- **混频器**：$F_{nj}=r L_{j}=r/G_{j}$，其中 $r$ 为噪声温度比 [9, p. 33]，通常 $1.2-2.0 \,(=2 \pm 1 \,\mathrm{dB})$；
+- **放大器**：$F_{nj}$ 和 $G_{j}$ 如表中所给。
 
 噪声温度 $T_{ej}$ 的计算公式为 $T_{0}(F_{nj}-1)$。需要注意的是，将 RF 滤波器放置在 LNA 之后可以最小化其损耗影响，而前置放大器之后的 IF 级对典型接收机中的噪声温度贡献可忽略不计。尽管 LNA 有 20 dB 增益，本例中的混频器仍对接收机总体噪声系数有显著贡献。
 
@@ -661,8 +667,8 @@ E_{q}=\frac{\Delta E}{\sqrt{12}}=\frac{E_{\max}}{2^{b-1} \sqrt{12}} \tag{6.42}
 $$
 
 其中：
-- $\Delta E$ 是对应于 A/D 转换器最小位的电压；  
-- $E_{\max}$ 是对应 A/D 输出满刻度的峰值电压；  
+- $\Delta E$ 是对应于 A/D 转换器最小位的电压；
+- $E_{\max}$ 是对应 A/D 输出满刻度的峰值电压；
 - $b$ 是表示峰值电压的 A/D 位数，其变化范围为 $\pm E_{\max}$。
 
 在 A/D 转换器前的增益被调整，使 rms 噪声电压为 $q \Delta E$：
@@ -682,7 +688,7 @@ T_{q}=\frac{T_{s}}{12 q^{2}} \tag{6.44}
 $$
 
 动态范围（DR）定义为：
-1. A/D 转换器开始饱和的正弦输出信号平均功率与  
+1. A/D 转换器开始饱和的正弦输出信号平均功率与
 2. 平均热噪声功率（参照接收机输出）之比。
 
 由公式 (6.42) 和 (6.43) 得：
@@ -731,7 +737,8 @@ $$
 
 由输入噪声温度 $T_{s}$ 产生的噪声谱密度，可通过简单公式 $N_{0}=k T_{s}$ 计算。当接收机的载波频率与噪声温度比 $f_{0}/T_{s} \leq 10^{9}$（例如，X 波段 10 K）时，该公式的误差在 0.1 dB 以内。当 $f_{0}/T_{s} \leq 10^{10}$（例如 W 波段 10 K）时，简单公式低估 $N_{0}$ 约 1.1 dB，对于更大的比值（如太赫兹或光学波段雷达）误差会进一步增大。
 
-![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-239.jpg?height=689&width=985&top_left_y=274&top_left_x=250){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_08_27_c6b806c2766f51c39566g-239.jpg?height=689&width=985&top_left_y=274&top_left_x=250)
+
 图 6.10 噪声温度随动态范围的增加关系。
 
 ### 6.6.2 Blake 方法的适用性
@@ -759,11 +766,19 @@ $$
 # 参考文献
 
 [1] Blake, L. V., "Antenna and Receiving System Noise-Temperature Calculation," NRL Report 5668, September 19, 1961.  
+
 [2] Blake, L. V., "Radar/Radio Tropospheric Absorption and Noise Temperature," NRL Report 7461, October 30, 1972.  
+
 [3] Blake, L. V., *Radar Range-Performance Analysis*, Lexington, MA: D. C. Heath, 1980; Dedham, MA: Artech House, 1986.  
+
 [4] Air Force Geophysics Laboratory, *Handbook of Geophysics*, 1985, Document No. ADA 167,000, Springfield, VA: National Technical Information Service.  
+
 [5] Barton, D. K., *Radar System Analysis and Modeling*, Norwood, MA: Artech House, 2005.  
+
 [6] Brookner, E., "Right Way to Calculate Reflector and Active-Phased-Array Antenna System Noise Temperature Taking into Account Antenna Mismatch," IEEE International Symposium on Phased Array Systems and Technology 2003, Boston, MA, October 14-17 2003, pp. 130–135.  
+
 [7] Otoshi, T. Y., *Noise Temperature Theory and Applications for Deep Space Communications Antenna Systems*, Norwood, MA: Artech House, 2008.  
+
 [8] IEEE Standard 100, *The Authoritative Dictionary of IEEE Standards Terms*, 7th ed., New York: IEEE Press, 2000.  
+
 [9] Skolnik, M. I., *Introduction to Radar Systems*, 3rd ed., New York: McGraw-Hill, 2001.
