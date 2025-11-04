@@ -681,14 +681,14 @@ k_{\alpha c}=1.64 \times 10^{-4} \frac{M}{\lambda^{2}} \exp \left[-0.067(T-273)^
 \end{equation*}
 $$
 
-与Goldstein的公式[11, p. 676, Eq. (41)]（适用于$T=291 \ \mathrm{K}$）对比，可得：
+与Goldstein的公式[11, p. 676, Eq. (41)]（适用于$T=291  \mathrm{K}$）对比，可得：
 
 $$
-k_{\alpha c}=\frac{9.76 \times 10^{-5} M}{\lambda^{2}} & {[双程，T=291 \ \mathrm{K}, \text{Goldstein公式}]}  \tag{7.36}
+k_{\alpha c}=\frac{9.76 \times 10^{-5} M}{\lambda^{2}}  \quad {[双程，T=291 \ \mathrm{K}, \text{Goldstein公式}]}  \tag{7.36}
 $$
 
 $$
-k_{\alpha c}=\frac{9.15 \times 10^{-5} M}{\lambda^{2}} & {[双程，T=291 \ \mathrm{K}, \text{式(7.35)}]} \tag{7.37}
+k_{\alpha c}=\frac{9.15 \times 10^{-5} M}{\lambda^{2}}  \quad  {[双程，T=291 \ \mathrm{K}, \text{式(7.35)}]} \tag{7.37}
 $$
 
 这代表云衰减的分贝值存在约$5\%$的差异，处于云的温度和含水量模型精度范围之内。
