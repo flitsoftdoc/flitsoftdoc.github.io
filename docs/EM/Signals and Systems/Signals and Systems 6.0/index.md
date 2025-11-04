@@ -2,7 +2,7 @@
 
 本书主要作为工程类（及相关）专业本科生的教材使用，旨在为连续时间和离散时间的信号与系统（signals and systems）提供基础入门介绍。鉴于许多工程课程将 MATLAB 作为教学工具，本书亦在附录中提供了 MATLAB 的详细介绍。本书源于作者为教授维多利亚大学（加拿大不列颠哥伦比亚省维多利亚）两门本科课程（关于连续时间信号与系统）而撰写的一套详尽讲义笔记。具体而言，最初版本的讲义是在作者于 2003 年夏季学期教授 ELEC 260（信号分析）课程时编写的，之后为教授 2003 年秋季学期的 ELEC 255（系统动力学）课程又增加了一些内容。随着时间推移，这套讲义经历了多次修订，最终演变为现在这本教材。最初的版本仅涵盖连续时间部分，后续又补充了离散时间部分的内容。上述工作最终形成了你现在所阅读的这本书。
 
-![](https://cdn.mathpix.com/snip/images/BNTLDkOhSGS6tw0cbjFk0iMv-N7vQs3nwBHwdWo7xu0.original.fullsize.png){width="200"}
+![](https://cdn.mathpix.com/snip/images/BNTLDkOhSGS6tw0cbjFk0iMv-N7vQs3nwBHwdWo7xu0.original.fullsize.png){width="300"}
 
 
 ## 致谢
