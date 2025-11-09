@@ -184,7 +184,7 @@ MAV：micro air vehicle（微型飞行器）
 
 利用上述电流传感器模块，我们测量了飞行中无人机的能量消耗如何随飞行距离与转弯角度变化${ }^{30}$。基于图 2 所示无人机，测得能量消耗与飞行距离近似线性相关（$0.1164\ \mathrm{J}/\mathrm{m}$），与转向角度近似线性相关（$0.0173\ \mathrm{J}/\mathrm{deg}$）。尽管具体数值取决于飞行器与飞控器，但我们在多种 Pixhawk 四旋翼测试中均观察到类似趋势。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-09.jpg?height=368&width=1485&top_left_y=241&top_left_x=311){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-09.jpg?height=368&width=1485&top_left_y=241&top_left_x=311){width="600"}
  
 图 7. 电流、电压和气压的仿真与实验对比。(a) 电机电流 (A)。(b) 速度 (m/s)。(c) 气压变化 (Pa)。
 
@@ -192,7 +192,7 @@ MAV：micro air vehicle（微型飞行器）
 
 观察表明，LKH-D 所规划路径转弯更少，飞行更高效。无人机可更快完成覆盖，降低能耗。实验中，LKH-D 比 DLS 总能耗降低约 $25\%$，仿真中能耗降低约 $22\%$，表明 UB-ANC Emulator 对 MEPP 问题仿真具有较高准确性。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-09.jpg?height=714&width=1685&top_left_y=780&top_left_x=218){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-09.jpg?height=714&width=1685&top_left_y=780&top_left_x=218){width="600"}
  
 图 8. UB Stadium 的卫星视图与路径规划结果。虚拟障碍以斜线阴影表示。(a) DLS 规划路径，(b) DLS 实验路径，(c) LKH-D 规划路径，(d) LKH-D 实验路径。
 
@@ -219,6 +219,19 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
 - **时钟同步**：ns-3 是事件驱动仿真器，处理队列中按仿真时间排序的事件。默认情况下，仿真时间与真实时间不同，仿真器会从一个事件直接跳到下一个。但 UB-ANC Emulator 按真实时间仿真 MAV 行为。
 - **事件同步**：UB-ANC Emulator 以 MAVLink 事件控制 SITL 飞控器，每个 MAV 的事件在其 SITL 中独立处理，而网络仿真器具有自己的事件系统。这两者需频繁同步，需仿真器及时获知 UB-ANC 内相关事件。
 - **网络行为同步**：UB-ANC Emulator 中的算法依赖网络协调，因此仿真器与网络仿真模块需进行行为同步，并处理通信失败或干扰等异常情况。
+
+/// note | 本文的解决方案
+* **时钟同步**：将 ns-3 配置为**实时调度器**，把仿真时钟锁定到 CPU 实时时钟（以真实时间作为仿真时间），从而让 ns-3 的调度器与 UB-ANC Emulator 的调度器处于**同一时基**。
+
+* **事件同步**：把 UB-ANC Emulator 中所有**相关事件**转发给网络仿真器，并公开三项接口以频繁对齐双方事件队列：
+  `netDataReady()`（发送方 MAV 对象向网络仿真器交付待发数据包）、`netSendData()`（网络仿真器把已送达的数据包交给接收方 MAV 对象）、`globalPositionChanged()`（MCU 通知网络仿真器无人机位置更新）。这些接口既完成收发事件对接，也让网络仿真器随时掌握**机动性变化**。
+
+* **网络行为同步**：在上述接口之上，设计了**端到端的数据与位置同步链路**：
+  发送路径：ACU → NCU（`m_send_buffer`）→ IPC → MAV 对象 → 触发 `netDataReady()` → ns-3 按其协议栈转发；
+  接收路径：ns-3 达到目的节点后调用 `netSendData()` → 目的 MAV 对象的网络服务器 → IPC → NCU → 触发 `dataReady()` → ACU 取包处理；
+  位置同步：MCU 触发 `globalPositionChanged()` → 仿真引擎转发至 ns-3，使**连通性与链路质量评估**随位置实时一致。该机制也为**通信失败/外扰**情况下的异常处理提供了钩子与时序一致性保障；其正确性通过节点到节点与端到端测评（pcap/Wireshark 离线分析）得到验证。
+
+///
 
 **表 4.** 将网络仿真器集成至 UB-ANC Emulator 的 API 接口。
 
