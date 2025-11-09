@@ -3,7 +3,7 @@
 **使用 UB-ANC Emulator 仿真无人机蜂群**
 
 
-Jalil Modares ${ }^{\mathbf{1}}$, Nicholas Mastronarde ${ }^{\mathbf{1}}$ (D) and Karthik Dantu ${ }^{\mathbf{2}}$
+Jalil Modares, Nicholas Mastronarde and Karthik Dantu
 
 Received 15 September 2018; accepted 17 February 2019
 
