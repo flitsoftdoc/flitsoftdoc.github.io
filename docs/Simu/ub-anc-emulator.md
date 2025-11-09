@@ -121,17 +121,17 @@ SITL${ }^{31}$ 仿真器是一个开源项目，支持在无硬件条件下运�
 
 图 4 对比了实验与仿真中测得的关键参数。时间 0 对应 MAV 1 解锁的时刻。图 4(a) 显示五轮实验与仿真中，各 MAV 的关键事件（ARM、LAND、DISARM）发生时刻的平均值（点标）与标准差（误差棒）。对 MAV 1 而言，ARM 表示电机启动准备起飞的时刻；对 MAV $i\in\{2,3\}$，ARM 包含以下四个事件序列：(i) MAV $i-1$ 发送任务指令给 MAV $i$；(ii) MAV $i$ 接收指令；(iii) MAV $i$ 启动电机；(iv) MAV $i$ 起飞。三架 MAV 的 LAND 表示启动自动降落模式的时刻，DISARM 表示降落后电机关闭，标志任务完成。图 4(b) 与 (c) 分别展示各 MAV 的经度偏移（相对起点）与相对高度（相对地面）随时间变化。由于任务期间纬度保持不变，因此未显示。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-06.jpg?height=695&width=1239&top_left_y=1776&top_left_x=392) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-06.jpg?height=695&width=1239&top_left_y=1776&top_left_x=392){width="400"}
  
 图 3. UB-ANC Emulator 在 APM Planner 中的可视化界面。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-07.jpg?height=779&width=1355&top_left_y=247&top_left_x=376) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-07.jpg?height=779&width=1355&top_left_y=247&top_left_x=376){width="400"}
  
 图 4. 三机任务的实验与仿真对比。（a）事件—时间。（b）经度—时间。（c）高度—时间。
 
 从图 4(a)–(c) 可见，仿真中事件普遍比实验存在额外延迟。为确定延迟来源，我们将飞行路径划分为四个阶段：解锁至起飞、起飞至峰值高度、水平飞行、降落至电机关闭。图 5 展示了单架 MAV 在各阶段的平均持续时间与标准差。结果表明，主要延迟来源于“解锁至起飞”阶段。我们认为实验中 MAV 起飞更快，主要由于所谓的**地效（ground effect）**，即螺旋桨在接近地面时能获得更高升力效率${ }^{32,33}$。该延迟在各 MAV 间基本恒定，可根据特定机型在仿真中修正。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-07.jpg?height=491&width=808&top_left_y=1149&top_left_x=1079) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-07.jpg?height=491&width=808&top_left_y=1149&top_left_x=1079){width="400"}
  
 图 5. 实验与仿真间时间滞后的潜在来源（单机分析）。
 
@@ -173,7 +173,7 @@ MAV：micro air vehicle（微型飞行器）；MSE：mean squared error（均方
 
 为了展示 UB-ANC Emulator 的可扩展性，我们设置了一个包含五架 MAV 的“领航-跟随（leader-follower）”任务，其中 MAV 1 与 MAV 2 通过两台 USRP N210 软件定义无线电进行通信，其余 MAV 则通过仿真方式通信。在该任务中，MAV $i+1$ 以 MAV $i \in\{1,2,\ldots,4\}$ 为目标，保持 10 米跟随。MAV $i$ 每隔 100 毫秒通过 74 字节的数据包将其 GPS 位置发送给 MAV $i+1$。图 6 展示了该任务的系统设置${ }^{8}$。我们在“网络仿真器集成”一节中还将进一步演示其与 ns-3 的高保真网络仿真集成能力。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-08.jpg?height=351&width=816&top_left_y=250&top_left_x=1033) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-08.jpg?height=351&width=816&top_left_y=250&top_left_x=1033){width="400"}
  
 图 6. UB-ANC Emulator 中两架 MAV 通过 USRP N210 软件无线电进行通信。
 
@@ -185,7 +185,7 @@ MAV：micro air vehicle（微型飞行器）；MSE：mean squared error（均方
 
 利用上述电流传感器模块，我们测量了飞行中无人机的能量消耗如何随飞行距离与转弯角度变化${ }^{30}$。基于图 2 所示无人机，测得能量消耗与飞行距离近似线性相关（$0.1164\ \mathrm{J}/\mathrm{m}$），与转向角度近似线性相关（$0.0173\ \mathrm{J}/\mathrm{deg}$）。尽管具体数值取决于飞行器与飞控器，但我们在多种 Pixhawk 四旋翼测试中均观察到类似趋势。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-09.jpg?height=368&width=1485&top_left_y=241&top_left_x=311) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-09.jpg?height=368&width=1485&top_left_y=241&top_left_x=311){width="400"}
  
 图 7. 电流、电压和气压的仿真与实验对比。(a) 电机电流 (A)。(b) 速度 (m/s)。(c) 气压变化 (Pa)。
 
@@ -193,7 +193,7 @@ MAV：micro air vehicle（微型飞行器）；MSE：mean squared error（均方
 
 观察表明，LKH-D 所规划路径转弯更少，飞行更高效。无人机可更快完成覆盖，降低能耗。实验中，LKH-D 比 DLS 总能耗降低约 $25\%$，仿真中能耗降低约 $22\%$，表明 UB-ANC Emulator 对 MEPP 问题仿真具有较高准确性。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-09.jpg?height=714&width=1685&top_left_y=780&top_left_x=218) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-09.jpg?height=714&width=1685&top_left_y=780&top_left_x=218){width="400"}
  
 图 8. UB Stadium 的卫星视图与路径规划结果。虚拟障碍以斜线阴影表示。(a) DLS 规划路径，(b) DLS 实验路径，(c) LKH-D 规划路径，(d) LKH-D 实验路径。
 
@@ -246,7 +246,7 @@ MAV：微型飞行器；MCU：MAVLink 控制单元
 
 为了仿真 MAV 网络，UB-ANC Emulator 中的每架仿真 MAV 都对应一个 ns-3 节点。该节点的应用层处理来自对应 MAV 对象的 `netDataReady()` 信号以发起数据传输。当源节点的应用层接收数据包后，ns-3 会通过其网络协议栈将数据传输至目标节点。目标节点的应用层随后通过 `netSendData()` 将数据包发送回 UB-ANC Emulator 中对应的 MAV 对象。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-11.jpg?height=687&width=704&top_left_y=250&top_left_x=1135) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-11.jpg?height=687&width=704&top_left_y=250&top_left_x=1135){width="400"}
  
 图 9. UB-ANC Emulator 中 ns-3 集成的模块框图。  
 MAV：微型飞行器。
@@ -261,7 +261,7 @@ MAV：微型飞行器。
 
 为评估链路级集成效果，我们设置了一个双 MAV 通信任务：MAV1 为接收端，MAV2 为发送端。任务开始时，MAV2 起飞至 5 米高度，悬停并以 1 包/s 应用层速率发送 1000 个数据包。每个包在应用层为 7 字节，经过 MAC 层封装后为 93 字节。之后 MAV2 向东飞行 5 米，再次悬停并发送 1000 包，如此重复共 20 次。我们采用 DSSS 调制，分别以 $1\ \mathrm{Mbps}$、$2\ \mathrm{Mbps}$、$5.5\ \mathrm{Mbps}$ 与 $11\ \mathrm{Mbps}$ 四种物理层速率进行仿真。图 10(a) 与 (b) 分别展示了接收包数与信号强度（RSS）及 MAV 间 3D 欧几里得距离的关系。该结果与 Pei 与 Henderson 在 ns-3 中对 Wi-Fi 接收概率与 RSS 关系的报告高度一致，验证了事件与时钟同步的正确性。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-12.jpg?height=531&width=811&top_left_y=247&top_left_x=177) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-12.jpg?height=531&width=811&top_left_y=247&top_left_x=177){width="400"}
  
 图 10. 在 1000 个发送包中接收成功的数量。(a) RSS（dBm）；(b) 距离（米）。  
 RSS：接收信号强度；DSSS：直接序列扩频。
@@ -275,7 +275,7 @@ RSS：接收信号强度；DSSS：直接序列扩频。
 
 OLSR：优化链路状态路由；AODV：按需距离向量路由；MAV：微型飞行器。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-12.jpg?height=978&width=1301&top_left_y=1426&top_left_x=360) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-12.jpg?height=978&width=1301&top_left_y=1426&top_left_x=360){width="400"}
  
 图 11. 不同应用层速率与路由协议下，MAV1 发送与 MAV7 接收的数据包数量。(a) AODV + 1 包/s；(b) OLSR + 1 包/s；(c) AODV + 100 包/s；(d) OLSR + 100 包/s。
 
@@ -283,7 +283,7 @@ OLSR：优化链路状态路由；AODV：按需距离向量路由；MAV：微型
 
 为评估端到端通信性能，我们构建一个包含七架 MAV 的网络（见图 12），其中 MAV1 为源节点，MAV7 为目标节点。该场景模拟应急通信网络，在灾后基础设施瘫痪时支持通信。任务开始时，所有 MAV 起飞至 5 米高度，分别飞至指定位置后以 $5\ \mathrm{m}/\mathrm{s}$ 绕圆飞行 20 圈。相邻圆心间距为 $40\sqrt{2}$ 米或 80 米，圆半径为 20 米。大约仿真 200 秒后，MAV1 向 MAV7 发送数据包（应用层 7 字节，MAC 层 93 字节）。测试分别在应用层速率 1 包/s 与 100 包/s 下进行，PHY 速率设为 1 Mbps（DSSS）。比较了 ns-3 支持的两种路由协议：AODV 与 OLSR。图 12 展示了该网络在 APM Planner 中的可视化效果。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-13.jpg?height=647&width=824&top_left_y=1006&top_left_x=215) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-13.jpg?height=647&width=824&top_left_y=1006&top_left_x=215){width="400"}
  
 图 12. 在 APM Planner 中可视化的七架 MAV 组成的网络。MAV1 为源节点，MAV7 为目标节点。
 
@@ -291,13 +291,13 @@ OLSR：优化链路状态路由；AODV：按需距离向量路由；MAV：微型
 
 图 13 展示在不同速率与协议下，各 MAV 所发送的总数据量与路由开销。明显可见流量不均，且在低速率下开销占比更大。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-13.jpg?height=483&width=1390&top_left_y=1921&top_left_x=360) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-13.jpg?height=483&width=1390&top_left_y=1921&top_left_x=360){width="400"}
  
 图 13. 不同速率与协议下，各 MAV 的数据与开销包数量。(a) 1 包/s；(b) 100 包/s。
 
 最后，图 14 展示了 MAV1 到 MAV7 的应用层端到端延迟的累计分布函数（CDF）。若数据包未成功送达，则赋予其无限延迟，导致 CDF 曲线未达到 1。结果表明，1 包/s 情况下成功送达比例更高，但 100 包/s 下延迟更低。该实验展示了仿真相比实测的优势：延迟统计更易获取且可重复。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-14.jpg?height=623&width=830&top_left_y=247&top_left_x=164) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-14.jpg?height=623&width=830&top_left_y=247&top_left_x=164){width="400"}
  
 图 14. 应用层端到端延迟的 CDF。  
 OLSR：优化链路状态路由；AODV：按需距离向量。
