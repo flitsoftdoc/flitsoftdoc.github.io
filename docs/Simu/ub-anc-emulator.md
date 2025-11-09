@@ -66,7 +66,6 @@ Unmanned aerial vehicle swarms, multi-agent planning and control, wireless netwo
 图 1 展示了 UB-ANC Emulator 的高层架构图，其由三个主要组件构成：仿真引擎（Emulation Engine）、MAV 对象（MAV Object）与 UB-ANC 代理（UB-ANC Agent）。仿真引擎是整个仿真器的核心：它负责协调各项任务，并为每个被仿真的 MAV 实例化并管理一个 MAV 对象。每个 MAV 对象中包含一个 UB-ANC Agent，后者承载任务行为逻辑，并可直接在真实无人机上运行。每个 UB-ANC Agent 与三个其他模块交互：飞控器、网络服务器与传感器服务器。飞控器部分通过一个开源的 SITL 仿真器${ }^{31}$ 进行仿真。SITL 仿真器可与 APM Planner${ }^{10}$ 等开源 GUI 工具连接，以实现对被仿真 MAV 的可视化与监控。图 3 展示了 APM Planner 的可视化界面。
 
 ![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-04.jpg?height=558&width=1272&top_left_y=250&top_left_x=376) {width="400"}
-{width="400"}
  
 图 1. UB-ANC Emulator 的软件架构。
 
