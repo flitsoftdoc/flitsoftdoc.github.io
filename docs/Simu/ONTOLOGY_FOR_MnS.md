@@ -143,23 +143,38 @@ Stacey、Griffin和Shaw（2000, p. 49）提出了目的论的五种不同概念�
 ## REFERENCES
 
 Bozkurt, I., J. J. Padilla, A. Sousa-Poza. 2007. Philosophical Profile of the Individual, In Proceedings of the 19th IEEE International Engineering Management Conference (IEMC).
+
 Feibleman J. 1953. Ontology. Baltimore, MD: Johns Hopkins Press, 1953.
 Gruber, T. 1993. A Translation Approach to Portable Ontology Specifications, Knowledge Acquisition 5(2):199-220.
+
 Guarino, N. 1998. Formal Ontology and information Systems, Published in N. Guarino, ed., Formal Ontology in Information Systems. IOS Press, Trento, Italy.
+
 Kienzle H. J. 1970. Epistemology and Sociology. British Journal of Sociology 21(4):413-424.
+
 Ogden C. K. and I. A. Richards. 1923. The Meaning of Meaning: A Study of the Influence of Language Upon Thought and of the Science of Symbolism. London: Routledge & Kegan Paul.
 
 Balci, O., and W. F. Ormsby. 2007. Conceptual modeling for designing large-scale simulations. Journal of Simulation 1(3):175-186.
+
 Raubal M. and W. Kuhn. 2004. Ontology-Based Task Simulation. Spatial Cognition and Computation 4( 1):15-37.
 
 Rescher N. 2000. Process Philosophy: A Survey of Basic Issues. Pittsburgh, PA: University of Pittsburgh Press.
+
 Rosenblueth, A, N. Wiener, and J. Bigelow. 1943. Behavior, Purpose and Teleology. Philosophy of Science . 10(1):18-24.
-Silver, G. A., O. Hassan, and J.A. Miller. 2007. From Domain Ontologies to Modeling Ontologies to Executable Simulation Models. In Proceedings of the 2007 Winter Simulation Conference. ed. S.G. Henderson, B. Biller, M.-H. Hsieh,. J. Shortle, J.D.Tew, and R.R. Barton. 1108-1117. Piscataway, New Jersey: Institute of Electrical and Electronics Engineers, Inc.
+
+Silver, G. A., O. Hassan, and J.A. Miller. 2007. From Domain Ontologies to Modeling Ontologies to Executable Simulation Models. In Proceedings of the 2007 Winter Simulation Conference. ed. S.G. Henderson, B. Biller, M.-H. Hsieh,. J. Shortle, J.D.
+
+Tew, and R.R. Barton. 1108-1117. Piscataway, New Jersey: Institute of Electrical and Electronics Engineers, Inc.
+
 Stacey, R. D., D. Griffin, and P. Shaw. 2000. Complexity and Management: Fad or Radical Challenge to Systems Thinking? Routledge, Taylor and Francis Group.
+
 Sowa, J. F. 2000. Ontology, Metadata, and Semiotics. Presented at ICCS'2000 in Darmstadt, Germany, on August 14, 2000. Published in B. Ganter & G. W. Mineau, eds., Conceptual Structures: Logical, Linguistic, and Computational Issues, Lecture Notes in AI \#1867, Springer-Verlag, Berlin.
+
 Teo, Y. M. and C. Szabo. 2007. CODES: An Integrated Approach to Composable Modeling and Simulation. Technical Report APSTC-TR-2007-04, Asian Pacific Science and Technology Center.
+
 Tolk, A., S. Y. Diallo, R. D. King, J. J. Padilla and C. D. Turnitsa. 2010. Conceptual Modeling for Composition of Model-based Complex Systems. In Conceptual Modelling for Discrete-Event Simulation, ed. S. Robinson, R. Brooks, K. Kotiadis and D.-J. van der Zee, CRC Press.
+
 Turnitsa, C. and A. Tolk. 2006. Ontology Applied - Techniques employing Ontological Representation for M&S. In Proceedings of the 2006 Fall Simulation Interoperability Workshop.
+
 Yilmaz, L. 2004. On the Need for Contextualized Introspective Models to Improve Reuse and Composability of Defense Simulations. Journal of Defense Modeling and Simulation 1(3):141-151.
 
 ## AUTHOR BIOGRAPHIES
