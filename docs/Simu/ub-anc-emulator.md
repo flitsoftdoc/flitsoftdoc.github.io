@@ -65,7 +65,7 @@ Unmanned aerial vehicle swarms, multi-agent planning and control, wireless netwo
 
 图 1 展示了 UB-ANC Emulator 的高层架构图，其由三个主要组件构成：仿真引擎（Emulation Engine）、MAV 对象（MAV Object）与 UB-ANC 代理（UB-ANC Agent）。仿真引擎是整个仿真器的核心：它负责协调各项任务，并为每个被仿真的 MAV 实例化并管理一个 MAV 对象。每个 MAV 对象中包含一个 UB-ANC Agent，后者承载任务行为逻辑，并可直接在真实无人机上运行。每个 UB-ANC Agent 与三个其他模块交互：飞控器、网络服务器与传感器服务器。飞控器部分通过一个开源的 SITL 仿真器${ }^{31}$ 进行仿真。SITL 仿真器可与 APM Planner${ }^{10}$ 等开源 GUI 工具连接，以实现对被仿真 MAV 的可视化与监控。图 3 展示了 APM Planner 的可视化界面。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-04.jpg?height=558&width=1272&top_left_y=250&top_left_x=376) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-04.jpg?height=558&width=1272&top_left_y=250&top_left_x=376){width="400"}
  
 图 1. UB-ANC Emulator 的软件架构。
 
@@ -111,7 +111,7 @@ SITL${ }^{31}$ 仿真器是一个开源项目，支持在无硬件条件下运�
 
 评估仿真器的主要挑战在于确定其与真实情况的**一致性**。为此，许多机器人仿真器采用全物理仿真，但这会限制其在多机器人仿真中的可扩展性。我们的仿真器针对支持 MAVLink 协议的飞行器进行仿真。MAVLink 协议以事件为通信单位。作为精度指标，我们测量了 MAV 各事件间的时间间隔，并与仿真器中的对应时间进行比较。结果见“精度”小节。在“可扩展性”小节中，我们将两台 USRP 设备连接至仿真器，使其在两架仿真 MAV 间建立通信，以展示网络层扩展能力。在“其他参数仿真”小节中，我们测量真实无人机的能耗、飞行速度及气压高度数据，并与仿真结果对比，以验证 UB-ANC Emulator 对多种参数的仿真能力。最后，在“最小能量路径规划”小节中，我们展示了两种复杂路径规划算法的实验与仿真结果，以进一步验证仿真器的精度。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-06.jpg?height=370&width=816&top_left_y=1165&top_left_x=172) {width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-06.jpg?height=370&width=816&top_left_y=1165&top_left_x=172){width="400"}
  
 图 2. 一架 UB-ANC 无人机，配备定制机架、Pixhawk 飞控、Raspberry Pi 2 板、定制功率传感模块及 10,000mAh 电池。整机重量约 3 kg，可持续飞行约 30 分钟。
 
