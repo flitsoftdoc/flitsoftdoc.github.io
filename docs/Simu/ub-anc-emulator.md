@@ -64,7 +64,7 @@ Unmanned aerial vehicle swarms, multi-agent planning and control, wireless netwo
 
 图 1 展示了 UB-ANC Emulator 的高层架构图，其由三个主要组件构成：仿真引擎（Emulation Engine）、MAV 对象（MAV Object）与 UB-ANC 代理（UB-ANC Agent）。仿真引擎是整个仿真器的核心：它负责协调各项任务，并为每个被仿真的 MAV 实例化并管理一个 MAV 对象。每个 MAV 对象中包含一个 UB-ANC Agent，后者承载任务行为逻辑，并可直接在真实无人机上运行。每个 UB-ANC Agent 与三个其他模块交互：飞控器、网络服务器与传感器服务器。飞控器部分通过一个开源的 SITL 仿真器${ }^{31}$ 进行仿真。SITL 仿真器可与 APM Planner${ }^{10}$ 等开源 GUI 工具连接，以实现对被仿真 MAV 的可视化与监控。图 3 展示了 APM Planner 的可视化界面。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-04.jpg?height=558&width=1272&top_left_y=250&top_left_x=376){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-04.jpg?height=558&width=1272&top_left_y=250&top_left_x=376){width="600"}
  
 图 1. UB-ANC Emulator 的软件架构。
 
@@ -120,7 +120,7 @@ SITL${ }^{31}$ 仿真器是一个开源项目，支持在无硬件条件下运�
 
 图 4 对比了实验与仿真中测得的关键参数。时间 0 对应 MAV 1 解锁的时刻。图 4(a) 显示五轮实验与仿真中，各 MAV 的关键事件（ARM、LAND、DISARM）发生时刻的平均值（点标）与标准差（误差棒）。对 MAV 1 而言，ARM 表示电机启动准备起飞的时刻；对 MAV $i\in\{2,3\}$，ARM 包含以下四个事件序列：(i) MAV $i-1$ 发送任务指令给 MAV $i$；(ii) MAV $i$ 接收指令；(iii) MAV $i$ 启动电机；(iv) MAV $i$ 起飞。三架 MAV 的 LAND 表示启动自动降落模式的时刻，DISARM 表示降落后电机关闭，标志任务完成。图 4(b) 与 (c) 分别展示各 MAV 的经度偏移（相对起点）与相对高度（相对地面）随时间变化。由于任务期间纬度保持不变，因此未显示。
 
-![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-06.jpg?height=695&width=1239&top_left_y=1776&top_left_x=392){width="400"}
+![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-06.jpg?height=695&width=1239&top_left_y=1776&top_left_x=392){width="600"}
  
 图 3. UB-ANC Emulator 在 APM Planner 中的可视化界面。
 
