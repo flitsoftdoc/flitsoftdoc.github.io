@@ -113,7 +113,7 @@ SITL${ }^{31}$ 仿真器是一个开源项目，支持在无硬件条件下运�
 
 ![](https://cdn.mathpix.com/cropped/2025_11_09_27c93034939e41006ac8g-06.jpg?height=370&width=816&top_left_y=1165&top_left_x=172) {width="400"}
  
-图 2. 一架 UB-ANC 无人机，配备定制机架、Pixhawk 飞控、Raspberry Pi 2 板、定制功率传感模块及 $10{,}000\ \mathrm{mAh}$ 电池。整机重量约 3 kg，可持续飞行约 30 分钟。
+图 2. 一架 UB-ANC 无人机，配备定制机架、Pixhawk 飞控、Raspberry Pi 2 板、定制功率传感模块及 10,000mAh 电池。整机重量约 3 kg，可持续飞行约 30 分钟。
 
 ### 精度（Accuracy）
 
