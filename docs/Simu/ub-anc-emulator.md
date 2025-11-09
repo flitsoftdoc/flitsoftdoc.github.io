@@ -34,13 +34,13 @@ Unmanned aerial vehicle swarms, multi-agent planning and control, wireless netwo
 
 一种常用的缓解部署难题的方式是使用仿真/模拟（simulation/emulation）。目前已有多个仿真器可应对部分上述挑战。机器人仿真软件包能够在真实物理条件下仿真单架无人机，但同时仿真多架无人机仍较为困难。网络仿真器则支持无线网络仿真，但不便于同时模拟网络、任务规划与控制之间的交互。我们考察了多种可能的方案，发现很难组合出一套既能在仿真中测试无人机网络应用又能轻松迁移到实际部署的工具集。
 
-为应对上述挑战并填补现有工具的空白，我们开发了 $UB\text{-}ANC$ Emulator${ }^{7,8}$，这是一种结合多MAV规划与控制以及高保真网络仿真的仿真框架，可实现向真实无人机的无缝过渡。UB-ANC Emulator 的主要特性如下：
+为应对上述挑战并填补现有工具的空白，我们开发了 UB-ANC Emulator${ }^{7,8}$，这是一种结合多MAV规划与控制以及高保真网络仿真的仿真框架，可实现向真实无人机的无缝过渡。UB-ANC Emulator 的主要特性如下：
 
 - UB-ANC Emulator 基于开源软件组件设计，来源于流行的业余无人机运动，因此可轻松适配多种现成或自制无人机；
 - 它采用与真实无人机相同的软件体系，包括任何任务规划算法、飞控器的软件在环仿真（Software-in-the-Loop, SITL）、与飞控通信的协议与应用程序接口（Micro Air Vehicle Communication Protocol, MAVLink${ }^{9}$）以及用于网络数据收发的API；
 - 它具备与真实无人机相同的数据记录功能，并支持通过开源地面控制站（如 APM Planner${ }^{10}$ 和 QGroundControl${ }^{11}$）进行实时可视化监控；
 - 它设计为模块化和可扩展结构，可轻松扩展以集成其他网络要素、规划算法、传感器及使用 MAVLink 协议的飞控；
-- 它提供了集成高保真网络仿真器的API。我们通过该API将离散事件网络仿真器 ns-$3^{12}$ 集成至仿真系统；
+- 它提供了集成高保真网络仿真器的API。我们通过该API将离散事件网络仿真器 ns-3 ${}3^{12}$ 集成至仿真系统；
 - 尽管本文主要聚焦于四旋翼仿真，UB-ANC Emulator 也可仿真任何兼容 MAVLink 的载具，包括固定翼、直升机、多旋翼、地面车、船舶和潜艇；
 - UB-ANC Emulator 作为开源项目发布于：https://github.com/jmodares/UB-ANC-Emulator。
 
