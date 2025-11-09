@@ -219,56 +219,7 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
 - **事件同步**：UB-ANC Emulator 以 MAVLink 事件控制 SITL 飞控器，每个 MAV 的事件在其 SITL 中独立处理，而网络仿真器具有自己的事件系统。这两者需频繁同步，需仿真器及时获知 UB-ANC 内相关事件。
 - **网络行为同步**：UB-ANC Emulator 中的算法依赖网络协调，因此仿真器与网络仿真模块需进行行为同步，并处理通信失败或干扰等异常情况。
 
-/// note | 本文的解决方案（理解1）
-* **时钟同步**：将 ns-3 配置为**实时调度器**，把仿真时钟锁定到 CPU 实时时钟（以真实时间作为仿真时间），从而让 ns-3 的调度器与 UB-ANC Emulator 的调度器处于**同一时基**。
-
-* **事件同步**：把 UB-ANC Emulator 中所有**相关事件**转发给网络仿真器，并公开三项接口以频繁对齐双方事件队列：
-  `netDataReady()`（发送方 MAV 对象向网络仿真器交付待发数据包）、`netSendData()`（网络仿真器把已送达的数据包交给接收方 MAV 对象）、`globalPositionChanged()`（MCU 通知网络仿真器无人机位置更新）。这些接口既完成收发事件对接，也让网络仿真器随时掌握**机动性变化**。
-
-* **网络行为同步**：在上述接口之上，设计了**端到端的数据与位置同步链路**：
-  发送路径：ACU → NCU（`m_send_buffer`）→ IPC → MAV 对象 → 触发 `netDataReady()` → ns-3 按其协议栈转发；
-  接收路径：ns-3 达到目的节点后调用 `netSendData()` → 目的 MAV 对象的网络服务器 → IPC → NCU → 触发 `dataReady()` → ACU 取包处理；
-  位置同步：MCU 触发 `globalPositionChanged()` → 仿真引擎转发至 ns-3，使**连通性与链路质量评估**随位置实时一致。该机制也为**通信失败/外扰**情况下的异常处理提供了钩子与时序一致性保障；其正确性通过节点到节点与端到端测评（pcap/Wireshark 离线分析）得到验证。
-
-///
-
-/// note | 本文的解决方案（理解2）
-
-根据该论文，UB-ANC Emulator 通过以下方式解决了将其与 ns-3 集成时遇到的三个主要挑战：
-
-**1. 钟同步 (Clock Synchronization)**
-
-为了解决 ns-3 的仿真时间与 UB-ANC Emulator 的真实时间不一致的问题，研究人员采取了以下措施：
-
-* 他们将 ns-3 设置为使用**实时调度器** (real-time scheduler)。
-* 该调度器将 ns-3 的仿真时钟与 CPU 时钟**锁定** 。
-* 通过这种方式，**真实时间被设置为仿真时间** ，从而允许 UB-ANC Emulator 和 ns-3 两个调度器同步到同一个时钟 。
-
-**2. 事件同步 (Event Synchronization)**
-
-为了同步两个系统各自独立的事件队列，解决方案是将 UB-ANC Emulator 中的所有相关事件转发到网络仿真器 。
-
-* 该论文设计了一个包含三个方法的 API（如表 4 所述），允许网络仿真器 (ns-3) 与各个 MAV 对象 (MAV Object) 进行交互 。
-* 这些方法不仅用于数据包的传输和接收，还用于**跟踪 MAV 的移动性** 。
-* 例如，当无人机的位置发生变化时，Emulator 的 MAVLink 控制单元 (MCU) 会发出一个 `globalPositionChanged()` 信号。仿真引擎 (Emulation Engine) 会侦听此信号并将其传递给 ns-3，以便 ns-3 能相应地处理位置更新事件 。
-
-**3. 网络行为同步 (Network Activity Synchronization)**
-
-网络行为的同步（包括处理通信失败）也是通过上述的 API（表 4）实现的，该 API 协调了 Emulator 和 ns-3 之间的网络活动 。具体的同步流程如下：
-
-* **数据包传输（从 Emulator 到 ns-3）**：
-    1.  当 UB-ANC 代理 (Agent) 中的 ACU（代理控制单元）想要发送数据包时，它将数据包转发给 NCU（网络控制单元）。
-    2.  该数据包通过进程间通信 (IPC) 被转发到发送方对应的 MAV 对象。
-    3.  MAV 对象发出一个 `netDataReady()` 信号 。
-    4.  ns-3 必须捕获此信号，才能“接收”该数据包，并在其内部网络模型中进行处理和发送 。
-* **数据包接收（从 ns-3 到 Emulator）**：
-    1.  当 ns-3 仿真器将数据包传递到目标节点后 。
-    2.  ns-3 会调用目标 MAV 对象的 `netSendData()` 方法（槽）。
-    3.  MAV 对象的网络服务器 (Network Server) 再通过 IPC 机制将数据包转发给相应 UB-ANC 代理的 NCU 。
-    4.  最后，NCU 发出 `dataReady()` 信号，通知 ACU 有数据包在接收缓冲区中等待处理。
-///
-
-/// note | 本文的解决方案（理解3）
+/// note | 本文针对以上挑战的解决方案
 
 **1. 时钟同步（Clock Synchronization）**
 
@@ -281,7 +232,7 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
 - 使真实时间等同于仿真时间
 - 这样两个调度器就能同步到同一个时钟
 
-> 原文："For this, we set ns-3 to use a real-time scheduler to lock the simulation clock with the CPU clock (and set real time as simulation time). This allows the two schedulers to be synchronized to the same clock."
+> 原文："ns-3 拥有独立的事件调度器，因此需要与 UB-ANC Emulator 的调度器进行同步。为实现此目的，我们将 ns-3 设置为使用实时调度器，使其仿真时钟与 CPU 时钟锁定一致，从而将仿真时间设为真实时间，使两者调度器实现时钟同步。"
 
 **2. 事件同步（Event Synchronization）**
 
@@ -332,18 +283,16 @@ ns-3 处理完毕
 
 关键措施：
 
-- **转发所有相关事件**："For event synchronization, we forward all relevant events in the UB-ANC Emulator to the network simulator"
+- **转发所有相关事件**："为实现事件同步，我们将 UB-ANC Emulator 中所有相关事件转发给网络仿真器。"
 - **实时位置追踪**：通过 `globalPositionChanged()` 持续更新 MAV 位置
 - **基于位置建模连接性**：ns-3 根据 MAV 实时位置建模网络连通性和数据传输
 - **异常处理**：支持通信失败和外部干扰的异常处理
 
-> 原文："These methods not only enable packet transmission and reception but also track MAV mobility. In this way, a network simulator can realistically model the connectivity and data transmission based on the MAVs' positions."
+> 原文："这些方法不仅支持数据包的发送与接收，还能跟踪 MAV 的机动性。由此，网络仿真器便可以根据 MAV 的位置，真实地建模连通性与数据传输。"
 
 ------
 
-**设计亮点**
-
-论文采用了**模块化、松耦合**的设计：
+本文采用了**模块化、松耦合**的设计：
 
 - 使用 Qt 的**信号-槽机制**实现组件间通信
 - 使用**进程间通信（IPC）**传递数据
@@ -367,13 +316,15 @@ MAV：微型飞行器；MCU：MAVLink 控制单元
 
 ### 网络仿真器集成方法（Methodology）
 
-为实现事件同步，我们将 UB-ANC Emulator 中所有相关事件转发至网络仿真器。我们设计了三种 API（见表 4），用于网络仿真器与 MAV 间接口交互，支持数据收发与位置追踪。
+为实现事件同步，我们将 UB-ANC Emulator 中所有相关事件转发给网络仿真器。鉴于我们实现的分布式特性，我们将 UB-ANC Emulator 设计为公开表 4 中的三种方法，使网络仿真器能够与各个 MAV 对接。这些方法不仅支持数据包的发送与接收，还能跟踪 MAV 的机动性。由此，网络仿真器便可以根据 MAV 的位置，真实地建模连通性与数据传输。
 
-**数据发送**：当 ACU 需要发送数据包时，数据被送入 NCU 的私有队列 `m_send_buffer`，然后通过 IPC 传递给 MAV 对象并触发 `netDataReady()` 信号。网络仿真器捕获该信号并接收数据包，按其内部网络模型完成传输。
+下面我们说明表 4 中的方法如何用于数据包发送、数据包接收和 MAV 定位。
 
-**数据接收**：当网络仿真器将数据包投递至目标节点后，通过 `netSendData()` 方法将其送至目标 MAV 对象的网络服务器，然后通过 IPC 送达 UB-ANC Agent 的 NCU，后者再触发 `dataReady()` 信号通知 ACU 读取并处理接收到的数据。
+**数据发送。**当 ACU 需要发送数据包时，它将数据包转交给 NCU，后者把数据放入名为 `m_send_buffer` 的私有队列。随后，数据包通过进程间通信（IPC）被转发到发送方对应的 MAV 对象，该对象会发出名为 `netDataReady()` 的信号。网络仿真器必须捕获该信号，以便从 MAV 对象中取走数据包。一旦取走，网络仿真器即可按其内部网络模型处理该数据包，即将其从源节点发送到目标节点。
 
-**位置更新**：无人机位置变化时，MCU 发出 `globalPositionChanged()` 信号，仿真引擎捕获后转发给网络仿真器，使其更新节点位置，实现仿真器与网络模型的一致。
+**数据接收。**一旦网络仿真器将数据包交付到目标节点，就需要把它发送到目标节点 MAV 对象的网络服务器组件。这通过 MAV 对象的方法（槽）`netSendData()` 来完成。随后，网络服务器通过 IPC 将数据包转交给对应 UB-ANC Agent 组件的 NCU，NCU 继而触发名为 `dataReady()` 的信号，通知 ACU 在 `m_receive_buffer` 中已有数据包。ACU 随即读取该缓冲区并处理收到的数据。
+
+**无人机定位。**如前所述，需要在网络仿真器中不断更新无人机的位置以匹配仿真器中的位置。当无人机位置发生变化时，仿真器的 MCU（见图 1）会发出名为 `globalPositionChanged()` 的信号。仿真引擎监听该信号并将其转发给网络仿真器，由后者据此进行相应处理。
 
 
 ### ns-3 集成
