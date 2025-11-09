@@ -219,7 +219,7 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
 - **事件同步**：UB-ANC Emulator 以 MAVLink 事件控制 SITL 飞控器，每个 MAV 的事件在其 SITL 中独立处理，而网络仿真器具有自己的事件系统。这两者需频繁同步，需仿真器及时获知 UB-ANC 内相关事件。
 - **网络行为同步**：UB-ANC Emulator 中的算法依赖网络协调，因此仿真器与网络仿真模块需进行行为同步，并处理通信失败或干扰等异常情况。
 
-/// note | 本文的解决方案
+/// note | 本文的解决方案（理解1）
 * **时钟同步**：将 ns-3 配置为**实时调度器**，把仿真时钟锁定到 CPU 实时时钟（以真实时间作为仿真时间），从而让 ns-3 的调度器与 UB-ANC Emulator 的调度器处于**同一时基**。
 
 * **事件同步**：把 UB-ANC Emulator 中所有**相关事件**转发给网络仿真器，并公开三项接口以频繁对齐双方事件队列：
@@ -231,6 +231,129 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
   位置同步：MCU 触发 `globalPositionChanged()` → 仿真引擎转发至 ns-3，使**连通性与链路质量评估**随位置实时一致。该机制也为**通信失败/外扰**情况下的异常处理提供了钩子与时序一致性保障；其正确性通过节点到节点与端到端测评（pcap/Wireshark 离线分析）得到验证。
 
 ///
+
+/// note | 本文的解决方案（理解2）
+
+根据该论文，UB-ANC Emulator 通过以下方式解决了将其与 ns-3 集成时遇到的三个主要挑战：
+
+### 1. 钟同步 (Clock Synchronization)
+
+为了解决 ns-3 的仿真时间与 UB-ANC Emulator 的真实时间不一致的问题，研究人员采取了以下措施：
+
+* 他们将 ns-3 设置为使用**实时调度器** (real-time scheduler)。
+* 该调度器将 ns-3 的仿真时钟与 CPU 时钟**锁定** 。
+* 通过这种方式，**真实时间被设置为仿真时间** ，从而允许 UB-ANC Emulator 和 ns-3 两个调度器同步到同一个时钟 。
+
+### 2. 事件同步 (Event Synchronization)
+
+为了同步两个系统各自独立的事件队列，解决方案是将 UB-ANC Emulator 中的所有相关事件转发到网络仿真器 。
+
+* 该论文设计了一个包含三个方法的 API（如表 4 所述），允许网络仿真器 (ns-3) 与各个 MAV 对象 (MAV Object) 进行交互 。
+* 这些方法不仅用于数据包的传输和接收，还用于**跟踪 MAV 的移动性** 。
+* 例如，当无人机的位置发生变化时，Emulator 的 MAVLink 控制单元 (MCU) 会发出一个 `globalPositionChanged()` 信号。仿真引擎 (Emulation Engine) 会侦听此信号并将其传递给 ns-3，以便 ns-3 能相应地处理位置更新事件 。
+
+### 3. 网络行为同步 (Network Activity Synchronization)
+
+网络行为的同步（包括处理通信失败）也是通过上述的 API（表 4）实现的，该 API 协调了 Emulator 和 ns-3 之间的网络活动 。具体的同步流程如下：
+
+* **数据包传输（从 Emulator 到 ns-3）**：
+    1.  当 UB-ANC 代理 (Agent) 中的 ACU（代理控制单元）想要发送数据包时，它将数据包转发给 NCU（网络控制单元）。
+    2.  该数据包通过进程间通信 (IPC) 被转发到发送方对应的 MAV 对象。
+    3.  MAV 对象发出一个 `netDataReady()` 信号 。
+    4.  ns-3 必须捕获此信号，才能“接收”该数据包，并在其内部网络模型中进行处理和发送 。
+* **数据包接收（从 ns-3 到 Emulator）**：
+    1.  当 ns-3 仿真器将数据包传递到目标节点后 。
+    2.  ns-3 会调用目标 MAV 对象的 `netSendData()` 方法（槽）。
+    3.  MAV 对象的网络服务器 (Network Server) 再通过 IPC 机制将数据包转发给相应 UB-ANC 代理的 NCU 。
+    4.  最后，NCU 发出 `dataReady()` 信号，通知 ACU 有数据包在接收缓冲区中等待处理。
+///
+
+/// note | 本文的解决方案（理解3）
+
+**1. 时钟同步（Clock Synchronization）**
+
+**解决方案**：将 ns-3 配置为**实时调度模式**
+
+具体实现：
+
+- 设置 ns-3 使用实时调度器（real-time scheduler）
+- 将仿真时钟锁定到 CPU 时钟
+- 使真实时间等同于仿真时间
+- 这样两个调度器就能同步到同一个时钟
+
+> 原文："For this, we set ns-3 to use a real-time scheduler to lock the simulation clock with the CPU clock (and set real time as simulation time). This allows the two schedulers to be synchronized to the same clock."
+
+**2. 事件同步（Event Synchronization）**
+
+**解决方案**：设计了一套**三方法 API**（Table 4），通过信号-槽机制实现事件转发
+
+**核心 API 方法：**
+
+| 方法                      | 功能                                                  |
+| ------------------------- | ----------------------------------------------------- |
+| `netDataReady()`          | MAV 对象发射的信号，将数据包传递给网络仿真器          |
+| `netSendData()`           | 网络仿真器调用的槽函数，将数据包传递给接收方 MAV 对象 |
+| `globalPositionChanged()` | MCU 发射的信号，通知网络仿真器无人机位置更新          |
+
+**具体工作流程：**
+
+**① 数据包发送流程：**
+
+```
+ACU → NCU (m_send_buffer) 
+  → MAV Object (IPC) 
+  → 触发 netDataReady() 信号 
+  → ns-3 捕获并处理数据包
+```
+
+**② 数据包接收流程：**
+
+```
+ns-3 处理完毕 
+  → 调用 netSendData() 槽函数 
+  → Network Server → NCU (m_receive_buffer, IPC) 
+  → 触发 dataReady() 信号 
+  → ACU 读取并处理
+```
+
+**③ 位置同步流程：**
+
+```
+无人机位置变化 
+  → MCU 触发 globalPositionChanged() 
+  → Emulation Engine 监听 
+  → 传递给 ns-3 更新节点位置
+```
+
+
+**3. 网络行为同步（Network Activity Synchronization）**
+
+**解决方案**：通过上述事件同步机制 + 移动性追踪实现
+
+关键措施：
+
+- **转发所有相关事件**："For event synchronization, we forward all relevant events in the UB-ANC Emulator to the network simulator"
+- **实时位置追踪**：通过 `globalPositionChanged()` 持续更新 MAV 位置
+- **基于位置建模连接性**：ns-3 根据 MAV 实时位置建模网络连通性和数据传输
+- **异常处理**：支持通信失败和外部干扰的异常处理
+
+> 原文："These methods not only enable packet transmission and reception but also track MAV mobility. In this way, a network simulator can realistically model the connectivity and data transmission based on the MAVs' positions."
+
+------
+
+**设计亮点**
+
+论文采用了**模块化、松耦合**的设计：
+
+- 使用 Qt 的**信号-槽机制**实现组件间通信
+- 使用**进程间通信（IPC）**传递数据
+- 利用 ns-3 的**可集成性**（为测试床集成设计）
+- 保持了仿真器的**可扩展性**（可集成其他网络仿真器如 EMANE）
+
+这种设计使得两个原本独立的系统能够协同工作，既保证了 UB-ANC Emulator 的实时性，又获得了 ns-3 高保真度的网络仿真能力。
+
+///
+
 
 **表 4.** 将网络仿真器集成至 UB-ANC Emulator 的 API 接口。
 
