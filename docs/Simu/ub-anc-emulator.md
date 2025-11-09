@@ -236,7 +236,7 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
 
 根据该论文，UB-ANC Emulator 通过以下方式解决了将其与 ns-3 集成时遇到的三个主要挑战：
 
-### 1. 钟同步 (Clock Synchronization)
+**1. 钟同步 (Clock Synchronization)**
 
 为了解决 ns-3 的仿真时间与 UB-ANC Emulator 的真实时间不一致的问题，研究人员采取了以下措施：
 
@@ -244,7 +244,7 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
 * 该调度器将 ns-3 的仿真时钟与 CPU 时钟**锁定** 。
 * 通过这种方式，**真实时间被设置为仿真时间** ，从而允许 UB-ANC Emulator 和 ns-3 两个调度器同步到同一个时钟 。
 
-### 2. 事件同步 (Event Synchronization)
+**2. 事件同步 (Event Synchronization)**
 
 为了同步两个系统各自独立的事件队列，解决方案是将 UB-ANC Emulator 中的所有相关事件转发到网络仿真器 。
 
@@ -252,7 +252,7 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
 * 这些方法不仅用于数据包的传输和接收，还用于**跟踪 MAV 的移动性** 。
 * 例如，当无人机的位置发生变化时，Emulator 的 MAVLink 控制单元 (MCU) 会发出一个 `globalPositionChanged()` 信号。仿真引擎 (Emulation Engine) 会侦听此信号并将其传递给 ns-3，以便 ns-3 能相应地处理位置更新事件 。
 
-### 3. 网络行为同步 (Network Activity Synchronization)
+**3. 网络行为同步 (Network Activity Synchronization)**
 
 网络行为的同步（包括处理通信失败）也是通过上述的 API（表 4）实现的，该 API 协调了 Emulator 和 ns-3 之间的网络活动 。具体的同步流程如下：
 
