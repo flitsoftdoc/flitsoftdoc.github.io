@@ -1,6 +1,6 @@
 # UB-ANC Emulator 
 
-**Simulating unmanned aerial vehicle swarms with the UB-ANC Emulator 
+**Simulating unmanned aerial vehicle swarms with the UB-ANC Emulator**
 
 Jalil Modares, Nicholas Mastronarde and Karthik Dantu
 
