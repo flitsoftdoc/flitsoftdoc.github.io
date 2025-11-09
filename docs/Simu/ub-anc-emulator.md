@@ -73,7 +73,7 @@ Unmanned aerial vehicle swarms, multi-agent planning and control, wireless netwo
 
 - **模块化**：UB-ANC Emulator 被设计为模块化架构。每个组件有明确定义的任务，便于修改与调试。各模块间接口清晰，从而支持快速替换传感器行为、网络协议及飞控系统。
 - **可扩展性**：图 1 中的模块均具备良好的可扩展性。接口的明确划分使得开发者可轻松创建适配新硬件的模块。例如，MAVLink 组件可修改以集成特定无人机的新行为。
-- **易部署性**：UB-ANC Emulator 易于配置和运行。其采用 $\mathrm{C}++$ 编写，并基于 Qt 跨平台开发框架，可部署于 Windows 和 Linux 等平台。在仿真中验证飞控器或任务规划算法后，可直接部署至真实无人机硬件，无需修改。
+- **易部署性**：UB-ANC Emulator 易于配置和运行。其采用 C++ 编写，并基于 Qt 跨平台开发框架，可部署于 Windows 和 Linux 等平台。在仿真中验证飞控器或任务规划算法后，可直接部署至真实无人机硬件，无需修改。
 - **遵循主流开源标准**：UB-ANC Emulator 支持 MAVLink 协议的飞控系统，后者适用于多种自主飞行器类型，包括固定翼、直升机、多旋翼、地面车、船舶及潜艇。MAVLink 是一种广泛支持的开源标准，兼容 Pixhawk、NAVIO、ErleBrain 和 Intel Aero 等飞控器${ }^{\mathrm{d}}$。我们也利用了业余无人机社区开发的开源工具用于可视化与日志记录。
 
 如上所述，UB-ANC Emulator 采用 C++ 编写，并基于 Qt 框架开发${ }^{\text{e}}$。我们选择 Qt 有以下几个原因：其便于维持模块化结构并分离功能组件；Qt 的信号与槽机制支持组件之间通过事件异步通信；多数 UB-ANC Emulator 所依赖的开源组件均基于 Qt；最后，Qt 使得该系统可方便地跨平台部署。
