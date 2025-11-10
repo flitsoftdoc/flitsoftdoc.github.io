@@ -242,9 +242,9 @@ DLS：深度限制搜索；LKH-D：无人机适配的 Lin-Kernighan 启发式算
 
 | 方法                      | 功能                                                  |
 | ------------------------- | ----------------------------------------------------- |
-| `netDataReady()`          | MAV 对象发射的信号，将数据包传递给网络仿真器          |
-| `netSendData()`           | 网络仿真器调用的槽函数，将数据包传递给接收方 MAV 对象 |
-| `globalPositionChanged()` | MCU 发射的信号，通知网络仿真器无人机位置更新          |
+| `netDataReady()`          | `MAV 对象`发出信号，将数据包发送至`网络仿真器`(NS)          |
+| `netSendData()`           | `网络仿真器`(NS)调用的槽函数，将数据包发送至接收方 `MAV 对象` |
+| `globalPositionChanged()` | `模拟器`(emulator) MCU 发出信号，通知`网络仿真器`(NS)无人机位置更新          |
 
 **具体工作流程：**
 
@@ -415,13 +415,21 @@ Nicholas Mastronarde (D) http://orcid.org/0000-0002-8474-7237
 ## Notes
 
 a. https://github.com/jmodares/UB-ANC
+
 b. https://www.faa.gov/uas/media/Part_107_Summary.pdf
+
 c. https://github.com/afrl-rq/OpenAMASE
+
 d. http://ardupilot.org/copter/docs/common-autopilots.html
+
 e. http://www.qt.io/qt-framework/
+
 f. http://ardupilot.org/dev/docs/sitl-with-xplane.html
+
 g. http://ardupilot.org/planner2/
+
 h. 在我们的 LKH-D 实验中，无人机被无意中从其预设起点的北侧启动。因此，其实际起飞位置与 DLS 任务或仿真中的起点不一致，导致飞行距离略有增加，从而使性能略微下降。
+
 i. https://www.nrl.navy.mil/itd/ncs/products/emane
 
 ## References
