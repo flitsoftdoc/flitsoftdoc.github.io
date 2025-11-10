@@ -9,11 +9,11 @@
 ### 代码组成
 
 1. **数学与插值工具**
-   - 数学常量和基本运算（Math, Angle）
-   - 3D向量和矩阵运算（Vec3, SquareMatrix, Dcm）
-   - **Interpolation**：提供最近邻、线性、多点、向量及角度插值，并处理周期跳变与时间驱动插值。
-   - **NumericalAnalysis**：实现二分法（Bisection）、割线法（Secant）、二阶 Newton 插值及反向插值算法。
-   - **SquareMatrix**：方阵的构造、单位化、置零、转置、缩放、加法及矩阵乘法，支持元素访问和近似比较。
+    - 数学常量和基本运算（Math, Angle）
+    - 3D向量和矩阵运算（Vec3, SquareMatrix, Dcm）
+    - **Interpolation**：提供最近邻、线性、多点、向量及角度插值，并处理周期跳变与时间驱动插值。
+    - **NumericalAnalysis**：实现二分法（Bisection）、割线法（Secant）、二阶 Newton 插值及反向插值算法。
+    - **SquareMatrix**：方阵的构造、单位化、置零、转置、缩放、加法及矩阵乘法，支持元素访问和近似比较。
 2. **坐标系统**
    - 坐标定义和转换（Coordinate, CoordinateConverter）
    - 特殊坐标系统（GARS）
