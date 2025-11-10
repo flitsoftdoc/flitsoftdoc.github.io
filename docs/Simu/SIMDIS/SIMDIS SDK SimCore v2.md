@@ -15,23 +15,23 @@
     - **NumericalAnalysis**：实现二分法（Bisection）、割线法（Secant）、二阶 Newton 插值及反向插值算法。
     - **SquareMatrix**：方阵的构造、单位化、置零、转置、缩放、加法及矩阵乘法，支持元素访问和近似比较。
 2. **坐标系统**
-   - 坐标定义和转换（Coordinate, CoordinateConverter）
-   - 特殊坐标系统（GARS）
-   - **MultiFrameCoordinate**：在 LLA（经纬高）与 ECEF（地心地固）等多坐标系间双向转换，支持缓存与懒更新。
-   - **Mgrs**：MGRS ↔ UTM/UPS ↔ 地理坐标的全流程双向转换，含特殊区域（Svalbard/Norway）兼容。
-   - **MagneticVariance**：基于 NOAA 世界磁场模型（WMM）计算地磁偏角，并提供真/磁航向互转。
-   - **VerticalDatum**：枚举不同垂直基准（WGS-84、MSL、用户自定义）。
+    - 坐标定义和转换（Coordinate, CoordinateConverter）
+    - 特殊坐标系统（GARS）
+    - **MultiFrameCoordinate**：在 LLA（经纬高）与 ECEF（地心地固）等多坐标系间双向转换，支持缓存与懒更新。
+    - **Mgrs**：MGRS ↔ UTM/UPS ↔ 地理坐标的全流程双向转换，含特殊区域（Svalbard/Norway）兼容。
+    - **MagneticVariance**：基于 NOAA 世界磁场模型（WMM）计算地磁偏角，并提供真/磁航向互转。
+    - **VerticalDatum**：枚举不同垂直基准（WGS-84、MSL、用户自定义）。
 3. **随机数与数值环境**
-   - **Random**：生成均匀、正态（实/复）、指数、Poisson、几何、二项及离散均匀分布样本，支持全局与手动种子。
-   - **Units**：定义各种物理量单位及其相互转换，提供注册表和查询接口。
-   - **UnitContext**：管理当前应用的单位和显示格式（时间、坐标、角度、距离、速度、磁偏、高程等），可动态修改精度与格式。
+    - **Random**：生成均匀、正态（实/复）、指数、Poisson、几何、二项及离散均匀分布样本，支持全局与手动种子。
+    - **Units**：定义各种物理量单位及其相互转换，提供注册表和查询接口。
+    - **UnitContext**：管理当前应用的单位和显示格式（时间、坐标、角度、距离、速度、磁偏、高程等），可动态修改精度与格式。
 4. **几何计算**
-   - 基础几何体和相交测试（Geometry）
-   - 地理围栏（GeoFence）
+    - 基础几何体和相交测试（Geometry）
+    - 地理围栏（GeoFence）
 5. **应用层**
-   - 距离、角度、高度等计算（Calculations）
-   - 磁偏角和垂直基准面转换（DatumConvert）
-   - 多边形转换为地理围栏（GogToGeoFence）
+    - 距离、角度、高度等计算（Calculations）
+    - 磁偏角和垂直基准面转换（DatumConvert）
+    - 多边形转换为地理围栏（GogToGeoFence）
 
 
 
@@ -39,16 +39,16 @@
 
 1. **航空航天／无人机仿真**
 
-   * 路径规划、姿态平滑、真磁航向转换、传感器噪声注入与多坐标系数据融合。
+    * 路径规划、姿态平滑、真磁航向转换、传感器噪声注入与多坐标系数据融合。
 2. **地理信息系统（GIS）与测绘**
 
-   * MGRS/UTM/UPS 与地理坐标互转、地理围栏判定、GOG 图形转围栏等大规模地图服务。
+    * MGRS/UTM/UPS 与地理坐标互转、地理围栏判定、GOG 图形转围栏等大规模地图服务。
 3. **军事与舰船导航**
 
-   * 高精度地磁偏角计算、各种坐标系（NED/ENU/ECEF/ECI）转换、Sodano 测地线计算。
+    * 高精度地磁偏角计算、各种坐标系（NED/ENU/ECEF/ECI）转换、Sodano 测地线计算。
 4. **科学计算与可视化**
 
-   * 数值根查找（Bisection、Secant、Newton 插值）、方阵与 DCM 操作、随机分布采样、物理量单位管理与格式化。
+    * 数值根查找（Bisection、Secant、Newton 插值）、方阵与 DCM 操作、随机分布采样、物理量单位管理与格式化。
 
 
 ### 编译器要求
@@ -71,33 +71,40 @@
 
 ### 1. MathConstants.h
 **功能**：定义常用数学常量
+
 - 主要常量：M_PI, M_E, M_TWOPI, M_PI_2等
 - 跨平台兼容性处理（Windows/Linux）
 
 ### 2. Vec3.h
 **功能**：三维向量类
+
 - **数据结构**：包含3个double元素的向量
 - **主要操作**：
-  - 构造函数和赋值操作
-  - 向量运算：加减、标量乘除、点积、叉积
-  - 访问器：x/y/z, lat/lon/alt, range/azimuth/elevation等
-  - 工具函数：length(), normalize(), zero()
+     - 构造函数和赋值操作
+     - 向量运算：加减、标量乘除、点积、叉积
+     - 访问器：x/y/z, lat/lon/alt, range/azimuth/elevation等
+     - 工具函数：length(), normalize(), zero()
 
 ### 3. Angle.h/cpp
 **功能**：角度处理和转换
+
 - **角度规范化**：
-  - `angFix2PI()`: 调整到[0, 2π)
-  - `angFixPI()`: 调整到[-π, π]
-  - `angFixPI2()`: 钳制到[-π/2, π/2]
-  - 度数版本：`angFix360()`, `angFix180()`, `angFix90()`
+    - `angFix2PI()`: 调整到[0, 2π)
+    - `angFixPI()`: 调整到[-π, π]
+    - `angFixPI2()`: 钳制到[-π/2, π/2]
+    - 度数版本：`angFix360()`, `angFix180()`, `angFix90()`
+
 - **角度比较**：
-  - `areAnglesEqual()`: 考虑周期性的角度相等判断
-  - `angleDifference()`: 计算两角度间最短差值
+
+    - `areAnglesEqual()`: 考虑周期性的角度相等判断
+    - `angleDifference()`: 计算两角度间最短差值
+
 - **角度计算**：
-  - `isAngleBetween()`: 判断角度是否在扇形范围内
-  - `rotateEulerAngle()`: 欧拉角旋转
+    - `isAngleBetween()`: 判断角度是否在扇形范围内
+    - `rotateEulerAngle()`: 欧拉角旋转
+
 - **特殊函数**：
-  - `inverseCosine()`, `inverseSine()`: 带误差容忍的反三角函数
+    - `inverseCosine()`, `inverseSine()`: 带误差容忍的反三角函数
 
 **Angle模块**
 
