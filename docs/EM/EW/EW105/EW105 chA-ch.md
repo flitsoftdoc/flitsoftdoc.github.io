@@ -16,7 +16,7 @@ EW 的另一部分是电子防护（EP, Electronic Protection）。EP 涉及通�
 
 ---
 
-## A.1 侦收（Intercept）公式（INTERCEPT FORMULAS）
+## A.1 侦收公式（INTERCEPT FORMULAS）
 
 图 A.1 展示了一个截获链路。该链路的重要参数包括敌方发射机功率、发射天线在截获接收机方向上的增益、到截获接收机（例如到卫星）的距离，以及截获系统的天线配置。
 
