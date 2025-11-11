@@ -40,12 +40,15 @@
 1. **航空航天／无人机仿真**
 
     * 路径规划、姿态平滑、真磁航向转换、传感器噪声注入与多坐标系数据融合。
+  
 2. **地理信息系统（GIS）与测绘**
 
     * MGRS/UTM/UPS 与地理坐标互转、地理围栏判定、GOG 图形转围栏等大规模地图服务。
+
 3. **军事与舰船导航**
 
     * 高精度地磁偏角计算、各种坐标系（NED/ENU/ECEF/ECI）转换、Sodano 测地线计算。
+
 4. **科学计算与可视化**
 
     * 数值根查找（Bisection、Secant、Newton 插值）、方阵与 DCM 操作、随机分布采样、物理量单位管理与格式化。
@@ -62,9 +65,9 @@
 
 这是一个相对独立的数学计算模块，外部依赖很少，主要依赖标准库。这种设计使得代码具有良好的可移植性和独立性。这些代码**不依赖**：
 
-- 第三方数学库（如Eigen、BLAS等）
-- 图形库（如OpenGL、DirectX）
-- 其他第三方框架
+    - 第三方数学库（如Eigen、BLAS等）
+    - 图形库（如OpenGL、DirectX）
+    - 其他第三方框架
 
 
 ## 二、代码文件功能分析
@@ -118,45 +121,51 @@
 
 ### 4. Math.h/cpp
 **功能**：通用数学和矩阵运算
+
 - **基础数学函数**：
-  - `sdkMin/Max()`, `clamp()`, `square()`, `sign()`
-  - `areEqual()`: 浮点数相等比较
-  - `toScientific()`: 科学计数法转换
+    - `sdkMin/Max()`, `clamp()`, `square()`, `sign()`
+    - `areEqual()`: 浮点数相等比较
+    - `toScientific()`: 科学计数法转换
+
 - **向量操作**：
-  - `v3Distance()`, `v3Unit()`, `v3Angle()`
-  - `v3RotX/Y()`: 绕坐标轴旋转
-  - `v3SphtoRec()`: 球坐标到直角坐标转换
+    - `v3Distance()`, `v3Unit()`, `v3Angle()`
+    - `v3RotX/Y()`: 绕坐标轴旋转
+    - `v3SphtoRec()`: 球坐标到直角坐标转换
+
 - **矩阵运算**：
-  - `d3MMmult()`: 3×3矩阵乘法
-  - `d3Mv3Mult()`: 矩阵向量乘法
-  - `d3MMTmult()`: 矩阵与转置矩阵相乘
+    - `d3MMmult()`: 3×3矩阵乘法
+    - `d3Mv3Mult()`: 矩阵向量乘法
+    - `d3MMTmult()`: 矩阵与转置矩阵相乘
+
 - **坐标系转换**：
-  - `d3DCMtoEuler()`: 方向余弦矩阵转欧拉角
-  - `d3EulertoDCM()`: 欧拉角转方向余弦矩阵
-  - `d3EulertoQ()`: 欧拉角转四元数
-  - `d3QtoEuler()`: 四元数转欧拉角
+    - `d3DCMtoEuler()`: 方向余弦矩阵转欧拉角
+    - `d3EulertoDCM()`: 欧拉角转方向余弦矩阵
+    - `d3EulertoQ()`: 欧拉角转四元数
+    - `d3QtoEuler()`: 四元数转欧拉角
+
 - **四元数运算**：
-  - `dQNorm()`: 四元数归一化
-  - `dQMult()`: 四元数乘法
+    - `dQNorm()`: 四元数归一化
+    - `dQMult()`: 四元数乘法
 
 ### 5. CoordinateSystem.h/cpp
 
 **功能**：定义坐标系统枚举和相关常量
 
 - **坐标系统枚举**：
-  - `COORD_SYS_NED`: 北东下坐标系
-  - `COORD_SYS_NWU`: 北西上坐标系
-  - `COORD_SYS_ENU`: 东北上坐标系
-  - `COORD_SYS_LLA`: 经纬度高度坐标系
-  - `COORD_SYS_ECEF`: 地心地固坐标系
-  - `COORD_SYS_ECI`: 地心惯性坐标系
-  - `COORD_SYS_XEAST`: X轴向东的切平面
-  - `COORD_SYS_GTP`: 通用切平面
+    - `COORD_SYS_NED`: 北东下坐标系
+    - `COORD_SYS_NWU`: 北西上坐标系
+    - `COORD_SYS_ENU`: 东北上坐标系
+   -  `COORD_SYS_LLA`: 经纬度高度坐标系
+    - `COORD_SYS_ECEF`: 地心地固坐标系
+    - `COORD_SYS_ECI`: 地心惯性坐标系
+    - `COORD_SYS_XEAST`: X轴向东的切平面
+    - `COORD_SYS_GTP`: 通用切平面
 - **地球模型**：
-  - `WGS_84`: WGS-84椭球模型
-  - `FLAT_EARTH`: 平面地球模型
-  - `TANGENT_PLANE_WGS_84`: WGS-84切平面
-  - `PERFECT_SPHERE`: 完美球体模型
+    - `WGS_84`: WGS-84椭球模型
+    - `FLAT_EARTH`: 平面地球模型
+    - `TANGENT_PLANE_WGS_84`: WGS-84切平面
+    - `PERFECT_SPHERE`: 完美球体模型
+
 - **常量定义**：WGS-84参数、地球旋转速率等
 
 ### 6. Coordinate.h
@@ -164,16 +173,17 @@
 **功能**：坐标数据容器类
 
 - **成员数据**：
-  - 位置(position): Vec3
-  - 方向(orientation): Vec3
-  - 速度(velocity): Vec3
-  - 加速度(acceleration): Vec3
-  - 坐标系类型
-  - ECI时间
+    - 位置(position): Vec3
+    - 方向(orientation): Vec3
+    - 速度(velocity): Vec3
+    - 加速度(acceleration): Vec3
+    - 坐标系类型
+    - ECI时间
+
 - **主要接口**：
-  - 设置/获取各种状态量
-  - 坐标系统管理
-  - 数据有效性标志
+    - 设置/获取各种状态量
+    - 坐标系统管理
+    - 数据有效性标志
 
 ### 7. CoordinateConverter.h/cpp
 
@@ -181,16 +191,16 @@
 
 - **主要功能**：
 
-  - 各种坐标系之间的转换
-  - 参考原点管理
-  - 切平面偏移和旋转
+    - 各种坐标系之间的转换
+    - 参考原点管理
+    - 切平面偏移和旋转
 
 - **支持的转换**：
 
-  - LLA ↔ ECEF ↔ ECI
-  - LLA ↔ NED/NWU/ENU
-  - ECEF ↔ NED/NWU/ENU
-  - XEAST ↔ 其他坐标系
+    - LLA ↔ ECEF ↔ ECI
+    - LLA ↔ NED/NWU/ENU
+    - ECEF ↔ NED/NWU/ENU
+    - XEAST ↔ 其他坐标系
 
 - **关键方法**：
 
@@ -215,24 +225,24 @@
 **功能**：高级计算功能
 
 - **距离计算**：
-  - `calculateSlant()`: 斜距
-  - `calculateGroundDist()`: 地面距离
-  - `calculateAltitude()`: 高度差
+    - `calculateSlant()`: 斜距
+    - `calculateGroundDist()`: 地面距离
+    - `calculateAltitude()`: 高度差
 - **角度计算**：
-  - `calculateRelAzEl()`: 相对方位角/俯仰角
-  - `calculateAbsAzEl()`: 绝对方位角/俯仰角
-  - `calculateAspectAngle()`: 纵横角
+    - `calculateRelAzEl()`: 相对方位角/俯仰角
+    - `calculateAbsAzEl()`: 绝对方位角/俯仰角
+    - `calculateAspectAngle()`: 纵横角
 - **速度计算**：
-  - `calculateClosingVelocity()`: 接近速度
-  - `calculateVelocityDelta()`: 速度差
-  - `calculateRangeRate()`: 距离变化率
+    - `calculateClosingVelocity()`: 接近速度
+    - `calculateVelocityDelta()`: 速度差
+    - `calculateRangeRate()`: 距离变化率
 - **特殊计算**：
-  - `calculateGeodesicDRCR()`: 测地线下行程/横程
-  - `calculateHorizonDist()`: 地平线距离
-  - `sodanoDirect/Inverse()`: Sodano算法
+    - `calculateGeodesicDRCR()`: 测地线下行程/横程
+    - `calculateHorizonDist()`: 地平线距离
+    - `sodanoDirect/Inverse()`: Sodano算法
 - **实用功能**：
-  - `positionInGate()`: 判断位置是否在门内
-  - `laserInGate()`: 判断激光是否在门内
+    - `positionInGate()`: 判断位置是否在门内
+    - `laserInGate()`: 判断激光是否在门内
 
 **Calculations模块**
 
@@ -250,27 +260,27 @@
 
 - 基本几何体：
 
-  - `Plane`: 3D平面（ax + by + cz + d = 0）
-  - `Polytope`: 凸多面体（多个平面的集合）
-  - `Triangle`: 三角形
-  - `Ray`: 射线（原点+方向）
-  - `Sphere`: 球体
-  - `Ellipsoid`: 椭球体
-  - `QuadricSurface`: 二次曲面
+    - `Plane`: 3D平面（ax + by + cz + d = 0）
+    - `Polytope`: 凸多面体（多个平面的集合）
+    - `Triangle`: 三角形
+    - `Ray`: 射线（原点+方向）
+    - `Sphere`: 球体
+    - `Ellipsoid`: 椭球体
+    - `QuadricSurface`: 二次曲面
   
 - 相交测试：
 
-  - `rayIntersectsTriangle()`: 射线-三角形相交
-  - `rayIntersectsPlane()`: 射线-平面相交
-  - `rayIntersectsSphere()`: 射线-球体相交
-  - `rayIntersectsEllipsoid()`: 射线-椭球体相交
-  - `rayIntersectsQuadricSurface()`: 射线-二次曲面相交
+    - `rayIntersectsTriangle()`: 射线-三角形相交
+    - `rayIntersectsPlane()`: 射线-平面相交
+    - `rayIntersectsSphere()`: 射线-球体相交
+    - `rayIntersectsEllipsoid()`: 射线-椭球体相交
+    - `rayIntersectsQuadricSurface()`: 射线-二次曲面相交
   
 - 其他功能：
 
-  - `reflectVector()`: 向量反射
-  - `reflectRay()`: 射线反射
-  - `ellipsoidNormalAtIntersection()`: 椭球体表面法线
+    - `reflectVector()`: 向量反射
+    - `reflectRay()`: 射线反射
+    - `ellipsoidNormalAtIntersection()`: 椭球体表面法线
 
 **Geometry模块**
 
@@ -287,15 +297,15 @@
 
 - 主要功能：
 
-  - 支持任意多边形区域定义
-  - 使用射线投射算法判断点是否在围栏内
-  - 支持3D空间的围栏（考虑高度）
+    - 支持任意多边形区域定义
+    - 使用射线投射算法判断点是否在围栏内
+    - 支持3D空间的围栏（考虑高度）
   
 - 实现原理：
 
-  - 将地表多边形扩展为3D"咖啡滤纸"形状
-  - 使用偶数/奇数规则进行内外判断
-  - 支持ECEF和LLA坐标系输入
+    - 将地表多边形扩展为3D"咖啡滤纸"形状
+    - 使用偶数/奇数规则进行内外判断
+    - 支持ECEF和LLA坐标系输入
 
 **GeoFence模块**
 
@@ -311,20 +321,20 @@
 
 - GARS坐标格式：
 
-  - 5-7个字符：经度带(3位) + 纬度带(2字母) + 可选的15分钟象限 + 可选的5分钟键
-  - 例如："180AA"、"180AA1"、"180AA19"
+    - 5-7个字符：经度带(3位) + 纬度带(2字母) + 可选的15分钟象限 + 可选的5分钟键
+    - 例如："180AA"、"180AA1"、"180AA19"
   
 - 主要功能：
 
-  - `isValidGars()`: 验证GARS坐标字符串
-  - `convertGarsToGeodetic()`: GARS转经纬度
-  - `convertGeodeticToGars()`: 经纬度转GARS
+    - `isValidGars()`: 验证GARS坐标字符串
+    - `convertGarsToGeodetic()`: GARS转经纬度
+    - `convertGeodeticToGars()`: 经纬度转GARS
   
 - 精度级别：
 
-  - GARS_30: 30分钟级别（5字符）
-  - GARS_15: 15分钟级别（6字符）
-  - GARS_5: 5分钟级别（7字符）
+    - GARS_30: 30分钟级别（5字符）
+    - GARS_15: 15分钟级别（6字符）
+    - GARS_5: 5分钟级别（7字符）
 
 **Gars模块**
 
@@ -342,12 +352,12 @@
 
 - 主要功能：
 
-  - `determinant()`: 计算行列式（应为1）
-  - `isValid()`: 验证是否为有效旋转矩阵
-  - `toEuler()`: DCM转欧拉角
-  - `fromEuler()`: 欧拉角转DCM
-  - `toQ()`: DCM转四元数
-  - `fromQ()`: 四元数转DCM
+    - `determinant()`: 计算行列式（应为1）
+    - `isValid()`: 验证是否为有效旋转矩阵
+    - `toEuler()`: DCM转欧拉角
+    - `fromEuler()`: 欧拉角转DCM
+    - `toQ()`: DCM转四元数
+    - `fromQ()`: 四元数转DCM
 
 **Dcm模块**
 
@@ -364,12 +374,13 @@
 
 - 磁偏角转换：
 
-  - 支持TRUE（真北）、WMM（世界磁场模型）、USER（用户定义）之间转换
-  - 使用WorldMagneticModel进行磁偏角计算
+    - 支持TRUE（真北）、WMM（世界磁场模型）、USER（用户定义）之间转换
+    - 使用WorldMagneticModel进行磁偏角计算
   
 - 垂直基准转换：
 
-  - 支持WGS84和USER之间转换
+    - 支持WGS84和USER之间转换
+
 - 不支持MSL（平均海平面）转换
 
 ### 14. GogToGeoFence.h/cpp
@@ -378,14 +389,14 @@
 
 - 支持的GOG类型：
 
-  - LINE（闭合线）
-  - POLYGON（多边形）
+    - LINE（闭合线）
+    - POLYGON（多边形）
   
 - 限制条件：
 
-  - 只支持绝对坐标
-  - LINE必须闭合（首尾点相同）
-  - 不支持凹多边形
+    - 只支持绝对坐标
+    - LINE必须闭合（首尾点相同）
+    - 不支持凹多边形
 
 ### 15. Interpolation.h/cpp
 
