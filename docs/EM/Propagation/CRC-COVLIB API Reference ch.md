@@ -23,7 +23,7 @@ CRC-COVLIB 库导出一个名为 `NewSimulation` 的函数，该函数返回一�
 
 
 
-```C++
+```c++
 #include "CRC-COVLIB.h"
 using namespace Crc::Covlib;
 int main(int argc, char* argv[])
@@ -68,6 +68,8 @@ int main(int argc, char* argv[])
 ```
 
 
+
+
 ## The Crc::Covlib namespace
 
 除了本文件后续所描述的各种枚举类型外，`Crc::Covlib` 命名空间还包含 3 个函数。
@@ -77,11 +79,15 @@ int main(int argc, char* argv[])
 - ISimulation* NewSimulation()
 ```
 
+
+
 返回一个指向新创建对象的指针，该对象实现了 `ISimulation` 接口。
 
 ```c++
 - ISimulation* DeepCopySimulation(ISimulation* sim)
 ```
+
+
 
 
 
@@ -91,6 +97,8 @@ int main(int argc, char* argv[])
 ```c++
 bool SetITUProprietaryDataDirectory(const char* directory)
 ```
+
+
 
 
 
@@ -143,6 +151,8 @@ if __name__ == '__main__':
 - double GetTransmitterLongitude()
 ```
 
+
+
 设置/获取发射机的位置，单位为纬度和经度（度）。北半球的纬度必须为正值，南半球的纬度必须为负值。同样，东经为正，西经为负。纬度的有效范围为 -90 至 90 度，经度的有效范围为 -180 至 180 度。发射机位置的默认值为北纬 45 度（+45）、西经 75 度（-75）。
 
 请注意，此处及本文档中所有提及经纬度参数的地方，所使用的坐标参考系均为 “WGS 84”。
@@ -163,6 +173,8 @@ if __name__ == '__main__':
 - double GetTransmitterFrequency()
 ```
 
+
+
 设置/获取发射机频率，单位为兆赫（MHz）。`frequency_MHz` 的取值需大于零，但不同的传播模型对频率范围有不同的适用性。具体来说：
 
 - 对于 Longley-Rice 传播模型，有效频率范围为 20 至 20000 MHz；
@@ -180,14 +192,13 @@ if __name__ == '__main__':
 - double GetTransmitterPower(PowerType powerType=EIRP)
 ```
 
+
+
 设置/获取发射机功率，单位为瓦特（watts）。`PowerType` 是一个枚举类型，其取值可以为以下几种之一：
 
-
-```
 TPO=1
 ERP=2
 EIRP=3
-```
 
 功率可以被指定或获取为发射功率输出值（Transmit Power Output, TPO）、有效辐射功率值（Effective Radiated Power, ERP）或等效全向辐射功率值（Effective Isotropic Radiated Power, EIRP）。所指定的功率值必须大于零。
 
@@ -215,6 +226,8 @@ EIRP=3
 - double GetTransmitterLosses()
 ```
 
+
+
 设置/获取与发射机相关的损耗，单位为 dB（例如电缆、连接器等造成的损耗）。该损耗应以正值输入。
 
 当结果类型为 `PATH_LOSS_DB` 时，发射机损耗不被考虑（参见 `SetResultType` 方法）。
@@ -231,6 +244,8 @@ EIRP=3
 
 
 
+
+
 设置/获取发射机的极化方式。极化（Polarization）是一个枚举类型，可取以下值之一：
 
 - `HORIZONTAL_POL = 0`（水平极化）
@@ -242,10 +257,12 @@ EIRP=3
 ---
 
 ## Receiver methods
-```cpp
+```c++
 - void SetReceiverHeightAboveGround(double height_meters)
 - double GetReceiverHeightAboveGround()
 ```
+
+
 设置/获取接收机相对于地面的高度，单位为米。
 
 各传播模型的接收机高度有效范围如下：
@@ -259,10 +276,12 @@ EIRP=3
 
 默认值为 1.5 米。
 
-```cpp
+```c++
 - void SetReceiverLosses(double Losses_dB)
 - double GetReceiverLosses()
 ```
+
+
 设置/获取接收机相关的损耗，单位为分贝（dB），包括电缆、连接器等造成的损耗。损耗应以正值输入。
 
 接收机损耗仅在以下两种结果类型中被考虑：
@@ -288,18 +307,22 @@ EIRP=3
 - `TRANSMITTER = 1`（发射端）
 - `RECEIVER = 2`（接收端）
 
-```
+```c++
 - void AddAntennaHorizontalPatternEntry(Terminal terminal, double azimuth_degrees, double gain_dB)
 ```
+
+
 在指定的方位角（单位为度）上，为天线的水平方向图添加一个新的增益值（单位为 dB）。
 
 `terminal` 参数用于指定该方法应用于发射端 (`TRANSMITTER`) 还是接收端 (`RECEIVER`) 的天线。`azimuth_degrees` 参数的有效范围为 0 到 359.99 度，其中 0 度应对应天线主瓣（最大增益）方向。所添加的增益值应为归一化后的值（即主瓣方向的增益为 0 dB，其他方向为负值）。如果添加的是未归一化的增益值，在添加完所有条目后，可调用 `NormalizeAntennaHorizontalPattern` 方法进行归一化处理。
 
 默认情况下，两个端口的水平天线方向图都不包含任何条目，此时会默认认为所有方位角上的水平增益均为 0 dB。
 
-```
+```c++
 - void AddAntennaVerticalPatternEntry(Terminal terminal, int azimuth_degrees, double eLevAngLe_degrees, double gain_dB)
 ```
+
+
 在天线的垂直方向图中，在指定的方位角（以度为单位）和仰角（以度为单位）处添加一个新的增益值（以 dB 为单位）。
 
 `terminal` 参数决定该方法是应用于发射端（`TRANSMITTER`）还是接收端（`RECEIVER`）的天线。`azimuth_degrees` 参数用于输入不同的垂直方向图“切片”，必须是 0 到 359 度（含）之间的整数，其中 0 度应被用于最大增益（主瓣）方向。`elevAngle_degrees` 参数必须在 -90 到 +90 度（含）之间，其中 -90 度表示天顶，0 度表示天文地平线，+90 度表示天底。增益值应为归一化的（即在最大增益方向为 0 dB，其他增益值为负）。如果将未归一化的增益值添加到方向图中，则可以在添加完所有条目后使用 `NormalizeAntennaVerticalPattern` 方法进行归一化。
@@ -311,9 +334,11 @@ EIRP=3
 
 默认情况下，两个端口的垂直天线方向图都不包含任何条目。在这种情况下，假定垂直方向图在所有角度上的增益均为 0 dB。
 
-```
+```c++
 - void ClearAntennaPatterns(Terminal terminal, bool clearHorizontalPattern=true, bool clearVerticalPattern=true)
 ```
+
+
 
 如果 `clearHorizontalPattern` 为 true，则删除天线的所有水平方向图条目；如果 `clearVerticalPattern` 为 true，则删除所有垂直方向图条目。`terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。
 
@@ -327,11 +352,13 @@ EIRP=3
 
 默认值为两个终端的电下倾角均为 0 度。
 
-```
+```c++
 - void SetAntennaMechanicalTilt(Terminal terminal, double mechanicalTilt_degrees, double azimuth_degrees=0)
 - double GetAntennaMechanicalTilt(Terminal terminal)
 - double GetAntennaMechanicalTiltAzimuth(Terminal terminal)
 ```
+
+
 设置/获取天线的机械下倾角（mechanical tilt），单位为度。
 
 `terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。`azimuth_degrees` 参数表示将在其上应用机械下倾角的水平方向图方位角，取值范围为 0 到 359.99 度，其中 0 度通常用于最大增益方向（主瓣）。因此，`azimuth_degrees` 参数通常应设置为 0，但也可以根据需要设为其他值。
@@ -340,21 +367,25 @@ EIRP=3
 
 默认值为两个终端的机械下倾角均为 0 度。
 
-```
+```c++
 - void SetAntennaMaximumGain(Terminal terminal, double maxGain_dBi)
 - double GetAntennaMaximumGain(Terminal terminal)
 ```
+
+
 设置/获取天线的最大增益，单位为 dBi（相对于理想各向同性辐射源的增益）。
 
 `terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。
 
 默认值为两个终端的最大增益均为 0 dBi。
 
-```
+```c++
 - void SetAntennaBearing(Terminal terminal, BearingReference bearingRef, double bearing_degrees)
 - BearingReference GetAntennaBearingReference(Terminal terminal)
 - double GetAntennaBearing(Terminal terminal)
 ```
+
+
 设置/获取天线的方位角（bearing），单位为度，基于指定的参考方向。
 
 `terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。`BearingReference` 是一个枚举类型，可取以下值之一：
@@ -375,10 +406,12 @@ EIRP=3
 TRANSMITTER 天线的默认值为相对于 TRUE_NORTH 的 0 度。  
 RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
-```
+```c++
 - double NormalizeAntennaHorizontalPattern(Terminal terminal)
 - double NormalizeAntennaVerticalPattern(Terminal terminal)
 ```
+
+
 对天线的水平或垂直方向图进行归一化处理。
 
 `terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。在使用 `AddAntennaHorizontalPatternEntry` 和/或 `AddAntennaVerticalPatternEntry` 方法添加方向图条目后，可以分别使用 `NormalizeAntennaHorizontalPattern` 和/或 `NormalizeAntennaVerticalPattern` 方法对方向图进行归一化。
@@ -387,10 +420,12 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 请注意，调用归一化方法不会改变通过 `Get/SetAntennaMaximumGain` 访问的最大天线增益值（单位 dBi）。如果在归一化之后需要调整最大增益（dBi），必须显式调用 `SetAntennaMaximumGain` 方法。
 
-```
+```c++
 - void SetAntennaPatternApproximationMethod(Terminal terminal, PatternApproximationMethod method)
 - PatternApproximationMethod GetAntennaPatternApproximationMethod( Terminal terminal)
 ```
+
+
 设置/获取用于根据 `HORIZONTAL` 和 `VERTICAL` 天线图计算任意方向天线增益的 `3D APPROXIMATION METHOD`（有时称为 `INTERPOLATION METHOD`）。
 
 `terminal` 参数用于指定该方法应用于 `TRANSMITTER` 还是 `RECEIVER` 天线。`PatternApproximationMethod` 是一个枚举类型，可取以下值之一：
@@ -409,9 +444,11 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 `TRANSMITTER` 和 `RECEIVER` 的默认 `APPROXIMATION METHOD` 均为 `HYBRID`。
 
-```
+```c++
 - double GetAntennaGain(Terminal terminal, double azimuth_degrees, double elevAngle_degrees, double receiverLatitude_degrees=0, double receiverLongitude_degrees=0)
 ```
+
+
 获取指定方位角和俯仰角下天线的近似增益（单位为 dBi）。
 
 `terminal` 参数用于指定该方法应用于 `TRANSMITTER` 还是 `RECEIVER` 天线。`GetAntennaGain` 使用通过 `SetAntennaPatternApproximationMethod` 指定的 `APPROXIMATION METHOD`，同时还会考虑图形、最大增益、倾斜角（`TILTS`）和方向（`BEARING`）等参数。
@@ -423,10 +460,12 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 ## Propagation model selection methods
 
-```
+```c++
 - void SetPropagationModel(PropagationModel propagationModel)
 - PropagationModel GetPropagationModel()
 ```
+
+
 
 设置/获取用于生成结果的传播模型。`PropagationModel` 是一个枚举类型，可以取以下值之一：
 
@@ -480,28 +519,36 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 
 ## Longley-Rice propagation model methods
-```
+```c++
 - void SetLongleyRiceSurfaceRefractivity(double refractivity_NUnits)
 - double GetLongleyRiceSurfaceRefractivity()
 ```
+
+
 设置/获取地表折射率（surface refractivity），单位为 N 单位（N-units）。有效范围为 250 到 400 N 单位。默认值为 301 N 单位。
 
-```
+```c++
 - void SetLongleyRiceGroundDielectricConst(double dieLectricConst)
 - double GetLongleyRiceGroundDielectricConst()
 ```
+
+
 设置/获取地面的介电常数（dielectric constant）。有效范围为 4 到 81。默认值为 15。
 
-```
+```c++
 - void SetLongleyRiceGroundConductivity(double groundConduct_Sm)
 - double GetLongleyRiceGroundConductivity()
 ```
+
+
 设置/获取地面的导电率，单位为西门子每米（Siemens per meter）。有效范围为 0.001 到 $5\ \mathrm{S}/\mathrm{m}$。默认值为 $0.005\ \mathrm{S}/\mathrm{m}$。
 
-```
+```c++
 - void SetLongleyRiceClimaticZone(LRClimaticZone climaticZone)
 - LRClimaticZone GetLongleyRiceClimaticZone()
 ```
+
+
 设置/获取气候带（climatic zone）。`LRClimaticZone` 是一个枚举类型，可以取以下值之一：
 
 - `LR_EQUATORIAL = 1`
@@ -514,10 +561,12 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 默认值为 `LR_CONTINENTAL_TEMPERATE`。
 
-```
+```c++
 - void SetLongleyRiceActivePercentageSet(LRPercentageSet percentageSet)
 - LRPercentageSet GetLongleyRiceActivePercentageSet()
 ```
+
+
 设置/获取用于路径损耗计算的百分比值集合。`Longley-Rice` 可以使用时间/位置/情境集（time/location/situation set）或置信度/可靠性集（confidence/reliability set）。`LRPercentageSet` 是一个枚举类型，可以取以下值之一：
 
 - `LR_TIME_LOCATION_SITUATION = 1`
@@ -525,40 +574,52 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 默认值为 `LR_TIME_LOCATION_SITUATION`。
 
-```
+```c++
 - void SetLongleyRiceTimePercentage(double time_percent)
 - double GetLongleyRiceTimePercentage()
 ```
+
+
 设置/获取时间百分比（即时间可变性）。有效范围为 0.1 到 99.9。默认值为 50。该时间百分比仅在当前使用的百分比集合为 `LR_TIME_LOCATION_SITUATION` 时适用。
 
-```
+```c++
 - void SetLongleyRiceLocationPercentage(double Location_percent)
 - double GetLongleyRiceLocationPercentage()
 ```
+
+
 设置/获取位置百分比（即位置可变性）。有效范围为 0.1 到 99.9。默认值为 50。该位置百分比仅在当前使用的百分比集合为 `LR_TIME_LOCATION_SITUATION` 时适用。
 
-```
+```c++
 - void SetLongleyRiceSituationPercentage(double situation_percent)
 - double GetLongleyRiceSituationPercentage()
 ```
+
+
 设置/获取情境百分比（即情境可变性）。有效范围为 0.1 到 99.9。默认值为 50。该情境百分比仅在当前使用的百分比集合为 `LR_TIME_LOCATION_SITUATION` 时适用。
 
-```
+```c++
 - void SetLongleyRiceConfidencePercentage(double confidence_percent)
 - double GetLongleyRiceConfidencePercentage()
 ```
+
+
 设置/获取置信百分比（即置信可变性）。有效范围为 0.1 到 99.9。默认值为 50。该置信百分比仅在当前使用的百分比集合为 `LR_CONFIDENCE_RELIABILITY` 时适用。
 
-```
+```c++
 - void SetLongleyRiceReliabilityPercentage(double reLiabiLity_percent)
 - double GetLongleyRiceReliabilityPercentage()
 ```
+
+
 设置/获取可靠性百分比（即可靠性可变性）。有效范围为 0.1 到 99.9。默认值为 50。该可靠性百分比仅在当前使用的百分比集合为 `LR_CONFIDENCE_RELIABILITY` 时适用。
 
-```
+```c++
 - void SetLongleyRiceModeOfVariability(int mode)
 - int GetLongleyRiceModeOfVariability()
 ```
+
+
 设置/获取可变性模式。可使用以下数值来表示模式：
 
 $0=$ 单条消息模式  
@@ -598,42 +659,54 @@ https://udel.edu/~mm/itm/
 
 
 ## ITU-R P. 1812 propagation model methods
-```
+```c++
 - void SetITURP1812TimePercentage(double time_percent)
 - double GetITURP1812TimePercentage()
 ```
+
+
 设置/获取在一年平均时间中，计算出的基本传输损耗未被超过的百分比。有效范围为 1 到 50。默认值为 50。
 
-```
+```c++
 - void SetITURP1812LocationPercentage(double Location_percent)
 - double GetITURP1812LocationPercentage()
 ```
+
+
 设置/获取在指定位置中，计算出的基本传输损耗未被超过的百分比。有效范围为 1 到 99。默认值为 50。
 
-```
+```c++
 - void SetITURP1812AverageRadioRefractivityLapseRate(double deLtaN_Nunitskm)
 - double GetITURP1812AverageRadioRefractivityLapseRate()
 ```
+
+
 设置/获取大气中最低1公里的平均无线电折射率递减率，单位为 N 单位/km。或者，也可以将 `deLtaN_Nunitskm` 设置为 `AUTOMATIC`。在这种情况下，该值将根据路径中心的地理位置，从 ITU 数字地图文件 `DN50.TXT` 中读取。该文件在磁盘上的位置必须通过 `SetITUProprietaryDataDirectory` 指定。默认值为 `AUTOMATIC`。
 
-```
+```c++
 - void SetITURP1812SeaLevelSurfaceRefractivity(double N0_Nunits)
 - double GetITURP1812SeaLevelSurfaceRefractivity()
 ```
+
+
 设置/获取海平面表面折射率，单位为 N 单位。或者，也可以将 `NO_Nunits` 设置为 `AUTOMATIC`。在这种情况下，该值将根据路径中心的地理位置，从 ITU 数字地图文件 `N050.TXT` 中读取。该文件在磁盘上的位置必须通过 `SetITUProprietaryDataDirectory` 指定。默认值为 `AUTOMATIC`。
 
-```
+```c++
 - void SetITURP1812PredictionResolution(double resolution_meters)
 - double GetITURP1812PredictionResolution()
 ```
+
+
 设置/获取预测分辨率，单位为米。预测分辨率是指变异性作用的正方形区域的边长。该值必须大于零。默认值为 100 米。
 
 当位置百分比设置为 50 时，预测分辨率参数无效。更多细节参见 ITU-R P.1812-7 建议书附录 1 的第 4.7 和 4.9 节。
 
-```
+```c++
 - void SetITURP1812SurfaceProfileMethod(P1812SurfaceProfileMethod method)
 - P1812SurfaceProfileMethod GetITURP1812SurfaceProfileMethod()
 ```
+
+
 设置/获取用于生成地表剖面的方法，该方法如 ITU-R P.1812-7 建议书附录 1 第 3.2.1 和 3.2.2 节所述。`P1812SurfaceProfileMethod` 是一个枚举类型，可取以下值之一：
 
 - `P1812_ADD_REPR_CLUTTER_HEIGHT = 1`
@@ -647,11 +720,13 @@ https://udel.edu/~mm/itm/
 
 地表剖面方法的默认值为 `P1812_ADD_REPR_CLUTTER_HEIGHT`。
 
-```
+```c++
 - void SetITURP1812RepresentativeClutterHeight(P1812ClutterCategory clutterCategory, double reprHeight_meters)
 
 - double GetITURP1812RepresentativeClutterHeight(P1812ClutterCategory clutterCategory)
 ```
+
+
 设置/获取指定杂波类别的代表性高度（单位：米）。P1812ClutterCategory 是一种枚举类型，可以取以下值：
 
 | P1812_WATER_SEA | $=1$ |
@@ -683,10 +758,12 @@ https://udel.edu/~mm/itm/
 
 有关杂波类别和代表性杂波高度的更多信息，参见 ITU-R P.1812-7 推荐书附录1的第3.2节。
 
-```
+```c++
 - void SetITURP1812LandCoverMappingType(P1812LandCoverMappingType mappingType)
 - P1812LandCoverMappingType GetITURP1812LandCoverMappingType()
 ```
+
+
 `SetITURP1812LandCoverMappingType` 用于确定 ITU-R P.1812 传播模型如何解释已映射到地表覆盖分类的值。`P1812LandCoverMappingType` 是一个枚举类型，可以取以下值之一：
 - `P1812_MAP_TO_CLUTTER_CATEGORY = 1`
 - `P1812_MAP_TO_REPR_CLUTTER_HEIGHT = 2`
@@ -699,10 +776,12 @@ https://udel.edu/~mm/itm/
 
 地表覆盖映射类型的默认值为 `P1812_MAP_TO_CLUTTER_CATEGORY`。
 
-```
+```c++
 - void SetITURP1812RadioClimaticZonesFile(const char* pathname)
 - const char* GetITURP1812RadioClimaticZonesFile()
 ```
+
+
 设置/获取用于 ITU-R P.1812 无线气候区划的源文件。该文件必须为 GeoTIFF 格式，并采用 WGS 84（EPSG: 4326）坐标参考系。在每个像素处应根据无线气候区划设置以下值之一：
 
 | 无线气候区划       | 像素值 |
@@ -733,20 +812,24 @@ CRC-COVLIB 随附提供了一个名为 `rcz.tif` 的文件，该文件在“尽�
 
 
 ## ITU-R P. 452 propagation model methods
-```
+```c++
 - void SetITURP452TimePercentage(double time_percent)
 - double GetITURP452TimePercentage()
 ```
+
+
 设置/获取计算得到的基本传输损耗不被超过的时间百分比。
 
 这些方法（即 `Set/GetITURP452TimePercentage`）适用于该传播模型的所有可用版本（即第 17 与第 18 版）。
 
 有效范围为 0.001 到 50。默认值为 50。
 
-```
+```c++
 - void SetITURP452PredictionType(P452PredictionType predictionType)
 - P452PredictionType GetITURP452PredictionType()
 ```
+
+
 设置/获取预测类型（年平均或“最差月份”）。`P452PredictionType` 是一种枚举类型，可以取以下值：
 
 - `P452_AVERAGE_YEAR = 1`
@@ -760,50 +843,60 @@ CRC-COVLIB 随附提供了一个名为 `rcz.tif` 的文件，该文件在“尽�
 
 默认值为 `P452_AVERAGE_YEAR`。
 
-```
+```c++
 - void SetITURP452AverageRadioRefractivityLapseRate(double deLtaN_Nunitskm)
 - double GetITURP452AverageRadioRefractivityLapseRate()
 ```
+
+
 设置/获取大气中最低 1 公里层的平均无线电折射率递减率，单位为 N 单位/km。或者，`deLtaN_Nunitskm` 可以设置为 `AUTOMATIC`。在这种情况下，该值将根据路径中心的地理位置，从 ITU 数字地图文件 `DN50.TXT` 中读取。该文件在磁盘上的位置必须通过 `SetITUProprietaryDataDirectory` 指定。
 
 这些方法（即 `Set/GetITURP452AverageRadioRefractivityLapseRate`）适用于该传播模型的所有可用版本（即第 17 与 18 版）。
 
 默认值为 `AUTOMATIC`。
 
-```
+```c++
 - void SetITURP452SeaLevelSurfaceRefractivity(double NO_Nunits)
 - double GetITURP452SeaLevelSurfaceRefractivity()
 ```
+
+
 设置/获取海平面表面折射率，单位为 N 单位。或者，`NO_Nunits` 可以设置为 `AUTOMATIC`。在这种情况下，该值将根据路径中心的地理位置，从 ITU 数字地图文件 `N050.TXT` 中读取。该文件在磁盘上的位置必须通过 `SetITUProprietaryDataDirectory` 指定。
 
 这些方法（即 `Set/GetITURP452SeaLevelSurfaceRefractivity`）适用于该传播模型的所有可用版本（即第 17 与 18 版）。
 
 默认值为 `AUTOMATIC`。
 
-```
+```c++
 - void SetITURP452AirTemperature (double temperature_C)
 - double GetITURP452AirTemperature()
 ```
+
+
 设置/获取空气温度，单位为摄氏度（Celsius）。或者，`temperature_C` 可以设置为 `AUTOMATIC`。在这种情况下，将使用ITU-R P.1510-1建议中的年平均地表温度。该值将根据路径中心的地理位置，从 ITU 数字地图文件 `T_Annual.TXT` 中读取。该文件在磁盘上的位置必须通过 `SetITUProprietaryDataDirectory` 指定。
 
 这些方法（即 `Set/GetITURP452AirTemperature`）适用于该传播模型的所有可用版本（即第 17 与 18 版）。
 
 默认值为 `AUTOMATIC`。
 
-```
+```c++
 - void SetITURP452AirPressure(double pressure_hPa)
 - double GetITURP452AirPressure()
 ```
+
+
 设置/获取气压（也称为大气压），单位为百帕（hectopascals，hPa）。或者，`pressure_hPa` 可以设置为 `AUTOMATIC`。在这种情况下，将使用 ITU-R P.835-6 建议（附录1，第1.1节）中针对路径中心地形高度的年平均全球参考大气压值。
 
 这些方法（即 `Set/GetITURP452AirPressure`）适用于该传播模型的所有可用版本（即第 17 与 18 版）。
 
 默认值为 `AUTOMATIC`。
 
-```
+```c++
 - void SetITURP452RadioClimaticZonesFile(const char* pathname)
 - const char* GetITURP452RadioClimaticZonesFile()
 ```
+
+
 设置/获取用于 ITU-R P.452 无线电气候区数据的源文件。该文件必须为 GeoTIFF 格式，使用 WGS 84（EPSG: 4326）坐标参考系，并且每个像素的数值需对应以下无线电气候区之一：
 
 | 无线电气候区 | 像素值 |
@@ -821,12 +914,15 @@ CRC-COVLIB 随附提供了一个名为 `rcz.tif` 的文件，该文件在“尽�
 有关无线电气候区的更多详细信息，请参见 ITU-R P.452-17/18 建议，附录1第 3.2.1 节。
 
 
-```- void SetITURP452HeightGainModelClutterValue(
+```c++
+- void SetITURP452HeightGainModelClutterValue(
 P452HeightGainModelClutterCategory clutterCategory, P452HeightGainModelClutterParam nominalParam, double nominalValue)
 
 - double GetITURP452HeightGainModelClutterValue(
 P452HeightGainModelClutterCategory clutterCategory, P452HeightGainModelClutterParam nominaLParam)
 ```
+
+
 设置/获取指定高度增益模型杂波类别的**名义高度（以米为单位）**或**名义距离（以千米为单位）**。`P452HeightGainModelClutterCategory` 是一个枚举类型，可以取以下值：
 
 
@@ -892,9 +988,12 @@ P452HeightGainModelClutterCategory clutterCategory, P452HeightGainModelClutterPa
 有关高度-增益模型中杂波类型、名义高度与距离的更多信息，请参见 ITU-R P.452-17 推荐书附录 1 第 4.5 节。
 
 
-```- void SetITURP452HeightGainModelMode(Terminal terminal, P452HeightGainModelMode mode)
+```c++
+- void SetITURP452HeightGainModelMode(Terminal terminal, P452HeightGainModelMode mode)
 - P452HeightGainModelMode GetITURP452HeightGainModelMode(Terminal terminal)
 ```
+
+
 设置/获取传输路径任一端的高度-增益模型模式。`Terminal` 是一个枚举类型，可以取以下值之一：
 
 `TRANSMITTER = 1`  
@@ -938,10 +1037,12 @@ P452HeightGainModelClutterCategory clutterCategory, P452HeightGainModelClutterPa
 该参数在传输路径两端的默认值均为 `P452_USE_CLUTTER_AT_ENDPOINT`。
 
 ---
-```
+```c++
 - void SetITURP452RepresentativeClutterHeight(P452ClutterCategory clutterCategory, double reprHeight_meters)
 - double GetITURP452RepresentativeClutterHeight(P452ClutterCategory clutterCategory)
 ```
+
+
 设置/获取指定杂波类别的代表高度（单位为米）。`P452ClutterCategory` 是一个枚举类型，可取以下值：
 
 | `P452_WATER_SEA` | $=1$ |
@@ -973,10 +1074,12 @@ P452HeightGainModelClutterCategory clutterCategory, P452HeightGainModelClutterPa
 
 有关杂波类别与代表高度的更多信息，参见 ITU-R P.452-18 建议附录 1 第 3.2.1 节。
 
-```
+```c++
 - void SetITURP452LandCoverMappingType(P452LandCoverMappingType mappingType)
 - P452LandCoverMappingType GetITURP452LandCoverMappingType()
 ```
+
+
 `SetITURP452LandCoverMappingType` 方法用于确定 ITU-R P.452-18 传播模型如何解释已映射至地表覆盖类别的值。`P452LandCoverMappingType` 是一个枚举类型，可取以下值：
 
 - `P452_MAP_TO_CLUTTER_CATEGORY = 1`
@@ -989,10 +1092,12 @@ P452HeightGainModelClutterCategory clutterCategory, P452HeightGainModelClutterPa
 默认值为 `P452_MAP_TO_CLUTTER_CATEGORY`。
 
 ---
-```
+```c++
 - void SetITURP452SurfaceProfileMethod(P452SurfaceProfileMethod method)
 - P452SurfaceProfileMethod GetITURP452SurfaceProfileMethod()
 ```
+
+
 在实验性场景中，ITU-R P.452-18 中描述的地形剖面（见附录 1 第 3.2.1 节的步骤 4）也可以通过直接使用地表高程数据的方式来生成，这一方法与 ITU-R P.1812-7（附录 1 第 3.2.2 节）中所提出的方式类似。`P452SurfaceProfileMethod` 是一个枚举类型，可取以下值：
 
 - `P452_ADD_REPR_CLUTTER_HEIGHT = 1`
@@ -1037,10 +1142,12 @@ $\mathrm{G}_{\mathrm{t}}$ 与 $\mathrm{G}_{\mathrm{r}}$ 的值（对应建议中
 
 默认值为 `EHATA_URBAN`。
 
-```
+```c++
 - void SetEHataReliabilityPercentage(double percent)
 - double GetEHataReliabilityPercentage()
 ```
+
+
 设置/获取信号未被超越的百分比（percent）。`percent` 必须大于 0 且小于 100。默认值为 50。
 
 
@@ -1052,10 +1159,12 @@ https://github.com/NTIA/ehata
 
 
 ## ITU-R P. 2108 clutter loss model methods
-```
+```c++
 - void SetITURP2108TerrestrialStatModelActiveState(bool active)
 - double GetITURP2108TerrestrialStatModelActiveState()
 ```
+
+
 设置/获取ITU-R P.2108推荐书（第3.2节）中用于地面路径的统计遮蔽损耗模型的激活状态。
 
 当 `active` 设置为 `true` 时，在使用 `GenerateReceptionPointResult`、`GenerateReceptionPointDetailedResult`、`GenerateReceptionAreaResults`、`GenerateProfileReceptionPointResult` 和 `ExportProfilesToCsvFile` 方法生成结果时，将在路径损耗的基础上额外添加遮蔽损耗。要添加的遮蔽损耗值基于发射机频率、发射机与接收点之间的距离，以及通过 `SetITURP2108TerrestrialStatModelLocationPercentage` 指定的位置百分比计算得出。
@@ -1066,10 +1175,12 @@ https://github.com/NTIA/ehata
 
 该模型的默认激活状态为 `false`。
 
-```
+```c++
 - void SetITURP2108TerrestrialStatModelLocationPercentage(double Location_percent)
 - double GetITURP2108TerrestrialStatModelLocationPercentage()
 ```
+
+
 设置/获取地面路径中遮蔽损耗不被超过的位置百分比。有效范围为 $0.000001$ 到 $99.999999$。默认值为 $50$。
 
 
@@ -1079,10 +1190,12 @@ https://github.com/NTIA/ehata
 
 
 ## ITU-R P. 2109 building entry loss model methods
-```
+```c++
 - void SetITURP2109ActiveState(bool active)
 - double GetITURP2109ActiveState()
 ```
+
+
 设置/获取是否启用来自 ITU-R P.2109-2 建筑物进入损耗（building entry loss）模型的激活状态。
 
 当 `active` 设置为 `true` 时，在使用 `GenerateReceptionPointResult`、`GenerateReceptionPointDetailedResult`、`GenerateReceptionAreaResults`、`GenerateProfileReceptionPointResult` 和 `ExportProfilesToCsvFile` 方法生成结果时，将在路径损耗基础上额外添加建筑进入损耗。该进入损耗值取决于四个参数：发射机频率、进入损耗不被超过的概率（通过 `SetITURP2109Probability` 指定）、建筑类型（通过 `SetITURP2109DefaultBuildingType` 指定）以及信号在建筑外墙处的仰角。仰角由发射机和接收机天线高度以及地形剖面计算得到。
@@ -1093,16 +1206,20 @@ https://github.com/NTIA/ehata
 
 默认值为 `false`。
 
-```
+```c++
 - void SetITURP2109Probability(double probability_percent)
 - double GetITURP2109Probability()
 ```
+
+
 设置/获取建筑进入损耗不被超过的概率。有效取值范围为 $0.000001$ 至 $99.999999$。默认值为 $50$。
 
-```
+```c++
 - void SetITURP2109DefaultBuildingType(P2109BuildingType buildingType)
 - P2109BuildingType GetITURP2109DefaultBuildingType()
 ```
+
+
 设置/获取用于计算进入损耗的建筑类型。`P2109BuildingType` 是一个枚举类型，可取以下值：
 
 - `P2109_TRADITIONAL = 1`
@@ -1110,19 +1227,23 @@ https://github.com/NTIA/ehata
 
 默认值为 `P2109_TRADITIONAL`。
 
-```
+```c++
 - double GetITURP2109BuildingEntryLoss(double frequency_GHz, double elevAngle_degrees)
 ```
+
+
 获取根据指定频率（GHz）和路径在建筑立面处的仰角（相对于水平的角度，单位为度）计算出的建筑进入损耗（单位：dB）。该计算还会考虑通过 `SetITURP2109Probability` 和 `SetITURP2109DefaultBuildingType` 指定的概率和建筑类型。
 
 其中，`frequency_GHz` 的有效范围为 $0.08$ 至 $100$ GHz，`elevAngle_degrees` 的有效范围为 $-90$ 至 $90$ 度（含）。
 
 
 ## ITU-R P. 676 gaseous attenuation model for terrestrial paths methods
-```
+```c++
 - void SetITURP676TerrPathGaseousAttenuationActiveState(bool active, double atmPressure_hPa=AUTOMATIC, double temperature_C=AUTOMATIC, double waterVapourDensity_gm3=AUTOMATIC)
 - bool GetITURP676TerrPathGaseousAttenuationActiveState()
 ```
+
+
 设置/获取ITU-R P.676-13建议书（附录1，第1节与第2.1节）中适用于地面路径的气体衰减模型的激活状态。该气体衰减模型适用于任意频率，最高至1000 GHz。当模型被用于该范围之外时，不会将气体衰减计入路径损耗中。
 
 当 `active` 设置为 `true` 时，在使用 `GenerateReceptionPointResult`、`GenerateReceptionPointDetailedResult`、`GenerateReceptionAreaResults`、`GenerateProfileReceptionPointResult` 和 `ExportProfilesToCsvFile` 方法生成结果时，将会把由大气气体引起的衰减损耗加入路径损耗中。气体衰减损耗值取决于五个参数：发射机频率（通过 `SetTransmitterFrequency` 设置）、发射机与接收机之间的路径长度（自动计算）、大气压（单位：hPa）、温度（单位：${}^{\circ}\mathrm{C}$）以及水汽密度（单位：$\mathrm{g}/\mathrm{m}^3$）。上述三个环境参数可以被设置为具体数值，也可以设置为 `AUTOMATIC` 常量。
@@ -1135,9 +1256,11 @@ https://github.com/NTIA/ehata
 
 该模型的默认激活状态为 `false`。
 
-```
+```c++
 - double GetITURP676GaseousAttenuation(double frequency_GHz, double atmPressure_hPa=1013.25, double temperature_C=15, double waterVapourDensity_gm3=7.5)
 ```
+
+
 根据 ITU-R P.676-13 建议书（附录1，第1节）获取气体衰减值，单位为 dB/km。必须指定频率（单位：GHz），有效范围为最高1000 GHz。还可以指定以下参数：
 
 - 大气压（单位：hPa）；
@@ -1147,9 +1270,11 @@ https://github.com/NTIA/ehata
 这些环境参数用于更精确地计算大气气体引起的衰减。
 
 ## ITU digial maps methods
-```
+```c++
 - double GetITUDigitalMapValue(ITUDigitalMap map, double Latitude_degrees, double Longitude_degrees)
 ```
+
+
 从指定的 ITU 数字地图中获取在指定地理位置的插值值。纬度值必须在 $-90$ 到 $+90$ 度之间，经度值必须在 $-180$ 到 $+180$ 度之间。
 
 ITU 数字地图文件在磁盘上的位置必须通过 `Crc::Covlib` 命名空间中的 `SetITUProprietaryDataDirectory` 函数指定。如果 CRC-COVLIB 无法找到或读取数字地图文件，`GetITUDigitalMapValue` 将返回一个默认值（见下文）。当请求的数字地图文件缺失时，系统内部也将使用该默认值。
@@ -1267,10 +1392,12 @@ ITU_MAP_SURFWV_50
 - 次地形高程数据源：`TERR_ELEV_NONE`  
 - 第三地形高程数据源：`TERR_ELEV_NONE`
 
-```
+```c++
 - void SetTerrainElevDataSourceDirectory(TerrainElevDataSource terrainElevSource, const char* directory, bool useIndexFile=false, bool overwriteIndexFile=false)
 - const char* GetTerrainElevDataSourceDirectory( TerrainElevDataSource terrainElevSource)
 ```
+
+
 设置/获取与指定地形高程数据源关联的目录路径。
 
 对于地形高程数据源 `TERR_ELEV_NRCAN_CDEM`、`TERR_ELEV_NRCAN_HRDEM_DTM` 和 `TERR_ELEV_GEOTIFF`，可通过将参数 `useIndexFile` 设为 `true` 来使用索引文件。  
@@ -1285,11 +1412,13 @@ ITU_MAP_SURFWV_50
 
 任意地形高程数据源的默认目录路径为**空字符串**。
 
-```
+```c++
 - void SetTerrainElevDataSourceSamplingMethod(TerrainElevDataSource terrainELevSource, SamplingMethod sampLingMethod)
 
 - SamplingMethod GetTerrainElevDataSourceSamplingMethod(TerrainElevDataSource terrainELevSource)
 ```
+
+
 设置/获取指定地形高程数据源的采样方法。`SamplingMethod` 是一个枚举类型，可取以下值之一：
 
 - `NEAREST_NEIGHBOR = 0`（最近邻插值）
@@ -1300,10 +1429,12 @@ ITU_MAP_SURFWV_50
 
 **所有地形高程数据源的默认采样方法为 `BILINEAR_INTERPOLATION`（双线性插值）**。
 
-```
+```c++
 - void SetTerrainElevDataSamplingResolution(double sampLingResoLution_meters)
 - double GetTerrainElevDataSamplingResolution()
 ```
+
+
 设置/获取地形高程数据的采样分辨率。每当需要计算仿真结果（场强、路径损耗、传输损耗或接收功率）时，传播模型可能需要提供从发射机到接收点的地形高程剖面。CRC-COVLIB 将根据指定的地形高程数据源，按设定的采样分辨率生成地形高程剖面。
 
 例如，当采样分辨率设为 30 米时，生成的地形高程剖面大约每隔 30 米包含一个高程数据点。
@@ -1312,12 +1443,14 @@ ITU_MAP_SURFWV_50
 
 **默认的地形高程数据采样分辨率为 100 米。**
 
-```
+```c++
 - bool AddCustomTerrainElevData(double LowerLeftCornerLat_degrees, double LowerLeftCornerLon_degrees,
 double upperRightCornerLat_degrees, double upperRightCornerLon_degrees,
 int numHorizSamples, int numVertSamples, const float* terrainElevData_meters,
 bool defineNoDataVaLue=false, float noDataVaLue=0)
 ```
+
+
 
 添加自定义地形高程数据。`terrainElevData_meters` 应指向一个连续的高程值列表，列表总长度为 `numHorizSamples × numVertSamples`。这些地形高程样本被假定为沿纬度和经度方向等间距分布（单位为度）。
 
@@ -1325,9 +1458,11 @@ bool defineNoDataVaLue=false, float noDataVaLue=0)
 
 例如：
 
-```cpp
+```c++
 AddCustomTerrainElevData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Floats);
 ```
+
+
 
 ![](https://cdn.mathpix.com/snip/images/U741D75PjA39bxhTmPnJIs-NvTYG8dQP8iMwGL6TpdQ.original.fullsize.png)
 
@@ -1337,14 +1472,18 @@ AddCustomTerrainElevData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Floats);
 
 若内存分配失败，函数返回 `false`；否则返回 `true`。
 
-```
+```c++
 - void ClearCustomTerrainElevData()
 ```
+
+
 移除之前通过 `AddCustomTerrainElevData` 添加的所有自定义地形高程数据，并释放相应的内存。
 
-```
+```c++
 - double GetTerrainElevation(double Latitude_degrees, double Longitude_degrees, double noDataVaLue=0)
 ```
+
+
 使用通过 `SetPrimaryTerrainElevDataSource`、`SetSecondaryTerrainElevDataSource` 和 `SetTertirayTerrainElevDataSource` 方法指定的地形高程数据源，在指定位置获取地形高程（单位为米）。如果在指定位置无法获取地形高程数据，则返回 `noDataValue`。
 
 
@@ -1474,10 +1613,12 @@ NRCAN 的地表覆盖分类与部分传播模型的杂波类别之间存在默�
 
 主地表覆盖数据源的默认值为 `LAND_COVER_NONE`，次要地表覆盖数据源的默认值亦为 `LAND_COVER_NONE`。
 
-```
+```c++
 - void SetLandCoverDataSourceDirectory(LandCoverDataSource LandCoverSource, const char* directory, bool useIndexFile=false, bool overwriteIndexFile=false)
 - const char* GetLandCoverDataSourceDirectory(LandCoverDataSource LandCoverSource)
 ```
+
+
 设置/获取与指定地表覆盖数据源相关联的目录。
 
 对于地表覆盖数据源 `LAND_COVER_ESA_WORLDCOVER` 和 `LAND_COVER_GEOTIFF`，可以通过将 `useIndexFile` 参数设置为 `true` 来使用索引文件。这在目录中包含大量文件时非常有用，可避免 CRC-COVLIB 每次调用 `SetLandCoverDataSourceDirectory` 方法时都读取整个目录及其子目录的内容。
@@ -1487,17 +1628,21 @@ NRCAN 的地表覆盖分类与部分传播模型的杂波类别之间存在默�
 对于上述未提及的数据源类型，`useIndexFile` 和 `overwriteIndexFile` 参数无效。
 
 任何地表覆盖数据源的默认目录值为空字符串。
-```
+```c++
 - bool AddCustomLandCoverData(
 double LowerLeftCornerLat_degrees, double LowerLeftCornerLon_degrees, double upperRightCornerLat_degrees, double upperRightCornerLon_degrees, int numHorizSamples, int numVertSamples, const short* landCoverData, bool defineNoDataVaLue=false, float noDataVaLue=0)
 ```
+
+
 添加自定义地表覆盖数据。`LandCoverData` 应指向一个包含 `numHorizSamples × numVertSamples` 个地表覆盖类别值的连续数组。假定这些地表覆盖类别样本沿纬度和经度方向均匀分布（即以度为单位进行间距测量）。
 
 `LandCoverData` 所指向的第一个地表覆盖类别值被假定位于指定的左下角地理位置。该数组的数据顺序应先按水平方向排列，然后向上延伸，直到右上角地理位置。例如：
 
-```cpp
+```c++
 AddCustomLandCoverData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Shorts);
 ```
+
+
 
 ![](https://cdn.mathpix.com/snip/images/FeuOZVbIWhmFR5MkVEwNyIhBwPWMMbXxug1MwX4GFaw.original.fullsize.png)
 
@@ -1507,20 +1652,26 @@ AddCustomLandCoverData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Shorts);
 
 当内存分配失败时返回 `false`，否则返回 `true`。
 
-```
+```c++
 - void ClearCustomLandCoverData()
 ```
+
+
 移除此前通过 `AddCustomLandCoverData` 添加的所有自定义地表覆盖数据，并释放相应的内存。
 
-```
+```c++
 - int GetLandCoverClass(double Latitude_degrees, double Longitude_degrees)
 ```
+
+
 使用通过 `SetPrimaryTerrainElevDataSource` 和 `SetSecondaryTerrainElevDataSource` 方法指定的地表覆盖数据源，在指定位置获取地表覆盖类别 ID。如果在该位置无法获取任何地表覆盖数据，则返回 -1。
 
-```
+```c++
 - void SetLandCoverClassMapping(LandCoverDataSource LandCoverSource, int sourceClass, PropagationModel propagationModel, int modeLVaLue)
 - int GetLandCoverClassMapping(LandCoverDataSource LandCoverSource, int sourceClass, PropagationModel propagationModel)
 ```
+
+
 在仿真中使用地表覆盖数据时，地表覆盖类别 ID 需要映射为当前选定传播模型可用的值。`SetLandCoverClassMapping` 方法用于指定地表覆盖源的类别 ID 与传播模型可用值之间的映射关系。
 
 对于 ITU-R P.1812 和 ITU-R P.452-18 传播模型，地表覆盖类别 ID 可以映射为**杂波类别（clutter categories）**或**代表性杂波高度（代表性障碍物高度，以米为单位）**。
@@ -1537,10 +1688,12 @@ AddCustomLandCoverData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Shorts);
 
 对于 ITU-R P.452-17 传播模型，地表覆盖类别 ID 始终映射为该模型的高度增益模型（height-gain model）杂波类别。
 
-```
+```c++
 - void SetDefaultLandCoverClassMapping(LandCoverDataSource LandCoverSource, PropagationModel propagationModel, int modelValue)
 - int GetDefaultLandCoverClassMapping(LandCoverDataSource LandCoverSource, PropagationModel propagationModel)
 ```
+
+
 设置/获取指定地表覆盖数据源与传播模型之间的默认映射关系（该默认值用于映射所有未通过 `SetLandCoverClassMapping` 显式指定的地表覆盖类别 ID）。
 
 例如，调用以下函数：
@@ -1555,14 +1708,18 @@ AddCustomLandCoverData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Shorts);
 
 对于 ITU-R P.452-17 模型，`modelValue` 始终应解释为模型定义的高度增益模型杂波类别。
 
-```
+```c++
 - void ClearLandCoverClassMappings(LandCoverDataSource LandCoverSource, PropagationModel propagationModel)
 ```
+
+
 删除指定地表覆盖数据源与传播模型之间的所有地表覆盖类别映射关系。该操作会清除通过 `SetDefaultLandCoverClassMapping` 和 `SetLandCoverClassMapping` 所建立的所有映射。
 
-```
+```c++
 - int GetLandCoverClassMappedValue(double Latitude_degrees, double Longitude_degrees, PropagationModel propagationModeL)
 ```
+
+
 该方法首先从通过 `SetPrimaryLandCoverDataSource` 和 `SetSecondaryLandCoverDataSource` 方法指定的地表覆盖数据源中获取地表覆盖类别 ID。随后，它根据通过 `SetLandCoverClassMapping` 和 `SetDefaultLandCoverClassMapping` 指定的映射关系，或通过已有的默认映射，返回与之对应的传播模型可用值。如果无法获取地表覆盖数据，或无法应用任何映射，则返回 -1。
 
 
@@ -1695,11 +1852,13 @@ https://open.canada.ca/data/en/dataset/18752265-bda3-498c-a4ba-9dfe68cb98da
 - 次级地表高程数据源默认值为 `SURF_ELEV_NONE`  
 - 第三级地表高程数据源默认值为 `SURF_ELEV_NONE`
 
-```
+```c++
 - void SetSurfaceElevDataSourceDirectory(SurfaceElevDataSource surfaceELevSource, const char* directory, bool useIndexFile=false, bool overwriteIndexFile=false)
 - const char* GetSurfaceElevDataSourceDirectory(
 SurfaceElevDataSource surfaceELevSource)
 ```
+
+
 设置/获取与指定地表高程数据源关联的目录。
 
 对于以下地表高程数据源：`SURF_ELEV_NRCAN_CDSM`、`SURF_ELEV_NRCAN_HRDEM_DSM` 和 `SURF_ELEV_GEOTIFF`，可以通过将 `useIndexFile` 参数设置为 `true` 来使用索引文件。这在目录中包含大量文件的情况下尤为有用，可避免每次调用 `SetSurfaceElevDataSourceDirectory` 方法时 CRC-COVLIB 都需读取整个目录及其子目录内容。
@@ -1712,13 +1871,15 @@ SurfaceElevDataSource surfaceELevSource)
 
 **默认值：**任何地表高程数据源的目录默认值为空字符串。
 
-```
+```c++
 - void SetSurfaceElevDataSourceSamplingMethod(
 SurfaceElevDataSource surfaceELevSource, SamplingMethod sampLingMethod)
 
 - SamplingMethod GetSurfaceElevDataSourceSamplingMethod(
 SurfaceElevDataSource surfaceELevSource)
 ```
+
+
 设置/获取指定地表高程数据源的采样方法。`SamplingMethod` 是一个枚举类型，可取以下值之一：
 
 - `NEAREST_NEIGHBOR = 0`（最近邻法）
@@ -1731,10 +1892,12 @@ SurfaceElevDataSource surfaceELevSource)
 
 **默认采样方法为**：对所有地表高程数据源，默认使用 `BILINEAR_INTERPOLATION`。
 
-```
+```c++
 - void SetSurfaceAndTerrainDataSourcePairing(bool usePairing)
 - bool GetSurfaceAndTerrainDataSourcePairing()
 ```
+
+
 设置/获取地表高程数据源与地形高程数据源之间配对使用的状态。
 
 当 `usePairing` 设置为 `true` 时，地表高程和地形高程数据源将按顺序进行配对使用：
@@ -1761,7 +1924,7 @@ SurfaceElevDataSource surfaceELevSource)
 
 **默认情况下，配对功能为关闭（false）。**
 
-```
+```c++
 - bool AddCustomSurfaceElevData(
 double LowerLeftCornerLat_degrees, double LowerLeftCornerLon_degrees,
 double upperRightCornerLat_degrees, double upperRightCornerLon_degrees,
@@ -1769,11 +1932,15 @@ int numHorizSamples, int numVertSamples, const float* surfaceElevData_meters,
 bool defineNoDataVaLue=false, float noDataValue=0)
 ```
 
+
+
 添加自定义地表高程数据。`surfaceElevData_meters` 应指向一个连续的地表高程值列表，总数量为 $ \text{numHorizSamples} \times \text{numVertSamples} $。这些地表高程样本被假定为沿纬度和经度方向均匀分布（单位为度）。`surfaceElevData_meters` 所指向的第一个地表高程值被认为处于指定的左下角地理位置。之后的列表应先按水平方向依次排列，再向上垂直排列，直至填满指定的右上角地理范围。例如：
 
-```cpp
+```c++
 AddCustomSurfaceElevData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Floats);
 ```
+
+
 
 ![](https://cdn.mathpix.com/snip/images/_NQ2jXCoAofcFfakI41YC0GwFfKMk4u0Wm-FKrmT4FM.original.fullsize.png)
 
@@ -1783,43 +1950,53 @@ AddCustomSurfaceElevData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Floats);
 
 如果内存分配失败，则返回 `false`，否则返回 `true`。
 
-```
+```c++
 - void ClearCustomSurfaceElevData()
 ```
+
+
 移除此前通过 `AddCustomTerrainElevData` 添加的所有自定义地表高程数据，并释放相应的内存。
-```
+```c++
 - double GetSurfaceElevation(double Latitude_degrees, double Longitude_degrees, double noDataVaLue=0)
 ```
+
+
 使用通过 `SetPrimarySurfaceElevDataSource`、`SetSecondarySurfaceElevDataSource` 和 `SetTertiraySurfaceElevDataSource` 方法指定的地表高程数据源，在给定位置获取地表高程（单位：米）。  
 如果在指定位置无法获取任何地表高程数据，则返回 `noDataValue`。
 
 
 ## Reception area methods
-```
+```c++
 - void SetReceptionAreaCorners(double LowerLeftCornerLat_degrees, double LowerLeftCornerLon_degrees, double upperRightCornerLat_degrees, double upperRightCornerLon_degrees)
 - double GetReceptionAreaLowerLeftCornerLatitude()
 - double GetReceptionAreaLowerLeftCornerLongitude()
 - double GetReceptionAreaUpperRightCornerLatitude()
 - double GetReceptionAreaUpperRightCornerLongitude()
 ```
+
+
 设置/获取接收区域的位置。接收区域是一个矩形网格，由多个接收点组成。在调用 `GenerateReceptionAreaResults` 方法时，将在这些接收点上计算仿真结果（场强、路径损耗、传输损耗或接收功率）。
 
-```
+```c++
 - void SetReceptionAreaNumHorizontalPoints(int numPoints)
 - int GetReceptionAreaNumHorizontalPoints()
 - void SetReceptionAreaNumVerticalPoints(int numPoints)
 - int GetReceptionAreaNumVerticalPoints()
 ```
+
+
 设置/获取接收区域中水平/垂直方向的接收点数量。接收区域中的接收点总数等于水平点数乘以垂直点数。当水平或垂直方向的点数发生变化时，接收区域中可能已有的数据将被清零。
 
 `numPoints` 的取值必须大于或等于 2。默认值为水平点数和垂直点数均为 60（即总共 3600 个接收点）。
 
 
 ## Result type selection methods
-```
+```c++
 - void SetResultType(ResultType resultType)
 - ResultType GetResultType()
 ```
+
+
 设置/获取仿真的结果类型。`ResultType` 是一个枚举类型，可取以下值之一：
 
 
@@ -1856,9 +2033,11 @@ AddCustomSurfaceElevData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Floats);
 
 
 ## Coverage display fills methods
-```
+```c++
 - void AddCoverageDisplayFill(double fromValue, double toVaLue, int rgbColor)
 ```
+
+
 添加新的覆盖图显示填充（coverage display fill）。在为已定义的接收区域生成结果后，可以使用 `ExportReceptionAreaResultsToMifFile` 或 `ExportReceptionAreaResultsToKmlFile` 方法将结果以可视化形式导出为矢量文件。
 
 在生成的覆盖图中，结果值处于 `fromValue` 与 `toValue` 之间的区域将使用指定的 `rgbColor` 进行着色。不同填充之间的数值范围可以重叠。
@@ -1871,42 +2050,52 @@ AddCustomSurfaceElevData(45.0, -76.0, 46.0, -75.0, 4, 3, arrayOf12Floats);
 
 其中颜色为 RGB 十六进制表示法。
 
-```
+```c++
 - void ClearCoverageDisplayFills()
 ```
+
+
 删除所有覆盖图显示填充（coverage display fills）。该操作将移除仿真中先前通过添加操作定义的所有颜色填充区域，使得导出的可视化文件中不再包含任何默认或自定义的结果着色区域。
 
-```
+```c++
 - int GetCoverageDisplayNumFills()
 ```
+
+
 获取当前已定义的覆盖图显示填充（coverage display fills）的数量。
 
-```
+```c++
 - double GetCoverageDisplayFillFromValue(int index)
 - double GetCoverageDisplayFillToValue(int index)
 - int GetCoverageDisplayFillColor(int index)
 ```
+
+
 获取指定索引处的覆盖图显示填充（coverage display fill）详情。  
 索引为从零开始，必须在 $0$ 到 $GetCoverageDisplayNumFills() - 1$ 的范围内。
 
 
 ## Computing and accessing results methods
-```
+```c++
 - double GenerateReceptionPointResult(double Latitude_degrees,
 double Longitude_degrees)
 ```
+
+
 返回指定位置处根据当前仿真参数计算得出的结果（场强、路径损耗、传输损耗或接收功率）。
 
-```
+```c++
 - ReceptionPointDetailedResult GenerateReceptionPointDetailedResult(
 double Latitude_degrees, double Longitude_degrees)
 ```
+
+
 返回一个结构体，包含指定位置处基于当前仿真参数计算的结果（场强、路径损耗、传输损耗或接收功率）以及其他计算值。
 
 ReceptionPointDetailedResult 结构体包含以下成员：
 
 
-```cpp
+```c++
 double result;
 double pathLoss_dB;
 double pathLength_km;
@@ -1920,18 +2109,22 @@ double elevAngleFromTransmitter_degrees;
 double elevAngleFromReceiver_degrees;
 ```
 
+
+
 pathLength_km 的值表示发射机和接收机之间的大圆距离。transmitterHeightAMSL_m 和 receiverHeightAMSL_m 的高度值单位为米，表示相对于平均海平面的高度。这些高度由天线相对于地面的高度与从地形高程数据源中获得的地形高程值之和构成（若已指定数据源）。
 
 与 GenerateReceptionPointResult 不同，GenerateReceptionPointDetailedResult 始终计算天线增益，即使所选结果类型的计算并不需要天线增益。该方法还提供用于获取天线方向图增益的方位角和俯仰角的计算值。方位角以真北为参考；俯仰角以局部地平线为参考，其中 -90 表示天顶，0 表示天文地平线，+90 表示天底。俯仰角的计算基于中等折射率条件，并使用天线高度及通信两端之间的地形剖面（如果仿真中指定了一个或多个地形高程数据源）。在视距条件下，俯仰角的计算方向是朝向另一端天线；否则，俯仰角将朝向无线电地平线（即地形遮挡角）。
 
 
-```cpp
+```c++
 - double GenerateProfileReceptionPointResult(
 double Latitude_degrees, double Longitude_degrees, int numSamples, const double* terrainElevProfile,
 const int* LandCoverCLassMappedVaLueProfiLe=NULL,
 const double* surfaceElevProfile=NULL,
 const ITURadioClimaticZone* ituRadioCLimaticZoneProfile=NULL)
 ```
+
+
 
 返回在指定位置基于当前仿真参数计算得到的结果（场强、路径损耗、传输损耗或接收功率）。不同于使用 SetPrimaryTerrainElevDataSource、SetSecondaryTerrainElevDataSource 和 SetTertiaryTerrainElevDataSource 方法所指定的地形高程数据源，此方法使用作为参数传入的地形高程剖面。
 
@@ -1955,9 +2148,11 @@ latitude_degrees 和 longitude_degrees 表示接收点的位置。numSamples 表
 
 调用此方法后，之前在同一个仿真对象上通过调用 `GenerateReceptionAreaResults` 所生成的结果将不再可访问。
 
-```
+```c++
 - int GetGenerateStatus()
 ```
+
+
 `GetGenerateStatus` 方法返回与上一次调用以下任一结果生成方法相关联的状态值：
 
 - `GenerateReceptionPointResult`
@@ -1986,11 +2181,13 @@ latitude_degrees 和 longitude_degrees 表示接收点的位置。numSamples 表
 否则可以使用按位与操作符（&）对返回值进行检查，以确定适用的状态值。例如：
 
 
-```cpp
+```c++
 int status = sim->GetGenerateStatus();
 if( (status & STATUS_SOME_TERRAIN_ELEV_DATA_MISSING) != 0 )
     cout << "Some terrain elevation data could not be obtained!" << endl;
 ```
+
+
 
 标志值说明：
 
@@ -2020,49 +2217,61 @@ if( (status & STATUS_SOME_TERRAIN_ELEV_DATA_MISSING) != 0 )
 
 最后，请注意：如果所有对应的数据源均设置为 NONE，则一般不会触发任何标志，因为此时 CRC-COVLIB 被指示不查找任何数据。
 
-```
+```c++
 - double GetReceptionAreaResultValue(int xIndex, int yIndex)
 ```
+
+
 一旦调用了 `GenerateReceptionAreaResults` 方法，就可以通过调用 `GetReceptionAreaResultValue` 方法获取接收区域内指定索引处接收点的计算结果。  
 `xIndex` 必须是一个整数，范围为 0 到接收区域中水平接收点数量减 1；  
 `yIndex` 必须是一个整数，范围为 0 到接收区域中垂直接收点数量减 1。  
 当索引超出有效范围时，返回值为 0。
 
-```
+```c++
 - void SetReceptionAreaResultValue(int xIndex, int yIndex, double value)
 ```
+
+
 设置或修改接收区域中指定索引处接收点的结果值。  
 `xIndex` 必须是一个整数，范围为 0 到接收区域中水平接收点数量减 1；  
 `yIndex` 必须是一个整数，范围为 0 到接收区域中垂直接收点数量减 1。
 
-```
+```c++
 - double GetReceptionAreaResultValueAtLatLon(double Latitude_degrees, double Longitude_degrees)
 ```
+
+
 一旦调用了 `GenerateReceptionAreaResults` 方法，即可调用该方法以获取接收区域中指定地理位置处的计算结果。  
 该结果是通过对接收区域中最邻近的接收点的已计算结果进行插值获得的。  
 当指定位置在接收区域之外时，返回值为 0。
 
-```
+```c++
 - double GetReceptionAreaResultLatitude(int xIndex, int yIndex)
 - double GetReceptionAreaResultLongitude(int xIndex, int yIndex)
 ```
+
+
 获取接收区域中指定索引处接收点的纬度/经度坐标（单位为度）。  
 `xIndex` 必须是从 0 到接收区域中水平点数减 1 的整数；  
 `yIndex` 必须是从 0 到接收区域中垂直点数减 1 的整数。  
 当索引超出有效范围时，返回值为 0。
 
-```
+```c++
 - bool ExportReceptionAreaResultsToTextFile(const char* pathname, const char* resultsColumnName=NULL)
 ```
+
+
 在调用 `GenerateReceptionAreaResults` 方法之后，可以调用该方法将接收区域的结果写入文本文件中。  
 该文件将包含所有接收点的位置（纬度和经度）以及其对应的结果（场强、路径损耗、传输损耗或接收功率）。  
 `pathname` 应为一个字符串，包含要创建或覆盖的文件名，可选包含完整路径或相对路径。  
 `resultsColumnName` 可用于指定文件标题行中结果列的列名；若未指定，则使用默认列名。  
 当文件成功创建或覆盖时返回 `true`，否则返回 `false`。
 
-```
+```c++
 - bool ExportReceptionAreaResultsToMifFile(const char* pathname, const char* resultsUnits=NULL)
 ```
+
+
 在调用 `GenerateReceptionAreaResults` 方法之后，可以调用该方法将接收区域结果写入一个 MIF（MapInfo Interchange File）矢量文件，并生成其对应的 MID 文件以存储属性信息。  
 MIF 文件将基于定义好的覆盖显示填充（coverage display fills）提供结果的图形化表示。  
 `pathname` 应为一个字符串，包含要创建或覆盖的 MIF 文件名，可选包含完整路径或相对路径。  
@@ -2070,9 +2279,11 @@ MIF 文件将基于定义好的覆盖显示填充（coverage display fills）提
 当 MIF 与 MID 两个文件均成功创建或覆盖时返回 `true`，否则返回 `false`。  
 MIF 文件可通过大多数地理信息系统（GIS）软件进行展示。
 
-```
+```c++
 - bool ExportReceptionAreaResultsToKmlFile(const char* pathname, double fillOpacity_percent=50, double lineOpacity_percent=50, const char* resultsUnits=NULL)
 ```
+
+
 在调用 `GenerateReceptionAreaResults` 方法之后，可以调用该方法将接收区域结果写入一个 KML（Keyhole Markup Language）矢量文件。  
 KML 文件将基于定义好的覆盖显示填充（coverage display fills）提供结果的图形化表示。  
 `pathname` 应为一个字符串，包含要创建或覆盖的 KML 文件名，可选包含完整路径或相对路径。  
@@ -2081,18 +2292,22 @@ KML 文件将基于定义好的覆盖显示填充（coverage display fills）提
 当文件成功创建或覆盖时返回 `true`，否则返回 `false`。  
 KML 文件可通过 Google Earth 以及大多数地理信息系统（GIS）软件进行查看。
 
-```
+```c++
 - bool ExportReceptionAreaResultsToBilFile(const char* pathname)
 ```
+
+
 在调用 `GenerateReceptionAreaResults` 方法之后，可以调用该方法将接收区域结果写入一个 BIL（Band Interleaved by Line）栅格文件，同时生成其关联的 HDR（头文件）与 PRJ（投影文件）。  
 BIL 文件将包含与接收区域中每个接收点对应的结果值。  
 `pathname` 应为一个字符串，包含要创建或覆盖的 BIL 文件名，可选包含完整路径或相对路径。  
 当三个文件均成功创建或覆盖时，返回 `true`，否则返回 `false`。  
 BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 
-```
+```c++
 - bool ExportReceptionAreaTerrainElevationToBilFile(const char* pathname, int numHorizontalPoints, int numVerticalPoints, bool setNoDataToZero=false)
 ```
+
+
 将接收区域（通过 `SetReceptionAreaCorners` 指定）所覆盖区域内的地形高程数据导出为一个 BIL（Band Interleaved by Line）栅格文件，并生成对应的 HDR（头文件）和 PRJ（投影文件）。  
 该方法会使用通过 `SetPrimaryTerrainElevDataSource`、`SetSecondaryTerrainElevDataSource` 和 `SetTertiaryTerrainElevDataSource` 设定的地形高程数据源，导出 `numHorizontalPoints × numVerticalPoints` 个点的数据。
 
@@ -2101,9 +2316,11 @@ BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 当三个文件均成功创建或覆盖时，返回 `true`，否则返回 `false`。  
 BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 
-```
+```c++
 - bool ExportReceptionAreaLandCoverClassesToBilFile(const char* pathname, int numHorizontalPoints, int numVerticalPoints, bool mapValues)
 ```
+
+
 将接收区域（通过 `SetReceptionAreaCorners` 指定）所覆盖区域内的地表覆盖类型（land cover class）数据导出为一个 BIL（Band Interleaved by Line）栅格文件，并生成对应的 HDR（头文件）和 PRJ（投影文件）。  
 该方法会使用通过 `SetPrimaryLandCoverDataSource` 和 `SetSecondaryLandCoverDataSource` 设定的地表覆盖数据源，导出 `numHorizontalPoints × numVerticalPoints` 个点的数据。
 
@@ -2113,9 +2330,11 @@ BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 当三个文件均成功创建或覆盖时，返回 `true`，否则返回 `false`。  
 BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 
-```
+```c++
 - bool ExportReceptionAreaSurfaceElevationToBilFile(const char* pathname, int numHorizontalPoints, int numVerticalPoints, bool setNoDataToZero=false)
 ```
+
+
 将接收区域（通过 `SetReceptionAreaCorners` 指定）所覆盖区域内的表面高程（surface elevation）数据导出为一个 BIL（Band Interleaved by Line）栅格文件，并生成对应的 HDR（头文件）和 PRJ（投影文件）。  
 该方法会使用通过 `SetPrimarySurfaceElevDataSource`、`SetSecondarySurfaceElevDataSource` 和 `SetTertiarySurfaceElevDataSource` 指定的表面高程数据源，导出 `numHorizontalPoints × numVerticalPoints` 个点的数据。
 
@@ -2124,9 +2343,11 @@ BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 当三个文件均成功创建或覆盖时，返回 `true`，否则返回 `false`。  
 BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 
-```
+```c++
 - bool ExportProfilesToCsvFile(const char* pathname, double Latitude_degrees, double Longitude_degrees)
 ```
+
+
 根据当前仿真参数，计算从发射机位置到指定接收点（`Latitude_degrees` 和 `Longitude_degrees`）路径上的仿真结果（场强、路径损耗、传输损耗或接收功率）。  
 该路径上的结果剖面（result profile）及其它相关剖面（如地形高程、地表覆盖等）随后将被导出为一个 CSV（逗号分隔值）文件。
 
