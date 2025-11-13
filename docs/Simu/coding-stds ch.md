@@ -1,4 +1,4 @@
-## C++ Coding Standards
+# C++ Coding Standards
 
 
 ## 1. 目的
