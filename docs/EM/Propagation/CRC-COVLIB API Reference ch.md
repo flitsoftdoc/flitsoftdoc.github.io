@@ -2374,7 +2374,7 @@ BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 
 [2] J. Ethier, M. Châteauvert, R. G. Dempsey, A. Bose. "Path Loss Prediction Using Machine Learning with Extended Features," January 2025. Preprint on arXiv: https://arxiv.org/pdf/2501.08306
 
-[3] Thiele, Lars \& Wirth, T \& Börner, Kai \& Olbrich, Michael \& Jungnickel, Volker \& Rumold, Juergen \& Fritze, Stefan. (2009). Modeling of 3D field patterns of downtilted antennas and their impact on cellular systems.
+[3] Thiele, Lars & Wirth, T & Börner, Kai & Olbrich, Michael & Jungnickel, Volker & Rumold, Juergen & Fritze, Stefan. (2009). Modeling of 3D field patterns of downtilted antennas and their impact on cellular systems.
 
 [4] T. G. Vasiliadis, A. G. Dimitriou and G. D. Sergiadis, "A novel technique for the approximation of 3-D antenna radiation patterns," in IEEE Transactions on Antennas and Propagation, vol. 53, no. 7, pp. 2212-2219, July 2005, doi: 10.1109/TAP.2005.850752.
 
@@ -2390,7 +2390,7 @@ Also thanks to Dr. Ivica Stevanovic. CRC-COVLIB's implementation of the ITU-R P.
 
 Thanks to everyone at the NTIA who worked on developing propagation models and who contributed in making the source code available.
 
-Thanks to the Lord my God, The Father, The Son \& The Holy Spirit, for everything.
+Thanks to the Lord my God, The Father, The Son & The Holy Spirit, for everything.
 Martin-Pierre
 
 
