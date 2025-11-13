@@ -61,7 +61,7 @@
 **Rule:** 在重写基类的虚成员函数时，应在各个区域（public、protected、private）的末尾声明这些函数，并添加注释 “XXXX Class Interface”，其中 XXX 为最初声明这些虚函数的基类名。  
 **Reason:** 代码可读性。此方式用于标识我们正在重写基类的接口。
 
-**Recommendation:** 在 C++ 代码中使用 C++ 风格注释 “// comment”。在 C 代码及嵌入式注释中使用 C 风格注释 “/* comment */”。  
+**Recommendation:** 在 C++ 代码中使用 C++ 风格注释 “// comment”。在 C 代码及嵌入式注释中使用 C 风格注释 “//* comment /*/”。  
 Example:
 
 ```c++
