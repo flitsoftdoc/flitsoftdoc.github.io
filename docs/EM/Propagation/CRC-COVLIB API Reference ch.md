@@ -510,11 +510,11 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 | CRC Path Obscura | 500-6,000 ${ }^{5}$ | N/A | N/A | 0-50 | Yes | Yes | No |
 
 /// note | 
-1. Uses either surface or land cover data (see `SetITURP1812SurfaceProfileMethod`).
-2. It should be reasonable to assume similar ranges to those from ITU-R P.1812.
-3. Version 17 of ITU-R P. 452 does not use surface data, it may only use land cover data (see `SetITURP452HeightGainModelMode`). Version 18 uses either surface or land cover data (see `SetITURP452SurfaceProfileMethod`).
-4. Only used at transmitter and receiver locations.
-5. 500 to 6,000 MHz for best performance, but expected to yield acceptable results at up to 10,000 MHz.
+1. 使用地表或地表覆盖数据（参见 `SetITURP1812SurfaceProfileMethod`）。
+2. 可合理假设其适用范围与 ITU-R P.1812 模型相似。
+3. ITU-R P.452 第17版不使用地表数据，仅可使用地表覆盖数据（参见 `SetITURP452HeightGainModelMode`）；第18版可使用地表或地表覆盖数据（参见 `SetITURP452SurfaceProfileMethod`）。
+4. 仅在发射机和接收机位置使用。
+5. 最佳性能频率范围为 500 至 6,000 MHz，但在最高 10,000 MHz 时仍可获得可接受的结果。
 ///
 
 
