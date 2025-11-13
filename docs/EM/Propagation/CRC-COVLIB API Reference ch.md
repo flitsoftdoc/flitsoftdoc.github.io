@@ -4,7 +4,11 @@
 
 **July 23, 2025**
 
-CRC-COVLIB 是由加拿大通信研究中心（Communications Research Centre Canada）开发的一个用于无线覆盖预测的基础应用程序接口（API）。该库集成了多种不同的传播模型：
+CRC-COVLIB 是由加拿大通信研究中心（Communications Research Centre Canada）开发的一个用于无线覆盖预测的基础应用程序接口（API）。
+
+https://github.com/ic-crc/crc-covlib
+
+该库集成了多种不同的传播模型：
 
 - Longley-Rice 传播模型，由美国国家电信与信息管理局（US National Telecommunications and Information Administration, NTIA）开发；
 - 扩展 Hata（Extended-Hata, eHata）城市传播模型，也来自 NTIA；
