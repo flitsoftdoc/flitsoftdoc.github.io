@@ -16,6 +16,22 @@ https://github.com/ic-crc/crc-covlib
 - 国际电信联盟 P.452 建议书中的传播模型实现；
 - CRC-MLPL，一种基于机器学习的路径损耗模型，由加拿大通信研究中心开发，使用 ITU-R 与英国 Ofcom 的公开行测数据集训练而成。[1]
 
+crc-covlib 是一个使用 C++ 编写的软件库，用于基于多种传播模型进行无线电波覆盖与干扰预测，可在 Windows 与 Linux 系统下运行。该库还提供了 Python 封装器，便于用户通过 Python 语言调用 crc-covlib。其设计目标是简化传播模型的使用，仅需少量代码即可完成完整的覆盖仿真。
+
+**crc-covlib 包含以下功能：**
+
+- **传播模型选择**：支持自由空间、Longley-Rice、ITU-R P.1812-7、ITU-R P.452-17、ITU-R P.452-18、Extended-Hata、CRC-MLPL 和 CRC Path Obscura 模型，后两者为加拿大通信研究中心（Communications Research Centre Canada）开发的基于机器学习的路径损耗模型。还包含 ITU-R P.2108-1 附录1第3.2节中的陆地统计杂波损耗模型、ITU-R P.2109-2 附录1中的建筑物进入损耗模型，以及 ITU-R P.676-13 附录1第1节与2.1节中的陆地路径气体衰减模型。
+- **地形高程数据支持**：支持多种类型地形高程文件的读取，用户可自定义采样分辨率，主要支持加拿大自然资源部提供的 CDEM（Canadian Digital Elevation Model）、MRDEM DTM（中分辨率数字高程模型）和 HRDEM DTM（高分辨率数字地形模型）；同时支持某些坐标系统下的 GeoTIFF 文件（如全球支持的 WGS84）。
+- **地表覆盖数据支持**：支持读取来自欧洲航天局（ESA）WorldCover 项目和加拿大自然资源部的 Land Cover of Canada 产品的地表覆盖数据；同样在支持坐标系统（如 WGS84）下可读取 GeoTIFF 文件。
+- **地表高程数据支持**：支持读取来自加拿大自然资源部的 CDSM（Canadian Digital Surface Model）、MRDEM DSM（中分辨率数字表面模型）和 HRDEM DSM（高分辨率数字表面模型）；同时支持来自 Shuttle Radar Topography Mission（SRTM）的数字高程模型文件，以及符合坐标要求的 GeoTIFF 文件（WGS84）。
+- **备用数据源机制**：当主要地形、地表覆盖或地表高程数据源未覆盖某一位置时可使用备用数据源，并可提供缺失数据的错误报告。
+- **天线模型支持**：支持设置发射端和接收端的天线方向图；可基于地形高程数据计算仰角以支持垂直方向图；天线指向方位角可固定或相对于另一终端位置设置。
+- **支持的仿真结果类型**：场强（dBµV/m）、路径损耗（dB）、传输损耗（dB）或接收功率（dBm）。
+- **仿真结果导出**：支持点到区域仿真结果导出为文本（*.txt）与栅格图像（*.bil）格式；等值线可导出为 *.kml（Google Earth）与 *.mif/mid（MapInfo）格式。
+- **剖面数据导出**：支持将结果与地形高程、地表覆盖等剖面数据导出为 *.csv 格式。
+- **Python 扩展功能**：在上述 C++ 主体功能基础上，crc_covlib 的 Python 封装还提供了其他专属功能，包括 ITU 推荐规范的额外实现（涵盖地面与非地面传播）。更多详细信息可参考 crc_covlib 包的文档部分。
+
+
 本文档详细说明了 CRC-COVLIB 提供的 C++ 编程接口，但不涉及无线电波传播科学以及信号发射/接收技术的细节。
 
 此外，CRC-COVLIB 还提供了一个 Python 封装接口，便于从 Python 语言中调用。目前尚未提供专门的 Python API 文档，但由于 Python 接口保留了原有的方法签名，因此本文件仍可作为有效的参考资料。
