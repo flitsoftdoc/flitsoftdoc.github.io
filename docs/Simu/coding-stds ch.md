@@ -7,7 +7,7 @@
 
 ## 2. 文档组织
 
-本文档由规则、原因和建议组成。`Rule`是程序员必须遵守的内容，并将在同伴审查中进行检查。在`Reason`中解释为什么应当以这种方式进行。`Recommendation`是供参考的，不采纳该建议在同伴审查中不会被视为错误。
+本文档由规则（Rule）、原因（Reason）和建议（Recommendation）组成。`Rule`是程序员必须遵守的内容，并将在同伴审查中进行检查。在`Reason`中解释为什么应当以这种方式进行。`Recommendation`是供参考的，不采纳该建议在同伴审查中不会被视为错误。
 
 ## 3. Source Code Organization
 
