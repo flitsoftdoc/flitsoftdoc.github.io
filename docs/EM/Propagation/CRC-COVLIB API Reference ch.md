@@ -196,8 +196,8 @@ if __name__ == '__main__':
 
 设置/获取发射机功率，单位为瓦特（watts）。`PowerType` 是一个枚举类型，其取值可以为以下几种之一：
 
-TPO=1
-ERP=2
+TPO=1  
+ERP=2  
 EIRP=3
 
 功率可以被指定或获取为发射功率输出值（Transmit Power Output, TPO）、有效辐射功率值（Effective Radiated Power, ERP）或等效全向辐射功率值（Effective Isotropic Radiated Power, EIRP）。所指定的功率值必须大于零。
@@ -342,9 +342,10 @@ EIRP=3
 
 如果 `clearHorizontalPattern` 为 true，则删除天线的所有水平方向图条目；如果 `clearVerticalPattern` 为 true，则删除所有垂直方向图条目。`terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。
 
-
+```c++
 - void SetAntennaElectricalTilt(Terminal terminal, double elecricalTilt_degrees)
 - double GetAntennaElectricalTilt(Terminal terminal)
+```
 
 设置/获取天线的电下倾角（electrical tilt），单位为度。
 
