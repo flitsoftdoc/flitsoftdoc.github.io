@@ -275,7 +275,7 @@ EIRP=3
 默认值为 `VERTICAL_POL`（垂直极化）。
 
 
----
+
 
 ## Receiver methods
 ```c++
@@ -296,6 +296,8 @@ EIRP=3
 `SetReceiverHeightAboveGround` 方法仅接受 0.5 至 3000 米之间的数值。
 
 默认值为 1.5 米。
+
+---
 
 ```c++
 - void SetReceiverLosses(double Losses_dB)
@@ -328,6 +330,8 @@ EIRP=3
 - `TRANSMITTER = 1`（发射端）
 - `RECEIVER = 2`（接收端）
 
+---
+
 ```c++
 - void AddAntennaHorizontalPatternEntry(Terminal terminal, double azimuth_degrees, double gain_dB)
 ```
@@ -338,6 +342,8 @@ EIRP=3
 `terminal` 参数用于指定该方法应用于发射端 (`TRANSMITTER`) 还是接收端 (`RECEIVER`) 的天线。`azimuth_degrees` 参数的有效范围为 0 到 359.99 度，其中 0 度应对应天线主瓣（最大增益）方向。所添加的增益值应为归一化后的值（即主瓣方向的增益为 0 dB，其他方向为负值）。如果添加的是未归一化的增益值，在添加完所有条目后，可调用 `NormalizeAntennaHorizontalPattern` 方法进行归一化处理。
 
 默认情况下，两个端口的水平天线方向图都不包含任何条目，此时会默认认为所有方位角上的水平增益均为 0 dB。
+
+---
 
 ```c++
 - void AddAntennaVerticalPatternEntry(Terminal terminal, int azimuth_degrees, double eLevAngLe_degrees, double gain_dB)
@@ -355,6 +361,8 @@ EIRP=3
 
 默认情况下，两个端口的垂直天线方向图都不包含任何条目。在这种情况下，假定垂直方向图在所有角度上的增益均为 0 dB。
 
+---
+
 ```c++
 - void ClearAntennaPatterns(Terminal terminal, bool clearHorizontalPattern=true, bool clearVerticalPattern=true)
 ```
@@ -362,6 +370,8 @@ EIRP=3
 
 
 如果 `clearHorizontalPattern` 为 true，则删除天线的所有水平方向图条目；如果 `clearVerticalPattern` 为 true，则删除所有垂直方向图条目。`terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。
+
+---
 
 ```c++
 - void SetAntennaElectricalTilt(Terminal terminal, double elecricalTilt_degrees)
@@ -373,6 +383,8 @@ EIRP=3
 `terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。`electricalTilt_degrees` 参数的取值范围为 -90 到 +90 度（含端点），其中 -90 表示天顶（zenith），0 表示天文地平线（astronomical horizon），+90 表示天底（nadir）。当所需的下倾角已经包含在天线方向图中时，应将该倾角值设为 0。
 
 默认值为两个终端的电下倾角均为 0 度。
+
+---
 
 ```c++
 - void SetAntennaMechanicalTilt(Terminal terminal, double mechanicalTilt_degrees, double azimuth_degrees=0)
@@ -389,6 +401,8 @@ EIRP=3
 
 默认值为两个终端的机械下倾角均为 0 度。
 
+---
+
 ```c++
 - void SetAntennaMaximumGain(Terminal terminal, double maxGain_dBi)
 - double GetAntennaMaximumGain(Terminal terminal)
@@ -400,6 +414,8 @@ EIRP=3
 `terminal` 参数用于指定该方法应用于发射端（TRANSMITTER）还是接收端（RECEIVER）天线。
 
 默认值为两个终端的最大增益均为 0 dBi。
+
+---
 
 ```c++
 - void SetAntennaBearing(Terminal terminal, BearingReference bearingRef, double bearing_degrees)
@@ -428,6 +444,8 @@ EIRP=3
 TRANSMITTER 天线的默认值为相对于 TRUE_NORTH 的 0 度。  
 RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
+---
+
 ```c++
 - double NormalizeAntennaHorizontalPattern(Terminal terminal)
 - double NormalizeAntennaVerticalPattern(Terminal terminal)
@@ -441,6 +459,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 归一化操作将最大增益值调整为 0 dB，并以相同的增益改变量调整所有其他条目。返回值是增益条目被修改的幅度（单位为 dB），可能为正值（当最大增益小于 0 dB 时）或负值（当最大增益大于 0 dB 时）。
 
 请注意，调用归一化方法不会改变通过 `Get/SetAntennaMaximumGain` 访问的最大天线增益值（单位 dBi）。如果在归一化之后需要调整最大增益（dBi），必须显式调用 `SetAntennaMaximumGain` 方法。
+
+---
 
 ```c++
 - void SetAntennaPatternApproximationMethod(Terminal terminal, PatternApproximationMethod method)
@@ -465,6 +485,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 在 `LINE-OF-SIGHT` 条件下，仰角指向另一终端天线；否则指向 `RADIO HORIZON`（即 `TERRAIN CLEARANCE ANGLE`）。
 
 `TRANSMITTER` 和 `RECEIVER` 的默认 `APPROXIMATION METHOD` 均为 `HYBRID`。
+
+---
 
 ```c++
 - double GetAntennaGain(Terminal terminal, double azimuth_degrees, double elevAngle_degrees, double receiverLatitude_degrees=0, double receiverLongitude_degrees=0)
@@ -549,6 +571,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 设置/获取地表折射率（surface refractivity），单位为 N 单位（N-units）。有效范围为 250 到 400 N 单位。默认值为 301 N 单位。
 
+---
+
 ```c++
 - void SetLongleyRiceGroundDielectricConst(double dieLectricConst)
 - double GetLongleyRiceGroundDielectricConst()
@@ -557,6 +581,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 设置/获取地面的介电常数（dielectric constant）。有效范围为 4 到 81。默认值为 15。
 
+---
+
 ```c++
 - void SetLongleyRiceGroundConductivity(double groundConduct_Sm)
 - double GetLongleyRiceGroundConductivity()
@@ -564,6 +590,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 
 设置/获取地面的导电率，单位为西门子每米（Siemens per meter）。有效范围为 0.001 到 $5\ \mathrm{S}/\mathrm{m}$。默认值为 $0.005\ \mathrm{S}/\mathrm{m}$。
+
+---
 
 ```c++
 - void SetLongleyRiceClimaticZone(LRClimaticZone climaticZone)
@@ -583,6 +611,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 默认值为 `LR_CONTINENTAL_TEMPERATE`。
 
+---
+
 ```c++
 - void SetLongleyRiceActivePercentageSet(LRPercentageSet percentageSet)
 - LRPercentageSet GetLongleyRiceActivePercentageSet()
@@ -596,6 +626,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 默认值为 `LR_TIME_LOCATION_SITUATION`。
 
+---
+
 ```c++
 - void SetLongleyRiceTimePercentage(double time_percent)
 - double GetLongleyRiceTimePercentage()
@@ -603,6 +635,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 
 设置/获取时间百分比（即时间可变性）。有效范围为 0.1 到 99.9。默认值为 50。该时间百分比仅在当前使用的百分比集合为 `LR_TIME_LOCATION_SITUATION` 时适用。
+
+---
 
 ```c++
 - void SetLongleyRiceLocationPercentage(double Location_percent)
@@ -612,6 +646,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 设置/获取位置百分比（即位置可变性）。有效范围为 0.1 到 99.9。默认值为 50。该位置百分比仅在当前使用的百分比集合为 `LR_TIME_LOCATION_SITUATION` 时适用。
 
+---
+
 ```c++
 - void SetLongleyRiceSituationPercentage(double situation_percent)
 - double GetLongleyRiceSituationPercentage()
@@ -619,6 +655,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 
 设置/获取情境百分比（即情境可变性）。有效范围为 0.1 到 99.9。默认值为 50。该情境百分比仅在当前使用的百分比集合为 `LR_TIME_LOCATION_SITUATION` 时适用。
+
+---
 
 ```c++
 - void SetLongleyRiceConfidencePercentage(double confidence_percent)
@@ -628,6 +666,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 设置/获取置信百分比（即置信可变性）。有效范围为 0.1 到 99.9。默认值为 50。该置信百分比仅在当前使用的百分比集合为 `LR_CONFIDENCE_RELIABILITY` 时适用。
 
+---
+
 ```c++
 - void SetLongleyRiceReliabilityPercentage(double reLiabiLity_percent)
 - double GetLongleyRiceReliabilityPercentage()
@@ -635,6 +675,8 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 
 设置/获取可靠性百分比（即可靠性可变性）。有效范围为 0.1 到 99.9。默认值为 50。该可靠性百分比仅在当前使用的百分比集合为 `LR_CONFIDENCE_RELIABILITY` 时适用。
+
+---
 
 ```c++
 - void SetLongleyRiceModeOfVariability(int mode)
@@ -644,7 +686,7 @@ RECEIVER 天线的默认值为相对于 OTHER_TERMINAL 的 0 度。
 
 设置/获取可变性模式。可使用以下数值来表示模式：
 
-$0=$ 单条消息模式  
+0 = 单条消息模式  
 1 = 偶发模式  
 2 = 移动模式  
 3 = 广播模式  
@@ -689,6 +731,8 @@ https://udel.edu/~mm/itm/
 
 设置/获取在一年平均时间中，计算出的基本传输损耗未被超过的百分比。有效范围为 1 到 50。默认值为 50。
 
+---
+
 ```c++
 - void SetITURP1812LocationPercentage(double Location_percent)
 - double GetITURP1812LocationPercentage()
@@ -696,6 +740,8 @@ https://udel.edu/~mm/itm/
 
 
 设置/获取在指定位置中，计算出的基本传输损耗未被超过的百分比。有效范围为 1 到 99。默认值为 50。
+
+---
 
 ```c++
 - void SetITURP1812AverageRadioRefractivityLapseRate(double deLtaN_Nunitskm)
@@ -2108,6 +2154,8 @@ double Longitude_degrees)
 
 返回指定位置处根据当前仿真参数计算得出的结果（场强、路径损耗、传输损耗或接收功率）。
 
+---
+
 ```c++
 - ReceptionPointDetailedResult GenerateReceptionPointDetailedResult(
 double Latitude_degrees, double Longitude_degrees)
@@ -2138,6 +2186,8 @@ double elevAngleFromReceiver_degrees;
 pathLength_km 的值表示发射机和接收机之间的大圆距离。transmitterHeightAMSL_m 和 receiverHeightAMSL_m 的高度值单位为米，表示相对于平均海平面的高度。这些高度由天线相对于地面的高度与从地形高程数据源中获得的地形高程值之和构成（若已指定数据源）。
 
 与 GenerateReceptionPointResult 不同，GenerateReceptionPointDetailedResult 始终计算天线增益，即使所选结果类型的计算并不需要天线增益。该方法还提供用于获取天线方向图增益的方位角和俯仰角的计算值。方位角以真北为参考；俯仰角以局部地平线为参考，其中 -90 表示天顶，0 表示天文地平线，+90 表示天底。俯仰角的计算基于中等折射率条件，并使用天线高度及通信两端之间的地形剖面（如果仿真中指定了一个或多个地形高程数据源）。在视距条件下，俯仰角的计算方向是朝向另一端天线；否则，俯仰角将朝向无线电地平线（即地形遮挡角）。
+
+---
 
 
 ```c++
@@ -2172,6 +2222,8 @@ latitude_degrees 和 longitude_degrees 表示接收点的位置。numSamples 表
 
 调用此方法后，之前在同一个仿真对象上通过调用 `GenerateReceptionAreaResults` 所生成的结果将不再可访问。
 
+---
+
 ```c++
 - int GetGenerateStatus()
 ```
@@ -2204,6 +2256,8 @@ latitude_degrees 和 longitude_degrees 表示接收点的位置。numSamples 表
 当 `GetGenerateStatus` 返回 0（STATUS_OK）时，则不适用其他状态值。  
 否则可以使用按位与操作符（&）对返回值进行检查，以确定适用的状态值。例如：
 
+
+---
 
 ```c++
 int status = sim->GetGenerateStatus();
@@ -2241,6 +2295,8 @@ if( (status & STATUS_SOME_TERRAIN_ELEV_DATA_MISSING) != 0 )
 
 最后，请注意：如果所有对应的数据源均设置为 NONE，则一般不会触发任何标志，因为此时 CRC-COVLIB 被指示不查找任何数据。
 
+---
+
 ```c++
 - double GetReceptionAreaResultValue(int xIndex, int yIndex)
 ```
@@ -2251,6 +2307,8 @@ if( (status & STATUS_SOME_TERRAIN_ELEV_DATA_MISSING) != 0 )
 `yIndex` 必须是一个整数，范围为 0 到接收区域中垂直接收点数量减 1。  
 当索引超出有效范围时，返回值为 0。
 
+---
+
 ```c++
 - void SetReceptionAreaResultValue(int xIndex, int yIndex, double value)
 ```
@@ -2260,6 +2318,8 @@ if( (status & STATUS_SOME_TERRAIN_ELEV_DATA_MISSING) != 0 )
 `xIndex` 必须是一个整数，范围为 0 到接收区域中水平接收点数量减 1；  
 `yIndex` 必须是一个整数，范围为 0 到接收区域中垂直接收点数量减 1。
 
+---
+
 ```c++
 - double GetReceptionAreaResultValueAtLatLon(double Latitude_degrees, double Longitude_degrees)
 ```
@@ -2268,6 +2328,8 @@ if( (status & STATUS_SOME_TERRAIN_ELEV_DATA_MISSING) != 0 )
 一旦调用了 `GenerateReceptionAreaResults` 方法，即可调用该方法以获取接收区域中指定地理位置处的计算结果。  
 该结果是通过对接收区域中最邻近的接收点的已计算结果进行插值获得的。  
 当指定位置在接收区域之外时，返回值为 0。
+
+---
 
 ```c++
 - double GetReceptionAreaResultLatitude(int xIndex, int yIndex)
@@ -2280,6 +2342,8 @@ if( (status & STATUS_SOME_TERRAIN_ELEV_DATA_MISSING) != 0 )
 `yIndex` 必须是从 0 到接收区域中垂直点数减 1 的整数。  
 当索引超出有效范围时，返回值为 0。
 
+---
+
 ```c++
 - bool ExportReceptionAreaResultsToTextFile(const char* pathname, const char* resultsColumnName=NULL)
 ```
@@ -2290,6 +2354,8 @@ if( (status & STATUS_SOME_TERRAIN_ELEV_DATA_MISSING) != 0 )
 `pathname` 应为一个字符串，包含要创建或覆盖的文件名，可选包含完整路径或相对路径。  
 `resultsColumnName` 可用于指定文件标题行中结果列的列名；若未指定，则使用默认列名。  
 当文件成功创建或覆盖时返回 `true`，否则返回 `false`。
+
+---
 
 ```c++
 - bool ExportReceptionAreaResultsToMifFile(const char* pathname, const char* resultsUnits=NULL)
@@ -2302,6 +2368,8 @@ MIF 文件将基于定义好的覆盖显示填充（coverage display fills）提
 `resultsUnits` 可用于修改结果的默认计量单位（当使用 `SetReceptionAreaResultValue` 修改了接收区域内容，并赋值使用的单位与所选结果类型默认单位不一致时，这一参数将很有用）。  
 当 MIF 与 MID 两个文件均成功创建或覆盖时返回 `true`，否则返回 `false`。  
 MIF 文件可通过大多数地理信息系统（GIS）软件进行展示。
+
+---
 
 ```c++
 - bool ExportReceptionAreaResultsToKmlFile(const char* pathname, double fillOpacity_percent=50, double lineOpacity_percent=50, const char* resultsUnits=NULL)
@@ -2316,6 +2384,8 @@ KML 文件将基于定义好的覆盖显示填充（coverage display fills）提
 当文件成功创建或覆盖时返回 `true`，否则返回 `false`。  
 KML 文件可通过 Google Earth 以及大多数地理信息系统（GIS）软件进行查看。
 
+---
+
 ```c++
 - bool ExportReceptionAreaResultsToBilFile(const char* pathname)
 ```
@@ -2326,6 +2396,8 @@ BIL 文件将包含与接收区域中每个接收点对应的结果值。
 `pathname` 应为一个字符串，包含要创建或覆盖的 BIL 文件名，可选包含完整路径或相对路径。  
 当三个文件均成功创建或覆盖时，返回 `true`，否则返回 `false`。  
 BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
+
+---
 
 ```c++
 - bool ExportReceptionAreaTerrainElevationToBilFile(const char* pathname, int numHorizontalPoints, int numVerticalPoints, bool setNoDataToZero=false)
@@ -2339,6 +2411,8 @@ BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 
 当三个文件均成功创建或覆盖时，返回 `true`，否则返回 `false`。  
 BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
+
+---
 
 ```c++
 - bool ExportReceptionAreaLandCoverClassesToBilFile(const char* pathname, int numHorizontalPoints, int numVerticalPoints, bool mapValues)
@@ -2354,6 +2428,8 @@ BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 当三个文件均成功创建或覆盖时，返回 `true`，否则返回 `false`。  
 BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 
+---
+
 ```c++
 - bool ExportReceptionAreaSurfaceElevationToBilFile(const char* pathname, int numHorizontalPoints, int numVerticalPoints, bool setNoDataToZero=false)
 ```
@@ -2366,6 +2442,8 @@ BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
 
 当三个文件均成功创建或覆盖时，返回 `true`，否则返回 `false`。  
 BIL 文件可通过大多数地理信息系统（GIS）软件进行查看。
+
+---
 
 ```c++
 - bool ExportProfilesToCsvFile(const char* pathname, double Latitude_degrees, double Longitude_degrees)
