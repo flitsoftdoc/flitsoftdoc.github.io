@@ -105,10 +105,10 @@ bool SetITUProprietaryDataDirectory(const char* directory)
 如果仿真对象（由 `NewSimulation` 和 `DeepCopySimulation` 创建）使用了 ITU-R P.1812、ITU-R P.452 或 ITU-R P.676 中的任一模型，则可能需要使用国际电信联盟（ITU）提供的数字地图文件。应使用 `SetITUProprietaryDataDirectory` 来指定这些 ITU 数字地图文件的位置。更准确地说，CRC-COVLIB 需要查找以下四个文件：
 
 
-1. DN50.TXT from https://www.itu.int/dms pubrec/itu-r/rec/p/R-REC-P.1812-7-202308-I!!ZIP-E.zip
+1. DN50.TXT from https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.1812-7-202308-I!!ZIP-E.zip
 2. N050.TXT from https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.1812-7-202308-I!!ZIP-E.zip
-3. T_Annual.TXT from https://www.itu.int/dms pubrec/itu-r/rec/p/R-REC-P.1510-1-201706-I!!ZIP-E.zip
-4. surfwv_50_fixed.txt from https://www.itu.int/dms pubrec/itu-r/rec/p/R-REC-P.2001-5-202308-I!!ZIP-E.zip
+3. T_Annual.TXT from https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.1510-1-201706-I!!ZIP-E.zip
+4. surfwv_50_fixed.txt from https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.2001-5-202308-I!!ZIP-E.zip
 
 由于我们请求重新分发这些文件或将其集成至 CRC-COVLIB 源代码的提议被 ITU 礼貌地拒绝，因此这些文件需要从其官方网站下载。然而，我们获得了创建下载脚本的许可，但需满足以下三个条件：在下载过程中显示文件的原始 URL；包含一条说明，指出这些文件仅供个人使用；文件必须保留为原始的文本格式（.txt）。因此，用户可以手动安装这些文件，或者使用提供的 `install_ITU_data.py` Python 脚本进行安装。
 
@@ -159,9 +159,10 @@ if __name__ == '__main__':
 
 
 ---
-
+```c++
 - void SetTransmitterHeight(double height_meters)
 - double GetTransmitterHeight()
+```
 
 设置/获取发射机辐射中心距地面的高度，单位为米。对于 Longley-Rice 传播模型，有效高度范围为 0.5 至 3000 米；对于 ITU-R P.1812 传播模型，有效高度范围为 1 至 3000 米；ITU-R P.452 模型未定义发射机高度的范围限制；对于 eHata 传播模型，有效高度范围为 30 至 200 米。`SetTransmitterHeight` 方法仅接受 0.5 至 3000 米之间的数值。默认值为 50 米。
 
