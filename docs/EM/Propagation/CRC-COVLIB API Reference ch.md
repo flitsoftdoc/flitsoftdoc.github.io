@@ -912,13 +912,13 @@ P452HeightGainModelClutterCategory clutterCategory, P452HeightGainModelClutterPa
 不会添加任何杂波损耗。
 
 
-### P452_USE_CUSTOM_AT_CATEGORY
+### `P452_USE_CUSTOM_AT_CATEGORY`
 
 当模式被设置为 `P452_USE_CUSTOM_AT_CATEGORY` 并应用于路径中 `TRANSMITTER` 端时，将使用 `P452_HGM_CUSTOM_AT_TRANSMITTER` 杂波类别的名义高度和距离进行发射端站点的杂波损耗计算。  
 同样地，当模式被设置为 `P452_USE_CUSTOM_AT_CATEGORY` 并应用于路径中 `RECEIVER` 端时，将使用 `P452_HGM_CUSTOM_AT_RECEIVER` 杂波类别的名义高度和距离进行接收端站点的杂波损耗计算。
 
 
-### P452_USE_CLUTTER_PROFILE
+### `P452_USE_CLUTTER_PROFILE`
 
 将在发射端与接收端之间使用一个杂波类别剖面。在该剖面中，距离发射端或接收端100米范围内所出现的、具有最大名义高度值的杂波类别将被保留。随后，将使用该保留杂波类别的名义高度和距离值来进行杂波损耗的计算。
 
