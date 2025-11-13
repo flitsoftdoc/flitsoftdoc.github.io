@@ -213,32 +213,32 @@ throw new ExpWeHaveAProblem();
 **Reason:**  这会削弱编译器确保常量变量或对象不被修改的能力。
 
 **Rule:** 不要在函数调用的参数中直接创建新对象  
-Example: func( new Abc() )  
+Example: `func( new Abc() ) ` 
 **Reason:**  这将造成内存泄漏。谁负责释放或删除该对象是不明确的。
 
 ## 5. Classes
 
 **Rule:** 所有类和类型的名称应以大写字母开头，并在名称中每增加一个单词时以大写字母开头。  
-Example: ClassNamesStartUpperCase  
+Example: `ClassNamesStartUpperCase  `
 **Reason:**  这有助于提高程序可读性。
 
 **Rule:** 基于首字母缩略词的类名不应全部大写。  
 **Reason:**  否则不易明显区分为类名，并可能与其他命名风格混淆。例如，Surface-to-Air-Missile 类应命名为 “Sam” 而不是 “SAM”，后者可能与常量混淆。
 
-**Rule:** 在创建类时，应将内容排列为 public 部分最先，然后是 protected，最后是 private。  
+**Rule:** 在创建类时，应将内容排列为 `public` 部分最先，然后是 `protected`，最后是 `private`。  
 **Reason:**  这样能使代码更易理解且更统一。
 
-**Rule:** 不要使用 public 成员变量。  
+**Rule:** 不要使用`public` 成员变量。  
 **Reason:**  该规则符合信息隐藏与模块化的工程原则。
 
-**Recommendation:** 不要使用 protected 成员变量。  
+**Recommendation:** 不要使用 `protected` 成员变量。  
 **Reason:**  这符合信息隐藏与模块化的工程原则。
 
 **Rule:** 不要使用多重继承。  
 **Reason:**  使用多重继承会增加维护难度与程序复杂性。
 
 **Rule:** 对成员函数返回的指向内部私有数据的指针或引用，加上 “const” 限定符。  
-Example: const float* getDataArray() const;  
+Example: `const float* getDataArray() const;  `
 **Reason:**  这将限制修改私有数据的能力，使程序更加可靠。
 
 **Rule:** 如果成员函数确实需要返回不带 “const” 限定符的指针，则应同时提供 const 与非 const 版本的函数。  
