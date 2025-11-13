@@ -1307,12 +1307,14 @@ ITU_MAP_SURFWV_50
 
 ## Terrain elevation data methods
 
+```cpp
 - void SetPrimaryTerrainElevDataSource(TerrainElevDataSource terrainELevSource)
 - TerrainElevDataSource GetPrimaryTerrainElevDataSource()
 - void SetSecondaryTerrainElevDataSource(TerrainElevDataSource terrainELevSource)
 - TerrainElevDataSource GetSecondaryTerrainElevDataSource()
 - void SetTertiaryTerrainElevDataSource(TerrainElevDataSource terrainELevSource)
 - TerrainElevDataSource GetTertiaryTerrainElevDataSource()
+```
 
 设置/获取地形高程数据（即地面高度）的来源。**主来源（primary source）**是 CRC-COVLIB 在尝试获取地形高程数据时优先使用的数据源；若在某位置无法从主来源获取地形高程数据，则 CRC-COVLIB 会尝试从**次来源（secondary source）**获取；若主、次来源均无法提供数据，则使用**第三来源（tertiary source）**。
 
