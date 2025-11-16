@@ -9,6 +9,7 @@
 **导师：** David Galvao Wall  
 
 **机构：** Cranfield University 国防与安全学院（Cranfield Defence and Security）  
+
 **专业方向：** 远征作战系统工程（Expeditionary Warfare Systems Engineering）  
 
 **CRANFIELD UNIVERSITY**  
