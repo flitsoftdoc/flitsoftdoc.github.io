@@ -162,8 +162,8 @@ $$
 
 现在我们反过来考察从地面站到卫星的链路。我们希望获知从地面站观测卫星时的方位角（azimuth）和仰角（elevation）。再次回顾图 6.5 中的球面三角形，角 $C$ 即为从地面站观测卫星的方位角。此处我们仍采用第 6.1.1 节中使用的相同轨道参数。
 
-由于已知角 $A$（$8^{\circ}$）、边 $a$（$11.2^{\circ}$）和边 $c$（$45^{\circ}$），可利用球面正弦定理（spherical law of sines）求解角 $C$：$$\frac{\sin C}{\sin c} = \frac{\sin A}{\sin a}
-$$根据实际物理情境可知（信号情报采集平台（SVP）位于地面站以南（纬度 $45^{\circ}$ 对比 $55^{\circ}$），且经度差较小（$8^{\circ}$）），角 $C$ 应大于 $90^{\circ}$。
+由于我们已知角 A（$8^{\circ}$）、边 a（$11.2^{\circ}$）和边 c（$45^{\circ}$），可通过球面正弦定理（spherical law of sines）求出角 C：$\sin C / \sin c = \sin A / \sin a$。但根据物理情境（星下点（SVP, Sub-Satellite Point）位于地面站以南（纬度为 $45^{\circ}$，而地面站纬度为 $55^{\circ}$），且经度差较小（$8^{\circ}$）），可知角 C 大于 $90^{\circ}$。
+
 $$
 \begin{aligned}
 C & =\arcsin [\sin c(\sin A / \sin a)] \\
@@ -341,6 +341,7 @@ P_T+G_T-\text { Atmospheric and Rain Losses in Atmosphere } \\
 $$
 
 其中：
+
 - $J / S$ 为干扰信号与期望信号功率比（单位：dB）；
 - $P_{J}$ 为卫星干扰机输出功率（单位：dBm）；
 - $G_{J}$ 为干扰发射机的主瓣增益（boresight gain，单位：dBi）；
@@ -369,8 +370,8 @@ $$
 J / S = E R P_{J} - E R P_{S} + 71 + 40 \log R_{T} - 20 \log R_{J} + G_{S} - G_{M} - 10 \log R C S
 $$
 
+其中：
 
-其中：  
 - $J / S$ 为实现的干扰信号与雷达回波功率比（单位：dB）；  
 - $E R P_{J}$ 为卫星干扰机的有效辐射功率（effective radiated power，单位：dBm）；  
 - $R_{T}$ 为目标雷达与其跟踪目标之间的距离（单位：km）；  

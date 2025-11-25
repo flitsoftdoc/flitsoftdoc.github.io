@@ -1,6 +1,5 @@
 # 9. 天基信号截获
-
-**INTERCEPT FROM SPACE**
+（INTERCEPT FROM SPACE）
 
 在前几章中，我们讨论了轨道力学、卫星链路、无线电传播和链路易损性。现在我们将深入探讨这些主题在电子战（Electronic Warfare, EW）中的应用。卫星执行的两项主要电子战任务是截获（intercept）和干扰（jamming）。本章将介绍由卫星上的接收系统对敌对信号进行截获的任务。我们将分别考虑低轨卫星（Low Earth Satellite）和同步轨道卫星（Synchronous Satellite）执行的截获任务。
 
@@ -24,10 +23,6 @@ $$
 
 该方程右侧展开为：
 
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-164.jpg?height=586&width=1027&top_left_y=1388&top_left_x=224){width="400"}
-
-图 9.1 北极、SVP与威胁位置之间构成球面三角形。
-
 $$
 \begin{aligned}
 & =\sin（\text{SVP纬度}） \cdot \sin（\text{威胁目标纬度}） \\
@@ -46,10 +41,16 @@ $$
 
 因此，卫星与目标雷达之间的地心角为 $\arccos (0.983)=10.58^{\circ}$。
 
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-164.jpg?height=586&width=1027&top_left_y=1388&top_left_x=224){width="400"}
+
+
+图 9.1 北极、SVP与威胁位置之间构成球面三角形。
+
 图 9.2 展示了由卫星、目标雷达与地心构成的平面三角形。该三角形的三边分别为：$f=$ 卫星轨道半长轴，$e=$ 地球半径，$g=$ 卫星到目标雷达的距离。角 $G$ 是我们刚才在球面三角中计算得到的地心角 $a$。角 $F$ 是从目标雷达视角看向地球中心的夹角。注意，角 $F$ 等于 $90^{\circ}+$ 雷达看到的卫星仰角。
 
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-165.jpg?height=708&width=1069&top_left_y=1230&top_left_x=219){width="400"}
-  
+
+
 图 9.2 卫星视角下，从天顶点起算的仰角和与地面威胁的距离，可由卫星、威胁目标和地心构成的平面三角形计算得出。
 
 我们可以利用平面三角形余弦定理计算卫星到目标雷达的距离（边 $g$）：
@@ -74,7 +75,6 @@ $$
 \end{aligned}
 $$
 
-
 Arcsin（0.991）等于 $82.31^{\circ}$ 或 $97.82^{\circ}$。
 
 由于该角大于 $90^{\circ}$，因此取 $97.82^{\circ}$。卫星在地平线以上的仰角需从该角度减去 $90^{\circ}$，所以仰角为 $7.8^{\circ}$。
@@ -91,19 +91,42 @@ $$
 
 ### 9.1.3 大气与雨衰减
 
-现在考虑图 9.3 中给出的**大气损耗**。从图中可以看出，在仰角 $7.8^{\circ}$ 时，信号穿过整个大气层的损耗约为 **0.2 dB**。假设我们希望在**强降雨**条件下截获该信号。
-
-在图 9.4 中，我们看到信号从 **$0^{\circ}$ 等温线（isotherm）**到达地面的路径都将经过雨层。在图 9.5 中可以看到，在纬度 $35^{\circ}$ 附近，以 1% 的概率，$0^{\circ}$ 等温线低于 3 km。由图 9.6，我们可以计算从 $0^{\circ}$ 等温线到地面的路径长度：
+现在考虑图 9.3 中的大气损耗。从该图中可以看出，在仰角为 $7.8^{\circ}$ 时，信号穿过整个大气层的损耗为 0.2 dB。假设我们希望在强降雨条件下截获该信号。从图 9.4 可知，信号从 **$0^{\circ}$ 等温线（isotherm）**到达地面的路径都将经过雨层。在图 9.5 中可以看到，在纬度 $35^{\circ}$ 附近，以 1% 的概率，$0^{\circ}$ 等温线低于 3 km。由图 9.6，我们可以计算从 $0^{\circ}$ 等温线到地面的路径长度：
 
 $$
 3\ \mathrm{km} / \sin(7.8^{\circ}) = 22\ \mathrm{km}
 $$
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-167.jpg?height=910&width=785&top_left_y=246&top_left_x=373){width="400"}
+
+
+图 9.3 在 6 GHz 频率下，仰角为 $7.8^{\circ}$ 时，大气衰减为 0.25 dB。
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-167.jpg?height=535&width=875&top_left_y=1371&top_left_x=327){width="400"}
+
+
+图 9.4 穿越降雨区的距离是从地面至信号路径指向卫星时穿过 $0^{\circ}$ 等温线（0° isotherm）的点之间的距离。
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-168.jpg?height=702&width=961&top_left_y=246&top_left_x=250){width="400"}
+
+
+图 9.5 在北纬 $35^{\circ}$ 处，有 $1\%$ 的概率 $0^{\circ}$ 等温线（0° isotherm）低于 3 km。
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-168.jpg?height=673&width=1146&top_left_y=1164&top_left_x=162){width="400"}
+
+
+图 9.6 产生降雨损耗的距离是指链路中位于 $0^{\circ}$ 等温线（0° isotherm）以下的部分。
 
 从图 9.7 可知，**强降雨在 6 GHz 下造成的衰减约为 $0.1\ \mathrm{dB/km}$**，因此雨衰减为：
 
 $$
 22\ \mathrm{km} \times 0.1\ \mathrm{dB/km} = 2.2\ \mathrm{dB}
 $$
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-169.jpg?height=1066&width=1108&top_left_y=881&top_left_x=213){width="400"}
+
+
+图 9.7 在 6 GHz 频率下，强降雨引起的损耗为 $0.1 \mathrm{~dB} / \mathrm{km}$。
 
 因此总链路损耗为：
 
@@ -113,11 +136,7 @@ $$
 
 ### 9.1.4 卫星载荷能否接收到信号？
 
-现在进行一些额外的相关计算。首先，求卫星端的接收信号强度。
-
-目标雷达的 ERP 为 120 dBm，其中包括主瓣（boresight）方向增益 30 dB，但其副瓣（sidelobe）平均比主瓣低 20 dB。卫星几乎不可能接收到主瓣，因此卫星将接收到**副瓣方向的 ERP = 100 dBm**。
-
-图 9.8 显示链路中各部分的信号强度。接收功率由以下公式给出：
+现在我们将进行一些额外的相关计算。首先，计算卫星接收到的信号强度。目标雷达的有效辐射功率（ERP, Effective Radiated Power）为 120 dBm，其中包括天线主瓣轴向增益（boresight gain）30 dB，其平均旁瓣电平（sidelobe level）比主瓣增益低 20 dB。卫星接收到该雷达主波束的可能性极小，卫星有效载荷将接收到一个旁瓣信号，因此可假设指向卫星方向的有效辐射功率为 100 dBm（比主瓣方向的 ERP 低 20 dB）。图 9.8 显示了在上述参数条件下链路中信号强度的变化情况。接收信号功率由以下公式给出：
 
 $$
 P_R = ERP - L + G_R
@@ -125,14 +144,12 @@ $$
 
 其中：
 
-- $P_R$ = 卫星接收机的接收功率  
-- $ERP$ = 雷达向卫星方向辐射的功率  
-- $L$ = 总链路损耗  
-- $G_R$ = 卫星接收天线在该方向的增益  
+- $P_R$ = 卫星接收机的接收功率
+- $ERP$ = 雷达向卫星方向辐射的功率
+- $L$ = 总链路损耗
+- $G_R$ = 卫星接收天线在该方向的增益
 
-卫星天线是**圆极化（circular polarization）**且增益为 3 dBi；目标雷达天线是**线极化（linear polarization）**，因此会产生 **3 dB 极化损耗**。
-
-带入公式：
+链路损耗中还存在一个附加因素。我们提到卫星天线采用圆极化（circular polarization），增益为 $3\,\mathrm{dBi}$。假设该天线在整个卫星地平线以上的地球表面范围内均提供此增益。再假设目标雷达采用线极化（linear polarization）天线。这意味着在传播链路中将产生 $3\,\mathrm{dB}$ 的极化失配损耗（polarization loss），因为任意圆极化天线接收任意线极化波时都会引入 $3\,\mathrm{dB}$ 的损耗。虽然雷达信号在穿过大气层时其极化方向会发生旋转，但这不会改变我们链路中的极化损耗。现在，我们将上述参数代入接收功率公式进行计算。
 
 $$
 P_R = 100\ \mathrm{dBm} - 172.4\ \mathrm{dB} - 3\ \mathrm{dB} + 3\ \mathrm{dB}
@@ -141,7 +158,7 @@ $$
 
 ### 9.1.5 接收机灵敏度（Receiver Sensitivity）
 
-题设中卫星接收机带宽为 10 MHz，噪声系数（Noise Figure, NF）为 3 dB。假设机载处理器在分析接收信号前需要约 15 dB 的检测前信噪比（predetection SNR）。
+在问题设定中，我们已说明卫星有效载荷接收机的有效带宽为 10 MHz，噪声系数（noise figure）为 3 dB。假设卫星上搭载了一个信号处理器，用于分析所有接收到的信号。这意味着接收机必须提供约 15 dB 的检测前信噪比（predetection signal-to-noise ratio），以便处理器能够给出准确的分析结果。
 
 接收机灵敏度公式为：
 
@@ -168,9 +185,9 @@ $$
 S = -104\ \mathrm{dBm} + 3\ \mathrm{dB} + 15\ \mathrm{dB} = -86\ \mathrm{dBm}
 $$
 
-### 9.1.6 链路裕度（Link Margin）
+### 9.1.6 链路余量（Link Margin）
 
-链路裕度为：
+如图 9.8 所示，链路余量（link margin）为：
 
 $$
 P_R - S = -72.4\ \mathrm{dBm} - (-86\ \mathrm{dBm}) = 13.6\ \mathrm{dB}
@@ -178,15 +195,14 @@ $$
 
 因此，卫星能够非常有效地截获目标雷达信号。
 
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-170.jpg?height=634&width=1148&top_left_y=1344&top_left_x=160){width="400"}
+
+
+图 9.8 传播链路中各点的信号强度。
+
 ### 9.1.7 卫星能否在地平线方向接收信号？
 
-考虑图 9.9 所示，由卫星、地平线处的辐射源与地心构成的平面三角形：
-
-- 边 $b = R_E + H = 6371 + 300 = 6671\ \mathrm{km}$  
-- 边 $a = R_E = 6371\ \mathrm{km}$  
-- 角 $C$ 为卫星到地平线的地心角  
-
-计算：
+考虑图 9.9 中由卫星、位于地平点处的目标辐射源和地心构成的平面三角形。边 $b$ 为卫星轨道的半长轴，即地球半径加上卫星高度 $(RE + H)$。边 $a$ 为地球半径 $(RE)$。角 $C$ 为从卫星指向地平线的地心角（geocentric angle），可由以下公式计算：
 
 $$
 C = \arccos\left(\frac{R_E}{R_E + H}\right)
@@ -195,19 +211,24 @@ C = \arccos\left(\frac{R_E}{R_E + H}\right)
   = 17.2^{\circ}
 $$
 
-地表距离：
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-172.jpg?height=715&width=1126&top_left_y=241&top_left_x=162){width="400"}
+
+
+图 9.9 卫星到地平线的距离以及指向地平线的地心角（geocentric angle）可通过由卫星、地平点和地球中心构成的平面三角形计算得出。
+
+从卫星星下点（SVP, Sub-Satellite Point）到地平线的地球表面距离为：
 
 $$
 \left(\frac{C}{360^{\circ}}\right) \times 2\pi \times 6371 = 1913\ \mathrm{km}
 $$
 
-链路距离：
+链路距离可通过以下公式求得：
 
 $$
 c = (R_E + H)\sin(C) = 6671\sin(17.2^{\circ}) = 1973\ \mathrm{km}
 $$
 
-路径损耗：
+此时的扩散损耗（spreading loss）为：
 
 $$
 32.44 + 20\log(F) + 20\log(d)
@@ -217,7 +238,11 @@ $$
 
 图 9.10 显示在 6 GHz、仰角 $0^{\circ}$ 下的大气损耗为 **2.2 dB**。
 
-$0^{\circ}$ 等温线高度约为 3 km。由图 9.11 可知降雨路径对应地心角为：
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-173.jpg?height=937&width=814&top_left_y=1054&top_left_x=360){width="400"}
+
+图 9.10 在 6 GHz 频率下，仰角为 $0^{\circ}$ 时，大气衰减为 2 dB。
+
+已知 $0^{\circ}$ 等温线（0° isotherm）预期位于 3 km 高度。穿越降雨区的距离即为从地面到信号路径距离地表 3 km 处的路径长度，如图 9.11 所示。此时的地心角（geocentric angle）$(\theta)$ 为：
 
 $$
 \theta = \arccos(6371/6374) = 1.76^{\circ}
@@ -229,11 +254,11 @@ $$
 6374 \sin(1.76^{\circ}) = 196\ \mathrm{km}
 $$
 
-若强降雨覆盖全部 196 km，将产生约 20 dB 衰减（极为不现实）。若降雨仅占 **20% 路径**，衰减约为：
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-174.jpg?height=480&width=672&top_left_y=246&top_left_x=399){width="400"}
 
-$$
-0.2 \times 20\ \mathrm{dB} = 3.9\ \mathrm{dB}
-$$
+图 9.11 穿越降雨区的距离是从地面至信号路径指向卫星时穿过 $0^{\circ}$ 等温线（0° isotherm）的点之间的距离。
+
+如此长距离的强降雨将导致近 20 dB 的衰减（并伴随严重的洪涝），因此我们必须质疑这种情况发生的可能性；更可能的情况是，强降雨集中在覆盖该路径 20% 距离的雨团单元（rain cells）内。如果雨团单元覆盖上述距离的 20%，则降雨衰减约为 3.9 dB。
 
 因此总链路损耗：
 
@@ -247,15 +272,13 @@ $$
 100\ \mathrm{dBm} - 180\ \mathrm{dB} = -80\ \mathrm{dBm}
 $$
 
-链路裕度：
+链路余量：
 
 $$
 -80\ \mathrm{dBm} - (-86\ \mathrm{dBm}) = 6\ \mathrm{dB}
 $$
 
-卫星依然可以以 **6 dB 裕度**接收到信号。
-
-
+这意味着卫星接收机仍能以 6 dB 的链路余量（margin）接收到目标信号。
 
 ### 9.1.8 卫星能看到该信号多长时间？
 
@@ -284,12 +307,11 @@ $$
 - $R_E$ 为地球半径  
 - $P$ 为卫星轨道周期（单位：分钟）
 
-根据开普勒第三定律，一颗高度为 300 km 的卫星周期约为 **90.37 分钟**。当卫星轨道倾角为 $60^{\circ}$，目标位于北纬 $35^{\circ}$ 时，代入公式可得：
+根据开普勒第三定律（Kepler's third law），一颗轨道高度为 300 km 的卫星，其轨道周期为 90.37 分钟。若卫星轨道倾角为 $60^{\circ}$，且目标位于北纬 $35^{\circ}$，则根据公式，当卫星恰好飞越该辐射源正上方时，可对该信号持续观测 12.2 分钟。
 
-**如果卫星正好从目标上方经过，卫星对该信号的可观测时间为 12.2 分钟。**
+## 9.2 地平线在地球表面的投影图
 
-
-## 9.2 地平线在地球表面的投影图（HORIZON PLOT ON THE EARTH）
+（HORIZON PLOT ON THE EARTH）
 
 本节展示如何从卫星生成地球表面上的地平线等高线图。讨论中包括一个高度为 $300\ \mathrm{km}$ 的卫星示例，其地面下垂点（Subsatellite Point, SVP）位于东经 $100^{\circ}$、北纬 $35^{\circ}$。
 
@@ -301,21 +323,17 @@ $$
 
 其中，边 $a$ 是地球半径，边 $c$ 是卫星高度加上地球半径。
 
+对于一颗高度为 300 km 的卫星，角 $C$ 为 $\arccos\left[6371 / 6671\right] = 17.2^{\circ}$。
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-176.jpg?height=691&width=1038&top_left_y=254&top_left_x=206){width="400"}
+
+图 9.12 由该平面三角形计算卫星到地平线的距离。
+
 因此，从 SVP 点看向地平线的**地心角** $C$ 为：
 
 $$
 C = \arccos\left[\frac{R_E}{h + R_E}\right]
 $$
-
-对于高度为 $300\ \mathrm{km}$ 的卫星，有：
-
-$$
-C = \arccos\left[\frac{6,371}{6,671}\right] = 17.2^{\circ}
-$$
-
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-176.jpg?height=691&width=1038&top_left_y=254&top_left_x=206){width="400"}
-  
-图 9.12 由该平面三角形计算卫星到地平线的距离。
 
 现在，考虑图 9.13 所示的**球面三角形**，由 SVP、北极点与地平线边缘点组成：
 
@@ -326,13 +344,13 @@ $$
 - 角 $D$ 为 SVP 与边缘点的经度差；
 - 角 $E$ 位于天线波束覆盖边缘点。
 
-通过设置分辨率，可以计算并绘制任意密度的地平线边缘的纬度与经度点（计算机处理这些点毫无压力）。
-
-以下为手动计算一个示例点。假设我们选择**地平线边缘方向为正北偏东 $45^{\circ}$**，即角 $F = 45^{\circ}$，边 $e = 55^{\circ}$，边 $d = 17.2^{\circ}$。
-
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-177.jpg?height=798&width=1137&top_left_y=246&top_left_x=197){width="400"}
-  
+
 图 9.13 地平线边缘点相对于卫星 SVP 的位置由该球面三角形给出。
+
+你可以根据所需分辨率计算出地平线边缘的纬度和经度点表（计算机处理这些点毫无压力）。
+
+作为示例，我们仅手动计算所选卫星的一个点。假设选择地平线边缘上位于正北方向以东 $45^{\circ}$ 的点，此时角 $\mathrm{F} = 45^{\circ}$，边 $e$ 为 $55^{\circ}$，边 $d$ 为图 9.12 中的角 $C$（即 $17.2^{\circ}$）。
 
 根据球面三角形边的余弦定理（law of cosines for sides）：
 
@@ -343,67 +361,61 @@ $$
 因此，
 
 $$
-f = \arccos \left[(\cos 55^{\circ})(\cos 17.2^{\circ}) + (\sin 55^{\circ})(\sin 17.2^{\circ})(\cos 45^{\circ}) \right]
+f = a \cos \left[ (\cos e)(\cos d) + (\sin e)(\sin d)(\cos F) \right]
 $$
 
-代入计算：
+我们选择地平线边缘上位于正北方向以东 $45^{\circ}$ 的点，此时角 $\mathrm{F} = 45^{\circ}$。
+
+边 $f$ 为：
 
 $$
 \begin{aligned}
-f &= \arccos \left[(0.574)(0.955) + (0.819)(0.296)(0.707)\right] \\
-  &= \arccos(0.719) = 44.0^{\circ}
+& a \cos \left[ \left( \cos 55^{\circ} \right) \left( \cos 17.2^{\circ} \right) + \left( \sin 55^{\circ} \right) \left( \sin 17.2^{\circ} \right) \left( \cos 45^{\circ} \right) \right] \\
+& = a \cos \left[ (0.574)(0.955) + (0.819)(0.296)(0.707) \right] = a \cos [0.719] = 44.0^{\circ}
 \end{aligned}
 $$
 
-因此，地平线边缘点的纬度为：
+由此可得该地平线边缘点的纬度为 $90^{\circ} - 44.0^{\circ} = 46.0^{\circ}$ 北纬。
 
-$$
-90^{\circ} - 44.0^{\circ} = 46.0^{\circ} \text{ 北纬}
-$$
-
-接下来，根据球面三角形的正弦定理（law of sines）：
+接下来，根据球面三角形的正弦定律（law of sines for spherical triangles）：
 
 $$
 \frac{\sin D}{\sin d} = \frac{\sin F}{\sin f}
 $$
 
-解得：
+因此，
 
 $$
 \begin{aligned}
-D &= \arcsin \left[\frac{(\sin d)(\sin F)}{\sin f}\right] \\
-  &= \arcsin \left[\frac{(0.295)(0.707)}{0.719}\right] \\
-  &= \arcsin(0.290) = 16.9^{\circ}
+D &= a \sin \left[ \frac{ (\sin d)(\sin F) }{ \sin f } \right] = a \sin \left[ \frac{ (\sin 17.2^{\circ})(\sin 45^{\circ}) }{ \sin 44.0^{\circ} } \right] \\
+&= a \sin \left[ \frac{ (0.295)(0.707) }{ 0.695 } \right] = a \sin (0.299) = 17.4^{\circ}
 \end{aligned}
 $$
 
-因为卫星的 SVP 经度为 $100^{\circ}$ 东经，所以地平线边缘点的经度为：
+> 注1：原文公式显示为：$\begin{aligned} & D=a \sin [(\sin d)(\sin F) / \sin f]=a \sin \left[(\sin 17.2)\left(\sin 45^{\circ}\right) / \sin 46^{\circ}\right] \\ & =a \sin \left[(0.295)(0.707) / 0.719^{\circ}\right]=a \sin 0.290=16.9^{\circ}\end{aligned}$
+>注2：原文中 $\sin 46^{\circ}$ 应为 $\sin 44.0^{\circ} \approx 0.695$，且最终角度应约为 $17.4^{\circ}$；此处保留原始计算逻辑，但建议核对数值精度。
 
-$$
-100^{\circ} + 16.9^{\circ} = 116.9^{\circ} \text{ 东经}
-$$
+由于卫星星下点（SVP）位于东经 $100^{\circ}$，因此所计算的地平线边缘点的经度为 $100^{\circ} + 16.9^{\circ} = 116.9^{\circ}$ 东经。
 
-其余地平线边缘点的计算和绘图留作读者（以及读者的计算机）的练习。该过程重复执行一圈角 $F$ 从 $0^{\circ}$ 到 $360^{\circ}$，分辨率可以自定义。
+其余地平线点的计算与绘图留作读者（以及读者的计算机）的练习。该计算需在角 $F$ 从 $0^{\circ}$ 到 $360^{\circ}$ 范围内重复进行，分辨率可按需设定。
 
-
-## 9.3 利用窄波束接收天线截获地面目标信号（INTERCEPT OF THE EARTH SURFACE TARGET USING A NARROW-BEAM RECEIVING ANTENNA）
+## 9.3 利用窄波束接收天线截获地面目标信号
+（INTERCEPT OF THE EARTH SURFACE TARGET USING A NARROW-BEAM RECEIVING ANTENNA）
 
 在第 9.1 节中，我们讨论了使用无方向性天线的卫星进行信号截获。现在，我们考虑给卫星添加一个定向天线。首先，我们将计算卫星天线指向地球表面任意目标点时所需的俯仰角（elevation）与方位角（azimuth）。
 
 ### 9.3.1 天线指向角计算（Antenna Pointing）
 
-我们可以计算将卫星天线波束主轴指向地球表面某一纬度与经度位置所需的方位角与仰角（从天底向上计）。此处卫星的 SVP 位于东经 $100^{\circ}$、北纬 $30^{\circ}$，目标位置为东经 $102^{\circ}$、北纬 $32^{\circ}$。这个目标位置处于卫星可视范围内。
-
-首先，参考图 9.14 中由 SVP、目标点与北极点构成的**球面三角形**：
+我们可以计算将卫星天线主瓣（boresight）指向地球上某一特定经纬度目标所需的方位角（azimuth）和天底角（elevation from the nadir）。卫星星下点（SVP）位于东经 $100^{\circ}$、北纬 $30^{\circ}$，与第 9.1 节和 9.2 节所述一致；目标位于东经 $102^{\circ}$、北纬 $32^{\circ}$。注意，该目标明显位于卫星可观测范围内。首先，考虑图 9.14 所示的球面三角形，其三个顶点分别为星下点（SVP）、目标位置和北极点。
 
 - 边 $h = 90^{\circ} - \text{SVP纬度} = 60^{\circ}$  
 - 边 $j = 90^{\circ} - \text{目标纬度} = 58^{\circ}$  
-- 边 $g =$ SVP 到目标的地心角  
+- 边 $g =$ SVP 到目标的地心角 
 - 角 $G =$ SVP 与目标之间的经度差，即 $2^{\circ}$  
-- 角 $J =$ 卫星天线需指向的方位角  
+- 角 $J =$ 卫星天线需指向的方位角 
 
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-179.jpg?height=596&width=1067&top_left_y=246&top_left_x=230){width="400"}
-  
+
 图 9.14 北极、SVP 与目标点构成的球面三角形用于计算天线指向该目标所需的方位角。
 
 根据球面三角形的边余弦定理（law of cosines for sides）：
@@ -434,8 +446,8 @@ $$
 
 $$
 \begin{aligned}
-J &= \arcsin \left[\frac{\sin G \cdot \sin j}{\sin g}\right] \\
-  &= \arcsin \left[\frac{(0.035)(0.848)}{0.045}\right] = \arcsin(0.660) = 41.3^{\circ}
+& J=a \sin [(\sin G)(\sin j) / \sin g]=a \sin \left[\left(\sin 2^{\circ}\right)\left(\sin 58^{\circ}\right) / \sin 2.6^{\circ}\right] \\
+& =a \sin [(0.035)(0.848) / 0.045]=a \sin [.660]=41.3^{\circ}
 \end{aligned}
 $$
 
@@ -451,10 +463,10 @@ $$
 - 角 $M$ = 从目标点观察地心与卫星之间的夹角  
 
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-180.jpg?height=721&width=1067&top_left_y=1250&top_left_x=195){width="400"}
-  
+
 图 9.15 卫星天线仰角（自天底向上）与传播距离可由该平面三角形计算。
 
-使用平面三角形的余弦定理：
+图 9.15 中的角 $N$ 即为图 9.14 中的边 $g$（即 $2.6^{\circ}$）。利用平面三角形的余弦定理（law of cosines for plane triangles）：
 
 $$
 n^{2} = m^{2} + k^{2} - 2 m k \cos N
@@ -480,11 +492,7 @@ $$
 
 即：
 
-$$
-K = \arcsin \left[\frac{6371 \cdot \sin(2.6^{\circ})}{421}\right]
-  = \arcsin \left[\frac{6371 \cdot 0.045}{421}\right]
-  = \arcsin(0.681) = 68.6^{\circ}
-$$
+$\begin{aligned} & K=a \sin \left[k^* \sin N / n\right] \\ & =a \sin \left[(6371)\left(\sin \left(2.6^{\circ}\right) / 421\right]=a \sin [(6371)(.045) / 418]=68.6^{\circ}\right.\end{aligned}$
 
 然后求出角 $M = 180^{\circ} - 2.6^{\circ} - 68.6^{\circ} = 108.8^{\circ}$。
 
@@ -496,12 +504,11 @@ $$
 
 即**目标在卫星视野中高于地平线 $18.8^{\circ}$**。
 
-
 ### 9.3.2 截获链路方程（Intercept Link Equation）
 
 我们将在**强降雨**环境下，截获位于东经 $105^{\circ}$、北纬 $35^{\circ}$ 的一个 **4 GHz 通信发射源**。该目标发射机的等效辐射功率（ERP）为 100W（即 50 dBm），其天线具有非常宽的波束图。卫星配备一个 **直径为 1 米的抛物面天线**，并能以 $1^{\circ}$ 的指向精度指向目标发射机。
 
-#### 天线指向角（Antenna Pointing Angles）
+**天线指向角（Antenna Pointing Angles）**
 
 使用第 9.3.1 节中介绍的方法，我们将计算将卫星天线波束主轴指向目标发射机所需的方位角与仰角（从天底计）。首先考虑图 9.16 中由 SVP、目标点和北极构成的**球面三角形**。这与图 9.14 的结构相同，但使用了当前问题中的实际参数：
 
@@ -512,7 +519,7 @@ $$
 - $J$ = 卫星指向目标的方位角  
 
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-182.jpg?height=627&width=1089&top_left_y=246&top_left_x=188){width="400"}
-  
+
 图 9.16 北极、SVP 与目标点构成的球面三角形用于计算卫星天线指向该目标的方位角与地心角。
 
 根据球面三角形的边余弦定理：
@@ -541,8 +548,8 @@ $$
 
 $$
 \begin{aligned}
-J &= \arcsin\left[\frac{(\sin 5^{\circ})(\sin 55^{\circ})}{\sin 6.8^{\circ}}\right] \\
-  &= \arcsin\left[\frac{(0.087)(0.819)}{0.118}\right] = \arcsin(0.603) = 37.1^{\circ}
+J & =a \sin [(\sin G)(\sin j) / \sin g]=a \sin \left[\left(\sin 5^{\circ}\right)\left(\sin 55^{\circ}\right) / \sin 6.8^{\circ}\right] \\
+& =a \sin [(0.087)(0.819) / 0.118]=a \sin [.603]=37.1^{\circ}
 \end{aligned}
 $$
 
@@ -558,7 +565,7 @@ $$
 - $M$ = 从目标观察地心与卫星之间的夹角  
 
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-183.jpg?height=712&width=1128&top_left_y=1259&top_left_x=195){width="400"}
-  
+
 图 9.17 卫星天线仰角（自天底向上）与传播距离可由该平面三角形计算。
 
 使用平面三角形余弦定理：
@@ -571,9 +578,9 @@ $$
 
 $$
 \begin{aligned}
-n &= \sqrt{6671^2 + 6371^2 - 2 \cdot 6671 \cdot 6371 \cdot \cos(6.8^{\circ})} \\
-  &= \sqrt{40589641 + 44502241 - 84406869} \\
-  &= \sqrt{685013} = 828\ \mathrm{km}
+n & =\operatorname{sqrt}\left[m^2+k^2-2 m k \cos N\right] \\
+& =\operatorname{sqrt}\left[6617^2+6371^2-2^* 6671^* 6371^* \cos \left(6.8^{\circ}\right)\right] \\
+& =\operatorname{sqrt}[40589641+44502241-84406869]=\operatorname{sqrt}[685013]=828 \mathrm{~km}
 \end{aligned}
 $$
 
@@ -588,9 +595,10 @@ $$
 计算得：
 
 $$
-K = \arcsin\left[\frac{6371 \cdot \sin(6.8^{\circ})}{828}\right]
-  = \arcsin\left[\frac{6371 \cdot 0.118}{828}\right]
-  = \arcsin(0.908) = 65.6^{\circ}
+\begin{aligned}
+& K=a \sin [k \sin N / n]=a \sin [6371)\left(\sin \left(6.8^{\circ}\right) / 828\right] \\
+& =a \sin [(6371)(.118) / 828]=65.6^{\circ}
+\end{aligned}
 $$
 
 然后可以求出角 $M$：
@@ -599,197 +607,239 @@ $$
 M = 180^{\circ} - 6.8^{\circ} - 65.6^{\circ} = 107.8^{\circ}
 $$
 
-因此，从天底方向起算，卫星指向目标发射机的仰角为 $107.8^{\circ}$。
+因此，从天底方向起算，卫星指向目标发射机的仰角为 $107.8^{\circ}$。由于地平线相对于天底为 $90^{\circ}$，故卫星在目标视角下**高于地平线 $107.8^{\circ} - 90^{\circ} = 17.8^{\circ}$**。此角度将在后续雨衰减计算中使用。
 
-由于地平线相对于天底为 $90^{\circ}$，故卫星在目标视角下**高于地平线 $107.8^{\circ} - 90^{\circ} = 17.8^{\circ}$**。
+### 9.3.3 链路损耗
 
-此角度将在后续雨衰减计算中使用。
+现在可以计算从目标位置出发的链路损耗。这些损耗包括扩散损耗（spreading loss）、卫星天线指向误差（antenna pointing error）、大气衰减（atmospheric attenuation）以及雨衰损耗（rain loss）。
 
-
-### 9.3.3 链路损耗（Link Losses）
-
-现在我们可以计算从目标位置出发的链路损耗，包括：
-
-- 空间传播损耗（Spreading Loss）
-- 卫星天线指向误差
-- 大气衰减（Atmospheric Attenuation）
-- 降雨衰减（Rain Loss）
-
-#### 空间传播损耗
-
-空间传播损耗按下列公式计算：
+扩散损耗可通过以下公式计算：
 
 $$
-L = 32.44 + 20 \log(F) + 20 \log(d)
+L=32.44+20 \log (F)+20 \log (d)
 $$
 
-其中：
-
-- $L$ 为以 dB 为单位的空间传播损耗  
-- $F$ 为发射频率（单位 MHz，$F = 4000$ MHz）  
-- $d$ 为链路距离（$d = 828$ km）
-
-计算得：
+其中，$L$ 为扩散损耗（单位：分贝，dB），$F$ 为辐射源发射频率（4 GHz），$d$ 为链路距离（上文计算得 $n = 828\ \mathrm{km}$）。
 
 $$
-L = 32.44 + 20\log(4000) + 20\log(828) = 32.44 + 72.04 + 58.36 = 162.8\ \mathrm{dB}
+L=32.44+20 \log (4000)+20 \log (828)=32.44+72.04+58.36=162.8\ \mathrm{dB}
 $$
 
-#### 大气衰减
+大气衰减是卫星相对于目标辐射源地平线的仰角（elevation angle）的函数，我们已计算该仰角为 $18.8^{\circ}$。大气衰减可通过图9.18确定。在4 GHz频率和$18.8^{\circ}$仰角下，该损耗约为0.1 dB。
 
-大气衰减依赖于卫星在目标地平线之上的仰角，之前我们计算为 $18.8^{\circ}$。根据图 9.18，在 4 GHz 和该仰角下，大气衰减约为 **0.1 dB**。
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-185.jpg?height=917&width=794&top_left_y=975&top_left_x=371){width="400"}
 
-#### 天线指向误差
+图9.18 在4 GHz频率下，18.8°仰角导致约0.15 dB的大气衰减（atmospheric attenuation）。
 
-使用下列公式计算 3-dB 波束宽度（beamwidth）：
-
-$$
-BW = \operatorname{antilog}\left[\frac{86.8 - 20 \log D - 20 \log F}{20}\right]
-$$
-
-其中：
-
-- $D = 1$ m（天线口径）
-- $F = 4000$ MHz
-
-代入：
+在4 GHz频率下，直径为1米的接收天线的3-dB波束宽度（3-dB beamwidth）可通过以下公式计算：
 
 $$
-BW = \operatorname{antilog}\left[\frac{86.8 - 0 - 72.0}{20}\right] = \operatorname{antilog}(0.74) = 6.3^{\circ}
+B W=\operatorname{antilog}[(86.8-20 \log D-20 \log F) / 20]
 $$
 
-根据第 5.2 节公式计算指向误差损耗：
+其中，$B W$ 为效率为55%的抛物面天线（parabolic antenna）的3-dB波束宽度，$D$ 为天线直径（单位：米），$F$ 为频率（单位：兆赫，MHz）。
 
 $$
-\Delta G = 12\left(\frac{\theta}{\alpha}\right)^2 = 12\left(\frac{1}{6.3}\right)^2 = 0.3\ \mathrm{dB}
+B W=\operatorname{antilog} (86.8-0-72.0)=6.3^{\circ}
 $$
 
-#### 降雨衰减
-
-雨层路径长度计算如下（等温线高度 $= 3$ km，仰角 $= 18.8^{\circ}$）：
+现在，我们可以利用第5.2节中的公式计算天线失准损耗（antenna misalignment loss）。
 
 $$
-\text{路径长度} = \frac{3\ \mathrm{km}}{\sin(18.8^{\circ})} = \frac{3}{0.322} = 9.3\ \mathrm{km}
+\Delta G=12(\theta / \alpha)^{2}
 $$
 
-根据图 9.20，4 GHz 下强降雨每公里造成 0.02 dB 衰减，因此总雨衰减为：
+其中，$\Delta G$ 为天线失准损耗（单位：分贝，dB），$\theta$ 为天线失准角度（单位：度），$\alpha$ 为天线的3-dB波束宽度（3-dB beamwidth）。
 
-$$
-9.3\ \mathrm{km} \times 0.02\ \mathrm{dB/km} = 0.2\ \mathrm{dB}
-$$
-
-#### 卫星到目标的链路总损耗
-
-$$
-\text{总链路损耗} = 162.8 + 0.3 + 0.1 + 0.2 = 163.4\ \mathrm{dB}
-$$
-
-卫星 $1\ \mathrm{m}$ 抛物面天线的增益按下式计算：
-
-$$
-G = -42.2 + 20 \log D + 20 \log F = -42.2 + 0 + 72 = 29.8\ \mathrm{dB}
-$$
-
-接收功率为：
-
-$$
-P_R = ERP - L + G_R = 50\ \mathrm{dBm} - 163.4\ \mathrm{dB} + 29.8\ \mathrm{dB} = -83.6\ \mathrm{dBm}
-$$
-
-因此，卫星接收机必须具备 **$-83.6\ \mathrm{dBm}$ 的灵敏度**才能在当前条件下截获该目标信号。
-
----
-
-### 9.3.4 从地平线截获（Intercept from the Horizon）
-
-卫星位于距地 300 km 的圆形轨道上。我们希望在强降雨条件下，从地平线截获 4 GHz 的目标发射信号。该目标 ERP 为 100 W（50 dBm），天线具有宽波束（覆盖整个地平线）。卫星使用 $1\ \mathrm{m}$ 抛物面天线，增益为 29.8 dBi，指向误差 $1^{\circ}$，对应损耗为 0.3 dB。
-
-参考图 9.21 的平面直角三角形，边 $b = 6671\ \mathrm{km}$，边 $a = 6371\ \mathrm{km}$，求边 $c$：
-
-$$
-c = \sqrt{b^2 - a^2} = \sqrt{6671^2 - 6371^2} = 1978\ \mathrm{km}
-$$
-
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-189.jpg?height=699&width=1128&top_left_y=246&top_left_x=202){width="400"}
-  
-图 9.21 地平线方向卫星到目标的传播距离。
-
-#### LOS 损耗计算：
-
-$$
-LOSS = 32.4 + 20\log(4000) + 20\log(1978) = 32.4 + 72.0 + 66.0 = 170.4\ \mathrm{dB}
-$$
-
-图 9.22 显示在 $4\ \mathrm{GHz}$、$0^{\circ}$ 仰角时，大气衰减为 **2.2 dB**。
-
-#### 降雨路径长度
-
-参考图 9.23，假设等温线高度 $= 3\ \mathrm{km}$：
-
-$$
-\text{雨层路径} = \sqrt{6374^2 - 6371^2} = 196\ \mathrm{km}
-$$
-
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-190.jpg?height=959&width=832&top_left_y=246&top_left_x=320){width="400"}
-  
-图 9.22 显示 $0^{\circ}$ 仰角时的大气衰减为 2 dB。
-
-![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-190.jpg?height=495&width=814&top_left_y=1426&top_left_x=327){width="400"}
-  
-图 9.23 从地面到等温线的雨层路径构成直角三角形。
-
-假设降雨仅集中于路径的 $20\%$，雨衰减为：
-
-$$
-196 \times 0.02 \times 0.2 = 0.8\ \mathrm{dB}
-$$
-
-#### 总链路损耗计算：
+当天线失准角为 $1^{\circ}$ 时，
 
 $$
 \begin{aligned}
-\text{总损耗} &= 170.4 + 0.3 + 2.2 + 0.8 = 173.7\ \mathrm{dB}
+& \Delta G=12(1 / 6.3)^{2} \\
+& \Delta G=0.3\ \mathrm{dB}
 \end{aligned}
 $$
 
-接收功率为：
+穿越降雨区域的距离可由图9.19确定。0°C等温层（$0^{\circ}$ isotherm）的高度为3 km（如图9.5所示，对应纬度为$35^{\circ}$）。因此，信号穿越降雨区的距离为：
 
 $$
-P_R = 50\ \mathrm{dBm} - 173.7\ \mathrm{dB} + 29.8\ \mathrm{dB} = -93.9\ \mathrm{dBm}
+\text { 距离 }=3\ \mathrm{km} / \sin \left(18.8^{\circ}\right)=3\ \mathrm{km} / 0.322=9.3\ \mathrm{km}
 $$
 
-因此，卫星接收系统在地平线方向成功截获该信号所需的灵敏度为 **$-93.9\ \mathrm{dBm}$**。
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-187.jpg?height=671&width=1148&top_left_y=246&top_left_x=193){width="400"}
 
-需要注意，我们尚未讨论目标信号的调制方式，因此该灵敏度是否可达取决于具体接收方案。如不可达，可能需**增大卫星天线尺寸**以提高增益。
+图 9.19 产生降雨损耗的距离是指链路中位于 $0^{\circ}$ 等温线（0° isotherm）以下的部分，该等温线高度为 3 km，如图 9.5 所示。
 
-
-#### 截获持续时间
-
-根据开普勒第三定律，卫星周期与半长轴的关系为：
+根据图9.20，在4 GHz频率下，强降雨（heavy rain）引起的损耗约为0.02 $\mathrm{dB} / \mathrm{km}$。以9.8 km距离计算，强降雨损耗为 $0.02 \times 9.8 = 0.2\ \mathrm{dB}$。
 
 $$
-a^{3} / P^{2} / C = 36,355,285\ \mathrm{km}^3/\mathrm{min}^2
+\Delta G=12(\theta / \alpha)^{2}
 $$
 
-因此，$P^2 = a^3 / 36,355,285$，代入后得 $P^2 = 8,165.9$（单位为平方分钟）。
+其中，$\Delta G$ 为天线失准损耗（antenna misalignment loss，单位：分贝，dB），$\theta$ 为天线失准角度（单位：度），$\alpha$ 为天线的3-dB波束宽度（3-dB beamwidth）。
 
-对于高度为 $300\ \mathrm{km}$ 的卫星，其轨道半长轴为 $6,671\ \mathrm{km}$，因此其轨道周期为 **90.365 分钟**。
-
-以下是第 8.3 节中给出的用于计算从地平线到地平线的观测时间的公式：
+当天线失准角为 $1^{\circ}$ 时，
 
 $$
-T_{\text{TOTAL}} = P \left[ 2 \arccos\left( \frac{R_E}{a} \right) \right] \left[ 1 + \cos(i) \cos(\text{lat}) \right]
+\begin{aligned}
+& \Delta G=12(1 / 6.3)^{2} \\
+& \Delta G=0.3\ \mathrm{dB}
+\end{aligned}
 $$
 
-我们代入数值：目标纬度为 $35^{\circ}$，轨道倾角 $i = 60^{\circ}$。
+穿越降雨区域的距离可由图9.19确定。0°C等温层（$0^{\circ}$ isotherm）的高度为3 km（如图9.5所示，对应纬度为$35^{\circ}$）。因此，信号穿越降雨区的距离为：
 
-因此，卫星在一次从目标正上方掠过期间可以“看到”目标的时间为 **12.2 分钟**。
+$$
+\text{Distance} = 3\ \mathrm{km} / \sin \left(18.8^{\circ}\right) = 3\ \mathrm{km} / 0.322 = 9.3\ \mathrm{km}
+$$
 
----
+根据图9.20，在4 GHz频率下，强降雨（heavy rain）引起的损耗约为0.02 $\mathrm{dB} / \mathrm{km}$。乘以9.8 km，得到强降雨损耗为 $0.2\ \mathrm{dB}$。
 
-## 9.4 从同步轨道卫星进行截获（INTERCEPT FROM THE SYNCHRONOUS SATELLITE）
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-187.jpg?height=623&width=1173&top_left_y=1076&top_left_x=177){width="400"}
+
+图 9.20 在 4 GHz 频率下，强降雨引起的损耗为 $0.02 \mathrm{~dB} / \mathrm{km}$。
+
+**卫星至目标链路损耗**
+
+因此，总链路损耗为： 
+扩散损耗（spreading loss）＋天线失准损耗（antenna misalignment loss）＋大气衰减（atmospheric loss）＋雨衰损耗（rain loss）。
+
+链路损耗 $=162.8\ \mathrm{dB} + 0.3\ \mathrm{dB} + 0.1\ \mathrm{dB} + 0.2\ \mathrm{dB} = 163.4\ \mathrm{dB}$。
+
+1米口径卫星天线的增益可由以下公式计算：
+
+$$
+G=-42.2+20 \log D+20 \log F
+$$
+
+
+其中，$G$ 为效率为55%的抛物面天线（parabolic antenna）的增益，$D$ 为天线直径（单位：米），$F$ 为频率（单位：兆赫，MHz）。
+
+$$
+G=-42.2+0+72=29.8\ \mathrm{dB}
+$$
+
+卫星接收机中的接收功率为：
+
+$$
+P_{R}=E R P-L+G_{R}
+$$
+
+其中，$P_{R}$ 为接收功率（received power），$L$ 为总链路损耗，$G_{R}$ 为接收天线增益（receiving antenna gain）。
+
+$$
+P_{R}=50\ \mathrm{dBm}-163.4\ \mathrm{dB}+29.8\ \mathrm{dB}=-83.6\ \mathrm{dBm}
+$$
+
+这意味着，在此情况下，卫星接收机必须具备 -83.6 dBm 的灵敏度，才能成功截获该目标信号。
+
+**接收机灵敏度**
+
+首先，我们将计算当卫星位于地平线时截获该信号所需的接收机灵敏度（receiver sensitivity）。其次，我们将确定当卫星轨道恰好经过辐射源正上方时，卫星能够观测到该信号的持续时间。最后，我们将确定若卫星位于地球同步轨道（synchronous orbit）时所需的接收机灵敏度。
+
+### 9.3.4 从地平线截获
+
+卫星运行在距地球表面300 km高的圆形轨道上。我们希望在强降雨（heavy rain）条件下，从地平线处截获一个4 GHz目标辐射源（target emitter）的信号。该目标辐射源的有效辐射功率（ERP, Effective Radiated Power）为100 W（即50 dBm），且其天线方向图非常宽（我们假设其覆盖范围从地平线到地平线）。卫星配备一个1米口径的抛物面天线（parabolic antenna），提供29.8 dBi的增益，并以1°的指向精度（pointing accuracy）对准目标辐射源（这将导致0.3 dB的天线失准损耗（antenna misalignment loss））。
+
+我们将使用前几章中介绍的公式来解答本问题。
+
+图9.21所示的平面直角三角形描述了至地平线的几何关系。我们希望确定卫星到地平线的距离，即右侧三角形中的边 $c$。边 $b$ 为卫星轨道的半长轴（6,671 km），边 $a$ 为地球半径（6,371 km）。由于角 $B$ 为 $90^{\circ}$，边 $c$ 可通过下式求得：
+
+$$
+\text{Side } c=\operatorname{sqrt}\left[b^{2}-a^{2}\right]=\operatorname{sqrt}\left[(6671)^{2}-(6371)^{2}\right]=1978\ \mathrm{km}
+$$
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-189.jpg?height=699&width=1128&top_left_y=246&top_left_x=202){width="400"}
+
+图9.21 卫星到地平线的距离由此平面三角形计算得出。
+
+这意味着视距（LOS, line-of-sight）损耗为：
+
+$$
+L O S=32.4+20 \log (F)+20 \log (d)
+$$
+
+
+其中，$L O S$ 为视距损耗（单位：分贝，dB），$F$ 为频率（单位：兆赫，MHz），$d$ 为链路距离（单位：公里，km）。
+
+$$
+L O S=32.4+20 \log (4,000)+20 \log (1,978)=170.4\ \mathrm{dB}
+$$
+
+在第9.3.3节中，我们已确定天线指向精度引起的损耗为0.3 dB。
+
+根据图9.22，在4 GHz频率和0°仰角（elevation）下，穿过整个大气层的大气衰减（atmospheric attenuation）为2.2 dB。
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-190.jpg?height=959&width=832&top_left_y=246&top_left_x=320){width="400"}
+
+图9.22 在4 GHz频率下，0°仰角导致约2 dB的大气衰减（atmospheric attenuation）。
+
+已知雨衰损耗（rain loss）是信号传输路径上从0°C等温层（$0^{\circ}$ isotherm）到地面辐射源之间距离的函数。
+
+图9.23展示了降雨距离的几何关系。若我们采用前文所述相同的0°C等温层高度（即3 km），则信号路径与0°C等温层的交点、目标辐射源以及地心构成一个直角三角形。此时，降雨路径长度（rain distance）为：
+
+$$
+\text{Rain distance} = \operatorname{sqrt}\left[(6,374)^{2}-(6,371)^{2}\right] = 196\ \mathrm{km}
+$$
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-190.jpg?height=495&width=814&top_left_y=1426&top_left_x=327){width="400"}
+
+图9.23 穿越降雨区的距离为从地面到信号路径与卫星连线穿过0°C等温层（$0^{\circ}$ isotherm）处的长度。
+
+根据图9.20，4 GHz频率下的强降雨（heavy rain）损耗为 $0.02\ \mathrm{dB} / \mathrm{km}$。据此计算，总雨衰为 $196 \times 0.02\ \mathrm{dB} = 4\ \mathrm{dB}$。然而，在196 km范围内持续出现强降雨将引发严重洪灾，因此我们假设强降雨仅集中在降雨路径中20%的区域（即强降雨单元，heavy rain cells），故在链路预算中采用0.8 dB作为雨衰损耗值。
+
+现在可计算总链路损耗：
+
+$$
+\begin{aligned}
+& \text{Total link loss} = \text{LOS loss} + \text{antenna misalignment loss} \\
+& \quad + \text{atmospheric loss} + \text{rain loss} \\
+& = 170.4\ \mathrm{dB} + 0.3\ \mathrm{dB} + 2.2\ \mathrm{dB} + 0.8\ \mathrm{dB} = 173.7\ \mathrm{dB}
+\end{aligned}
+$$
+
+接下来可计算在卫星地平线处截获目标信号所需的接收机系统灵敏度（receiver system sensitivity）：
+
+$$
+\begin{aligned}
+& \text{Received power} = \text{Target signal ERP} - \text{Total link loss} \\
+& \quad + \text{Receiving antenna gain} \\
+& = 50\ \mathrm{dBm} - 173.7\ \mathrm{dB} + 29.8\ \mathrm{dBi} = -93.9\ \mathrm{dBm}
+\end{aligned}
+$$
+
+我们尚未讨论目标信号的调制方式，因此该灵敏度要求可能能够实现，也可能无法实现。若无法满足，我们可能需要采取某些措施，例如增大天线口径。
+
+**截获持续时间**
+
+根据开普勒第三定律（Kepler's third law），卫星轨道周期与半长轴之间的关系为：
+
+$$
+a^{3} / P^{2} / C = 36,355,285\ \mathrm{km}^{3} / \mathrm{min}^{2}
+$$
+
+因此，$P^{2}$ 等于 $a^{3}$ 除以 $36,355,285$，结果为 $8,165.9\ \mathrm{min}^{2}$。
+
+对于轨道高度为300 km的卫星，其轨道半长轴为 $6,671\ \mathrm{km}$，因此其轨道周期 $P$ 必为90.365分钟。
+
+第8.3节给出了从地平线到地平线的观测时间（horizon-to-horizon observation time）的复杂公式：
+
+$$
+T_{\text{TOTAL}} = P \left[ 2 \arccos \left( R_{E} / a \right) \right] \left[ 1 + \cos(i) \cos(\text{lat}) \right]
+$$
+
+代入具体数值：假设威胁目标所在地纬度（latitude）为 $35^{\circ}$，轨道倾角（orbital inclination）$i = 60^{\circ}$。
+
+因此，在一次直接飞越目标上空的过境中，卫星能够“看到”该目标的时间为12.2分钟。
+
+## 9.4 从同步轨道卫星进行截获
+（INTERCEPT FROM THE SYNCHRONOUS SATELLITE）
 
 图 9.24 显示了从同步轨道卫星到地面目标的距离。如果卫星位于目标的地平线上，则距离为 $41,759\ \mathrm{km}$；如果卫星正好位于目标上空，则距离为 $35,873\ \mathrm{km}$。正如我们将要计算的，这些距离下的损耗是很大的，但同步轨道卫星的优势在于它可以持续接收信号。
+
+![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-193.jpg?height=1145&width=620&top_left_y=246&top_left_x=457){width="400"}
+
+图9.24 对于位于地平线处的地球同步卫星（synchronous satellite），其距离为41,759 km；对于位于天顶正上方的同步卫星，其距离为$35,873\ \mathrm{km}$。
 
 ### 9.4.1 卫星位于地平线方向
 
@@ -863,9 +913,9 @@ $$
 
 如果需要更好的信号质量（例如 $15\ \mathrm{dB}$ 的信噪比），则需要额外的 9.8 dB 天线增益，即增益需达 **53.6 dBi**。这将需要一副 **15.4 米直径的天线**。
 
----
+### 9.4.2 卫星位于目标正上方
 
-如果卫星的地面下垂点（SVP）正好位于目标位置上方，则卫星到目标的距离为 $35,795\ \mathrm{km}$，因此视距损耗（LOS loss）为：
+若卫星星下点（SVP, Sub-Satellite Point）正好位于目标位置，则卫星到目标的距离为 $35,795\ \mathrm{km}$，因此视距（LOS, line-of-sight）损耗为：
 
 $$
 \begin{aligned}
@@ -874,15 +924,17 @@ $$
 \end{aligned}
 $$
 
+
 然而，由于卫星从目标发射机处呈垂直视角，因此**大气与降雨损耗为零**。因此，总链路损耗为 **195.5 dB**。接收信号强度为：
 
 $$
 50\ \mathrm{dBm} - 195.5\ \mathrm{dB} + 43.8\ \mathrm{dBi} = -101.7\ \mathrm{dBm}
 $$
 
+
 在接收机参数不变的情况下（噪声系数为 $2\ \mathrm{dB}$，信号带宽为 $1\ \mathrm{MHz}$），当卫星正好在目标上空时，接收信号强度为 $-101.7\ \mathrm{dBm}$，因此接收的信噪比为10.5dB。
 
-(原文有误，应为：$-101.7 - (-112) = 10.3\ \mathrm{dB}$)
+> 注：原文有误，应为：$-101.7 - (-112) = 10.3\ \mathrm{dB}$)
 
 如果需要达到 $15\ \mathrm{dB}$ 的信噪比，则拦截天线需提供额外 4.5dB(4.7dB) 的增益。因此，天线直径必须增加至 **10 米**。
 
