@@ -15,7 +15,7 @@ slug: Ilya_Sutskever
 
 这场由 Dwarkesh Patel 主持、长达 95 分钟的深度对话，上线短短数小时便在 X 平台上突破了百万浏览量。从大模型的技术现状到研究品味，再到对超级智能的终极构想，Ilya 毫无保留。
 
-![](https://cdn.mathpix.com/snip/images/UZsXIXf5ErmlZeywnZOOnt9wtGO_PdfcUpzf0hRAuXI.original.fullsize.png){width="400"}
+![](https://cdn.mathpix.com/snip/images/eefVZAc7mexFplXEvsJIBkwrNPHH4eolAHiZEhXofag.original.fullsize.png){width="400"}
 
 Ilya 和主持人讨论了 SSI 的战略、预训练的缺陷、如何提升 AI 模型的泛化能力，以及如何确保 AGI 能够顺利发展。
 
