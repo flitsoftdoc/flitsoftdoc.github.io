@@ -17,7 +17,7 @@ slug: Ilya_Sutskever
 
 ![](https://cdn.mathpix.com/snip/images/eefVZAc7mexFplXEvsJIBkwrNPHH4eolAHiZEhXofag.original.fullsize.png){width="400"}
 
-Ilya 和主持人讨论了 SSI 的战略、预训练的缺陷、如何提升 AI 模型的泛化能力，以及如何确保 AGI 能够顺利发展。
+Ilya 和主持人讨论了 SSI (Safe Superintelligence Inc. ) 的战略、预训练的缺陷、如何提升 AI 模型的泛化能力，以及如何确保 AGI 能够顺利发展。
 <!-- more -->
 
 这段[访谈](https://www.youtube.com/watch?v=aR20FWCCjAs)记录了Ilya Sutskever (伊利亚·苏茨克维尔)对人工智能现状的看法，他认为该领域正从近期的“规模化时代”回归到深入的**“研究时代”**。他指出当前大模型面临的主要问题是**泛化能力和鲁棒性的不足**，这导致了测试评估分数很高但实际经济影响有限的脱节现象。Sutskever推测，这种差距源于训练方法的不完善，并将其与人类的学习效率进行对比，认为人类的学习效率和深入理解能力依赖于进化过程中形成的、基于情感的**价值函数**。他认为未来的**超级智能**将表现为具有快速、**持续学习能力**的智能体，而非预先完成的心智，其广泛部署很可能带来极快的经济增长。此外，他讨论了其公司SSI的使命，即专注于解决AI研究中的基础技术问题，确保首批诞生的超级智能系统能够实现**可靠的对齐**（例如，关怀有感知能力的生命），以实现安全部署。
