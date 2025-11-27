@@ -922,6 +922,11 @@ $$
 
 图 3.22：矩形脉冲函数 $g_{\varepsilon}$。
 
+
+![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-054.jpg?height=536&width=1133&top_left_y=302&top_left_x=421){width="400"}
+
+图 3.23：$g_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
+
 为了帮助可视化这一极限过程，图 3.24 显示了 $g_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。从图中可以直观地确认，当 $\varepsilon \rightarrow 0$ 时，$g_{\varepsilon} \rightarrow \delta$。因此，$\delta$ 可视为矩形脉冲的极限情况，其中脉冲宽度趋于无穷小，脉冲高度趋于无限大，同时保证所得函数的积分保持为 1。
 
 ![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-055.jpg?height=536&width=1133&top_left_y=302&top_left_x=545){width="400"}
@@ -952,9 +957,7 @@ $$
 
 **证明**：该证明直接来源于 delta 函数仅在单一点非零的事实。
 
-![](https://cdn.mathpix.com/cropped/2025_09_15_358c27cec78acc621f25g-054.jpg?height=536&width=1133&top_left_y=302&top_left_x=421){width="400"}
 
-图 3.23：$g_{\varepsilon}$ 在若干 $\varepsilon$ 值下的图像。
 
 **定理 3.4（抽取性质）**  
 对于在点 $t_{0}$ 连续的任意函数 $x$，

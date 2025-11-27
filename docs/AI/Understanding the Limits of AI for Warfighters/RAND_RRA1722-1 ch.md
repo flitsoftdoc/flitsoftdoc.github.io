@@ -63,7 +63,8 @@ https://www.rand.org/content/dam/rand/pubs/research_reports/RRA1700/RRA1722-1/RA
 
 在所有应用案例的建议中，出现了两个共同主题：一是需要进行系统的测试与实验；二是需要建立更完善的基础设施以支持未来AI（Artificial Intelligence，人工智能）发展。表S.2汇总了各应用场景的具体建议。
 
-表 S.2. 建议汇总  
+表 S.2. 建议汇总 
+
 | 应用场景 | AI 测试与实验 | 支撑性基础设施 |
 | :--- | :--- | :--- |
 | 网络安全 | - 进行数据集分割测试，以评估分布漂移（distributional shift）对AI系统的重要性，并确定大致的性能衰减率与AI的“保质期”。 | - 不适用。 |
@@ -132,7 +133,8 @@ https://www.rand.org/content/dam/rand/pubs/research_reports/RRA1700/RRA1722-1/RA
 
 本项目的首要任务是选择空军部（DAF, Department of the Air Force）感兴趣的潜在AI（Artificial Intelligence，人工智能）应用场景，并且这些场景能够揭示AI应用的不同局限类型。我们首先提出了五项筛选标准，如表1.1所示。
 
-表 1.1. 筛选标准  
+表 1.1. 筛选标准
+
 | 标准 | 描述 |
 | :--- | :--- |
 | DAF 重要性 | 该AI应用所针对的能力缺口或流程对空军部的重要性如何？ |
