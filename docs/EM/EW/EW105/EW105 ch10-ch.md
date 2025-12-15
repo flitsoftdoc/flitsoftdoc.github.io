@@ -89,7 +89,7 @@ $$
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-199.jpg?height=628&width=889&top_left_y=232&top_left_x=320){width="400"}
 
 
-Figure 10.3 The propagation distance from the satellite to the target depends on the orbital geometry.
+图10.3 从卫星到目标的传播距离取决于轨道几何关系。
 
 
 ## 10.3 通信网络的干扰
@@ -101,12 +101,12 @@ Figure 10.3 The propagation distance from the satellite to the target depends on
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-199.jpg?height=836&width=772&top_left_y=1094&top_left_x=380){width="400"}
 
 
-Figure 10.4 The jamming geometry and the ERPs of the desired signal and jamming transmitters determine the $\mathrm{J} / \mathrm{S}$.
+图10.4 干扰几何关系以及期望信号和干扰发射机的有效辐射功率（ERP）决定了干信比 $\mathrm{J} / \mathrm{S}$。
 
 ![](https://cdn.mathpix.com/cropped/2025_11_03_ca5f3467e496c4c25007g-200.jpg?height=563&width=1062&top_left_y=248&top_left_x=202){width="400"}
 
 
-Figure 10.5 In a communication network, there are many links; one station is transmitting but all of the others are receiving.
+图10.5 在一个通信网络中，存在许多链路；其中一个站点正在发射，而所有其他站点都在接收。
 
 ### 10.3.2 链路方程
 
@@ -256,7 +256,7 @@ L = 32.4 + 20\log d + 20\log F
 $$
 
 
->注：原文公式为$L=32.4+20 \log (d)+$ to $\log (F)$
+> 注：原文公式为$L=32.4+20 \log (d)+$ to $\log (F)$
 
 其中：
 
