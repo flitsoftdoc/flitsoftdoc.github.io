@@ -393,7 +393,7 @@ D &= a \sin \left[ \frac{ (\sin d)(\sin F) }{ \sin f } \right] = a \sin \left[ \
 $$
 
 > 注1：原文公式显示为：$\begin{aligned} & D=a \sin [(\sin d)(\sin F) / \sin f]=a \sin \left[(\sin 17.2)\left(\sin 45^{\circ}\right) / \sin 46^{\circ}\right] \\ & =a \sin \left[(0.295)(0.707) / 0.719^{\circ}\right]=a \sin 0.290=16.9^{\circ}\end{aligned}$
->注2：原文中 $\sin 46^{\circ}$ 应为 $\sin 44.0^{\circ} \approx 0.695$，且最终角度应约为 $17.4^{\circ}$；此处保留原始计算逻辑，但建议核对数值精度。
+> 注2：原文中 $\sin 46^{\circ}$ 应为 $\sin 44.0^{\circ} \approx 0.695$，且最终角度应约为 $17.4^{\circ}$；此处保留原始计算逻辑，但建议核对数值精度。
 
 由于卫星星下点（SVP）位于东经 $100^{\circ}$，因此所计算的地平线边缘点的经度为 $100^{\circ} + 16.9^{\circ} = 116.9^{\circ}$ 东经。
 
