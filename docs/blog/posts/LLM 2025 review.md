@@ -5,7 +5,7 @@ tags: [AI, LLM]   # 若启用 tags 插件
 slug: LLM-2025-review
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
 ---
-# 2025 LLM 年度回顾
+# AK对2025 LLM 的年度回顾
 
 *2025 年 12 月 20 日*
 
