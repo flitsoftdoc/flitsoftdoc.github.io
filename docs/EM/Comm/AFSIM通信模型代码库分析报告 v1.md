@@ -463,11 +463,11 @@ class Queue {
 
 1. **智能指针使用**
 
-```cpp
-std::unique_ptr<Layer> mLayer;
-std::shared_ptr<OSPF_Area> mArea;
-ut::CloneablePtr<WsfMessage> mMessage;
-```
+  ```cpp
+  std::unique_ptr<Layer> mLayer;
+  std::shared_ptr<OSPF_Area> mArea;
+  ut::CloneablePtr<WsfMessage> mMessage;
+  ```
 
 2. **对象池技术**
 
@@ -485,10 +485,10 @@ Message& operator=(Message&&) = default;
 
 1. **哈希表应用**
 
-```cpp
-std::unordered_map<Address, Comm*> mCommMap;
-std::unordered_set<Address> mAddressSet;
-```
+  ```cpp
+  std::unordered_map<Address, Comm*> mCommMap;
+  std::unordered_set<Address> mAddressSet;
+  ```
 
 2. **缓存机制**
 
@@ -583,17 +583,17 @@ bool ProcessInput(UtInput& aInput) override {
 
 1. **消息追踪**
 
-```cpp
-std::vector<Address>& GetTraceRoute() { return mTraceRoute; }
-```
+  ```cpp
+  std::vector<Address>& GetTraceRoute() { return mTraceRoute; }
+  ```
 
 2. **状态查询**
 
-```cpp
-bool IsOperational() const;
-bool CanSend() const;
-bool CanReceive() const;
-```
+  ```cpp
+  bool IsOperational() const;
+  bool CanSend() const;
+  bool CanReceive() const;
+  ```
 
 3. **统计信息**
 
