@@ -621,17 +621,20 @@ bool CanReceive() const;
 wsf_mil/comm 目录下主要包含三个通信模型：
 
 1. **JTIDS / Link-16 类 TDMA 数据链模型**
-   - 时隙组（slot group）为核心抽象，建模网络容量与调度；
-   - 支持多网络、多 slot group、slot packing、pair relay、time-slot reuse 等；
-   - 负责“物理传输能力”，不显式建模 J-series 消息。
+
+    - 时隙组（slot group）为核心抽象，建模网络容量与调度；
+    - 支持多网络、多 slot group、slot packing、pair relay、time-slot reuse 等；
+    - 负责“物理传输能力”，不显式建模 J-series 消息。
 
 2. **激光通信（Laser Comms）模型**
-   - 面向光通信链路：调制（OOK/PPM/DPSK）、链路预算、大气/湍流/气动光学损失；
-   - 提供详细 link budget 打印能力，用于调试与标定。
+
+    - 面向光通信链路：调制（OOK/PPM/DPSK）、链路预算、大气/湍流/气动光学损失；
+    - 提供详细 link budget 打印能力，用于调试与标定。
 
 3. **水下 / 潜艇无线电（Subsurface Radio）模型**
-   - 面向海水传播场景，支持水下路径分解/水衰减/最大通信深度；
-   - 提供 VLF 特殊模式与“自定义地平线角”判定。
+
+    - 面向海水传播场景，支持水下路径分解/水衰减/最大通信深度；
+    - 提供 VLF 特殊模式与“自定义地平线角”判定。
 
 ### 1.2 主要文件列表
 
@@ -658,11 +661,14 @@ wsf_mil/comm 目录下主要包含三个通信模型：
 ### 1.3 扩展模块列表
 
 1. **JTIDS / Link-16 Slot Group 通信模型**
-   - 面向战术数据链（类似 Link-16）的时分多址网络容量建模。
+
+    - 面向战术数据链（类似 Link-16）的时分多址网络容量建模。
 2. **激光通信（Laser Comms）模型**
-   - 面向自由空间光通信的链路预算与调制建模。
+
+    - 面向自由空间光通信的链路预算与调制建模。
 3. **水下 / 潜艇无线电（Subsurface Radio）模型**
-   - 面向海水传播场景的无线电通信扩展。
+
+    - 面向海水传播场景的无线电通信扩展。
 
 ### 1.4 与基础库的关系
 
@@ -721,10 +727,11 @@ graph TD
 
 - 扩展模块 **不替换上层（Network/Transport 等）逻辑**；
 - 扩展主要发生在：
-  - 终端类型（Comm 子类）；
-  - 物理层（PhysicalLayer）；
-  - 硬件组件（ComponentHW）；
-  - 少量协议层（如 JTIDS 的 SlotGroupLayer）。
+  
+    - 终端类型（Comm 子类）；
+    - 物理层（PhysicalLayer）；
+    - 硬件组件（ComponentHW）；
+    - 少量协议层（如 JTIDS 的 SlotGroupLayer）。
 
 ## 2. JTIDS / Link-16 Slot Group 通信模型
 
