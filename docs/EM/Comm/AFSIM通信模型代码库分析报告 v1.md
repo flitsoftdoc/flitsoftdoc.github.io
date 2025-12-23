@@ -72,32 +72,39 @@ graph TD
 该代码库实现了完整的OSI七层网络模型：
 
 1. **物理层 (Physical Layer)**
-   - `WsfCommPhysicalLayer.hpp/cpp`
-   - 处理信号传输和硬件接口
+
+    - `WsfCommPhysicalLayer.hpp/cpp`
+    - 处理信号传输和硬件接口
 
 2. **数据链路层 (Data Link Layer)**
-   - `WsfCommDatalinkLayer.hpp/cpp`
-   - 负责帧处理和错误检测
+
+    - `WsfCommDatalinkLayer.hpp/cpp`
+    - 负责帧处理和错误检测
 
 3. **网络层 (Network Layer)**
-   - `WsfCommNetworkLayer.hpp/cpp`
-   - 处理路由和寻址
+
+    - `WsfCommNetworkLayer.hpp/cpp`
+    - 处理路由和寻址
 
 4. **传输层 (Transport Layer)**
-   - `WsfCommTransportLayer.hpp/cpp`
-   - 提供端到端的可靠传输
+
+    - `WsfCommTransportLayer.hpp/cpp`
+    - 提供端到端的可靠传输
 
 5. **会话层 (Session Layer)**
-   - `WsfCommSessionLayer.hpp/cpp`
-   - 管理会话建立和维护
+
+    - `WsfCommSessionLayer.hpp/cpp`
+    - 管理会话建立和维护
 
 6. **表示层 (Presentation Layer)**
-   - `WsfCommPresentationLayer.hpp/cpp`
-   - 数据格式转换和加密
+
+    - `WsfCommPresentationLayer.hpp/cpp`
+    - 数据格式转换和加密
 
 7. **应用层 (Application Layer)**
-   - `WsfCommApplicationLayer.hpp/cpp`
-   - 提供应用程序接口
+
+    - `WsfCommApplicationLayer.hpp/cpp`
+    - 提供应用程序接口
 
 ### 3.2 核心组件
 
