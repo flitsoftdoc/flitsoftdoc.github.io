@@ -158,29 +158,35 @@ class ProtocolStack {
 ### 4.1 支持的网络拓扑类型
 
 1. **点对点网络 (Point-to-Point)**
-   - `WsfCommNetworkPointToPoint.hpp/cpp`
-   - 两个节点直接连接
+
+    - `WsfCommNetworkPointToPoint.hpp/cpp`
+    - 两个节点直接连接
 
 2. **网状网络 (Mesh)**
-   - `WsfCommNetworkMesh.hpp/cpp`
-   - 全连接或部分连接拓扑
+
+    - `WsfCommNetworkMesh.hpp/cpp`
+    - 全连接或部分连接拓扑
 
 3. **星型网络 (Star)**
-   - `WsfCommNetworkStar.hpp/cpp`
-   - 中心节点与多个外围节点
+
+    - `WsfCommNetworkStar.hpp/cpp`
+    - 中心节点与多个外围节点
 
 4. **环形网络 (Ring)**
-   - `WsfCommNetworkRing.hpp/cpp`
-   - 节点串联成环
+
+    - `WsfCommNetworkRing.hpp/cpp`
+    - 节点串联成环
 
 5. **Ad-Hoc网络**
-   - `WsfCommNetworkAdHoc.hpp/cpp`
-   - 动态自组织网络
-   - 支持运行时拓扑变化
+
+    - `WsfCommNetworkAdHoc.hpp/cpp`
+    - 动态自组织网络
+    - 支持运行时拓扑变化
 
 6. **通用网络 (Generic)**
-   - `WsfCommNetworkGeneric.hpp/cpp`
-   - 灵活的网络配置
+
+    - `WsfCommNetworkGeneric.hpp/cpp`
+    - 灵活的网络配置
 
 ### 4.2 网络管理器（NetworkManager）
 
@@ -208,29 +214,34 @@ class NetworkManager : public WsfSimulationExtension {
 ### 5.1 支持的路由协议
 
 1. **OSPF (Open Shortest Path First)**
-   - `WsfCommProtocolOSPF.hpp/cpp`
-   - 链路状态路由协议
-   - 支持区域划分
-   - DR/BDR选举机制
-   - 约2000行实现代码
+
+    - `WsfCommProtocolOSPF.hpp/cpp`
+    - 链路状态路由协议
+    - 支持区域划分
+    - DR/BDR选举机制
+    - 约2000行实现代码
 
 2. **RIPv2 (Routing Information Protocol v2)**
-   - `WsfCommProtocolRIPv2.hpp/cpp`
-   - 距离向量路由协议
-   - 周期性路由更新
+
+    - `WsfCommProtocolRIPv2.hpp/cpp`
+    - 距离向量路由协议
+    - 周期性路由更新
 
 3. **IGMP (Internet Group Management Protocol)**
-   - `WsfCommProtocolIGMP.hpp/cpp`
-   - 多播组管理协议
-   - 支持组成员管理
+
+    - `WsfCommProtocolIGMP.hpp/cpp`
+    - 多播组管理协议
+    - 支持组成员管理
 
 4. **Legacy协议**
-   - `WsfCommProtocolLegacy.hpp/cpp`
-   - 传统路由实现
+
+    - `WsfCommProtocolLegacy.hpp/cpp`
+    - 传统路由实现
 
 5. **Ad-Hoc路由**
-   - `WsfCommProtocolAdHoc.hpp/cpp`
-   - 自组织网络路由
+
+    - `WsfCommProtocolAdHoc.hpp/cpp`
+    - 自组织网络路由
 
 ### 5.2 路由器架构
 
@@ -256,18 +267,21 @@ class Router : public WsfPlatformPart {
 ### 6.1 介质类型
 
 1. **有线介质 (Guided Medium)**
-   - `WsfCommMediumGuided.hpp/cpp`
-   - 支持点对点连接
-   - 确定性传输特性
+
+    - `WsfCommMediumGuided.hpp/cpp`
+    - 支持点对点连接
+    - 确定性传输特性
 
 2. **无线介质 (Unguided Medium)**
-   - `WsfCommMediumUnguided.hpp/cpp`
-   - 广播特性
-   - 支持电磁传播模型
+
+    - `WsfCommMediumUnguided.hpp/cpp`
+    - 广播特性
+    - 支持电磁传播模型
 
 3. **无线电收发器**
-   - `WsfRadioXmtrRcvr.hpp/cpp`
-   - 专门的无线电通信支持
+
+    - `WsfRadioXmtrRcvr.hpp/cpp`
+    - 专门的无线电通信支持
 
 ### 6.2 介质管理
 
@@ -457,8 +471,8 @@ ut::CloneablePtr<WsfMessage> mMessage;
 
 2. **对象池技术**
 
-- 消息对象复用
-- 事件对象池
+    - 消息对象复用
+    - 事件对象池
 
 3. **移动语义**
 
@@ -478,13 +492,13 @@ std::unordered_set<Address> mAddressSet;
 
 2. **缓存机制**
 
-- 路由表缓存
-- 地址解析缓存
+    - 路由表缓存
+    - 地址解析缓存
 
 3. **延迟计算**
 
-- 按需更新路由表
-- 事件驱动的状态更新
+    - 按需更新路由表
+    - 事件驱动的状态更新
 
 ## 12、线程安全性
 
@@ -492,16 +506,16 @@ std::unordered_set<Address> mAddressSet;
 
 1. **多平台仿真**
 
-- 不同平台的通信设备可能并行执行
-- 需要同步的共享资源：
-  - NetworkManager
-  - 全局路由表
-  - 多播组成员表
+    - 不同平台的通信设备可能并行执行
+    - 需要同步的共享资源：
+        - NetworkManager
+        - 全局路由表
+        - 多播组成员表
 
 2. **事件调度**
 
-- 并发事件处理
-- 事件队列访问
+    - 并发事件处理
+    - 事件队列访问
 
 ### 12.2 同步机制
 
@@ -583,9 +597,9 @@ bool CanReceive() const;
 
 3. **统计信息**
 
-- 消息计数
-- 路由跳数
-- 延迟统计
+    - 消息计数
+    - 路由跳数
+    - 延迟统计
 
 ### 15.2 测试点
 
