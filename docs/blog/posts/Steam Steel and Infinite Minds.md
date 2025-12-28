@@ -14,7 +14,11 @@ Notion 的创始人 Ivan Zhao 写了一篇精彩文章：《钢铁、蒸汽机�
 
 [原文](https://x.com/ivanhzhao/status/2003192654545539400)
 
+![](https://cdn.mathpix.com/snip/images/Ws7pefPpsD-54DmGnY3eI3ddl4rfrcRJuXPZWc-mK5I.original.fullsize.png){width="500"}
+
 每个时代都由它的奇迹材料所塑造。钢铁铸造了镀金时代；半导体点亮了数字时代；如今，AI 以“无限心智”的形态到来。如果历史教会我们什么，那就是掌控关键材料的人，将定义一个时代。
+
+<!-- more -->
 
 19世纪50年代，安德鲁·卡内基还是匹兹堡满街泥泞中奔跑的电报童。当时美国有六成的人是农民。在随后的两代人里，卡内基和他的同行锻造了现代世界：马车被铁路取代，烛光变为电灯，铁被钢替代。
 
