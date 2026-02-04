@@ -12,11 +12,16 @@ slug: fix-life
 
 他这篇《How to fix your entire life in 1 day?》在X上阅读量已破1.7亿了。
 
-这不是短视频，而是一篇上万字，读完需近半小时的长文。
+这不是短视频，而是一篇上万字，即使转换为音频也是要近半小时才能读完的长文。
 
 ![](https://cdn.mathpix.com/snip/images/iaMSdHedUAtRf0YwFZjar-mmXHrF-rmVOzgebqaAxNk.original.fullsize.png){width="400"}
 
 <!-- more -->
+
+<audio controls>
+  <source src="/assets/audio/fix life in 1 day.mp3" type="audio/mpeg" />
+  您的浏览器不支持音频播放。
+</audio>
 
 DAN KOE @thedankoe
 
