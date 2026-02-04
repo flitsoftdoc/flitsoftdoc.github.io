@@ -18,7 +18,6 @@ slug: fix-life
 
 <!-- more -->
 
-
 DAN KOE @thedankoe
 
 2026 年 1 月 13 日
@@ -409,10 +408,4 @@ DAN KOE @thedankoe
 
 —— Dan
 
-
-
-
-
-
-·
 
