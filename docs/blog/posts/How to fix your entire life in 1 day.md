@@ -12,7 +12,7 @@ slug: fix-life
 
 他这篇《How to fix your entire life in 1 day?》在X上阅读量已破1.7亿了。
 
-这不是短视频，而是一篇上万字，读完需近1小时的长文。
+这不是短视频，而是一篇上万字，读完需近半小时的长文。
 
 ![](https://cdn.mathpix.com/snip/images/iaMSdHedUAtRf0YwFZjar-mmXHrF-rmVOzgebqaAxNk.original.fullsize.png){width="400"}
 
