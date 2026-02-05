@@ -19,9 +19,10 @@ slug: fix-life
 <!-- more -->
 
 <audio controls>
-  <source src="assets/audio/fix life in 1 day.mp3" type="audio/mpeg" />
+  <source src="/assets/audio/fix life in 1 day.mp3" type="audio/mpeg" />
   您的浏览器不支持音频播放。
 </audio>
+
 
 DAN KOE @thedankoe
 
