@@ -1,7 +1,7 @@
 ---
 date: 2026-02-04
 categories: [Notes]
-tags: [Life]   # 若启用 tags 插件
+tags: [Cognition]   # 若启用 tags 插件
 slug: fix-life
 # pin: true       # 置顶功能属于 Insiders 版本，社区版无此特性
 ---
