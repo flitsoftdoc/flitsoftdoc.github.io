@@ -1,4 +1,4 @@
-# 兵棋与仿真：作为指挥与控制人工智能研发平台研究
+# 兵棋与仿真用于指挥与控制人工智能研发
 
 **On games and simulators as a platform for development of artificial intelligence for command and control**
 
