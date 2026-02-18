@@ -1,6 +1,10 @@
-# 兵棋与仿真：指挥与控制人工智能研发平台
+# 兵棋与仿真：作为指挥与控制人工智能研发平台研究
 
-Vinicius G Goecks (B) ${ }^1$，Nicholas Waytowich ${ }^2$，Derrik E Asher ${ }^2$，Song Jun Park ${ }^2$，Mark Mittrick ${ }^2$，John Richardson ${ }^2$，Manuel Vindiola ${ }^2$，Anne Logie ${ }^2$，Mark Dennison ${ }^3$，Theron Trout ${ }^2$，Priya Narayanan ${ }^2$，Alexander Kott ${ }^2$
+**On games and simulators as a platform for development of artificial intelligence for command and control**
+
+Vinicius G Goecks (B)，Nicholas Waytowich，Derrik E Asher，Song Jun Park，Mark Mittrick，John Richardson，Manuel Vindiola，Anne Logie，Mark Dennison，Theron Trout，Priya Narayanan，Alexander Kott
+
+DEVCOM Army Research Laboratory, USA
 
 First published online March 9, 2022
 
@@ -13,10 +17,8 @@ https://doi.org/10.1177/154851292210832
 ## 关键词
 
 人工智能，强化学习，兵棋推演，指挥与控制，人机接口，未来战场  
-${ }^1$ 人类研究与工程局，DEVCOM 陆军研究实验室，美国  
-${ }^2$ DEVCOM 陆军研究实验室，美国  
-${ }^3$ DEVCOM 陆军研究实验室西部，美国  
-通讯作者：
+
+
 
 ## 1. 引言
 
