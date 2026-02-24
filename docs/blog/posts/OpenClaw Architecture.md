@@ -14,12 +14,13 @@ slug: OpenClaw
 
 2026年2月12日
 
-
 2026年1月初，Michael Galpert 组织了一场名为 Claude Code Show & Tell 的活动，这也是我们这群开发者的首次聚会。二十个人聚在一起，对 Agent 开发充满好奇，也乐意分享使用最新 AI 编码工具的经验。
 
 仅仅几周后，也就是2月5日，Michael Galpert 和 Dave Morin 组织了第三次活动，并更名为 ClawCon——第一届 OpenClaw SF Show & Tell。这次来了700多人，气氛相当热烈。投资者 Ashton Kutcher 将近一个小时都在听人们向他展示项目。OpenClaw 的创造者 Peter Steinberger 无疑是当晚的明星，所有人都围着他提问、祝贺和自拍。
 
 ![img](https://substackcdn.com/image/fetch/$s_!XShL!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0d4d56a7-7b0a-4b61-9eb1-00da03daf0d7_2964x1280.png)
+
+<!-- more -->
 
 这一切是怎么发生的？短短八周内，OpenClaw 从一个周末开发的 WhatsApp 中继脚本，摇身一变成为了 GitHub 历史上增长最快的开源项目之一，到2月初已超过18万颗星。这种增长不仅是病毒式的，更是前所未有的。
 
