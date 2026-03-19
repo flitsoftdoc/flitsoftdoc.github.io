@@ -14,6 +14,7 @@
 
 IEEE SA标准委员会
 
+![](https://cdn.mathpix.com/snip/images/abo3Ce7-ou6_RcGZenMpgn6Jxi1M-qhv9BqKu7-VQAI.original.fullsize.png){width="200"}
 
 ## 摘要
 
