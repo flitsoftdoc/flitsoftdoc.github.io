@@ -13,9 +13,9 @@ Claude Code 1M context 上线之后，他们发现一件让产品团队挠头的
 
 1M context 把这种差异放大了。
 
-来自Claude的Thariq 之所以要写以下这篇文章，正是因为他每天都在心里跑下面这个决策树。普通用户每天跑的是另一个决策树："要不要重新打开 Claude Code"。差别就在这。
+来自Claude的Thariq 之所以要写以下这篇文章，正是因为他每天都在心里跑下面这个决策树。和普通用户，差别到底在哪里呢？
 
-![](https://cdn.mathpix.com/snip/images/9ZXhDmKrbcEpmTsQx9DZEniwyqVIqNsPaXdPP57SYCo.original.fullsize.png){width="300"}
+![](https://cdn.mathpix.com/snip/images/9ZXhDmKrbcEpmTsQx9DZEniwyqVIqNsPaXdPP57SYCo.original.fullsize.png){width="400"}
 
 <!-- more -->
 
