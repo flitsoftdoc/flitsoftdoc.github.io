@@ -1,0 +1,8505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="FlitSoft Documents">
+      
+      
+        <meta name="author" content="flitsoftdoc">
+      
+      
+        <link rel="canonical" href="https://flitsoftdoc.github.io/C2/Smith_Complexity/Smith_Complexity%20ch6.zh-CN%20v2/">
+      
+      
+        <link rel="prev" href="../Smith_Complexity%20ch5.zh-CN%20v2/">
+      
+      
+        <link rel="next" href="../Smith_Complexity%20ch7.zh-CN%20v2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="/assets/logo/Sandwich burger.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第6章 夺取决定性优势：网络化与基于效果的作战方法 - FlitSim KB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/pseudo-code.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XX66BVLPNX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XX66BVLPNX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XX66BVLPNX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="FlitSim KB" class="md-header__button md-logo" aria-label="FlitSim KB" data-md-component="logo">
+      
+  <img src="/assets/logo/Sandwich burger.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FlitSim KB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第6章 夺取决定性优势：网络化与基于效果的作战方法
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../UAS/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  UAS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../EM/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Gaming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NGC2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Simu/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Visual/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Visualization
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="FlitSim KB" class="md-nav__button md-logo" aria-label="FlitSim KB" data-md-component="logo">
+      
+  <img src="/assets/logo/Sandwich burger.png" alt="logo">
+
+    </a>
+    FlitSim KB
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/category/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../UAS/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UAS
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Navigation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UAS/navigation/scirobotics.ado6187.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向微型无人机的安全保障高速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ship
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ship
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../UAS/Ship/%E7%AE%80%E5%8C%96%E8%88%B0%E8%88%B9%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简化舰船动力学模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antenna Pattern
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Antenna Pattern
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Antenna%20Pattern/01.%E8%BE%9B%E6%A0%BC%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    辛格方向图模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Antenna%20Pattern/02.%E9%AB%98%E6%96%AF%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高斯方向图模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Antenna%20Pattern/test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comm
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comm
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Comm/AFSIM%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E4%BB%A3%E7%A0%81%E5%BA%93%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM通信基础模型代码库分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Comm/AFSIM%E9%80%9A%E4%BF%A1%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM通信扩展模型（wsf_mil/comm）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Comm/%E5%9C%B0%E7%A9%BA%E6%B5%8B%E6%8E%A7%E9%93%BE%E8%B7%AF%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    地空测控链路计算模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LEO Sat Constellation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LEO Sat Constellation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Comm/LEO%20Sat%20Constellation/Comparison%20of%20Three%20LEO%20Sat%20Constellation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三种LEO通信星座的技术比较
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Comm/LEO%20Sat%20Constellation/imc2020-hypatia%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用 Hypatia 探索“太空互联网”
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Comm/LEO%20Sat%20Constellation/morgan-hooc-em%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOOC-EM：面向LEO巨型星座用户终端的快速波束扫描方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Comm/LEO%20Sat%20Constellation/ns-3-leo_Evaluation_Tool_for_Satellite_Swarm_Communication_Protocols%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ns-3-leo：用于卫星蜂群通信协议的评估工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Comm/LEO%20Sat%20Constellation/starlink%20review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Review for Starlink
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/EW/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/An-overview-of-space-electronic-warfare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空间电子战概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cognitive Electronic Warfare
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cognitive Electronic Warfare
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch1%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 认知电子战导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch2%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 目标函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch3%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 机器学习入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch4%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 电子支援
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch5%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 电子防护与电子攻击
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch6%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 电子战管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch7%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 任务中实时规划与学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch8%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 数据管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch9%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch10%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 测试与评估
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch11%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 入门指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20%E9%99%84%E5%BD%95%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    缩略语（Acronyms）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/EW/EW101/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW101
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_4" id="__nav_3_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW101
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch1%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch2%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 基本数学概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch3%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 天线
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch4%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 接收机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch5%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 电子战处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 搜索
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch7%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. LPI信号
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch8%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 辐射源定位
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch9%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 干扰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch10%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 诱饵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW101/EW101%20ch11%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 仿真
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/EW/EW102/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW102
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_5" id="__nav_3_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW102
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW102/EW102%20ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW102/EW102%20ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW102/EW102%20ch3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 雷达特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW102/EW102%20ch4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 电子战中的红外与光电的考量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW102/EW102%20ch5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 通信信号的电子战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW102/EW102%20ch6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 辐射源定位系统的精度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW102/EW102%20ch7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 通信卫星链路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW102/EW102%20x.appA%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录A：问题解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/EW/EW104/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW104
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_6" id="__nav_3_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW104
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 频谱作战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 传统雷达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 新一代威胁雷达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 数字通信
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 传统通信威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 现代通信威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 数字射频存储器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 红外威胁与对策
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 雷达诱饵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW104/EW-104-Electronic-Warfare-ch11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 电磁支援与信号情报
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/EW/EW105/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW105
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_7" id="__nav_3_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW105
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch1-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch2-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 球面三角学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch3-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 轨道力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch4-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 无线电传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch5-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 空间中的无线电传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch6%20-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 卫星链路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch7-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 脆弱性与电子战的关联机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch8-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 观测持续时间与频率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch9-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 天基信号截获
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20ch10-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 天基干扰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20chA-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 信号情报与电子战中的公式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20chB-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B 空间电子战中的重要数值
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/EW/EW105/EW105%20chC-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C 分贝数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propagation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Propagation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Propagation/AFSIM%20%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD%E6%A8%A1%E5%9E%8B%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM 电磁模型概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Propagation/AFSIM%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM电磁传播模型开发文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Propagation/CRC-COVLIB%20API%20Reference%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CRC-COVLIB API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Propagation/ITU-R%20P.838-3%20%20%E9%9B%A8%E8%A1%B0%E6%A8%A1%E5%9E%8B-C-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITU－R P.838－3 雨天衰减模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Propagation/R-REC-P.528-5-202109-%E8%88%AA%E7%A9%BA%E4%B8%9A%E5%8A%A1%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD-C-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITU-R P.528-5 航空移动和无线电导航业务的传播预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Radar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radar Equations for Modern Radar
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Radar Equations for Modern Radar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 雷达方程的发展
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 搜索雷达方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 杂波与干扰压制下的雷达方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 检测理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 波束形状损失
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 系统噪声温度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 大气效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 方向图-传播因子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 杂波与信号处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 雷达方程中的损耗因子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signals and Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Signals and Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signals and Systems 6.0
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7_1" id="__nav_3_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Signals and Systems 6.0
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch3%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 连续时间信号与系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch4.%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 连续时间线性时不变系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch5%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 连续时间傅里叶级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch6%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 连续时间傅里叶变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch7%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 拉普拉斯变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch8%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 离散时间信号与系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch9%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 离散时间线性时不变系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch10%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 离散时间傅里叶级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch11%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第11章 离散时间傅里叶变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EM/Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch12%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第12章 z变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AI/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Americas-AI-Action-Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Americas AI Action Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Foundation%20models%20and%20intelligent%20decision-making/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundation models and intelligent decision making
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Integrating%20AI%20and%20ML%20into%20COP%20and%20COA%20Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrating AI and ML into COP and COA Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/LoRA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LoRA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/MARLlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARLlib
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/RAND_RR4311%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Air Dominance Through Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Why%20We%20Think%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why We Think
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/why-language-models-hallucinate%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Language Models Hallucinate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding the Limits of AI for Warfighters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Understanding the Limits of AI for Warfighters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-1%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷1：概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-5%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷5：任务规划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷6：利用构造性仿真促进强化学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Gaming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decision
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Decision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Comparative%20Analysis%20of%20Task%20Allocation%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多无人机任务分配算法的比较分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/DAVIS_OCEANS_2025_PDF_XPRESS%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向无人水面艇探测的传感器套件设计框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Deep%20Reinforcement%20Learning%20in%20Wargaming_zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Reinforcement Learning in Wargaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Development%20of%20artificial%20intelligence%20for%20command%20and%20control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    兵棋与仿真用于指挥与控制人工智能研发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Multi-UAV%20Task%20Assignment%20in%20Dynamic%20Environments%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动态环境下多无人机任务分配技术现状
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Policy%20Space%20Response%20Oracles-%20A%20Survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    策略空间响应预言机（PSRO）综述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Towards%20Global%20Explainability%20of%20Artificial%20Intelligence%20Agent%20Tactics%20in%20Close%20Air%20Combat%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向近距离空战中人工智能智能体战术的全局可解释性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Behavior Tree
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Behavior Tree
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Behavior%20Tree/Behavior%20Trees%20in%20Robot%20Control%20Systems.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行为树在机器人控制系统中的应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Behavior%20Tree/BehaviorTree.CPP%204.6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BehaviorTree.CPP库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Behavior%20Tree/BT2208.04211v2.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    机器人应用中的行为树和状态机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Behavior%20Tree/Generation%20of%20Behavior%20Trees%20for%20Dynamic%20Agents%20Based%20on%20Market%20Inspired%20Task%20Allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基于市场启发的任务分配的动态智能体行为树生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Behavior%20Tree/LLM-BRAIn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM-BRAIn: 基于LLM驱动的行为树快速生成方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Behavior%20Tree/%E8%A1%8C%E4%B8%BA%E6%A0%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行为树基本概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Better Games for National Security Policy Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Building Better Games for National Security Policy Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NGC2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NGC2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced%20Battle%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    先进战斗管理系统 (ABMS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AEP-84%20VOLI%20EDA%20V1%20ch-all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    北约工程出版物 AEP-84 Volume I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Decision%20Advantage%20and%20Initiative%20Completing%20Joint%20All-Domain%20Command%20and%20Control.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    决策优势与主动权
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Force-Based%20MANET_FANET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基于力的无人机蜂群自组织MANET/FANET
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smith Complexity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Smith Complexity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Smith_Complexity%20ch1.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 复杂的世界
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Smith_Complexity%20ch2.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 复杂性：机遇与挑战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Smith_Complexity%20ch3.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 应对复杂性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Smith_Complexity%20ch4.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 基于效果的作战中的复杂性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Smith_Complexity%20ch5.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 规则对复杂性还适用吗？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 夺取决定性优势：网络化与基于效果的作战方法
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 夺取决定性优势：网络化与基于效果的作战方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 经典范式与信息时代范式的基于效果作战方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 网络化：通信网络与社会网络
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 人工介入、网络化与联合特遣部队难题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 人工介入、网络化与联合特遣部队难题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-awareness-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 态势感知创建（awareness creation）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.1 态势感知创建（awareness creation）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networking support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-sensemaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2 意义建构（sensemaking）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.2 意义建构（sensemaking）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-support_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networking support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-planningdecisionmaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.3 规划/决策（planning/decisionmaking）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.3 规划/决策（planning/decisionmaking）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-support_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networking support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.4 执行（execution）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.4 执行（execution）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-support_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networking support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#635-social-influences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.5 社会影响（social influences）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.5 社会影响（social influences）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networked-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networked support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#636" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.6 ……以及对手方？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 整合各要素
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 整合各要素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-triple-hybrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 三重混合体（triple hybrid）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Smith_Complexity%20ch7.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 选项、态势感知与敏捷性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Smith_Complexity%20ch8.zh-CN%20V2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 结论：网络赋能但基于效果的作战方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Smith_Complexity%20%E5%90%8E%E8%AE%B0.zh-CN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Simu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/coding-stds%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++ Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/HIL%20Swarm%20Simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HIL Swarm Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/MARSIM%3A%20A%20point-realistic%20simulator%20for%20LiDAR-based%20UAVs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/Model%20Based%20Systems%20Engineering%20Methods%20Applied%20to%20the%20Mission%20Engineering%20Modeling%20Use%20Case%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MBSE应用于任务工程建模用例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/OctoMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OctoMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/ONTOLOGY_FOR_MnS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ONTOLOGY FOR MODELING AND SIMULATION
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/Ontology-Oriented%20Software%20Development%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology-Oriented Software Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/The%20Mixed%20Reality%20Simulation%20Platform%20%28MIXR%29%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIXR 混合现实仿真平台
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/ub-anc-emulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UB-ANC Emulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/ZMQ%20guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZMQ guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_12" id="__nav_7_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AFSIM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/AFSIM/AFSIM.cn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/AFSIM/AFSIM%20Version%202.0%20TECHNICAL%20REFERENCE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM V2.0 TECHNICAL REFERENCE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/AFSIM/afsims-pseudo-realtime-hybrid-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM 的伪实时混合仿真软件设计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Simu/IEEE%20Std%201516-2025/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IEEE Std 1516 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_13" id="__nav_7_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IEEE Std 1516 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/IEEE%20Std%201516-2025/IEEE%20Std%201516-2025_zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IEEE Std 1516-2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_14" id="__nav_7_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SIMDIS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/SIMDIS/SIMDIS%20SDK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS SDK 架构分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/SIMDIS/SIMDIS%20SDK%20SimCore%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS SDK SimCore代码库分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Simu/SIMDIS/SIMDIS_Briefing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS Briefing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Visual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualization
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visualization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Visual/TacView/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tacview Technical Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 经典范式与信息时代范式的基于效果作战方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 网络化：通信网络与社会网络
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 人工介入、网络化与联合特遣部队难题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 人工介入、网络化与联合特遣部队难题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-awareness-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 态势感知创建（awareness creation）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.1 态势感知创建（awareness creation）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networking support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-sensemaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2 意义建构（sensemaking）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.2 意义建构（sensemaking）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-support_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networking support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-planningdecisionmaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.3 规划/决策（planning/decisionmaking）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.3 规划/决策（planning/decisionmaking）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-support_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networking support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.4 执行（execution）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.4 执行（execution）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networking-support_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networking support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#635-social-influences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.5 社会影响（social influences）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.5 社会影响（social influences）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-intervention_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        人工介入（human intervention）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networked-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网络化支持（networked support）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#636" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.6 ……以及对手方？
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 整合各要素
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 整合各要素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-triple-hybrid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 三重混合体（triple hybrid）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 结论
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    NGC2
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Smith Complexity
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="6">第6章 夺取决定性优势：网络化与基于效果的作战方法<a class="headerlink" href="#6" title="Permanent link">&para;</a></h1>
+<p>本书开篇即提出一个论断：基于效果的作战方法之新意，并非在于其所代表的概念本身，而在于有望将信息时代（Information Age）思维与网络中心战（network-centric operations）或网络赋能作战（network-enabled operations）应用于实践，从而使由此产生的作战行动更为高效。网络中心战的一项贡献显而易见：更快、更精确的目标瞄准（targeting）以及更优的通信连通性，能够切实改进那些围绕基于消耗（attrition-based）的重大作战行动（major combat operations）而展开的基于效果作战的诸多方面。然而，如前一章所强调，基于效果作战（effects-based operations）真正面临的严峻挑战在于：指挥官在评估、规划与执行那些同时具备以人为中心（human-centric）、跨频谱（cross-spectrum）与举国（whole-of-nation）特性的作战行动时，必须应对其中固有的巨大复杂性。而这一挑战之所以愈发紧迫，正是因为此类复杂的交互作用恰恰构成了我们在9·11事件后安全环境（post-9/11 security environment）下面对非对称对手（asymmetric foes）时冲突的核心，也是联合特遣部队（Joint Task Force）指挥官所面临挑战的根本所在。那么，网络中心战如何与基于效果的方法相结合，以获取决定性优势？</p>
+<p>此处的关键问题并非我们能否实施基于效果的作战方法——事实上，我们早已以多种多样的方式在实践中运用该方法。真正的问题在于：借助信息时代思维与技术，我们能在多大程度上更高效地实施此类方法。此外，运用这些工具的目的也并非为了获得精确的量化答案——正如部落长老（village elder）当年亦非为此目的。世界及其所面临的问题依然复杂。真正的目标在于提升我们所作决策、所采取行动以及所创造效果的成功概率。正是在这一成功概率的提升之中，方能真正寻得兼具网络赋能与基于效果特征的作战行动所蕴含的决定性优势之希望所在。</p>
+<h2 id="61">6.1 经典范式与信息时代范式的基于效果作战方法<a class="headerlink" href="#61" title="Permanent link">&para;</a></h2>
+<p>在前一章的三个案例中，部落长老、"基地"组织（al Qaeda）与联合特遣部队（Joint Task Force, JTF）指挥官均以某种形式的基于效果方法应对截然不同的情境。人们或许会倾向于观察部落长老或"基地"组织所实施的看似更为简单的作战行动，并由此推断非对称竞争者（asymmetric competitors）占据优势。然而，若从网络化支援（networked support）及由此可获取的工具角度对联合特遣部队与其他两者进行比较，实际情况可能恰恰相反。</p>
+<p>复杂性理论（complexity theory）告诉我们，复杂问题并不存在确定性的解决方案，我们必须满足于将近乎无限的可能性限定在一组最可能的答案范围内。在经典范式的基于效果方法中，这种限定功能由各类场合下的决策者（decisionmakers）在头脑中完成，最终可能表现为直觉、猜测或对局势的"感觉"。实际上，此类直觉通常并非基于对问题的某种玄奥分析，而是源于决策者有意识或无意识地将当前情境与自身所知的某些类似过往情境进行类比。诚然，如前所述，决策者经验水平越高，"猜中"正确答案的概率理应越大；但现实情况是，更丰富的经验基础为个体心智模型（mental model）提供了更庞大的潜在类比库，从而提高了某一过往情境与当前情境相似的概率。</p>
+<p>审视部落长老与"基地"组织首领如何应对基于效果作战的复杂性，显而易见二者均采取了可称为经典范式的方法：他们依赖相关人类决策者的经验、直觉与创新能力。其缺陷在于，所作决策与评估的质量仅取决于实施者的个人能力——而在关键时刻恰好出现军事或政治天才的情况远非必然。就此而言，联合特遣部队的情况仅略占优势。其显著的连通性（connectivity）优势至少在理论上使其能够接入由其他决策者构成的网络，这些决策者在特定问题领域更具专业性，例如评估某项特定行动可能引发的外交连锁反应（diplomatic cascades）或次生影响。换言之，借助网络化能力，决策质量不再由单一决策者的能力决定，而是取决于可能参与决策的全体决策者的综合能力。逻辑上，拥有更充裕的时间与更广泛的网络，所获建议与最终决策的质量有望大幅提升。<span class="arithmatex">\({ }^{189}\)</span> 同样，连通性还使联合特遣部队能够访问并查询庞大的国家级知识库（national knowledge base），并可能提供一套分析工具与模型套件，用于进一步优化其评估与决策。<span class="arithmatex">\({ }^{190}\)</span></p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{189}\)</span> 此类优势必须与某些现实因素相权衡。若因过度依赖参谋作业而导致决策迟滞，则对指挥官几无助益；而若评估结果因过多分析妥协与官僚折衷而丧失实质意义，同样将毫无价值。</p>
+<p><span class="arithmatex">\({ }^{190}\)</span> 若实践中此类远程支援（reachback）能力未能充分发挥，往往更多源于缺乏社会性网络连接（social networking），包括组织与官僚层级障碍以及对等级礼仪的过度坚持，而非物理连通性（physical connectivity）的缺失。</p>
+</blockquote>
+<p>经典范式的基于效果方法体现为部落长老及其顾问群体所依赖的既有社会网络及有限贡献者的专业知识。"基地"组织似乎代表一种混合形态：既存在本地社会网络与运动范围内的社会网络以贡献专业知识，又借助现代商业通信手段促进网络运作。更为关键的是，相互关联的区域与国际媒体成为"基地"组织实现其期望作战终态（operational end-states）与战略终态（strategic end-states）的战场空间（battlespace）。联合特遣部队指挥官则呈现另一种混合形态：其能力主要设计用于对称消耗型作战（symmetric attrition-based operations），在作战区域缺乏本地社会网络，但拥有专业团队及强大的远程支援能力。该比较还提示了评估基于效果作战的三项指标：人类决策者的质量、网络化的质量，以及网络化所能提供的人类决策支持质量。</p>
+<p>就人类决策者质量而言，更丰富的经验、更优质的教育与训练显然有助于提升决策质量。然而同样显而易见的是，此类改进潜力并非联合特遣部队或大型民族国家（nation-states）所独有，非对称挑战者（asymmetric challenger）同样可及——须牢记，后者往往对当地局势具备更深入的熟悉度与经验。<span class="arithmatex">\({ }^{191}\)</span> 这意味着，单凭人类决策者质量的提升——无论其本身多么值得肯定——不太可能为联合特遣部队指挥官带来决定性优势。这使另外两个变量成为关键：网络化的质量，以及网络化所提供的决策支持质量，二者均可能对人类决策质量产生重大影响。</p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{191}\)</span> 相比之下，应对突发局势的联合特遣部队指挥官很可能高度依赖建制内传感器报告（organic sensor reporting），而缺乏建制内人力情报报告（organic human reporting）。后者可由非建制资产（non-organic assets）提供，来源包括本国其他机构、盟国军种以及当地军队与警方，但其有效性各异：国家级情报机构提供的报告通常经验证后才予发布，而地方实体提供的报告则往往需要进一步验证，且常缺乏有效验证手段。联合特遣部队在某区域驻留时间越长、所建立的人力情报报告体系越完善，报告质量越可能提升，验证难题亦将随之缓解。</p>
+</blockquote>
+<h2 id="62">6.2 网络化：通信网络与社会网络<a class="headerlink" href="#62" title="Permanent link">&para;</a></h2>
+<p>审视网络化质量时，我们立即意识到有必要区分两种不同类型的网络：通信网络与社会网络。通信网络可定义为将节点（人类或机器）通过数据、信息与知识传输手段相互联结的能力。网络越能将这些内容在恰当时机传送至恰当节点，其质量便越高。当网络中的节点为机器且传输内容为数据时，通信网络的挑战看似简单明了：我们基本只需确保网络各组成部分具备互操作性（interoperability）并能处理所传输的数据。若该处理过程包含某种形式的汇集与验证，则可称之为"信息"中继系统而非单纯"数据"中继系统；若将"知识"简单定义为信息的集合体，则可讨论网络在处理此类聚合信息时所具备的"知识管理"（knowledge management）能力。因此，若仅以线性方式定义网络化，通信网络似乎即可满足需求。问题在于，数据与信息仅是基于效果作战所需内容的一部分。基于效果方法强调：</p>
+<ul>
+<li>
+<p>问题与解决方案并非线性而是复杂的；</p>
+</li>
+<li>
+<p>必须对复杂对象与情境进行报告；</p>
+</li>
+<li>
+<p>所需知识不仅是信息的聚合，更是对复杂实体与情境的内化理解（internalized understanding）；</p>
+</li>
+<li>
+<p>此类复杂理解必须以某种方式予以传递；</p>
+</li>
+<li>
+<p>此类知识必须被人所理解：包括报告者、评估者、决策者与作战人员。</p>
+</li>
+</ul>
+<p>简言之，通信网络仅是故事的一部分。为应对基于效果方法的复杂性，人必须与人建立联系——在此互动中，通信网络仅是实现所需网络化的媒介：即应对本质上以人为中心（human-centered）冲突方法之复杂维度的人类社会网络。基于效果方法的关键不在于连接节点，而在于实现人员的网络化。</p>
+<p>在前述案例中，联合特遣部队（Joint Task Force）指挥官在通信网络方面享有明显优势：其拥有无处不在、相对安全且具备不同程度互操作性的高容量网络架构。此优势对态势感知（situational awareness）与作战行动水平的决定性影响，在"伊拉克自由行动"（Operation Iraqi Freedom）主要作战阶段常规战术军事行动节奏加快时表现得最为清晰。<span class="arithmatex">\({ }^{192}\)</span> 然而，当战斗转向规避常规作战、专注于心理消耗战（war of psychological attrition）中实施损伤施加战略（damage infliction strategy）的非对称对手时，此影响急剧减弱。就社会网络而言，尽管过度依赖社会网络可能限制了"基地"组织的战术响应能力，但其将社会网络转化为人力报告（human reporting）特工网络的能力对此形成了平衡；<span class="arithmatex">\({ }^{193}\)</span> 而联合特遣部队指挥官需开展举国行动（whole-of-nation operations）所面临的更为广泛的社会网络需求，进一步凸显了这一差距。<span class="arithmatex">\({ }^{194}\)</span> 因此，网络化的底线是：联合特遣部队在通信网络方面占优，挑战者在社会网络方面占优——但任一优势本身均不足以构成决定性影响。</p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{192}\)</span> 力量转型办公室（Office of Force Transformation）开展的一项访谈地面部队指挥官的研究反映了此影响，该影响在作战速度及战术指挥官敢于承担原本不可接受风险的能力方面表现最为明显。
+Garstka, "Fighting the Networked Force."</p>
+<p><span class="arithmatex">\({ }^{193}\)</span> 即非对称挑战者可利用其附属网络在众多区域的深度来获取并核查人力报告。</p>
+<p><span class="arithmatex">\({ }^{194}\)</span> 部分原因在于，此类网络的缺失似乎是联合特遣部队任务属性的产物。本地社会网络是特定区域长期作战的产物——而这并非反应部队（reaction forces）的理想常态，后者在恢复稳定后即返回本土基地。</p>
+</blockquote>
+<p>这引出了第三个变量：网络化能够为人类决策者提供支持的质量。人们极易将此变量简化为二元对立：蓝军跟踪（blue force tracking）与传感器架构（sensor architectures）等能力为联合特遣部队指挥官赋予某种优势，而用于人力报告与本地专业知识的社会网络则为恐怖分子赋予另一种优势，进而再次得出双方均无决定性优势的结论。然而，若转而审视通信网络与社会网络相结合可能提供的能力，一幅不同的图景便浮现出来。联合特遣部队指挥官有望依托两大优势构建能力：卓越的通信网络，以及可回溯接入（reach-back）大国海量知识与信息资产及更广泛信息时代技术的基础。此外，每增加一个纳入网络的联盟伙伴，此优势便成倍放大。通过常规电话线路或安全互联网将所有这些知识资源相互联结的能力似乎毋庸置疑。更大的挑战在于组织与协调人员、知识资源与技术——即开展"团队建设"（team building）与"敏捷组织"（agile organization）等社会网络活动。其激励在于：通信网络与社会网络的结合有望使联合与联盟部队比潜在挑战者更有效地应对此类行动所涉及的复杂性。</p>
+<p>当然，此番讨论仅引出了更多问题：若人类介入是基于效果方法的必要组成部分，那么我们如何预知谁将需要支持？他们需要何种支持、何时需要？我们又将如何运用信息时代技术、分析辅助工具、模型等来提供所需支持？</p>
+<h2 id="63">6.3 人工介入、网络化与联合特遣部队难题<a class="headerlink" href="#63" title="Permanent link">&para;</a></h2>
+<p>此处正是对基于效果的行动-反应循环（effects-based action-reaction cycle）进行剖析与逐层分解（drill-down）的价值所在。我们可以运用核心流程（essential processes）与逐层分解方法，或对行动-反应循环及其基本要素进行类似剖析，作为参照框架来审视联合特遣部队（Joint Task Force, JTF）的评估、规划与执行流程，从而识别可能遭遇模糊性与不确定性的环节，以及复杂性最易滋生的节点。换言之，我们能够确定需要人工介入的关键点，进而初步勾勒出可能需要决策支持的人类"节点"（human "nodes"）路线图。<span class="arithmatex">\({ }^{195}\)</span> 随着我们对每个节点及其所蕴含的问题、子流程与疑问进行更深层次的剖析，便可逐步识别哪些要素可能受益于额外的信息输入（例如来自数据挖掘（data-mining）或智能代理（intelligent agents）的应用）、各类线性分析方法（例如模式分析（pattern analysis））、认知建模与仿真（cognitive modeling and simulation）及社会建模与仿真（social modeling and simulation），抑或通过网络化引入的特定复杂主题领域人类专家（human experts）的输入。</p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{195}\)</span> 此处并非暗示每个节点均对应不同个体，而是指无论以何种形式呈现，环路中必有某位人类需应对所识别的复杂问题。</p>
+</blockquote>
+<p>然而，我们需谨慎避免过度推论。尽管"核心流程"概念背后的思路是识别适用于所有复杂适应系统（complex adaptive systems）的通用流程，但复杂性理论指出，每位指挥官的需求与每种情境的要求在诸多方面均具有独特性。因此，逻辑上所需的特定决策辅助工具（decision aids）将因指挥机构与情境的不同而各异。<span class="arithmatex">\({ }^{196}\)</span> 我们所拥有的实际上是一份基础性通用路线图，它使我们能够识别问题中那些可能适用各类线性分析、建模或专家输入的通用组成部分。由此引申，我们亦可界定可通过通信网络与社会网络调用以辅助联合特遣部队应对特定问题集的决策支持辅助工具（decision support aids）的一般性参数（例如知识与信息库检索（knowledge and information base search and retrieval）、人类专业知识、线性分析工具（linear analytical tools）以及建模与仿真（modeling and simulation）），并大致确定其在基础性基于效果行动-反应循环中的适用位置。</p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{196}\)</span> 在此方面，美国第六舰队（U.S. Sixth Fleet）作战部队于1986–1987年在利比亚开展的行动提供了独特视角：该联合特遣部队在1986年1月至3月期间相隔一个月的三次"达成文件行动"（Attain Document Operations）首阶段中逐步适应互动演变，继而在一年后由相同参谋团队与大体相同兵力、但更换指挥官的情况下重启此类行动，并基于经验教训对能力与组织进行了适应性调整。</p>
+</blockquote>
+<h3 id="631-awareness-creation">6.3.1 态势感知创建（awareness creation）<a class="headerlink" href="#631-awareness-creation" title="Permanent link">&para;</a></h3>
+<p>联合特遣部队（Joint Task Force, JTF）呈现出三种截然不同的态势感知创建需求：(1) 维持作战态势图（operational picture）；(2) 维持多维度的区域或全球态势感知；以及视需要，(3) 将此类态势感知精细化至足以支撑意义建构（sensemaking）的程度，从而为特定作战行动的规划奠定基础——例如，从单纯的探测与跟踪转向尝试评估意图（intentions）与未来动向。尽管第一项需求看似仅是传感器输入汇集（collating sensor inputs）的问题（因而相对线性），但事实上它因以下两点原因而构成复杂挑战。</p>
+<p>首先，即便是基础定位数据也可能源自多种建制内（organic）与非建制（non-organic）来源，包括传感器、人力报告（human reports）或开源报告（open source reports），这些信息必须以某种方式整合为单一连贯的态势图。这意味着不仅存在传感器数据融合中预期且不可忽视的技术难题，更存在线性处理结果被不容忽视的复杂人力报告"污染"（contamination）的问题。更进一步，尽管我们倾向于将此态势图理解为可探测平台（如舰船、飞机与坦克）的集合，但在地面环境中，尤其在对抗非对称对手（asymmetric foe）的作战中，我们还必须考虑可能身着便装、混迹于平民之中的单个作战人员，或在海军背景下运输武器与作战人员的"渔船"。由于此类作战人员与运输工具难以通过常规传感器报告实现可靠且确定性的探测，复杂的人力报告便成为联合特遣部队作战态势图的基石。</p>
+<p>其次，在基于效果的方法框架下，仅维持作战态势图尚不足够。联合特遣部队的规划必须考量间接效应（indirect effects）在外交、政治与经济领域内外可能引发的级联反应（cascade）。鉴于此类级联所隐含的复杂适应系统（complex adaptive systems）间的多层次交互作用及其可能的演进速度，指挥官无法简单假定上级指挥意图（command intent）将涵盖所有潜在事态。因此，他同样需要一种延伸至其他领域的复杂态势感知，以纳入驱动国际组织与非政府组织（non-governmental organizations）行为的各类因素。</p>
+<h4 id="human-intervention">人工介入（human intervention）<a class="headerlink" href="#human-intervention" title="Permanent link">&para;</a></h4>
+<p>如图26所示，我们开始分解并识别态势感知创建过程中涉及复杂判断与评估、因而需要人工介入的关键节点（以椭圆形标示）。基于前述原因，关于哪些内容将被纳入或排除于联合特遣部队整体态势感知的总体判断仍将保持复杂性；但我们亦可逐层分解为一系列子流程：任务分配（tasking）、情报收集（collection）与融合（fusion）。由于这些子流程同样涉及不确定性、未知因素、不可知变量以及对多重相互依存变量的评估，它们亦将需要人工介入。然而，这些主要子流程可进一步分解为次级子流程：其中部分适用于分析（本例中为收集系统容量），另有部分可继续分解以识别其他适用分析与建模的领域，或需进行复杂判断的额外节点。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/e4301d2d-c35d-4121-bb0d-21c21eaf0ca1-239.jpg?height=1759&amp;width=1136&amp;top_left_y=217&amp;top_left_x=186" /></p>
+<p>图26. 态势感知创建</p>
+<p>以任务分配子流程为例，一项复杂判断在于如何根据局势、任务或特定指挥官提出的需求，对可用的情报收集资产（collection assets）进行分配。该问题的部分环节（如评估特定指挥官的独特需求）可能保持复杂性，但其他环节（如评估系统容量，或特定类型局势、特定层级与类型指挥机构的历史需求）则相对线性。在情报收集环节，需进行复杂判断以平衡协调可用传感器所涉及的相互依存变量，或决定向哪些人力报告源分配任务、采信哪些开源信息；在进一步分解至"哪些人力源可靠且值得接入"以及对这些源进行核查（vetting）与验证（validation）的问题时，仍将出现其他复杂节点。最终，在融合环节，存在多个复杂决策点，涉及在若干相互冲突的报告中选择采信对象，以及判断每份报告如何融入连贯的态势图。上述每种情形均涉及复杂问题的决策：其中无法辨识精确的因果链，或存在多重潜在因果链，或所需信息缺失或模糊不清。</p>
+<h4 id="networking-support">网络化支持（networking support）<a class="headerlink" href="#networking-support" title="Permanent link">&para;</a></h4>
+<p>维系态势感知创建工作的黏合剂，在于将必要信息、分析工具以及人员（决策者或专家）进行网络化联结的能力。评估哪些传感器可用于应对特定问题时，隐含的前提是能够将这些传感器网络化联结，既使其相互协同支援，又确保其收集与报告的时效性。评估可调用的人力报告与开源报告（open source reporting）时，同样取决于能否接入相关信源或获取对这些信源的分析成果。运用信息与分析工具的能力，亦以能够向特定问题输入数据与信息并实时更新为前提。若我们承认这些工具均由人类使用，以应对态势感知创建中不可简化的复杂性，则网络化的终极目标便是支持环路中的人类决策者。同理，若人类作出的艰难分析与任务分配决策无法有效传递，从而融入对指挥意图与态势感知的共享理解之中，则此类决策亦将失去价值。逻辑上，随着联合特遣部队（Joint Task Force）指挥机构规模缩减，以及对信息与知识外部来源的远程回溯（reach-back）对指挥官作出明智复杂决策日益关键，对网络化的依赖将愈发重要。</p>
+<p>通过网络提供的工具之角色，在于为上述各关键节点上的人类决策者提供更优决策的途径，而非替代其决策。尽管有人或主张信息技术已发展至工具可实际代行决策的程度，但显而易见的是，若不以某种方式依赖环路中的人类参与，我们目前尚无有效方法对基于效果作战所涉复杂性进行建模，更遑论应对。聚焦人工介入主要受两大因素驱动：基于效果行动-反应循环所涉复杂程度（即便在情报收集问题中，传感器与人力报告之间的差异亦导致复杂性巨幅波动），以及任何试图应用技术的模型所接收的社会域（social domain）输入所具有的主观性与定性特征。态势感知创建的潜在工具呈现三种形态：(1) 用于获取与处理信息的工具；(2) 用于核查（vet）、验证（validate）与评估信息、支持其分析或提供进一步探索方向新见解的分析工具与模型；(3) 用于识别、接入并联结隐性知识（tacit knowledge）与专业知识的工具，后者在很大程度上属于组织工具（organizational tools）范畴，而不仅是通信网络硬件问题。</p>
+<p>针对联合特遣部队态势感知创建流程，这些工具需应对三项基本决策需求：(1) 评估情报收集能力的可用性，并将来自各类独立平台的数据融合为单一传感器态势图；(2) 识别人力与开源报告的潜在信源，并对这些信源进行核查与验证；(3) 在各类收集范畴内部及创建单一连贯态势图的过程中，融合传感器、人力与开源报告。<span class="arithmatex">\({ }^{197}\)</span> 鉴于创建足以支撑复杂、交互式与持续性基于效果作战的态势感知需依赖持续的任务分配与反馈迭代，此类工具不能局限于"一刀切"的特定工具集，而很可能需交替适应以契合特遣部队需求（例如，当特遣部队行动从作战转向冲突后稳定行动，或反之从危机响应转向重大作战时，作战工具集可能被替换为另一套工具集），且工具本身亦需具备交互性以适应特遣部队的即时需求。</p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{197}\)</span> 在1987年利比亚外海行动中，我方特遣部队经重新配置，采用联合在线战术系统（Joint Online Tactical System, JOTS）将建制内特遣部队战术数据与非建制战区或国家级数据相融合，而其他功能或由上级层级处理，或由我本人在脑中完成。</p>
+</blockquote>
+<ul>
+<li>
+<p>电子数据（electronic data）</p>
+<p>电子数据的融合是态势感知创建中与工具最为契合且最为线性直接的任务，亦是迄今多数网络中心战（network-centric operations）讨论的核心所在。运用电子数据融合工具汇集多样化传感器数据并将其融合为有意义的传感器态势图的做法并非新事物，过去二十余年乃至更久以来一直是各类努力的焦点。同样，业界亦在开发可视化工具方面取得进展，该工具可将各类传感器的技术参数与位置数据整合为系统收集能力（包括建制内、非建制或可接入能力）的综合态势图，从而在任意地点、时间或情境下使规划人员得以识别并优化可用资产的使用，或对情境与资源可用性的临时变化作出响应。</p>
+</li>
+<li>
+<p>数据挖掘/智能代理（data mining/intelligent agents）<span class="arithmatex">\({ }^{198}\)</span></p>
+<p>数据挖掘与智能代理（intelligent agents）存在的根本理由在于识别并检索深埋于海量数据中，或隐匿于看似与当前主题无关的信息类别与文件中的数据与信息。该工具在处理浩繁的开源材料时具有显而易见的应用价值，但需注意任何检索必须支持多语言。<span class="arithmatex">\({ }^{199}\)</span> 然而，它亦为特遣部队接入多源与多机构人力报告及其他资源提供了途径，即处理来自其他机构与组织的报告——此类报告虽可获取，但未必以利于即时识别的形式呈现。事实上，来自其他机构与组织的报告更可能以人力报告形式存在，而非电子数据形式。</p>
+</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\({ }^{198}\)</span> De Rosa, Mary. Data Mining and Data Analysis for Counterterrorism. CSIS. March 2004. pp. 20-23.</p>
+<p><span class="arithmatex">\({ }^{199}\)</span> 仅以英语进行数据挖掘将产生双重负面影响：既会遗漏待挖掘数据与信息库中相当大一部分内容，又会在尝试评估观察者心理反应时扭曲结果，甚至可能导致误判。</p>
+</blockquote>
+<ul>
+<li>
+<p>比较与对照（compare and contrast）</p>
+<p>模式识别（pattern recognition）等建模与分析工具提供了比较与对照报告结果的途径，既可用于单一信源的报告，亦可跨所有报告信源进行。前者中，该工具用于将某份报告与特定主题领域、时间段或地点内的其他报告进行比对，或与同一信源随时间推移的报告进行比对，以核查并验证人力信源的可靠性与专业性，或在处理开源信息时确立特定信源的偏见与可靠性。在融合全源报告（all-source reporting）时亦同理，此时问题在于梳理来自多个无关信源的相互冲突报告，或将作战态势感知与更广泛的社会与认知态势感知相融合，从而提供适用于决策的综合性整体态势感知。</p>
+<p>由上可知，此类工具本身不足以创建所需态势感知。尽管在融合传感器数据时它们最接近构建综合态势图，但此类态势图仅是态势感知的一种形式，对意图（intent）等议题几无助益，更遑论应对基于效果作战核心的认知域（cognitive domain）与社会域。在这些领域，将需要另一种知识形态——即内化于专家头脑中、随时间演进的对复杂主题的精熟掌握（mastery）。随着可用专业知识的提升，复杂决策能力亦将随之增强。</p>
+</li>
+</ul>
+<h3 id="632-sensemaking">6.3.2 意义建构（sensemaking）<a class="headerlink" href="#632-sensemaking" title="Permanent link">&para;</a></h3>
+<p>意义建构较态势感知创建更为复杂，既因其涉及深层认知过程（cognitive process），亦因其建立在态势感知创建所包含的全部复杂分析与判断基础之上。对联合特遣部队（Joint Task Force, JTF）而言，意义建构服务于两项需求：将态势感知拓展为对作战环境的内化理解（internalized understanding），以及为规划针对特定刺激的反应或未来行动奠定基础。前者涉及运用历史数据、既有或新建知识库（knowledge base）以及类比库（libraries of analogies），构建对持续演进且不断变化的作战与区域态势的动态"感知"，使人类决策者得以"填补空白"或推导因果关系。后者则体现于两方面：理解持续交互螺旋（spiral of interactions）的源头与方向，以及支撑必须展望数个乃至更多行动-反应循环的规划流程。这些区别凸显了意义建构的特定时间维度：应对即时循环要求对作战环境具备最新感知，而规划流程则提供更充裕的时空以寻求并获取外部支援。</p>
+<h4 id="human-intervention_1">人工介入（human intervention）<a class="headerlink" href="#human-intervention_1" title="Permanent link">&para;</a></h4>
+<p>如前所述，加之任务所涉认知与社会维度的复杂性——以及图27中大量标示复杂决策节点的圆形符号所示——意义建构功能充斥着复杂问题，因而存在诸多需人工介入的领域。意义建构本质上是一种认知过程，其两大主要子流程（情境化（contextualization）与分析（analysis））亦无可否认地具有复杂性。情境化基本是指将所创建的态势感知置入可赋予人类心智以意义的框架之中，而分析最终反映的是一系列人类理解与推测（conjectures）。这些内在复杂的节点由一系列次级子流程提供支撑；尽管这些次级子流程本身亦具复杂性，但它们已细化至可适时调用各类工具以协助特遣部队决策者限定所涉复杂性的程度。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/e4301d2d-c35d-4121-bb0d-21c21eaf0ca1-246.jpg?height=1758&amp;width=1131&amp;top_left_y=217&amp;top_left_x=188" /></p>
+<p>图27. 意义建构</p>
+<h4 id="networking-support_1">网络化支持（networking support）<a class="headerlink" href="#networking-support_1" title="Permanent link">&para;</a></h4>
+<p>意义建构范畴下所描述任务的广度意味着其将迅速超出小型前沿联合特遣部队参谋团队的人力负荷。与后方更大规模单位进行交互式网络联结（interactive networking），可使临时组建的现场联合特遣部队指挥官即便仅配备相对精简的参谋团队，亦能承担原本可能需要战区指挥官（theater commander）资产方能完成的任务。</p>
+<p>尽管至少部分问题可通过链接至上级司令部的常规数据库予以解决，但仍存在三项额外挑战。首先，在复杂且不可预测的世界中，指挥官所面对的局势可能未被既有知识库与数据库所涵盖。其次，即便主题已被覆盖，指挥官所需信息亦可能不在该知识库中——事实上，对手很可能通过其行动选择竭力确保关键信息不可获取。第三，所需复杂理解可能无法以可归档形式存在，或因其持续变化，或因其代表一种难以简化为所需格式的理解形态。因此，对联合特遣部队指挥官支持的关键特征很可能围绕向既有知识库注入新知识的需求，尤其是随时调动相关主题领域专家（subject matter experts）所需特定知识的需求，无论这些专家身处何地。这再次表明既需信息与分析工具的组合，亦需组织与社会网络能力以随时识别、核查（vet）并调用具备专业知识的专家。</p>
+<p>由此引申，对联合特遣部队意义建构的最大单一影响因素，很可能在于详尽综合性数据与知识库的可用性。知识库越完善、颗粒度越精细，决策者的判断与评估便越能被有效限定。无论在特遣部队内部抑或外部（例如在作战净评估（Operational Net Assessment）中）开发与维护此类知识库，均为信息工具、分析工具、建模工具以及主题领域专业知识的引入提供了多重机遇。</p>
+<ul>
+<li>
+<p>信息技术（information technologies）</p>
+<p>问题的核心在于联合特遣部队能否按需检索知识与信息，以在面对复杂且常不可预测的局势时限定决策范围。这带来四项挑战：(1) 必须编纂信息/知识库，尽管可能无法预知未来究竟需要何种信息与知识；<span class="arithmatex">\({ }^{200}\)</span> (2) 特遣部队所需信息与系统内信息之间的关联性未必显而易见（例如，能源部报告中可能包含的相关信息）；(3) 数据库不仅须包含数据，还须纳入可能无法便捷检索的社会与历史知识；(4) 数据库必须持续更新。<span class="arithmatex">\({ }^{201}\)</span> 这些挑战似乎为广泛应用各类信息技术提供了依据。例如，智能代理（intelligent agent）技术的运用可实现自动化输入以维持信息时效性，并通过归档能力捕获所需数据，以多种形式与配置进行检索，满足特遣部队指挥官的需求。</p>
+</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\({ }^{200}\)</span> 联合特遣部队所需数据库在诸多方面类似于典型分析师——从不丢弃任何未来可能有用的信息。</p>
+<p><span class="arithmatex">\({ }^{201}\)</span> 若更新非持续进行，则无法判定特定时段内活动缺失究竟源于具有重要意义的行动缺失，抑或报告与数据库录入的缺失。</p>
+</blockquote>
+<ul>
+<li>
+<p>分析工具（analytical tools）</p>
+<p>逐层分解亦指向若干领域，各类分析工具可协助从历史与知识库中提取意义。例如，模式识别（pattern recognition）等工具可辅助评估监视系统（surveillance system）可能的反应时间、探测局限性及预期响应类型。此类工具亦可用于预测当前行动-反应循环可能引发的物理与心理效应级联（cascades），或其对外交行为的潜在影响。</p>
+</li>
+<li>
+<p>建模（modeling）</p>
+<p>建模，尤其是认知建模（cognitive modeling）与社会建模（social modeling），亦可在多个领域发挥更大作用。尽管最受关注的是对政治、军事、经济、社会、信息与基础设施（PMESII, Political, Military, Economic, Social, Information, and Infrastructure）效应级联的建模，但其潜力远不止于此，可延伸至评估某项行动的"动因"，追溯因果链至引发该链的观察与决策，或预测后续交互的性质。同理，指挥官亦需了解对手方的决策流程及其关键人物特性，这些方面亦可进行建模。</p>
+<p>创建心智模型（mental models）以评估观察者将如何感知并回应我方或他方行动，构成另一类不同挑战，涉及三个层级的建模：针对可识别的个体决策者，存储源自传记信息、个人接触或著述的衍生信息；针对决策者群体（例如克里姆林宫）；以及针对以组织成员身份（如"基地"组织）为共同纽带的一般性案例。认知模型显然适用于此项任务，但需注意存在两类需建模的截然不同的行为：人类普遍感知、决策与反应的"天性"（nature）层面；以及特定个体与群体基于经验或文化濡化（acculturation）可能产生的差异化反应的"教养"（nurture）层面。后者模型要求对特定文化具备深刻理解——此类理解本就难以获取，更遑论转化为模型；更常见的解决方案可能是结合模型与专家介入的混合形态。<span class="arithmatex">\({ }^{202}\)</span></p>
+</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\({ }^{202}\)</span> 我曾在海军2000年与2001年全球兵棋推演（Global Wargames）中试验此类混合模式，将乔治·梅森大学（George Mason University）Alex Levis与Lee Wagenhals教授开发的Caesar I与II模型与经验丰富的区域情报分析员相结合。结果产生了思想的交叉授粉：分析员的介入优化了模型预测未来行动可能反应的能力，而分析员亦利用交互过程激发"快速评估"（Quick Look Assessments），为指挥官提供对刚完成交互所引发初步反应的即时分析反馈。</p>
+</blockquote>
+<p>最后，在上述所有环节中均存在一项重大附加考量：在与复杂适应性对手（complex adaptive opponent）的任何交互中，开发单一且持久的模型均不足够。此类遭遇唯一确定的是，交互将随每次互动而变化，且经精心建模的系统组成部分亦将以某种方式随之改变。因此，如同态势感知的迭代演进，所用任何模型均须具备充分的动态性与灵活性，以在局势演进过程中纳入并反映变化。</p>
+<h3 id="633-planningdecisionmaking">6.3.3 规划/决策（planning/decisionmaking）<a class="headerlink" href="#633-planningdecisionmaking" title="Permanent link">&para;</a></h3>
+<p>联合特遣部队（Joint Task Force, JTF）基于效果的规划/决策流程既反映了前述步骤所积累的复杂判断，亦体现了规划者所需的额外复杂判断——图28中持续增多的椭圆形符号即反映了这一点。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/e4301d2d-c35d-4121-bb0d-21c21eaf0ca1-252.jpg?height=1759&amp;width=1131&amp;top_left_y=217&amp;top_left_x=188" /></p>
+<p>图28. 决策制定</p>
+<h4 id="human-intervention_2">人工介入（human intervention）<a class="headerlink" href="#human-intervention_2" title="Permanent link">&para;</a></h4>
+<p>在规划流程中，联合特遣部队规划人员需承担三类复杂决策：</p>
+<ul>
+<li>
+<p>估算安全环境复杂适应系统（complex adaptive systems）中某一领域某一层级的直接物理效应（direct physical effect），将如何转化为该领域及其他领域整个复杂结构中后续层级的间接效应级联（cascades of indirect effects）（即，通过前向意义建构（forward sensemaking）检验包含多重相互依存变量的假设）；<span class="arithmatex">\({ }^{203}\)</span></p>
+</li>
+<li>
+<p>评估单项效应在同一时间段内或在既往行动背景下，将如何增强或削弱其他效应；<span class="arithmatex">\({ }^{204}\)</span> 以及</p>
+</li>
+<li>
+<p>估算上述全部过程不仅针对单一对手或对手群体，还将如何在潜在观察者谱系（friend, foe, and neutral）中产生作用。</p>
+</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\({ }^{203}\)</span> 在此语境下，相互作用的复杂适应系统层级越高，该交互的复杂性通常越大；高层级产生的效应往往是低层级效应的某种聚合。这些低层级的交互涉及大量相互依存的变量与流（flows），本质上均为非线性，尽管战术层级的交互有时看似近乎线性（例如消耗战（attrition））。以"伊拉克自由行动"（Operation Iraqi Freedom）为例，一项批评指出：美国可攻击其选定的任何军事设施并记录该毁伤，却难以有效追踪或衡量该毁伤对伊拉克作战行动的实际影响。换言之，美国能够度量线性、有形的效应，却难以把握复杂的非线性效应。
+Cordesman, Anthony. "Iraq and Asymmetric Warfare: The US vs. FRL/ Islamist Duel." CSIS Paper. 6 December 2003. pp. 11-19.</p>
+<p><span class="arithmatex">\({ }^{204}\)</span> 在各层级上，行为体均可预期将自组织（self-organize）以适应变化的刺激集，其结果是系统在每一层级及整体层面均持续演进，即便我们正试图达成特定效应。</p>
+</blockquote>
+<h4 id="networking-support_2">网络化支持（networking support）<a class="headerlink" href="#networking-support_2" title="Permanent link">&para;</a></h4>
+<p>即便得到常设可部署司令部参谋的补充，联合特遣部队参谋团队亦难以囊括实施此类评估所需的全部工具与专业知识。此外，鉴于复杂适应系统间交互的特性，此类需求将随每次交互而变化。因此，指挥机构需能够接入不同组合的工具与专业知识，或接入某种可将外部资源与特遣部队现场专业知识相融合的离线流程（off-board process）。</p>
+<p>前瞻性意义建构（projected sensemaking）所需的工具与专业知识在诸多方面与意义建构类似，但存在一项重要差异：需假设观察者将如何感知并回应某项行动。此项差异及其全部复杂性表明，需要一套相互关联、动态且交互式的工具族：相互关联源于问题的多维性；动态性源于其持续变化的本质；交互性则因工具必须为检验基于效果规划（effects-based planning）核心的"假设"（what if）命题提供基础。至少三类此类工具似属必要：用于建模物理系统与能力的工具、用于建模观察者反应的工具，以及用于整合工具输出并将其转化为对指挥官及其规划人员具有意义的态势图的工具。</p>
+<ul>
+<li>
+<p>物理系统建模（modeling physical systems）</p>
+<p>建模物理系统与能力的需求可见于多个领域。若某项行动的效应在相当程度上源于观察者如何"感知"该行动，且待被感知的行动本质上是可见属性的集合，则必然要求我们能够以某种方式建模观察者将看到给定行动的哪些具体方面，方能揣度其可能反应。这意味着我们必须能够对观察者用以观察行动的监视或情报收集系统（surveillance or collection system）进行建模，既为判定其将看到或看不到什么，亦为估算关于特定行动的信息可能如何被过滤。<span class="arithmatex">\({ }^{205}\)</span> 此处的不同在于，任务重点不在于规避探测，而在于使观察者看到给定行动的特定方面，以期按期望方向塑造其认知。实现此目标意味着需要比常规考量更广泛的模型——该模型不仅整合传感器位置及其历史探测记录的模式分析（pattern analysis），亦需融合人力与开源信源，并跨越军事领域之外的更广范畴。</p>
+</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\({ }^{205}\)</span> 此非新概念。例如冷战期间，我们曾对苏联监视系统进行建模；在打击规划中，我们例行绘制敌方雷达及其他监视覆盖范围（surveillance envelopes），以规避其探测。</p>
+</blockquote>
+<ul>
+<li>
+<p>系统动力学（systems dynamics）</p>
+<p>在基于效果的方法中，物理效应与心理效应（psychological effects）间的区分至关重要，因其区分了源自直接效应的间接效应级联中两种截然不同的交互与传播类型，相应地亦意味着规划流程中评估预期与非预期后果时需采用两种迥异的方法。行动与物理效应（尤其是毁伤）间的联系通常相当线性；直接物理效应与后续物理效应级联间的联系亦往往相对线性。尽管我们可能无法预测此类级联的全部潜在效应（例如摧毁电网的所有后果），但我们能够轻易理解链中任一环节的效应间关系，理论上亦可沿级联从一项间接物理效应追踪至下一项，最终回溯至引发级联的直接效应及初始行动。<span class="arithmatex">\({ }^{206}\)</span> 事实上，美国空军（U.S. Air Force）的基于效果目标瞄准（effects-based targeting）工作已在此类评估方面臻于完善——既可识别直接与间接效应，亦可简化相关流程以适配加速的空中任务指令（Air Tasking Order, ATO）环境。<span class="arithmatex">\({ }^{207}\)</span> 系统动力学的运用为进一步界定物理级联提供了前景；但或许更具意义的是，在获得区域专家与特定文化社会学模型的充分输入后，亦可从心理视角实现此目标。</p>
+</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\({ }^{206}\)</span> 尽管物理级联的全部潜在效应未必可预测，但在存在压倒性考量的情况下（例如盟军对诺曼底登陆滩头铁路线的轰炸），可将链条"修剪"至特定区段的已知关系。更深入讨论参见：
+Smith, Effects-Based Operations. pp. 322-326.</p>
+<p><span class="arithmatex">\({ }^{207}\)</span> 此流程并非新事物，但十余年来一直是美国空军基于效果作战工作的基础，其中大量工作聚焦于预期效应与非预期效应间的权衡。参见：
+McCrabb, Maris. Uncertainty, Expeditionary Air Force, and Effects-Based Operations. AFRL Paper. Rome. June 2000. pp. 34.
+McCrabb, Maris. Concept of Operations for Effects-Based Operations. AFRL Paper. February 2001. p. 10.</p>
+</blockquote>
+<ul>
+<li>
+<p>认知建模（cognitive modeling）</p>
+<p>行动与心理或社会认知效应（social and cognitive effects）及其后续级联间的联系远为棘手，具体原因在于其在我们讨论过的所有意义上均具复杂性。然而，此问题并非新近出现。数十年来，空军一直在研究物理毁伤与心理效应间的关系。"精确打击"（precision strike）的震慑（shock and awe）效应、近期并行打击（parallel strike）而非顺序打击（sequential strike）行动的震慑效应，<span class="arithmatex">\({ }^{208}\)</span> 以及约翰·沃登（John Warden）提出的"目标与领导层意志关系环"（rings of relationships between targets and leadership will）<span class="arithmatex">\({ }^{209}\)</span> 均属此类关联的例证。然而，联合特遣部队指挥官面临的问题并非在战略层级建模此类关联，而是理解效应将如何在交互的战术与作战层级展开，以及这些效应又将如何（无论利弊）传导至战略层级。</p>
+</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\({ }^{208}\)</span> Deptula, "Firing for Effects." pp. 48-50.</p>
+<p><span class="arithmatex">\({ }^{209}\)</span> Warden, "The Enemy as a System."</p>
+</blockquote>
+<ul>
+<li>
+<p>社会建模（social modeling）</p>
+<p>此处如同意义建构一样，需对观察者认知过程进行建模，但仅此尚不足够。为衡量并预判反应，规划人员需考虑观察者认知过程可能偏离标准模型的方式，以及所采取行动将如何改变观察者的认知。换言之，认知模型需与（按文化、派系、组织分别构建的）特定观察者群体如何感知与理解的模型相耦合，或需引入相关领域人类专家的输入。鉴于前者高度依赖创建与维护这些社会模型者的专业知识，而此类专业知识罕能充分反映于模型之中，更可能的路径是采用混合方法——持续将人类专业知识注入更通用的模型。</p>
+</li>
+</ul>
+<p>尽管未来可能出现整合全部要素的模型，但前瞻性意义建构任务的特性表明，真实需求在于一套联邦式（federated）的不同模型族，其中每个模型可应对问题的某一特定方面（例如，一个用于决策流程，一个用于行动的经济后果，另一个用于政治与外交影响，再一个用于军事影响）。此路径的难点在于，所有模型均须具备动态性并涉及持续交互。</p>
+<h3 id="634-execution">6.3.4 执行（execution）<a class="headerlink" href="#634-execution" title="Permanent link">&para;</a></h3>
+<p>执行是行动-反应循环（action-reaction cycle）中的响应阶段，亦是新循环的起点——为指挥官提供关于刚完成任务的初始反馈。对指挥官而言，此类反馈包含三项输入，既用于评估已达成的效果，亦为下一轮行动做准备：战术单位（tactical unit）可报告行动已完成，并说明是否产生了预期的直接影响（direct impact）；该单位亦可报告任务执行期间及刚结束后观察到的任何偏离既定常态的局部变化，此类变化将与其他来源观察到的偏离常态现象相结合，使指挥官得以识别各类观察者的初始反应；最后，指挥官还需获取关于更广泛认知转变（cognitive shift）或行为变化（behavior change）的任何迹象，以评估观察者反应的更大维度。</p>
+<h4 id="human-intervention_3">人工介入（human intervention）<a class="headerlink" href="#human-intervention_3" title="Permanent link">&para;</a></h4>
+<p>对联合特遣部队（Joint Task Force）指挥官而言，执行流程在两个层级与三个领域涉及复杂决策。计划行动通常由战术指挥官（tactical commanders）在战术层级实施，后者必须在行动展开过程中持续调整其行动，以确保观察者能够看到计划中的特定方面或属性。他们亦须进行持续观察以获取反馈：既包括直接效应是否按计划产生，亦包括对其行动的任何即时明显反应。在作战层级（operational level），联合特遣部队指挥官亦须在行动实施过程中进行监控，以确保行动持续符合计划背景，并持续契合上级指挥或国家战略意图（national intent）——即便后者本身亦在演进之中。<span class="arithmatex">\({ }^{210}\)</span></p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{210}\)</span> 在最后一次"达成文件行动"（Attain Document Operation）中，联合特遣部队的飞机与舰船被派往利比亚"死亡线"（"line of death"）以南海域。第六舰队（Sixth Fleet）司令、时任海军中将（VADM）弗兰克·凯尔索（Frank Kelso）被授予白宫批准的交战规则（ROE, Rules of Engagement）执行权，该规则将触发美国的反应行动。为确保此流程顺畅进行，他登上作战部队（Battle Force）旗舰（flagship）"萨拉托加"号航空母舰（USS Saratoga），坐镇其旗舰指挥中心（flag command center）——该中心由时任海军少将（Rear Admiral）戴夫·杰里迈亚（Dave Jeremiah）担任指挥官的联合特遣部队负责协调整个行动。因此，当利比亚防空导弹向美国飞机开火需作出反应时，交战规则的授权仅体现为杰里迈亚望向凯尔索，后者点头同意。</p>
+</blockquote>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/e4301d2d-c35d-4121-bb0d-21c21eaf0ca1-259.jpg?height=1761&amp;width=1133&amp;top_left_y=217&amp;top_left_x=186" /></p>
+<p>图29. 执行</p>
+<h4 id="networking-support_3">网络化支持（networking support）<a class="headerlink" href="#networking-support_3" title="Permanent link">&para;</a></h4>
+<p>显而易见，支持此类适应性决策流程的全部能力未必存在于执行行动计划的战术指挥官层级。事实上，取决于预警时间的长短，所需模型与知识甚至未必存在于联合特遣部队或战区司令部（theater command）。简言之，调用恰当工具与专业知识的能力仍将依赖于网络化能力。</p>
+<p>从战术指挥官角度而言，为确保计划行动的正确方面被恰当观察者所见，持续更新的观察者监视与情报收集（collection）活动报告似属基础性需求。然而，以"战斗速度"（at the speed of battle）提供此类支持，很可能意味着需将监视系统的物理系统建模（physical system modeling）适配于持续且高度详细的报告，并将此类报告与可视化工具（visualization tool）相耦合，使指挥官能够便捷理解情报收集状况及任何偏离常态的现象。<span class="arithmatex">\({ }^{211}\)</span> 此亦构成反馈的第一步。该工具亦可反向运用，使指挥官在行动展开过程中随时了解其行动的哪些方面将被何人所见。</p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{211}\)</span> 某种程度上，空袭行动中已存在此类实践，例如对需规避的敌方电子传感器探测范围进行可视化呈现。基于效果的作战为此引入两项不同维度：首先，规避意图可能逆转，目标转为确保行动或其特定部分被观察到；其次，支援需求不仅限于高性能平台，亦需覆盖广泛谱系的部队，例如"斯特瑞克"装甲车部队（Stryker units）。</p>
+</blockquote>
+<p>从作战层级的联合特遣部队指挥官角度而言，问题不仅在于确保正在实施的演进行动被按预期方式感知，更在于监控进行中的行动——以及交互中任何未预见的方面——如何融入涵盖本地观察者、区域观察者、全球媒体（global media）及本国公众的演进背景之中。为此，指挥官需对行动将被嵌入的多层次、多领域常态或环境背景（ambient contexts）有所认知。当前此流程主要围绕对全球新闻报道（如CNN）的事后（ex post facto）监控展开；然而以阿富汗为例，关键背景实则围绕部落、族群与区域语境，此类语境既不会反映于CNN，亦不会见诸"半岛"电视台（al Jazeera）。这表明需结合认知建模与社会建模（cognitive and social modeling）的附加信息工具、基于建模导出算法（algorithms）的征候矩阵（indications matrix），或许还需便捷的可视化呈现以使指挥官快速且清晰地获取此类信息，或接入可提供此类支援的区域主题专家（subject matter expert）。此类工具亦将为指挥官提供关于特遣部队行动所引发反应的初始反馈。</p>
+<h3 id="635-social-influences">6.3.5 社会影响（social influences）<a class="headerlink" href="#635-social-influences" title="Permanent link">&para;</a></h3>
+<p>社会域（social domain）影响联合特遣部队（Joint Task Force）问题的方式高度复杂。然而，此类影响并非如前述步骤般构成规划流程中的独立环节，而是在所有环节——尤其是意义建构与规划阶段——均需考量的关键因素。</p>
+<h4 id="human-intervention_4">人工介入（human intervention）<a class="headerlink" href="#human-intervention_4" title="Permanent link">&para;</a></h4>
+<p>社会性问题对联合特遣部队决策的影响将体现于两方面：其一，在规划流程中评估对手及其他观察者对拟议行动的反应，以及行动实施后可能被如何感知；其二，本质上在于理解并贯彻指挥意图（command intent）——该意图必然反映在创建与维系支持联合特遣部队行动的公众共识（public consensus）过程中所涉及的全部社会域考量。图30所示示意图标示出认知流程中的四个交叉点，每个交叉点均在这两个维度上涉及复杂决策。换言之，规划需考量：其行为欲施加影响的观察者将凭借何种心智模型（mental models）来感知所实施行动，以及他们可能援引的类比库（basket of analogies）；观察者可能从该行动及这些模型中得出何种理解；他们将对此形成何种认知；以及他们感知到的可行响应选项。同理，联合特遣部队对自身指挥意图的理解，亦取决于其对这四项影响因素及其可能对自身行动施加约束的认知程度。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/e4301d2d-c35d-4121-bb0d-21c21eaf0ca1-263.jpg?height=1759&amp;width=1133&amp;top_left_y=217&amp;top_left_x=186" /></p>
+<p>图30. 社会影响</p>
+<h4 id="networked-support">网络化支持（networked support）<a class="headerlink" href="#networked-support" title="Permanent link">&para;</a></h4>
+<p>如前所述，更新知识库、接入并适配工具的能力，或尤为关键的是，以交互方式与专家沟通以衡量所涉社会影响的能力，均依赖于网络化。而此类网络化既包含通信连通性（communications connectivity），亦包含社会网络（social networking）——后者使指挥官及其支援"系统"既能定位特定区域或群体的可靠专家，亦能理解其输入内容。</p>
+<p>由于生成社会影响的社会过程（social processes）涉及众多相互依存的变量，其完整范围永难穷尽，故其对联合特遣部队评估与规划流程的影响必然复杂。为应对该复杂性以限定决策范围——无论是在确保规划与执行能够支撑政治共识，抑或在评估观察者可能反应方面——将需依赖两类工具：一类用于收集信息与知识以更新知识库；另一类用于对相关社会行为进行建模——可能包括群体与组织心智模型、理解框架（frameworks for understanding）、意义建构中的影响因素、世界观（weltanschauung）以及对特定行动方案可行性与可接受性的认知。然而，此类建模工具常面临"垃圾进、垃圾出"（garbage in, garbage out）问题：尤其在尝试建模非西方行为时，它们高度依赖主观/定性输入（subjective/qualitative inputs），因而取决于获取并输入数据与信息者的专业知识水平。这表明需持续引入主题专家（subject matter expert）参与：或引导模型使用，或在时间紧迫时直接向联合特遣部队指挥官提供输入或解答其疑问。<span class="arithmatex">\({ }^{212}\)</span></p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{212}\)</span> 海军上将迈克·布尔达（Admiral Mike Boorda）在结束北约驻南欧司令（NATO's Commander in Chief, South）任期、参与北约波斯尼亚行动后，向我——他昔日的作战部队情报官（Battle Force intelligence officer）——抱怨其所获情报未能满足其作为指挥官的需求：情报聚焦于过时且"基本无用"的敌军序列（order of battle, OOB），而他真正需要的是对争斗各派思维方式的洞察。"我得到的只有敌军序列和模糊的研究报告，而我真正需要的只是能与了解该地区及民众的专家交谈。"</p>
+</blockquote>
+<h3 id="636">6.3.6 ……以及对手方？<a class="headerlink" href="#636" title="Permanent link">&para;</a></h3>
+<p>最后，尽管表面上看我们似乎仅从联合特遣部队（Joint Task Force）应对某种局势并规划响应的角度审视了行动-反应流程的各步骤，仿佛忽略了这一本质上属于交互过程的另一半，实际情况恰恰相反。如生命系统理论（living systems theory）所提示，前述循环及"核心流程"（essential process）步骤实为任何交互双方所共有。这意味着观察者（observers）的决策流程在其最基本层面应与我方平行对应，因此，理解对手或伙伴（partner）所涉及的复杂性并非无限，而是受制于相似的需求与局限——尽管这些需求与局限会因个体观察者的独特性（idiosyncrasies）及影响其认知与行为的社会影响（social influences）而呈现不同形态。上述分析表明，对行动-反应循环所进行的剖析、逐层分解（drill-downs）、复杂决策识别以及知识与信息需求界定，既是我方应对基于效果作战（effects-based operations）复杂性的路线图，亦同样适用于分析对方的感知与决策过程。事实上，从此视角审视其他行为体（actors）正是实施基于效果作战的关键所在：在我们能够建模或估算观察者将如何感知或识别那些可观测量（observables）之前，无法执行利用可观测量集合来塑造认知的作战行动；在我们对这些可观测量将被观察的背景语境、可能被赋予的意义、以及该意义如何转化为行动或不作为（inaction）有所认知之前，亦无法规划行动与效应，进而无法确定这些可观测量应有的形态。这表明，联合特遣部队规划循环及其对信息、工具与专业知识的需求，实质上代表着嵌套的双重循环：一支力量的规划流程正逐步镜像（mirroring）并回应其他行为体内部的相似流程。</p>
+<h2 id="64">6.4 整合各要素<a class="headerlink" href="#64" title="Permanent link">&para;</a></h2>
+<p>单就决策辅助工具（decisionmaking aids）、信息、分析、建模与专业知识而言，它们本身并非新事物。我们已掌握线性评估（linear assessments）与模式分析（pattern analysis）的方法——事实上，军事运筹学（military operations research）拥有丰富历史，计算机辅助模式分析亦正发展为新兴领域以支持相关工作。我们亦了解如何对人类认知与社会决策流程进行建模，此类知识正日益得到关于人类心智及其"硬连线"（hard wired）机制的不断增长的研究成果所补充。此外，我们长久以来已认识到主题专家（subject matter experts）的作用——从对特定交火（firefight）经验丰富的散兵坑（foxhole）专家，到对某区域及其文化具备隐性精熟掌握（tacit mastery）的学术专家。将这些要素应用于基于效果方法（effects-based approaches）的挑战源于三方面：(1) 将三者整合为交互式混合体（interacting hybrid）；(2) 将该混合体同时应用于军事行动与举国响应（whole-of-nation response）的多维层面；(3) 以"战斗速度"（speed of battle）而非"学术速度"（speed of academe）完成上述全部工作。</p>
+<h3 id="641-triple-hybrid">6.4.1 三重混合体（triple hybrid）<a class="headerlink" href="#641-triple-hybrid" title="Permanent link">&para;</a></h3>
+<p>需整合的三类要素为：专家所具备的隐性、内化且无法完全言传的知识（tacit, internalized, and not entirely expressible knowledge）；社会科学的"软"科学知识（"soft" science knowledge）；以及数学、工程学与作战分析（operational analysis）的"硬"科学知识（"hard" science knowledge）。三者各有方法论与度量标准，但均源于对现实的不同概念认知与问题应对方式。此问题的很大一部分围绕跨学科方法（interdisciplinary approach）固有的"苹果与橘子"式比较困难（apple-and-orange comparison difficulties），以及专家倾向于将各类输入视为分离且表面不相容的倾向。结果是，人们往往最多仅将整合理解为各类分析方法的串行应用（serial application）——先应用一种，再应用另一种。然而，如"聚合变阻器"（aggregation rheostat）概念所示，理解复杂适应系统及其交互作用，要求线性分析、社会/认知分析与专家分析构成互联的跨学科混合体。例如，对历史先例与正式组织结构的线性分析可提供支撑进一步建模与仿真的内部模型与构建模块（building blocks）；而该建模反过来亦可提供标记特定个体与组织的方法——其行为可能促使历史与组织分析转向不同方向，从而为建模工作提供更强支撑，如此循环往复。换言之，即便各类分析在定量意义上可能永难"相加"，不同方法间持续的交互仍可产生更详尽精细的结果。同理，特定研究领域专家的持续迭代式输入亦可能产生类似效果——无论从将社会-认知模型（socio-cognitive models）应用于特定社会群体的角度，抑或从优化模型本身的角度。</p>
+<p>在基于效果作战中，学科间此类迭代式互动（iterative give-and-take）的需求并不局限于单一层级、单一子流程或单一交互领域，因所有层级均为相互依存的复杂系统，其交互作用不可分割。因此，对局势与可能行动的任何地缘战略外交评估（geo-strategic diplomatic assessment），均须考量对本地军事指挥官的影响与机遇——反之亦然。<span class="arithmatex">\({ }^{213}\)</span> 这意味着需要进行复杂判断：既需判断不同层级与领域最可能的结果，亦需将此类判断与进一步分析相结合，以在相继更复杂的交互中优化限定范围（bounding）。常规分析与模式分析可与决策流程的社会与认知模型结合进行迭代应用，每轮分析与建模均进一步优化另一方。此类迭代协同（iterative synergy）的潜力可见于以下实践：利用对正式组织及其运作的已知信息，首先识别或标记实际作出决策的非正式流程中可能的参与者，继而对可能的非正式结构进行建模。此类标记与建模反过来亦可提示正式与非正式结构中缺失的要素，引导识别额外的关键人物与影响网络（influence networks），如此循环往复。<span class="arithmatex">\({ }^{214}\)</span></p>
+<blockquote>
+<p><span class="arithmatex">\({ }^{213}\)</span> 1973年10月中东战争危机期间担任美国海军作战部长（Chief of Naval Operations）的埃尔莫·朱姆沃尔特海军上将（Admiral Elmo Zumwalt）引述了时任国务卿亨利·基辛格（Henry Kissinger）的惊讶：苏联海军在地中海针对美军部队实施了极具攻击性的反航母"演习"，此举在危机高潮时本可能成为攻击前奏。尽管该信息已按规定上报，却从未送达白宫决策者；同样，白宫与克里姆林宫间全部交涉的消息亦未传至本地指挥官。然而，显然双方决策者的行动本应深受对方领域所发生事件的深刻影响。
+Zumwalt, ADM Elmo, USN. On Watch. Washington, DC. 1980. pp. 442.</p>
+<p><span class="arithmatex">\({ }^{214}\)</span> 例如在古巴导弹危机（Cuban Missile Crisis）中，肯尼迪（Kennedy）的执行委员会（EXCOM）基于正式主席团（Presidium）结构成员的构成、资历与权力基础，推测了赫鲁晓夫（Khrushchev）的决策圈子。</p>
+</blockquote>
+<h2 id="65">6.5 结论<a class="headerlink" href="#65" title="Permanent link">&para;</a></h2>
+<p>尽管第四章概述的核心流程与逐层分解方法具有通用性——正如"核心流程"这一概念本身所暗示的（即适用于基于效果作战中所有行为体，以及从个体到社会的复杂适应系统各层级）——本章聚焦于这些流程与分解方法对联合特遣部队问题战术与作战层级上基于效果作战实施的意义，以及网络化与各类信息时代工具可能发挥的潜在贡献。与第四章相同，我们的论述很大程度上基于对一批杰出指挥官应对基于效果方法复杂性实践的观察。尽管我们谨慎地聚焦于指挥官所需解决的问题与议题，以及可能可用的解决方案类型，但所有实际解决方案事实上均在现有部队与组织结构背景下得以实现。这一现实基础传递出双重信息：它提醒我们，基于效果的方法并不依赖未来技术或日益增强的计算机算力应用于奇异建模技术（exotic modeling techniques），而是当下即可实施且正在实施的方法；但同时亦引发一个诱人的延伸思考：若构建一套以基于效果作战方法为设计理念的结构与组织，并配置专门优化环路中人类（human in the loop）决策支持的更优网络化能力，我们又能实现何种突破？</p>
+<p>此种未来可能性的预示，亦指向构建灵活适应性部队（flexible, adaptive force）以优化基于效果方法的更宏大维度，并引出一系列后续问题：</p>
+<p>我们如何确保恰当人员提供所需洞见？我们应如何组织？我们如何构建恰当网络以应对永远无法完全预测的问题？我们如何知晓应创建何种工具与模型，或如何获取一套不仅能够便捷全面更新、亦能灵活调整以适应特定局势迫切需求的模型与工具集？我们所需能力不仅限于规划、执行与评估基于效果作战的流程本身，更需支撑其实现——换言之，我们如何构建能够提供所需选项的国家与军事力量（power）？我们如何创建规划、执行与评估基于效果作战所必需的复杂态势感知（complex awareness）？以及，我们如何构建组织架构并将所需思维敏捷性与能力敏捷性（agility of thought and capability）内化于作战行动之中，以使基于效果作战能够快速适应迅捷、灵活、足智多谋且复杂的对手（complex foe）的行动与反应？</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

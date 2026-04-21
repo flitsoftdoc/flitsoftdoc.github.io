@@ -1,0 +1,8337 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="FlitSoft Documents">
+      
+      
+        <meta name="author" content="flitsoftdoc">
+      
+      
+        <link rel="canonical" href="https://flitsoftdoc.github.io/EM/EW/Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch5%20ch%20v3/">
+      
+      
+        <link rel="prev" href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch4%20ch%20v3/">
+      
+      
+        <link rel="next" href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch6%20ch%20v3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="/assets/logo/Sandwich burger.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>5 电子防护与电子攻击 - FlitSim KB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/pseudo-code.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XX66BVLPNX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XX66BVLPNX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XX66BVLPNX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="FlitSim KB" class="md-header__button md-logo" aria-label="FlitSim KB" data-md-component="logo">
+      
+  <img src="/assets/logo/Sandwich burger.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FlitSim KB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5 电子防护与电子攻击
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../UAS/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  UAS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../AI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Gaming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../C2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NGC2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Simu/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Visual/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Visualization
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="FlitSim KB" class="md-nav__button md-logo" aria-label="FlitSim KB" data-md-component="logo">
+      
+  <img src="/assets/logo/Sandwich burger.png" alt="logo">
+
+    </a>
+    FlitSim KB
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../UAS/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UAS
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Navigation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/navigation/scirobotics.ado6187.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向微型无人机的安全保障高速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ship
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ship
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Ship/%E7%AE%80%E5%8C%96%E8%88%B0%E8%88%B9%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简化舰船动力学模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antenna Pattern
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Antenna Pattern
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Antenna%20Pattern/01.%E8%BE%9B%E6%A0%BC%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    辛格方向图模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Antenna%20Pattern/02.%E9%AB%98%E6%96%AF%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高斯方向图模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Antenna%20Pattern/test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comm
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comm
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/AFSIM%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E4%BB%A3%E7%A0%81%E5%BA%93%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM通信基础模型代码库分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/AFSIM%E9%80%9A%E4%BF%A1%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM通信扩展模型（wsf_mil/comm）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/%E5%9C%B0%E7%A9%BA%E6%B5%8B%E6%8E%A7%E9%93%BE%E8%B7%AF%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    地空测控链路计算模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LEO Sat Constellation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LEO Sat Constellation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/Comparison%20of%20Three%20LEO%20Sat%20Constellation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三种LEO通信星座的技术比较
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/imc2020-hypatia%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用 Hypatia 探索“太空互联网”
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/morgan-hooc-em%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOOC-EM：面向LEO巨型星座用户终端的快速波束扫描方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/ns-3-leo_Evaluation_Tool_for_Satellite_Swarm_Communication_Protocols%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ns-3-leo：用于卫星蜂群通信协议的评估工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/starlink%20review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Review for Starlink
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../An-overview-of-space-electronic-warfare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空间电子战概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cognitive Electronic Warfare
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cognitive Electronic Warfare
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch1%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 认知电子战导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch2%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 目标函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch3%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 机器学习入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch4%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 电子支援
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 电子防护与电子攻击
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 电子防护与电子攻击
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 优化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 多目标优化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.2 在性能空间中搜索
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.3 优化元学习
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 调度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-anytime-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 任意时间算法（Anytime Algorithms）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-distributed-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 分布式优化（Distributed Optimization）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 结论（Conclusion）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch6%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 电子战管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch7%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 任务中实时规划与学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch8%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 数据管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch9%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch10%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 测试与评估
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch11%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 入门指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20%E9%99%84%E5%BD%95%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    缩略语（Acronyms）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EW101/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW101
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_4" id="__nav_3_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW101
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch1%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch2%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 基本数学概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch3%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 天线
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch4%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 接收机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch5%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 电子战处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 搜索
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch7%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. LPI信号
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch8%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 辐射源定位
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch9%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 干扰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch10%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 诱饵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch11%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 仿真
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EW102/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW102
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_5" id="__nav_3_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW102
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW102/EW102%20ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW102/EW102%20ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW102/EW102%20ch3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 雷达特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW102/EW102%20ch4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 电子战中的红外与光电的考量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW102/EW102%20ch5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 通信信号的电子战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW102/EW102%20ch6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 辐射源定位系统的精度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW102/EW102%20ch7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 通信卫星链路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW102/EW102%20x.appA%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录A：问题解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EW104/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW104
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_6" id="__nav_3_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW104
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 频谱作战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 传统雷达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 新一代威胁雷达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 数字通信
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 传统通信威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 现代通信威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 数字射频存储器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 红外威胁与对策
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 雷达诱饵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 电磁支援与信号情报
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EW105/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW105
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_7" id="__nav_3_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW105
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch1-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch2-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 球面三角学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch3-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 轨道力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch4-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 无线电传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch5-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 空间中的无线电传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch6%20-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 卫星链路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch7-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 脆弱性与电子战的关联机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch8-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 观测持续时间与频率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch9-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 天基信号截获
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch10-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 天基干扰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20chA-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 信号情报与电子战中的公式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20chB-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B 空间电子战中的重要数值
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20chC-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C 分贝数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propagation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Propagation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/AFSIM%20%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD%E6%A8%A1%E5%9E%8B%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM 电磁模型概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/AFSIM%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM电磁传播模型开发文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/CRC-COVLIB%20API%20Reference%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CRC-COVLIB API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/ITU-R%20P.838-3%20%20%E9%9B%A8%E8%A1%B0%E6%A8%A1%E5%9E%8B-C-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITU－R P.838－3 雨天衰减模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/R-REC-P.528-5-202109-%E8%88%AA%E7%A9%BA%E4%B8%9A%E5%8A%A1%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD-C-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITU-R P.528-5 航空移动和无线电导航业务的传播预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Radar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radar Equations for Modern Radar
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Radar Equations for Modern Radar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 雷达方程的发展
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 搜索雷达方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 杂波与干扰压制下的雷达方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 检测理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 波束形状损失
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 系统噪声温度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 大气效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 方向图-传播因子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 杂波与信号处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 雷达方程中的损耗因子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signals and Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Signals and Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signals and Systems 6.0
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7_1" id="__nav_3_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Signals and Systems 6.0
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch3%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 连续时间信号与系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch4.%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 连续时间线性时不变系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch5%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 连续时间傅里叶级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch6%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 连续时间傅里叶变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch7%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 拉普拉斯变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch8%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 离散时间信号与系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch9%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 离散时间线性时不变系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch10%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 离散时间傅里叶级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch11%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第11章 离散时间傅里叶变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch12%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第12章 z变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../AI/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Americas-AI-Action-Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Americas AI Action Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Foundation%20models%20and%20intelligent%20decision-making/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundation models and intelligent decision making
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Integrating%20AI%20and%20ML%20into%20COP%20and%20COA%20Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrating AI and ML into COP and COA Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/LoRA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LoRA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/MARLlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARLlib
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/RAND_RR4311%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Air Dominance Through Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Why%20We%20Think%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why We Think
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/why-language-models-hallucinate%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Language Models Hallucinate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding the Limits of AI for Warfighters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Understanding the Limits of AI for Warfighters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-1%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷1：概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-5%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷5：任务规划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷6：利用构造性仿真促进强化学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Gaming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decision
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Decision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Comparative%20Analysis%20of%20Task%20Allocation%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多无人机任务分配算法的比较分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/DAVIS_OCEANS_2025_PDF_XPRESS%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向无人水面艇探测的传感器套件设计框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Deep%20Reinforcement%20Learning%20in%20Wargaming_zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Reinforcement Learning in Wargaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Development%20of%20artificial%20intelligence%20for%20command%20and%20control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    兵棋与仿真用于指挥与控制人工智能研发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Multi-UAV%20Task%20Assignment%20in%20Dynamic%20Environments%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动态环境下多无人机任务分配技术现状
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Policy%20Space%20Response%20Oracles-%20A%20Survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    策略空间响应预言机（PSRO）综述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Towards%20Global%20Explainability%20of%20Artificial%20Intelligence%20Agent%20Tactics%20in%20Close%20Air%20Combat%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向近距离空战中人工智能智能体战术的全局可解释性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Behavior Tree
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Behavior Tree
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/Behavior%20Trees%20in%20Robot%20Control%20Systems.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行为树在机器人控制系统中的应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/BehaviorTree.CPP%204.6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BehaviorTree.CPP库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/BT2208.04211v2.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    机器人应用中的行为树和状态机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/Generation%20of%20Behavior%20Trees%20for%20Dynamic%20Agents%20Based%20on%20Market%20Inspired%20Task%20Allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基于市场启发的任务分配的动态智能体行为树生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/LLM-BRAIn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM-BRAIn: 基于LLM驱动的行为树快速生成方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/%E8%A1%8C%E4%B8%BA%E6%A0%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行为树基本概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Better Games for National Security Policy Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Building Better Games for National Security Policy Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../C2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NGC2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NGC2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Advanced%20Battle%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    先进战斗管理系统 (ABMS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/AEP-84%20VOLI%20EDA%20V1%20ch-all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    北约工程出版物 AEP-84 Volume I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Decision%20Advantage%20and%20Initiative%20Completing%20Joint%20All-Domain%20Command%20and%20Control.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    决策优势与主动权
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Force-Based%20MANET_FANET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基于力的无人机蜂群自组织MANET/FANET
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../C2/Smith_Complexity/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smith Complexity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Smith Complexity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch1.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 复杂的世界
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch2.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 复杂性：机遇与挑战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch3.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 应对复杂性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch4.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 基于效果的作战中的复杂性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch5.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 规则对复杂性还适用吗？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch6.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 夺取决定性优势：网络化与基于效果的作战方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch7.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 选项、态势感知与敏捷性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch8.zh-CN%20V2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 结论：网络赋能但基于效果的作战方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20%E5%90%8E%E8%AE%B0.zh-CN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Simu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/coding-stds%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++ Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/HIL%20Swarm%20Simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HIL Swarm Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/MARSIM%3A%20A%20point-realistic%20simulator%20for%20LiDAR-based%20UAVs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/Model%20Based%20Systems%20Engineering%20Methods%20Applied%20to%20the%20Mission%20Engineering%20Modeling%20Use%20Case%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MBSE应用于任务工程建模用例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/OctoMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OctoMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/ONTOLOGY_FOR_MnS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ONTOLOGY FOR MODELING AND SIMULATION
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/Ontology-Oriented%20Software%20Development%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology-Oriented Software Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/The%20Mixed%20Reality%20Simulation%20Platform%20%28MIXR%29%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIXR 混合现实仿真平台
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/ub-anc-emulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UB-ANC Emulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/ZMQ%20guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZMQ guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_12" id="__nav_7_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AFSIM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/AFSIM.cn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/AFSIM%20Version%202.0%20TECHNICAL%20REFERENCE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM V2.0 TECHNICAL REFERENCE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/afsims-pseudo-realtime-hybrid-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM 的伪实时混合仿真软件设计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Simu/IEEE%20Std%201516-2025/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IEEE Std 1516 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_13" id="__nav_7_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IEEE Std 1516 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/IEEE%20Std%201516-2025/IEEE%20Std%201516-2025_zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IEEE Std 1516-2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_14" id="__nav_7_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SIMDIS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS%20SDK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS SDK 架构分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS%20SDK%20SimCore%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS SDK SimCore代码库分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS_Briefing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS Briefing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Visual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualization
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visualization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Visual/TacView/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tacview Technical Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 优化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 多目标优化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.2 在性能空间中搜索
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.3 优化元学习
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 调度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-anytime-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 任意时间算法（Anytime Algorithms）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-distributed-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 分布式优化（Distributed Optimization）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 结论（Conclusion）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    EM
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    EW
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Cognitive Electronic Warfare
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="5">5 电子防护与电子攻击<a class="headerlink" href="#5" title="Permanent link">&para;</a></h1>
+<p>大多数电子战（Electronic Warfare, EW）文献将电子防护（Electronic Protection, EP）与电子攻击（Electronic Attack, EA）分开讨论，认为二者在本质上目的不同。然而，从人工智能（AI）的角度来看，它们采用相同的底层算法解决方案。</p>
+<blockquote>
+<p>EP 与 EA 之间的唯一区别在于任务目标：EP 的目标是相对于己方定义的，而 EA 的目标则是相对于敌方定义的。</p>
+</blockquote>
+<p>例如，EP 可能希望最小化误码率（Bit Error Rate, BER），而 EA 则旨在最大化对敌方的兴趣点（Probability of Interest, POI）；BER 可直接测量，而 POI 则无法直接观测。此外，实际任务往往需要同时达成这两类目标，因此将这两个概念割裂开来是不明智的。鉴于本书的目标并非描述 EP 与 EA 本身，而是突出人工智能（AI）与机器学习（Machine Learning, ML）能够帮助应对的挑战，因此我们从 AI 决策制定（Decision-Making, DM）的视角来呈现相关解决方案。</p>
+<p>电子战系统必须根据其对环境和任务所掌握的上下文信息，选择适当的动作以达成任务目标：平台具备一组能力，而认知型决策制定器（cognitive decision-maker）将这些能力组合成策略（strategies），以实现期望的性能。正是通过这些“旋钮”（knobs）或自由度（degrees of freedom），电子战系统才能达成其目标。图 5.1 概述了一类能够同时实现 EP 与 EA 目标的策略谱系。</p>
+<p>采用基于 AI 的决策制定主要有两个关键原因：时间和复杂性。决策制定的时间要求远超人类处理能力；此外，该领域输入变量过多，人类难以快速理解，可选方案也过于繁杂，无法由人工逐一分析。</p>
+<p>图 5.2 展示了一个概念性流程。决策制定器接收来自电子支援（Electronic Support, ES）系统的输入，包括可观测特征 <span class="arithmatex">\(o\)</span> 和近期关于度量 <span class="arithmatex">\(m\)</span> 的控制反馈，并据此选择一个新的策略 <span class="arithmatex">\(s\)</span> 予以执行。如果系统包含在线学习回路（见第 7 章），则可在运行过程中动态更新模型。举一个简单例子：选择通勤上班路线。可观测特征包括星期几、一天中的时间和天气状况；策略涉及路线和交通工具；度量指标则是时间和距离。优化器根据当前条件选择最优策略，并在需要时更新模型（例如，某条道路开始施工）。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-101.jpg?height=186&amp;width=680&amp;top_left_y=153&amp;top_left_x=408" width="400" /></p>
+<p><strong>图 5.1</strong> EP 与 EA 位于一个连续谱系上，所选策略可同时有效服务于多个任务目标。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-101.jpg?height=532&amp;width=1115&amp;top_left_y=514&amp;top_left_x=193" width="600" /></p>
+<p><strong>图 5.2</strong> 决策制定器基于近期可观测特征 <span class="arithmatex">\(o\)</span> 和度量 <span class="arithmatex">\(m\)</span> 的性能反馈选择策略 <span class="arithmatex">\(s\)</span>。可选的在线学习步骤根据经验数据更新性能模型。（基于例 7.1。）</p>
+<p>策略选择问题最适合采用决策理论（decision theory）方法求解，因为它提供了一种严谨的行动选择推理框架。如图 5.3 所示，决策理论是在给定问题约束和假设的前提下，基于行动预期结果来选择行动的科学。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-101.jpg?height=157&amp;width=805&amp;top_left_y=1806&amp;top_left_x=347" width="400" /></p>
+<p><strong>图 5.3</strong> 决策理论为思考问题和做出选择提供了结构性框架。</p>
+<p>决策理论（decision theory）有着悠久的历史；著名经济学家肯尼斯·阿罗（Kenneth Arrow）曾对早期工作进行过描述 [1]。Russell 和 Norvig [2] 对决策理论提供了良好的入门性讨论，涵盖了理性决策制定（rational decision-making, DM）、如何处理不确定性与部分可观测环境、如何计算跨时间的效用（utility），以及如何应对对抗性对手（adversaries）。在一个完整的认知型电子战（cognitive EW）系统中，决策理论体现在三个高度关联的概念之中：规划（planning）、调度（scheduling）与优化（optimization）。</p>
+<ul>
+<li><strong>规划</strong>（Planning）综合生成一系列动作，以达成期望的目标状态。规划关注“做什么”以及“以何种顺序执行”，通常表示为一个偏序图（partially ordered graph）。规划更具战略性与全局性。例如，一个基于效果的作战管理（Effects-Based Management, EBM）系统会规划部署多少平台、每个平台分配哪些资源，以及它们将部署在何处。第 6 章描述了电子战规划问题，其层级高于调度与优化。</li>
+<li><strong>优化</strong>（Optimization）评估多个备选规划，以选择“最优”的方案。优化更具战术性与局部性。电子战系统通过优化电子防护（EP）与电子攻击（EA）相关度量（metrics）来提升性能，例如功耗、探测概率（probability of detection）以及电子战毁伤评估（EW Battle Damage Assessment, EW BDA）。5.1 节将介绍优化方法，包括多目标优化。</li>
+<li><strong>调度</strong>（Scheduling）将一个偏序规划映射到具体的资源和时隙（timeslots）上。调度关注“何时做”以及“如何做”，深入到具体细节，例如何时发射、何时接收。5.2 节将讨论调度问题。</li>
+</ul>
+<p>这些活动之间并无清晰界限。传统上，由人类制定电子战计划，而将详细的调度与自动化任务交由系统执行。当规划本身也被自动化后，这些活动便紧密耦合在一起；事实上，只有通过动态协调各层级，才能保证解决方案的可行性 [3,4]。</p>
+<p>第 2 章介绍了目标函数，第 4 章（电子支援，ES）解释了可观测特征（observables）如何描述环境。本章则聚焦于如何选择策略，重点讨论优化与调度。5.1 节介绍优化方法，5.2 节讨论调度问题。5.3 节阐述了决策制定（DM）的一项理想属性：其实现必须具备可中断性（interruptible）。5.4 节探讨了在分布式节点网络中进行联合优化的方法。</p>
+<h2 id="51">5.1 优化<a class="headerlink" href="#51" title="Permanent link">&para;</a></h2>
+<p>优化（optimization）问题是指选择一组参数值，以最大化（或最小化）某个效用函数（utility function）。自至少 1646 年起，优化便已成为数学研究的课题 [5]，而现代跨学科研究则广泛分布于运筹学、经济学和人工智能（AI）等多个领域。人工智能引入了启发式方法（heuristics）与随机搜索（randomized search），使系统能够求解以往无法处理的问题。AI 特别擅长应对性能空间（performance landscape）搜索中固有的指数级复杂性。5.1.1 节阐述了多目标优化（multi-objective optimization）所面临的挑战；5.1.2 节重点介绍人工智能领域发展出的一些近似求解方法；5.1.3 节则介绍若干正在用于提升优化性能的元学习（metalearning）技术。</p>
+<h3 id="511">5.1.1 多目标优化<a class="headerlink" href="#511" title="Permanent link">&para;</a></h3>
+<p>通常无法同时优化所有目标。系统往往需要在多个目标之间进行权衡，在各项指标上均取得可接受的性能，而非在任一指标上达到最优。例如，存在速率/作用距离/功率之间的权衡，以及鲁棒性（robustness）与效率（efficiency）之间的权衡。</p>
+<p>Ramzan 等人 [6] 对频谱共享中的多目标优化方法进行了综述。雷达领域的一个经典例子是检测概率（Probability of Detection, <span class="arithmatex">\(P_d\)</span>）与虚警概率（Probability of False Alarm, <span class="arithmatex">\(P_{fa}\)</span>）之间的权衡；接收机工作特性（Receiver Operating Characteristic, ROC）曲线即刻画了这一权衡关系 [7–9]。雷达与通信性能的联合优化是另一类常见的多目标问题 [10]，平台上的资源管理（resource management）同样属于此类问题 [11,12]。</p>
+<p>当各目标之间的期望平衡关系未知时，帕累托最优前沿（Pareto-optimal frontier）即为所有非劣解（noninferior solutions）的集合，如图 5.4 所示。“最优”决策此时转化为在该前沿上进行选择，常用方法包括：</p>
+<ol>
+<li>通过任务参数设定目标间的期望平衡，通常以目标函数形式体现（例如，通过对度量指标赋予权重）（见第 2.4 节）；</li>
+<li>求解约束模型（constraint model），其中某些度量必须满足最低标准，而其余度量则被优化（见图 5.5）；</li>
+<li>在备选方案上计算概率分布（例如，采用博弈论方法）（见第 6.2 节）；</li>
+<li>若时间允许，将可行方案呈现给人类操作员进行决策（见第 6.3 节）。</li>
+</ol>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-103.jpg?height=308&amp;width=774&amp;top_left_y=1617&amp;top_left_x=373" width="400" /></p>
+<p><strong>图 5.4</strong> 帕累托最优点（Pareto-optimal points）出现在无法在不损害其他度量的前提下进一步提升任一度量的情形：<span class="arithmatex">\(m_{1}\)</span> 的值越高，<span class="arithmatex">\(m_{2}\)</span> 的值就越低。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-104.jpg?height=247&amp;width=713&amp;top_left_y=147&amp;top_left_x=344" width="400" /></p>
+<p>当系统在最低运行要求下工作时，采用以下两种建模方法之一通常更为有效：<br />
+(a) 在成本（Cost）约束下最大化效能（Effectiveness），或<br />
+(b) 在效能约束下最小化成本。</p>
+<p>设定成本 <span class="arithmatex">\(\leq m_{1}\)</span> 且效能 <span class="arithmatex">\(\geq m_{2}\)</span> 的目标，可确定一个最优运行点。尽管这两种建模方式在数学上等价，但在实践中会引发不同的问题 [13], [14]。</p>
+<p><strong>图 5.5</strong> 约束模型支持在帕累托前沿上进行决策制定（DM）。相比之下，单一目标函数会通过为成本项赋予负权重的方式将所有度量合并为一个综合指标。</p>
+<p>举例而言，考虑一个单音干扰机（tone jammer）。存在多种技术可用于缓解其所造成的干扰；每种技术具有不同的预期效能与成本（见表 5.1）。即使在此简单场景中，选择也并非总是显而易见。首先，干扰机的具体特性可能降低某项技术的预期效能，因此系统应学会基于可观测特征（observables）估计其性能（见第 4.2 节）。其次，不同成本对平台和任务的可接受程度可能不同。最后，任务的不同阶段可能具有不同优先级，从而要求选择不同的技术，即便这些技术的预期效能相同。</p>
+<p>在现实场景中，当涉及多个性能度量、多种能力、多类平台、多样化任务以及复杂干扰机时，传统的查表法（look-up tables）或环境到技术的一一映射方法在所有情况下均表现不佳。</p>
+<p><strong>表 5.1</strong> 在通信电子防护（Communications EP）场景中，用于缓解单音干扰机的不同技术及其预期效能与成本</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">策略（Strategy）</th>
+<th style="text-align: left;">效能（Effectiveness）</th>
+<th style="text-align: left;">成本（Cost）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">陷波滤波器（Notch filter）</td>
+<td style="text-align: left;">良好；但随着干扰功率增大，自适应陷波可能滤除过多有用信号</td>
+<td style="text-align: left;">低</td>
+</tr>
+<tr>
+<td style="text-align: left;">波束成形（Beamforming）</td>
+<td style="text-align: left;">通常良好；若干扰呈分布式则效果差</td>
+<td style="text-align: left;">计算开销与多天线需求</td>
+</tr>
+<tr>
+<td style="text-align: left;">动态频谱接入（DSA）</td>
+<td style="text-align: left;">良好；但干扰机可能跟随跳频</td>
+<td style="text-align: left;">需频谱感知与协调时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">窄带跳频（Narrowband-hopping）</td>
+<td style="text-align: left;">取决于单音干扰的带宽</td>
+<td style="text-align: left;">协调时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">冗余数据包（Redundant packets）</td>
+<td style="text-align: left;">若单音干扰为间歇性则效果良好；否则效果差</td>
+<td style="text-align: left;">功耗增加（且吞吐量减半）</td>
+</tr>
+<tr>
+<td style="text-align: left;">扩频（Spreading）</td>
+<td style="text-align: left;">效果差</td>
+<td style="text-align: left;">接收链路增益提高会增加饱和脆弱性</td>
+</tr>
+<tr>
+<td style="text-align: left;">绕行路由（Routing around）</td>
+<td style="text-align: left;">中等</td>
+<td style="text-align: left;">功耗（需多跳节点）、时延增加</td>
+</tr>
+</tbody>
+</table>
+<h3 id="512">5.1.2 在性能空间中搜索<a class="headerlink" href="#512" title="Permanent link">&para;</a></h3>
+<p>人工智能（AI）致力于解决如何在指数级规模的性能空间（performance landscape）中进行搜索的问题。传统数学方法侧重于寻找完备且最优的解，但对于大多数现实世界问题（包括电子战，EW）而言，计算出精确解是不可行的。根据我们对目标函数的定义，EW 系统的策略数量呈指数级增长（<span class="arithmatex">\(\Pi_{\forall c} v_{c}\)</span>，其中 <span class="arithmatex">\(v_{c}\)</span> 表示控制参数 <span class="arithmatex">\(c\)</span> 可能取值的数量），并迅速趋近于无穷大。当策略数量较小时，系统可以估算每种策略的效用，如算法 5.1 所示。</p>
+<div class="admonition note">
+<p class="admonition-title">算法 5.1 当候选策略数量较少时，节点 <span class="arithmatex">\(n\)</span> 可对每种策略穷举计算其估计效用。该方法可有效为已部署的通信网络选择电子防护（EP）干扰抑制方案（参见例 7.1 和文献 [15]）。</p>
+<p>对每个候选策略 <span class="arithmatex">\(s_{i}\)</span>： // 节点 <span class="arithmatex">\(n\)</span> 的所有候选策略 </p>
+<p>对每个度量 <span class="arithmatex">\(m_{k}\)</span>：  // 估计的度量值 </p>
+<p><span class="arithmatex">\(m_{k}=f_{k}\left(o, s_{i}\right)\)</span> </p>
+<p>根据所有度量 <span class="arithmatex">\(m_{k}\)</span> 计算 <span class="arithmatex">\(\tilde{U}\left(s_{i}\right)\)</span>    // 估计的效用 </p>
+<p>选择 <span class="arithmatex">\(s=\operatorname{argmax}_{s_{i}} \tilde{U}\left(s_{i}\right)\)</span>       // 最优策略 </p>
+</div>
+<p>随着策略数量的增长，必须采用替代方法。如果目标函数是光滑的（smooth）且局部极大值（local maxima）相对较少，则基于梯度的搜索（gradient-based searches）是高效且有效的求解手段。</p>
+<p>然而，电子战的目标函数通常<strong>不光滑</strong>、<strong>不一定连续</strong>，且常常存在<strong>大量局部极大值</strong>，这使得随机搜索方法（randomized search methods）更为适用 [16]。这类方法也被称为元启发式方法（metaheuristic methods）、蒙特卡洛方法（Monte Carlo methods）或随机算法（stochastic algorithms），它们在统计意义上可保证收敛到最优解，但通常无法确定是否已找到真正的最优解。</p>
+<blockquote>
+<p>然而，最优性很少是关键要求；通常“足够好”（good）就已足够。</p>
+</blockquote>
+<p>在电子战（EW）中，环境是部分可观测的（partially observable），且变化极为迅速，因此一个近似解通常已足够。换言之，对问题过度思考反而得不偿失。诺贝尔经济学奖得主、人工智能之父赫伯特·A·西蒙（Herbert A. Simon）提出了“有限理性”（bounded rationality）[17] 的概念，指出个体的理性受限于其所掌握的信息、认知能力的局限以及做出决策的有限时间。第 5.3 节将进一步探讨这一思想。</p>
+<p>此外，许多电子战系统的设计规范要求其在面对最具压力的威胁时仍能保证特定性能。例如，采用自适应波束成形（adaptive beamforming）的雷达可能被规定需产生 50 dB 的零陷深度（null depth），以对抗噪声干扰机。该 50 dB 值通常是针对在最近距离、最接近目标方向上产生最高有效全向辐射功率（Effective Isotropic Radiated Power, EIRP）的最强干扰机而设定的。因此，即使学习系统所选择的自适应波束成形参数并非完全最优（例如，用于辅助数据估计的样本支撑不足），只要该模式被正确选为电子防护（EP）手段，由于系统在该模式下已预留了充足的性能裕度，它仍很可能对绝大多数干扰机构成有效对抗。</p>
+<p>随机搜索方法（randomized search methods）通过在若干次迭代中评估种群（population）中个体的质量，最终选出最优解（见算法 5.2）。在本文场景中，种群 <span class="arithmatex">\(P\)</span> 是节点可用候选策略的一个子集，其规模远小于所有候选策略的总数。不同的随机化算法采用不同的元启发式（metaheuristic）策略来生成每一次迭代的解。</p>
+<div class="admonition note">
+<p class="admonition-title">算法 5.2 元启发式方法通过随机化搜索策略，在一小部分个体（候选策略）构成的种群中探索性能空间。效用函数 <span class="arithmatex">\(\tilde{U}_{n}\)</span> 用于评估各个体的质量。</p>
+<p><span class="arithmatex">\(P =\)</span> 为节点 <span class="arithmatex">\(n\)</span> 生成初始候选策略种群 </p>
+<p><span class="arithmatex">\(For\)</span> 每次迭代： // 直至收敛或达到最大迭代次数 </p>
+<p><span class="arithmatex">\(\quad For\)</span> 每个候选策略 <span class="arithmatex">\(s_{i} \in P\)</span>：</p>
+<p><span class="arithmatex">\(\quad\quad For\)</span> 对每个度量 <span class="arithmatex">\(m_{k}\)</span>： </p>
+<p><span class="arithmatex">\(\quad\quad  m_{k}=f_{k}\left(o, s_{i}\right) \quad\)</span>   // 估计的度量值 </p>
+<p><span class="arithmatex">\(\quad Compute  \tilde{U}_{n}\left(s_{i}\right)\)</span>      // 估计的效用 </p>
+<p><span class="arithmatex">\(\quad P =\)</span> 更新种群（更新个体位置或个体本身）</p>
+<p>Select  <span class="arithmatex">\(s=\operatorname{argmax}_{s_{i} \in P}\left(\tilde{U}_{n}\left(s_{i}\right)\right)\)</span>   // 最后一代种群中的最优策略</p>
+</div>
+<p>我们对随机优化算法的讨论远非全面；此处仅列出在电子战领域已展现出潜力的方法，并提及若干相关实例。Beheshti 与 Shamsuddin [18] 综述了基于种群的元启发式算法（population-based meta-heuristics），包括其数学形式与权衡特性。Jamil 与 Yang [19] 提出了 175 个不同的基准问题，用于验证优化算法的性能，并（尤为重要地）刻画了各类算法的特性。Ramzan 等人 [6] 在认知无线电（Cognitive Radio, CR）网络背景下综述了多种优化方法。北约《认知雷达》报告 [20] 也介绍了大量相关方法与应用。这些技术仅是起点，可进一步与其他方法结合或增强。以下简要介绍若干随机优化算法。</p>
+<ul>
+<li>
+<p><strong>蚁群优化</strong>（Ant Colony Optimization, ACO）是一种鲁棒且通用的元启发式算法，用于求解组合优化问题。该方法通过一群人工“蚂蚁”在解空间中进行随机搜索来寻找解 [21,22]。蚂蚁在性能空间中移动时会留下“信息素”（pheromones）；被更多蚂蚁选择的路径会积累更浓密的信息素，从而在后续迭代中获得更高的选择概率。在算法 5.2 中，ACO 的种群更新意味着将“蚂蚁”移动到另一个策略。</p>
+<ul>
+<li><strong>优点</strong>：ACO 天然具备并行性，可保证收敛，并适用于动态环境中的应用。  </li>
+<li><strong>缺点</strong>：由于 ACO 属于随机搜索方法，其收敛时间不确定，理论分析困难，且不能保证找到全局最优解。前一轮迭代中表现良好的解会提高后续迭代沿相似路径搜索的概率，从而降低种群的多样性。
+  ACO 已被应用于认知无线电网络中，用于构建路由树 [23,24]、信道分配 [25] 以及调整发射参数 [26]。Karaboga 等人 [27] 利用 ACO 在线性天线阵列中控制零陷方向。Ye 等人 [28] 将 ACO 与禁忌搜索（Tabu Search）相结合，用于协同合作式干扰（collaborative cooperative jamming）决策。</li>
+</ul>
+</li>
+<li>
+<p><strong>粒子群优化</strong>（Particle Swarm Optimization, PSO）采用一组候选解（称为“粒子”）构成的种群（即“群”）在搜索空间中移动以寻找最优解 [29]。每个粒子的运动由两个因素引导：其自身历史最优位置的估计，以及整个粒子群迄今为止发现的全局最优位置。</p>
+<ul>
+<li><strong>优点</strong>：PSO 结构简单，易于编码；相较于遗传算法（Genetic Algorithms），在处理连续变量问题时通常更高效；同时适用于动态应用场景。  </li>
+<li><strong>缺点</strong>：PSO 的性能对参数选择高度敏感，不当的参数设置可能导致算法过早收敛至局部最优解，尤其在面对复杂问题时；此外，其随机性可能导致结果波动较大（随机变异性高）。
+  PSO 已被用于无线通信网络中计算多参数的传输与资源分配方案 [6]。在雷达领域，PSO 在脉冲压缩码（pulse compression codes）设计 [30, 31] 和离散频率波形（discrete frequency waveforms）优化 [32, 33] 中表现良好。</li>
+</ul>
+</li>
+<li>
+<p><strong>遗传算法</strong>（Genetic Algorithms, GAs）是另一种基于种群的随机搜索方法，其中候选解被编码为“染色体”（chromosomes）[34]。该元启发式算法通过<strong>变异</strong>（mutation）、<strong>交叉</strong>（crossover）和<strong>选择</strong>（selection）等操作，迭代生成高质量解以应对复杂问题。</p>
+<ul>
+<li><strong>优点</strong>：GAs 天然适用于离散值问题，且易于并行化。  </li>
+<li><strong>缺点</strong>：GAs 容易过早收敛（premature convergence）；维持种群多样性至关重要 [35–37]。GA 的问题编码具有高度问题依赖性，设计合适的编码方案往往较为困难。此外，与粒子群优化（PSO）相比，GAs 的计算效率通常较低 [38]。
+  GAs 已被用于计算通信系统中的多参数传输方案，目标涵盖功率管理、传输性能优化以及共享频谱使用等 [6, 39]。在雷达领域，GAs 已应用于雷达系统设计 [40]、波形选择 [41]、波形设计 [42, 43]、目标识别 [44, 45] 以及干扰抑制（jammer suppression）[46]。</li>
+</ul>
+</li>
+<li>
+<p><strong>模拟退火</strong>（Simulated Annealing, SA）是另一种搜索元启发式方法，它以概率方式决定是否从当前解转移到另一个解 [47]。与遗传算法（GAs）和粒子群优化（PSO）不同，SA 仅维护<strong>单个搜索实例</strong>。其概率函数通常设计为：当两个解之间的质量差异增大时，接受较差解（即“上坡”移动）的概率降低；换言之，小幅上坡移动比大幅上坡移动更可能发生。SA 也可嵌入 GAs 或 PSO 中，以加速搜索过程。</p>
+<ul>
+<li><strong>优点</strong>：模拟退火相对易于编码，通常能给出良好解（在统计意义上可保证找到全局最优解）。由于仅维护一个个体，其内存需求显著低于基于种群的方法。  </li>
+<li><strong>缺点</strong>：也正因如此，SA 更容易陷入起始点附近的局部最优区域（“山谷”），且无法判断是否已找到最优解。
+  模拟退火已被应用于多种场景，包括天线故障检测 [48]、无线网络服务质量（QoS）保障 [49]、雷达散射截面（RCS）估计 [50]、干扰源定位 [51] 以及干扰抑制 [52]。SA 还与 GAs 结合，用于认知无线电（CR）网络中的功率分配 [53]、雷达成像 [54] 以及 MIMO 传感器阵列设计 [55]。此外，SA 也与其他人工智能技术（如基于案例的推理，Case-Based Reasoning [56]）结合，以提升收敛速度。</li>
+</ul>
+</li>
+<li>
+<p><strong>交叉熵方法</strong>（Cross-Entropy Method, CEM）是一种用于重要性采样（importance sampling）的随机搜索方法；它从某一概率分布中抽取样本，然后通过最小化该分布与目标分布之间的交叉熵（cross-entropy），在下一次迭代中生成更优的样本 [57, 58]。Amos 与 Yarats [59] 提出了一种可微分的 CEM 形式，使其能与梯度下降方法结合使用。</p>
+<ul>
+<li><strong>优点</strong>：CEM 提供了一个精确的数学框架，在某种意义上可导出最优学习规则；对参数设置具有鲁棒性；特别适用于稀有事件仿真（rare event simulation），即需精确估计极小概率的场景。  </li>
+<li><strong>缺点</strong>：收敛时间不确定，停止条件依赖启发式规则；原始 CEM 方法对存储和计算资源需求较高 [60]。
+  CEM 已被用于网络可靠性估计与优化 [57, 61]、网络路径发现 [62] 以及波束零陷（null）配置 [63]。Naeem 等人 [64] 利用 CEM 优化协作通信与温室气体排放。CEM 还可用于天线设计问题 [65]，以及在强化学习（Reinforcement Learning, RL）中加速学习过程 [58, 60]。与模拟退火类似，CEM 也可与基于种群的方法结合，以实现解的并行化搜索 [66, 67]。</li>
+</ul>
+</li>
+</ul>
+<p>尽管优化（optimization）是一个成熟的领域，新的近似技术仍在不断涌现。此外，不同的优化方法可以相互结合，以获得更优的性能（更快的收敛速度或更高的解质量）。许多其他方法同样能够提供帮助，包括混合方法（hybrid approaches，见第 3.3 节）和元学习（metalearning，见第 5.1.3 节）。例如，尽管性能空间（performance surface）在理论上是无限大的，但电子战（EW）对抗过程受到物理规律的约束，且对抗状态的演进取决于信息的获取或拒止。启发式方法（heuristics）可利用这种状态空间的内在关联性，并借助随机化方法探索其中尚未知晓的区域。</p>
+<h3 id="513">5.1.3 优化元学习<a class="headerlink" href="#513" title="Permanent link">&para;</a></h3>
+<p>元学习（Metalearning）是指“学会学习”（learning to learn）的过程 [68, 69]。它关注的是对学习现象本身的认知与理解，而非直接学习具体领域知识。元学习器（metalearner）通过调整算法的运行参数，使其预期性能随经验积累而不断提升。此处存在一定的术语混淆：普通“学习”指构建规则以更有效地评估或决策，而“元学习”则是学习如何更好地进行学习。由于许多学习算法本质上是优化器，因此元学习可以用于学习如何优化一个学习器，而该学习器又反过来改进优化器。</p>
+<p>早期的元学习研究包括：通过偏置管理（bias-management）在不同算法之间进行选择 [70]、利用元遗传编程（meta-genetic programming）演化出更优的遗传程序 [71]，以及在神经网络中学习优化学习规则 [72]。元学习能够自动挖掘目标任务中的内在结构，从而避免依赖人工调参 [73]。元学习具有以下多方面优势：</p>
+<ol>
+<li><strong>速度</strong>：实现更快的学习或优化；  </li>
+<li><strong>易用性</strong>：自动化算法调参过程；  </li>
+<li><strong>适应性</strong>：对环境变化反应敏捷；  </li>
+<li><strong>数据效率</strong>：可将知识从一个上下文迁移到另一个上下文，减少对新数据的需求。</li>
+</ol>
+<p>如图 5.6 所示，多种元学习方法可相互结合，其总体目标是提升机器学习（ML）模型的泛化能力，以及决策制定（DM）引擎的效率与准确性。</p>
+<p>元学习还可学习任务的低维表示（low-dimensional representation）[74, 75]，以简化搜索过程。在此情形下，元学习器会动态调整效用函数 <span class="arithmatex">\(\tilde{U}_{n}\)</span> 中的参数数量。其他降维方法还包括主成分分析（Principal Components Analysis, PCA）和人工神经网络（ANNs），例如自组织映射（Kohonen 网络）和自编码器（auto-encoders）（参见第 3.1.2 节）。</p>
+<p>元学习（Metalearning）可帮助优先搜索策略，首先聚焦于最重要的控制参数（controllables）——即对解质量贡献最大的那些参数。算法先在少量关键控制参数的选项中进行搜索，而对次要参数则采用默认值或上一时间步所选的值。只有在确定了关键参数的取值后，算法才会进一步搜索次要控制参数。这种方法类似于“学习如何规划”（learning how to plan）（见第 7.3 节）。例如，在通信干扰场景中，一个主要控制参数可能是用于产生干扰的合适占空比（duty cycle），而次要控制参数则包括干扰波形的具体细节，如频偏（frequency offsets）和特定的调制技术（modulation techniques）。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-110.jpg?height=565&amp;width=575&amp;top_left_y=1417&amp;top_left_x=465" width="300" /></p>
+<p><strong>图 5.6</strong> 元学习通过改变数据表示、优先化搜索顺序、调整超参数以及变换效用函数，以提升解的质量。</p>
+<p>元学习还可分析搜索过程，以优化超参数（hyperparameters）并实现更高效的搜索 [76–78]。元学习器优化一组超参数 <span class="arithmatex">\(\theta\)</span>，这些参数控制着对 <span class="arithmatex">\(\tilde{U}_{n}\)</span> 的优化过程。元学习器使用一个<strong>元效用函数</strong>（meta-Utility function）<span class="arithmatex">\((\tilde{U}_{n}, \mathcal{J})\)</span>，其中 <span class="arithmatex">\(\mathcal{J}\)</span> 用于评估优化器的性能指标，例如收敛速度，如图 5.7 所示。</p>
+<p><img alt="" src="https://cdn.mathpix.com/snip/images/6-sT-iMC78CIF-TfBBw_PrrGuU63ezcmK8JralXgxPw.original.fullsize.png" width="400" /></p>
+<p><strong>图 5.7</strong> 元学习利用元效用函数 <span class="arithmatex">\(\mathcal{J}\)</span> 优化优化器的超参数 <span class="arithmatex">\(\theta\)</span>。</p>
+<p>此外，通过近似导数，还可构建 <span class="arithmatex">\(\tilde{U}_{n}\)</span> 的可微分版本，使其适用于基于梯度的方法 [59]。</p>
+<p>第 7.3 节将在强化学习（Reinforcement Learning, RL）及与环境直接交互的背景下，介绍更多用于改进决策制定（DM）的学习方法。此处所呈现的所有方法亦可视为强化学习方法。</p>
+<h2 id="52">5.2 调度<a class="headerlink" href="#52" title="Permanent link">&para;</a></h2>
+<p>调度（Scheduling）将一个偏序规划（partially-ordered plan）映射到具体的资源和时隙（timeslots）上。调度关注的是“何时做”以及“如何做”。在电子战（EW）中，调度通常具体规定何时发射、何时接收。</p>
+<p>单个电子战节点上的资源调度器（resource scheduler）可决定：何时激活传感器、何时及如何发射、何时及如何规避特定的电磁特征（electromagnetic signatures），以及/或何时及如何接收。对于分布式电子战系统而言，这类“如何”与“何时”的细节只会更加复杂。一个电子战资源调度器需要具备以下四个要素：(1) 一系列动作及其资源需求；(2) 可用资源集合；(3) 约束条件；(4) 目标函数。</p>
+<p>关键路径法（Critical Path Method）通过构建动作之间的有向图来分析任务流程；其中总持续时间最长的路径称为关键路径（critical path），它决定了整个电子战任务的最大持续时间。位于关键路径上的任何任务都称为关键任务（critical task）。关键任务及其相互依赖关系可用甘特图（Gantt chart）或类似方法表示。在电子战中，关键任务包括频谱感知（spectrum sensing）、频谱分析（spectrum analysis）和频谱决策（spectrum decision）（见图 5.8）；一次电子战任务通常包含多次认知循环（cognition cycle）的迭代。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-112.jpg?height=675&amp;width=845&amp;top_left_y=147&amp;top_left_x=327" width="400" /></p>
+<p><strong>图 5.8</strong> 各高层任务——感知、分析与决策制定（DM）——共同驱动发射/接收调度。</p>
+<p>在计算领域，最早的调度方法源自运营管理（operations management）。装配线及人类生活的许多其他方面都需要调度，其关注点与计算系统相同，均追求效率。调度策略的发展核心在于确定关键假设应为何、哪些度量指标至关重要。在计算机科学中，常用度量包括工作负载（workload）、作业数量（jobs）、周转时间（turnaround time）和公平性（fairness）[79]。如今，多种调度范式已被广泛应用于网络路由器、操作系统、磁盘驱动器、嵌入式系统以及分组交换无线网络的解决方案中。</p>
+<p>在电子战系统中，调度器所选择的动作最终将使系统能够执行发射与接收操作。调度器可以按循环（cyclical）或线性（linear）方式执行动作：线性调度是有限的，而循环调度则自然重复。理想情况下，要实现恰当的任务调度，需全面掌握所有可能的状态；然而，部分状态的不可观测性（partial observability）可能使特定任务难以完成。为应对输出功率、能效和时间要求等众多约束，自动调度器可为各类约束分配权重或成本，从而避免繁琐且往往因系统时序限制而不可行的人工预规划（preplanning）。</p>
+<p>在自动调度（automatic scheduling）中，所有任务可能都需要经历执行顺序的自动优先级排序，但任务本身的性质通常需由认知型电子战（cognitive EW）系统设计者预先确定。此外，分布式电子战系统中的单个节点可能完全了解其自身“世界”范围内的所有状态，却未必知晓其他节点或行动方（actors）的状态。各节点可在本地随时间逐步完成部分任务，但节点间的协调至关重要——因为各节点可能并未朝向同一目标努力，甚至可能彼此目标冲突。例如，调度器必须意识到节点间连接性和可视性（visibility）的局限性，验证任务是否已成功完成，并对执行错误的任务进行问责（即奖惩机制）。</p>
+<p>设计者的目标是构建一个调度器，使其在任务约束和运行限制内达成所有调度目标。在分布式系统中，决策应基于各节点的响应（或无响应）来判断：某些任务是否应彻底放弃，或是否应授权其他节点接管该任务。在时空域中缺乏真正的全频谱“可视性”（visibility），也将决定调度算法的能力边界。对大量状态（包括过去、当前以及预先规划或预测的未来状态）的感知，使调度器能够在任务执行过程中动态调整其参数（即调整其总体主调度计划）。</p>
+<p>对于实时认知电子战系统而言，时间至关重要。因此，必须基于众多内外部因素（如传感器数据、天气状况、天线阵列可用性，或更广义的资源可用性）在近实时（near real-time）内决定任务的执行顺序。调度器应根据资源可用性动态调整调度计划。</p>
+<p>以现代商用通信系统为例，其调度器能够决定何时发射与接收、使用哪些频率及时隙，例如采用频分多址（Frequency-Division Multiple Access, FDMA）或时分多址（Time-Division Multiple Access, TDMA）方案。动态频谱接入（Dynamic Spectrum Access, DSA）也是任何电子战系统极具吸引力的功能，应纳入其调度算法之中。</p>
+<p>调度器负责决定系统任务的执行顺序，同时评估资源可用性并确定如何利用这些资源。它必须依赖电子支援（ES）所提供的态势感知（Situational Awareness, SA）信息，并根据接收到的信息重新排序任务。虽然一个简单的调度器可以完全是确定性的（例如基于规则或硬编码的输入-输出映射），但所选方法必须支持调度机制以应对意外、未知或部分可观测的状态。</p>
+<p>最后，对任务环境的整体感知对于以最优顺序成功执行系统任务（无论任务内容如何）至关重要。灵活性是关键；任务的初始优先级设定与动态重优先级（reprioritization）同等重要。有价值的信息有时可能在不便的时机到达，但不可忽视，调度器必须能够识别此类信息。此外，调度器还可受益于具备“战斗或逃跑”（fight or flight）能力或紧急模式——当现有调度计划必须被放弃以应对突发威胁时，能够立即启动新的任务序列，从而保护系统安全。</p>
+<p>表 5.2 列举了文献中与认知电子战（cognitive EW）相关的多种调度器实例。</p>
+<p><strong>表 5.2 电子战调度器所采用的优化方法示例</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类别</th>
+<th style="text-align: left;">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>通信</strong><br>（Comms）</td>
+<td style="text-align: left;">采用局部搜索、模拟退火（SA）和蚁群优化（ACO）的卫星广播调度 [80]；面向低功耗终端操作的卫星调度 [81]；最小化发射能耗 [82]；长期演进（LTE）上行链路定时对齐与功率控制 [83]；多天线系统的用户调度 [84]；基于机器学习（ML）的鱼眼状态路由（Fish-eye State Routing, FSR）用于移动自组织网络（MANET）优化 [85]；基于模拟退火的自适应 MANET 路由算法 [86]；基于恢复微时隙（recovered minislots）的 MANET 传输调度协议 [87]；基于位置的广播 TDMA 调度用于 MANET [88]；认知无线电网络（CRN）中的频谱感知调度器 [89]；基于遗传算法（GA）的 CRN 调度算法 [90]；CRN 的实时启发式调度 [91]；CRN 的实时调度器 [92]；面向集中式 CRN 的多项式时间、节能型启发式调度器 [93]；分布式传感器网络调度 [94]；资源分配技术综述 [95]，其中方法包括克隆 GA、基于加权和法（Weighted-Sum Method, WSM）的分布估计算法（Estimation of Distribution Algorithm, EDA）用于绿色无线资源分配，以及 CEO 算法。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>雷达</strong><br>（Radar）</td>
+<td style="text-align: left;">基于混合 GA 与启发式的相控阵任务调度 [96]；基于 ML 的有源电子扫描阵列（AESA）天线调度 [97]；多功能雷达网络的贪心与启发式调度 [98]；多功能相控阵雷达调度启发式方法 [99]；采用蒙特卡洛树搜索（Monte Carlo Tree Search）的多功能雷达 [100]。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>电子战</strong><br>（EW）</td>
+<td style="text-align: left;">用于电子防护（EP）的 FSR 与功率控制 [85]；面向机载电子对抗（ECM）的部分可观测马尔可夫决策过程（POMDP） [101]；基于 ML 的周期性传感器调度用于电子支援（ES）[102]；基于博弈论的干扰资源与电子攻击（EA）策略优化方法 [103]；基于 POMDP 与决策树的风险驱动多传感器调度，用于目标威胁评估 [104]。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>通用框架</strong><br>（General framework）</td>
+<td style="text-align: left;">基于知识工程的调度 [105]；面向网络化嵌入式系统的异构驱动任务调度与端到端同步调度算法 [106]；基于多项式时间启发式算法的效用累积型实时调度器 [107]；面向异构分布式系统的强化学习（RL）调度器 [108]；面向大规模资源调度的通用 ML 解决方案 [109]；采用深度强化学习（deep RL）的在线资源调度算法 [110]；用于组合优化问题启发式学习的 ML 方法 [111]；基于进化计算的调度方法 [112]；用于规划与调度的时序推理（temporal reasoning）[113]。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="53-anytime-algorithms">5.3 任意时间算法（Anytime Algorithms）<a class="headerlink" href="#53-anytime-algorithms" title="Permanent link">&para;</a></h2>
+<p>电子战（Electronic Warfare, EW）决策管理（Decision-Making, DM）算法运行于快速变化的环境中，并面临严格的实时性要求。新的优先级可能随时“突然出现”，资源也可能意外耗尽。对于决策者而言，一个理想特性是能够快速生成解决方案；或者，在时间充裕时，投入更多时间进行深入推理。尽管实现零延迟决策可能是一个目标，但在实践中，更长的积分时间（例如等待一两秒）可能会产生更优的结果。</p>
+<p>任意时间算法（Anytime Algorithms）在运行时间越长时，能获得越来越好的解。该算法由Dean和Boddy于20世纪80年代提出[114]，其特点是在计算过程中的任意时刻均可被中断，并返回一个结果，该结果的效用是计算时间的函数。类似的概念“弹性计算”（Flexible Computation）[115]则明确权衡了额外计算时间所带来的收益与使用部分解进行行动所产生的代价。这两种思想均可追溯至Herb Simon提出的“满意化”（Satisficing）[116]概念，即在搜索解的过程中，一旦达到可接受性阈值便停止搜索；当因计算不可行性或信息缺失而无法确定最优解时，满意化策略尤为有用。更长的观测时间可能生成质量更高的观测数据，而更长的计算时间则可能带来更优的优化结果。任意时间算法认识到，寻找最优解所需的时间通常会降低整体效用，这类似于边际收益递减规律。</p>
+<p>大多数元启发式（Metaheuristic）算法都满足这一特性：每次迭代都会提升当前最优解的质量，因此可根据需要随时终止。除了第5.1.2节中引用的文献外，任意时间算法在需要快速生成近似解的领域中已被证明有效，应用范围涵盖图像配准（Image Alignment）[117]到自适应气象控制雷达（Adaptive Weather-Control Radars）[118]。</p>
+<p>Zilberstein研究了元控制（Metacontrol）问题：即对多个任意时间算法进行编译、控制与管理[119, 120]。Zilberstein以雷达威胁分析与目标分配问题作为其动机场景之一，并指出[119]：</p>
+<blockquote>
+<p>用于跟踪目标的雷达组件与用于执行目标分配的规划组件显然相互依赖：前者的质量显然会影响后者的质量。在此类问题中，使用条件性能剖面（Conditional Performance Profiles）和动态调度（Dynamic Scheduling）似乎是必不可少的。</p>
+</blockquote>
+<p>元学习（Metalearning）（见第5.1.3节）进一步扩展了这项工作，通过学习并利用性能预测来提升算法效能[121–123]。</p>
+<h2 id="54-distributed-optimization">5.4 分布式优化（Distributed Optimization）<a class="headerlink" href="#54-distributed-optimization" title="Permanent link">&para;</a></h2>
+<p>电子战（Electronic Warfare, EW）系统可能需要在单一平台上的多个决策者之间，或跨多个平台之间进行联合优化。雷达系统和通信（Comms）系统均需要分布式决策管理（Distributed Decision-Making, DM），但通信系统具有更高的延迟和更强的协调需求。根据解决方案的性质，优化方法可分为以下几类：</p>
+<ul>
+<li><strong>集中式（Centralized）</strong>：由单一决策者为所有组件和所有节点寻找全局解；</li>
+<li><strong>分布式（Distributed）</strong>：决策者通过本地通信协调各自行动；</li>
+<li><strong>去中心化（Decentralized）</strong>：决策者完全独立，不依赖通信进行协调。</li>
+</ul>
+<p>在单一平台上，单一优化器通常比多个优化器更接近最优解，因为它能够搜索一个统一的全局解。然而，设计单一优化器更具挑战性，原因在于各子系统存在不同的时间尺度、不同类型的信息，以及需要同步的信息量庞大。</p>
+<p>在跨平台网络中，采用单一集中式优化器是不合适的。其关键问题在于单点瓶颈（Single Bottleneck）：一旦集中式优化器失效，整个系统将随之瘫痪。其他顾虑还包括决策管理的延迟、信息隐私以及可被探测的辐射信号。在这种环境下，快速做出局部较优的决策，远胜于试图寻找一个在实施前就已失效的全局最优决策。图5.9展示了集中式优化方法在实践中的局限性。许多分布式与去中心化优化方案天然具备任意时间算法（Anytime Algorithms）的特性，使其在该动态领域中能够自然地生成满意化解（Satisficing Solutions）。</p>
+<p>在电子战中，集中式节点可用于捕获“慢时间尺度”（Slower-Time）信息，包括更广泛的作战任务策略变更、电子战军官（Electronic Warfare Officer, EWO）交互（见第6.3节），以及较慢速的信息分发与任务管理[124, 125]（见第6.1.6节）。</p>
+<p>分布式优化（Distributed Optimization）方法通过局部邻域间的通信来协调行动。传统方法通常假设通信是安全且充足的。然而，这一假设在电子战（Electronic Warfare, EW）环境中并不成立，因为在该环境中，通信可能因干扰（Jamming）、平台机动导致的链路中断，或为降低射频（RF）辐射而主动限制通信而受到限制甚至被拒止。第6.1.4节讨论了在何时进行通信的规划方法——即在信息共享的收益与传输代价之间进行权衡管理。</p>
+<p>多篇综述文献描述了分布式优化解决方案，并指出其在通信开销、内存使用和最优性方面的特点[126–128]。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_27_ecb4b185db1bd7f79689g-116.jpg?height=645&amp;width=741&amp;top_left_y=1362&amp;top_left_x=380" width="400" /></p>
+<p><strong>图5.9</strong> 集中式推理（Centralized Reasoning）很快达到实际极限。</p>
+<p><strong>共识传播（Consensus Propagation）</strong>[129]是一种轻量级通信方法，允许每个节点共享其对全局效用的局部估计，并快速计算出全局平均值，即使节点并不知道网络中总共有多少个节点。蚁群优化（Ant Colony Optimization, ACO）算法同样具有较低的通信需求。</p>
+<p>完全去中心化（Fully Decentralized）协调要求每个节点独立评估其对全局解的贡献。一种可行方案是构造效用函数，使得每个节点的局部最优解能够准确反映其对团队全局最优解的贡献。专栏2.1（Callout 2.1）中的形式化问题定义即采用对真实效用函数的完全局部近似，在线学习环境（Online Learning Environment）中为通信网络选择电子防护（Electronic Protection, EP）干扰抑制方法（参见例7.1，[15]）。Molzhan等人[130]在经典控制理论与实时反馈控制的背景下，提出了一种用于电力系统去中心化优化的方法。</p>
+<p><strong>无通信学习（Communication-Free Learning）</strong>[131]将问题形式化，使得仅依靠局部感知即可判断解的有效性；作者描述了如何对图着色（Graph Coloring）、信道分配（考虑信道相关干扰）、会话间网络编码（Intersession Network Coding）以及去中心化传输调度（Decentralized Transmission Scheduling）进行建模。每个节点只需知道自身的分配结果，无需了解其他节点的选择。</p>
+<p>分布式优化方法支持信息融合（Information Fusion）[118]、资源分配（Resource Allocation）[124, 131, 132]和调度（Scheduling）[133]。分布式优化的一个常见应用是时间同步（Timing Synchronization），该同步机制可进一步用于数据融合、占空比控制（Duty Cycling）、协同定位（Cooperative Localization）以及分布式波束成形（Distributed Beamforming）等协同行动[134–136]。</p>
+<h2 id="55-conclusion">5.5 结论（Conclusion）<a class="headerlink" href="#55-conclusion" title="Permanent link">&para;</a></h2>
+<p>正如机器学习（Machine Learning, ML）和统计推断不存在“免费午餐”定理（No Free Lunch Theorem）[137]一样，优化领域同样不存在“免费午餐”[138]：如果某个算法在某一类问题上表现优异，那么它必然以在其余所有问题上性能下降为代价。</p>
+<p>本章介绍了一些已被证明在电子战（Electronic Warfare, EW）问题中有效的优化方法；这些方法具备以下能力：</p>
+<ul>
+<li>支持多目标优化（Support multiple objectives）；</li>
+<li>快速搜索指数级规模的性能空间（Rapidly search the exponential performance surface）；</li>
+<li>应对动态环境（Handle a dynamic environment）；</li>
+<li>在获得更多计算时间时提升解的质量（Improve solution quality when given more time）；</li>
+<li>在通信受限条件下，于多个节点上高效运行（Operate well for multiple nodes under limited communication）。</li>
+</ul>
+<p>第6章将讨论更具战略性的决策管理（Decision-Making, DM）：长期作战规划与管理。</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<p>[1] Arrow, K., "Decision Theory and Operations Research," Operations Research, Vol. 5, No. 6, 1957.</p>
+<p>[2] Russell, S., and P. Norvig, Artificial Intelligence: A Modern Approach, Pearson Education, 2015.</p>
+<p>[3] Chien, S., et al., "Automated Planning and Scheduling for Goal-Based Autonomous Spacecraft," Intelligent Systems, Vol. 13, No. 5, 1998.</p>
+<p>[4] R-Moreno, M., et al., "RFID Technology and AI Techniques for People Location, Orientation and Guiding," in International Conference on Industrial, Engineering and Other Applications of Applied Intelligent Systems, 2009.</p>
+<p>[5] Du, D., P. Pardalos, and W. Wu, "History of Optimization," in Encyclopedia of Optimization (C. Floudas and P. Pardalos, Eds.), Springer, 2009.</p>
+<p>[6] Ramzan, M., et al., "Multi-Objective Optimization for Spectrum Sharing in Cognitive Radio Networks: A Review," Pervasive and Mobile Computing, Vol. 41, 2017.</p>
+<p>[7] Cassady, P., Bayesian Analysis of Target Detection with Enhanced Receiver Operating Characteristic, 2019. Online: <a href="https://arxiv.org/abs/1903.08165">https://arxiv.org/abs/1903.08165</a>.</p>
+<p>[8] Chalise, B., M. Amin, and B. Himed, "Performance Tradeoff in a Unified Passive Radar and Communications System," IEEE Signal Processing Letters, Vol. 24, No. 9, 2017.</p>
+<p>[9] Grossi, E., M. Lops, and L. Venturino, "A New Look at the Radar Detection Problem," Transactions on Signal Processing, Vol. 64, No. 22, 2016.</p>
+<p>[10] Chiriyath, A., et al., "Radar Waveform Optimization for Joint Radar Communications Performance," Electronics, Vol. 8, No. 12, 2019.</p>
+<p>[11] AlQerm, I., and B. Shihada, "Adaptive Multi-Objective Optimization Scheme for Cognitive Radio Resource Management," in GLOBECOM, IEEE, 2014.</p>
+<p>[12] Mitchell, A., et al., "Cost Function Design for the Fully Adaptive Radar Framework," IET Radar, Sonar and Navigation, 2018.</p>
+<p>[13] Haigh, K. Z., O. Olofinboba, and C. Y. Tang, "Designing an Implementable User-Oriented Objective Function for MANETs," in International Conference On Networking, Sensing and Control, IEEE, 2007.</p>
+<p>[14] Charlish, A., and F. Hoffman, "Cognitive Radar Management," in Novel Radar Techniques and Applications (R. Klemm, et al., Eds.), Scitech Publishing, 2017.</p>
+<p>[15] Haigh, K. Z., et al., "Parallel Learning and Decision Making For a Smart Embedded Communications Platform," BBN Technologies, Tech. Rep. BBN-REPORT-8579, 2015.</p>
+<p>[16] Zabinsky, Z. B., "Random Search Algorithms," in Wiley Encyclopedia of Operations Research and Management Science, 2011.</p>
+<p>[17] Simon, H., "A Behavioral Model of Rational Choice," Quarterly Journal of Economics, Vol. 69, No. 1, 1955.</p>
+<p>[18] Beheshti, Z., and S. Shamsuddin, "A Review of Population-Based Metaheuristic Algorithm," International Journal of Advances in Soft Computing and its Applications, Vol. 5, No. 1, 2013.</p>
+<p>[19] Jamil, M., and X.-S. Yang, "A Literature Survey of Benchmark Functions for Global Optimization Problems," International Journal of Mathematical Modelling and Numerical Optimisation, Vol. 4, No. 2, 2013.</p>
+<p>[20] Task Group SET-227, "Cognitive Radar," NATO Science and Technology, Tech. Rep. TR-SET-227, 2020.</p>
+<p>[21] Dorigo, M., "Optimization, Learning and Natural Algorithms," Ph.D. dissertation, Politecnico di Milano, Milan, Italy, 1992.</p>
+<p>[22] Katiyar, S., I. Nasiruddin, and A. Ansari, "Ant Colony Optimization: A Tutorial Review," in National Conference on Advances in Power and Control, 2015.</p>
+<p>[23] Almasoud, A., and A. Kama, "Multi-Objective Optimization for Many-to-Many Communication in Cognitive Radio Networks," in GLOBECOM, IEEE, 2015.</p>
+<p>[24] Zhang, Q., Q. He, and P. Zhang, "Topology Reconfiguration in Cognitive Radio Networks Using Ant Colony Optimization," in Vehicular Technology Conference, IEEE, 2012.</p>
+<p>[25] He, Q., and P. Zhang, "Dynamic Channel Assignment Using Ant Colony Optimization for Cognitive Radio Networks," in Vehicular Technology Conference, IEEE, 2012.</p>
+<p>[26] Waheed, M., and A. Cai, "Cognitive Radio Parameter Adaptation in Multicarrier Environment," in International Conference on Wireless and Mobile Communications, IEEE, 2009.</p>
+<p>[27] Karaboga, N., K. Güney, and A. Akdagli, "Null Steering of Linear Antenna Arrays with Use of Modified Touring Ant Colony Optimization Algorithm," International Journal of RF and Microwave Computer-Aided Engineering, Vol. 12, No. 4, 2002.</p>
+<p>[28] Ye, F., F. Che, and L. Gao, "Multiobjective Cognitive Cooperative Jamming DecisionMaking Method Based on Tabu Search-Artificial Bee Colony Algorithm," International Journal of Aerospace Engineering, 2018.</p>
+<p>[29] Kennedy, J., and R. Eberhart, "Particle Swarm Optimization," in International Conference on Neural Networks, Vol. 4, 1995.</p>
+<p>[30] Hafez, A., and M. El-latif, "New Radar Pulse Compression Codes by Particle Swarm Algorithm," in IEEE Aerospace Conference, 2012.</p>
+<p>[31] Li, B., "Particle Swarm Optimization for Radar Binary Phase Code Selection," in Radar Sensor Technology, 2018.</p>
+<p>[32] Reddy, B., and U. Kumari, "Performance Analysis of MIMO Radar Waveform Using Accelerated Particle Swarm Optimization Algorithm," Signal and Image Processing, Vol. 3, No. 4, 2012.</p>
+<p>[33] Praveena, A., and V. Narasimhulu, "Design of DFC Waveforms for MIMO Radar Using Accelerated Particle Swarm Optimization Algorithm," International Journal of Engineering Trends and Technology, Vol. 33, No. 2, 2016.</p>
+<p>[34] Holland, J., "Genetic Algorithms and Adaptation," in Adaptive Control of Ill-Defined Systems, Vol. 16, 1984.</p>
+<p>[35] Meadows, B., et al., "Evaluating the Seeding Genetic Algorithm," in Australasian Joint Conference on Artificial Intelligence, 2013.</p>
+<p>[36] Watson, T., and P. Messer, "Increasing Diversity in Genetic Algorithms," in Developments in Soft Computing, 2001.</p>
+<p>[37] Chuang, C.-Y., and S. Smith, "Diversity Allocation for Dynamic Optimization Using the Extended Compact Genetic Algorithm," in Congress on Evolutionary Computation, IEEE, 2013.</p>
+<p>[38] Hassan, R., et al., A Copmarison [sic] of Particle Swarm Optimization and the Genetic Algorithm, 2004. Online: <a href="https://tinyurl.com/pso-vs-ga">https://tinyurl.com/pso-vs-ga</a>.</p>
+<p>[39] Mehboob, U., et al., "Genetic Algorithms in Wireless Networking: Techniques, Applications, and Issues," Soft Computing, 2016.</p>
+<p>[40] Bartee, J., "Genetic Algorithms as a Tool for Phased Array Radar Design," M.S. thesis, Naval Postgraduate School, Monterey, California, 2002.</p>
+<p>[41] Capraro, C., et al., "Using Genetic Algorithms for Radar Waveform Selection," in IEEE Radar Conference, 2008.</p>
+<p>[42] Lellouch, G., A. K. Mishra, and M. Inggs, "Design of OFDM Radar Pulses Using Genetic Algorithm Based Techniques," IEEE Transactions on Aerospace and Electronic Systems, Vol. 52, No. 4, 2016.</p>
+<p>[43] Sen, S., G. Tang, and A. Nehorai, "Multiobjective Optimization of OFDM Radar Waveform for Target Detection," IEEE Transactions on Signal Processing, Vol. 59, No. 2, 2011.</p>
+<p>[44] Jouny, I., "Radar Target Identification Using Genetic Algorithms," in Automatic Target Recognition, 1998.</p>
+<p>[45] Smith-Martinez, B., A. Agah, and J. Stiles, "A Genetic Algorithm For Generating Radar Transmit Codes to Minimize the Target Profile Estimation Error," Journal of Intelligent Systems, Vol. 22, No. 4, 2013.</p>
+<p>[46] Zhou, C., F. Liu, and Q. Liu, "An Adaptive Transmitting Scheme for Interrupted Sampling Repeater Jamming Suppression," Sensors (Basel), Vol. 17, No. 11, 2017.</p>
+<p>[47] Kirkpatrick, S., C. Gelatt Jr., and M. Vecchi, "Optimization by Simulated Annealing," Science, Vol. 220, No. 4598, 1983.</p>
+<p>[48] Boopalan, N., A. Ramasamy, and F. Nagi, "Faulty Antenna Detection in a Linear Array Using Simulated Annealing Optimization," Indonesian Journal of Electrical Engineering and Computer Science, Vol. 19, No. 3, 2020.</p>
+<p>[49] Kaur, K., M. Rattan, and M. Patterh, "Optimization of Cognitive Radio System Using Simulated Annealing," Wireless Personal Communications, Vol. 71, 2013.</p>
+<p>[50] White, R., "Simulated Annealing Algorithm for Radar Cross-Section Estimation and Segmentation," in Applications of Artificial Neural Networks V, International Society for Optics and Photonics, Vol. 2243, 1994.</p>
+<p>[51] Liu, Z., et al., "Error Minimizing Jammer Localization Through Smart Estimation of Ambient Noise," in International Conference on Mobile Ad-Hoc and Sensor Systems, 2012.</p>
+<p>[52] Wang, Y., and S. Zhu, "Main-beam Range Deceptive Jamming Suppression with Simulated Annealing FDA-MIMO Radar," IEEE Sensors Journal, Vol. 20, No. 16, 2020.</p>
+<p>[53] Zhao, J., X. Guan, and X. Li, "Power Allocation Based on Genetic Simulated Annealing Algorithm in Cognitive Radio Networks," Chinese Journal of Electronics, Vol. 22, No. 1, 2012.</p>
+<p>[54] Yang, G., et al., "W-Band MIMO Radar Array Optimization and Improved Back-Projection Algorithm for Far-Field Imaging," in International Conference on Infrared, Millimeter, and Terahertz Waves, 2019.</p>
+<p>[55] Sayin, A., E. G. Hoare, and M. Antoniou, "Design and Verification of Reduced Redundancy Ultrasonic MIMO Arrays Using Simulated Annealing &amp; Genetic Algorithms," IEEE Sensors Journal, Vol. 20, No. 9, 2020.</p>
+<p>[56] Liu, Y., et al., "A Self-Learning Method for Cognitive Engine Based on CBR and Simulated Annealing," in Advanced Materials and Engineering Materials, Vol. 457, 2012.</p>
+<p>[57] Rubinstein, R., and D. Kroese, The Cross-Entropy Method: A Unified Approach to Combinatorial Optimization, Monte-Carlo Simulation and Machine Learning, Springer, 2004.</p>
+<p>[58] de Boer, P.-T., et al., A Tutorial on the Cross-Entropy Method, 2003. <a href="http://web.mit.edu/6.454/www/www_fall_2003/gew/CEtutorial.pdf">http://web.mit.edu/6.454/www/www_fall_2003/gew/CEtutorial.pdf</a>.</p>
+<p>[59] Amos, B., and D. Yarats, "The Differentiable Cross-Entropy Method," in ICML, 2020.</p>
+<p>[60] Joseph, A., and S. Bhatnagar, "Revisiting the Cross Entropy Method with Applications in Stochastic Global Optimization and Reinforcement Learning," in ICAI, 2016.</p>
+<p>[61] Kroese, D., K.-P. Hui, and S. Nariai, "Network Reliability Optimization via the Cross-Entropy Method," IEEE Transactions on Reliability, Vol. 56, No. 2, 2007.</p>
+<p>[62] Heegaard, P., B. Helvik, and O. Wittner, "The Cross Entropy Ant System for Network Path Management," Telektronikk, 2008.</p>
+<p>[63] Bian, L., "Parameters Analysis to Pattern Null Placement Based on the Cross Entropy Method," Physics Procedia, Vol. 24, No. B, 2012.</p>
+<p>[64] Naeem, M., A. S. Khwaja, A. Anpalagan, et al., "Green Cooperative Cognitive Radio: A Multiobjective Optimization Paradigm," IEEE Systems Journal, Vol. 10, No. 1, 2016.</p>
+<p>[65] Minvielle, P., et al., "Sparse Antenna Array Optimization with the Cross-Entropy Method," IEEE Transactions on Antennas and Propagation, Vol. 59, No. 8, 2011.</p>
+<p>[66] Heegaard, P., et al., Distributed Asynchronous Algorithm for Cross-Entropy-Based Combinatorial Optimization, 2003. Online: <a href="https://tinyurl.com/ce-ants-2003">https://tinyurl.com/ce-ants-2003</a>.</p>
+<p>[67] Helvik, B., and O. Wittner, "Using the Cross-Entropy Method to Guide/Govern Mobile Agent's Path Finding in Networks," in Workshop on Mobile Agents for Telecommunication Applications, 2001.</p>
+<p>[68] Maudsley, D., "A Theory of Meta-Learning and Principles of Facilitation: An Organismic Perspective," Ph.D. dissertation, University of Toronto, Ontario, Canada, 1979.</p>
+<p>[69] Vanschoren, J., "Meta-Learning," in Automated Machine Learning, Springer, 2019.</p>
+<p>[70] Rendell, L., R. Seshu, and D. Tcheng, "More Robust Concept Learning Using Dynamically-Variable Bias," in Workshop on Machine Learning, 1987.</p>
+<p>[71] J. Schmidhuber, "Evolutionary Principles in Self-Referential Learning, or on Learning How to Learn: The Meta-Meta-... Hook," M.S. thesis, Technische Universität München, Munich, Germany, 1987.</p>
+<p>[72] Bengio, Y., S. Bengio, and J. Cloutier, "Learning a Synaptic Learning Rule," in IJCNN, Vol. ii, 1991.</p>
+<p>[73] Andrychowicz, M., et al., "Learning to Learn by Gradient Descent By Gradient Descent," in NeurIPS, 2016.</p>
+<p>[74] Rusu, A., et al., "Metalearning with Latent Embedding Optimization," in ICLR, 2019.</p>
+<p>[75] Zintgraf, L., et al., "Fast Context Adaptation via Metalearning," in ICLR, 2019.</p>
+<p>[76] Chen, Y., et al., "Learning to Learn Without Gradient Descent by Gradient Descent," in ICML, vol. 70, 2017.</p>
+<p>[77] Li, K., and J. Malik, "Learning to Optimize," in ICLR, 2017.</p>
+<p>[78] Vilalta, R., and Y. Drissi, "A Perspective View and Survey of Metalearning," Artificial Intelligence Review, Vol. 18, 2005.</p>
+<p>[79] Arpaci-Dusseau, R. H., and A. C. Arpaci-Dusseau, Operating systems: Three Easy Pieces, Arpaci-Dusseau Books, LLC, 2018.</p>
+<p>[80] Kilic, S., and O. Ozkan, "Modeling and Optimization Approaches for Satellite Broadcast Scheduling Problem," IEEE Transactions on Engineering Management, 2019.</p>
+<p>[81] Doron Rainish, D., and A. Freedman, Air Interface for Low Power Operation of a Satellite Terminal, 2015. Online: <a href="https://www.satixfy.com/vlnsr-implementation-for-mobile/">https://www.satixfy.com/vlnsr-implementation-for-mobile/</a>.</p>
+<p>[82] El Gamal, A., et al., "Energy-Efficient Scheduling of Packet Transmissions Over Wireless Networks," in Computer and Communications Societies, IEEE, Vol. 3, 2002.</p>
+<p>[83] Dahlman, E., S. Parkvall, and J. Sköld, "Chapter 11: Uplink Physical Layer Processing," in <span class="arithmatex">\(4 G\)</span> LTE/LTE-Advanced for Mobile Broadband, Academic Press, 2011.</p>
+<p>[84] Pattanayak, P., and P. Kumar, "Computationally Efficient Scheduling Schemes for Multiple Antenna Systems Using Evolutionary Algorithms and Swarm Optimization," in Evolutionary Computation in Scheduling, 2020.</p>
+<p>[85] Grilo, A., et al., "Electronic Protection and Routing Optimization of MANETs Operating in an Electronic Warfare Environment," Ad Hoc Networks, Vol. 5, No. 7, 2007.</p>
+<p>[86] Kim, S., "Adaptive MANET Multipath Routing Algorithm Based on the Simulated Annealing Approach," The Scientific World Journal, 2014.</p>
+<p>[87] Bollapragada Subrahmanya, V., and H. Russell, "RMTS: A Novel Approach to Transmission Scheduling in Ad Hoc Networks by Salvaging Unused Slot Transmission Assignments," Wireless Communications and Mobile Computing, 2018.</p>
+<p>[88] Amouris, K., "Position-Based Broadcast TDMA Scheduling for Mobile Ad-Hoc Networks (MANETs) with Advantaged Nodes," in MILCOM, 2005.</p>
+<p>[89] Salih, S., M. Suliman, and A. Mohammed, "A Novel Spectrum Sensing Scheduler Algorithm for Cognitive Radio Networks," in International Conference on Computing, Electrical and Electronic Engineering, 2013.</p>
+<p>[90] Zhu, L., et al., "The Design of Scheduling Algorithm for Cognitive Radio Networks Based on Genetic Algorithm," in IEEE International Conference on Computational Intelligence Communication Technology, 2015.</p>
+<p>[91] Liang, J.-C., and J.-C. Chen, "Resource Allocation in Cognitive Radio Relay Networks," Selected Areas in Communications, Vol. 31, No. 3, 2013.</p>
+<p>[92] Sodagari, S., "Real-Time Scheduling for Cognitive Radio Networks," Systems Journal, Vol. 12, No. 3, 2017.</p>
+<p>[93] Bayhan, S., and F. Alagoz, "Scheduling in Centralized Cognitive Radio Networks for Energy Efficiency," Transactions on Vehicular Technology, Vol. 62, No. 2, 2013.</p>
+<p>[94] Zhang, W., et al., "Distributed Stochastic Search and Distributed Breakout: Properties, Comparison and Applications to Constraint Optimization Problems in Sensor Networks," Artificial Intelligence, Vol. 161, No. 1-2, 2005.</p>
+<p>[95] Ramzan, M., et al., "Multiobjective optimization for Spectrum Sharing in Cognitive Radio Networks: A Review," Pervasive and Mobile Computing, Vol. 41, 2017.</p>
+<p>[96] Zhang, H., et al., "A Hybrid Adaptively Genetic Algorithm for Task Scheduling Problem in the Phased Array Radar," European Journal of Operational Research, 2019.</p>
+<p>[97] Sahin, S., and T. Girici, "A Method for Optimal Scheduling of Active Electronically Scanned Array (AESA) Antennas," 2019.</p>
+<p>[98] Li, X., et al., "A Scheduling Method of Generalized Tasks for Multifunctional Radar Network," in International Conference on Control, Automation and Information Sciences, IEEE, 2019.</p>
+<p>[99] Orman, A., et al., "Scheduling for a Multifunction Phased Array Radar System," European Journal of Operational Research, Vol. 90, No. 1, 1996.</p>
+<p>[100] Shaghaghi, M., R. Adve, and Z. Ding, "Multifunction Cognitive Radar Task Scheduling Using Monte Carlo Tree Search and Policy Networks," IET Radar, Sonar and Navigation, Vol. 12, No. 12, 2018.</p>
+<p>[101] Song, H., et al., "A POMDP Approach for Scheduling the Usage of Airborne Electronic Countermeasures in Air Operations," Aerospace Science and Technology, Vol. 48, 2016.</p>
+<p>[102] Vaughan, I., and L. Clarkson, "Optimal Periodic Sensor Scheduling in Electronic Support," in Defence Applications of Signal Processing, 2005.</p>
+<p>[103] Ren, Y., et al., "A Novel Cognitive Jamming Architecture for Heterogeneous Cognitive Electronic Warfare Networks," in Information Science and Applications, Vol. 621, Springer, 2020.</p>
+<p>[104] Zhang, Y., and G. Shan, "A Risk-Based Multisensor Optimization Scheduling Method for Target Threat Assessment," Mathematical Problems in Engineering, 2019.</p>
+<p>[105] Rajpathak, D., "Intelligent Scheduling-A Literature Review," Knowledge Media Institute, The Open University (United Kingdom), Tech. Rep. KMI-TR-119, 2001.</p>
+<p>[106] Xie, G., R. Li, and K. Li, "Heterogeneity-Driven End-to-End Synchronized Scheduling for Precedence Constrained Tasks and Messages on Networked Embedded Systems," Journal of Parallel and Distributed Computing, Vol. 83, 2015.</p>
+<p>[107] Balli, U., et al., "Utility Accrual Real-Time Scheduling Under Variable Cost Functions," IEEE Transactions on Computers, Vol. 56, No. 03, 2007.</p>
+<p>[108] Orhean, A., F. Pop, and I. Raicu, "New Scheduling Approach Using Reinforcement Learning for Heterogeneous Distributed Systems," Journal of Parallel and Distributed Computing, Vol. 117, 2018.</p>
+<p>[109] Yang, R., et al., "Intelligent Resource Scheduling at Scale: A Machine Learning Perspective," in Symposium on Service-Oriented System Engineering, IEEE, 2018.</p>
+<p>[110] Ye, Y., et al., A New Approach for Resource Scheduling with Deep Reinforcement Learning, 2018. Online: <a href="https://arxiv.org/abs/1806.08122">https://arxiv.org/abs/1806.08122</a>.</p>
+<p>[111] Mirshekarian, S., and D. Sormaz, "Machine Learning Approaches to Learning Heuristics for Combinatorial Optimization Problems," Procedia Manufacturing, Vol. 17, 2018.</p>
+<p>[112] Gandomi, A., et al. (Eds.), Evolutionary Computation in Scheduling, Wiley, 2020.</p>
+<p>[113] Barták, R., R. A. Morris, and K. B. Venable, "An Introduction to Constraint-Based Temporal Reasoning," Synthesis Lectures on Artificial Intelligence and Machine Learning, Vol. 8, No. 1, 2014.</p>
+<p>[114] Dean, T., and M. Boddy, "An Analysis of Time-Dependent Planning," in AAAI, 1988.</p>
+<p>[115] Horvitz, E., "Reasoning About Beliefs and Actions Under Computational Resource Constraints," in Workshop on Uncertainty in Artificial Intelligence, 1987.</p>
+<p>[116] Simon, H., "Rational Choice and the Structure of the Environment," Psychological Review, Vol. 63, No. 2, 1956.</p>
+<p>[117] Brooks, R., T. Arbel, and D. Precup, "Fast Image Alignment Using Anytime Algorithms," in IJCAI, 2007.</p>
+<p>[118] Kim, Y., M. Krainin, and V. Lesser, "Application of Max-Sum Algorithm to Radar Coordination and Scheduling," in Workshop on Distributed Constraint Reasoning, 2010.</p>
+<p>[119] Zilberstein, S., "Operational Rationality Through Compilation of Anytime Algorithms," Ph.D. dissertation, University of California, Berkeley, CA, 1993.</p>
+<p>[120] Zilberstein, S., "Using Anytime Algorithms In Intelligent Systems," AI Magazine, 1996.</p>
+<p>[121] Svegliato, J., K. H. Wray, and S. Zilberstein, "Meta-Level Control of Anytime Algorithms with Online Performance Prediction," in IJCAI, 2018.</p>
+<p>[122] Gagliolo, M., and J. Schmidhuber, "Learning Dynamic Algorithm Portfolios," Annals of Mathematics and Artificial Intelligence, Vol. 47, 2006.</p>
+<p>[123] López-Ibáñeza, M., and T. Stützlea, "Automatically Improving the Anytime Behaviour of Optimisation Algorithms," European Journal of Operational Research, Vol. 235, No. 3, 2014, Extended version at <a href="https://core.ac.uk/download/pdf/208141673.pdf">https://core.ac.uk/download/pdf/208141673.pdf</a>.</p>
+<p>[124] Smith, S. F., et al., "Robust Allocation of RF Device Capacity for Distributed Spectrum Functions," Journal of Autonomous Agents and Multiagent Systems, Vol. 31, No. 3, 2017.</p>
+<p>[125] Gillen, M., et al., "Beyond Line-of-Sight Information Dissemination for Force Protection," in MILCOM, 2012.</p>
+<p>[126] Fioretto, F., E. Pontelli, and W. Yeoh, "Distributed Constraint Optimization Problems and Applications: A Survey," Journal of Artificial Intelligence Research, Vol. 61, No. 1, 2018.</p>
+<p>[127] Faltings, B., "Distributed Constraint Programming," in Handbook of Constraint Programming, Elsevier, 2006.</p>
+<p>[128] Shoham, Y., and K. Leyton-Brown, Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations, Cambridge University Press, 2009.</p>
+<p>[129] Moallemi, C., and B. Van Roy, "Consensus Propagation," Transactions on Information Theory, Vol. 52, No. 11, 2006.</p>
+<p>[130] Molzahn, D., et al., "A Survey of Distributed Optimization and Control Algorithms for Electric Power Systems," IEEE Transactions on Smart Grid, Vol. 8, No. 6, 2017.</p>
+<p>[131] Duffy, K., C. Bordenave, and D. Leith, "Decentralized Constraint Satisfaction," IEEE/ACM Transactions on Networking, Vol. 21, No. 4, 2013.</p>
+<p>[132] Di Lorenzo, P., and S. Barbarossa, "Distributed Resource Allocation in Cognitive Radio Systems Based on Social Foraging Swarms," in International Workshop on Signal Processing Advances in Wireless Communications, IEEE, 2010.</p>
+<p>[133] Zhang, W., et al., "Distributed Stochastic Search and Distributed Breakout: Properties, Comparison and Applications to Constraint Optimization Problems in Sensor Networks," Artificial Intelligence, Vol. 161, No. 1, 2005.</p>
+<p>[134] Stankovic, M., S. Stankovic, and K. Johansson, "Distributed Time Synchronization in Lossy Wireless Sensor Networks," in IFAC Workshop on Estimation and Control of Networked Systems, 2012.</p>
+<p>[135] Yan, H., et al., "Software Defined Radio Implementation of Carrier and Timing Synchronization for Distributed Arrays," in Aerospace Conference, 2019.</p>
+<p>[136] Kim, M., H. Kim, and S. Lee, "A Distributed Cooperative Localization Strategy in Vehicular-to-Vehicular Networks," Sensors, Vol. 20, No. 5, 2020.</p>
+<p>[137] Wolpert, D., "The Lack of a priori Distinctions Between Learning Algorithms," Neural Computation, 1996.</p>
+<p>[138] Wolpert, D., and W. Macready, "No Free Lunch Theorems for Optimization," Transactions on Evolutionary Computation, Vol. 1, No. 67, 1997.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

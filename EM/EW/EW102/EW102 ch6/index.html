@@ -1,0 +1,8927 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="FlitSoft Documents">
+      
+      
+        <meta name="author" content="flitsoftdoc">
+      
+      
+        <link rel="canonical" href="https://flitsoftdoc.github.io/EM/EW/EW102/EW102%20ch6/">
+      
+      
+        <link rel="prev" href="../EW102%20ch5/">
+      
+      
+        <link rel="next" href="../EW102%20ch7/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="/assets/logo/Sandwich burger.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>6. 辐射源定位系统的精度 - FlitSim KB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/pseudo-code.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-XX66BVLPNX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-XX66BVLPNX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-XX66BVLPNX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="FlitSim KB" class="md-header__button md-logo" aria-label="FlitSim KB" data-md-component="logo">
+      
+  <img src="/assets/logo/Sandwich burger.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FlitSim KB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. 辐射源定位系统的精度
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../blog/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../UAS/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  UAS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EM
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../AI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Gaming/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../C2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NGC2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Simu/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Simulation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Visual/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Visualization
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="FlitSim KB" class="md-nav__button md-logo" aria-label="FlitSim KB" data-md-component="logo">
+      
+  <img src="/assets/logo/Sandwich burger.png" alt="logo">
+
+    </a>
+    FlitSim KB
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/flitsoftdoc/flitsoftdoc.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    flitsoftdoc/flitsoftdoc.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../blog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../UAS/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UAS
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UAS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navigation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Navigation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/navigation/scirobotics.ado6187.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向微型无人机的安全保障高速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ship
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ship
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UAS/Ship/%E7%AE%80%E5%8C%96%E8%88%B0%E8%88%B9%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简化舰船动力学模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antenna Pattern
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Antenna Pattern
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Antenna%20Pattern/01.%E8%BE%9B%E6%A0%BC%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    辛格方向图模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Antenna%20Pattern/02.%E9%AB%98%E6%96%AF%E6%96%B9%E5%90%91%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高斯方向图模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Antenna%20Pattern/test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comm
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comm
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/AFSIM%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E4%BB%A3%E7%A0%81%E5%BA%93%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM通信基础模型代码库分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/AFSIM%E9%80%9A%E4%BF%A1%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM通信扩展模型（wsf_mil/comm）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/%E5%9C%B0%E7%A9%BA%E6%B5%8B%E6%8E%A7%E9%93%BE%E8%B7%AF%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    地空测控链路计算模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LEO Sat Constellation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LEO Sat Constellation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/Comparison%20of%20Three%20LEO%20Sat%20Constellation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    三种LEO通信星座的技术比较
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/imc2020-hypatia%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用 Hypatia 探索“太空互联网”
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/morgan-hooc-em%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOOC-EM：面向LEO巨型星座用户终端的快速波束扫描方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/ns-3-leo_Evaluation_Tool_for_Satellite_Swarm_Communication_Protocols%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ns-3-leo：用于卫星蜂群通信协议的评估工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Comm/LEO%20Sat%20Constellation/starlink%20review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Review for Starlink
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../An-overview-of-space-electronic-warfare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空间电子战概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Cognitive%20Electronic%20Warfare/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cognitive Electronic Warfare
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cognitive Electronic Warfare
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch1%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 认知电子战导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch2%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 目标函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch3%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 机器学习入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch4%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 电子支援
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch5%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 电子防护与电子攻击
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch6%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 电子战管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch7%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 任务中实时规划与学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch8%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 数据管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch9%20ch%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch10%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 测试与评估
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20ch11%20v3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 入门指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cognitive%20Electronic%20Warfare/Cognitive-Electronic-Warfare-an-Artificial-Intelligence-Approach%20%E9%99%84%E5%BD%95%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    缩略语（Acronyms）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EW101/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW101
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_4" id="__nav_3_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW101
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch1%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch2%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 基本数学概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch3%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 天线
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch4%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 接收机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch5%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 电子战处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 搜索
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch7%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. LPI信号
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch8%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 辐射源定位
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch9%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 干扰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch10%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 诱饵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW101/EW101%20ch11%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 仿真
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW102
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_5" id="__nav_3_4_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW102
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EW102%20ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EW102%20ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EW102%20ch3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 雷达特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EW102%20ch4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 电子战中的红外与光电的考量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EW102%20ch5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 通信信号的电子战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 辐射源定位系统的精度
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 辐射源定位系统的精度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 基本的辐射源定位方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 角度测量技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#621" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.1 旋转定向天线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#622" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.2 多天线幅度比较
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#623-watson-watt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.3 Watson-Watt 技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#624" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.4 多普勒技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#625" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.5 距离测量技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#626" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.6 干涉仪测向
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 精密辐射源定位技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#631" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 到达时间差方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1.1 脉冲辐射源定位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1.2 模拟信号辐射源定位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1.3 定位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#632-fdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2 基于FDOA的精密辐射源定位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2.1 到达频率差方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#633-fdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.3 针对运动发射机的FDOA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#634-fdoatdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.4 FDOA与TDOA的联合应用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 辐射源定位——定位精度报告
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#641-rms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 均方根（RMS）误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#642-cep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2 圆概率误差（CEP）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#643-eep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.3 椭圆概率误差（EEP）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 辐射源定位——误差预算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#651" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.1 误差因素的组合
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#652-aoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.2 反射对AOA误差的影响
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#653" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.3 测站位置精度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#654-aoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.4 AOA辐射源定位方法的误差预算项
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#655" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.5 与信噪比相关的误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#656" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.6 校准误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#657-aoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.7 AOA系统误差的组合
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-aoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 AOA误差到位置误差的转换
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#661" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.1 测量精度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#662-cep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.2 圆概率误差（CEP）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 精密定位系统中的定位误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#671-tdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.1 TDOA系统精度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6711-tdoacep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.1.1 TDOA的CEP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#672-fdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.2 FDOA辐射源定位系统中的定位误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6721" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.2.1 等频线精度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6722-fdoacep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.2.2 FDOA定位的CEP
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EW102%20ch7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 通信卫星链路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EW102%20x.appA%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    附录A：问题解答
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EW104/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW104
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_6" id="__nav_3_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW104
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 频谱作战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 传统雷达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. 新一代威胁雷达
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. 数字通信
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. 传统通信威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. 现代通信威胁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. 数字射频存储器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 红外威胁与对策
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 雷达诱饵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW104/EW-104-Electronic-Warfare-ch11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. 电磁支援与信号情报
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../EW105/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EW105
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4_7" id="__nav_3_4_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EW105
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch1-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch2-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. 球面三角学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch3-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 轨道力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch4-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 无线电传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch5-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 空间中的无线电传播
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch6%20-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 卫星链路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch7-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 脆弱性与电子战的关联机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch8-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 观测持续时间与频率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch9-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. 天基信号截获
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20ch10-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. 天基干扰
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20chA-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A. 信号情报与电子战中的公式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20chB-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    B 空间电子战中的重要数值
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EW105/EW105%20chC-ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C 分贝数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propagation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Propagation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/AFSIM%20%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD%E6%A8%A1%E5%9E%8B%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM 电磁模型概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/AFSIM%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD%E6%A8%A1%E5%9E%8B%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM电磁传播模型开发文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/CRC-COVLIB%20API%20Reference%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CRC-COVLIB API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/ITU-R%20P.838-3%20%20%E9%9B%A8%E8%A1%B0%E6%A8%A1%E5%9E%8B-C-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITU－R P.838－3 雨天衰减模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Propagation/R-REC-P.528-5-202109-%E8%88%AA%E7%A9%BA%E4%B8%9A%E5%8A%A1%E7%94%B5%E7%A3%81%E4%BC%A0%E6%92%AD-C-v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ITU-R P.528-5 航空移动和无线电导航业务的传播预测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Radar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Radar Equations for Modern Radar
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Radar Equations for Modern Radar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 雷达方程的发展
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 搜索雷达方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 杂波与干扰压制下的雷达方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 检测理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 波束形状损失
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 系统噪声温度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 大气效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 方向图-传播因子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 杂波与信号处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Radar/Radar%20Equations%20for%20Modern%20Radar/Radar%20Equations%20for%20MR%20ch10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 雷达方程中的损耗因子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signals and Systems
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Signals and Systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signals and Systems 6.0
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7_1" id="__nav_3_7_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Signals and Systems 6.0
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 引言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 预备知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch3%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第3章 连续时间信号与系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch4.%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 连续时间线性时不变系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch5%20ch%20v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 连续时间傅里叶级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch6%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 连续时间傅里叶变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part1-ch7%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 拉普拉斯变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch8%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 离散时间信号与系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch9%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第9章 离散时间线性时不变系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch10%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10章 离散时间傅里叶级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch11%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第11章 离散时间傅里叶变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Signals%20and%20Systems/Signals%20and%20Systems%206.0/signals_and_systems-6.0-part2-ch12%20ch%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第12章 z变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../AI/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Americas-AI-Action-Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Americas AI Action Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Foundation%20models%20and%20intelligent%20decision-making/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundation models and intelligent decision making
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Integrating%20AI%20and%20ML%20into%20COP%20and%20COA%20Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrating AI and ML into COP and COA Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/LoRA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LoRA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/MARLlib/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARLlib
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/RAND_RR4311%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Air Dominance Through Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Why%20We%20Think%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why We Think
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/why-language-models-hallucinate%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Language Models Hallucinate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding the Limits of AI for Warfighters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Understanding the Limits of AI for Warfighters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-1%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷1：概要
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-5%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷5：任务规划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../AI/Understanding%20the%20Limits%20of%20AI%20for%20Warfighters/RAND_RRA1722-6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    卷6：利用构造性仿真促进强化学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Gaming/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decision
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Decision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Comparative%20Analysis%20of%20Task%20Allocation%20Algorithms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多无人机任务分配算法的比较分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/DAVIS_OCEANS_2025_PDF_XPRESS%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向无人水面艇探测的传感器套件设计框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Deep%20Reinforcement%20Learning%20in%20Wargaming_zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deep Reinforcement Learning in Wargaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Development%20of%20artificial%20intelligence%20for%20command%20and%20control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    兵棋与仿真用于指挥与控制人工智能研发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Multi-UAV%20Task%20Assignment%20in%20Dynamic%20Environments%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    动态环境下多无人机任务分配技术现状
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Policy%20Space%20Response%20Oracles-%20A%20Survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    策略空间响应预言机（PSRO）综述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Towards%20Global%20Explainability%20of%20Artificial%20Intelligence%20Agent%20Tactics%20in%20Close%20Air%20Combat%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    面向近距离空战中人工智能智能体战术的全局可解释性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Behavior Tree
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Behavior Tree
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/Behavior%20Trees%20in%20Robot%20Control%20Systems.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行为树在机器人控制系统中的应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/BehaviorTree.CPP%204.6%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BehaviorTree.CPP库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/BT2208.04211v2.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    机器人应用中的行为树和状态机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/Generation%20of%20Behavior%20Trees%20for%20Dynamic%20Agents%20Based%20on%20Market%20Inspired%20Task%20Allocation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基于市场启发的任务分配的动态智能体行为树生成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/LLM-BRAIn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM-BRAIn: 基于LLM驱动的行为树快速生成方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Behavior%20Tree/%E8%A1%8C%E4%B8%BA%E6%A0%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行为树基本概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building Better Games for National Security Policy Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Building Better Games for National Security Policy Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/ch1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Gaming/Building%20Better%20Games%20for%20National%20Security%20Policy%20Analysis/ch2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../C2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NGC2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NGC2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Advanced%20Battle%20Management%20System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    先进战斗管理系统 (ABMS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/AEP-84%20VOLI%20EDA%20V1%20ch-all/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    北约工程出版物 AEP-84 Volume I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Decision%20Advantage%20and%20Initiative%20Completing%20Joint%20All-Domain%20Command%20and%20Control.ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    决策优势与主动权
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Force-Based%20MANET_FANET/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基于力的无人机蜂群自组织MANET/FANET
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../C2/Smith_Complexity/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smith Complexity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Smith Complexity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch1.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 复杂的世界
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch2.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第2章 复杂性：机遇与挑战
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch3.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章 应对复杂性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch4.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第4章 基于效果的作战中的复杂性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch5.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第5章 规则对复杂性还适用吗？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch6.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第6章 夺取决定性优势：网络化与基于效果的作战方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch7.zh-CN%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第7章 选项、态势感知与敏捷性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20ch8.zh-CN%20V2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第8章 结论：网络赋能但基于效果的作战方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../C2/Smith_Complexity/Smith_Complexity%20%E5%90%8E%E8%AE%B0.zh-CN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Simu/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Simulation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/coding-stds%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++ Coding Standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/HIL%20Swarm%20Simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HIL Swarm Simulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/MARSIM%3A%20A%20point-realistic%20simulator%20for%20LiDAR-based%20UAVs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/Model%20Based%20Systems%20Engineering%20Methods%20Applied%20to%20the%20Mission%20Engineering%20Modeling%20Use%20Case%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MBSE应用于任务工程建模用例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/OctoMap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OctoMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/ONTOLOGY_FOR_MnS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ONTOLOGY FOR MODELING AND SIMULATION
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/Ontology-Oriented%20Software%20Development%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology-Oriented Software Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/The%20Mixed%20Reality%20Simulation%20Platform%20%28MIXR%29%20ch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIXR 混合现实仿真平台
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/ub-anc-emulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UB-ANC Emulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/ZMQ%20guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZMQ guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_12" id="__nav_7_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AFSIM
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/AFSIM.cn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/AFSIM%20Version%202.0%20TECHNICAL%20REFERENCE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM V2.0 TECHNICAL REFERENCE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/AFSIM/afsims-pseudo-realtime-hybrid-simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AFSIM 的伪实时混合仿真软件设计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Simu/IEEE%20Std%201516-2025/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IEEE Std 1516 2025
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7_13" id="__nav_7_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IEEE Std 1516 2025
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/IEEE%20Std%201516-2025/IEEE%20Std%201516-2025_zh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IEEE Std 1516-2025
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_14" id="__nav_7_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SIMDIS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS%20SDK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS SDK 架构分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS%20SDK%20SimCore%20v2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS SDK SimCore代码库分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Simu/SIMDIS/SIMDIS_Briefing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SIMDIS Briefing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../Visual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualization
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visualization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Visual/TacView/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tacview Technical Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 基本的辐射源定位方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 角度测量技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#621" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.1 旋转定向天线
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#622" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.2 多天线幅度比较
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#623-watson-watt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.3 Watson-Watt 技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#624" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.4 多普勒技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#625" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.5 距离测量技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#626" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.6 干涉仪测向
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 精密辐射源定位技术
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#631" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1 到达时间差方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1.1 脉冲辐射源定位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1.2 模拟信号辐射源定位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.1.3 定位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#632-fdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2 基于FDOA的精密辐射源定位
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.2.1 到达频率差方法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#633-fdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.3 针对运动发射机的FDOA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#634-fdoatdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3.4 FDOA与TDOA的联合应用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 辐射源定位——定位精度报告
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#641-rms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.1 均方根（RMS）误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#642-cep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.2 圆概率误差（CEP）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#643-eep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4.3 椭圆概率误差（EEP）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 辐射源定位——误差预算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#651" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.1 误差因素的组合
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#652-aoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.2 反射对AOA误差的影响
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#653" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.3 测站位置精度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#654-aoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.4 AOA辐射源定位方法的误差预算项
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#655" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.5 与信噪比相关的误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#656" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.6 校准误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#657-aoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5.7 AOA系统误差的组合
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-aoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 AOA误差到位置误差的转换
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#661" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.1 测量精度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#662-cep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6.2 圆概率误差（CEP）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 精密定位系统中的定位误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#671-tdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.1 TDOA系统精度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6711-tdoacep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.1.1 TDOA的CEP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#672-fdoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.2 FDOA辐射源定位系统中的定位误差
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6721" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.2.1 等频线精度
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6722-fdoacep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7.2.2 FDOA定位的CEP
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    EM
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    EW
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    EW102
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="6">6. 辐射源定位系统的精度<a class="headerlink" href="#6" title="Permanent link">&para;</a></h1>
+<p>几乎所有军事资产，从大型固定设施到单个飞机、车辆或小单位，都必须发射某种信号以完成其任务。尽管这些资产可能在夜间、雾霾或烟雾中、伪装状态下或超出视距范围内不可见，但其发射机的位置对应着其物理位置。对这些位置发射的信号进行分析通常可以识别出资产的类型（武器、军事单位、飞机、舰艇）。对资产进行定位和识别能够支持以下军事活动：</p>
+<ul>
+<li><strong>临战警告</strong>：通过定位处于打击范围内的敌方武器平台（飞机、舰艇、炮兵单位），可以判断可能发生的攻击类型以及武器接近我们的方向。</li>
+<li><strong>威胁规避</strong>：如果知道与发射机相关的威胁系统的位置，可以避开这些区域，或至少在进入这些区域时有所准备。</li>
+<li><strong>电子对抗措施的选择与实施</strong>：威胁的定位与识别将决定哪些对抗措施有效，以及应在何时启动。</li>
+<li><strong>电子战序列（electronic order of battle）的构建</strong>：不同类型的单位具有不同类型的发射机（不同频率与调制），因此辐射源在一定精度下可以识别敌方单位的类型。通过了解敌方单位的位置、识别信息以及其近期的行动历史，可以估计敌军的兵力结构，甚至预测其行动。（例如，进攻与防御需要的部队类型和数量是不同的。）</li>
+<li><strong>目标指示</strong>：如果具备非常精确的辐射源位置信息，就有可能对超视距的重要敌方资产实施武器打击。通过与辐射源关联的资产识别，也能比单纯依靠光学方法获得更准确的目标识别。</li>
+<li><strong>窄视场侦察手段的提示</strong>：光学传感器通常在视场与分辨率之间存在显著权衡，因此常被形象地称为“吸管（soda straw）”式传感器（即好像通过吸管观察物体）。这意味着在这种窄视场中寻找敌方资产可能需要很长时间。电子辐射源定位系统可以通过提供目标大致位置来缩小搜索区域。</li>
+</ul>
+<p>本章首先回顾辐射源定位技术，但仅限于支撑本章重点，即辐射源定位系统精度的规定与测量方式。关于辐射源定位系统的更详细讨论可见于《EW 101》的第8章。</p>
+<p>精度通常以系统的均方根误差（RMS error）表述，这是一种被广泛接受的系统有效精度定义。均方根误差通过收集大量角度误差或位置误差数据（覆盖多个频率、多个角度，或两者兼有）来确定。每个数据值平方后，计算其平方均值的平方根。（关于均方根误差的更多内容见第6.4.1节。）</p>
+<h3 id="61">6.1 基本的辐射源定位方法<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<p>如图6.1所示，辐射源定位有三种基本方法。该图展示的是二维平面（例如地球表面上的）定位方法。当然，所有方法都可以扩展到三维。第一种方法[图6.1(a)]是<strong>三角测量</strong>，即从两个（或多个）已知位置引出方位线到辐射源，交点即为辐射源位置。第二种方法[图6.1(b)]是<strong>测定一条方位线与一条距离</strong>。第三种方法[图6.1(c)]用于精密定位系统，其通过确定两条数学描述的曲线，二者交点即为辐射源位置。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-174.jpg?height=289&amp;width=768&amp;top_left_y=177&amp;top_left_x=373" width="400" /></p>
+<p>图6.1 辐射源定位的三种基本方法分别为：(a) 三角测量，(b) 角度与距离测量，(c) 数学曲线交点。</p>
+<p>虽然也可以通过测定辐射源到两个或多个已知位置的距离来实现定位，但由于实际限制，这种方法通常只适用于合作型辐射源。由于电子战系统的目标是非合作的敌方辐射源，因此这里忽略这种方法。</p>
+<h3 id="62">6.2 角度测量技术<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<p>在前两种方法中，必须从已知位置测定指向辐射源位置的方位线。这是通过测量信号的到达方向（DOA, direction-of-arrival）实现的，通常称为测向（DF, direction finding）。主要的测向技术包括：</p>
+<ul>
+<li>旋转定向天线；  </li>
+<li>多天线幅度比较；  </li>
+<li>Watson-Watt；  </li>
+<li>多普勒；  </li>
+<li>干涉仪。  </li>
+</ul>
+<h3 id="621">6.2.1 旋转定向天线<a class="headerlink" href="#621" title="Permanent link">&para;</a></h3>
+<p>如图6.2所示，旋转天线的增益图形是天线波束轴线角度的函数。通过让天线旋转经过辐射源，可以根据天线方位随时间的变化确定信号的到达方向。需要注意的是，天线增益曲线的形状是有详细记录的，因此只需在主波束内有两个或更多截获点，就能确定天线轴线方向，使信号位于波束中心。窄波束的大天线能够实现极高的到达方向测量精度（约为波束宽度的十分之一）。这种方法在海军电子战系统中十分常见，因为那里可以使用相对较大的天线。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-175.jpg?height=238&amp;width=851&amp;top_left_y=180&amp;top_left_x=316" width="400" /></p>
+<p>图6.2 接收天线的增益图随波束轴线角度变化。</p>
+<h3 id="622">6.2.2 多天线幅度比较<a class="headerlink" href="#622" title="Permanent link">&para;</a></h3>
+<p>如图6.3所示，两副朝向不同的天线在同时截获同一信号时会产生输出信号幅度比。通过该幅度比可以计算信号的到达方向。这种技术广泛应用于飞机和小型舰艇上的雷达告警接收机，因为它不需要大天线，并且能够快速确定单个脉冲的到达方向。但其精度通常较低（约在 <span class="arithmatex">\(5^{\circ}\)</span> 至 <span class="arithmatex">\(15^{\circ}\)</span> 之间）。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-175.jpg?height=498&amp;width=390&amp;top_left_y=1443&amp;top_left_x=549" width="300" /></p>
+<p>图6.3 两副天线的增益图为两个接收机提供功率比。</p>
+<h3 id="623-watson-watt">6.2.3 Watson-Watt 技术<a class="headerlink" href="#623-watson-watt" title="Permanent link">&para;</a></h3>
+<p>Watson-Watt 技术由著名的雷达先驱 Robert Watson-Watt 爵士提出，它使用直线排列的三副天线。中间的天线为感应天线，两侧的天线间隔约为四分之一波长。通过将两侧天线信号的和与差（以感应天线归一化）进行处理，可以得到随角度变化的心形图案，如图6.4所示。如果有多个对称的外侧天线对，通过切换不同天线对可以旋转该心形图案，从而计算信号的到达方向。这种技术在辐射源定位系统中应用广泛，能提供中等精度的DOA（约 <span class="arithmatex">\(2.5^{\circ}\)</span> RMS）。</p>
+<h3 id="624">6.2.4 多普勒技术<a class="headerlink" href="#624" title="Permanent link">&para;</a></h3>
+<p>该方法在两副天线中测量接收信号的频率，其中一副天线绕另一副旋转，如图6.5所示。由于运动天线存在与传输距离变化率成正比的多普勒频移，因此其接收到的信号频率与发射频率不同，而静止天线接收到的则是发射频率。运动天线 <span class="arithmatex">\((A)\)</span> 的圆周运动会在其接收的频率与天线B接收的频率之间产生正弦变化的多普勒频移。辐射源的到达方向就是多普勒频移从正变负的角度。在实际系统中，旋转天线通常被顺序切换到接收机的环形天线阵列所取代。通过比较相邻天线切换时的信号相位，可以计算频率。这种技术广泛应用于民用水面船只的无线电测向系统，通常能提供 <span class="arithmatex">\(3^{\circ}\)</span> 或更大的RMS精度。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-176.jpg?height=645&amp;width=632&amp;top_left_y=1265&amp;top_left_x=443" width="200" /></p>
+<p>图6.4 在 Watson-Watt 测向系统中，两侧天线的和与差图形产生心形图案。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-177.jpg?height=315&amp;width=623&amp;top_left_y=182&amp;top_left_x=430" width="400" /></p>
+<p>图6.5 在多普勒测向系统中，天线A绕天线B旋转，产生一个相对于天线 <span class="arithmatex">\(B\)</span> 接收频率的正弦频率偏移。</p>
+<h3 id="625">6.2.5 距离测量技术<a class="headerlink" href="#625" title="Permanent link">&para;</a></h3>
+<p>如果已知发射功率和接收功率水平，就可以计算信号传播的距离——如图6.6所示。由于该技术仅用于不需要高精度距离测量的电子战系统，因此通常会忽略除扩散损耗（空间损耗）之外的所有因素。扩散损耗由以下公式给出：</p>
+<div class="arithmatex">\[
+L_{S}=32.4+20 \log (F)+20 \log (d)
+\]</div>
+<p>其中<br />
+<span class="arithmatex">\(L_{S}\)</span> 为以分贝表示的扩散损耗；<br />
+<span class="arithmatex">\(F\)</span> 为以兆赫兹表示的发射频率；<br />
+<span class="arithmatex">\(d\)</span> 为以千米表示的传播路径长度。  </p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-177.jpg?height=287&amp;width=869&amp;top_left_y=1623&amp;top_left_x=307" width="400" /></p>
+<p>图6.6 接收天线处的功率相对于有效辐射功率（ERP）按频率和距离因子衰减。</p>
+<p>该方程可对 <span class="arithmatex">\(d\)</span> 进行求解：</p>
+<div class="arithmatex">\[
+d=\operatorname{antilog}\left\{\left[L_{S}-32.4-20 \log (F)\right] / 20\right\}
+\]</div>
+<p>其中 <span class="arithmatex">\(\operatorname{antilog}(fn)\)</span> 实际上为 <span class="arithmatex">\(10^{fn}\)</span>。<br />
+例如，如果一部工作在 10 GHz 的雷达，其有效辐射功率为 +100 dBm，而在接收天线处接收到 -50 dBm，则扩散损耗为 150 dB。将这些数值代入公式，可得距离约为 76 km。</p>
+<p>在实际系统中，尤其是在飞机上，这种测量的精度通常不会好于测量距离的 <span class="arithmatex">\(25 \%\)</span>。</p>
+<p>一种更精确的技术是测量传播时间。信号的传播速度接近光速（<span class="arithmatex">\(3 \times 10^{8} \mathrm{~m} / \mathrm{s}\)</span>），大约为 <span class="arithmatex">\(1 \mathrm{ft} / \mathrm{ns}\)</span>。因此，如果已知信号从发射天线发出和到达接收天线的时间，就能通过以下公式精确确定传播距离：</p>
+<div class="arithmatex">\[
+d=t c
+\]</div>
+<p>其中<br />
+<span class="arithmatex">\(d=\)</span> 传播距离（米）；<br />
+<span class="arithmatex">\(t=\)</span> 传播时间（秒）；<br />
+<span class="arithmatex">\(c=\)</span> 光速 <span class="arithmatex">\(\left(3 \times 10^{8} \mathrm{~m} / \mathrm{s}\right)\)</span>。  </p>
+<p>例如，如果传播时间为 1 ms，则距离为 300 km。<br />
+这就是雷达测距的方式——因为发射机和接收机通常共址，所以很容易实现。然而，在单向通信中则要困难得多。问题在于如何精确确定发射时间和到达时间。到达时间的问题已基本通过高精度GPS时钟解决，但发射时间只能在合作系统（如GPS）中确定。</p>
+<p>正如将在第6.3节讨论的那样，一种重要的精密辐射源定位技术（针对敌方发射源）就是基于测量信号在两个接收站的到达时间差。</p>
+<h3 id="626">6.2.6 干涉仪测向<a class="headerlink" href="#626" title="Permanent link">&para;</a></h3>
+<p>当测向系统的指标为约 <span class="arithmatex">\(1^{\circ}\)</span> RMS 精度时，通常使用干涉仪技术。该技术测量两副天线接收到的信号相位，并根据两者的相位差推导信号的到达方向。干涉仪测向技术的基础最好通过图6.7中的干涉三角形来说明。</p>
+<p>两副天线形成一条基线。假设系统已知这两副天线的位置，因此可以精确计算它们的间距和朝向。考虑到达信号的“波前”。波前在自然界中并不存在，但它是一个有用的概念。波前是一条垂直于信号到达方向的线。</p>
+<p>设发射信号为正弦波，并以光速传播。一个完整周期的长度（波长）包含 <span class="arithmatex">\(360^{\circ}\)</span> 的相位。沿波前的任意点信号的相位相同，因此波前可以看作一条恒定相位线（例如正向过零点）。波长和频率的关系由以下公式给出：</p>
+<div class="arithmatex">\[
+\mathrm{c}=\lambda F
+\]</div>
+<p>其中<br />
+<span class="arithmatex">\(\mathrm{c}=\)</span> 光速 <span class="arithmatex">\((3 \times 10^{8} \mathrm{~m} / \mathrm{s})\)</span>；<br />
+<span class="arithmatex">\(\lambda=\)</span> 波长（米）；<br />
+<span class="arithmatex">\(F=\)</span> 信号频率（赫兹）。  </p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-179.jpg?height=283&amp;width=789&amp;top_left_y=1535&amp;top_left_x=347" width="400" /></p>
+<p>图6.7 干涉三角形展示了由两副天线形成的基线几何关系，以及如何根据两副天线接收信号的相位差确定到达角。</p>
+<p>在干涉三角形中，波前接触到一副天线，与另一副天线的距离为 <span class="arithmatex">\(D\)</span>。这是由基线、波前和 <span class="arithmatex">\(D\)</span> 构成的直角三角形。<span class="arithmatex">\(D\)</span> 与波长的比值等于相位差与 <span class="arithmatex">\(360^{\circ}\)</span> 的比值。因此，两副天线接收信号的相位差等于 <span class="arithmatex">\(D\)</span> 与波长的比值（可根据接收信号的测得频率计算）。</p>
+<p><span class="arithmatex">\(D\)</span> 与基线长度的比值等于角 <span class="arithmatex">\(A\)</span> 的正弦，角 <span class="arithmatex">\(A\)</span> 等于角 <span class="arithmatex">\(B\)</span>。由于基线的垂线被认为是干涉仪的“零角”，所以角 <span class="arithmatex">\(B\)</span> 是测得的到达角。站点的到达角还包括基线的朝向。</p>
+<p>在“单基线”干涉仪系统（即一次使用一条基线）中，基线长度通常为 <span class="arithmatex">\(0.1\)</span> 至 <span class="arithmatex">\(0.5 \lambda\)</span>。基线小于 <span class="arithmatex">\(0.1 \lambda\)</span> 时精度不足，而大于 <span class="arithmatex">\(0.5 \lambda\)</span> 时会产生歧义。</p>
+<p>如果天线具有 <span class="arithmatex">\(360^{\circ}\)</span> 覆盖，还会产生所谓的前后歧义。来自镜像方向的信号会在天线间产生相同的相位差。解决方法是使用前后比很高的天线或使用多条基线。图6.8展示了干涉仪系统中常用的四偶极子阵列。从俯视图可见，该阵列中有六对天线（即六条基线）。正确的到达角会在不同基线的数据中得到一致的结果。</p>
+<p>还有所谓的相关干涉仪，它使用大于 <span class="arithmatex">\(0.5 \lambda\)</span> 的基线，通过相关多个基线数据解决歧义。多基线精密干涉仪则同时收集三条或更多基线的数据，这些基线的长度为多个半波长，其中两条基线的长度相差 <span class="arithmatex">\(0.5 \lambda\)</span>。这种方式能够在数学上解决大量歧义。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-180.jpg?height=383&amp;width=756&amp;top_left_y=1485&amp;top_left_x=380" width="400" /></p>
+<p>图6.8 干涉仪测向系统中常用的四偶极子阵列，用于形成六条基线。</p>
+<h3 id="63">6.3 精密辐射源定位技术<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<p>精密辐射源定位技术通常指那些精度足够用于目标打击的技术，定位精度可达几十米。常用的两种精密辐射源定位技术是：到达时间差（TDOA）和到达频率差（FDOA）。它们常常结合使用，并通常与低精度定位系统配合。下面我们先关注TDOA方法。</p>
+<h3 id="631">6.3.1 到达时间差方法<a class="headerlink" href="#631" title="Permanent link">&para;</a></h3>
+<p>第6.2.5节讨论了根据信号传播时间计算传播距离。信号以光速传播，因此如果我们知道信号从发射机离开和到达接收机的时间，就能知道路径长度。在处理合作信号（如GPS）或己方数据链时，信号编码可以用来确定发射时间。然而在处理敌方辐射源时，我们无法得知信号何时发射。唯一能测量的信息是信号的到达时间。但通过确定两个站点的到达时间差，可以知道发射机位于一条双曲线上。如果到达时间差测量得非常精确，辐射源位置就会非常接近这条线上，但由于双曲线是无限曲线，因此定位问题尚未完全解决。</p>
+<p>图6.9展示了两个接收站接收来自单个发射机信号的情况。这两个站点形成一条基线。不确定区域就是可能包含目标辐射源的区域。注意，两条距离的差值决定了到达时间差。图6.10展示了无限多条双曲线中的几条。每条曲线表示一个特定的到达时间差，称为“等时线”（isochrone）。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-181.jpg?height=509&amp;width=843&amp;top_left_y=1401&amp;top_left_x=320" width="400" /></p>
+<p>图6.9 两个接收站形成一条基线，通过传播时间差计算辐射源的相对距离。</p>
+<h3 id="6311">6.3.1.1 脉冲辐射源定位<a class="headerlink" href="#6311" title="Permanent link">&para;</a></h3>
+<p>如果发射信号是脉冲，确定到达时间差相对容易——前提是每个接收站都有非常精确的时钟，并且测得的时间能够传送到公共处理位置。如图6.11所示，脉冲的前沿提供了一个可靠的时间测量事件。一个问题是两个接收机必须测量到同一个脉冲。由于只需测量少量脉冲即可确定辐射源位置，因此将到达时间数据传输到处理位置（用于计算TDOA）所需的数据链带宽非常小。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-182.jpg?height=689&amp;width=890&amp;top_left_y=676&amp;top_left_x=312" width="400" /></p>
+<p>图6.10 等时线是一条双曲线，它包含了所有发射机可能位于的位置，这些位置到两个站点的传播路径长度差固定，从而导致信号的到达时间差固定。  </p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-182.jpg?height=337&amp;width=653&amp;top_left_y=1582&amp;top_left_x=426" width="400" /></p>
+<p>图6.11 如果在每个接收机用精确时钟测量脉冲的到达时间，则计算到达时间差非常直接。</p>
+<h3 id="6312">6.3.1.2 模拟信号辐射源定位<a class="headerlink" href="#6312" title="Permanent link">&para;</a></h3>
+<p>现在考虑带有模拟调制的信号。这类信号具有连续的载波（在发射频率上），信息通过载波的频率、幅度或相位调制来承载。载波每个波长重复一次（通常小于1米），因此我们能够在两个接收机间相关以确定到达时间的，只有调制部分。到达时间差的确定方法是在一个接收机中以不同延迟多次采样接收信号。该时间延迟必须在足够范围内变化，以覆盖辐射源可能位于区域内的最小到最大时间差。采样信号经过数字化、加时间码后发送到公共处理点，在那里计算两个信号样本之间的相关性。</p>
+<p>如图6.12所示，相关性随着差分延迟而变化。当差分延迟值等于到达时间差时，相关性达到峰值。需要注意的是，该相关曲线顶部相对平滑，但通常能确定到延迟步进的十分之一量级。</p>
+<p>对于模拟信号，TDOA过程相对较慢，因为必须获取大量采样；同时需要较大的数据传输带宽，因为每个采样需要较多比特才能保证足够的定位精度。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-183.jpg?height=327&amp;width=742&amp;top_left_y=1535&amp;top_left_x=373" width="400" /></p>
+<p>图6.12 两个接收机接收的信号之间的相关性作为其中一个接收机信号延迟的函数，在延迟值等于到达时间差时达到峰值。对于模拟信号，该曲线呈现柔和的峰值。</p>
+<h3 id="6313">6.3.1.3 定位<a class="headerlink" href="#6313" title="Permanent link">&para;</a></h3>
+<p>确定辐射源的实际位置需要第三个接收站，以便形成至少两条基线。如图6.13所示，每条基线形成一条双曲线等时线，这两条双曲线在辐射源位置交汇。但存在定位歧义，因为两条双曲线可能在两个位置相交。然而，只有一个位置预计位于不确定区域内（见图6.9）。</p>
+<p>为了提供精确的辐射源位置，必须确保接收站位置准确已知。随着GPS的可用性，小型车辆甚至单兵操作员都能获得准确位置。如果接收机在移动，当然必须在绘制等时线和进行辐射源定位计算时考虑接收机的瞬时位置。</p>
+<h3 id="632-fdoa">6.3.2 基于FDOA的精密辐射源定位<a class="headerlink" href="#632-fdoa" title="Permanent link">&para;</a></h3>
+<p>FDOA是实现精密辐射源定位的一种技术。它涉及测量来自单个发射机（通常是静止的）到两个移动接收机的接收频率差。由于接收频率差是由多普勒频移差引起的，FDOA也称为差分多普勒（DD）。</p>
+<h3 id="6321">6.3.2.1 到达频率差方法<a class="headerlink" href="#6321" title="Permanent link">&para;</a></h3>
+<p>首先考虑从固定发射机接收信号时，若接收机在运动，接收信号的频率情况。如图6.14所示，接收信号的频率取决于发射频率、接收机速度以及发射机与接收机速度矢量之间的真实球面角。接收信号频率由下式给出：</p>
+<div class="arithmatex">\[
+F_{R}=F_{T}\left\{1+\left[V_{r} \cos (\theta) / \mathrm{c}\right]\right\}
+\]</div>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-184.jpg?height=324&amp;width=820&amp;top_left_y=1582&amp;top_left_x=347" width="400" /></p>
+<p>图6.13 三个接收站可形成第二条基线。这两条基线的等时线在辐射源位置相交。  </p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-185.jpg?height=359&amp;width=517&amp;top_left_y=182&amp;top_left_x=483" width="400" /></p>
+<p>图6.14 移动接收机接收来自固定辐射源的信号，由于速度和角度 <span class="arithmatex">\(\theta\)</span> 的作用，信号发生多普勒频移。</p>
+<p>其中<br />
+<span class="arithmatex">\(F_{R}=\)</span> 接收频率；<br />
+<span class="arithmatex">\(F_{T}=\)</span> 发射频率；<br />
+<span class="arithmatex">\(V_{R}=\)</span> 接收机速度；<br />
+<span class="arithmatex">\(\theta=\)</span> 从接收机速度矢量指向发射机的角度；<br />
+<span class="arithmatex">\(\mathrm{c}=\)</span> 光速。  </p>
+<p>现在考虑两个运动中的接收机从不同位置接收同一信号，如图6.15所示。两个接收机的瞬时位置形成一条基线。两个接收机接收频率的差异是 <span class="arithmatex">\(\theta_{1}\)</span> 和 <span class="arithmatex">\(\theta_{2}\)</span> 之间的差异以及接收机速度矢量的函数。两个接收机接收频率差由下式给出：</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-185.jpg?height=421&amp;width=744&amp;top_left_y=1489&amp;top_left_x=371" width="400" /></p>
+<p>图6.15 两个运动中的接收机根据其速度矢量和截获几何关系接收到不同的频率。</p>
+<div class="arithmatex">\[
+\Delta F=F_{T}\left[V_{2} \cos \left(\theta_{2}\right)-V_{1} \cos \left(\theta_{1}\right)\right] / c
+\]</div>
+<p>其中<br />
+<span class="arithmatex">\(\Delta F=\)</span> 频率差；<br />
+<span class="arithmatex">\(F_{T}=\)</span> 发射机频率；<br />
+<span class="arithmatex">\(V_{1}=\)</span> 接收机1的速度；<br />
+<span class="arithmatex">\(V_{2}=\)</span> 接收机2的速度；<br />
+<span class="arithmatex">\(\theta_{1}=\)</span> 从接收机1速度矢量指向发射机的真实球面角；<br />
+<span class="arithmatex">\(\theta_{2}=\)</span> 从接收机2速度矢量指向发射机的真实球面角；<br />
+<span class="arithmatex">\(\mathrm{c}=\)</span> 光速。  </p>
+<p>在三维空间中存在一个曲面，它定义了在现有条件下会产生所测频率差的所有可能发射机位置。如果我们将该曲面与一个平面（例如地球表面）相交，得到的曲线通常称为“等频线”（isofreq）。两个接收机可以以不同方向、不同速度运动，系统计算机可以针对每种速度/几何/频率差条件绘制正确的等频线。然而，为了便于人类直观理解，图6.16展示了一组等频线，这些等频线对应于两个以相同速度、相同方向运动的接收机（但不一定是追逐场景）下的不同频率差。需要注意的是，这些曲线充满了整个空间，看起来像高中物理课本中条形磁铁两端的磁通线。</p>
+<p>与TDOA类似，两个接收机的频率差测量并不能直接给出发射机位置，而只能确定可能位置的曲线（即等频线）。然而，如果频率差测量足够精确，发射机的位置将非常接近该等频线（量级约为 <span class="arithmatex">\(50 \mathrm{~m}\)</span>）。如果有第三个运动接收机，就会有三条测量基线，每条基线都能收集FDOA数据并计算等频线。此时可以通过两条或多条基线等频线的交点来确定发射机的位置。</p>
+<h3 id="633-fdoa">6.3.3 针对运动发射机的FDOA<a class="headerlink" href="#633-fdoa" title="Permanent link">&para;</a></h3>
+<p>在利用FDOA对运动发射机（使用运动接收机）进行定位时存在一个显著问题。所测频率差来自于接收机速度矢量已知的多普勒频移。如果发射机也在运动，它会产生与接收机运动同量级的多普勒频移——但发射机的速度矢量未知。这为辐射源定位计算引入了另一个变量。虽然数学上可以求解，但所需的计算（即计算机能力和时间）要复杂得多。因此，FDOA通常被认为只适用于从运动的空中接收机定位固定或运动非常缓慢的发射机。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-187.jpg?height=737&amp;width=985&amp;top_left_y=180&amp;top_left_x=250" width="400" /></p>
+<p>图6.16 使用两个接收机时，FDOA系统确定一条通过辐射源位置的曲线（等频线）。</p>
+<h3 id="634-fdoatdoa">6.3.4 FDOA与TDOA的联合应用<a class="headerlink" href="#634-fdoatdoa" title="Permanent link">&para;</a></h3>
+<p>由于频率测量和时间测量都需要高精度频率基准，因此从同一对接收机同时执行这两种功能是合乎逻辑的。这在许多精密定位系统中得以实现。考虑图6.17，这是由两个接收机组成的一条基线计算出的等时线（TDOA）和等频线（FDOA）集合。可以注意到，发射机位置位于一条等时线与一条等频线的交点处。因此，精密辐射源定位可以由两个接收机的一条基线来确定。</p>
+<p>在实际中，定位系统通常使用三个或更多平台，因此可以分别通过TDOA、FDOA或TDOA与FDOA的联合来计算多个解。这种多解性使得系统能够在广泛的作战条件下提供更精确的最终结果。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-188.jpg?height=642&amp;width=812&amp;top_left_y=180&amp;top_left_x=351" width="400" /></p>
+<p>图6.17 辐射源位置可由同一对运动接收机的TDOA和FDOA确定。</p>
+<h3 id="64">6.4 辐射源定位——定位精度报告<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
+<p>在比较测向系统的作战价值时，一个关键参数是有效精度。对于到达角（AOA）系统，这种精度通常以均方根（RMS）角误差表示。在完整的辐射源定位系统（例如多个AOA测向站）中，辐射源定位精度通常用CEP或EEP表示。</p>
+<p>当辐射源位置报告给决策者时（例如，指挥官试图确定敌方资产的位置），CEP或EEP定义了辐射源定位系统所报告测量结果的不确定性。在地图显示上绘制的圆或椭圆可以对决策过程起到辅助作用。</p>
+<h3 id="641-rms">6.4.1 均方根（RMS）误差<a class="headerlink" href="#641-rms" title="Permanent link">&para;</a></h3>
+<p>在任何到达角或辐射源定位测量中总是存在一定误差，但我们需要能够评估和描述系统的“有效”误差。如果要求每一次测量都小于某一特定角误差，就会采用峰值误差。然而，在实际的测向系统中，特别是那些能瞬时覆盖 <span class="arithmatex">\(360^{\circ}\)</span> 的系统，可能会在某些特定角度和频率下出现明显大于平均值的测量误差。这几乎总是在现场测试中发生，因为低水平干扰信号或点反射体可能导致峰值误差，而这些误差与系统本身性能无关。如果这些峰值误差（无论来自系统内部还是外部）只出现在少数角度/频率组合上，通常不会被认为是对系统作战实用性的公平检验。因此，我们通常认为系统的有效精度更适合用均方根（RMS）误差来表示。</p>
+<p>为了确定RMS误差，需要在系统全角范围（通常为 <span class="arithmatex">\(360^{\circ}\)</span>）的多个不同角度以及系统全频率范围的规律增量上采集数据。每个测得的到达角与实际到达角比较，得到误差角。实际角度可由系统停放在转台上的位置、系统所在飞机或舰艇的导航系统，或其他独立角度基准确定。然后对每个误差平方，取其平方平均值，再开平方根。公式为：</p>
+<div class="arithmatex">\[
+\text { error }_{\mathrm{RMS}}=\sqrt{\frac{\sum_{i=1}^{n}\left(\text { error }_{i}\right)^{2}}{n}}
+\]</div>
+<p>RMS误差通常被认为由两部分组成：均值和标准差。均值误差只是所有误差测量的平均值——它可以在所有输出数据中加以修正。而标准差是当均值误差从每个数据点中减去后计算的RMS误差（即不含均值误差分量的RMS误差）。RMS误差、均值误差与标准差的关系为：</p>
+<div class="arithmatex">\[
+\mathrm{RMS}=\sqrt{\mu^{2}+\sigma^{2}}
+\]</div>
+<p>其中<br />
+<span class="arithmatex">\(\mu=\)</span> 数据点的均值；<br />
+<span class="arithmatex">\(\sigma=\)</span> 标准差。  </p>
+<p>如果尝试套用该公式，会发现数列1、4、6、8和12的均值为6.2，标准差为3.7，RMS为7.22。</p>
+<h3 id="642-cep">6.4.2 圆概率误差（CEP）<a class="headerlink" href="#642-cep" title="Permanent link">&para;</a></h3>
+<p>CEP是炮兵与轰炸领域的术语。如果将若干炮弹或炸弹瞄准某个目标点，并测量每个命中点与该点的距离，则圆概率误差为能包含一半命中点的圆的半径。</p>
+<p>在评估辐射源定位系统性能时，我们使用CEP来量化定位精度。在这种情况下，CEP是以计算出的辐射源位置为圆心的圆的半径，该圆有50%的概率包含实际的辐射源位置。这也称为 <span class="arithmatex">\(50 \%\)</span> CEP；如果该圆有 <span class="arithmatex">\(90 \%\)</span> 的概率包含辐射源，则称为 <span class="arithmatex">\(90 \%\)</span> CEP。</p>
+<p>考虑图6.18所示的辐射源定位几何。这是一种理想几何，因为两个测向站与辐射源的距离相等，并且在辐射源视角下相隔90度。</p>
+<p>假设每个测向接收机的误差均为零均值的正态分布，则定义RMS误差的线将包含沿中心线的 <span class="arithmatex">\(68.2 \%\)</span> 的测向读数。这是因为正态分布曲线在标准差点内的面积为0.341。因此，在这种几何下，正好内切RMS线的圆应有 <span class="arithmatex">\(46.5 \%\)</span> 的概率包含实际辐射源位置（<span class="arithmatex">\(0.682 \times 0.682=0.465\)</span>）。然而，如果将该圆半径增加到原来的1.037倍，则包含辐射源的概率为 <span class="arithmatex">\(50 \%\)</span>。这是因为正态分布曲线在 <span class="arithmatex">\(1.037\sigma\)</span> 处的面积为 <span class="arithmatex">\(35.36 \%\)</span>，如图6.19所示 <span class="arithmatex">\(\left([0.3536 \times 2]^{2}=0.5\right)\)</span>。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-190.jpg?height=601&amp;width=744&amp;top_left_y=1309&amp;top_left_x=386" width="400" /></p>
+<p>图6.18 在 <span class="arithmatex">\(90^{\circ}\)</span> 夹角条件下，计算位置为圆心的 <span class="arithmatex">\(1\sigma\)</span> 圆有 <span class="arithmatex">\(46.5 \%\)</span> 的概率包含辐射源位置。</p>
+<p>为进一步澄清前文概念，考虑到从每个测向站观察，实际辐射源位置落在 <span class="arithmatex">\(\pm 1.037\sigma\)</span> 误差范围内的概率为 <span class="arithmatex">\(70.7 \%\)</span>。对于两个最佳方位布设的测向站，这一概率为 <span class="arithmatex">\(0.707^2=0.5\)</span>。</p>
+<h3 id="643-eep">6.4.3 椭圆概率误差（EEP）<a class="headerlink" href="#643-eep" title="Permanent link">&para;</a></h3>
+<p>现在考虑图6.20所示的较不理想的辐射源定位几何。在这种情况下，尺寸为刚好内切RMS误差线的椭圆的103.6\%的椭圆将定义EEP。与CEP类似，EEP也可以定义为 <span class="arithmatex">\(50 \%\)</span> 或 <span class="arithmatex">\(90 \%\)</span> 概率。</p>
+<h3 id="65">6.5 辐射源定位——误差预算<a class="headerlink" href="#65" title="Permanent link">&para;</a></h3>
+<p>辐射源定位系统价值的最重要衡量指标通常被认为是定位精度。在系统规范中，必须考虑所有引入误差的因素。这称为误差预算。一些因素在多种辐射源定位方法中通用，但许多因素只与某一种方法相关。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-191.jpg?height=555&amp;width=693&amp;top_left_y=1355&amp;top_left_x=395" width="400" /></p>
+<p>图6.19 对于均值为零的正态分布误差，高斯曲线下的面积定义了实际位置在给定半径内的概率。  </p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-192.jpg?height=504&amp;width=654&amp;top_left_y=140&amp;top_left_x=430" width="400" /></p>
+<p>图6.20 在这种非理想几何情况下，发射机位于 <span class="arithmatex">\(1\sigma\)</span> 椭圆内的概率为 <span class="arithmatex">\(46.5 \%\)</span>。</p>
+<h3 id="651">6.5.1 误差因素的组合<a class="headerlink" href="#651" title="Permanent link">&para;</a></h3>
+<p>辐射源定位误差有多个来源；有些是随机的，有些是固定的。通常情况下，如果误差来源随机且相互独立，则它们可以统计组合。总误差为各组成部分平方和的平方根，如下所示：</p>
+<div class="arithmatex">\[
+\text { Total RMS error }=\text { SQRT }\left[\text { error }_{1}^{2}+\text { error }_{2}^{2}+\text { error }_{3}^{2}+\text { error }_{4}^{2}+\ldots+\text { error }_{n}^{2}\right]
+\]</div>
+<p>其中有 <span class="arithmatex">\(n\)</span> 个独立随机误差来源。</p>
+<p>然而，如果误差来源不是随机的，就必须直接相加。</p>
+<p>如前所述，RMS误差由均值误差和标准差组成。在某些情况下，例如在仪器化试验场中，可以对系统误差进行非常准确和完整的测量，此时可以通过将所有定位测量或到达角测量修正均值误差来抵消偏差。这样，系统的RMS误差就等于测得误差数据的标准差。需要注意的是，这假设没有显著的场地误差——主要误差来源与平台相关。装在空中平台上的测向系统通常具有这一特性，因为机体反射会导致显著的到达角误差，而远处的多径反射造成的测量误差则较小。</p>
+<h3 id="652-aoa">6.5.2 反射对AOA误差的影响<a class="headerlink" href="#652-aoa" title="Permanent link">&para;</a></h3>
+<p>靠近目标辐射源路径的反射体会通过产生多径导致误差。AOA站测量的是直达路径分量和到达天线的所有多径分量的矢量和。如图6.21所示，靠近目标辐射源的反射体会使多径信号以相对较小的偏移角到达，从而造成相对较小的误差（典型于空中系统）。然而，靠近AOA站的反射体会导致多径信号以较大角度到达，从而引起相对较大的误差。地面AOA系统受到近地形影响尤为显著。但所有AOA系统都会受到其所安装的载体（空中或地面）多径误差的影响。来自侧面的反射（相对于信号AOA的近端或对端）会造成最显著的误差。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-193.jpg?height=469&amp;width=831&amp;top_left_y=1441&amp;top_left_x=325" width="400" /></p>
+<p>图6.21 靠近目标辐射源的反射体会引起较小的AOA测量误差，而靠近AOA系统的反射体会引起较大的AOA误差。</p>
+<h3 id="653">6.5.3 测站位置精度<a class="headerlink" href="#653" title="Permanent link">&para;</a></h3>
+<p>对于任何一种辐射源定位方法，测站位置定义的误差必须直接叠加到辐射源定位误差中，如图6.22所示。如果使用空基、舰基或地面机动测量系统，其测站位置来自平台上的惯性导航系统（INS）。直到几年前，飞机的INS位置精度会随离开固定位置（如机场或航母甲板）的时间推移而降低。然而，现代INS单元使用GPS基准进行连续位置校准。这在长时间任务中大大提高了精度。由于舰艇具有出色的导航能力，舰载测站的位置误差极小。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-194.jpg?height=464&amp;width=556&amp;top_left_y=182&amp;top_left_x=479" width="400" /></p>
+<p>图6.22 测站位置的误差会直接传递到目标辐射源的位置误差中。</p>
+<p>固定地面测站的位置经过严格测量，其位置误差主要来自塔架的静态或动态弯曲。在GPS可用之前，地面机动测站的位置精度较低，因为“低价值平台”不适合使用INS。必须停下并在已知地图位置进行架设，才能获得准确的站点位置。然而，GPS接收机体积小且定位精度极高，因此即便是卡车上的测站或单兵携带的测站，也能实现米级精度。</p>
+<h3 id="654-aoa">6.5.4 AOA辐射源定位方法的误差预算项<a class="headerlink" href="#654-aoa" title="Permanent link">&para;</a></h3>
+<p>AOA系统测量的是信号到达测站方向与某一参考方向之间的角度（方位角和/或俯仰角）。其误差预算包括角度测量精度和方向参考精度，如图6.23所示。由于仰角是相对于局部竖直或水平，参考容易获得且精度很高。方位参考（通常是真北）则更具挑战性。在高价值平台（如舰艇和飞机）中，角度参考来自INS。INS具有会漂移的方向陀螺，但现代系统会利用连续GPS定位修正之间的方位向量来更新角度参考，以保证长期精度。目前已经有小型轻量的INS用于低价值平台，它们使用光纤陀螺作为角度参考，并利用GPS进行定位。虽然精度不如大型INS单元，但仍能提供高质量的方向参考和位置。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-195.jpg?height=464&amp;width=843&amp;top_left_y=180&amp;top_left_x=320" width="400" /></p>
+<p>图6.23 当使用一种到达角测量技术时，信号实际的到达方向将等于测量误差与参考方向误差（如真北）之和。</p>
+<p>在早期的地面机动平台中，必须使用磁力计作为北向参考。该设备能够感应地球磁场，可以看作是一种能电子读取的罗盘。磁力计安装在测量系统天线阵列上，因此能够测量阵列的实际朝向，即使它因风力或拉索张力而移动。然而，磁力计存在与人工罗盘相同的问题（例如磁偏角随位置变化），其精度相对较低（约 <span class="arithmatex">\(1.5^{\circ}\)</span> RMS）。</p>
+<p>AOA系统的另一个误差来源是天线阵列相对于角度参考的方向。除非角度参考装置安装在阵列上，否则每次阵列架设（如果在桅杆上）或安装在空中平台时都会引入偏差误差。</p>
+<h3 id="655">6.5.5 与信噪比相关的误差<a class="headerlink" href="#655" title="Permanent link">&para;</a></h3>
+<p>通常情况下，系统定位精度是在接收强信号时规定的，但系统必须能够处理更弱的信号。评估测向系统灵敏度的一种方法是以不同接收信号强度逐步进行一系列测量（通常为5到10次）。对于强信号，所有AOA测量结果非常接近（通常相同）。当信号强度减弱时，降低的SNR会导致测得的AOA产生波动。系统灵敏度通常表述为：当一组测量的标准差等于 <span class="arithmatex">\(1^{\circ}\)</span> 时的接收信号强度。也可以根据指定的SNR计算由其引起的RMS角误差分量，但这取决于具体系统配置。</p>
+<h3 id="656">6.5.6 校准误差<a class="headerlink" href="#656" title="Permanent link">&para;</a></h3>
+<p>所有高精度AOA系统都需通过校准来消除来自天线安装几何、载体反射和信号处理的固定误差。校准过程包括在某种精确测试场测量AOA，并在后续操作中修正测得数据以去除校准时测得的误差。校准数据的精度本身也是角误差的一个附加来源。</p>
+<h3 id="657-aoa">6.5.7 AOA系统误差的组合<a class="headerlink" href="#657-aoa" title="Permanent link">&para;</a></h3>
+<p>通常可以认为除测站位置外的所有前述误差因素都是独立且随机的。因此，它们可以统计组合以确定总体误差预算。然而，在某些情况下，某些误差必须被视为相加。例如，如果存在未修正的均值误差，就应将其视为相加误差。在某些系统中，还存在作为到达角函数的计算误差。这些误差不是随机的，如果在处理过程中未修正，也应视为相加（相对于角度）。</p>
+<h3 id="66-aoa">6.6 AOA误差到位置误差的转换<a class="headerlink" href="#66-aoa" title="Permanent link">&para;</a></h3>
+<p>应用辐射源定位系统最重要的问题是它能够以何种精度对辐射源进行定位。对于任何类型的定位系统，这既依赖于测量精度，也依赖于交会几何关系。这里我们只考虑AOA系统。</p>
+<h3 id="661">6.6.1 测量精度<a class="headerlink" href="#661" title="Permanent link">&para;</a></h3>
+<p>标准差是指统计意义上误差相对于均值误差的偏离角度。统计学上，这意味着 <span class="arithmatex">\(34 \%\)</span> 的误差角读数与均值误差的偏离小于该角度。然而，由于误差可能出现在均值的左侧或右侧，因此两个标准差角度范围包含 <span class="arithmatex">\(68 \%\)</span> 的测量误差数据。</p>
+<p>由于均值误差主要受到携带AOA系统的平台（空中、地面或海上）的反射影响，系统校准可以消除其对最终系统RMS误差的大部分影响。因此，在已校准的AOA系统中，RMS误差主要反映的是修正数据的标准差。</p>
+<p>如图6.24所示，单个AOA站只能将辐射源定位到一个“扇形”区域。如果将两条RMS线视为标准差线，则认为有 <span class="arithmatex">\(68 \%\)</span> 的概率辐射源位于该角区域内。如果RMS误差较小，则扇形较窄，角度精度较高。然而，线性误差也取决于与AOA站的距离。定位辐射源附近误差区域的宽度可由下式计算：</p>
+<div class="arithmatex">\[
+W=2 D \tan (\theta)
+\]</div>
+<p>其中<br />
+<span class="arithmatex">\(W=\)</span> 从真实角矢量到RMS误差矢量的距离（任意单位）；<br />
+<span class="arithmatex">\(D=\)</span> 从站点到定位辐射源的距离（相同单位）；<br />
+<span class="arithmatex">\(\theta=\)</span> RMS角误差。  </p>
+<p>当使用两个AOA站时，辐射源的位置由三角测量确定。图6.25显示了两个站点角度区域的交集。理想情况下，从辐射源视角看，两个站点相隔 <span class="arithmatex">\(90^{\circ}\)</span>，这会使位置不确定区域最小。图中展示的是两个站点未处于理想位置的一般情况。此时，辐射源位于两个扇形交叠的菱形区域内的概率为 <span class="arithmatex">\(68 \%\)</span>。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-197.jpg?height=559&amp;width=748&amp;top_left_y=1307&amp;top_left_x=369" width="400" /></p>
+<p>图6.24 两条RMS误差线之间的角度区域包含68\%的解，这些解来源于均值误差已消除的正态分布误差的多次计算。  </p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-198.jpg?height=466&amp;width=605&amp;top_left_y=180&amp;top_left_x=457" width="400" /></p>
+<p>图6.25 两组RMS误差线形成的菱形区域有68\%的概率包含辐射源位置。</p>
+<p>如果对该辐射源位置进行多次计算机仿真，从两个站点随机选择误差值，得到的位置分布将形成一个椭圆区域，其中心位置密度较高，离中心越远密度逐渐减小。图6.26中的椭圆包含 <span class="arithmatex">\(46.5 \%\)</span> 的仿真解。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-198.jpg?height=599&amp;width=732&amp;top_left_y=1267&amp;top_left_x=391" width="400" /></p>
+<p>图6.26 多次带有正态分布误差的定位仿真结果形成椭圆状散点分布，其中50\%的解位于EEP椭圆内。</p>
+<h3 id="662-cep">6.6.2 圆概率误差（CEP）<a class="headerlink" href="#662-cep" title="Permanent link">&para;</a></h3>
+<p>CEP已在第6.4.2节定义。对于辐射源定位系统（即多个AOA传感器和必要的三角测量处理），我们可以根据图6.26的椭圆确定CEP。</p>
+<p>第一步，需要将椭圆从 <span class="arithmatex">\(46.5 \%\)</span> 包含率调整为 <span class="arithmatex">\(50 \%\)</span> 包含率。为此，将椭圆的长轴和短轴同时乘以1.036。这使得椭圆有 <span class="arithmatex">\(50 \%\)</span> 的概率包含辐射源。需要注意，这个椭圆可以根据AOA站的指标和交会几何计算出来，通常称为“椭圆概率误差”。</p>
+<p>第二步是根据下式计算该椭圆的长半轴和短半轴矢量和的大小（如图6.27所示）：</p>
+<div class="arithmatex">\[
+C E P=0.75\left[\sqrt{a^{2}+b^{2}}\right]
+\]</div>
+<p>其中  </p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; C E P=\text { 圆概率误差圆的半径（任意单位）； } \\
+&amp; a=\text { 椭圆长半轴（相同单位）； } \\
+&amp; b=\text { 椭圆短半轴（相同单位）。 }
+\end{aligned}
+\]</div>
+<p>该CEP值（据称在 <span class="arithmatex">\(10 \%\)</span> 范围内估计真实CEP）出自L.H. Wegner于1971年6月在兰德公司发布的报告《R-722-PR：关于被动定位电磁辐射源的空基技术精度分析》，该报告被广泛引用。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-199.jpg?height=603&amp;width=603&amp;top_left_y=1307&amp;top_left_x=441" width="300" /></p>
+<p>图6.27 CEP是以测得辐射源位置为圆心的圆的半径，该圆有50%的概率包含实际辐射源。</p>
+<p>在辐射源定位系统中，计算出的椭圆概率误差会在地图显示上绘制在测得辐射源位置周围。此时假设辐射源有 <span class="arithmatex">\(50 \%\)</span> 的概率位于该椭圆内。这一信息对军事分析员非常有价值，因为他们可以结合其他战术态势和近期历史信息，做出精确度合适的战术判断。</p>
+<p>另一方面，CEP在比较评估不同系统和战术的实际几何场景时最有用。</p>
+<h3 id="67">6.7 精密定位系统中的定位误差<a class="headerlink" href="#67" title="Permanent link">&para;</a></h3>
+<p>TDOA和FDOA是第6.3节讨论的精密辐射源定位方法。</p>
+<p>TDOA和FDOA系统计算辐射源位置的精度通常用CEP（如前所述）来表示，但CEP是根据等时线和等频线的计算精度确定的。与AOA系统中讨论的定位精度类似，TDOA和FDOA的CEP依赖于测量精度和几何条件。精度计算基于一个假设：进行了大量独立测量。因此，精度是统计意义上的。</p>
+<h3 id="671-tdoa">6.7.1 TDOA系统精度<a class="headerlink" href="#671-tdoa" title="Permanent link">&para;</a></h3>
+<p>图6.28展示了辐射源和两个TDOA接收站的位置。等时线是平面上所有可能的位置曲线，这些位置会产生所测得的到达时间差（信号以光速传播）。位置误差预算包括站点位置的精度和时间测量的精度。以下方程计算了绘制该双曲线精度的标准差，假设站点位置是精确的。因此，它仅依赖于交会几何和时间测量精度。时间测量误差假设为高斯分布。这有时被描述为双曲线的“厚度”。为了避免将其写成一个庞大的公式，我们分几步进行。</p>
+<p>如图6.28所示，有两个站点，沿坐标系的 <span class="arithmatex">\(x\)</span> 轴相距 <span class="arithmatex">\(B_{1}\)</span>。辐射源位于 <span class="arithmatex">\(X, Y\)</span> 位置（相对于位于站点1的坐标原点，以千米为单位）。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-201.jpg?height=508&amp;width=729&amp;top_left_y=180&amp;top_left_x=377" width="300" /></p>
+<p>图6.28 到达1号与2号站点的信号的TDOA定义了一条通过辐射源的双曲线。一个 <span class="arithmatex">\(1 \sigma\)</span> 的TDOA误差会使该双曲线移动距离 <span class="arithmatex">\(E_{1}\)</span>。</p>
+<p>首先，计算两条信号路径的长度：</p>
+<div class="arithmatex">\[
+\begin{gathered}
+D=\operatorname{sqrt}\left(X^{2}+Y^{2}\right) \\
+F=\operatorname{sqrt}\left(\left[B_{1}-X\right]^{2}+Y^{2}\right)
+\end{gathered}
+\]</div>
+<p>然后，计算该三角形边长和的一半 <span class="arithmatex">\(\left(S_{1}\right)\)</span>：</p>
+<div class="arithmatex">\[
+S_{1}=\left(D+F+B_{1}\right) / 2
+\]</div>
+<p>接下来，计算从辐射源看站点1和2之间夹角的一半正弦值 <span class="arithmatex">\(\left(\theta_{1}\right)\)</span>：</p>
+<div class="arithmatex">\[
+\sin \left(\theta_{1} / 2\right)=\operatorname{sqrt}\left(\left[S_{1}-D\right] *\left[S_{1}-F\right] /\left[D^{*} F\right]\right)
+\]</div>
+<p>现在可以写出偏移量（以千米计）的标准差（<span class="arithmatex">\(1\sigma\)</span>）公式，即误差双曲线与真实通过辐射源的双曲线之间的偏移量。在信号位置的偏移距离称为 <span class="arithmatex">\(E_{1}\)</span>。其中 <span class="arithmatex">\(\Delta t\)</span> 项是TDOA测量的 <span class="arithmatex">\(1\sigma\)</span> 时间误差。</p>
+<div class="arithmatex">\[
+E_{1}=0.00015^{*} \Delta t / \sin \left(\theta_{1} / 2\right)
+\]</div>
+<h3 id="6711-tdoacep">6.7.1.1 TDOA的CEP<a class="headerlink" href="#6711-tdoacep" title="Permanent link">&para;</a></h3>
+<p>如第6.3.1节所述，双曲线只是一条通过辐射源的线，必须从另一条基线绘制第二条双曲线，才能通过交点确定位置。图6.29展示了引入第三个截获站的情形。我们将计算第二条基线的双曲线偏移，并绘制由此产生的误差区域。为简化处理，假设第三个站点位于<span class="arithmatex">\(x\)</span>轴上，距离站点2为<span class="arithmatex">\(B_{2}\)</span>。同样，计算分步进行，首先计算第三条信号路径长度：</p>
+<div class="arithmatex">\[
+G=\operatorname{sqrt}\left(\left[B_{1}+B_{2}-X\right]^{2}+Y^{2}\right)
+\]</div>
+<p>然后，计算第二个三角形边长和的一半 <span class="arithmatex">\(\left(S_{2}\right)\)</span>：</p>
+<div class="arithmatex">\[
+S_{2}=\left(F+G+B_{2}\right) / 2
+\]</div>
+<p>接着，计算从辐射源看站点2和站点3之间夹角一半的正弦值 <span class="arithmatex">\(\left(\theta_{2}\right)\)</span>：</p>
+<div class="arithmatex">\[
+\sin \left(\theta_{2} / 2\right)=\operatorname{sqrt}\left(\left[S_{2}-D\right] *\left[S_{2}-F\right] / D * F\right)
+\]</div>
+<p>现在可以写出偏移量（以千米为单位）的标准差（<span class="arithmatex">\(1\sigma\)</span>）公式，即误差双曲线与通过辐射源的真实双曲线之间的偏移量。在信号位置的偏移距离称为 <span class="arithmatex">\(E_{2}\)</span>。其中 <span class="arithmatex">\(\Delta t\)</span> 项是TDOA测量的 <span class="arithmatex">\(1\sigma\)</span> 时间误差。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-202.jpg?height=553&amp;width=688&amp;top_left_y=1309&amp;top_left_x=413" width="400" /></p>
+<p>图6.29 引入第三个站点后定义了第二条双曲线。两条双曲线在辐射源位置相交。可由基线 <span class="arithmatex">\(B_{1}\)</span> 计算出一组 <span class="arithmatex">\(\pm 1\sigma\)</span> 的双曲线偏移。  </p>
+<div class="arithmatex">\[
+E_{2}=0.00015^{*} \Delta t / \sin \left(\theta_{2} / 2\right)
+\]</div>
+<p>在辐射源位置，来自每条双曲线的<span class="arithmatex">\(\pm 1\sigma\)</span> 误差线相交所围成的区域是图6.30所示的平行四边形。与AOA的CEP计算类似，进行随机TDOA测量误差（高斯分布）的计算机仿真将生成如图6.31所示的椭圆状点密度散布图。包含50\%解的椭圆即为EEP，而CEP可以按照第6.6.2节所述的方法由EEP计算得出。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-203.jpg?height=509&amp;width=465&amp;top_left_y=676&amp;top_left_x=509" width="400" /></p>
+<p>图6.30 来自两条TDOA基线的 <span class="arithmatex">\(\pm 1\sigma\)</span> 误差线在辐射源观察下相交角度为两半角之和，形成平行四边形。  </p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-203.jpg?height=469&amp;width=583&amp;top_left_y=1397&amp;top_left_x=448" width="400" /></p>
+<p>图6.31 多次带有正态分布误差的TDOA测量仿真结果形成椭圆状分布。包含50\%解的椭圆即为EEP。</p>
+<h3 id="672-fdoa">6.7.2 FDOA辐射源定位系统中的定位误差<a class="headerlink" href="#672-fdoa" title="Permanent link">&para;</a></h3>
+<p>与之前讨论的TDOA系统类似，FDOA系统的精度通常以定位的CEP或EEP来衡量。与AOA和TDOA一样，精度计算的假设是进行了大量独立测量。</p>
+<p>这里给出的等频线（isofreq）精度公式基于Paul Chestnut博士发表于1982年3月《IEEE Transactions on Aerospace and Electronic Systems》上的一篇经典文章。此处的公式假设发射源距离传感器平台足够远，以至于可以忽略接收平台观测发射源的俯角。同时假设每个接收平台的位置和速度矢量是精确已知的。最后，为简化问题，还假设接收平台以相同速度沿水平基线直线飞行。（需要注意的是，Chestnut博士的公式更复杂，因为它们不做这些简化假设。）</p>
+<h3 id="6721">6.7.2.1 等频线精度<a class="headerlink" href="#6721" title="Permanent link">&para;</a></h3>
+<p>图6.32展示了辐射源和两个FDOA接收站的位置。等频线是平面上所有可能位置的曲线，这些位置会在该截获情形下产生所测得的到达频率差，如第6.3.2节所述。以下方程计算了绘制该曲线的精度标准差（基于前述假设）。因此，它仅依赖于交会几何和频率测量精度。频率测量误差假设为高斯分布。这有时被描述为等频线的“厚度”。需要注意的是，等频线在真实发射源位置处垂直于夹角 <span class="arithmatex">\(\theta_{1}\)</span> 的平分线，因此测量误差会导致曲线沿平分线方向偏移。为了避免写成一个庞大的公式，我们分几步进行。</p>
+<p>如图6.32所示，有两个站点，沿坐标系<span class="arithmatex">\(x\)</span>轴相距 <span class="arithmatex">\(B_{1}\)</span>。辐射源位于相对于站点1（坐标原点）的<span class="arithmatex">\(X, Y\)</span>位置（以千米计）。</p>
+<p>首先，使用第6.7.1节TDOA案例中的相同公式计算两条信号路径长度：</p>
+<div class="arithmatex">\[
+\begin{gathered}
+D_{1}=\operatorname{sqrt}\left(X^{2}+Y^{2}\right) \\
+D_{2}=\operatorname{sqrt}\left(\left[B_{1}-X\right]^{2}+Y^{2}\right)
+\end{gathered}
+\]</div>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-205.jpg?height=554&amp;width=779&amp;top_left_y=180&amp;top_left_x=353" width="400" /></p>
+<p>图6.32 FDOA系统中，来自站点1和站点2的信号定义了一条通过辐射源的曲线（称为等频线）。<span class="arithmatex">\(\pm 1\sigma\)</span> 的FDOA误差会使等频线沿角度 <span class="arithmatex">\(\theta_{1}\)</span> 的平分线方向偏移距离 <span class="arithmatex">\(E_{1}\)</span>。  </p>
+<p>接着，计算辐射源方向与各接收平台速度矢量之间的夹角：</p>
+<div class="arithmatex">\[
+\begin{gathered}
+A_{1}=\operatorname{arc} \cos \left(x / D_{1}\right) \\
+A_{2}=\operatorname{arc} \cos \left(\left[B_{2}-x\right] / D_{2}\right)
+\end{gathered}
+\]</div>
+<p>然后，计算从辐射源到各移动接收平台连线的角速度（<span class="arithmatex">\(\hat{\alpha}\)</span>）：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp; \hat{\alpha}_{1}=V \sin \left(A_{1}\right) / D_{1} \\
+&amp; \hat{\alpha}_{2}=V \sin \left(A_{2}\right) / D_{2}
+\end{aligned}
+\]</div>
+<p>现在可以写出<span class="arithmatex">\(E_{1}\)</span>的公式，即错误等频线相对于真实通过辐射源的等频线的偏移量标准差（<span class="arithmatex">\(1\sigma\)</span>，以千米计），其中<span class="arithmatex">\(F\)</span>为发射频率（赫兹），<span class="arithmatex">\(\Delta F\)</span>为FDOA测量的<span class="arithmatex">\(1\sigma\)</span>频率误差（赫兹）：</p>
+<div class="arithmatex">\[
+E_{1}=\left(3 \times 10^{5} \times \Delta F\right) /\left(F \times \operatorname{sqrt}\left(\hat{\alpha}_{2}^{2}-2 \hat{\alpha}_{1} \hat{\alpha}_{2}-\hat{\alpha}_{1}^{2}\right)\right)
+\]</div>
+<p>注意，真实等频线和错误等频线都垂直于角度 <span class="arithmatex">\(\theta_{1}\)</span> 的平分线。</p>
+<div class="arithmatex">\[
+\theta_{1}=A_{2}-A_{1}
+\]</div>
+<h3 id="6722-fdoacep">6.7.2.2 FDOA定位的CEP<a class="headerlink" href="#6722-fdoacep" title="Permanent link">&para;</a></h3>
+<p>由于定位需要第三个测站来绘制第二条等频线，使其与第一条等频线在辐射源位置相交，因此考虑图6.33。</p>
+<p>我们需要按前述步骤计算 <span class="arithmatex">\(D_{3}, A_{3}, \hat{\alpha}_{3}\)</span> 和 <span class="arithmatex">\(\theta_{2}\)</span>：</p>
+<div class="arithmatex">\[
+\begin{gathered}
+D_{3}=\operatorname{sqrt}\left(\left[B_{1}+B_{2}-X\right]^{2}+Y^{2}\right) \\
+A_{3}=\operatorname{Arc} \cos \left(\left[B_{1}+B_{2}-X\right] / D_{3}\right) \\
+\hat{\alpha}_{3}=V \sin \left(A_{3}\right) / D_{3} \\
+\theta_{2}=A_{3}-A_{2}
+\end{gathered}
+\]</div>
+<p>现在，可以通过下式计算第二条等频线的误差：</p>
+<div class="arithmatex">\[
+E_{2}=\left(3 \times 10^{5} \times \Delta F\right) /\left(F \times \operatorname{sqrt}\left(\hat{\alpha}_{3}^{2}-2 \hat{\alpha}_{2} \hat{\alpha}_{3}-\hat{\alpha}_{2}^{2}\right)\right)
+\]</div>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-206.jpg?height=649&amp;width=850&amp;top_left_y=1261&amp;top_left_x=333" width="400" /></p>
+<p>图6.33 引入第三个站点后定义了第二条等频线。两条等频线在辐射源位置相交。可由基线 <span class="arithmatex">\(B_{2}\)</span> 计算出一组 <span class="arithmatex">\(\pm 1\sigma\)</span> 曲线偏移。  </p>
+<p>图6.34中的平行四边形展示了来自两条FDOA基线的<span class="arithmatex">\(\pm 1\sigma\)</span> 错误等频线。由于误差（<span class="arithmatex">\(E_{1}\)</span> 和 <span class="arithmatex">\(E_{2}\)</span>）为高斯分布，因此测得值有 <span class="arithmatex">\(46.5 \%\)</span> 的概率位于<span class="arithmatex">\(\pm 1\sigma\)</span>误差线之间。如果将 <span class="arithmatex">\(E_{1}\)</span> 和 <span class="arithmatex">\(E_{2}\)</span> 的数值乘以1.036，所得平行四边形将包含一半的数据点。与AOA和TDOA系统类似，对高斯分布FDOA测量进行计算机仿真将生成如图6.35所示的椭圆状点密度散布图。包含50\%解的椭圆即为EEP，而CEP可按第6.4节AOA情形的方法计算。</p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-207.jpg?height=331&amp;width=829&amp;top_left_y=676&amp;top_left_x=327" width="400" /></p>
+<p>图6.34 来自两条FDOA基线的 <span class="arithmatex">\(\pm 1\sigma\)</span> 误差线在辐射源观察下相交角度为两半角之和，形成平行四边形。  </p>
+<p><img alt="" src="https://cdn.mathpix.com/cropped/2025_09_08_58cb2f92ab88c8a70af8g-207.jpg?height=370&amp;width=671&amp;top_left_y=1226&amp;top_left_x=408" width="400" /></p>
+<p>图6.35 多次带有正态分布误差的FDOA测量仿真结果形成椭圆状分布。包含50\%解的椭圆即为EEP。</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.annotate", "content.code.copy", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
