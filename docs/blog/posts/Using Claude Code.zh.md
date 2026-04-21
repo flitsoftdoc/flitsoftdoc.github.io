@@ -15,9 +15,13 @@ Claude Code 1M context 上线之后，他们发现一件让产品团队挠头的
 
 来自Claude的Thariq 之所以要写以下这篇文章，正是因为他每天都在心里跑下面这个决策树。普通用户每天跑的是另一个决策树："要不要重新打开 Claude Code"。差别就在这。
 
-![](https://cdn.mathpix.com/snip/images/9ZXhDmKrbcEpmTsQx9DZEniwyqVIqNsPaXdPP57SYCo.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/9ZXhDmKrbcEpmTsQx9DZEniwyqVIqNsPaXdPP57SYCo.original.fullsize.png){width="300"}
 
 <!-- more -->
+
+[原文链接](https://x.com/trq212/status/2044548257058328723?s=46&t=bpx6CAQ5ajf2agqKLCsM8A)
+
+![](https://cdn.mathpix.com/snip/images/rA9RidkW-kyfEtuz6WIphGtjON2x9A9ydmIeu4bWvlg.original.fullsize.png){width="300"}
 
 文章的译文如下：
 
@@ -31,7 +35,7 @@ Claude Code 1M context 上线之后，他们发现一件让产品团队挠头的
 
 ## **关于上下文、压缩与上下文腐化的快速入门**
 
-![](https://cdn.mathpix.com/snip/images/z22XZlYzNz59bZF2mFXrjFcPUP0S3sAWstZt38SExhc.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/z22XZlYzNz59bZF2mFXrjFcPUP0S3sAWstZt38SExhc.original.fullsize.png){width="500"}
 
 上下文窗口（context window）是指模型在生成下一次响应时，能够一次性“看到”的全部内容。它包括你的系统提示词、到目前为止的对话、每一次工具调用及其输出，以及每一个被读取过的文件。Claude Code 的上下文窗口大小为 100 万 token。
 
@@ -39,7 +43,7 @@ Claude Code 1M context 上线之后，他们发现一件让产品团队挠头的
 
 上下文窗口是有硬性上限的，因此当你接近上下文窗口末尾时，就需要把你一直在处理的任务总结成一个更短的描述，并在一个新的上下文窗口中继续工作。我们把这个过程称为压缩（compaction）。你也可以主动触发压缩。
 
-![](https://cdn.mathpix.com/snip/images/VwpJEVDVWoGo7fffuvtOUbQTCuA3vM0Pu9MHaT0tyPw.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/VwpJEVDVWoGo7fffuvtOUbQTCuA3vM0Pu9MHaT0tyPw.original.fullsize.png){width="500"}
 
 # **每一轮都是一个分叉点**
 
@@ -53,7 +57,7 @@ Claude Code 1M context 上线之后，他们发现一件让产品团队挠头的
 
 虽然最自然的做法通常是直接继续，但另外四种选择的存在，正是为了帮助你管理上下文。
 
-![](https://cdn.mathpix.com/snip/images/6PK_sgAid_TEbYGm8Uu_se7ES6g2gg-Ek6Nk5Z9cnmM.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/6PK_sgAid_TEbYGm8Uu_se7ES6g2gg-Ek6Nk5Z9cnmM.original.fullsize.png){width="500"}
 
 ## **什么时候该开启一个新会话**
 
@@ -67,7 +71,7 @@ Claude Code 1M context 上线之后，他们发现一件让产品团队挠头的
 
 ## **用回退代替纠错**
 
-![](https://cdn.mathpix.com/snip/images/H4In4PhzkCREd7bzzQAbwxpe-YFt9dV62E3gbpxuGls.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/H4In4PhzkCREd7bzzQAbwxpe-YFt9dV62E3gbpxuGls.original.fullsize.png){width="500"}
 
 如果非要我挑一个最能体现良好上下文管理习惯的动作，那就是 rewind。
 
@@ -77,7 +81,7 @@ rewind 往往是比“直接纠正”更好的方式。比如，Claude 读了 5 
 
 你也可以使用 *“summarize from here”*，让 Claude 对当前阶段的经验教训做一个总结，并生成一条交接消息。这有点像是让未来那个试错失败后的 Claude，给过去的自己留下一封信。
 
-![](https://cdn.mathpix.com/snip/images/_Dd7wfE6tpyAtWJL1fi6Nkth5pNOKdZ45_HUa80yDIQ.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/_Dd7wfE6tpyAtWJL1fi6Nkth5pNOKdZ45_HUa80yDIQ.original.fullsize.png){width="500"}
 
 ## **压缩与全新会话的区别**
 
@@ -85,13 +89,13 @@ rewind 往往是比“直接纠正”更好的方式。比如，Claude 读了 5 
 
 **Compact** 是让模型对目前为止的对话做一个总结，然后用这个总结替换原来的历史记录。这个过程会有信息损失，因为你是在让 Claude 自己判断什么重要；但它的好处是你不需要自己动笔，而且 Claude 有时反而会更全面地把重要结论或关键文件纳入总结。你也可以通过附加说明来引导它，比如：`/compact focus on the auth refactor, drop the test debugging`。
 
-![](https://cdn.mathpix.com/snip/images/ZLZN90T22lk0XChuZ7bVCXiL13NcqW410wRK67j-Res.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/ZLZN90T22lk0XChuZ7bVCXiL13NcqW410wRK67j-Res.original.fullsize.png){width="500"}
 
 而使用 **/clear** 时，是由**你自己**写下哪些内容重要（“我们正在重构认证中间件，约束条件是 X，关键文件是 A 和 B，我们已经排除了方案 Y”），然后再从一个干净的新会话开始。它更费力，但最终得到的上下文是由你亲自决定什么相关、什么不相关。
 
 ## **什么会导致糟糕的 compact？**
 
-![](https://cdn.mathpix.com/snip/images/yoG1qfaaumjne-cgkRZ8vO6LutH-DTnyo02UwC-6URc.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/yoG1qfaaumjne-cgkRZ8vO6LutH-DTnyo02UwC-6URc.original.fullsize.png){width="500"}
 
 如果你经常运行很长的会话，可能已经注意到有些时候 compact 的效果会特别差。很多情况下，我们发现糟糕的 compact 往往出现在：模型无法预测你的工作接下来会转向哪里。
 
@@ -103,7 +107,7 @@ rewind 往往是比“直接纠正”更好的方式。比如，Claude 读了 5 
 
 ## **Subagents 与全新的上下文窗口**
 
-![](https://cdn.mathpix.com/snip/images/TVI01YMYQ-bTNv6MFY9AxhsLuJgH6xvg-lY2nmLIjaw.original.fullsize.png)
+![](https://cdn.mathpix.com/snip/images/TVI01YMYQ-bTNv6MFY9AxhsLuJgH6xvg-lY2nmLIjaw.original.fullsize.png){width="500"}
 
 Subagents 本质上也是一种上下文管理方式。它适用于这样一种情况：你事先就知道，接下来某一块工作会产生大量中间输出，而这些输出之后你并不需要再次使用。
 
@@ -123,5 +127,5 @@ Subagents 本质上也是一种上下文管理方式。它适用于这样一种�
 
 随着时间推移，我们预计 Claude 会越来越擅长自己处理这些事情；但就目前而言，这仍然是你可以主动引导 Claude 输出效果的重要方式之一。
 
+![](https://cdn.mathpix.com/snip/images/JDvHQg6jPpTi6rM4DcIwagFWWkbfr1lC6gCGezAqKto.original.fullsize.png){width="500"}
 
-[原文链接](https://x.com/trq212/status/2044548257058328723?s=46&t=bpx6CAQ5ajf2agqKLCsM8A)
